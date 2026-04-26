@@ -6,7 +6,7 @@ THIS PROJECT IS 100% CREATED BY CODEX 5.5 MEDIUM. THIS IS VIBE SLOP.
 
 `conda activate ./env`
 
-`build.ps1`
+`./build.ps1`
 
 # Run
 
