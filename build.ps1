@@ -1,7 +1,8 @@
 Param(
   [string]$Name = "TOTK_Save_Map_Helper",
   [string]$Icon = "",
-  [string]$ProjectDir = ""
+  [string]$ProjectDir = "",
+  [switch]$Windowed
 )
 
 $ErrorActionPreference = "Stop"
@@ -33,7 +34,6 @@ Push-Location $scriptDir
 try {
 $args = @(
   "--onefile",
-  "--windowed",
   "--clean",
   "--name", $Name,
   "--distpath", $scriptDir,
@@ -46,6 +46,10 @@ $args = @(
   "--add-data", "$repoCompletion;.",
   $repoServer
 )
+
+if ($Windowed) {
+  $args = @("--windowed") + $args
+}
 
 if (Test-Path $repoConfig) {
   $args = $args[0..($args.Length-2)] + @("--add-data", "$repoConfig;.", $args[-1])

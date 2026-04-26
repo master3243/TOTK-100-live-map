@@ -1,10 +1,13 @@
 import json
+import logging
 import os
 import shutil
 import struct
 import sys
 import tempfile
 import time
+import traceback
+import webbrowser
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from threading import Lock
@@ -28,6 +31,7 @@ RUNTIME_ROOT = runtime_root()
 
 CONFIG_PATH = RUNTIME_ROOT / "config.json"
 STATE_PATH = RUNTIME_ROOT / "state.json"
+LOG_PATH = RUNTIME_ROOT / "totk_helper.log"
 
 KOROK_DATA_PATH = ROOT / "korok_data.json"
 COMPLETION_DATA_PATH = ROOT / "completion_data.json"
@@ -52,6 +56,29 @@ DEPTHS_MAX_Y = -100
 LOG_LIMIT = 200
 LOG_ENTRIES = []
 SERVER_LOCK = Lock()
+
+
+def setup_logging():
+    logger = logging.getLogger()
+    if logger.handlers:
+        return
+    logger.setLevel(logging.INFO)
+    formatter = logging.Formatter("%(asctime)s %(levelname)s %(message)s")
+
+    file_handler = logging.FileHandler(LOG_PATH, encoding="utf-8")
+    file_handler.setFormatter(formatter)
+    logger.addHandler(file_handler)
+
+    stream = logging.StreamHandler()
+    stream.setFormatter(formatter)
+    logger.addHandler(stream)
+
+
+def fatal(message: str):
+    setup_logging()
+    logging.error("%s", message)
+    logging.error("Traceback:\n%s", traceback.format_exc())
+    raise SystemExit(1)
 
 
 def read_u32(data, offset):
@@ -524,11 +551,23 @@ class Handler(SimpleHTTPRequestHandler):
 
 
 def main():
+    setup_logging()
     os.chdir(ROOT)
+    url = f"http://{HOST}:{PORT}/"
     server = ThreadingHTTPServer((HOST, PORT), Handler)
-    print(f"Serving TOTK helper at http://{HOST}:{PORT}/")
+    print(f"Serving TOTK helper at {url}")
+    logging.info("Serving TOTK helper at %s", url)
+    try:
+        webbrowser.open(url, new=1, autoraise=True)
+    except Exception:
+        logging.exception("Could not open browser")
     server.serve_forever()
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except SystemExit:
+        raise
+    except Exception:
+        fatal("Unhandled startup error. See totk_helper.log next to the exe.")
