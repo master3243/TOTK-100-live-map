@@ -32,7 +32,6 @@ RUNTIME_ROOT = runtime_root()
 
 CONFIG_PATH = RUNTIME_ROOT / "config.json"
 STATE_PATH = RUNTIME_ROOT / "state.json"
-LOG_PATH = RUNTIME_ROOT / "totk_helper.log"
 
 KOROK_DATA_PATH = ROOT / "korok_data.json"
 COMPLETION_DATA_PATH = ROOT / "completion_data.json"
@@ -75,13 +74,10 @@ def setup_logging():
     logger.setLevel(logging.INFO)
     formatter = logging.Formatter("%(asctime)s %(levelname)s %(message)s")
 
-    file_handler = logging.FileHandler(LOG_PATH, encoding="utf-8")
-    file_handler.setFormatter(formatter)
-    logger.addHandler(file_handler)
-
-    stream = logging.StreamHandler()
-    stream.setFormatter(formatter)
-    logger.addHandler(stream)
+    if sys.stderr is not None:
+        stream = logging.StreamHandler(sys.stderr)
+        stream.setFormatter(formatter)
+        logger.addHandler(stream)
 
 
 def fatal(message: str):
@@ -646,4 +642,4 @@ if __name__ == "__main__":
     except SystemExit:
         raise
     except Exception:
-        fatal("Unhandled startup error. See totk_helper.log next to the exe.")
+        fatal("Unhandled startup error.")
