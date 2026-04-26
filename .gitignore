@@ -4,3 +4,4 @@ env/
 .pyinstaller-build/
 *.exe
 *.log
+state.json
