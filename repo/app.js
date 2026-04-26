@@ -133,6 +133,24 @@ function centerMap() {
   updateTransform();
 }
 
+/** Keep zoom/pan stable when the window size changes (e.g. Alt toggling the menu bar on Windows). */
+function preserveMapCenterOnViewportResize() {
+  if (!imageWidth || !imageHeight) {
+    return;
+  }
+  const rect = viewport.getBoundingClientRect();
+  if (rect.width < 1 || rect.height < 1) {
+    return;
+  }
+  const midX = rect.width / 2;
+  const midY = rect.height / 2;
+  const mapX = (midX - offsetX) / scale;
+  const mapY = (midY - offsetY) / scale;
+  offsetX = midX - mapX * scale;
+  offsetY = midY - mapY * scale;
+  updateTransform();
+}
+
 function zoomAt(nextScale, clientX, clientY) {
   const rect = viewport.getBoundingClientRect();
   const pointX = clientX - rect.left;
@@ -550,7 +568,10 @@ function updateCompletionCounts(categories) {
   for (const category of categories) {
     const count = completionCounts[category.id];
     if (count) {
-      count.textContent = category.remaining;
+      const remaining = category.remaining ?? 0;
+      const obtained = category.obtained ?? 0;
+      const total = category.total ?? remaining + obtained;
+      count.textContent = `${remaining} (${obtained}/${total})`;
     }
   }
 }
@@ -848,7 +869,7 @@ Object.entries(groupInputs).forEach(([groupName, input]) => {
 viewLatest.addEventListener("click", viewLatestMarker);
 viewPlayer.addEventListener("click", viewPlayerLocation);
 
-window.addEventListener("resize", centerMap);
+window.addEventListener("resize", preserveMapCenterOnViewportResize);
 
 loadLayer(activeLayer);
 syncAllGroupStates();
