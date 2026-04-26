@@ -1,7 +1,6 @@
 import logging
 import queue
 import threading
-import time
 import webbrowser
 import functools
 import json
@@ -180,6 +179,16 @@ def run():
         except Exception:
             logging.exception("Could not open browser: %s", url)
 
+    def copy_url():
+        url = url_var.get()
+        try:
+            root.clipboard_clear()
+            root.clipboard_append(url)
+            root.update()
+            logging.info("Copied URL to clipboard: %s", url)
+        except Exception:
+            logging.exception("Could not copy URL")
+
     def on_close():
         stop_server()
         root.after(150, root.destroy)
@@ -205,6 +214,7 @@ def run():
     ttk.Button(buttons, text="Start", command=start_server).pack(side="left")
     ttk.Button(buttons, text="Stop", command=stop_server).pack(side="left", padx=(8, 0))
     ttk.Button(buttons, text="Open UI", command=open_browser).pack(side="left", padx=(8, 0))
+    ttk.Button(buttons, text="Copy URL", command=copy_url).pack(side="left", padx=(8, 0))
 
     ttk.Label(main, text="Logs").pack(anchor="w", pady=(6, 4))
 
