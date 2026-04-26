@@ -770,18 +770,31 @@ async function refreshLog() {
 }
 
 mapImage.addEventListener("load", () => {
-  imageWidth = mapImage.naturalWidth;
-  imageHeight = mapImage.naturalHeight;
+  const nw = mapImage.naturalWidth;
+  const nh = mapImage.naturalHeight;
+  const sameDimensions =
+    imageWidth > 0 && imageHeight > 0 && nw === imageWidth && nh === imageHeight;
+
+  imageWidth = nw;
+  imageHeight = nh;
   loadingState.classList.add("hidden");
-  centerMap();
+
+  if (!sameDimensions) {
+    centerMap();
+  } else {
+    updateTransform();
+  }
+
   if (pendingPanPoint && (!pendingPanPoint.point.layer || pendingPanPoint.point.layer === activeLayer)) {
     panToMapPoint(pendingPanPoint.point.mapX, pendingPanPoint.point.mapY, pendingPanPoint.nextScale);
     pendingPanPoint = null;
     return;
   }
-  const latest = korokMarkers.find((marker) => marker.id === latestObtainedId);
-  if (latest && overlayInputs.autoPan.checked) {
-    panToMapPoint(latest.mapX, latest.mapY);
+  if (!sameDimensions) {
+    const latest = korokMarkers.find((marker) => marker.id === latestObtainedId);
+    if (latest && overlayInputs.autoPan.checked) {
+      panToMapPoint(latest.mapX, latest.mapY);
+    }
   }
 });
 
