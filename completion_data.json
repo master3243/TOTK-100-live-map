@@ -1,0 +1,6501 @@
+{
+  "categories": [
+    {
+      "id": "caves",
+      "label": "Caves",
+      "kind": "bool",
+      "items": [
+        {
+          "id": "caves-001",
+          "value": "2e199ae5",
+          "x": 4122.229,
+          "y": 299.179,
+          "z": -662.295,
+          "layer": "surface",
+          "note": "5202740261947854689 - Cave_Akkala_0000"
+        },
+        {
+          "id": "caves-002",
+          "value": "caa7f0d2",
+          "x": 4505.0,
+          "y": 209.9406,
+          "z": -705.1617,
+          "layer": "surface",
+          "note": "9055438594216366561 - Cave_Akkala_0003"
+        },
+        {
+          "id": "caves-003",
+          "value": "e524209b",
+          "x": 4272.99,
+          "y": 258.8511,
+          "z": -774.3162,
+          "layer": "surface",
+          "note": "15335926447545138291 - Cave_Akkala_0003"
+        },
+        {
+          "id": "caves-004",
+          "value": "b74dc52f",
+          "x": 3925.927,
+          "y": 218.3195,
+          "z": -1576.423,
+          "layer": "surface",
+          "note": "11946399843865969720 - Cave_Akkala_0005"
+        },
+        {
+          "id": "caves-005",
+          "value": "4955a278",
+          "x": 3678.723,
+          "y": 183.5108,
+          "z": -1538.252,
+          "layer": "surface",
+          "note": "3457555777151736032 - Cave_Akkala_0007"
+        },
+        {
+          "id": "caves-006",
+          "value": "6521204a",
+          "x": 3735.437,
+          "y": 190.3167,
+          "z": -1534.085,
+          "layer": "surface",
+          "note": "11671013565008628074 - Cave_Akkala_0007"
+        },
+        {
+          "id": "caves-007",
+          "value": "66c47026",
+          "x": 3243.716,
+          "y": 404.535,
+          "z": -1456.824,
+          "layer": "surface",
+          "note": "9956353720691210968 - Cave_Akkala_0010"
+        },
+        {
+          "id": "caves-008",
+          "value": "634d6b1d",
+          "x": 3321.5,
+          "y": 286.5,
+          "z": -3424.0,
+          "layer": "surface",
+          "note": "5431129856634400544 - Cave_Akkala_0011"
+        },
+        {
+          "id": "caves-009",
+          "value": "c2412cee",
+          "x": 4650.67,
+          "y": 104.5,
+          "z": -3584.908,
+          "layer": "surface",
+          "note": "1926489202404534798 - Cave_Akkala_0014"
+        },
+        {
+          "id": "caves-010",
+          "value": "09eab25d",
+          "x": 4645.503,
+          "y": 118.9944,
+          "z": -3206.834,
+          "layer": "surface",
+          "note": "8513000792751676936 - Cave_Akkala_0014"
+        },
+        {
+          "id": "caves-011",
+          "value": "5b216aee",
+          "x": 3292.5,
+          "y": 510.0642,
+          "z": -1492.0,
+          "layer": "surface",
+          "note": "10142666355873547918 - Cave_Akkala_0017"
+        },
+        {
+          "id": "caves-012",
+          "value": "85bf29ed",
+          "x": 37.30195,
+          "y": 128.1821,
+          "z": 198.8625,
+          "layer": "surface",
+          "note": "7141907819268688467 - Cave_CentralHyrule_0008"
+        },
+        {
+          "id": "caves-013",
+          "value": "c52dfca0",
+          "x": 6.009788,
+          "y": 141.0668,
+          "z": 157.9319,
+          "layer": "surface",
+          "note": "11762902907749850765 - Cave_CentralHyrule_0008"
+        },
+        {
+          "id": "caves-014",
+          "value": "164160ab",
+          "x": -832.3462,
+          "y": 137.4909,
+          "z": 1488.377,
+          "layer": "surface",
+          "note": "12880309941609668216 - Cave_CentralHyrule_0009"
+        },
+        {
+          "id": "caves-015",
+          "value": "9d3ea6e4",
+          "x": 711.5814,
+          "y": 1596.062,
+          "z": 1449.099,
+          "layer": "sky",
+          "note": "3657960895423460399 - Cave_CentralHyrule_0011"
+        },
+        {
+          "id": "caves-016",
+          "value": "0d4d0b7f",
+          "x": 739.0957,
+          "y": 1652.759,
+          "z": 1358.025,
+          "layer": "sky",
+          "note": "6165471125931240097 - Cave_CentralHyrule_0011"
+        },
+        {
+          "id": "caves-017",
+          "value": "e301943b",
+          "x": 632.1589,
+          "y": 1593.918,
+          "z": 1638.774,
+          "layer": "sky",
+          "note": "389621003349275914 - Cave_CentralHyrule_0013"
+        },
+        {
+          "id": "caves-018",
+          "value": "c7b9dc8f",
+          "x": 587.4191,
+          "y": 1553.043,
+          "z": 1624.505,
+          "layer": "sky",
+          "note": "9927661949732117451 - Cave_CentralHyrule_0013"
+        },
+        {
+          "id": "caves-019",
+          "value": "0e76344b",
+          "x": 170.5166,
+          "y": 1487.815,
+          "z": 1633.773,
+          "layer": "sky",
+          "note": "2527573203000697251 - Cave_CentralHyrule_0017"
+        },
+        {
+          "id": "caves-020",
+          "value": "d133228f",
+          "x": 260.1547,
+          "y": 1471.727,
+          "z": 1557.838,
+          "layer": "sky",
+          "note": "12906757512422296002 - Cave_CentralHyrule_0017"
+        },
+        {
+          "id": "caves-021",
+          "value": "36fb3381",
+          "x": -325.6665,
+          "y": 159.5706,
+          "z": -802.5264,
+          "layer": "surface",
+          "note": "16097313038490651380 - Cave_CentralHyrule_0018"
+        },
+        {
+          "id": "caves-022",
+          "value": "b97dc325",
+          "x": -254.0375,
+          "y": 113.5017,
+          "z": -129.0,
+          "layer": "surface",
+          "note": "16115459957567200699 - Cave_CentralHyrule_0018"
+        },
+        {
+          "id": "caves-023",
+          "value": "27fff478",
+          "x": -253.9667,
+          "y": 132.8978,
+          "z": -767.084,
+          "layer": "surface",
+          "note": "17220565559925033058 - Cave_CentralHyrule_0018"
+        },
+        {
+          "id": "caves-024",
+          "value": "0ab08567",
+          "x": 380.06,
+          "y": 1521.65,
+          "z": 1631.647,
+          "layer": "sky",
+          "note": "2989256867079414765 - Cave_CentralHyrule_0019"
+        },
+        {
+          "id": "caves-025",
+          "value": "24379613",
+          "x": 489.6634,
+          "y": 1483.25,
+          "z": 1625.622,
+          "layer": "sky",
+          "note": "8543871419045106707 - Cave_CentralHyrule_0019"
+        },
+        {
+          "id": "caves-026",
+          "value": "8ec12fd3",
+          "x": -1111.5,
+          "y": 148.2,
+          "z": 432.0626,
+          "layer": "surface",
+          "note": "15319933969162710085 - Cave_CentralHyrule_0020"
+        },
+        {
+          "id": "caves-027",
+          "value": "16401397",
+          "x": -72.10925,
+          "y": 125.9356,
+          "z": 1045.974,
+          "layer": "surface",
+          "note": "9124311164147940922 - Cave_CentralHyrule_0021"
+        },
+        {
+          "id": "caves-028",
+          "value": "c231ebe5",
+          "x": -512.3591,
+          "y": 130.869,
+          "z": -127.5918,
+          "layer": "surface",
+          "note": "8802583314912760024 - Cave_CentralHyrule_0022"
+        },
+        {
+          "id": "caves-029",
+          "value": "174662b8",
+          "x": -1167.155,
+          "y": 137.7493,
+          "z": 1310.977,
+          "layer": "surface",
+          "note": "17183873816236198710 - Cave_CentralHyrule_0023"
+        },
+        {
+          "id": "caves-030",
+          "value": "ad848a26",
+          "x": -1404.5,
+          "y": 108.66,
+          "z": 256.5,
+          "layer": "surface",
+          "note": "17925324815156417966 - Cave_CentralHyrule_0030"
+        },
+        {
+          "id": "caves-031",
+          "value": "66cdd12c",
+          "x": 2767.812,
+          "y": 634.8295,
+          "z": -2778.185,
+          "layer": "surface",
+          "note": "2820182978785847885 - Cave_Eldin_0020"
+        },
+        {
+          "id": "caves-032",
+          "value": "7e0be4bc",
+          "x": 2238.605,
+          "y": 636.0185,
+          "z": -2682.376,
+          "layer": "surface",
+          "note": "5498372046996718881 - Cave_Eldin_0021"
+        },
+        {
+          "id": "caves-033",
+          "value": "18c09674",
+          "x": 2373.343,
+          "y": 561.8396,
+          "z": -3051.703,
+          "layer": "surface",
+          "note": "8060741823458164069 - Cave_Eldin_0022"
+        },
+        {
+          "id": "caves-034",
+          "value": "2da6acfc",
+          "x": 1554.559,
+          "y": 506.4309,
+          "z": -3102.513,
+          "layer": "surface",
+          "note": "16322463971808075566 - Cave_Eldin_0023"
+        },
+        {
+          "id": "caves-035",
+          "value": "df954691",
+          "x": 1423.078,
+          "y": 394.9322,
+          "z": -2102.729,
+          "layer": "surface",
+          "note": "10155351167282120417 - Cave_Eldin_0025"
+        },
+        {
+          "id": "caves-036",
+          "value": "e8c538f8",
+          "x": 1746.19,
+          "y": 450.72,
+          "z": -1926.52,
+          "layer": "surface",
+          "note": "12604202893589555443 - Cave_Eldin_0026"
+        },
+        {
+          "id": "caves-037",
+          "value": "8237dded",
+          "x": 2016.0,
+          "y": 531.2755,
+          "z": -2038.984,
+          "layer": "surface",
+          "note": "12239969978811659575 - Cave_Eldin_0027"
+        },
+        {
+          "id": "caves-038",
+          "value": "274f5b22",
+          "x": 1642.848,
+          "y": 389.5436,
+          "z": -1729.563,
+          "layer": "surface",
+          "note": "7529527728072030710 - Cave_Eldin_0028"
+        },
+        {
+          "id": "caves-039",
+          "value": "2d2a2713",
+          "x": 1853.956,
+          "y": 406.4446,
+          "z": -1719.953,
+          "layer": "surface",
+          "note": "540094550995474204 - Cave_Eldin_0029"
+        },
+        {
+          "id": "caves-040",
+          "value": "cc262457",
+          "x": 2206.314,
+          "y": 514.6932,
+          "z": -3075.319,
+          "layer": "surface",
+          "note": "2334228652024532918 - Cave_Eldin_0030"
+        },
+        {
+          "id": "caves-041",
+          "value": "f5de5215",
+          "x": 2485.386,
+          "y": 268.3781,
+          "z": -1792.983,
+          "layer": "surface",
+          "note": "10136447089337963341 - Cave_Eldin_0031"
+        },
+        {
+          "id": "caves-042",
+          "value": "d3b8461f",
+          "x": 1764.653,
+          "y": 511.2603,
+          "z": -2837.404,
+          "layer": "surface",
+          "note": "13003868390287574459 - Cave_Eldin_0033"
+        },
+        {
+          "id": "caves-043",
+          "value": "bc616568",
+          "x": 1713.881,
+          "y": 511.1068,
+          "z": -2718.587,
+          "layer": "surface",
+          "note": "15630240560201477046 - Cave_Eldin_0034"
+        },
+        {
+          "id": "caves-044",
+          "value": "a44549a0",
+          "x": 1949.909,
+          "y": 537.4574,
+          "z": -2687.209,
+          "layer": "surface",
+          "note": "1801494508290714306 - Cave_Eldin_0035"
+        },
+        {
+          "id": "caves-045",
+          "value": "b7ff12c3",
+          "x": 1929.11,
+          "y": 238.2568,
+          "z": -1278.69,
+          "layer": "surface",
+          "note": "10838082017355715677 - Cave_Eldin_0037"
+        },
+        {
+          "id": "caves-046",
+          "value": "138e9322",
+          "x": 1931.949,
+          "y": 283.4043,
+          "z": -1312.395,
+          "layer": "surface",
+          "note": "11860991231750302286 - Cave_Eldin_0037"
+        },
+        {
+          "id": "caves-047",
+          "value": "00e48b05",
+          "x": 2593.647,
+          "y": 261.4519,
+          "z": -1330.448,
+          "layer": "surface",
+          "note": "6579778402399415550 - Cave_Eldin_0038"
+        },
+        {
+          "id": "caves-048",
+          "value": "d1a29207",
+          "x": 2275.316,
+          "y": 267.5,
+          "z": -1520.099,
+          "layer": "surface",
+          "note": "14328941808872340282 - Cave_Eldin_0039"
+        },
+        {
+          "id": "caves-049",
+          "value": "3a07c789",
+          "x": 809.8935,
+          "y": 121.2152,
+          "z": 2971.707,
+          "layer": "surface",
+          "note": "6252906961473836647 - Cave_Firone_0002"
+        },
+        {
+          "id": "caves-050",
+          "value": "9f4001f1",
+          "x": 671.8048,
+          "y": 134.3863,
+          "z": 3109.481,
+          "layer": "surface",
+          "note": "16931302655167485859 - Cave_Firone_0008"
+        },
+        {
+          "id": "caves-051",
+          "value": "0a8ce684",
+          "x": 1169.23,
+          "y": 283.2793,
+          "z": 2443.27,
+          "layer": "surface",
+          "note": "12887654214926357542 - Cave_Firone_0009"
+        },
+        {
+          "id": "caves-052",
+          "value": "26fca8e7",
+          "x": -256.1517,
+          "y": 101.9714,
+          "z": 2940.198,
+          "layer": "surface",
+          "note": "2291495962666291037 - Cave_Firone_0016"
+        },
+        {
+          "id": "caves-053",
+          "value": "8544a02a",
+          "x": -176.3386,
+          "y": 126.6612,
+          "z": 3062.832,
+          "layer": "surface",
+          "note": "17794289268484220296 - Cave_Firone_0016"
+        },
+        {
+          "id": "caves-054",
+          "value": "eefa437a",
+          "x": 568.6034,
+          "y": 123.2259,
+          "z": 2981.877,
+          "layer": "surface",
+          "note": "7325726685713060531 - Cave_Firone_0020"
+        },
+        {
+          "id": "caves-055",
+          "value": "17af2b53",
+          "x": 1203.094,
+          "y": 135.9193,
+          "z": 3170.906,
+          "layer": "surface",
+          "note": "15876372107227050247 - Cave_Firone_0022"
+        },
+        {
+          "id": "caves-056",
+          "value": "69724573",
+          "x": 126.18,
+          "y": 68.16491,
+          "z": 2501.39,
+          "layer": "surface",
+          "note": "15142163600578211343 - Cave_Firone_0023"
+        },
+        {
+          "id": "caves-057",
+          "value": "bd778b04",
+          "x": 608.9023,
+          "y": 161.3276,
+          "z": 2210.08,
+          "layer": "surface",
+          "note": "8786178415487831994 - Cave_Firone_0024"
+        },
+        {
+          "id": "caves-058",
+          "value": "09a990be",
+          "x": 280.2788,
+          "y": 135.6949,
+          "z": 3875.137,
+          "layer": "surface",
+          "note": "2282125024947853696 - Cave_Firone_0029"
+        },
+        {
+          "id": "caves-059",
+          "value": "25f2f530",
+          "x": -1111.638,
+          "y": 254.71,
+          "z": 2148.178,
+          "layer": "surface",
+          "note": "12199381830158178871 - Cave_FirstPlateau_0001"
+        },
+        {
+          "id": "caves-060",
+          "value": "c8c2a1ae",
+          "x": -1061.875,
+          "y": 252.6713,
+          "z": 1829.554,
+          "layer": "surface",
+          "note": "9940203994076185236 - Cave_FirstPlateau_0002"
+        },
+        {
+          "id": "caves-061",
+          "value": "e1d7dd33",
+          "x": -3763.073,
+          "y": 140.5631,
+          "z": 2698.0,
+          "layer": "surface",
+          "note": "11576020347893843241 - Cave_GerudoDesert_0007"
+        },
+        {
+          "id": "caves-062",
+          "value": "6e5a02dd",
+          "x": -3763.275,
+          "y": 130.3909,
+          "z": 2420.758,
+          "layer": "surface",
+          "note": "16690736945446424880 - Cave_GerudoDesert_0007"
+        },
+        {
+          "id": "caves-063",
+          "value": "c2e321a7",
+          "x": -3827.19,
+          "y": 145.7133,
+          "z": 2650.319,
+          "layer": "surface",
+          "note": "12510038422293123766 - Cave_GerudoDesert_0008"
+        },
+        {
+          "id": "caves-064",
+          "value": "b29d9cbd",
+          "x": -3242.9,
+          "y": 104.4685,
+          "z": 2936.6,
+          "layer": "surface",
+          "note": "16913007828139583251 - Cave_GerudoDesert_0015"
+        },
+        {
+          "id": "caves-065",
+          "value": "43139343",
+          "x": -1967.004,
+          "y": 145.5133,
+          "z": 2059.611,
+          "layer": "surface",
+          "note": "4202665969653539342 - Cave_GerudoDesert_0022"
+        },
+        {
+          "id": "caves-066",
+          "value": "070c0273",
+          "x": -1795.805,
+          "y": 143.65,
+          "z": 1961.14,
+          "layer": "surface",
+          "note": "10518009420437986971 - Cave_GerudoDesert_0022"
+        },
+        {
+          "id": "caves-067",
+          "value": "ac23be05",
+          "x": -1527.762,
+          "y": 89.89854,
+          "z": 2222.542,
+          "layer": "surface",
+          "note": "11690670861852633792 - Cave_GerudoDesert_0030"
+        },
+        {
+          "id": "caves-068",
+          "value": "63fb84de",
+          "x": -2696.307,
+          "y": 94.37949,
+          "z": 2809.372,
+          "layer": "surface",
+          "note": "11996803931487605126 - Cave_GerudoDesert_0031"
+        },
+        {
+          "id": "caves-069",
+          "value": "cd104b39",
+          "x": -3679.051,
+          "y": 97.04066,
+          "z": 3255.366,
+          "layer": "surface",
+          "note": "15033213358038028919 - Cave_GerudoDesert_0032"
+        },
+        {
+          "id": "caves-070",
+          "value": "5fc547e6",
+          "x": -1726.964,
+          "y": 115.5759,
+          "z": 2183.379,
+          "layer": "surface",
+          "note": "10188228423800036434 - Cave_GerudoDesert_0035"
+        },
+        {
+          "id": "caves-071",
+          "value": "f20d039b",
+          "x": -1744.354,
+          "y": 99.30705,
+          "z": 2394.182,
+          "layer": "surface",
+          "note": "16166623820286719993 - Cave_GerudoDesert_0036"
+        },
+        {
+          "id": "caves-072",
+          "value": "dd405265",
+          "x": -2215.908,
+          "y": 357.7064,
+          "z": 2395.27,
+          "layer": "surface",
+          "note": "9086788533805343256 - Cave_GerudoDesert_0037"
+        },
+        {
+          "id": "caves-073",
+          "value": "65eb620e",
+          "x": -3099.359,
+          "y": 63.95093,
+          "z": 3063.779,
+          "layer": "surface",
+          "note": "1313747287247900726 - Cave_GerudoDesert_0039"
+        },
+        {
+          "id": "caves-074",
+          "value": "07e5b166",
+          "x": -2941.0,
+          "y": 100.52,
+          "z": 3857.9,
+          "layer": "surface",
+          "note": "5912572320237750059 - Cave_GerudoDesert_0040"
+        },
+        {
+          "id": "caves-075",
+          "value": "a4396dd1",
+          "x": -2258.922,
+          "y": 171.9476,
+          "z": 1759.334,
+          "layer": "surface",
+          "note": "10615886098827534628 - Cave_GerudoDesert_0041"
+        },
+        {
+          "id": "caves-076",
+          "value": "3590267b",
+          "x": -2173.727,
+          "y": 242.0874,
+          "z": 1841.648,
+          "layer": "surface",
+          "note": "11364247050530626523 - Cave_GerudoDesert_0041"
+        },
+        {
+          "id": "caves-077",
+          "value": "33144f21",
+          "x": -2491.193,
+          "y": 111.2399,
+          "z": 3067.738,
+          "layer": "surface",
+          "note": "12690494979007497354 - Cave_GerudoDesert_0043 (chasm)"
+        },
+        {
+          "id": "caves-078",
+          "value": "1111bc4a",
+          "x": -2535.542,
+          "y": 57.27916,
+          "z": 3626.101,
+          "layer": "surface",
+          "note": "2575716733240401024 - Cave_GerudoDesert_0044"
+        },
+        {
+          "id": "caves-079",
+          "value": "d04b99f2",
+          "x": -2518.917,
+          "y": 57.84764,
+          "z": 3671.562,
+          "layer": "surface",
+          "note": "2733724849251422098 - Cave_GerudoDesert_0044"
+        },
+        {
+          "id": "caves-080",
+          "value": "2be41bc7",
+          "x": -2584.241,
+          "y": 57.52135,
+          "z": 3638.208,
+          "layer": "surface",
+          "note": "3159585809076870306 - Cave_GerudoDesert_0044"
+        },
+        {
+          "id": "caves-081",
+          "value": "f2cfc0b4",
+          "x": -2570.56,
+          "y": 54.07516,
+          "z": 3744.447,
+          "layer": "surface",
+          "note": "5472907972497701967 - Cave_GerudoDesert_0044"
+        },
+        {
+          "id": "caves-082",
+          "value": "f882f853",
+          "x": -2530.788,
+          "y": 58.68051,
+          "z": 3769.119,
+          "layer": "surface",
+          "note": "5917955570761207273 - Cave_GerudoDesert_0044"
+        },
+        {
+          "id": "caves-083",
+          "value": "e4c7425b",
+          "x": -2480.565,
+          "y": 58.84991,
+          "z": 3758.143,
+          "layer": "surface",
+          "note": "6434272510662827856 - Cave_GerudoDesert_0044"
+        },
+        {
+          "id": "caves-084",
+          "value": "594b9806",
+          "x": -2521.204,
+          "y": 58.38428,
+          "z": 3724.844,
+          "layer": "surface",
+          "note": "8469685058221282368 - Cave_GerudoDesert_0044"
+        },
+        {
+          "id": "caves-085",
+          "value": "63b4c49c",
+          "x": -2564.693,
+          "y": 57.20284,
+          "z": 3681.715,
+          "layer": "surface",
+          "note": "9697862465374992030 - Cave_GerudoDesert_0044"
+        },
+        {
+          "id": "caves-086",
+          "value": "ec83ebd0",
+          "x": -2451.857,
+          "y": 58.97064,
+          "z": 3676.729,
+          "layer": "surface",
+          "note": "10959407977416225522 - Cave_GerudoDesert_0044"
+        },
+        {
+          "id": "caves-087",
+          "value": "af562436",
+          "x": -2480.763,
+          "y": 58.91989,
+          "z": 3632.817,
+          "layer": "surface",
+          "note": "12487379951772716063 - Cave_GerudoDesert_0044"
+        },
+        {
+          "id": "caves-088",
+          "value": "7daa6626",
+          "x": -2477.854,
+          "y": 58.3941,
+          "z": 3709.82,
+          "layer": "surface",
+          "note": "13271954650858439886 - Cave_GerudoDesert_0044"
+        },
+        {
+          "id": "caves-089",
+          "value": "479fd64d",
+          "x": -2604.787,
+          "y": 55.75517,
+          "z": 3709.315,
+          "layer": "surface",
+          "note": "16209457192430544208 - Cave_GerudoDesert_0044"
+        },
+        {
+          "id": "caves-090",
+          "value": "fc833487",
+          "x": -3354.8,
+          "y": 121.0,
+          "z": 2694.6,
+          "layer": "surface",
+          "note": "9984383196680075552 - Cave_GerudoDesert_0045"
+        },
+        {
+          "id": "caves-091",
+          "value": "1987c301",
+          "x": -4814.321,
+          "y": 112.0,
+          "z": 3875.428,
+          "layer": "surface",
+          "note": "11848909698461881619 - Cave_GerudoDesert_0046"
+        },
+        {
+          "id": "caves-092",
+          "value": "96cc8504",
+          "x": -4673.2,
+          "y": 119.7035,
+          "z": 1986.137,
+          "layer": "surface",
+          "note": "15998502860260676292 - Cave_GerudoDesert_0049"
+        },
+        {
+          "id": "caves-093",
+          "value": "6ed551fe",
+          "x": -2413.649,
+          "y": 255.2226,
+          "z": 1824.038,
+          "layer": "surface",
+          "note": "1536461930295375687 - Cave_GerudoDesert_0050"
+        },
+        {
+          "id": "caves-094",
+          "value": "d293fdef",
+          "x": -2611.278,
+          "y": 222.9838,
+          "z": 2604.77,
+          "layer": "surface",
+          "note": "2556267233275928801 - Cave_GerudoDesert_0051"
+        },
+        {
+          "id": "caves-095",
+          "value": "121ef374",
+          "x": -2676.715,
+          "y": 190.073,
+          "z": 2402.609,
+          "layer": "surface",
+          "note": "17113070533003917624 - Cave_GerudoDesert_0051"
+        },
+        {
+          "id": "caves-096",
+          "value": "0fc434a7",
+          "x": -2476.52,
+          "y": 287.5917,
+          "z": 1809.22,
+          "layer": "surface",
+          "note": "4956085668477112851 - Cave_GerudoHighlands_0002"
+        },
+        {
+          "id": "caves-097",
+          "value": "4e630b7a",
+          "x": -4384.535,
+          "y": 584.2957,
+          "z": 536.5526,
+          "layer": "surface",
+          "note": "13402022485127452447 - Cave_GerudoHighlands_0008"
+        },
+        {
+          "id": "caves-098",
+          "value": "fa56dd46",
+          "x": -3982.832,
+          "y": 542.1691,
+          "z": 1245.38,
+          "layer": "surface",
+          "note": "3829441701169624334 - Cave_GerudoHighlands_0014"
+        },
+        {
+          "id": "caves-099",
+          "value": "c8361726",
+          "x": -3881.652,
+          "y": 681.944,
+          "z": 726.7761,
+          "layer": "surface",
+          "note": "10200413539234062667 - Cave_GerudoHighlands_0017"
+        },
+        {
+          "id": "caves-100",
+          "value": "5855dad1",
+          "x": 3235.51,
+          "y": 177.44,
+          "z": 3017.51,
+          "layer": "surface",
+          "note": "5245490651623528104 - Cave_HateruEast_0000"
+        },
+        {
+          "id": "caves-101",
+          "value": "7c57bf66",
+          "x": 3291.834,
+          "y": 174.0,
+          "z": 3332.983,
+          "layer": "surface",
+          "note": "6098009852430490669 - Cave_HateruEast_0000"
+        },
+        {
+          "id": "caves-102",
+          "value": "231cb30a",
+          "x": 1959.679,
+          "y": 181.6188,
+          "z": 2611.651,
+          "layer": "surface",
+          "note": "6612796801182890824 - Cave_HateruEast_0002"
+        },
+        {
+          "id": "caves-103",
+          "value": "787a2b4b",
+          "x": 1788.839,
+          "y": 194.6686,
+          "z": 3012.0,
+          "layer": "surface",
+          "note": "17467478120509332272 - Cave_HateruEast_0002"
+        },
+        {
+          "id": "caves-104",
+          "value": "2c277f35",
+          "x": 1676.795,
+          "y": 274.8358,
+          "z": 3038.773,
+          "layer": "surface",
+          "note": "8024413190787260035 - Cave_HateruEast_0006"
+        },
+        {
+          "id": "caves-105",
+          "value": "a8f7387d",
+          "x": 1896.399,
+          "y": 265.528,
+          "z": 3111.244,
+          "layer": "surface",
+          "note": "16727300130829770739 - Cave_HateruEast_0007"
+        },
+        {
+          "id": "caves-106",
+          "value": "c489a106",
+          "x": 1958.782,
+          "y": 314.8886,
+          "z": 3032.786,
+          "layer": "surface",
+          "note": "6802930745954475552 - Cave_HateruEast_0008"
+        },
+        {
+          "id": "caves-107",
+          "value": "f4860a54",
+          "x": 2009.624,
+          "y": 288.4404,
+          "z": 3164.034,
+          "layer": "surface",
+          "note": "15520389346876570879 - Cave_HateruEast_0008"
+        },
+        {
+          "id": "caves-108",
+          "value": "c0eb4d6d",
+          "x": 1813.53,
+          "y": 229.0,
+          "z": 3738.02,
+          "layer": "surface",
+          "note": "5716892940673620530 - Cave_HateruEast_0009"
+        },
+        {
+          "id": "caves-109",
+          "value": "2cf66b2b",
+          "x": 4752.63,
+          "y": 121.7059,
+          "z": 3781.506,
+          "layer": "surface",
+          "note": "8281733242675322304 - Cave_HateruEast_0013"
+        },
+        {
+          "id": "caves-110",
+          "value": "88cec30c",
+          "x": 1446.719,
+          "y": 184.7728,
+          "z": 3483.647,
+          "layer": "surface",
+          "note": "11546223674095079102 - Cave_HateruEast_0014"
+        },
+        {
+          "id": "caves-111",
+          "value": "7407d229",
+          "x": 2454.0,
+          "y": 175.0,
+          "z": 3193.0,
+          "layer": "surface",
+          "note": "17405104512511432097 - Cave_HateruEast_0016"
+        },
+        {
+          "id": "caves-112",
+          "value": "2cfe1bb4",
+          "x": 1617.0,
+          "y": 112.46,
+          "z": 1260.0,
+          "layer": "surface",
+          "note": "2377079948731926345 - Cave_HateruWest_0002"
+        },
+        {
+          "id": "caves-113",
+          "value": "7d56ff23",
+          "x": 1587.754,
+          "y": 111.5236,
+          "z": 812.1858,
+          "layer": "surface",
+          "note": "11536545672066358783 - Cave_HateruWest_0002"
+        },
+        {
+          "id": "caves-114",
+          "value": "0a0f6a67",
+          "x": 1947.489,
+          "y": 265.4827,
+          "z": 981.817,
+          "layer": "surface",
+          "note": "14452390387851187371 - Cave_HateruWest_0005"
+        },
+        {
+          "id": "caves-115",
+          "value": "48f73e70",
+          "x": 1877.434,
+          "y": 309.0427,
+          "z": 1160.383,
+          "layer": "surface",
+          "note": "4113707437011094988 - Cave_HateruWest_0006"
+        },
+        {
+          "id": "caves-116",
+          "value": "4e88a9c1",
+          "x": 1373.024,
+          "y": 240.2808,
+          "z": 1197.249,
+          "layer": "surface",
+          "note": "12637708079017963512 - Cave_HateruWest_0008"
+        },
+        {
+          "id": "caves-117",
+          "value": "908cd7f5",
+          "x": 1328.358,
+          "y": 244.9518,
+          "z": 1156.223,
+          "layer": "surface",
+          "note": "14001688345205756141 - Cave_HateruWest_0008"
+        },
+        {
+          "id": "caves-118",
+          "value": "f1b80644",
+          "x": 1194.246,
+          "y": 268.427,
+          "z": 1853.947,
+          "layer": "surface",
+          "note": "5582460455199843960 - Cave_HateruWest_0011"
+        },
+        {
+          "id": "caves-119",
+          "value": "126934fa",
+          "x": 1183.372,
+          "y": 356.0,
+          "z": 1947.553,
+          "layer": "surface",
+          "note": "9741614762982953500 - Cave_HateruWest_0012"
+        },
+        {
+          "id": "caves-120",
+          "value": "59ab733d",
+          "x": -4041.161,
+          "y": 135.7831,
+          "z": -2671.444,
+          "layer": "surface",
+          "note": "3318512786570605776 - Cave_Hebra_0000"
+        },
+        {
+          "id": "caves-121",
+          "value": "e557f0fc",
+          "x": -4429.344,
+          "y": 333.8416,
+          "z": -3760.204,
+          "layer": "surface",
+          "note": "16469865345460228668 - Cave_Hebra_0013"
+        },
+        {
+          "id": "caves-122",
+          "value": "09111bc9",
+          "x": -3932.0,
+          "y": 94.24,
+          "z": -2853.611,
+          "layer": "surface",
+          "note": "237924683186779881 - Cave_Hebra_0015"
+        },
+        {
+          "id": "caves-123",
+          "value": "c9784265",
+          "x": -2900.156,
+          "y": 500.4017,
+          "z": -2510.26,
+          "layer": "surface",
+          "note": "11736261478102397242 - Cave_Hebra_0016"
+        },
+        {
+          "id": "caves-124",
+          "value": "90e14da3",
+          "x": -2642.285,
+          "y": 361.5,
+          "z": -3268.3,
+          "layer": "surface",
+          "note": "3195307747504654540 - Cave_Hebra_0019"
+        },
+        {
+          "id": "caves-125",
+          "value": "61aebf7b",
+          "x": -2414.122,
+          "y": 485.1641,
+          "z": -3136.461,
+          "layer": "surface",
+          "note": "16325049645669939578 - Cave_Hebra_0019"
+        },
+        {
+          "id": "caves-126",
+          "value": "3bbcdf6f",
+          "x": -3814.609,
+          "y": 368.5,
+          "z": -3595.483,
+          "layer": "surface",
+          "note": "2105704342604321749 - Cave_Hebra_0021"
+        },
+        {
+          "id": "caves-127",
+          "value": "e9598df2",
+          "x": -3010.71,
+          "y": 673.0,
+          "z": -3216.431,
+          "layer": "surface",
+          "note": "10291314157862112744 - Cave_Hebra_0022"
+        },
+        {
+          "id": "caves-128",
+          "value": "ca9770bc",
+          "x": -3005.719,
+          "y": 311.8382,
+          "z": -1635.029,
+          "layer": "surface",
+          "note": "16902444185789897887 - Cave_Hebra_0023"
+        },
+        {
+          "id": "caves-129",
+          "value": "dd30d5d7",
+          "x": -3571.5,
+          "y": 337.7415,
+          "z": -2475.0,
+          "layer": "surface",
+          "note": "12796923671859794342 - Cave_Hebra_0025"
+        },
+        {
+          "id": "caves-130",
+          "value": "063a3c96",
+          "x": -3214.608,
+          "y": 456.0323,
+          "z": -2462.24,
+          "layer": "surface",
+          "note": "4880616531421497220 - Cave_Hebra_0026"
+        },
+        {
+          "id": "caves-131",
+          "value": "0e38fa05",
+          "x": -3398.434,
+          "y": 423.3941,
+          "z": -2499.361,
+          "layer": "surface",
+          "note": "9544967013646230266 - Cave_Hebra_0030"
+        },
+        {
+          "id": "caves-132",
+          "value": "c8b17f9a",
+          "x": -3227.5,
+          "y": 551.66,
+          "z": -2535.71,
+          "layer": "surface",
+          "note": "14012515669863855641 - Cave_Hebra_0030"
+        },
+        {
+          "id": "caves-133",
+          "value": "a12e51ae",
+          "x": -2840.931,
+          "y": 334.4799,
+          "z": -1771.911,
+          "layer": "surface",
+          "note": "10347911355422425929 - Cave_Hebra_0035"
+        },
+        {
+          "id": "caves-134",
+          "value": "860f5230",
+          "x": -1372.09,
+          "y": 308.2222,
+          "z": -2861.308,
+          "layer": "surface",
+          "note": "351273480328625563 - Cave_Hebra_0036"
+        },
+        {
+          "id": "caves-135",
+          "value": "e6a2223d",
+          "x": -2395.838,
+          "y": 283.0,
+          "z": -2276.628,
+          "layer": "surface",
+          "note": "4424842077643087931 - Cave_Hebra_0037"
+        },
+        {
+          "id": "caves-136",
+          "value": "c3b4e479",
+          "x": -3958.686,
+          "y": 311.0806,
+          "z": -2029.48,
+          "layer": "surface",
+          "note": "15195878330545621010 - Cave_Hebra_0039"
+        },
+        {
+          "id": "caves-137",
+          "value": "1946df5e",
+          "x": -3960.082,
+          "y": 349.4887,
+          "z": -3245.218,
+          "layer": "surface",
+          "note": "331854384806019930 - Cave_Hebra_0040"
+        },
+        {
+          "id": "caves-138",
+          "value": "0ed61e26",
+          "x": -3555.201,
+          "y": 383.8807,
+          "z": -3088.22,
+          "layer": "surface",
+          "note": "2414130203331476311 - Cave_Hebra_0041"
+        },
+        {
+          "id": "caves-139",
+          "value": "b4bda4e9",
+          "x": -3989.371,
+          "y": 243.8339,
+          "z": -3062.853,
+          "layer": "surface",
+          "note": "16911046087036530198 - Cave_Hebra_0041"
+        },
+        {
+          "id": "caves-140",
+          "value": "21efee99",
+          "x": 676.4661,
+          "y": 156.6693,
+          "z": -1389.783,
+          "layer": "surface",
+          "note": "3626583673838507069 - Cave_HyruleForest_0001"
+        },
+        {
+          "id": "caves-141",
+          "value": "32368cb1",
+          "x": 1244.07,
+          "y": 135.27,
+          "z": -1226.72,
+          "layer": "surface",
+          "note": "17919446484334912137 - Cave_HyruleForest_0006"
+        },
+        {
+          "id": "caves-142",
+          "value": "b145afc5",
+          "x": -643.5,
+          "y": 265.0,
+          "z": -2040.0,
+          "layer": "surface",
+          "note": "17492986739704260639 - Cave_HyruleForest_0007"
+        },
+        {
+          "id": "caves-143",
+          "value": "85c65a6f",
+          "x": 307.1301,
+          "y": 199.0,
+          "z": -3579.347,
+          "layer": "surface",
+          "note": "15069346870719132772 - Cave_HyruleForest_0008"
+        },
+        {
+          "id": "caves-144",
+          "value": "b722026b",
+          "x": -1234.645,
+          "y": 199.9723,
+          "z": -770.0,
+          "layer": "surface",
+          "note": "7031213641441648501 - Cave_HyruleRidge_0000"
+        },
+        {
+          "id": "caves-145",
+          "value": "3e332c57",
+          "x": -1188.387,
+          "y": 181.3508,
+          "z": -644.5137,
+          "layer": "surface",
+          "note": "13526831088096570570 - Cave_HyruleRidge_0000"
+        },
+        {
+          "id": "caves-146",
+          "value": "354b045a",
+          "x": -2921.855,
+          "y": 119.0728,
+          "z": 804.1642,
+          "layer": "surface",
+          "note": "7396388418196389866 - Cave_HyruleRidge_0002"
+        },
+        {
+          "id": "caves-147",
+          "value": "7638f5cd",
+          "x": -1730.5,
+          "y": 340.5,
+          "z": -1158.0,
+          "layer": "surface",
+          "note": "7109308500424591297 - Cave_HyruleRidge_0003"
+        },
+        {
+          "id": "caves-148",
+          "value": "2af45e3e",
+          "x": -2644.244,
+          "y": 247.6317,
+          "z": -1126.024,
+          "layer": "surface",
+          "note": "10595346751399989600 - Cave_HyruleRidge_0004 (chasm)"
+        },
+        {
+          "id": "caves-149",
+          "value": "e15bc42e",
+          "x": -2196.346,
+          "y": 229.6,
+          "z": 815.1,
+          "layer": "surface",
+          "note": "16086200349282513170 - Cave_HyruleRidge_0005"
+        },
+        {
+          "id": "caves-150",
+          "value": "5f9e0623",
+          "x": -2268.351,
+          "y": 201.6453,
+          "z": -899.2295,
+          "layer": "surface",
+          "note": "7161951218916542562 - Cave_HyruleRidge_0006"
+        },
+        {
+          "id": "caves-151",
+          "value": "ef66ff8e",
+          "x": -2049.127,
+          "y": 55.87498,
+          "z": -1631.707,
+          "layer": "surface",
+          "note": "9727847847192093009 - Cave_HyruleRidge_0007"
+        },
+        {
+          "id": "caves-152",
+          "value": "9a291172",
+          "x": -2151.008,
+          "y": 386.5,
+          "z": 360.521,
+          "layer": "surface",
+          "note": "1001017030533157593 - Cave_HyruleRidge_0008"
+        },
+        {
+          "id": "caves-153",
+          "value": "af3f7c58",
+          "x": 1144.714,
+          "y": 169.0162,
+          "z": -247.4642,
+          "layer": "surface",
+          "note": "2995591950375801309 - Cave_Lanayru_0006"
+        },
+        {
+          "id": "caves-154",
+          "value": "da191fe3",
+          "x": 1349.549,
+          "y": 140.3217,
+          "z": -296.4998,
+          "layer": "surface",
+          "note": "18330400566032353940 - Cave_Lanayru_0006"
+        },
+        {
+          "id": "caves-155",
+          "value": "b0bbc93e",
+          "x": 3094.097,
+          "y": 189.5792,
+          "z": 51.30798,
+          "layer": "surface",
+          "note": "364284787858635830 - Cave_Lanayru_0008"
+        },
+        {
+          "id": "caves-156",
+          "value": "1a1896b3",
+          "x": 2909.617,
+          "y": 192.4868,
+          "z": 65.92992,
+          "layer": "surface",
+          "note": "12971684091903964185 - Cave_Lanayru_0014"
+        },
+        {
+          "id": "caves-157",
+          "value": "6beaaf91",
+          "x": 2674.985,
+          "y": 199.7526,
+          "z": -287.4286,
+          "layer": "surface",
+          "note": "121149631314393175 - Cave_Lanayru_0019"
+        },
+        {
+          "id": "caves-158",
+          "value": "77e774a7",
+          "x": 2601.823,
+          "y": 190.6994,
+          "z": -225.8443,
+          "layer": "surface",
+          "note": "4222074271666944644 - Cave_Lanayru_0019"
+        },
+        {
+          "id": "caves-159",
+          "value": "d710bf35",
+          "x": 2691.49,
+          "y": 212.0,
+          "z": -214.2797,
+          "layer": "surface",
+          "note": "11770869278850880411 - Cave_Lanayru_0019"
+        },
+        {
+          "id": "caves-160",
+          "value": "14b47bc7",
+          "x": 2185.078,
+          "y": 147.8939,
+          "z": -142.0787,
+          "layer": "surface",
+          "note": "2181612675989647998 - Cave_Lanayru_0024"
+        },
+        {
+          "id": "caves-161",
+          "value": "05b5bd9b",
+          "x": 2253.844,
+          "y": 126.6181,
+          "z": -14.21026,
+          "layer": "surface",
+          "note": "2568930561223619483 - Cave_Lanayru_0024"
+        },
+        {
+          "id": "caves-162",
+          "value": "f209b8c5",
+          "x": 2215.354,
+          "y": 181.0875,
+          "z": -100.1791,
+          "layer": "surface",
+          "note": "6920893920509135660 - Cave_Lanayru_0024"
+        },
+        {
+          "id": "caves-163",
+          "value": "c242981a",
+          "x": 2260.729,
+          "y": 216.0839,
+          "z": -108.3997,
+          "layer": "surface",
+          "note": "9861517874279084103 - Cave_Lanayru_0024"
+        },
+        {
+          "id": "caves-164",
+          "value": "3f4694a6",
+          "x": 2570.025,
+          "y": 274.5424,
+          "z": -517.9893,
+          "layer": "surface",
+          "note": "6101576164770829020 - Cave_Lanayru_0032"
+        },
+        {
+          "id": "caves-165",
+          "value": "14488fdc",
+          "x": 2633.5,
+          "y": 309.1393,
+          "z": -525.6262,
+          "layer": "surface",
+          "note": "11067701219318302721 - Cave_Lanayru_0032"
+        },
+        {
+          "id": "caves-166",
+          "value": "b54bfe1c",
+          "x": 2863.632,
+          "y": 339.7472,
+          "z": -346.3295,
+          "layer": "surface",
+          "note": "1267684059742163273 - Cave_Lanayru_0033"
+        },
+        {
+          "id": "caves-167",
+          "value": "961149b6",
+          "x": 2700.302,
+          "y": 315.4945,
+          "z": -479.8156,
+          "layer": "surface",
+          "note": "8479679440708631302 - Cave_Lanayru_0033"
+        },
+        {
+          "id": "caves-168",
+          "value": "0d492848",
+          "x": 4243.966,
+          "y": 99.10972,
+          "z": 255.6655,
+          "layer": "surface",
+          "note": "11416496034161895623 - Cave_Lanayru_0035"
+        },
+        {
+          "id": "caves-169",
+          "value": "79f77fa9",
+          "x": 4473.68,
+          "y": 150.3593,
+          "z": 832.2194,
+          "layer": "surface",
+          "note": "18173532972070437383 - Cave_Lanayru_0036"
+        },
+        {
+          "id": "caves-170",
+          "value": "43cc9e40",
+          "x": 2958.832,
+          "y": 313.0372,
+          "z": -253.8851,
+          "layer": "surface",
+          "note": "6400766332894249911 - Cave_Lanayru_0048"
+        },
+        {
+          "id": "caves-171",
+          "value": "5392e5f7",
+          "x": 2912.125,
+          "y": 273.1285,
+          "z": -170.1434,
+          "layer": "surface",
+          "note": "17915364811553875307 - Cave_Lanayru_0048"
+        },
+        {
+          "id": "caves-172",
+          "value": "7421a96a",
+          "x": 2849.799,
+          "y": 439.877,
+          "z": -478.9477,
+          "layer": "surface",
+          "note": "7674390140845792498 - Cave_Lanayru_0049"
+        },
+        {
+          "id": "caves-173",
+          "value": "84bb7e0b",
+          "x": 1726.917,
+          "y": 100.1859,
+          "z": -162.0548,
+          "layer": "surface",
+          "note": "12292698567036544880 - Cave_Lanayru_0050 (chasm)"
+        },
+        {
+          "id": "caves-174",
+          "value": "28d1264f",
+          "x": 493.7314,
+          "y": 150.0,
+          "z": -730.937,
+          "layer": "surface",
+          "note": "8187778331917385311 - Cave_Lanayru_0052"
+        },
+        {
+          "id": "caves-175",
+          "value": "c5b19947",
+          "x": 845.9233,
+          "y": 125.8293,
+          "z": -31.49684,
+          "layer": "surface",
+          "note": "16226687335351902745 - Cave_Lanayru_0053"
+        },
+        {
+          "id": "caves-176",
+          "value": "763ba949",
+          "x": 3809.582,
+          "y": 321.4452,
+          "z": -419.5987,
+          "layer": "surface",
+          "note": "8431162680466675195 - Cave_Lanayru_0055"
+        },
+        {
+          "id": "caves-177",
+          "value": "74921bf1",
+          "x": 3660.875,
+          "y": 385.0333,
+          "z": -538.5847,
+          "layer": "surface",
+          "note": "1879125739105223517 - Cave_Lanayru_0057"
+        },
+        {
+          "id": "caves-178",
+          "value": "d2594c81",
+          "x": 3147.392,
+          "y": 287.5269,
+          "z": -667.6096,
+          "layer": "surface",
+          "note": "11232051547730571904 - Cave_Lanayru_0060"
+        },
+        {
+          "id": "caves-179",
+          "value": "2e0c7fd0",
+          "x": 3240.992,
+          "y": 186.4779,
+          "z": -373.5201,
+          "layer": "surface",
+          "note": "16836248457949403705 - Cave_Lanayru_0061"
+        },
+        {
+          "id": "caves-180",
+          "value": "8c2dcfe1",
+          "x": 3271.55,
+          "y": 84.306,
+          "z": -441.5872,
+          "layer": "surface",
+          "note": "15007569538535704822 - Cave_Lanayru_0063 (chasm)"
+        },
+        {
+          "id": "caves-181",
+          "value": "f5f0fd42",
+          "x": 2698.728,
+          "y": 225.9755,
+          "z": 1292.447,
+          "layer": "surface",
+          "note": "5030128869675891494 - Cave_LanayruMountain_0002"
+        },
+        {
+          "id": "caves-182",
+          "value": "6694d4c0",
+          "x": 4585.332,
+          "y": 109.5976,
+          "z": 2246.283,
+          "layer": "surface",
+          "note": "4833086368491217811 - Cave_LanayruMountain_0006"
+        },
+        {
+          "id": "caves-183",
+          "value": "f75e02cd",
+          "x": 2504.104,
+          "y": 123.9471,
+          "z": 2106.521,
+          "layer": "surface",
+          "note": "12154058839145194445 - Cave_LanayruMountain_0008"
+        },
+        {
+          "id": "caves-184",
+          "value": "ce123556",
+          "x": 3074.555,
+          "y": 207.2067,
+          "z": 1138.09,
+          "layer": "surface",
+          "note": "7159625979791517502 - Cave_LanayruMountain_0010"
+        },
+        {
+          "id": "caves-185",
+          "value": "0e7e6978",
+          "x": 3476.452,
+          "y": 127.4407,
+          "z": 968.3922,
+          "layer": "surface",
+          "note": "7666999484368155152 - Cave_LanayruMountain_0010"
+        },
+        {
+          "id": "caves-186",
+          "value": "66582a08",
+          "x": 2492.99,
+          "y": 122.5274,
+          "z": 1477.647,
+          "layer": "surface",
+          "note": "7764210204243066165 - Cave_LanayruMountain_0014"
+        },
+        {
+          "id": "caves-187",
+          "value": "e95bdc3c",
+          "x": 4225.536,
+          "y": 305.5,
+          "z": 1738.955,
+          "layer": "surface",
+          "note": "306314842763820419 - Cave_LanayruMountain_0016"
+        },
+        {
+          "id": "caves-188",
+          "value": "f0074ad3",
+          "x": 3933.575,
+          "y": 237.9416,
+          "z": 2069.003,
+          "layer": "surface",
+          "note": "2241190132839882887 - Cave_LanayruMountain_0016"
+        },
+        {
+          "id": "caves-189",
+          "value": "bc0f127c",
+          "x": 4207.23,
+          "y": 109.01,
+          "z": 2287.35,
+          "layer": "surface",
+          "note": "14931006272035364254 - Cave_LanayruMountain_0022"
+        },
+        {
+          "id": "caves-190",
+          "value": "51186e4e",
+          "x": 3650.401,
+          "y": 111.8049,
+          "z": 3210.815,
+          "layer": "surface",
+          "note": "3729378174235672710 - Cave_LanayruMountain_0024"
+        },
+        {
+          "id": "caves-191",
+          "value": "d0dd6dd8",
+          "x": 3757.448,
+          "y": 322.2258,
+          "z": 2066.606,
+          "layer": "surface",
+          "note": "6248504940692771516 - Cave_LanayruMountain_0025"
+        },
+        {
+          "id": "caves-192",
+          "value": "84063d3e",
+          "x": 3748.875,
+          "y": 300.5,
+          "z": 2026.508,
+          "layer": "surface",
+          "note": "11652366925193288374 - Cave_LanayruMountain_0025"
+        },
+        {
+          "id": "caves-193",
+          "value": "d969acc5",
+          "x": 2243.432,
+          "y": 134.0,
+          "z": 1689.599,
+          "layer": "surface",
+          "note": "6874178767484973104 - Cave_LanayruMountain_0026"
+        },
+        {
+          "id": "caves-194",
+          "value": "8e853c35",
+          "x": -3865.5,
+          "y": 188.0,
+          "z": -1011.5,
+          "layer": "surface",
+          "note": "12943662571339111896 - Cave_Tabantha_0001"
+        },
+        {
+          "id": "caves-195",
+          "value": "59744e7f",
+          "x": -3931.099,
+          "y": 188.3087,
+          "z": -1090.969,
+          "layer": "surface",
+          "note": "13346964772528420448 - Cave_Tabantha_0001"
+        },
+        {
+          "id": "caves-196",
+          "value": "daaf89ad",
+          "x": -3465.121,
+          "y": 369.5734,
+          "z": -449.4601,
+          "layer": "surface",
+          "note": "8952894420645753579 - Cave_Tabantha_0002"
+        },
+        {
+          "id": "caves-197",
+          "value": "399a214a",
+          "x": -3308.472,
+          "y": 13.62203,
+          "z": -789.7637,
+          "layer": "surface",
+          "note": "14339936005749917162 - Cave_Tabantha_0003"
+        }
+      ],
+      "sourceCounts": {
+        "ids": 197,
+        "coordinates": 201
+      }
+    },
+    {
+      "id": "hudson_sign",
+      "label": "Hudson Sign",
+      "kind": "guid",
+      "items": [
+        {
+          "id": "hudson_sign-001",
+          "value": "8129187004349557201",
+          "x": -4112.94,
+          "y": 130.72,
+          "z": -2758.5,
+          "layer": "surface",
+          "note": "0x70d0ac829afa29d1"
+        },
+        {
+          "id": "hudson_sign-002",
+          "value": "12433872634384224356",
+          "x": -4108.0,
+          "y": 560.55,
+          "z": 1388.5,
+          "layer": "surface",
+          "note": "0xac8dfd4892ec1064"
+        },
+        {
+          "id": "hudson_sign-003",
+          "value": "17740568340057049897",
+          "x": -3612.91,
+          "y": 249.71,
+          "z": -2187.6,
+          "layer": "surface",
+          "note": "0xf63328e966a44b29"
+        },
+        {
+          "id": "hudson_sign-004",
+          "value": "9000738855023549736",
+          "x": -3255.98,
+          "y": 553.14,
+          "z": -2570.86,
+          "layer": "surface",
+          "note": "0x7ce90c4cf9bc1d28"
+        },
+        {
+          "id": "hudson_sign-005",
+          "value": "16871200868898533781",
+          "x": -3133.56,
+          "y": 324.41,
+          "z": -1224.21,
+          "layer": "surface",
+          "note": "0xea228bcd84f57195"
+        },
+        {
+          "id": "hudson_sign-006",
+          "value": "6342874677586460208",
+          "x": -3559.01,
+          "y": 243.2,
+          "z": -1549.37,
+          "layer": "surface",
+          "note": "0x58066ae9cc5c7e30"
+        },
+        {
+          "id": "hudson_sign-007",
+          "value": "9078228614577302042",
+          "x": -3320.52,
+          "y": 275.56,
+          "z": -505.29,
+          "layer": "surface",
+          "note": "0x7dfc58d391aaaa1a"
+        },
+        {
+          "id": "hudson_sign-008",
+          "value": "12767525460071474230",
+          "x": -3382.06,
+          "y": 173.65,
+          "z": 219.66,
+          "layer": "surface",
+          "note": "0xb12f5cc2bc50e436"
+        },
+        {
+          "id": "hudson_sign-009",
+          "value": "8742494761271929549",
+          "x": -3438.0,
+          "y": 160.66,
+          "z": 3122.97,
+          "layer": "surface",
+          "note": "0x795394aa6853aacd"
+        },
+        {
+          "id": "hudson_sign-010",
+          "value": "2174859213985413551",
+          "x": -2211.21,
+          "y": 495.94,
+          "z": -2929.07,
+          "layer": "surface",
+          "note": "0x1e2ea6eea615f9af"
+        },
+        {
+          "id": "hudson_sign-011",
+          "value": "15484794508634527958",
+          "x": -2700.11,
+          "y": 414.16,
+          "z": -771.4,
+          "layer": "surface",
+          "note": "0xd6e50a904b1498d6"
+        },
+        {
+          "id": "hudson_sign-012",
+          "value": "3232101435960462306",
+          "x": -2504.0,
+          "y": 250.96,
+          "z": -190.0,
+          "layer": "surface",
+          "note": "0x2cdabb21b0740be2"
+        },
+        {
+          "id": "hudson_sign-013",
+          "value": "3291579889479531330",
+          "x": -2675.7,
+          "y": 115.08,
+          "z": 425.69,
+          "layer": "surface",
+          "note": "0x2dae0a784e3f3b42"
+        },
+        {
+          "id": "hudson_sign-014",
+          "value": "7738036695091090882",
+          "x": -2087.0,
+          "y": 245.12,
+          "z": 1951.64,
+          "layer": "surface",
+          "note": "0x6b63076055d795c2"
+        },
+        {
+          "id": "hudson_sign-015",
+          "value": "9856738148381130104",
+          "x": -2395.56,
+          "y": 374.23,
+          "z": 2161.21,
+          "layer": "surface",
+          "note": "0x88ca2b1f6a4c7d78"
+        },
+        {
+          "id": "hudson_sign-016",
+          "value": "2952910889774872374",
+          "x": -2757.5,
+          "y": 139.31,
+          "z": 2263.0,
+          "layer": "surface",
+          "note": "0x28fad8cf1e69f736"
+        },
+        {
+          "id": "hudson_sign-017",
+          "value": "12966476178253141729",
+          "x": -2962.97,
+          "y": 136.1,
+          "z": 3792.97,
+          "layer": "surface",
+          "note": "0xb3f22d628157d6e1"
+        },
+        {
+          "id": "hudson_sign-018",
+          "value": "6511289914607890072",
+          "x": -1611.5,
+          "y": 347.81,
+          "z": -3339.0,
+          "layer": "surface",
+          "note": "0x5a5cbfadd5c96e98"
+        },
+        {
+          "id": "hudson_sign-019",
+          "value": "3951106592900999931",
+          "x": -1869.5,
+          "y": 342.93,
+          "z": -2324.0,
+          "layer": "surface",
+          "note": "0x36d526832b916afb"
+        },
+        {
+          "id": "hudson_sign-020",
+          "value": "8885309303050031891",
+          "x": -1075.0,
+          "y": 286.37,
+          "z": -2797.0,
+          "layer": "surface",
+          "note": "0x7b4ef5bc17c55313"
+        },
+        {
+          "id": "hudson_sign-021",
+          "value": "5964252461683402670",
+          "x": -1011.46,
+          "y": 221.31,
+          "z": -2023.4,
+          "layer": "surface",
+          "note": "0x52c54803916367ae"
+        },
+        {
+          "id": "hudson_sign-022",
+          "value": "6091054901394100997",
+          "x": -1450.65,
+          "y": 245.95,
+          "z": -1176.65,
+          "layer": "surface",
+          "note": "0x5487c62938ff5305"
+        },
+        {
+          "id": "hudson_sign-023",
+          "value": "12225365537531230135",
+          "x": -1783.39,
+          "y": 255.41,
+          "z": -660.21,
+          "layer": "surface",
+          "note": "0xa9a9392f01d9f7b7"
+        },
+        {
+          "id": "hudson_sign-024",
+          "value": "382256547677954838",
+          "x": -1603.0,
+          "y": 220.42,
+          "z": 490.48,
+          "layer": "surface",
+          "note": "0x054e0c4e09696316"
+        },
+        {
+          "id": "hudson_sign-025",
+          "value": "169682645161238484",
+          "x": -1436.5,
+          "y": 143.73,
+          "z": 1059.0,
+          "layer": "surface",
+          "note": "0x025ad5777d625fd4"
+        },
+        {
+          "id": "hudson_sign-026",
+          "value": "1796362274068199607",
+          "x": -1608.52,
+          "y": 89.29,
+          "z": 2248.72,
+          "layer": "surface",
+          "note": "0x18edf5f881bf78b7"
+        },
+        {
+          "id": "hudson_sign-027",
+          "value": "11036897963361055755",
+          "x": -1799.72,
+          "y": 265.32,
+          "z": 2616.3,
+          "layer": "surface",
+          "note": "0x992af038c05e340b"
+        },
+        {
+          "id": "hudson_sign-028",
+          "value": "17242791183907259025",
+          "x": -1076.19,
+          "y": 262.21,
+          "z": 3350.51,
+          "layer": "surface",
+          "note": "0xef4ab339bd078291"
+        },
+        {
+          "id": "hudson_sign-029",
+          "value": "537512219185544379",
+          "x": -458.22,
+          "y": 214.44,
+          "z": -3042.19,
+          "layer": "surface",
+          "note": "0x0775a083f6fc7cbb"
+        },
+        {
+          "id": "hudson_sign-030",
+          "value": "1326042299345829449",
+          "x": -333.47,
+          "y": 114.89,
+          "z": -1344.26,
+          "layer": "surface",
+          "note": "0x12670c7211a67e49"
+        },
+        {
+          "id": "hudson_sign-031",
+          "value": "353281053503519623",
+          "x": -267.5,
+          "y": 126.98,
+          "z": -383.0,
+          "layer": "surface",
+          "note": "0x04e71b3f13f3fb87"
+        },
+        {
+          "id": "hudson_sign-032",
+          "value": "10387409707843154024",
+          "x": -754.89,
+          "y": 124.89,
+          "z": -243.42,
+          "layer": "surface",
+          "note": "0x90277e182c6f7068"
+        },
+        {
+          "id": "hudson_sign-033",
+          "value": "14649046253332140844",
+          "x": -678.0,
+          "y": 147.31,
+          "z": 863.5,
+          "layer": "surface",
+          "note": "0xcb4bddf41421132c"
+        },
+        {
+          "id": "hudson_sign-034",
+          "value": "9910865292634585677",
+          "x": -872.5,
+          "y": 128.67,
+          "z": 1471.75,
+          "layer": "surface",
+          "note": "0x898a7779403b7a4d"
+        },
+        {
+          "id": "hudson_sign-035",
+          "value": "6696986999591440603",
+          "x": -149.75,
+          "y": 124.0,
+          "z": 2124.93,
+          "layer": "surface",
+          "note": "0x5cf07a31a80e90db"
+        },
+        {
+          "id": "hudson_sign-036",
+          "value": "5024502209078599919",
+          "x": -204.45,
+          "y": 128.75,
+          "z": 3488.11,
+          "layer": "surface",
+          "note": "0x45ba9e23614ba0ef"
+        },
+        {
+          "id": "hudson_sign-037",
+          "value": "14984221889653742245",
+          "x": 493.11,
+          "y": 283.13,
+          "z": -2939.19,
+          "layer": "surface",
+          "note": "0xcff2a66b38719aa5"
+        },
+        {
+          "id": "hudson_sign-038",
+          "value": "5646660852956074073",
+          "x": 185.53,
+          "y": 133.11,
+          "z": -268.49,
+          "layer": "surface",
+          "note": "0x4e5cf820e38d1059"
+        },
+        {
+          "id": "hudson_sign-039",
+          "value": "7996354393940319571",
+          "x": 674.5,
+          "y": 131.51,
+          "z": -1.46,
+          "layer": "surface",
+          "note": "0x6ef8c1f46cf25d53"
+        },
+        {
+          "id": "hudson_sign-040",
+          "value": "9966976913604035116",
+          "x": 622.0,
+          "y": 115.34,
+          "z": -381.0,
+          "layer": "surface",
+          "note": "0x8a51d0b213e3422c"
+        },
+        {
+          "id": "hudson_sign-041",
+          "value": "18234424911339302176",
+          "x": 921.93,
+          "y": 141.91,
+          "z": 995.46,
+          "layer": "surface",
+          "note": "0xfd0db0d8c3e9ad20"
+        },
+        {
+          "id": "hudson_sign-042",
+          "value": "7377540662913112455",
+          "x": 388.89,
+          "y": 120.23,
+          "z": 1273.2,
+          "layer": "surface",
+          "note": "0x66624a2520ef9987"
+        },
+        {
+          "id": "hudson_sign-043",
+          "value": "12397427531924396146",
+          "x": 823.75,
+          "y": 225.96,
+          "z": 2328.5,
+          "layer": "surface",
+          "note": "0xac0c82a7e9005872"
+        },
+        {
+          "id": "hudson_sign-044",
+          "value": "8718914831494692646",
+          "x": 103.82,
+          "y": 91.06,
+          "z": 2673.89,
+          "layer": "surface",
+          "note": "0x78ffced82e203f26"
+        },
+        {
+          "id": "hudson_sign-045",
+          "value": "166633721346075192",
+          "x": 254.45,
+          "y": 183.19,
+          "z": 3455.7,
+          "layer": "surface",
+          "note": "0x0250007c986f2a38"
+        },
+        {
+          "id": "hudson_sign-046",
+          "value": "17614947120507832999",
+          "x": 1023.76,
+          "y": 380.01,
+          "z": -3110.0,
+          "layer": "surface",
+          "note": "0xf474dd13ff28caa7"
+        },
+        {
+          "id": "hudson_sign-047",
+          "value": "17524516814991920508",
+          "x": 1572.5,
+          "y": 445.72,
+          "z": -2164.0,
+          "layer": "surface",
+          "note": "0xf3339731c1f40d7c"
+        },
+        {
+          "id": "hudson_sign-048",
+          "value": "1608636971499860713",
+          "x": 1980.37,
+          "y": 563.89,
+          "z": -2656.01,
+          "layer": "surface",
+          "note": "0x165306cd7acf32e9"
+        },
+        {
+          "id": "hudson_sign-049",
+          "value": "11136349323559701948",
+          "x": 1310.09,
+          "y": 221.45,
+          "z": -1221.69,
+          "layer": "surface",
+          "note": "0x9a8c42b4f5700dbc"
+        },
+        {
+          "id": "hudson_sign-050",
+          "value": "14820801351717216986",
+          "x": 1710.0,
+          "y": 153.36,
+          "z": -96.0,
+          "layer": "surface",
+          "note": "0xcdae104e2fbbe2da"
+        },
+        {
+          "id": "hudson_sign-051",
+          "value": "11151557013329121358",
+          "x": 1345.77,
+          "y": 126.82,
+          "z": -800.49,
+          "layer": "surface",
+          "note": "0x9ac24a0527ff904e"
+        },
+        {
+          "id": "hudson_sign-052",
+          "value": "17284873115541707220",
+          "x": 1490.0,
+          "y": 259.62,
+          "z": 989.0,
+          "layer": "surface",
+          "note": "0xefe03484f79019d4"
+        },
+        {
+          "id": "hudson_sign-053",
+          "value": "11813179001524469625",
+          "x": 1969.0,
+          "y": 129.16,
+          "z": 1899.0,
+          "layer": "surface",
+          "note": "0xa3f0d7b685f83f79"
+        },
+        {
+          "id": "hudson_sign-054",
+          "value": "4094896347173357642",
+          "x": 1595.25,
+          "y": 165.57,
+          "z": 3470.27,
+          "layer": "surface",
+          "note": "0x38d3fe883550084a"
+        },
+        {
+          "id": "hudson_sign-055",
+          "value": "11394483191225580592",
+          "x": 2820.06,
+          "y": 344.14,
+          "z": -3548.59,
+          "layer": "surface",
+          "note": "0x9e2156178428fc30"
+        },
+        {
+          "id": "hudson_sign-056",
+          "value": "7567620183654426669",
+          "x": 2796.97,
+          "y": 775.03,
+          "z": -2654.56,
+          "layer": "sky",
+          "note": "0x6905967649cc682d"
+        },
+        {
+          "id": "hudson_sign-057",
+          "value": "10869759105787654356",
+          "x": 2268.09,
+          "y": 625.64,
+          "z": -2317.1,
+          "layer": "surface",
+          "note": "0x96d92450f68a70d4"
+        },
+        {
+          "id": "hudson_sign-058",
+          "value": "7089506507264060558",
+          "x": 2572.09,
+          "y": 242.19,
+          "z": -1100.32,
+          "layer": "surface",
+          "note": "0x6262fc9b464b6c8e"
+        },
+        {
+          "id": "hudson_sign-059",
+          "value": "5835441146513357578",
+          "x": 2094.0,
+          "y": 121.73,
+          "z": -216.0,
+          "layer": "surface",
+          "note": "0x50fba6ce25a07b0a"
+        },
+        {
+          "id": "hudson_sign-060",
+          "value": "1919194523432650026",
+          "x": 2933.13,
+          "y": 458.72,
+          "z": -704.21,
+          "layer": "surface",
+          "note": "0x1aa259403014052a"
+        },
+        {
+          "id": "hudson_sign-061",
+          "value": "12293324560819392842",
+          "x": 2374.0,
+          "y": 228.67,
+          "z": 678.62,
+          "layer": "surface",
+          "note": "0xaa9aa98e2439914a"
+        },
+        {
+          "id": "hudson_sign-062",
+          "value": "14338799166068262826",
+          "x": 2674.35,
+          "y": 146.08,
+          "z": 1722.16,
+          "layer": "surface",
+          "note": "0xc6fda5df0f2a87aa"
+        },
+        {
+          "id": "hudson_sign-063",
+          "value": "8936186809148926393",
+          "x": 2096.77,
+          "y": 238.26,
+          "z": 1264.53,
+          "layer": "surface",
+          "note": "0x7c03b68e95da69b9"
+        },
+        {
+          "id": "hudson_sign-064",
+          "value": "10101467320662561971",
+          "x": 2615.94,
+          "y": 258.53,
+          "z": 2594.79,
+          "layer": "surface",
+          "note": "0x8c2f9f021e4f14b3"
+        },
+        {
+          "id": "hudson_sign-065",
+          "value": "16268933543315712742",
+          "x": 2213.98,
+          "y": 134.9,
+          "z": 3369.17,
+          "layer": "surface",
+          "note": "0xe1c6dcdc73c52ae6"
+        },
+        {
+          "id": "hudson_sign-066",
+          "value": "8661259785090433582",
+          "x": 3422.12,
+          "y": 314.74,
+          "z": -3525.67,
+          "layer": "surface",
+          "note": "0x7832f9e29db1022e"
+        },
+        {
+          "id": "hudson_sign-067",
+          "value": "773021911387029998",
+          "x": 3873.41,
+          "y": 159.22,
+          "z": -2475.66,
+          "layer": "surface",
+          "note": "0x0aba53552fd141ee"
+        },
+        {
+          "id": "hudson_sign-068",
+          "value": "1633100021100533897",
+          "x": 3162.5,
+          "y": 309.25,
+          "z": -1625.22,
+          "layer": "surface",
+          "note": "0x16a9efd110615889"
+        },
+        {
+          "id": "hudson_sign-069",
+          "value": "16457876943099636524",
+          "x": 3208.08,
+          "y": 242.36,
+          "z": -131.0,
+          "layer": "surface",
+          "note": "0xe4661fe1d68bab2c"
+        },
+        {
+          "id": "hudson_sign-070",
+          "value": "6733356288455564073",
+          "x": 3972.6,
+          "y": 137.06,
+          "z": 295.01,
+          "layer": "surface",
+          "note": "0x5d71afde97895b29"
+        },
+        {
+          "id": "hudson_sign-071",
+          "value": "8081696852333759621",
+          "x": 3229.0,
+          "y": 106.03,
+          "z": 656.0,
+          "layer": "surface",
+          "note": "0x7027f477f1bf0c85"
+        },
+        {
+          "id": "hudson_sign-072",
+          "value": "12521513318695303861",
+          "x": 3144.92,
+          "y": 175.23,
+          "z": 1818.58,
+          "layer": "surface",
+          "note": "0xadc55a058327fab5"
+        },
+        {
+          "id": "hudson_sign-073",
+          "value": "1287194720706435585",
+          "x": 3141.85,
+          "y": 168.32,
+          "z": 2138.13,
+          "layer": "surface",
+          "note": "0x11dd08c754771a01"
+        },
+        {
+          "id": "hudson_sign-074",
+          "value": "14969824288455623788",
+          "x": 3358.88,
+          "y": 143.45,
+          "z": 3494.43,
+          "layer": "surface",
+          "note": "0xcfbf7fe07769846c"
+        },
+        {
+          "id": "hudson_sign-075",
+          "value": "5704878396655695792",
+          "x": 4449.97,
+          "y": 321.61,
+          "z": -3075.45,
+          "layer": "surface",
+          "note": "0x4f2bccad0f7677b0"
+        },
+        {
+          "id": "hudson_sign-076",
+          "value": "6565229309181015597",
+          "x": 4236.91,
+          "y": 224.06,
+          "z": -2647.61,
+          "layer": "surface",
+          "note": "0x5b1c6145cab7b62d"
+        },
+        {
+          "id": "hudson_sign-077",
+          "value": "2809609228985872688",
+          "x": 4086.43,
+          "y": 201.78,
+          "z": -1874.14,
+          "layer": "surface",
+          "note": "0x26fdbcb5335cb130"
+        },
+        {
+          "id": "hudson_sign-078",
+          "value": "8039398800676217508",
+          "x": 4295.5,
+          "y": 380.84,
+          "z": -578.05,
+          "layer": "surface",
+          "note": "0x6f91ae9d5a01e2a4"
+        },
+        {
+          "id": "hudson_sign-079",
+          "value": "1264002701042014136",
+          "x": 4334.0,
+          "y": 165.17,
+          "z": 570.0,
+          "layer": "surface",
+          "note": "0x118aa3c276be57b8"
+        },
+        {
+          "id": "hudson_sign-080",
+          "value": "12388388884264719597",
+          "x": 4102.5,
+          "y": 424.12,
+          "z": 1143.5,
+          "layer": "surface",
+          "note": "0xabec660dc1ff14ed"
+        },
+        {
+          "id": "hudson_sign-081",
+          "value": "7286854401568778104",
+          "x": 4650.5,
+          "y": 161.27,
+          "z": 2337.17,
+          "layer": "surface",
+          "note": "0x65201b78877fa778"
+        }
+      ],
+      "sourceCounts": {
+        "ids": 81,
+        "coordinates": 81
+      }
+    },
+    {
+      "id": "flux_construct",
+      "label": "Flux Constructs",
+      "kind": "bool",
+      "items": [
+        {
+          "id": "flux_construct-001",
+          "value": "25d4c463",
+          "x": -3834.432861328125,
+          "y": 650.0975341796875,
+          "z": -2720.748779296875,
+          "layer": "surface",
+          "note": "10222155126030895252 - Enemy_Zonau_BlockMaster_Junior"
+        },
+        {
+          "id": "flux_construct-002",
+          "value": "7a5d5d0a",
+          "x": -3471.791259765625,
+          "y": 1035.903076171875,
+          "z": -3519.27490234375,
+          "layer": "sky",
+          "note": "10825910867985107571 - Enemy_Zonau_BlockMaster_Junior"
+        },
+        {
+          "id": "flux_construct-003",
+          "value": "5c6a95fb",
+          "x": 3700.927734375,
+          "y": -365.64581298828125,
+          "z": -2906.1396484375,
+          "layer": "depths",
+          "note": "11145583613564400356 - Enemy_Zonau_BlockMaster_Middle"
+        },
+        {
+          "id": "flux_construct-004",
+          "value": "83c2df0c",
+          "x": 3044.015380859375,
+          "y": 1306.883056640625,
+          "z": 2777.21435546875,
+          "layer": "sky",
+          "note": "11586813961110368510 - Enemy_Zonau_BlockMaster_Senior"
+        },
+        {
+          "id": "flux_construct-005",
+          "value": "62bcd3bc",
+          "x": 224.61029052734375,
+          "y": -405.97607421875,
+          "z": -3673.674560546875,
+          "layer": "depths",
+          "note": "1189017656548284800 - Enemy_Zonau_BlockMaster_Middle"
+        },
+        {
+          "id": "flux_construct-006",
+          "value": "3bad804e",
+          "x": 1133.3160400390625,
+          "y": 862.668701171875,
+          "z": 3272.5361328125,
+          "layer": "sky",
+          "note": "12318069930102768206 - Enemy_Zonau_BlockMaster_Senior"
+        },
+        {
+          "id": "flux_construct-007",
+          "value": "e0caa12e",
+          "x": 3386.43798828125,
+          "y": 1395.969970703125,
+          "z": -633.1279907226562,
+          "layer": "sky",
+          "note": "12582822302362406274 - Enemy_Zonau_BlockMaster_Middle"
+        },
+        {
+          "id": "flux_construct-008",
+          "value": "e58fd91e",
+          "x": -4146.5,
+          "y": -379.4000244140625,
+          "z": 2961.0,
+          "layer": "depths",
+          "note": "13645117975067836849 - Enemy_Zonau_BlockMaster_Middle"
+        },
+        {
+          "id": "flux_construct-009",
+          "value": "36009a9a",
+          "x": 869.61083984375,
+          "y": -433.4743347167969,
+          "z": -678.4839477539062,
+          "layer": "depths",
+          "note": "14066905759849320793 - Enemy_Zonau_BlockMaster_Senior"
+        },
+        {
+          "id": "flux_construct-010",
+          "value": "eb7c4d24",
+          "x": 3674.13134765625,
+          "y": 1094.375,
+          "z": -1808.685791015625,
+          "layer": "sky",
+          "note": "14163883612070869185 - Enemy_Zonau_BlockMaster_Middle"
+        },
+        {
+          "id": "flux_construct-011",
+          "value": "2a2157fc",
+          "x": 491.64892578125,
+          "y": 1544.5538330078125,
+          "z": 1516.3839111328125,
+          "layer": "sky",
+          "note": "14394590123198368495 - Enemy_Zonau_BlockMaster_Junior_Beginning"
+        },
+        {
+          "id": "flux_construct-012",
+          "value": "a121c2c7",
+          "x": 100.86517333984375,
+          "y": -347.07568359375,
+          "z": 3714.13232421875,
+          "layer": "depths",
+          "note": "14566956898059740706 - Enemy_Zonau_BlockMaster_Junior"
+        },
+        {
+          "id": "flux_construct-013",
+          "value": "d7ed1df4",
+          "x": -1343.7772216796875,
+          "y": 907.2412719726562,
+          "z": 1547.722412109375,
+          "layer": "sky",
+          "note": "16472864484409299518 - Enemy_Zonau_BlockMaster_Middle"
+        },
+        {
+          "id": "flux_construct-014",
+          "value": "f5c1bafc",
+          "x": 2512.44189453125,
+          "y": -540.2254638671875,
+          "z": 1271.55322265625,
+          "layer": "depths",
+          "note": "16797531286285858440 - Enemy_Zonau_BlockMaster_Middle"
+        },
+        {
+          "id": "flux_construct-015",
+          "value": "f8130875",
+          "x": 2559.24609375,
+          "y": 1000.125,
+          "z": 3601.43798828125,
+          "layer": "sky",
+          "note": "17179098246083532718 - Enemy_Zonau_BlockMaster_Senior"
+        },
+        {
+          "id": "flux_construct-016",
+          "value": "fc24c532",
+          "x": 2680.13623046875,
+          "y": -572.8853149414062,
+          "z": -3472.89794921875,
+          "layer": "depths",
+          "note": "17241620804693571155 - Enemy_Zonau_BlockMaster_Middle"
+        },
+        {
+          "id": "flux_construct-017",
+          "value": "2b7ba716",
+          "x": -2290.425048828125,
+          "y": 1000.125,
+          "z": 411.7359924316406,
+          "layer": "sky",
+          "note": "17321739447049567216 - Enemy_Zonau_BlockMaster_Senior"
+        },
+        {
+          "id": "flux_construct-018",
+          "value": "b33d6fd6",
+          "x": -325.65399169921875,
+          "y": 1000.125,
+          "z": 2591.47705078125,
+          "layer": "sky",
+          "note": "17326521960335894535 - Enemy_Zonau_BlockMaster_Senior"
+        },
+        {
+          "id": "flux_construct-019",
+          "value": "3fdfcf6c",
+          "x": 3527.248046875,
+          "y": -499.759765625,
+          "z": 1340.1597900390625,
+          "layer": "depths",
+          "note": "17598605949911910671 - Enemy_Zonau_BlockMaster_Middle"
+        },
+        {
+          "id": "flux_construct-020",
+          "value": "8fbbb9bd",
+          "x": -2182.0556640625,
+          "y": -580.83935546875,
+          "z": 1502.5941162109375,
+          "layer": "depths",
+          "note": "17999338913107429884 - Enemy_Zonau_BlockMaster_Junior"
+        },
+        {
+          "id": "flux_construct-021",
+          "value": "6ba4da77",
+          "x": 3000.4130859375,
+          "y": 1000.125,
+          "z": 251.77499389648438,
+          "layer": "sky",
+          "note": "18388369626843360386 - Enemy_Zonau_BlockMaster_Middle"
+        },
+        {
+          "id": "flux_construct-022",
+          "value": "cbef5fc1",
+          "x": -4412.77099609375,
+          "y": -440.33074951171875,
+          "z": -2239.771484375,
+          "layer": "depths",
+          "note": "2610312770363458991 - Enemy_Zonau_BlockMaster_Senior"
+        },
+        {
+          "id": "flux_construct-023",
+          "value": "9f723ee4",
+          "x": -723.2738647460938,
+          "y": -409.1934814453125,
+          "z": -1263.34326171875,
+          "layer": "depths",
+          "note": "3483652224929144928 - Enemy_Zonau_BlockMaster_Middle"
+        },
+        {
+          "id": "flux_construct-024",
+          "value": "98fa3ceb",
+          "x": 2638.951904296875,
+          "y": -551.7535400390625,
+          "z": 937.24072265625,
+          "layer": "depths",
+          "note": "4364014246130795469 - Enemy_Zonau_BlockMaster_Middle"
+        },
+        {
+          "id": "flux_construct-025",
+          "value": "47b0bed9",
+          "x": 3197.7705078125,
+          "y": -737.2781982421875,
+          "z": -1019.6116943359375,
+          "layer": "depths",
+          "note": "5031365138018829090 - Enemy_Zonau_BlockMaster_Middle"
+        },
+        {
+          "id": "flux_construct-026",
+          "value": "d3d07ca2",
+          "x": -4085.544677734375,
+          "y": -1005.221435546875,
+          "z": 952.6649780273438,
+          "layer": "depths",
+          "note": "5789571879451320381 - Enemy_Zonau_BlockMaster_Senior"
+        },
+        {
+          "id": "flux_construct-027",
+          "value": "90cf50e7",
+          "x": -2619.92578125,
+          "y": -582.2799072265625,
+          "z": -1705.0577392578125,
+          "layer": "depths",
+          "note": "5903652489332550636 - Enemy_Zonau_BlockMaster_Senior"
+        },
+        {
+          "id": "flux_construct-028",
+          "value": "4ee767ab",
+          "x": 717.1318969726562,
+          "y": -352.1004638671875,
+          "z": 643.9991455078125,
+          "layer": "depths",
+          "note": "5961441219654151595 - Enemy_Zonau_BlockMaster_Junior"
+        },
+        {
+          "id": "flux_construct-029",
+          "value": "3021225c",
+          "x": -3450.48681640625,
+          "y": 1539.91064453125,
+          "z": -658.0659790039062,
+          "layer": "sky",
+          "note": "6612854448490639651 - Enemy_Zonau_BlockMaster_Senior"
+        },
+        {
+          "id": "flux_construct-030",
+          "value": "fbbdb439",
+          "x": -814.75,
+          "y": -576.7576293945312,
+          "z": -3534.39990234375,
+          "layer": "depths",
+          "note": "6675287854574112562 - Enemy_Zonau_BlockMaster_Senior"
+        },
+        {
+          "id": "flux_construct-031",
+          "value": "9b2adde9",
+          "x": -1795.0,
+          "y": -417.5060729980469,
+          "z": 3462.5,
+          "layer": "depths",
+          "note": "8744762158735793351 - Enemy_Zonau_BlockMaster_Senior"
+        },
+        {
+          "id": "flux_construct-032",
+          "value": "c31ba41b",
+          "x": 442.0577697753906,
+          "y": 1767.26513671875,
+          "z": -2467.884033203125,
+          "layer": "sky",
+          "note": "8794010902871923669 - Enemy_Zonau_BlockMaster_Junior"
+        },
+        {
+          "id": "flux_construct-033",
+          "value": "7861acbb",
+          "x": 4654.89990234375,
+          "y": -340.44622802734375,
+          "z": -3697.0,
+          "layer": "depths",
+          "note": "918808305345137744 - Enemy_Zonau_BlockMaster_Senior"
+        },
+        {
+          "id": "flux_construct-034",
+          "value": "976e9085",
+          "x": 3301.498046875,
+          "y": 900.125,
+          "z": -3434.158935546875,
+          "layer": "sky",
+          "note": "9376039496073809047 - Enemy_Zonau_BlockMaster_Senior"
+        },
+        {
+          "id": "flux_construct-035",
+          "value": "9b88093e",
+          "x": 3263.074951171875,
+          "y": -340.8627624511719,
+          "z": 3702.874267578125,
+          "layer": "depths",
+          "note": "9620017455593796058 - Enemy_Zonau_BlockMaster_Senior"
+        }
+      ],
+      "sourceCounts": {
+        "ids": 35,
+        "coordinates": 35
+      }
+    },
+    {
+      "id": "hinox",
+      "label": "Hinox",
+      "kind": "bool",
+      "items": [
+        {
+          "id": "hinox-001",
+          "value": "73cdc65f",
+          "x": 692.6768188476562,
+          "y": 116.68831634521484,
+          "z": 1080.78857421875,
+          "layer": "surface",
+          "note": "10393024982276893449 - Enemy_Giant_Junior"
+        },
+        {
+          "id": "hinox-002",
+          "value": "802a685b",
+          "x": -1177.031494140625,
+          "y": 139.56651306152344,
+          "z": 114.59088134765625,
+          "layer": "surface",
+          "note": "10478866091159762847 - Enemy_Giant_Bone"
+        },
+        {
+          "id": "hinox-003",
+          "value": "d5228754",
+          "x": -742.3123779296875,
+          "y": 186.9552459716797,
+          "z": -1262.7728271484375,
+          "layer": "surface",
+          "note": "11391803945734372644 - Enemy_Giant_Junior"
+        },
+        {
+          "id": "hinox-004",
+          "value": "6a18a1f9",
+          "x": 2051.048583984375,
+          "y": 125.1479721069336,
+          "z": 2003.656005859375,
+          "layer": "surface",
+          "note": "11646385671586165409 - Enemy_Giant_Junior"
+        },
+        {
+          "id": "hinox-005",
+          "value": "c3244c7b",
+          "x": -3654.674560546875,
+          "y": 335.72003173828125,
+          "z": -3806.208984375,
+          "layer": "surface",
+          "note": "12084395073896819946 - Enemy_Giant_Middle"
+        },
+        {
+          "id": "hinox-006",
+          "value": "e1a28b21",
+          "x": 4603.26416015625,
+          "y": 39.554412841796875,
+          "z": -3529.63671875,
+          "layer": "surface",
+          "note": "12156520767722928666 - Enemy_Giant_Senior (*cave)"
+        },
+        {
+          "id": "hinox-007",
+          "value": "c5b95329",
+          "x": 839.7813720703125,
+          "y": 303.9005432128906,
+          "z": -3362.71923828125,
+          "layer": "surface",
+          "note": "12172309767157242770 - Enemy_Giant_Senior"
+        },
+        {
+          "id": "hinox-008",
+          "value": "186f50e4",
+          "x": -2221.123779296875,
+          "y": 208.23312377929688,
+          "z": -758.68505859375,
+          "layer": "surface",
+          "note": "12189696549508944958 - Enemy_Giant_Junior"
+        },
+        {
+          "id": "hinox-009",
+          "value": "548d830e",
+          "x": -2825.0,
+          "y": 509.1110534667969,
+          "z": -2433.0,
+          "layer": "surface",
+          "note": "1253417564937333245 - Enemy_Giant_Junior"
+        },
+        {
+          "id": "hinox-010",
+          "value": "339ada62",
+          "x": 1651.9566650390625,
+          "y": 261.055419921875,
+          "z": 2910.66748046875,
+          "layer": "surface",
+          "note": "12865762981498719704 - Enemy_Giant_Middle (*cave)"
+        },
+        {
+          "id": "hinox-011",
+          "value": "70e03aea",
+          "x": -2274.73876953125,
+          "y": 211.1541748046875,
+          "z": 723.0037841796875,
+          "layer": "surface",
+          "note": "13068579721264552970 - Enemy_Giant_Junior_KeyCrystal (*cave)"
+        },
+        {
+          "id": "hinox-012",
+          "value": "ef027e9e",
+          "x": -4205.0,
+          "y": -766.2181396484375,
+          "z": 1292.0,
+          "layer": "depths",
+          "note": "13108164403586003251 - Enemy_Giant_Senior"
+        },
+        {
+          "id": "hinox-013",
+          "value": "e7d22a1e",
+          "x": 912.6813354492188,
+          "y": -571.5458984375,
+          "z": -2907.7666015625,
+          "layer": "depths",
+          "note": "13182371169943433737 - Enemy_Giant_Bone_AllDay"
+        },
+        {
+          "id": "hinox-014",
+          "value": "88d95135",
+          "x": 1098.12109375,
+          "y": -411.375732421875,
+          "z": 2872.43115234375,
+          "layer": "depths",
+          "note": "1324956813743135889 - Enemy_Giant_Middle"
+        },
+        {
+          "id": "hinox-015",
+          "value": "09eda448",
+          "x": -146.26956176757812,
+          "y": -516.0361328125,
+          "z": -2382.29638671875,
+          "layer": "depths",
+          "note": "13424713487864629086 - Enemy_Giant_Senior"
+        },
+        {
+          "id": "hinox-016",
+          "value": "9cc2f318",
+          "x": -4205.0,
+          "y": 533.6253051757812,
+          "z": 1292.0,
+          "layer": "surface",
+          "note": "13573462785682957760 - Enemy_Giant_Senior"
+        },
+        {
+          "id": "hinox-017",
+          "value": "6ce3aae0",
+          "x": 1469.5,
+          "y": 203.95455932617188,
+          "z": 1329.5,
+          "layer": "surface",
+          "note": "13576363668673257709 - Enemy_Giant_Junior"
+        },
+        {
+          "id": "hinox-018",
+          "value": "cdd24dc3",
+          "x": -2058.385986328125,
+          "y": 34.79804229736328,
+          "z": -1558.579833984375,
+          "layer": "surface",
+          "note": "13814219220882276413 - Enemy_Giant_Bone_AllDay (*cave)"
+        },
+        {
+          "id": "hinox-019",
+          "value": "3ef68091",
+          "x": 46.43048095703125,
+          "y": -361.13592529296875,
+          "z": 1334.853271484375,
+          "layer": "depths",
+          "note": "14054880716782309343 - Enemy_Giant_Junior"
+        },
+        {
+          "id": "hinox-020",
+          "value": "29a424d5",
+          "x": -1439.1505126953125,
+          "y": -451.18951416015625,
+          "z": 2365.972412109375,
+          "layer": "depths",
+          "note": "14337819024733804584 - Enemy_Giant_Junior"
+        },
+        {
+          "id": "hinox-021",
+          "value": "33123104",
+          "x": 1651.9566650390625,
+          "y": -602.4915771484375,
+          "z": 2910.66748046875,
+          "layer": "depths",
+          "note": "14526639162114294278 - Enemy_Giant_Middle"
+        },
+        {
+          "id": "hinox-022",
+          "value": "271e2bf0",
+          "x": 2770.661376953125,
+          "y": 258.0426330566406,
+          "z": 2712.593994140625,
+          "layer": "surface",
+          "note": "14621448399444931002 - Enemy_Giant_Bone"
+        },
+        {
+          "id": "hinox-023",
+          "value": "0e385329",
+          "x": 1272.527587890625,
+          "y": 355.25311279296875,
+          "z": 2174.813232421875,
+          "layer": "surface",
+          "note": "14904586104824915761 - Enemy_Giant_Middle"
+        },
+        {
+          "id": "hinox-024",
+          "value": "8751a4d7",
+          "x": 1213.428466796875,
+          "y": -488.1482238769531,
+          "z": 2671.663818359375,
+          "layer": "depths",
+          "note": "14944507340504403952 - Enemy_Giant_Middle"
+        },
+        {
+          "id": "hinox-025",
+          "value": "4c5cbe28",
+          "x": -4324.580078125,
+          "y": -371.81304931640625,
+          "z": 3465.06591796875,
+          "layer": "depths",
+          "note": "15654842093127035824 - Enemy_Giant_Middle"
+        },
+        {
+          "id": "hinox-026",
+          "value": "e55fde6d",
+          "x": -2014.2498779296875,
+          "y": 207.10885620117188,
+          "z": 1200.4410400390625,
+          "layer": "surface",
+          "note": "15710848923862242406 - Enemy_Giant_Middle"
+        },
+        {
+          "id": "hinox-027",
+          "value": "d1265861",
+          "x": 2141.814697265625,
+          "y": 535.8549194335938,
+          "z": -3011.221923828125,
+          "layer": "surface",
+          "note": "16259229493834825041 - Enemy_Giant_Bone"
+        },
+        {
+          "id": "hinox-028",
+          "value": "26a34449",
+          "x": 4643.44677734375,
+          "y": 135.51702880859375,
+          "z": -1777.70703125,
+          "layer": "surface",
+          "note": "1639803847665937650 - Enemy_Giant_Senior"
+        },
+        {
+          "id": "hinox-029",
+          "value": "1d7597bc",
+          "x": 2138.0087890625,
+          "y": -768.1524658203125,
+          "z": -3008.414794921875,
+          "layer": "depths",
+          "note": "16540867052627905405 - Enemy_Giant_Bone_AllDay"
+        },
+        {
+          "id": "hinox-030",
+          "value": "a735405a",
+          "x": 2051.048583984375,
+          "y": -367.4607238769531,
+          "z": 2003.656005859375,
+          "layer": "depths",
+          "note": "16628394918171379204 - Enemy_Giant_Senior"
+        },
+        {
+          "id": "hinox-031",
+          "value": "f87c46cb",
+          "x": 4434.71484375,
+          "y": 216.881591796875,
+          "z": -739.9595947265625,
+          "layer": "surface",
+          "note": "1717235292479538693 - Enemy_Giant_Middle (*cave)"
+        },
+        {
+          "id": "hinox-032",
+          "value": "3b2726f4",
+          "x": -2783.0,
+          "y": -652.4586791992188,
+          "z": -2031.0,
+          "layer": "depths",
+          "note": "17244025876471935559 - Enemy_Giant_Senior"
+        },
+        {
+          "id": "hinox-033",
+          "value": "69ae65f0",
+          "x": -2735.931640625,
+          "y": -503.7476501464844,
+          "z": -1334.026123046875,
+          "layer": "depths",
+          "note": "17261512901323798485 - Enemy_Giant_Middle"
+        },
+        {
+          "id": "hinox-034",
+          "value": "814595c9",
+          "x": 1469.5,
+          "y": -444.25115966796875,
+          "z": 1329.5,
+          "layer": "depths",
+          "note": "17535370195893647812 - Enemy_Giant_Senior"
+        },
+        {
+          "id": "hinox-035",
+          "value": "f00e5eaa",
+          "x": -1069.779052734375,
+          "y": -372.8574523925781,
+          "z": 821.3932495117188,
+          "layer": "depths",
+          "note": "17673521661875206035 - Enemy_Giant_Junior"
+        },
+        {
+          "id": "hinox-036",
+          "value": "f03a51ad",
+          "x": 1305.2681884765625,
+          "y": 132.73548889160156,
+          "z": -910.257080078125,
+          "layer": "surface",
+          "note": "17908814150863161599 - Enemy_Giant_Junior"
+        },
+        {
+          "id": "hinox-037",
+          "value": "cefc5ebc",
+          "x": 1878.605712890625,
+          "y": 65.56120300292969,
+          "z": 2948.3564453125,
+          "layer": "surface",
+          "note": "18229569222017030228 - Enemy_Giant_Junior (*cave)"
+        },
+        {
+          "id": "hinox-038",
+          "value": "8c4d535e",
+          "x": 3401.31103515625,
+          "y": 353.35198974609375,
+          "z": -271.1432800292969,
+          "layer": "surface",
+          "note": "1921831016094605353 - Enemy_Giant_Middle"
+        },
+        {
+          "id": "hinox-039",
+          "value": "e067fd28",
+          "x": 3160.148193359375,
+          "y": 211.07977294921875,
+          "z": 2596.118408203125,
+          "layer": "surface",
+          "note": "2142339064331920943 - Enemy_Giant_Middle"
+        },
+        {
+          "id": "hinox-040",
+          "value": "5d3e9af6",
+          "x": 2243.5322265625,
+          "y": -575.1519775390625,
+          "z": 1134.09716796875,
+          "layer": "depths",
+          "note": "2143154645032902813 - Enemy_Giant_Bone_AllDay"
+        },
+        {
+          "id": "hinox-041",
+          "value": "3eafefdc",
+          "x": 2413.656005859375,
+          "y": 303.7882080078125,
+          "z": 1166.5482177734375,
+          "layer": "surface",
+          "note": "2315581091174276245 - Enemy_Giant_Bone"
+        },
+        {
+          "id": "hinox-042",
+          "value": "e4d27c11",
+          "x": -1177.031494140625,
+          "y": -381.28515625,
+          "z": 114.59088134765625,
+          "layer": "depths",
+          "note": "3314491652834871143 - Enemy_Giant_Bone_AllDay"
+        },
+        {
+          "id": "hinox-043",
+          "value": "0b4dcd92",
+          "x": -1080.388427734375,
+          "y": 141.04624938964844,
+          "z": -462.4737548828125,
+          "layer": "surface",
+          "note": "4252180854327755778 - Enemy_Giant_Junior"
+        },
+        {
+          "id": "hinox-044",
+          "value": "18295227",
+          "x": -407.4656982421875,
+          "y": 281.827880859375,
+          "z": -2011.413330078125,
+          "layer": "surface",
+          "note": "4284803738149888786 - Enemy_Giant_Junior"
+        },
+        {
+          "id": "hinox-045",
+          "value": "8aa89797",
+          "x": -321.5856628417969,
+          "y": 68.39962005615234,
+          "z": -458.0332336425781,
+          "layer": "surface",
+          "note": "4288206182804750823 - Enemy_Giant_Bone_AllDay (*cave)"
+        },
+        {
+          "id": "hinox-046",
+          "value": "d50dd4cb",
+          "x": 1562.196533203125,
+          "y": 297.6710205078125,
+          "z": 2416.01123046875,
+          "layer": "surface",
+          "note": "452419876022480148 - Enemy_Giant_Senior"
+        },
+        {
+          "id": "hinox-047",
+          "value": "165f835b",
+          "x": 1687.424072265625,
+          "y": -350.5910949707031,
+          "z": 3873.210693359375,
+          "layer": "depths",
+          "note": "459812943559027451 - Enemy_Giant_Senior"
+        },
+        {
+          "id": "hinox-048",
+          "value": "1bd37a12",
+          "x": 1434.2518310546875,
+          "y": 92.05870819091797,
+          "z": 137.31982421875,
+          "layer": "surface",
+          "note": "4708996257713033144 - Enemy_Giant_Bone_AllDay (*cave)"
+        },
+        {
+          "id": "hinox-049",
+          "value": "a09409be",
+          "x": -3654.674560546875,
+          "y": -572.8579711914062,
+          "z": -3806.208984375,
+          "layer": "depths",
+          "note": "5036040187462248760 - Enemy_Giant_Senior"
+        },
+        {
+          "id": "hinox-050",
+          "value": "bb68d751",
+          "x": -3793.240478515625,
+          "y": -485.34228515625,
+          "z": -1557.1075439453125,
+          "layer": "depths",
+          "note": "5195857299422128797 - Enemy_Giant_Bone_AllDay"
+        },
+        {
+          "id": "hinox-051",
+          "value": "482c5a03",
+          "x": 1305.2681884765625,
+          "y": -374.54034423828125,
+          "z": -910.257080078125,
+          "layer": "depths",
+          "note": "5575787237480219164 - Enemy_Giant_Middle"
+        },
+        {
+          "id": "hinox-052",
+          "value": "112d0d53",
+          "x": -3570.830078125,
+          "y": -363.5760498046875,
+          "z": 3554.617919921875,
+          "layer": "depths",
+          "note": "560749391720993573 - Enemy_Giant_Bone_AllDay"
+        },
+        {
+          "id": "hinox-053",
+          "value": "c78760f8",
+          "x": 2025.492919921875,
+          "y": 201.21633911132812,
+          "z": 3061.28369140625,
+          "layer": "surface",
+          "note": "5673364078558667333 - Enemy_Giant_Senior (*cave)"
+        },
+        {
+          "id": "hinox-054",
+          "value": "abc9cce6",
+          "x": -1092.6629638671875,
+          "y": -380.06781005859375,
+          "z": -46.5487060546875,
+          "layer": "depths",
+          "note": "5769175489262689615 - Enemy_Giant_Bone_AllDay"
+        },
+        {
+          "id": "hinox-055",
+          "value": "6442b9ef",
+          "x": 780.38818359375,
+          "y": 119.2091064453125,
+          "z": 1954.1881103515625,
+          "layer": "surface",
+          "note": "592345040742879573 - Enemy_Giant_Bone"
+        },
+        {
+          "id": "hinox-056",
+          "value": "6da07e01",
+          "x": 1562.196533203125,
+          "y": -535.464111328125,
+          "z": 2416.01123046875,
+          "layer": "depths",
+          "note": "6155466547645615532 - Enemy_Giant_Middle"
+        },
+        {
+          "id": "hinox-057",
+          "value": "b5a837bc",
+          "x": 1098.12109375,
+          "y": 173.17312622070312,
+          "z": 2872.43115234375,
+          "layer": "surface",
+          "note": "6171542648341365532 - Enemy_Giant_Senior"
+        },
+        {
+          "id": "hinox-058",
+          "value": "27ce40e5",
+          "x": 3435.435791015625,
+          "y": -33.57501220703125,
+          "z": -3327.4052734375,
+          "layer": "surface",
+          "note": "6201413135185999006 - Enemy_Giant_Bone_AllDay (*cave)"
+        },
+        {
+          "id": "hinox-059",
+          "value": "d735eed8",
+          "x": 366.1504821777344,
+          "y": -371.60260009765625,
+          "z": 6.833526611328125,
+          "layer": "depths",
+          "note": "6324487294558236569 - Enemy_Giant_Junior"
+        },
+        {
+          "id": "hinox-060",
+          "value": "15667b8e",
+          "x": -2735.931640625,
+          "y": 265.3514099121094,
+          "z": -1334.026123046875,
+          "layer": "surface",
+          "note": "6417076432269543377 - Enemy_Giant_Junior"
+        },
+        {
+          "id": "hinox-061",
+          "value": "42211193",
+          "x": 4643.44677734375,
+          "y": -376.88946533203125,
+          "z": -1777.70703125,
+          "layer": "depths",
+          "note": "6678850075053463054 - Enemy_Giant_Senior"
+        },
+        {
+          "id": "hinox-062",
+          "value": "8927dc6f",
+          "x": -1245.5,
+          "y": 211.0,
+          "z": -2108.5,
+          "layer": "surface",
+          "note": "6697862445755836219 - Enemy_Giant_Junior"
+        },
+        {
+          "id": "hinox-063",
+          "value": "1401fdb3",
+          "x": -154.0,
+          "y": 320.4561767578125,
+          "z": -1063.8673095703125,
+          "layer": "surface",
+          "note": "7020588333224438768 - Enemy_Giant_Senior (*castle)"
+        },
+        {
+          "id": "hinox-064",
+          "value": "cdebf5bd",
+          "x": 3257.217041015625,
+          "y": -325.38848876953125,
+          "z": -3445.18310546875,
+          "layer": "depths",
+          "note": "7041383940937881620 - Enemy_Giant_Bone_AllDay"
+        },
+        {
+          "id": "hinox-065",
+          "value": "77761549",
+          "x": 779.4067993164062,
+          "y": -361.0745849609375,
+          "z": 1956.192626953125,
+          "layer": "depths",
+          "note": "7483814142761593567 - Enemy_Giant_Bone_AllDay"
+        },
+        {
+          "id": "hinox-066",
+          "value": "568cc4bd",
+          "x": -3794.0390625,
+          "y": 246.1083221435547,
+          "z": -1557.1756591796875,
+          "layer": "surface",
+          "note": "814989563464506880 - Enemy_Giant_Bone"
+        },
+        {
+          "id": "hinox-067",
+          "value": "0411bd1c",
+          "x": 1687.424072265625,
+          "y": 107.93429565429688,
+          "z": 3873.210693359375,
+          "layer": "surface",
+          "note": "8540332896120388188 - Enemy_Giant_Senior"
+        },
+        {
+          "id": "hinox-068",
+          "value": "57070b19",
+          "x": -806.5238037109375,
+          "y": 224.72689819335938,
+          "z": 3019.351318359375,
+          "layer": "surface",
+          "note": "9137312690332556523 - Enemy_Giant_Middle"
+        },
+        {
+          "id": "hinox-069",
+          "value": "8e1ccab1",
+          "x": 2874.60107421875,
+          "y": -465.1344299316406,
+          "z": 2405.4326171875,
+          "layer": "depths",
+          "note": "9316316819130700830 - Enemy_Giant_Bone_AllDay"
+        }
+      ],
+      "sourceCounts": {
+        "ids": 69,
+        "coordinates": 69
+      }
+    },
+    {
+      "id": "stone_talus",
+      "label": "Stone Talus",
+      "kind": "bool",
+      "items": [
+        {
+          "id": "stone_talus-001",
+          "value": "9f9b40d6",
+          "x": 1256.26171875,
+          "y": 214.63487243652344,
+          "z": 1164.90771484375,
+          "layer": "surface",
+          "note": "10068938260813754755 - Enemy_Golem_Fort_A_Wander"
+        },
+        {
+          "id": "stone_talus-002",
+          "value": "8b486d07",
+          "x": 587.38671875,
+          "y": 170.19052124023438,
+          "z": 1934.17529296875,
+          "layer": "surface",
+          "note": "10245753642321424701 - Enemy_Golem_Fort_A"
+        },
+        {
+          "id": "stone_talus-003",
+          "value": "7ad63fa8",
+          "x": -769.926513671875,
+          "y": 152.4324951171875,
+          "z": -811.4771118164062,
+          "layer": "surface",
+          "note": "10247711565523857438 - Enemy_Golem_Fort_A"
+        },
+        {
+          "id": "stone_talus-004",
+          "value": "e9a2ae7f",
+          "x": -2859.639892578125,
+          "y": 117.11199188232422,
+          "z": 521.2880249023438,
+          "layer": "surface",
+          "note": "10455502375357747483 - Enemy_Golem_Middle"
+        },
+        {
+          "id": "stone_talus-005",
+          "value": "905ea02e",
+          "x": 950.5641479492188,
+          "y": -449.8459167480469,
+          "z": -3673.295166015625,
+          "layer": "depths",
+          "note": "10618835352613211749 - Enemy_Golem_Middle"
+        },
+        {
+          "id": "stone_talus-006",
+          "value": "d43fd092",
+          "x": 2630.221923828125,
+          "y": 635.2178955078125,
+          "z": -2744.98681640625,
+          "layer": "surface",
+          "note": "10892800195334423523 - Enemy_Golem_Fire_KeyCrystal (*cave)"
+        },
+        {
+          "id": "stone_talus-007",
+          "value": "4db447b9",
+          "x": 4190.78857421875,
+          "y": -690.4016723632812,
+          "z": -517.8019409179688,
+          "layer": "depths",
+          "note": "11443155446257060295 - Enemy_Golem_Middle"
+        },
+        {
+          "id": "stone_talus-008",
+          "value": "a4e8e50e",
+          "x": 4677.8798828125,
+          "y": 107.76940155029297,
+          "z": -2998.280517578125,
+          "layer": "surface",
+          "note": "11530044562170297151 - Enemy_Golem_Senior"
+        },
+        {
+          "id": "stone_talus-009",
+          "value": "a8756648",
+          "x": -4393.29638671875,
+          "y": 217.0126190185547,
+          "z": -1935.439208984375,
+          "layer": "surface",
+          "note": "11731926584831658232 - Enemy_Golem_Fort_A"
+        },
+        {
+          "id": "stone_talus-010",
+          "value": "be5f233a",
+          "x": -2599.580810546875,
+          "y": 282.846435546875,
+          "z": 1781.6395263671875,
+          "layer": "surface",
+          "note": "12380519682675677169 - Enemy_Golem_Senior (*cave)"
+        },
+        {
+          "id": "stone_talus-011",
+          "value": "9d6b4642",
+          "x": -2306.196533203125,
+          "y": 463.0079650878906,
+          "z": 2453.250732421875,
+          "layer": "surface",
+          "note": "12651336382394967980 - Enemy_Golem_Senior"
+        },
+        {
+          "id": "stone_talus-012",
+          "value": "b166db6c",
+          "x": -394.2005310058594,
+          "y": -492.04302978515625,
+          "z": -2955.845458984375,
+          "layer": "depths",
+          "note": "13253920385584715510 - Enemy_Golem_Middle"
+        },
+        {
+          "id": "stone_talus-013",
+          "value": "a2d4c991",
+          "x": 2479.103759765625,
+          "y": -666.0548706054688,
+          "z": -3637.156982421875,
+          "layer": "depths",
+          "note": "13304930093133988979 - Enemy_Golem_Middle"
+        },
+        {
+          "id": "stone_talus-014",
+          "value": "59f1c02e",
+          "x": 677.4607543945312,
+          "y": 134.376953125,
+          "z": -505.9571838378906,
+          "layer": "surface",
+          "note": "13471164085200170448 - Enemy_Golem_Fort_A_Wander"
+        },
+        {
+          "id": "stone_talus-015",
+          "value": "c84cbb8f",
+          "x": -4722.6669921875,
+          "y": -979.7219848632812,
+          "z": 390.84747314453125,
+          "layer": "depths",
+          "note": "13537057953222982457 - Enemy_Golem_Ice"
+        },
+        {
+          "id": "stone_talus-016",
+          "value": "c6dde95b",
+          "x": 1483.0167236328125,
+          "y": -493.0390625,
+          "z": 975.0067138671875,
+          "layer": "depths",
+          "note": "14186229878786082807 - Enemy_Golem_Senior"
+        },
+        {
+          "id": "stone_talus-017",
+          "value": "0b50ee69",
+          "x": -3108.019287109375,
+          "y": -500.0920104980469,
+          "z": -1287.6983642578125,
+          "layer": "depths",
+          "note": "14301933489819552196 - Enemy_Golem_Fort_A"
+        },
+        {
+          "id": "stone_talus-018",
+          "value": "b31a5983",
+          "x": 1454.1341552734375,
+          "y": -733.1267700195312,
+          "z": -3174.558837890625,
+          "layer": "depths",
+          "note": "14321487078129349713 - Enemy_Golem_Fire"
+        },
+        {
+          "id": "stone_talus-019",
+          "value": "6fa68bac",
+          "x": 2912.831298828125,
+          "y": -856.9808959960938,
+          "z": -2555.55810546875,
+          "layer": "depths",
+          "note": "14365999305599602621 - Enemy_Golem_Fire"
+        },
+        {
+          "id": "stone_talus-020",
+          "value": "b27ef16f",
+          "x": -108.73272705078125,
+          "y": 140.84609985351562,
+          "z": 802.0199584960938,
+          "layer": "surface",
+          "note": "14426239951359628434 - Enemy_Golem_Fort_A"
+        },
+        {
+          "id": "stone_talus-021",
+          "value": "ec2735c0",
+          "x": 3276.86865234375,
+          "y": 132.97088623046875,
+          "z": 3408.1083984375,
+          "layer": "surface",
+          "note": "14774490785716930628 - Enemy_Golem_Fort_A"
+        },
+        {
+          "id": "stone_talus-022",
+          "value": "b117ffaf",
+          "x": 4180.830078125,
+          "y": 120.68622589111328,
+          "z": -2227.515869140625,
+          "layer": "surface",
+          "note": "15181532392716237288 - Enemy_Golem_Fort_A"
+        },
+        {
+          "id": "stone_talus-023",
+          "value": "95fbd37d",
+          "x": 340.09552001953125,
+          "y": 61.322452545166016,
+          "z": 1983.7418212890625,
+          "layer": "surface",
+          "note": "15277665366631994122 - Enemy_Golem_Middle (*cave)"
+        },
+        {
+          "id": "stone_talus-024",
+          "value": "a449182a",
+          "x": -460.26055908203125,
+          "y": -382.3183898925781,
+          "z": 1004.6815795898438,
+          "layer": "depths",
+          "note": "15285027607181791455 - Enemy_Golem_Junior"
+        },
+        {
+          "id": "stone_talus-025",
+          "value": "7f7fa936",
+          "x": 4677.84326171875,
+          "y": -350.034912109375,
+          "z": -2998.33203125,
+          "layer": "depths",
+          "note": "1530232208606829323 - Enemy_Golem_Middle"
+        },
+        {
+          "id": "stone_talus-026",
+          "value": "36c21c1c",
+          "x": -4499.7998046875,
+          "y": -457.9808044433594,
+          "z": -2450.408935546875,
+          "layer": "depths",
+          "note": "15424779878836339310 - Enemy_Golem_Senior"
+        },
+        {
+          "id": "stone_talus-027",
+          "value": "5f379b38",
+          "x": -2526.82080078125,
+          "y": -471.37615966796875,
+          "z": 107.41241455078125,
+          "layer": "depths",
+          "note": "1547444985858466855 - Enemy_Golem_Fort_A_Wander"
+        },
+        {
+          "id": "stone_talus-028",
+          "value": "d58c280b",
+          "x": -4432.53173828125,
+          "y": 391.76739501953125,
+          "z": -3386.982666015625,
+          "layer": "surface",
+          "note": "15513207573053888916 - Enemy_Golem_Ice"
+        },
+        {
+          "id": "stone_talus-029",
+          "value": "889c540c",
+          "x": 1018.71044921875,
+          "y": 128.53982543945312,
+          "z": 3383.125244140625,
+          "layer": "surface",
+          "note": "15927226762116133840 - Enemy_Golem_Senior"
+        },
+        {
+          "id": "stone_talus-030",
+          "value": "af9a5195",
+          "x": 97.52548217773438,
+          "y": 281.22857666015625,
+          "z": -2370.002685546875,
+          "layer": "surface",
+          "note": "16190239693163851365 - Enemy_Golem_Junior_KeyCrystal"
+        },
+        {
+          "id": "stone_talus-031",
+          "value": "bf7247d8",
+          "x": 1291.0,
+          "y": 359.662841796875,
+          "z": -1717.0,
+          "layer": "surface",
+          "note": "16303560262861595679 - Enemy_Golem_Fire"
+        },
+        {
+          "id": "stone_talus-032",
+          "value": "51db4541",
+          "x": 1672.4769287109375,
+          "y": -621.11767578125,
+          "z": -1610.01953125,
+          "layer": "depths",
+          "note": "16420194130839672297 - Enemy_Golem_Fire"
+        },
+        {
+          "id": "stone_talus-033",
+          "value": "6f741eef",
+          "x": 3028.713134765625,
+          "y": 112.74443054199219,
+          "z": 1778.316162109375,
+          "layer": "surface",
+          "note": "16595128438601429843 - Enemy_Golem_Middle"
+        },
+        {
+          "id": "stone_talus-034",
+          "value": "a94cdb3e",
+          "x": -3530.618896484375,
+          "y": -379.3450622558594,
+          "z": 2443.347900390625,
+          "layer": "depths",
+          "note": "16700727111736997492 - Enemy_Golem_Junior"
+        },
+        {
+          "id": "stone_talus-035",
+          "value": "890dca7f",
+          "x": -1363.5462646484375,
+          "y": 115.52265167236328,
+          "z": 789.26171875,
+          "layer": "surface",
+          "note": "16750487341306993332 - Enemy_Golem_Fort_A"
+        },
+        {
+          "id": "stone_talus-036",
+          "value": "874571fe",
+          "x": 2483.1357421875,
+          "y": 171.62680053710938,
+          "z": -908.03369140625,
+          "layer": "surface",
+          "note": "17073066599977669906 - Enemy_Golem_Middle"
+        },
+        {
+          "id": "stone_talus-037",
+          "value": "552acfc2",
+          "x": -394.1091613769531,
+          "y": 253.1044464111328,
+          "z": -2955.785400390625,
+          "layer": "surface",
+          "note": "17288738412385992381 - Enemy_Golem_Senior"
+        },
+        {
+          "id": "stone_talus-038",
+          "value": "57392eef",
+          "x": 1825.5904541015625,
+          "y": 132.588623046875,
+          "z": 3495.334228515625,
+          "layer": "surface",
+          "note": "17325969905876983456 - Enemy_Golem_Senior"
+        },
+        {
+          "id": "stone_talus-039",
+          "value": "c82b6159",
+          "x": 3195.4443359375,
+          "y": 171.58663940429688,
+          "z": 2958.0947265625,
+          "layer": "surface",
+          "note": "1757994764188803558 - Enemy_Golem_Middle"
+        },
+        {
+          "id": "stone_talus-040",
+          "value": "9af270b2",
+          "x": 2479.119384765625,
+          "y": 431.16107177734375,
+          "z": -3637.12109375,
+          "layer": "surface",
+          "note": "17769742489494399452 - Enemy_Golem_Fire"
+        },
+        {
+          "id": "stone_talus-041",
+          "value": "d7119323",
+          "x": -2685.30517578125,
+          "y": 346.3376770019531,
+          "z": -3352.924560546875,
+          "layer": "surface",
+          "note": "18224106715969131233 - Enemy_Golem_Ice_KeyCrystal"
+        },
+        {
+          "id": "stone_talus-042",
+          "value": "4ecbbf59",
+          "x": -3987.38720703125,
+          "y": 415.7000732421875,
+          "z": 1703.1065673828125,
+          "layer": "surface",
+          "note": "18395733775024195032 - Enemy_Golem_Fort_A_Wander"
+        },
+        {
+          "id": "stone_talus-043",
+          "value": "fc30fbc0",
+          "x": -2635.384033203125,
+          "y": -304.84063720703125,
+          "z": -1491.778564453125,
+          "layer": "depths",
+          "note": "2050956691456113054 - Enemy_Golem_Senior"
+        },
+        {
+          "id": "stone_talus-044",
+          "value": "c45b2ccc",
+          "x": -3491.1865234375,
+          "y": 0.19665303826332092,
+          "z": -171.037841796875,
+          "layer": "surface",
+          "note": "2052555409109371027 - Enemy_Golem_Senior"
+        },
+        {
+          "id": "stone_talus-045",
+          "value": "608c2d3a",
+          "x": 3627.833251953125,
+          "y": 2.0938262939453125,
+          "z": -274.1907043457031,
+          "layer": "surface",
+          "note": "2361313891946414063 - Enemy_Golem_Middle (*cave)"
+        },
+        {
+          "id": "stone_talus-046",
+          "value": "7980d385",
+          "x": -3297.783935546875,
+          "y": 295.02294921875,
+          "z": -649.46142578125,
+          "layer": "surface",
+          "note": "2520346700240257683 - Enemy_Golem_Junior"
+        },
+        {
+          "id": "stone_talus-047",
+          "value": "535c77bd",
+          "x": 769.7757568359375,
+          "y": 129.69512939453125,
+          "z": 1222.9781494140625,
+          "layer": "surface",
+          "note": "2531771477704802275 - Enemy_Golem_Fort_A"
+        },
+        {
+          "id": "stone_talus-048",
+          "value": "b7ae3986",
+          "x": 3276.870849609375,
+          "y": -374.99310302734375,
+          "z": 3408.104736328125,
+          "layer": "depths",
+          "note": "257806995679989693 - Enemy_Golem_Fort_A"
+        },
+        {
+          "id": "stone_talus-049",
+          "value": "daacc45d",
+          "x": -3.665618896484375,
+          "y": -365.63018798828125,
+          "z": 12.47320556640625,
+          "layer": "depths",
+          "note": "2717240242476958557 - Enemy_Golem_Junior"
+        },
+        {
+          "id": "stone_talus-050",
+          "value": "ad93f5bd",
+          "x": -2220.99560546875,
+          "y": -609.084228515625,
+          "z": 584.721923828125,
+          "layer": "depths",
+          "note": "3037055588741651274 - Enemy_Golem_Middle"
+        },
+        {
+          "id": "stone_talus-051",
+          "value": "d791063e",
+          "x": -2549.97314453125,
+          "y": 233.92405700683594,
+          "z": 111.187744140625,
+          "layer": "surface",
+          "note": "3042969628746501486 - Enemy_Golem_Fort_A_Wander"
+        },
+        {
+          "id": "stone_talus-052",
+          "value": "803e47c2",
+          "x": 4140.505859375,
+          "y": 290.33642578125,
+          "z": -543.2716674804688,
+          "layer": "surface",
+          "note": "3116461437538472761 - Enemy_Golem_Middle (*cave)"
+        },
+        {
+          "id": "stone_talus-053",
+          "value": "8f50f2c1",
+          "x": -1091.6300048828125,
+          "y": 179.29107666015625,
+          "z": 1659.355712890625,
+          "layer": "surface",
+          "note": "3269666100524179229 - Enemy_Golem_Fort_A"
+        },
+        {
+          "id": "stone_talus-054",
+          "value": "61b1fbda",
+          "x": -2832.683349609375,
+          "y": 657.482421875,
+          "z": 1326.4952392578125,
+          "layer": "surface",
+          "note": "3276861371055278357 - Enemy_Golem_Ice"
+        },
+        {
+          "id": "stone_talus-055",
+          "value": "a9aa4b3c",
+          "x": 3028.867919921875,
+          "y": -354.98565673828125,
+          "z": 1778.508544921875,
+          "layer": "depths",
+          "note": "3588912653393884250 - Enemy_Golem_Middle"
+        },
+        {
+          "id": "stone_talus-056",
+          "value": "e04021fa",
+          "x": 3951.37060546875,
+          "y": 348.5794677734375,
+          "z": -1188.882080078125,
+          "layer": "surface",
+          "note": "4536425597808032527 - Enemy_Golem_Fort_A"
+        },
+        {
+          "id": "stone_talus-057",
+          "value": "1b7b02d4",
+          "x": 1943.571044921875,
+          "y": 527.2362670898438,
+          "z": -3194.213623046875,
+          "layer": "surface",
+          "note": "4645246919721611071 - Enemy_Golem_Fire"
+        },
+        {
+          "id": "stone_talus-058",
+          "value": "12dee5a0",
+          "x": 703.3604736328125,
+          "y": 200.14419555664062,
+          "z": -3692.479736328125,
+          "layer": "surface",
+          "note": "5054150653061776460 - Enemy_Golem_Middle"
+        },
+        {
+          "id": "stone_talus-059",
+          "value": "4e416702",
+          "x": 2973.52001953125,
+          "y": 390.0881042480469,
+          "z": -1488.4697265625,
+          "layer": "surface",
+          "note": "531774016647022976 - Enemy_Golem_Fort_A"
+        },
+        {
+          "id": "stone_talus-060",
+          "value": "58885f47",
+          "x": -108.73272705078125,
+          "y": -382.206787109375,
+          "z": 802.0199584960938,
+          "layer": "depths",
+          "note": "5587051473016743388 - Enemy_Golem_Fort_A"
+        },
+        {
+          "id": "stone_talus-061",
+          "value": "fcc50129",
+          "x": -2220.958740234375,
+          "y": 372.97540283203125,
+          "z": 584.7501831054688,
+          "layer": "surface",
+          "note": "5642566669897180838 - Enemy_Golem_Middle"
+        },
+        {
+          "id": "stone_talus-062",
+          "value": "1e6c7853",
+          "x": -826.01611328125,
+          "y": -432.64569091796875,
+          "z": 3349.916015625,
+          "layer": "depths",
+          "note": "5664120884073212404 - Enemy_Golem_Junior"
+        },
+        {
+          "id": "stone_talus-063",
+          "value": "321a2ff1",
+          "x": 4062.730224609375,
+          "y": 255.45018005371094,
+          "z": -2972.85791015625,
+          "layer": "surface",
+          "note": "5669149490197538992 - Enemy_Golem_Junior"
+        },
+        {
+          "id": "stone_talus-064",
+          "value": "8051953b",
+          "x": 697.1392211914062,
+          "y": -377.1893310546875,
+          "z": -513.4714965820312,
+          "layer": "depths",
+          "note": "5709325748160470100 - Enemy_Golem_Senior"
+        },
+        {
+          "id": "stone_talus-065",
+          "value": "76147575",
+          "x": 2014.5,
+          "y": 564.3072509765625,
+          "z": -2397.5,
+          "layer": "surface",
+          "note": "5838353936759761014 - Enemy_Golem_Fire"
+        },
+        {
+          "id": "stone_talus-066",
+          "value": "d5999747",
+          "x": 2984.998779296875,
+          "y": -625.1400756835938,
+          "z": -1449.000244140625,
+          "layer": "depths",
+          "note": "5901073410690925575 - Enemy_Golem_Fort_A_Wander"
+        },
+        {
+          "id": "stone_talus-067",
+          "value": "b634393b",
+          "x": -4321.17041015625,
+          "y": 493.2856140136719,
+          "z": 1203.4766845703125,
+          "layer": "surface",
+          "note": "6008600732561825508 - Enemy_Golem_Ice"
+        },
+        {
+          "id": "stone_talus-068",
+          "value": "37fbb785",
+          "x": -3629.34423828125,
+          "y": -486.5701599121094,
+          "z": -2196.20556640625,
+          "layer": "depths",
+          "note": "6062387962514300764 - Enemy_Golem_Ice"
+        },
+        {
+          "id": "stone_talus-069",
+          "value": "5bf863a5",
+          "x": 524.2816162109375,
+          "y": 164.52647399902344,
+          "z": 3710.40380859375,
+          "layer": "surface",
+          "note": "6106633361497918783 - Enemy_Golem_Senior"
+        },
+        {
+          "id": "stone_talus-070",
+          "value": "368df7ef",
+          "x": -4432.5302734375,
+          "y": -627.7865600585938,
+          "z": -3386.98291015625,
+          "layer": "depths",
+          "note": "614517283498470563 - Enemy_Golem_Senior"
+        },
+        {
+          "id": "stone_talus-071",
+          "value": "509f3803",
+          "x": 4057.046142578125,
+          "y": -652.9249877929688,
+          "z": 1056.158447265625,
+          "layer": "depths",
+          "note": "6363774565855950232 - Enemy_Golem_Middle"
+        },
+        {
+          "id": "stone_talus-072",
+          "value": "50e7f4fd",
+          "x": 574.6219482421875,
+          "y": 114.56942749023438,
+          "z": -766.04833984375,
+          "layer": "surface",
+          "note": "650394321314037942 - Enemy_Golem_Middle (*cave)"
+        },
+        {
+          "id": "stone_talus-073",
+          "value": "76177b24",
+          "x": 2710.31884765625,
+          "y": 345.0257263183594,
+          "z": -3303.0810546875,
+          "layer": "surface",
+          "note": "6617455511387048783 - Enemy_Golem_Middle"
+        },
+        {
+          "id": "stone_talus-074",
+          "value": "b579266b",
+          "x": 202.11578369140625,
+          "y": 133.2799530029297,
+          "z": -530.7988891601562,
+          "layer": "surface",
+          "note": "674996768932339785 - Enemy_Golem_Fort_A"
+        },
+        {
+          "id": "stone_talus-075",
+          "value": "eb5f3cf3",
+          "x": 1482.94384765625,
+          "y": 115.84307861328125,
+          "z": 974.8634033203125,
+          "layer": "surface",
+          "note": "6958531408834172139 - Enemy_Golem_Middle (*cave)"
+        },
+        {
+          "id": "stone_talus-076",
+          "value": "0dbd2e32",
+          "x": -4499.822265625,
+          "y": 217.95022583007812,
+          "z": -2450.386474609375,
+          "layer": "surface",
+          "note": "7166375183008937597 - Enemy_Golem_Ice"
+        },
+        {
+          "id": "stone_talus-077",
+          "value": "27f36153",
+          "x": -4393.29638671875,
+          "y": -456.72186279296875,
+          "z": -1935.4393310546875,
+          "layer": "depths",
+          "note": "734898175742900540 - Enemy_Golem_Fort_A"
+        },
+        {
+          "id": "stone_talus-078",
+          "value": "07204562",
+          "x": 4190.78759765625,
+          "y": 456.0583190917969,
+          "z": -517.80419921875,
+          "layer": "surface",
+          "note": "748422554435948301 - Enemy_Golem_Middle"
+        },
+        {
+          "id": "stone_talus-079",
+          "value": "5d9e92da",
+          "x": 4057.087646484375,
+          "y": 416.8744201660156,
+          "z": 1056.1361083984375,
+          "layer": "surface",
+          "note": "7720265237709075418 - Enemy_Golem_Ice"
+        },
+        {
+          "id": "stone_talus-080",
+          "value": "1b53507f",
+          "x": -3386.52001953125,
+          "y": 305.43292236328125,
+          "z": -1076.0284423828125,
+          "layer": "surface",
+          "note": "7743906873710274373 - Enemy_Golem_Junior"
+        },
+        {
+          "id": "stone_talus-081",
+          "value": "86041e8f",
+          "x": 2215.000732421875,
+          "y": 420.9067077636719,
+          "z": -1779.9993896484375,
+          "layer": "surface",
+          "note": "7751318989887040996 - Enemy_Golem_Fire"
+        },
+        {
+          "id": "stone_talus-082",
+          "value": "7a28cc7d",
+          "x": 1056.378662109375,
+          "y": -372.305419921875,
+          "z": 3417.3955078125,
+          "layer": "depths",
+          "note": "7973997105951827682 - Enemy_Golem_Middle"
+        },
+        {
+          "id": "stone_talus-083",
+          "value": "4b7cd218",
+          "x": -4010.20556640625,
+          "y": -648.6936645507812,
+          "z": 1696.1982421875,
+          "layer": "depths",
+          "note": "8372955289030476491 - Enemy_Golem_Junior"
+        },
+        {
+          "id": "stone_talus-084",
+          "value": "9be62122",
+          "x": -1447.5238037109375,
+          "y": 242.71043395996094,
+          "z": -1026.1571044921875,
+          "layer": "surface",
+          "note": "8425189098582944053 - Enemy_Golem_Fort_A"
+        },
+        {
+          "id": "stone_talus-085",
+          "value": "9ebf7572",
+          "x": -3108.947265625,
+          "y": 261.8449401855469,
+          "z": -1287.4149169921875,
+          "layer": "surface",
+          "note": "8738202729678699744 - Enemy_Golem_Fort_A"
+        },
+        {
+          "id": "stone_talus-086",
+          "value": "38a9f859",
+          "x": -3386.52001953125,
+          "y": -543.166748046875,
+          "z": -1076.0284423828125,
+          "layer": "depths",
+          "note": "8990366834921699727 - Enemy_Golem_Senior"
+        },
+        {
+          "id": "stone_talus-087",
+          "value": "728cddfa",
+          "x": 2642.18310546875,
+          "y": -422.832275390625,
+          "z": 1942.759521484375,
+          "layer": "depths",
+          "note": "9574730864949561488 - Enemy_Golem_Ice"
+        }
+      ],
+      "sourceCounts": {
+        "ids": 87,
+        "coordinates": 87
+      }
+    },
+    {
+      "id": "molduga",
+      "label": "Molduga",
+      "kind": "bool",
+      "items": [
+        {
+          "id": "molduga-001",
+          "value": "64eb3a85",
+          "x": -2401.00341796875,
+          "y": 128.07656860351562,
+          "z": 3268.042236328125,
+          "layer": "surface",
+          "note": "15680669918719030586 - Enemy_Sandworm"
+        },
+        {
+          "id": "molduga-002",
+          "value": "4c446633",
+          "x": -4029.0,
+          "y": 148.90354919433594,
+          "z": 2589.11962890625,
+          "layer": "surface",
+          "note": "16109259853398140926 - Enemy_Sandworm"
+        },
+        {
+          "id": "molduga-003",
+          "value": "362e8f22",
+          "x": -3323.201904296875,
+          "y": 121.37248229980469,
+          "z": 3315.89453125,
+          "layer": "surface",
+          "note": "720594899592278164 - Enemy_Sandworm"
+        },
+        {
+          "id": "molduga-004",
+          "value": "a884f7b5",
+          "x": -4797.125,
+          "y": 133.20516967773438,
+          "z": 2800.421142578125,
+          "layer": "surface",
+          "note": "720594901953648144 - Enemy_Sandworm"
+        }
+      ],
+      "sourceCounts": {
+        "ids": 4,
+        "coordinates": 4
+      }
+    },
+    {
+      "id": "frox",
+      "label": "Frox",
+      "kind": "bool",
+      "items": [
+        {
+          "id": "frox-001",
+          "value": "169430a2",
+          "x": -794.3677978515625,
+          "y": -363.8878479003906,
+          "z": 1088.916748046875,
+          "layer": "depths",
+          "note": "10328270447128116576 - Enemy_Mogurudo_Junior"
+        },
+        {
+          "id": "frox-002",
+          "value": "1c9c116b",
+          "x": -165.01300048828125,
+          "y": -511.7106018066406,
+          "z": -2943.560302734375,
+          "layer": "depths",
+          "note": "1037511654320139812 - Enemy_Mogurudo_Middle"
+        },
+        {
+          "id": "frox-003",
+          "value": "d1dfb8cc",
+          "x": -1909.9713134765625,
+          "y": -483.7142333984375,
+          "z": 2608.04736328125,
+          "layer": "depths",
+          "note": "11065257984001538111 - Enemy_Mogurudo_Junior"
+        },
+        {
+          "id": "frox-004",
+          "value": "e60cd4cc",
+          "x": 3035.558349609375,
+          "y": -407.19677734375,
+          "z": 798.213134765625,
+          "layer": "depths",
+          "note": "11460127974052525879 - Enemy_Mogurudo_Middle"
+        },
+        {
+          "id": "frox-005",
+          "value": "3668b8d6",
+          "x": -2998.10693359375,
+          "y": -357.3582763671875,
+          "z": 2680.184814453125,
+          "layer": "depths",
+          "note": "11463419723365905925 - Enemy_Mogurudo_Middle"
+        },
+        {
+          "id": "frox-006",
+          "value": "6ee4a677",
+          "x": 4028.19287109375,
+          "y": -363.6255798339844,
+          "z": -2187.59619140625,
+          "layer": "depths",
+          "note": "11697554953969771909 - Enemy_Mogurudo_Middle"
+        },
+        {
+          "id": "frox-007",
+          "value": "a24823eb",
+          "x": -2770.76123046875,
+          "y": -335.79901123046875,
+          "z": 3329.54931640625,
+          "layer": "depths",
+          "note": "12178269734113806125 - Enemy_Mogurudo_Junior"
+        },
+        {
+          "id": "frox-008",
+          "value": "9ddfabff",
+          "x": 176.50137329101562,
+          "y": -371.00799560546875,
+          "z": 862.5017700195312,
+          "layer": "depths",
+          "note": "12191333624691976966 - Enemy_Mogurudo_Junior"
+        },
+        {
+          "id": "frox-009",
+          "value": "ef668d93",
+          "x": 844.9608764648438,
+          "y": -369.68426513671875,
+          "z": 3388.04150390625,
+          "layer": "depths",
+          "note": "12251528895527667485 - Enemy_Mogurudo_Middle"
+        },
+        {
+          "id": "frox-010",
+          "value": "4d0d8fe3",
+          "x": -764.4219970703125,
+          "y": -359.45123291015625,
+          "z": -833.216064453125,
+          "layer": "depths",
+          "note": "12365670230816177776 - Enemy_Mogurudo_Senior"
+        },
+        {
+          "id": "frox-011",
+          "value": "e0b131e6",
+          "x": -4695.83984375,
+          "y": -833.8485107421875,
+          "z": 1228.4217529296875,
+          "layer": "depths",
+          "note": "12377670104334831108 - Enemy_Mogurudo_Senior"
+        },
+        {
+          "id": "frox-012",
+          "value": "49cf21a8",
+          "x": -293.29888916015625,
+          "y": -355.5333557128906,
+          "z": 1813.5467529296875,
+          "layer": "depths",
+          "note": "12500036569524877284 - Enemy_Mogurudo_Junior"
+        },
+        {
+          "id": "frox-013",
+          "value": "a8027d0c",
+          "x": 204.01513671875,
+          "y": -366.989990234375,
+          "z": -890.4956665039062,
+          "layer": "depths",
+          "note": "12561938510478171825 - Enemy_Mogurudo_Senior"
+        },
+        {
+          "id": "frox-014",
+          "value": "5b894eb1",
+          "x": -325.06585693359375,
+          "y": -360.04034423828125,
+          "z": 3141.809326171875,
+          "layer": "depths",
+          "note": "12969150355366457728 - Enemy_Mogurudo_Junior"
+        },
+        {
+          "id": "frox-015",
+          "value": "754b1650",
+          "x": 2126.561279296875,
+          "y": -341.8616943359375,
+          "z": 3473.625732421875,
+          "layer": "depths",
+          "note": "13018743282921575560 - Enemy_Mogurudo_Senior"
+        },
+        {
+          "id": "frox-016",
+          "value": "8441dcc9",
+          "x": -1619.0723876953125,
+          "y": -393.1385192871094,
+          "z": 395.15325927734375,
+          "layer": "depths",
+          "note": "13381008868456051578 - Enemy_Mogurudo_Middle"
+        },
+        {
+          "id": "frox-017",
+          "value": "4d890430",
+          "x": 4142.48583984375,
+          "y": -579.6366577148438,
+          "z": -1002.47119140625,
+          "layer": "depths",
+          "note": "13837255093514248180 - Enemy_Mogurudo_Middle"
+        },
+        {
+          "id": "frox-018",
+          "value": "5debb6a6",
+          "x": -3890.912109375,
+          "y": -467.4443664550781,
+          "z": -560.1414184570312,
+          "layer": "depths",
+          "note": "13851603196554131143 - Enemy_Mogurudo_Senior"
+        },
+        {
+          "id": "frox-019",
+          "value": "082cc63a",
+          "x": -4674.4345703125,
+          "y": -362.5462646484375,
+          "z": 3502.275634765625,
+          "layer": "depths",
+          "note": "14407397624133737004 - Enemy_Mogurudo_Middle"
+        },
+        {
+          "id": "frox-020",
+          "value": "0441ff69",
+          "x": -4398.35986328125,
+          "y": -561.1002807617188,
+          "z": -2661.05126953125,
+          "layer": "depths",
+          "note": "1461859666042172890 - Enemy_Mogurudo_Senior"
+        },
+        {
+          "id": "frox-021",
+          "value": "2f9108f0",
+          "x": -4094.0283203125,
+          "y": -385.00244140625,
+          "z": 2554.79345703125,
+          "layer": "depths",
+          "note": "1527772026081084599 - Enemy_Mogurudo_Middle"
+        },
+        {
+          "id": "frox-022",
+          "value": "76e36f4f",
+          "x": 2490.9658203125,
+          "y": -394.66546630859375,
+          "z": -841.8905639648438,
+          "layer": "depths",
+          "note": "16647980483221192829 - Enemy_Mogurudo_Middle"
+        },
+        {
+          "id": "frox-023",
+          "value": "d100a967",
+          "x": -3627.56396484375,
+          "y": -698.7279052734375,
+          "z": 1548.8265380859375,
+          "layer": "depths",
+          "note": "16897534171235232390 - Enemy_Mogurudo_Senior"
+        },
+        {
+          "id": "frox-024",
+          "value": "d6b83f22",
+          "x": -571.5,
+          "y": -358.61309814453125,
+          "z": -222.5,
+          "layer": "depths",
+          "note": "1978969002134918203 - Enemy_Mogurudo_Junior"
+        },
+        {
+          "id": "frox-025",
+          "value": "11c1f160",
+          "x": -2252.9169921875,
+          "y": -477.7712097167969,
+          "z": 1975.2413330078125,
+          "layer": "depths",
+          "note": "2789826488794643712 - Enemy_Mogurudo_Junior"
+        },
+        {
+          "id": "frox-026",
+          "value": "5c7a2882",
+          "x": 1069.438720703125,
+          "y": -360.3050537109375,
+          "z": 40.943267822265625,
+          "layer": "depths",
+          "note": "4220478359636022535 - Enemy_Mogurudo_Senior"
+        },
+        {
+          "id": "frox-027",
+          "value": "05b33279",
+          "x": 2119.381103515625,
+          "y": -648.5546875,
+          "z": -1749.7906494140625,
+          "layer": "depths",
+          "note": "4374224543112302902 - Enemy_Mogurudo_Junior"
+        },
+        {
+          "id": "frox-028",
+          "value": "ec6bdd61",
+          "x": -3428.2998046875,
+          "y": -361.98828125,
+          "z": 3228.9775390625,
+          "layer": "depths",
+          "note": "4471433317634819585 - Enemy_Mogurudo_Junior"
+        },
+        {
+          "id": "frox-029",
+          "value": "2c9f01ef",
+          "x": -960.0970458984375,
+          "y": -513.50927734375,
+          "z": -2852.44091796875,
+          "layer": "depths",
+          "note": "5162969136808801268 - Enemy_Mogurudo_Middle"
+        },
+        {
+          "id": "frox-030",
+          "value": "6121697c",
+          "x": 551.9313354492188,
+          "y": -485.95404052734375,
+          "z": -3439.705810546875,
+          "layer": "depths",
+          "note": "5670631349020401293 - Enemy_Mogurudo_Middle"
+        },
+        {
+          "id": "frox-031",
+          "value": "0171233e",
+          "x": -875.307861328125,
+          "y": -439.9267578125,
+          "z": -1742.16552734375,
+          "layer": "depths",
+          "note": "616703579663155458 - Enemy_Mogurudo_Middle"
+        },
+        {
+          "id": "frox-032",
+          "value": "a5d53120",
+          "x": -2248.71142578125,
+          "y": -443.47869873046875,
+          "z": -451.1848449707031,
+          "layer": "depths",
+          "note": "6667026148310498870 - Enemy_Mogurudo_Middle"
+        },
+        {
+          "id": "frox-033",
+          "value": "9f6518c2",
+          "x": -1779.629150390625,
+          "y": -571.4930419921875,
+          "z": -3657.96337890625,
+          "layer": "depths",
+          "note": "7309042596103602194 - Enemy_Mogurudo_Senior"
+        },
+        {
+          "id": "frox-034",
+          "value": "c522d3a7",
+          "x": -3191.13427734375,
+          "y": -782.1538696289062,
+          "z": -2670.52587890625,
+          "layer": "depths",
+          "note": "9242284032603550008 - Enemy_Mogurudo_Senior"
+        },
+        {
+          "id": "frox-035",
+          "value": "ef4dab11",
+          "x": -845.62548828125,
+          "y": -409.58392333984375,
+          "z": 2867.846923828125,
+          "layer": "depths",
+          "note": "9533482995923962235 - Enemy_Mogurudo_Junior"
+        },
+        {
+          "id": "frox-036",
+          "value": "9c31d47b",
+          "x": -1339.5565185546875,
+          "y": -435.088623046875,
+          "z": -972.6395263671875,
+          "layer": "depths",
+          "note": "9534557315088646819 - Enemy_Mogurudo_Middle"
+        },
+        {
+          "id": "frox-037",
+          "value": "51a3caad",
+          "x": -1839.02490234375,
+          "y": -570.7158203125,
+          "z": -2413.43701171875,
+          "layer": "depths",
+          "note": "9597483127740858165 - Enemy_Mogurudo_Senior"
+        },
+        {
+          "id": "frox-038",
+          "value": "a582c596",
+          "x": -2439.354736328125,
+          "y": -368.770263671875,
+          "z": 3123.451171875,
+          "layer": "depths",
+          "note": "9846036367288186688 - Enemy_Mogurudo_Junior"
+        },
+        {
+          "id": "frox-039",
+          "value": "06e09b0e",
+          "x": -3719.17724609375,
+          "y": -445.347900390625,
+          "z": -1002.747314453125,
+          "layer": "depths",
+          "note": "9893429190146755208 - Enemy_Mogurudo_Senior"
+        },
+        {
+          "id": "frox-040",
+          "value": "8ef251a9",
+          "x": -2280.30712890625,
+          "y": -606.881103515625,
+          "z": -1933.5594482421875,
+          "layer": "depths",
+          "note": "9927835261964580308 - Enemy_Mogurudo_Senior"
+        }
+      ],
+      "sourceCounts": {
+        "ids": 40,
+        "coordinates": 40
+      }
+    },
+    {
+      "id": "gleeok",
+      "label": "Gleeok",
+      "kind": "bool",
+      "items": [
+        {
+          "id": "gleeok-001",
+          "value": "7f8e8d9b",
+          "x": -2114.5,
+          "y": 507.07177734375,
+          "z": 2639.78125,
+          "layer": "surface",
+          "note": "13096827551802913012 - Enemy_Drake_Fire"
+        },
+        {
+          "id": "gleeok-002",
+          "value": "35b7597e",
+          "x": 4652.3115234375,
+          "y": 1201.9710693359375,
+          "z": 3724.4541015625,
+          "layer": "sky",
+          "note": "15016330217960208345 - Enemy_Drake_Mix"
+        },
+        {
+          "id": "gleeok-003",
+          "value": "f1d7e7d3",
+          "x": 3422.804443359375,
+          "y": 442.7012023925781,
+          "z": -1298.451904296875,
+          "layer": "surface",
+          "note": "16188501114549156914 - Enemy_Drake_Electric"
+        },
+        {
+          "id": "gleeok-004",
+          "value": "8ab15a70",
+          "x": -1834.5015869140625,
+          "y": 354.0,
+          "z": -3009.064453125,
+          "layer": "surface",
+          "note": "17202757845512439687 - Enemy_Drake_Ice"
+        },
+        {
+          "id": "gleeok-005",
+          "value": "f00adc75",
+          "x": -4470.634765625,
+          "y": 1389.9007568359375,
+          "z": -2275.4306640625,
+          "layer": "sky",
+          "note": "17371437495503120726 - Enemy_Drake_Mix"
+        },
+        {
+          "id": "gleeok-006",
+          "value": "c8d9587b",
+          "x": 333.5196533203125,
+          "y": -463.90826416015625,
+          "z": -3122.09375,
+          "layer": "depths",
+          "note": "17525482178277971341 - Enemy_Drake_Mix"
+        },
+        {
+          "id": "gleeok-007",
+          "value": "e430c1ee",
+          "x": 1059.0,
+          "y": 183.93203735351562,
+          "z": 3614.0,
+          "layer": "surface",
+          "note": "17618439493369911666 - Enemy_Drake_Electric"
+        },
+        {
+          "id": "gleeok-008",
+          "value": "09e986c6",
+          "x": -3743.286865234375,
+          "y": 502.0,
+          "z": -2991.55517578125,
+          "layer": "surface",
+          "note": "18215301882184071282 - Enemy_Drake_Ice"
+        },
+        {
+          "id": "gleeok-009",
+          "value": "f8e86923",
+          "x": -3624.72412109375,
+          "y": 365.42755126953125,
+          "z": -420.2440490722656,
+          "layer": "surface",
+          "note": "2677006142106004616 - Enemy_Drake_Fire"
+        },
+        {
+          "id": "gleeok-010",
+          "value": "d5959044",
+          "x": -47.466033935546875,
+          "y": 145.0,
+          "z": 2491.095947265625,
+          "layer": "surface",
+          "note": "3292507397962573828 - Enemy_Drake_Fire"
+        },
+        {
+          "id": "gleeok-011",
+          "value": "96f03828",
+          "x": -4447.82373046875,
+          "y": 1556.1319580078125,
+          "z": 2627.468994140625,
+          "layer": "sky",
+          "note": "3362043677383214065 - Enemy_Drake_Mix"
+        },
+        {
+          "id": "gleeok-012",
+          "value": "6a8df83f",
+          "x": -1150.145263671875,
+          "y": 152.1873779296875,
+          "z": 1262.96630859375,
+          "layer": "surface",
+          "note": "3563560582355181031 - Enemy_Drake_Electric"
+        },
+        {
+          "id": "gleeok-013",
+          "value": "5c6aa7b3",
+          "x": 2238.5,
+          "y": 900.0,
+          "z": -693.5,
+          "layer": "sky",
+          "note": "7024559691671561212 - Enemy_Drake_Fire"
+        },
+        {
+          "id": "gleeok-014",
+          "value": "f811d7cb",
+          "x": -4023.768798828125,
+          "y": 813.9400634765625,
+          "z": 955.5,
+          "layer": "sky",
+          "note": "7375109460783924447 - Enemy_Drake_Ice"
+        }
+      ],
+      "sourceCounts": {
+        "ids": 14,
+        "coordinates": 14
+      }
+    },
+    {
+      "id": "wells",
+      "label": "Wells",
+      "kind": "bool",
+      "items": [
+        {
+          "id": "wells-001",
+          "value": "45b30297",
+          "x": -3831.584,
+          "y": 230.703,
+          "z": -2105.445,
+          "layer": "surface",
+          "note": "13194262444821253016 - Well_0001"
+        },
+        {
+          "id": "wells-002",
+          "value": "ed8c6c70",
+          "x": -2358.595,
+          "y": 367.4547,
+          "z": -1871.801,
+          "layer": "surface",
+          "note": "17178703360531207997 - Well_0002"
+        },
+        {
+          "id": "wells-003",
+          "value": "b91f743d",
+          "x": -1810.858,
+          "y": 196.3615,
+          "z": -1623.456,
+          "layer": "surface",
+          "note": "7062249617308613387 - Well_0003"
+        },
+        {
+          "id": "wells-004",
+          "value": "d81c08d6",
+          "x": -1069.444,
+          "y": 203.7078,
+          "z": -2325.903,
+          "layer": "surface",
+          "note": "11933224307091230694 - Well_0004"
+        },
+        {
+          "id": "wells-005",
+          "value": "0ef1efca",
+          "x": -911.3,
+          "y": 195.5639,
+          "z": -1616.2,
+          "layer": "surface",
+          "note": "17490979021949379359 - Well_0005"
+        },
+        {
+          "id": "wells-006",
+          "value": "bad036bf",
+          "x": -670.9031,
+          "y": 177.8872,
+          "z": -1351.729,
+          "layer": "surface",
+          "note": "3812226219033581199 - Well_0006"
+        },
+        {
+          "id": "wells-007",
+          "value": "cf474c86",
+          "x": -1039.614,
+          "y": 124.1464,
+          "z": -415.3119,
+          "layer": "surface",
+          "note": "11200109829905050648 - Well_0007"
+        },
+        {
+          "id": "wells-008",
+          "value": "c50cdfb7",
+          "x": -912.8082,
+          "y": 109.3519,
+          "z": -331.207,
+          "layer": "surface",
+          "note": "9877532556918825502 - Well_0008"
+        },
+        {
+          "id": "wells-009",
+          "value": "73d3b6a1",
+          "x": -1313.988,
+          "y": 99.37948,
+          "z": 622.6918,
+          "layer": "surface",
+          "note": "17331489093918561059 - Well_0009"
+        },
+        {
+          "id": "wells-010",
+          "value": "0a623984",
+          "x": -879.179,
+          "y": 111.336,
+          "z": 1101.615,
+          "layer": "surface",
+          "note": "5433239543305108333 - Well_0010"
+        },
+        {
+          "id": "wells-011",
+          "value": "be134c79",
+          "x": -1460.715,
+          "y": 122.0619,
+          "z": 1296.74,
+          "layer": "surface",
+          "note": "18374843825268348839 - Well_0011"
+        },
+        {
+          "id": "wells-012",
+          "value": "321a53c1",
+          "x": -1680.918,
+          "y": 211.5355,
+          "z": 1349.228,
+          "layer": "surface",
+          "note": "5573801400564842698 - Well_0012"
+        },
+        {
+          "id": "wells-013",
+          "value": "52fc93c7",
+          "x": -1720.26,
+          "y": 125.6991,
+          "z": 2238.07,
+          "layer": "surface",
+          "note": "8464135276822714214 - Well_0013"
+        },
+        {
+          "id": "wells-014",
+          "value": "10d31a20",
+          "x": 662.0,
+          "y": 129.684,
+          "z": -1266.5,
+          "layer": "surface",
+          "note": "8343852468912327656 - Well_0014"
+        },
+        {
+          "id": "wells-015",
+          "value": "50b7ff7c",
+          "x": 62.63467,
+          "y": 117.6656,
+          "z": -547.6163,
+          "layer": "surface",
+          "note": "6244318697190485736 - Well_0015"
+        },
+        {
+          "id": "wells-016",
+          "value": "f2369d24",
+          "x": -68.06168,
+          "y": 114.6147,
+          "z": 163.0891,
+          "layer": "surface",
+          "note": "14008184576550557030 - Well_0016"
+        },
+        {
+          "id": "wells-017",
+          "value": "7b698cff",
+          "x": 786.9977,
+          "y": 120.705,
+          "z": -7.592865,
+          "layer": "surface",
+          "note": "2682661287366618580 - Well_0017"
+        },
+        {
+          "id": "wells-018",
+          "value": "9d8c9e37",
+          "x": 686.1927,
+          "y": 107.3817,
+          "z": 766.4301,
+          "layer": "surface",
+          "note": "18292467756691799253 - Well_0018"
+        },
+        {
+          "id": "wells-019",
+          "value": "8d94eccf",
+          "x": 782.5,
+          "y": 126.0,
+          "z": 1496.9,
+          "layer": "surface",
+          "note": "15263783675053925142 - Well_0019"
+        },
+        {
+          "id": "wells-020",
+          "value": "8aec454c",
+          "x": 316.5151,
+          "y": 99.1031,
+          "z": 1856.799,
+          "layer": "surface",
+          "note": "14294001447745603636 - Well_0020"
+        },
+        {
+          "id": "wells-021",
+          "value": "4362cf69",
+          "x": 322.3558,
+          "y": 100.5785,
+          "z": 1927.037,
+          "layer": "surface",
+          "note": "483243831094194862 - Well_0021"
+        },
+        {
+          "id": "wells-022",
+          "value": "84260607",
+          "x": 423.4993,
+          "y": 99.49803,
+          "z": 2042.955,
+          "layer": "surface",
+          "note": "16136047310243677537 - Well_0022"
+        },
+        {
+          "id": "wells-023",
+          "value": "aa692d8f",
+          "x": 339.629,
+          "y": 117.7631,
+          "z": 2098.56,
+          "layer": "surface",
+          "note": "14203679129553496960 - Well_0023"
+        },
+        {
+          "id": "wells-024",
+          "value": "097d69f4",
+          "x": 316.0589,
+          "y": 135.0148,
+          "z": 2127.813,
+          "layer": "surface",
+          "note": "15539656917565867470 - Well_0024"
+        },
+        {
+          "id": "wells-025",
+          "value": "d65c76bd",
+          "x": 594.4839,
+          "y": 183.014,
+          "z": 2100.442,
+          "layer": "surface",
+          "note": "3409760176723313861 - Well_0025"
+        },
+        {
+          "id": "wells-026",
+          "value": "caa22279",
+          "x": 606.1266,
+          "y": 140.7945,
+          "z": 2261.083,
+          "layer": "surface",
+          "note": "7162466888885758692 - Well_0026"
+        },
+        {
+          "id": "wells-027",
+          "value": "6efd054e",
+          "x": 1544.127,
+          "y": 98.71378,
+          "z": -169.9368,
+          "layer": "surface",
+          "note": "4504342832330418540 - Well_0027"
+        },
+        {
+          "id": "wells-028",
+          "value": "1a1d2dc4",
+          "x": 1435.5,
+          "y": 99.67163,
+          "z": 136.4959,
+          "layer": "surface",
+          "note": "3624902666293548976 - Well_0028"
+        },
+        {
+          "id": "wells-029",
+          "value": "33c242cf",
+          "x": 1529.16,
+          "y": 99.65267,
+          "z": 326.8987,
+          "layer": "surface",
+          "note": "8973258028144868802 - Well_0029"
+        },
+        {
+          "id": "wells-030",
+          "value": "fc42a6b8",
+          "x": 1219.596,
+          "y": 100.1902,
+          "z": 397.1848,
+          "layer": "surface",
+          "note": "1154334463393842455 - Well_0030"
+        },
+        {
+          "id": "wells-031",
+          "value": "d97f0bf2",
+          "x": 1716.448,
+          "y": 113.5011,
+          "z": 650.8704,
+          "layer": "surface",
+          "note": "11738989003295390645 - Well_0031"
+        },
+        {
+          "id": "wells-032",
+          "value": "aff27cb8",
+          "x": 2746.387,
+          "y": 220.0299,
+          "z": -175.5236,
+          "layer": "surface",
+          "note": "2155917192954298383 - Well_0032"
+        },
+        {
+          "id": "wells-033",
+          "value": "8433b864",
+          "x": 3057.234,
+          "y": 423.9277,
+          "z": -2310.919,
+          "layer": "surface",
+          "note": "5334751970332889797 - Well_0033"
+        },
+        {
+          "id": "wells-034",
+          "value": "9c102b50",
+          "x": -3235.338,
+          "y": 113.4215,
+          "z": 2606.406,
+          "layer": "surface",
+          "note": "8216510434135260539 - Well_0034"
+        },
+        {
+          "id": "wells-035",
+          "value": "2dba628c",
+          "x": 2940.59,
+          "y": 101.111,
+          "z": 3378.44,
+          "layer": "surface",
+          "note": "5631944481270506220 - Well_0041"
+        },
+        {
+          "id": "wells-036",
+          "value": "307478a2",
+          "x": 1535.121,
+          "y": 151.8213,
+          "z": 3553.629,
+          "layer": "surface",
+          "note": "1774279682527688702 - Well_0042"
+        },
+        {
+          "id": "wells-037",
+          "value": "af2751bc",
+          "x": 537.629,
+          "y": 138.9138,
+          "z": 3426.698,
+          "layer": "surface",
+          "note": "6433184824016975873 - Well_0043"
+        },
+        {
+          "id": "wells-038",
+          "value": "f281fcdf",
+          "x": -1679.566,
+          "y": 326.0,
+          "z": -2586.0,
+          "layer": "surface",
+          "note": "5021182011261805087 - Well_0044"
+        },
+        {
+          "id": "wells-039",
+          "value": "f790f14c",
+          "x": -2820.0,
+          "y": 120.964,
+          "z": 2233.0,
+          "layer": "surface",
+          "note": "16477279299337157907 - Well_0045"
+        },
+        {
+          "id": "wells-040",
+          "value": "146228ba",
+          "x": 365.4017,
+          "y": 101.3057,
+          "z": 1126.331,
+          "layer": "surface",
+          "note": "9000359301995578366 - Well_0046"
+        },
+        {
+          "id": "wells-041",
+          "value": "d0e99318",
+          "x": 884.597,
+          "y": 117.3564,
+          "z": 195.319,
+          "layer": "surface",
+          "note": "16802610989801911938 - Well_0047"
+        },
+        {
+          "id": "wells-042",
+          "value": "db05738a",
+          "x": 858.0345,
+          "y": 117.3564,
+          "z": 262.7126,
+          "layer": "surface",
+          "note": "13473655612253629489 - Well_0047B"
+        },
+        {
+          "id": "wells-043",
+          "value": "324e7abe",
+          "x": 1794.704,
+          "y": 101.8641,
+          "z": 1949.73,
+          "layer": "surface",
+          "note": "11679239074233164527 - Well_0048"
+        },
+        {
+          "id": "wells-044",
+          "value": "cc574d89",
+          "x": 3421.88,
+          "y": 229.4044,
+          "z": 2029.529,
+          "layer": "surface",
+          "note": "12969905487474250827 - Well_0049"
+        },
+        {
+          "id": "wells-045",
+          "value": "51ca4ba7",
+          "x": 3356.756,
+          "y": 209.4572,
+          "z": 2050.473,
+          "layer": "surface",
+          "note": "13777722591245673954 - Well_0049B"
+        },
+        {
+          "id": "wells-046",
+          "value": "91c7b29b",
+          "x": 3514.478,
+          "y": 220.4324,
+          "z": 2152.45,
+          "layer": "surface",
+          "note": "17171302321035659098 - Well_0049C"
+        },
+        {
+          "id": "wells-047",
+          "value": "be2e98c8",
+          "x": 3384.515,
+          "y": 227.3835,
+          "z": 2211.729,
+          "layer": "surface",
+          "note": "9327423028890108170 - Well_0049D"
+        },
+        {
+          "id": "wells-048",
+          "value": "bdb49eca",
+          "x": 3301.478,
+          "y": 221.9783,
+          "z": 2300.911,
+          "layer": "surface",
+          "note": "5906427813420395857 - Well_0049E"
+        },
+        {
+          "id": "wells-049",
+          "value": "96a89582",
+          "x": -1357.184,
+          "y": 167.0685,
+          "z": -700.063,
+          "layer": "surface",
+          "note": "10040443261155710972 - Well_0050"
+        },
+        {
+          "id": "wells-050",
+          "value": "91d5dbc4",
+          "x": 1875.014,
+          "y": 215.0161,
+          "z": 1043.556,
+          "layer": "surface",
+          "note": "9559166076253669217 - Well_0051"
+        },
+        {
+          "id": "wells-051",
+          "value": "933ef2da",
+          "x": 1092.674,
+          "y": 113.5,
+          "z": -1154.046,
+          "layer": "surface",
+          "note": "1662241179931426393 - Well_0052"
+        },
+        {
+          "id": "wells-052",
+          "value": "de9778a1",
+          "x": -212.0227,
+          "y": 109.9849,
+          "z": -134.9251,
+          "layer": "surface",
+          "note": "18270657436817135448 - Well_0053"
+        },
+        {
+          "id": "wells-053",
+          "value": "ca3759a0",
+          "x": 2617.932,
+          "y": 239.5,
+          "z": -1169.059,
+          "layer": "surface",
+          "note": "5515697063015506333 - Well_0054"
+        },
+        {
+          "id": "wells-054",
+          "value": "d2e03aab",
+          "x": 3719.832,
+          "y": 182.6035,
+          "z": -1587.556,
+          "layer": "surface",
+          "note": "3244074412902120610 - Well_0055"
+        },
+        {
+          "id": "wells-055",
+          "value": "9b585a39",
+          "x": 3195.0,
+          "y": 292.768,
+          "z": -1715.5,
+          "layer": "surface",
+          "note": "10430103283884318777 - Well_0056"
+        },
+        {
+          "id": "wells-056",
+          "value": "657ad3df",
+          "x": 4232.868,
+          "y": 217.473,
+          "z": -2780.07,
+          "layer": "surface",
+          "note": "7517110108375739855 - Well_0057"
+        },
+        {
+          "id": "wells-057",
+          "value": "295a5e07",
+          "x": 394.5,
+          "y": 138.0,
+          "z": 3387.0,
+          "layer": "surface",
+          "note": "15893213395873888747 - Well_0058"
+        },
+        {
+          "id": "wells-058",
+          "value": "580b10e3",
+          "x": -2958.587,
+          "y": 260.9558,
+          "z": -531.9565,
+          "layer": "surface",
+          "note": "9748532938243040102 - Well_0059"
+        }
+      ],
+      "sourceCounts": {
+        "ids": 58,
+        "coordinates": 58
+      }
+    },
+    {
+      "id": "chasms",
+      "label": "Chasms",
+      "kind": "bool",
+      "items": [
+        {
+          "id": "chasms-001",
+          "value": "8d40a822",
+          "x": 3246.82,
+          "y": 61.89,
+          "z": -3441.88,
+          "layer": "surface",
+          "note": "3260756095246822508 - DeepHole_AkkareSkull"
+        },
+        {
+          "id": "chasms-002",
+          "value": "fc9005c9",
+          "x": -3430.18,
+          "y": 384.69,
+          "z": 1333.44,
+          "layer": "surface",
+          "note": "4644498897174716641 - DeepHole_B-6_AssasisnBoss"
+        },
+        {
+          "id": "chasms-003",
+          "value": "1c90a7f9",
+          "x": -3685.63,
+          "y": 138.61,
+          "z": 1859.87,
+          "layer": "surface",
+          "note": "5549059218061366633 - DeepHole_B-6_Tower"
+        },
+        {
+          "id": "chasms-004",
+          "value": "ceab2e1a",
+          "x": 4707.78,
+          "y": 224.23000000000002,
+          "z": -1307.87,
+          "layer": "surface",
+          "note": "9628499964670546231 - DeepHole_Chikurun"
+        },
+        {
+          "id": "chasms-005",
+          "value": "4e5bd17c",
+          "x": 418.01,
+          "y": 248.69,
+          "z": -2193.41,
+          "layer": "surface",
+          "note": "9713548750532017250 - DeepHole_Cokiri"
+        },
+        {
+          "id": "chasms-006",
+          "value": "543d08c8",
+          "x": 2534.5,
+          "y": 748.5,
+          "z": -2602.5,
+          "layer": "surface",
+          "note": "18175304942163261028 - DeepHole_DeathMountain"
+        },
+        {
+          "id": "chasms-007",
+          "value": "f13b4012",
+          "x": 1305.0,
+          "y": 167.28,
+          "z": 2396.66,
+          "layer": "surface",
+          "note": "5901788378855460870 - DeepHole_Firone"
+        },
+        {
+          "id": "chasms-008",
+          "value": "642efe4b",
+          "x": -452.5,
+          "y": 172.28,
+          "z": 1992.98,
+          "layer": "surface",
+          "note": "15905392722740304 - DeepHole_FirstLandEast"
+        },
+        {
+          "id": "chasms-009",
+          "value": "986c27a0",
+          "x": -664.93,
+          "y": 154.49,
+          "z": 1509.75,
+          "layer": "surface",
+          "note": "1435983989598451303 - DeepHole_FirstLandNorth"
+        },
+        {
+          "id": "chasms-010",
+          "value": "c98c15a4",
+          "x": -932.83,
+          "y": 268.53999999999996,
+          "z": 2317.51,
+          "layer": "surface",
+          "note": "5328634591570328090 - DeepHole_FirstLandSouth"
+        },
+        {
+          "id": "chasms-011",
+          "value": "fd470f4e",
+          "x": -1431.69,
+          "y": 330.82,
+          "z": 1992.55,
+          "layer": "surface",
+          "note": "12664920886408899240 - DeepHole_FirstLandWest"
+        },
+        {
+          "id": "chasms-012",
+          "value": "0dbaee5b",
+          "x": -1794.92,
+          "y": 149.36,
+          "z": 3461.76,
+          "layer": "surface",
+          "note": "397255910733783029 - DeepHole_GerudoMaze"
+        },
+        {
+          "id": "chasms-013",
+          "value": "4c5b9c74",
+          "x": -4203.36,
+          "y": 748.08,
+          "z": 637.66,
+          "layer": "surface",
+          "note": "6383879160737498330 - DeepHole_GerudoSummit"
+        },
+        {
+          "id": "chasms-014",
+          "value": "f78cf767",
+          "x": 4029.55,
+          "y": 8.819999999999993,
+          "z": -2180.88,
+          "layer": "surface",
+          "note": "10687953805007878473 - DeepHole_Higakkare"
+        },
+        {
+          "id": "chasms-015",
+          "value": "9a9c5b53",
+          "x": 2513.71,
+          "y": 236.29,
+          "z": 2380.7,
+          "layer": "surface",
+          "note": "8270027616370949329 - DeepHole_HimeidaMt"
+        },
+        {
+          "id": "chasms-016",
+          "value": "7c6a70af",
+          "x": -254.0,
+          "y": -105.0,
+          "z": -1012.17,
+          "layer": "depths",
+          "note": "18137312076250302730 - DeepHole_HyruleCastle"
+        },
+        {
+          "id": "chasms-017",
+          "value": "05022e17",
+          "x": 169.99,
+          "y": 56.82,
+          "z": -882.16,
+          "layer": "surface",
+          "note": "12644792830451791701 - DeepHole_HyruleCastleEast"
+        },
+        {
+          "id": "chasms-018",
+          "value": "dc23b62b",
+          "x": -922.61,
+          "y": 95.52,
+          "z": -666.79,
+          "layer": "surface",
+          "note": "3643485269032630633 - DeepHole_HyruleCastleWest"
+        },
+        {
+          "id": "chasms-019",
+          "value": "69c40a5e",
+          "x": -332.0,
+          "y": 53.18,
+          "z": 2598.02,
+          "layer": "surface",
+          "note": "13929777954014421303 - DeepHole_HyruleLake"
+        },
+        {
+          "id": "chasms-020",
+          "value": "53c2cda5",
+          "x": -255.03,
+          "y": 103.47,
+          "z": 299.58,
+          "layer": "surface",
+          "note": "12420116610575098418 - DeepHole_HyrulePlains"
+        },
+        {
+          "id": "chasms-021",
+          "value": "768d8a80",
+          "x": -456.88,
+          "y": 274.39,
+          "z": -1722.35,
+          "layer": "surface",
+          "note": "12232431606697414475 - DeepHole_ImeruMt"
+        },
+        {
+          "id": "chasms-022",
+          "value": "f1c51b0b",
+          "x": 1974.49,
+          "y": 220.51,
+          "z": 846.13,
+          "layer": "surface",
+          "note": "5810770272691429369 - DeepHole_Kakariko_EastHill"
+        },
+        {
+          "id": "chasms-023",
+          "value": "dfbd95a0",
+          "x": 1059.43,
+          "y": 254.87,
+          "z": -1668.1,
+          "layer": "surface",
+          "note": "4789371614404322252 - DeepHole_KiyanbaTrees"
+        },
+        {
+          "id": "chasms-024",
+          "value": "7a34b7e0",
+          "x": 4655.0,
+          "y": 131.5,
+          "z": -3697.47,
+          "layer": "surface",
+          "note": "1595756749757738282 - DeepHole_LomeiIsland"
+        },
+        {
+          "id": "chasms-025",
+          "value": "43cb74aa",
+          "x": 3296.86,
+          "y": 229.95,
+          "z": -1286.69,
+          "layer": "surface",
+          "note": "4734326941896126368 - DeepHole_Minakkare"
+        },
+        {
+          "id": "chasms-026",
+          "value": "be771c63",
+          "x": -71.04,
+          "y": 231.93,
+          "z": -2983.78,
+          "layer": "surface",
+          "note": "2258222317531786547 - DeepHole_RirimukuMt"
+        },
+        {
+          "id": "chasms-027",
+          "value": "9c6451f4",
+          "x": -3573.46,
+          "y": 224.04000000000002,
+          "z": -1801.97,
+          "layer": "surface",
+          "note": "17183754997239633264 - DeepHole_Rito"
+        },
+        {
+          "id": "chasms-028",
+          "value": "882ae41f",
+          "x": 4507.12,
+          "y": 87.94,
+          "z": 3459.3,
+          "layer": "surface",
+          "note": "11336577741930217675 - DeepHole_Saihateno"
+        },
+        {
+          "id": "chasms-029",
+          "value": "abe2c769",
+          "x": 221.94,
+          "y": 102.88,
+          "z": 2118.77,
+          "layer": "surface",
+          "note": "11031454923833399536 - DeepHole_SanaePlateau"
+        },
+        {
+          "id": "chasms-030",
+          "value": "9a2a5328",
+          "x": -814.48,
+          "y": 325.2,
+          "z": -3534.7,
+          "layer": "surface",
+          "note": "16896066116062008519 - DeepHole_TabantaMaze"
+        },
+        {
+          "id": "chasms-031",
+          "value": "0ccadb7e",
+          "x": 3604.59,
+          "y": 223.14,
+          "z": 1343.98,
+          "layer": "surface",
+          "note": "7545616274530289895 - DeepHole_YuaSnow"
+        },
+        {
+          "id": "chasms-032",
+          "value": "0e40f5bd",
+          "x": -127.97,
+          "y": 73.01,
+          "z": 1657.81,
+          "layer": "surface",
+          "note": "14174745585506950773 - DeepHole_ZifForest"
+        },
+        {
+          "id": "chasms-033",
+          "value": "0999849c",
+          "x": -2491.19,
+          "y": 111.24,
+          "z": 3067.74,
+          "layer": "surface",
+          "note": "12690494979007497354 - Cave_GerudoDesert_0043"
+        },
+        {
+          "id": "chasms-034",
+          "value": "b4281b1c",
+          "x": -2644.24,
+          "y": 247.63,
+          "z": -1126.02,
+          "layer": "surface",
+          "note": "10595346751399989600 - Cave_HyruleRidge_0004"
+        },
+        {
+          "id": "chasms-035",
+          "value": "45af7991",
+          "x": 1726.92,
+          "y": 100.19,
+          "z": -162.05,
+          "layer": "surface",
+          "note": "12292698567036544880 - Cave_Lanayru_0050"
+        },
+        {
+          "id": "chasms-036",
+          "value": "c0cf2652",
+          "x": 3271.55,
+          "y": 84.31,
+          "z": -441.59,
+          "layer": "surface",
+          "note": "15007569538535704822 - Cave_Lanayru_0063"
+        }
+      ],
+      "sourceCounts": {
+        "ids": 36,
+        "coordinates": 36
+      }
+    },
+    {
+      "id": "yiga_schematic",
+      "label": "Yiga Schematic",
+      "kind": "bool",
+      "items": [
+        {
+          "id": "yiga_schematic-001",
+          "value": "0520dea7",
+          "x": 3261.0,
+          "y": -762.0,
+          "z": 1445.0,
+          "layer": "depths",
+          "note": "Tank"
+        },
+        {
+          "id": "yiga_schematic-002",
+          "value": "eee1492c",
+          "x": -2822.0,
+          "y": -670.0,
+          "z": -902.0,
+          "layer": "depths",
+          "note": "Flamethower Balloon"
+        },
+        {
+          "id": "yiga_schematic-003",
+          "value": "4ce68be6",
+          "x": -1856.0,
+          "y": -632.0,
+          "z": 735.0,
+          "layer": "depths",
+          "note": "Three Wheeler"
+        },
+        {
+          "id": "yiga_schematic-004",
+          "value": "8ebfc267",
+          "x": -3075.0,
+          "y": -1018.0,
+          "z": 1580.0,
+          "layer": "depths",
+          "note": "Fanboat"
+        },
+        {
+          "id": "yiga_schematic-005",
+          "value": "6c8fca57",
+          "x": 4112.0,
+          "y": -716.0,
+          "z": -3215.0,
+          "layer": "depths",
+          "note": "Headlight Raft"
+        },
+        {
+          "id": "yiga_schematic-006",
+          "value": "14fd96aa",
+          "x": -2409.0,
+          "y": -499.0,
+          "z": 3485.0,
+          "layer": "depths",
+          "note": "Beam Turret"
+        },
+        {
+          "id": "yiga_schematic-007",
+          "value": "3385b6c6",
+          "x": -3262.0,
+          "y": -599.0,
+          "z": 3780.0,
+          "layer": "depths",
+          "note": "Vertical Escape"
+        },
+        {
+          "id": "yiga_schematic-008",
+          "value": "8476f277",
+          "x": -1332.0,
+          "y": -702.0,
+          "z": -1496.0,
+          "layer": "depths",
+          "note": "Cargo Carrier"
+        },
+        {
+          "id": "yiga_schematic-009",
+          "value": "a7ce2e78",
+          "x": 2667.0,
+          "y": -696.0,
+          "z": -1578.0,
+          "layer": "depths",
+          "note": "Big Rig"
+        },
+        {
+          "id": "yiga_schematic-010",
+          "value": "d7ac3fc8",
+          "x": 417.0,
+          "y": -603.0,
+          "z": 3673.0,
+          "layer": "depths",
+          "note": "Water Freezer"
+        },
+        {
+          "id": "yiga_schematic-011",
+          "value": "0cddddbf",
+          "x": 2963.0,
+          "y": -612.0,
+          "z": 2571.0,
+          "layer": "depths",
+          "note": "Liftoff Glider"
+        },
+        {
+          "id": "yiga_schematic-012",
+          "value": "b3752c42",
+          "x": -2694.0,
+          "y": -572.0,
+          "z": 2882.0,
+          "layer": "depths",
+          "note": "Shock Trap"
+        },
+        {
+          "id": "yiga_schematic-013",
+          "value": "a8707e8a",
+          "x": -397.0,
+          "y": -728.0,
+          "z": -1776.0,
+          "layer": "depths",
+          "note": "Fishing Trawler"
+        },
+        {
+          "id": "yiga_schematic-014",
+          "value": "5fadc4e3",
+          "x": 3606.0,
+          "y": -583.0,
+          "z": -2281.0,
+          "layer": "depths",
+          "note": "Wagon"
+        },
+        {
+          "id": "yiga_schematic-015",
+          "value": "260ad4d3",
+          "x": 1168.0,
+          "y": -513.0,
+          "z": -600.0,
+          "layer": "depths",
+          "note": "Instant Kitchen"
+        },
+        {
+          "id": "yiga_schematic-016",
+          "value": "a7bccf88",
+          "x": 2542.0,
+          "y": -581.0,
+          "z": 544.0,
+          "layer": "depths",
+          "note": "Super Spring"
+        },
+        {
+          "id": "yiga_schematic-017",
+          "value": "af8870c6",
+          "x": -1903.0,
+          "y": -787.0,
+          "z": -2095.0,
+          "layer": "depths",
+          "note": "Sprinkler System"
+        },
+        {
+          "id": "yiga_schematic-018",
+          "value": "abc30ab3",
+          "x": 3618.0,
+          "y": -560.0,
+          "z": 569.0,
+          "layer": "depths",
+          "note": "Icebreaker"
+        },
+        {
+          "id": "yiga_schematic-019",
+          "value": "047dd1a3",
+          "x": 130.0,
+          "y": -739.0,
+          "z": -2867.0,
+          "layer": "depths",
+          "note": "Aerial Cannon"
+        },
+        {
+          "id": "yiga_schematic-020",
+          "value": "6206da4f",
+          "x": -2865.0,
+          "y": -1036.0,
+          "z": -2918.0,
+          "layer": "depths",
+          "note": "Floodlights"
+        },
+        {
+          "id": "yiga_schematic-021",
+          "value": "11f75220",
+          "x": -3403.0,
+          "y": -587.0,
+          "z": 222.0,
+          "layer": "depths",
+          "note": "Instant Scaffold (Yiga schematic)"
+        },
+        {
+          "id": "yiga_schematic-022",
+          "value": "d3f712cc",
+          "x": -1225.0,
+          "y": -585.0,
+          "z": 2611.0,
+          "layer": "depths",
+          "note": "Monocycle"
+        },
+        {
+          "id": "yiga_schematic-023",
+          "value": "fba73b41",
+          "x": -4546.0,
+          "y": -594.0,
+          "z": 2170.0,
+          "layer": "depths",
+          "note": "Raiding Plane"
+        },
+        {
+          "id": "yiga_schematic-024",
+          "value": "97c52512",
+          "x": -1620.0,
+          "y": -587.0,
+          "z": -247.0,
+          "layer": "depths",
+          "note": "Bomb Bouquet"
+        },
+        {
+          "id": "yiga_schematic-025",
+          "value": "ee3db7d1",
+          "x": 4412.0,
+          "y": -814.0,
+          "z": -637.0,
+          "layer": "depths",
+          "note": "Triple Cannon"
+        },
+        {
+          "id": "yiga_schematic-026",
+          "value": "41b07b33",
+          "x": 2078.0,
+          "y": -569.0,
+          "z": 1625.0,
+          "layer": "depths",
+          "note": "Scatter Trap"
+        },
+        {
+          "id": "yiga_schematic-027",
+          "value": "45f95172",
+          "x": -4457.0,
+          "y": -966.0,
+          "z": 994.0,
+          "layer": "depths",
+          "note": "Smoke Rocket"
+        },
+        {
+          "id": "yiga_schematic-028",
+          "value": "be350fdb",
+          "x": 622.0,
+          "y": -645.0,
+          "z": -3698.0,
+          "layer": "depths",
+          "note": "Charged Charger"
+        },
+        {
+          "id": "yiga_schematic-029",
+          "value": "499afa5b",
+          "x": 1539.0,
+          "y": -544.0,
+          "z": -692.0,
+          "layer": "depths",
+          "note": "Rainmaker"
+        },
+        {
+          "id": "yiga_schematic-030",
+          "value": "732c5985",
+          "x": -1751.0,
+          "y": -784.0,
+          "z": -3107.0,
+          "layer": "depths",
+          "note": "Whirling Basher"
+        },
+        {
+          "id": "yiga_schematic-031",
+          "value": "3f9f61fd",
+          "x": -3380.0,
+          "y": -724.0,
+          "z": -665.0,
+          "layer": "depths",
+          "note": "All-Purpose Raft"
+        },
+        {
+          "id": "yiga_schematic-032",
+          "value": "7708c653",
+          "x": -3708.0,
+          "y": -887.0,
+          "z": -3099.0,
+          "layer": "depths",
+          "note": "Excavator"
+        },
+        {
+          "id": "yiga_schematic-033",
+          "value": "29bcade1",
+          "x": 3273.0,
+          "y": -765.0,
+          "z": -3697.0,
+          "layer": "depths",
+          "note": "Assault Cart"
+        },
+        {
+          "id": "yiga_schematic-034",
+          "value": "7f86e965",
+          "x": 246.0,
+          "y": -591.0,
+          "z": 2170.0,
+          "layer": "depths",
+          "note": "Beam Spinner"
+        }
+      ],
+      "sourceCounts": {
+        "ids": 34,
+        "coordinates": 34
+      }
+    },
+    {
+      "id": "old_map",
+      "label": "Old Map",
+      "kind": "bool",
+      "items": [
+        {
+          "id": "old_map-001",
+          "value": "78351b17",
+          "x": -1347.79,
+          "y": 907.24,
+          "z": 1542.0,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_00 - 12982257783340555813 - Armor_230_Head"
+        },
+        {
+          "id": "old_map-002",
+          "value": "a77d686d",
+          "x": -1232.51,
+          "y": 1093.91,
+          "z": 1399.99,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_01 - 8025772427704871030 - Armor_230_Upper"
+        },
+        {
+          "id": "old_map-003",
+          "value": "17110169",
+          "x": -1456.58,
+          "y": 1325.98,
+          "z": 1584.35,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_02 - 18358225765623179803 - Armor_230_Lower"
+        },
+        {
+          "id": "old_map-004",
+          "value": "2b60b4b7",
+          "x": 1662.94,
+          "y": 1006.26,
+          "z": 352.65,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_03 - 13327614428398590506 - Armor_200_Head"
+        },
+        {
+          "id": "old_map-005",
+          "value": "28ae6f1c",
+          "x": 1851.51,
+          "y": 1044.21,
+          "z": 979.0,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_04 - 5691569256957001682 - Armor_200_Upper"
+        },
+        {
+          "id": "old_map-006",
+          "value": "7a1d84a5",
+          "x": 1765.79,
+          "y": 1007.66,
+          "z": 1310.74,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_05 - 8688382086926296901 - Armor_200_Lower"
+        },
+        {
+          "id": "old_map-007",
+          "value": "56aa6296",
+          "x": 3200.16,
+          "y": 1522.58,
+          "z": -598.47,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_06 - 5064574262399912277 - Armor_205_Head"
+        },
+        {
+          "id": "old_map-008",
+          "value": "5a06eebb",
+          "x": 3167.95,
+          "y": 1041.18,
+          "z": -459.37,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_07 - 6373743458188454703 - Armor_205_Upper"
+        },
+        {
+          "id": "old_map-009",
+          "value": "dd8a40d8",
+          "x": 3692.78,
+          "y": 1350.65,
+          "z": -593.25,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_08 - 6271540893534223348 - Armor_205_Lower"
+        },
+        {
+          "id": "old_map-010",
+          "value": "17aea64c",
+          "x": 3294.51,
+          "y": 900.13,
+          "z": -3434.16,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_09 - 17213520049899645000 - Armor_210_Head"
+        },
+        {
+          "id": "old_map-011",
+          "value": "29889eb8",
+          "x": 3664.83,
+          "y": 1094.38,
+          "z": -1795.0,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_10 - 3779756660275854581 - Armor_210_Upper"
+        },
+        {
+          "id": "old_map-012",
+          "value": "c576b6bd",
+          "x": 4269.17,
+          "y": 889.46,
+          "z": -3107.88,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_11 - 16186188512693537154 - Armor_210_Lower"
+        },
+        {
+          "id": "old_map-013",
+          "value": "3044e564",
+          "x": 1126.41,
+          "y": 862.67,
+          "z": 3273.63,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_12 - 10822848644781216269 - Armor_215_Head"
+        },
+        {
+          "id": "old_map-014",
+          "value": "ad134aed",
+          "x": 1651.63,
+          "y": 1179.4099999999999,
+          "z": 2190.7,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_13 - 9656043850692720211 - Armor_215_Upper"
+        },
+        {
+          "id": "old_map-015",
+          "value": "5aa6fa9f",
+          "x": 952.39,
+          "y": 862.2,
+          "z": 3113.04,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_14 - 2371108008813842096 - Armor_215_Lower"
+        },
+        {
+          "id": "old_map-016",
+          "value": "fb332413",
+          "x": -3634.97,
+          "y": 1776.16,
+          "z": -466.73,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_15 - 3872714873027077662 - Armor_005_Head"
+        },
+        {
+          "id": "old_map-017",
+          "value": "dfdded1c",
+          "x": -3437.53,
+          "y": 1296.21,
+          "z": -1431.37,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_16 - 11411219828237605981 - Armor_005_Upper"
+        },
+        {
+          "id": "old_map-018",
+          "value": "00e34536",
+          "x": -3961.84,
+          "y": 1813.72,
+          "z": -608.13,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_17 - 11354847325397059866 - Armor_005_Lower"
+        },
+        {
+          "id": "old_map-019",
+          "value": "bb11e8f5",
+          "x": 435.19,
+          "y": 2349.23,
+          "z": -2195.6,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_18 - 2696629006754560889 - Armor_176_Head"
+        },
+        {
+          "id": "old_map-020",
+          "value": "b672271b",
+          "x": -815.71,
+          "y": 1020.34,
+          "z": 1590.62,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_19 - 14802750979980998435 - Armor_220_Head"
+        },
+        {
+          "id": "old_map-021",
+          "value": "7b5a8ac8",
+          "x": -3376.84,
+          "y": 2390.17,
+          "z": 20.58,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_20 - 7421986010725994499 - Armor_172_Head"
+        },
+        {
+          "id": "old_map-022",
+          "value": "eb171a92",
+          "x": 4659.19,
+          "y": 1873.97,
+          "z": 869.84,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_21 - 7700079370819772878 - Armor_173_Head"
+        },
+        {
+          "id": "old_map-023",
+          "value": "05b058c7",
+          "x": -1648.57,
+          "y": 1070.24,
+          "z": -3513.13,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_22 - 1847915464330506328 - Armor_177_Head"
+        },
+        {
+          "id": "old_map-024",
+          "value": "91916a39",
+          "x": 4752.22,
+          "y": 2022.34,
+          "z": 777.56,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_23 - 18371741502374795567 - Armor_178_Head"
+        },
+        {
+          "id": "old_map-025",
+          "value": "24fd5dc6",
+          "x": -1956.29,
+          "y": 1272.59,
+          "z": 1809.8,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_24 - 7768005075754752823 - Weapon_Sword_058"
+        },
+        {
+          "id": "old_map-026",
+          "value": "de966d31",
+          "x": 1810.72,
+          "y": 1309.84,
+          "z": -1013.62,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_25 - 2157549263046577864 - Weapon_Lsword_059"
+        },
+        {
+          "id": "old_map-027",
+          "value": "8a67682c",
+          "x": 2159.54,
+          "y": 1368.36,
+          "z": 2592.08,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_26 - 8126075550031825859 - Weapon_Sword_059"
+        },
+        {
+          "id": "old_map-028",
+          "value": "a2c5ee99",
+          "x": 2644.91,
+          "y": 1581.15,
+          "z": 1414.08,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_27 - 18276965192563104883 - Weapon_Shield_057"
+        },
+        {
+          "id": "old_map-029",
+          "value": "5875357a",
+          "x": -3475.8,
+          "y": 1035.9,
+          "z": -3513.55,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_28 - 12889407973329805926 - Armor_1051_Head"
+        },
+        {
+          "id": "old_map-030",
+          "value": "840cfa81",
+          "x": -3860.64,
+          "y": 1353.33,
+          "z": -2922.98,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_29 - 4955019236407069 - Armor_1051_Upper"
+        },
+        {
+          "id": "old_map-031",
+          "value": "e112f9e2",
+          "x": -3830.44,
+          "y": 1150.1,
+          "z": -2715.02,
+          "layer": "sky",
+          "note": "Obj_TreasureMap_30 - 7336531139994088567 - Armor_1051_Lower"
+        }
+      ],
+      "sourceCounts": {
+        "ids": 31,
+        "coordinates": 31
+      }
+    },
+    {
+      "id": "sage_will",
+      "label": "Sage's Will",
+      "kind": "guid",
+      "items": [
+        {
+          "id": "sage_will-001",
+          "value": "17027564096477698406",
+          "x": 1764.17,
+          "y": 933.06,
+          "z": -2266.85,
+          "layer": "sky",
+          "note": "17027564096477698406"
+        },
+        {
+          "id": "sage_will-002",
+          "value": "16551922775305595721",
+          "x": 967.9,
+          "y": 952.26,
+          "z": 3306.12,
+          "layer": "sky",
+          "note": "16551922775305595721"
+        },
+        {
+          "id": "sage_will-003",
+          "value": "8923401910321011575",
+          "x": 1309.22,
+          "y": 564.73,
+          "z": 3209.53,
+          "layer": "surface",
+          "note": "8923401910321011575"
+        },
+        {
+          "id": "sage_will-004",
+          "value": "7638258738140520749",
+          "x": 3379.45,
+          "y": 1395.97,
+          "z": -633.13,
+          "layer": "sky",
+          "note": "7638258738140520749"
+        },
+        {
+          "id": "sage_will-005",
+          "value": "17834526685843804832",
+          "x": -4470.41,
+          "y": 1359.11,
+          "z": -2170.81,
+          "layer": "sky",
+          "note": "17834526685843804832"
+        },
+        {
+          "id": "sage_will-006",
+          "value": "12415947737911523872",
+          "x": -4447.59,
+          "y": 1525.34,
+          "z": 2732.09,
+          "layer": "sky",
+          "note": "12415947737911523872"
+        },
+        {
+          "id": "sage_will-007",
+          "value": "10777930978159296231",
+          "x": 4652.54,
+          "y": 1171.18,
+          "z": 3829.07,
+          "layer": "sky",
+          "note": "10777930978159296231"
+        },
+        {
+          "id": "sage_will-008",
+          "value": "9878961607953221501",
+          "x": 3810.99,
+          "y": 1250.06,
+          "z": -1581.71,
+          "layer": "sky",
+          "note": "9878961607953221501"
+        },
+        {
+          "id": "sage_will-009",
+          "value": "14297746811944729045",
+          "x": -954.14,
+          "y": 1111.9,
+          "z": 1735.55,
+          "layer": "sky",
+          "note": "14297746811944729045"
+        },
+        {
+          "id": "sage_will-010",
+          "value": "10158452085007421266",
+          "x": 1781.15,
+          "y": 1331.58,
+          "z": -981.56,
+          "layer": "sky",
+          "note": "10158452085007421266"
+        },
+        {
+          "id": "sage_will-011",
+          "value": "14300441561420407308",
+          "x": -1959.23,
+          "y": 1245.79,
+          "z": 1813.13,
+          "layer": "sky",
+          "note": "14300441561420407308"
+        },
+        {
+          "id": "sage_will-012",
+          "value": "3040862838791505171",
+          "x": 2552.26,
+          "y": 1000.13,
+          "z": 3601.44,
+          "layer": "sky",
+          "note": "3040862838791505171"
+        },
+        {
+          "id": "sage_will-013",
+          "value": "7530653482124541386",
+          "x": -2297.41,
+          "y": 1000.13,
+          "z": 411.74,
+          "layer": "sky",
+          "note": "7530653482124541386"
+        },
+        {
+          "id": "sage_will-014",
+          "value": "1950552174935191379",
+          "x": -332.64,
+          "y": 1000.13,
+          "z": 2591.48,
+          "layer": "sky",
+          "note": "1950552174935191379"
+        },
+        {
+          "id": "sage_will-015",
+          "value": "15362114318872927496",
+          "x": 1933.78,
+          "y": 1066.83,
+          "z": 1064.56,
+          "layer": "sky",
+          "note": "15362114318872927496"
+        },
+        {
+          "id": "sage_will-016",
+          "value": "1734683952980485907",
+          "x": -3075.43,
+          "y": 753.51,
+          "z": -2151.92,
+          "layer": "sky",
+          "note": "1734683952980485907"
+        },
+        {
+          "id": "sage_will-017",
+          "value": "15149725342529566916",
+          "x": -3781.09,
+          "y": 1343.48,
+          "z": -1572.89,
+          "layer": "sky",
+          "note": "15149725342529566916"
+        },
+        {
+          "id": "sage_will-018",
+          "value": "8433656076063719808",
+          "x": 2910.59,
+          "y": 1035.44,
+          "z": -525.0,
+          "layer": "sky",
+          "note": "8433656076063719808"
+        },
+        {
+          "id": "sage_will-019",
+          "value": "1984953898143305789",
+          "x": 2993.42,
+          "y": 1000.13,
+          "z": 251.78,
+          "layer": "sky",
+          "note": "1984953898143305789"
+        },
+        {
+          "id": "sage_will-020",
+          "value": "12826721193418470354",
+          "x": -3456.83,
+          "y": 2044.56,
+          "z": 263.47,
+          "layer": "sky",
+          "note": "12826721193418470354"
+        }
+      ],
+      "sourceCounts": {
+        "ids": 20,
+        "coordinates": 20
+      }
+    }
+  ]
+}

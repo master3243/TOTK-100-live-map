@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TOTK Save Map Helper</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app">
+      <aside class="sidebar" aria-label="Map tools">
+        <div class="brand">
+          <p class="eyebrow">Tears of the Kingdom</p>
+          <h1>Save Map Helper</h1>
+        </div>
+
+        <section class="panel" aria-label="Map layers">
+          <h2>Map Layer</h2>
+          <div class="segmented" role="group" aria-label="Choose map layer">
+            <button class="layer-button active" type="button" data-layer="surface">Surface</button>
+            <button class="layer-button" type="button" data-layer="sky">Sky</button>
+            <button class="layer-button" type="button" data-layer="depths">Depths</button>
+          </div>
+        </section>
+
+        <section class="panel stats" aria-label="Map status">
+          <h2>View</h2>
+          <dl>
+            <div>
+              <dt>Zoom</dt>
+              <dd id="zoomValue">100%</dd>
+            </div>
+            <div>
+              <dt>Cursor</dt>
+              <dd id="cursorValue">--, --</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="panel stats" aria-label="Save status">
+          <h2>Live Save</h2>
+          <dl>
+            <div>
+              <dt>Status</dt>
+              <dd id="saveStatus">Waiting</dd>
+            </div>
+            <div>
+              <dt>Seeds</dt>
+              <dd id="seedCount">-- / --</dd>
+            </div>
+            <div>
+              <dt>Locations</dt>
+              <dd id="locationCount">-- / --</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="panel" aria-label="Overlay options">
+          <h2>Overlays</h2>
+          <div class="overlay-groups">
+            <details class="overlay-group">
+              <summary class="group-title">
+                <input id="groupObtained" class="group-toggle" type="checkbox" checked>
+                <span>Obtained Seeds</span>
+              </summary>
+              <div class="check-list">
+                <label>
+                  <input id="showObtainedSingle" type="checkbox" checked>
+                  <span>Single</span>
+                </label>
+                <label>
+                  <input id="showObtainedPair" type="checkbox" checked>
+                  <span>Pair</span>
+                </label>
+              </div>
+            </details>
+
+            <details class="overlay-group">
+              <summary class="group-title">
+                <input id="groupUnobtained" class="group-toggle" type="checkbox" checked>
+                <span>Unobtained Seeds</span>
+              </summary>
+              <div class="check-list">
+                <label>
+                  <input id="showUnobtainedSingle" type="checkbox" checked>
+                  <span>Single</span>
+                </label>
+                <label>
+                  <input id="showUnobtainedPair" type="checkbox" checked>
+                  <span>Pair</span>
+                </label>
+                <label>
+                  <input id="showGuide" type="checkbox" checked>
+                  <span>Show nearest arrow</span>
+                </label>
+                <label>
+                  <input id="autoPan" type="checkbox">
+                  <span>Pan to latest</span>
+                  <button id="viewLatest" class="mini-button" type="button" disabled>View</button>
+                </label>
+              </div>
+            </details>
+
+            <details class="overlay-group">
+              <summary class="group-title">
+                <input id="groupPlayer" class="group-toggle" type="checkbox" checked>
+                <span>Player</span>
+              </summary>
+              <div class="check-list">
+                <label>
+                  <input id="showPlayerLocation" type="checkbox" checked>
+                  <span>Current Location</span>
+                  <button id="viewPlayer" class="mini-button" type="button" disabled>View</button>
+                </label>
+                <label>
+                  <input id="showPlayerGuide" type="checkbox" checked>
+                  <span>Show nearest arrow</span>
+                </label>
+                <label>
+                  <input id="playerAutoPan" type="checkbox" checked>
+                  <span>Pan to latest</span>
+                </label>
+              </div>
+            </details>
+
+            <details class="overlay-group">
+              <summary class="group-title">
+                <input id="groupCompletion" class="group-toggle" type="checkbox" checked>
+                <span>Completionist</span>
+              </summary>
+              <div class="check-list completion-list">
+                <label>
+                  <input id="completion-caves" type="checkbox" checked>
+                  <span>Caves</span>
+                  <span class="count-badge" id="completionCount-caves">0</span>
+                </label>
+                <label>
+                  <input id="completion-hudson_sign" type="checkbox" checked>
+                  <span>Hudson Sign</span>
+                  <span class="count-badge" id="completionCount-hudson_sign">0</span>
+                </label>
+                <label>
+                  <input id="completion-flux_construct" type="checkbox" checked>
+                  <span>Flux Constructs</span>
+                  <span class="count-badge" id="completionCount-flux_construct">0</span>
+                </label>
+                <label>
+                  <input id="completion-hinox" type="checkbox" checked>
+                  <span>Hinox</span>
+                  <span class="count-badge" id="completionCount-hinox">0</span>
+                </label>
+                <label>
+                  <input id="completion-stone_talus" type="checkbox" checked>
+                  <span>Stone Talus</span>
+                  <span class="count-badge" id="completionCount-stone_talus">0</span>
+                </label>
+                <label>
+                  <input id="completion-molduga" type="checkbox" checked>
+                  <span>Molduga</span>
+                  <span class="count-badge" id="completionCount-molduga">0</span>
+                </label>
+                <label>
+                  <input id="completion-frox" type="checkbox" checked>
+                  <span>Frox</span>
+                  <span class="count-badge" id="completionCount-frox">0</span>
+                </label>
+                <label>
+                  <input id="completion-gleeok" type="checkbox" checked>
+                  <span>Gleeok</span>
+                  <span class="count-badge" id="completionCount-gleeok">0</span>
+                </label>
+                <label>
+                  <input id="completion-wells" type="checkbox" checked>
+                  <span>Wells</span>
+                  <span class="count-badge" id="completionCount-wells">0</span>
+                </label>
+                <label>
+                  <input id="completion-chasms" type="checkbox" checked>
+                  <span>Chasms</span>
+                  <span class="count-badge" id="completionCount-chasms">0</span>
+                </label>
+                <label>
+                  <input id="completion-yiga_schematic" type="checkbox" checked>
+                  <span>Yiga Schematic</span>
+                  <span class="count-badge" id="completionCount-yiga_schematic">0</span>
+                </label>
+                <label>
+                  <input id="completion-old_map" type="checkbox" checked>
+                  <span>Old Map</span>
+                  <span class="count-badge" id="completionCount-old_map">0</span>
+                </label>
+                <label>
+                  <input id="completion-sage_will" type="checkbox" checked>
+                  <span>Sage's Will</span>
+                  <span class="count-badge" id="completionCount-sage_will">0</span>
+                </label>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <details class="panel log-panel">
+          <summary>Log</summary>
+          <div id="logEntries" class="log-entries" aria-live="polite"></div>
+        </details>
+      </aside>
+
+      <section class="map-shell" aria-label="Interactive TOTK map">
+        <div class="toolbar" aria-label="Map controls">
+          <button class="icon-button" id="zoomOut" type="button" aria-label="Zoom out" title="Zoom out">-</button>
+          <button class="icon-button" id="zoomIn" type="button" aria-label="Zoom in" title="Zoom in">+</button>
+          <button class="control-button" id="resetView" type="button">Reset</button>
+        </div>
+
+        <div id="mapViewport" class="map-viewport" tabindex="0" aria-label="Pan and zoom map">
+          <img id="mapImage" alt="Tears of the Kingdom surface map" draggable="false">
+          <div id="guideLayer" class="guide-layer" aria-hidden="true"></div>
+          <div id="markerLayer" class="marker-layer" aria-hidden="true"></div>
+          <div id="mapTooltip" class="map-tooltip" role="tooltip" hidden></div>
+          <div id="loadingState" class="loading-state">Loading map...</div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
