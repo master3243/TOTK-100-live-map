@@ -201,11 +201,6 @@ def load_state():
         return {
             "activeSavePath": None,
             "saves": {},
-            "obtainedKorokIds": [],
-            "latestObtainedId": None,
-            "latestObtainedAt": None,
-            "newlyDetectedIds": [],
-            "lastSaveModified": None,
             "_exists": False,
         }
 
@@ -219,9 +214,6 @@ def load_state():
             "saves": {
                 active_path: {
                     "obtainedKorokIds": state.get("obtainedKorokIds", []),
-                    "latestObtainedId": state.get("latestObtainedId"),
-                    "latestObtainedAt": state.get("latestObtainedAt"),
-                    "newlyDetectedIds": state.get("newlyDetectedIds", []),
                     "lastSaveModified": state.get("lastSaveModified"),
                 }
             },
@@ -229,11 +221,6 @@ def load_state():
 
     state.setdefault("activeSavePath", None)
     state.setdefault("saves", {})
-    state.setdefault("obtainedKorokIds", [])
-    state.setdefault("latestObtainedId", None)
-    state.setdefault("latestObtainedAt", None)
-    state.setdefault("newlyDetectedIds", [])
-    state.setdefault("lastSaveModified", None)
     state.setdefault("activeSavePath", None)
     state["_exists"] = True
     return state
@@ -460,24 +447,15 @@ def update_state(markers, save_modified, active_save_path):
         save_key,
         {
             "obtainedKorokIds": [],
-            "latestObtainedId": None,
-            "latestObtainedAt": None,
-            "newlyDetectedIds": [],
             "lastSaveModified": None,
         },
     )
     previous_ids = set(save_state_entry["obtainedKorokIds"])
     current_ids = {marker["id"] for marker in markers if marker["obtained"]}
     first_seen_save = not save_state_entry["obtainedKorokIds"] and not save_state_entry["lastSaveModified"]
-    newly_detected_ids = sorted(current_ids - previous_ids) if state["_exists"] and not first_seen_save else []
-
-    if newly_detected_ids:
-        save_state_entry["latestObtainedId"] = newly_detected_ids[-1]
-        save_state_entry["latestObtainedAt"] = time.time()
-        add_log(f"Latest Korok: {newly_detected_ids[-1]} from {save_label(active_save_path)}")
+    _ = sorted(current_ids - previous_ids) if state["_exists"] and not first_seen_save else []
 
     save_state_entry["obtainedKorokIds"] = sorted(current_ids)
-    save_state_entry["newlyDetectedIds"] = newly_detected_ids
     save_state_entry["lastSaveModified"] = save_modified
     state["activeSavePath"] = str(active_save_path)
     save_state(state)
@@ -516,7 +494,7 @@ def parse_current_save():
         markers = build_markers(values)
         completion = build_completion(values, guid_values)
         obtained_markers = [marker for marker in markers if marker["obtained"]]
-        state = update_state(markers, save_modified, save_path)
+        update_state(markers, save_modified, save_path)
         add_log(f"Parsed {save_label(save_path)}: {sum(marker['seedValue'] for marker in obtained_markers)}/1000 seeds")
 
         payload = {
@@ -536,11 +514,6 @@ def parse_current_save():
                 "totalSeeds": sum(marker["seedValue"] for marker in obtained_markers),
                 "availableLocations": len((_DATA["korok_data"] or {"hidden": [], "carry": []})["hidden"]) + len((_DATA["korok_data"] or {"hidden": [], "carry": []})["carry"]),
                 "availableSeeds": len((_DATA["korok_data"] or {"hidden": [], "carry": []})["hidden"]) + len((_DATA["korok_data"] or {"hidden": [], "carry": []})["carry"]) * 2,
-            },
-            "state": {
-                "latestObtainedId": state["latestObtainedId"],
-                "latestObtainedAt": state["latestObtainedAt"],
-                "newlyDetectedIds": state["newlyDetectedIds"],
             },
             "markers": markers,
             "completion": completion,

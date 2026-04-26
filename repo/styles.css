@@ -504,21 +504,6 @@ h2 {
   background-size: 112% 112%;
 }
 
-.korok-marker.latest {
-  width: 30px;
-  height: 30px;
-  background: url("assets/zd-icons/korok.png") center / contain no-repeat;
-  opacity: 1;
-}
-
-.korok-marker.nearest {
-  width: 32px;
-  height: 32px;
-  background: url("assets/zd-icons/korok.png") center / contain no-repeat;
-  opacity: 1;
-  animation: korokBounce 1.15s ease-in-out infinite;
-}
-
 .korok-marker.link-nearest {
   animation: korokBounce 1.15s ease-in-out infinite;
 }

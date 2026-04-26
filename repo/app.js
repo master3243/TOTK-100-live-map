@@ -29,14 +29,11 @@ const seedCount = document.querySelector("#seedCount");
 const locationCount = document.querySelector("#locationCount");
 const completionistSummary = document.querySelector("#completionistSummary");
 const logEntries = document.querySelector("#logEntries");
-const viewLatest = document.querySelector("#viewLatest");
 const viewPlayer = document.querySelector("#viewPlayer");
 const layerButtons = document.querySelectorAll(".layer-button");
 const overlayInputs = {
   obtainedKoroks: document.querySelector("#showObtainedKoroks"),
   unobtainedKoroks: document.querySelector("#showUnobtainedKoroks"),
-  guide: document.querySelector("#showGuide"),
-  autoPan: document.querySelector("#autoPan"),
   playerLocation: document.querySelector("#showPlayerLocation"),
   playerGuide: document.querySelector("#showPlayerGuide"),
   playerAutoPan: document.querySelector("#playerAutoPan"),
@@ -68,8 +65,6 @@ const overlayGroups = {
   korok: [
     overlayInputs.obtainedKoroks,
     overlayInputs.unobtainedKoroks,
-    overlayInputs.guide,
-    overlayInputs.autoPan,
   ],
   player: [overlayInputs.playerLocation, overlayInputs.playerGuide, overlayInputs.playerAutoPan],
   completion: Object.values(completionInputs),
@@ -92,12 +87,8 @@ let pinchStart = null;
 let korokMarkers = [];
 let completionCategories = [];
 let playerPosition = null;
-let latestObtainedId = null;
-let previousLatestObtainedId = null;
-let nearestUnobtainedId = null;
 let linkNearestUnobtainedId = null;
 let linkNearestCompletionId = null;
-let didInitialLatestPan = false;
 let lastLogSignature = "";
 let lastLogId = 0;
 let pendingPanPoint = null;
@@ -257,24 +248,12 @@ function rerenderOverlays() {
   renderMarkers();
 }
 
-function syncAutoPanPair(changedInput) {
-  if (changedInput === overlayInputs.autoPan && overlayInputs.autoPan.checked) {
-    overlayInputs.playerAutoPan.checked = false;
-  }
-  if (changedInput === overlayInputs.playerAutoPan && overlayInputs.playerAutoPan.checked) {
-    overlayInputs.autoPan.checked = false;
-  }
-}
-
 function setGroupChecked(groupName, checked) {
   for (const item of enabledGroupItems(overlayGroups[groupName])) {
     item.checked = checked;
   }
-  if (checked && groupName === "korok" && overlayInputs.autoPan.checked) {
-    overlayInputs.playerAutoPan.checked = false;
-  }
   if (checked && groupName === "player" && overlayInputs.playerAutoPan.checked) {
-    overlayInputs.autoPan.checked = false;
+    // no-op: group already checked, keep current behavior
   }
   rerenderOverlays();
 }
@@ -519,36 +498,7 @@ function appendPlayerGuideConnector(player, target) {
   return svg;
 }
 
-function updateLatestObtained(markers, state) {
-  latestObtainedId = state.latestObtainedId || null;
-  if (!latestObtainedId) {
-    previousLatestObtainedId = null;
-    return;
-  }
-
-  const latest = markers.find((marker) => marker.id === latestObtainedId && marker.obtained);
-  if (!latest) {
-    return;
-  }
-
-  const changedLatest = previousLatestObtainedId !== latestObtainedId;
-  if (overlayInputs.autoPan.checked && (changedLatest || !didInitialLatestPan)) {
-    panToPoint(latest, Math.max(scale, 0.72));
-    didInitialLatestPan = true;
-  }
-  previousLatestObtainedId = latestObtainedId;
-}
-
-function getLatestMarker() {
-  if (!latestObtainedId) {
-    return null;
-  }
-  return korokMarkers.find((marker) => marker.id === latestObtainedId && marker.obtained) || null;
-}
-
 function updateTargetControls() {
-  const latest = getLatestMarker();
-  viewLatest.disabled = !latest;
   viewPlayer.disabled = !playerPosition;
   overlayInputs.playerLocation.disabled = !playerPosition;
   overlayInputs.playerGuide.disabled = !playerPosition;
@@ -558,7 +508,6 @@ function updateTargetControls() {
 
 function renderGuide(markers) {
   guideLayer.replaceChildren();
-  nearestUnobtainedId = null;
   linkNearestUnobtainedId = null;
   linkNearestCompletionId = null;
 
@@ -566,7 +515,7 @@ function renderGuide(markers) {
     lastPlayerGuideFrameKey = "";
   }
 
-  if (!overlayInputs.guide.checked && !overlayInputs.playerGuide.checked) {
+  if (!overlayInputs.playerGuide.checked) {
     return;
   }
 
@@ -590,18 +539,6 @@ function renderGuide(markers) {
   }
 
   const fragment = document.createDocumentFragment();
-
-  const latest = markers.find((marker) => marker.id === latestObtainedId && marker.obtained && marker.layer === activeLayer);
-  if (latest && overlayInputs.guide.checked && visibleUnobtained.length) {
-    const nearest = findNearestUnobtained(latest, visibleUnobtained);
-    if (nearest) {
-      nearestUnobtainedId = nearest.id;
-      const arrow = appendCompassArrow(latest, nearest, "latest-arrow");
-      if (arrow) {
-        fragment.appendChild(arrow);
-      }
-    }
-  }
 
   if (
     imageWidth
@@ -650,12 +587,6 @@ function renderMarkers(markers = korokMarkers, categories = completionCategories
   for (const marker of getVisibleMarkers(markers)) {
     const element = document.createElement("span");
     const classes = ["korok-marker", marker.kind, marker.obtained ? "obtained" : "unobtained"];
-    if (marker.id === latestObtainedId) {
-      classes.push("latest");
-    }
-    if (marker.id === nearestUnobtainedId) {
-      classes.push("nearest");
-    }
     if (marker.id === linkNearestUnobtainedId) {
       classes.push("link-nearest");
     }
@@ -761,13 +692,6 @@ function panToPlayerNow() {
   }
 }
 
-function viewLatestMarker() {
-  const latest = getLatestMarker();
-  if (latest) {
-    panToPoint(latest);
-  }
-}
-
 function viewPlayerLocation() {
   if (playerPosition) {
     panToPoint(playerPosition);
@@ -785,7 +709,6 @@ async function refreshKoroks() {
 
     playerPosition = payload.player || null;
     completionCategories = payload.completion || [];
-    updateLatestObtained(payload.markers, payload.state);
     updatePlayerAutoPan(payload);
     updateCompletionCounts(completionCategories);
     renderGuide(payload.markers);
@@ -909,12 +832,6 @@ mapImage.addEventListener("load", () => {
     pendingPanPoint = null;
     return;
   }
-  if (!sameDimensions) {
-    const latest = korokMarkers.find((marker) => marker.id === latestObtainedId);
-    if (latest && overlayInputs.autoPan.checked) {
-      panToMapPoint(latest.mapX, latest.mapY);
-    }
-  }
 });
 
 mapImage.addEventListener("error", () => {
@@ -1023,7 +940,6 @@ layerButtons.forEach((button) => {
 
 Object.values(overlayInputs).forEach((input) => {
   input.addEventListener("change", () => {
-    syncAutoPanPair(input);
     if (input === overlayInputs.playerAutoPan) {
       panToPlayerNow();
     }
@@ -1058,7 +974,6 @@ Object.entries(groupInputs).forEach(([groupName, input]) => {
   });
 });
 
-viewLatest.addEventListener("click", viewLatestMarker);
 viewPlayer.addEventListener("click", viewPlayerLocation);
 
 window.addEventListener("resize", preserveMapCenterOnViewportResize);
