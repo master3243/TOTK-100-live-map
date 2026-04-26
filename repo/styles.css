@@ -523,7 +523,7 @@ h2 {
   border-radius: 50%;
   background:
     radial-gradient(circle, rgba(191, 165, 255, 0.84) 0 38%, transparent 39%),
-    url("assets/zd-icons/star.png") center / contain no-repeat;
+    url("assets/zd-icons/objective.png") center / contain no-repeat;
   opacity: 0.86;
   pointer-events: auto;
   box-shadow: 0 0 0 2px rgba(18, 24, 18, 0.72), 0 0 13px rgba(202, 165, 255, 0.66);
@@ -541,7 +541,7 @@ h2 {
 }
 
 .completion-hudson_sign {
-  background: url("assets/zd-icons/star.png") center / contain no-repeat;
+  background: url("assets/zd-icons/hudsonsign.svg") center / contain no-repeat;
   box-shadow: 0 0 0 2px rgba(18, 24, 18, 0.72), 0 0 13px rgba(241, 182, 96, 0.68);
 }
 
@@ -556,7 +556,7 @@ h2 {
 }
 
 .completion-hinox {
-  background: url("assets/zd-icons/skull.png") center / contain no-repeat;
+  background: url("assets/zd-icons/hinox.svg") center / contain no-repeat;
   box-shadow: 0 0 0 2px rgba(18, 24, 18, 0.72), 0 0 14px rgba(236, 111, 131, 0.72);
 }
 
@@ -566,12 +566,12 @@ h2 {
 }
 
 .completion-molduga {
-  background: url("assets/zd-icons/skull.png") center / contain no-repeat;
+  background: url("assets/zd-icons/molduga.svg") center / contain no-repeat;
   box-shadow: 0 0 0 2px rgba(18, 24, 18, 0.72), 0 0 14px rgba(236, 111, 131, 0.72);
 }
 
 .completion-frox {
-  background: url("assets/zd-icons/monster.png") center / contain no-repeat;
+  background: url("assets/zd-icons/frox.svg") center / contain no-repeat;
   box-shadow: 0 0 0 2px rgba(18, 24, 18, 0.72), 0 0 14px rgba(236, 111, 131, 0.72);
 }
 
@@ -585,13 +585,13 @@ h2 {
 }
 
 .completion-old_map {
-  background: url("assets/zd-icons/star.png") center / contain no-repeat;
+  background: url("assets/zd-icons/oldmap.png") center / contain no-repeat;
 }
 
 .completion-sage_will {
   background:
     radial-gradient(circle, rgba(191, 165, 255, 0.84) 0 38%, transparent 39%),
-    url("assets/zd-icons/star.png") center / contain no-repeat;
+    url("assets/zd-icons/sageswill.png") center / contain no-repeat;
 }
 
 .compass-arrow {
