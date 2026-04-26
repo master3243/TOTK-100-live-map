@@ -2,7 +2,7 @@ Param(
   [string]$Name = "TOTK_Save_Map_Helper",
   [string]$Icon = "",
   [string]$ProjectDir = "",
-  [switch]$Windowed
+  [switch]$Console
 )
 
 $ErrorActionPreference = "Stop"
@@ -29,13 +29,14 @@ $repoApp = Join-Path $ProjectDir "app.js"
 $repoKoroks = Join-Path $ProjectDir "korok_data.json"
 $repoCompletion = Join-Path $ProjectDir "completion_data.json"
 $repoServer = Join-Path $ProjectDir "server.py"
+$repoGui = Join-Path $ProjectDir "gui.py"
 $repoConfig = Join-Path $ProjectDir "config.json"
 $defaultIconPng = Join-Path $ProjectDir "assets\\zd-icons\\korok.png"
 $iconTool = Join-Path $ProjectDir "tools\\png_to_ico.py"
 $iconOut = Join-Path $ProjectDir ".pyinstaller-build\\app.ico"
 $repoAssets = Join-Path $ProjectDir "assets"
 
-foreach ($p in @($repoServer,$repoIndex,$repoStyles,$repoApp,$repoKoroks,$repoCompletion)) {
+foreach ($p in @($repoServer,$repoGui,$repoIndex,$repoStyles,$repoApp,$repoKoroks,$repoCompletion)) {
   if (-not (Test-Path $p)) { throw "Missing required file: $p" }
 }
 
@@ -74,14 +75,14 @@ $args = @(
   "--add-data", "$repoApp;.",
   "--add-data", "$repoKoroks;.",
   "--add-data", "$repoCompletion;.",
-  $repoServer
+  $repoGui
 )
 
 if (Test-Path $repoAssets) {
   $args = $args[0..($args.Length-2)] + @("--add-data", "$repoAssets;assets", $args[-1])
 }
 
-if ($Windowed) {
+if (-not $Console) {
   $args = @("--windowed") + $args
 }
 
@@ -91,6 +92,10 @@ if (Test-Path $repoConfig) {
 
 if ($Icon -and (Test-Path $Icon)) {
   $args = @("--icon", $Icon) + $args
+}
+
+if ($Icon -and (Test-Path $Icon)) {
+  $args = $args[0..($args.Length-2)] + @("--add-data", "$Icon;.", $args[-1])
 }
 
 Write-Host "Running: python -m PyInstaller $($args -join ' ')"

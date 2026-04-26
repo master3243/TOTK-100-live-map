@@ -57,6 +57,14 @@ LOG_LIMIT = 200
 LOG_ENTRIES = []
 SERVER_LOCK = Lock()
 
+_DATA = {
+    "initialized": False,
+    "korok_data": None,
+    "completion_data": None,
+    "tracked_hashes": None,
+    "tracked_save_paths": None,
+}
+
 
 def setup_logging():
     logger = logging.getLogger()
@@ -116,7 +124,10 @@ def load_config():
         if template_path.exists():
             CONFIG_PATH.write_text(template_path.read_text(encoding="utf-8"), encoding="utf-8")
         else:
-            CONFIG_PATH.write_text(json.dumps({"save_path": ""}, indent=2), encoding="utf-8")
+            CONFIG_PATH.write_text(
+                json.dumps({"save_path": "", "save_file": "progress.sav"}, indent=2),
+                encoding="utf-8",
+            )
 
     with CONFIG_PATH.open("r", encoding="utf-8") as file:
         config = json.load(file)
@@ -158,6 +169,31 @@ def load_korok_data():
 def load_completion_data():
     with COMPLETION_DATA_PATH.open("r", encoding="utf-8") as file:
         return json.load(file)
+
+
+def initialize():
+    if _DATA["initialized"]:
+        return
+
+    korok_data = load_korok_data()
+    completion_data = load_completion_data()
+    korok_hashes = {
+        int(entry["hash"], 16)
+        for group in ("hidden", "carry")
+        for entry in korok_data[group]
+    }
+    completion_bool_hashes = {
+        int(item["value"], 16)
+        for category in completion_data["categories"]
+        if category["kind"] == "bool"
+        for item in category["items"]
+    }
+
+    _DATA["korok_data"] = korok_data
+    _DATA["completion_data"] = completion_data
+    _DATA["tracked_hashes"] = korok_hashes | completion_bool_hashes
+    _DATA["tracked_save_paths"] = scan_tracked_saves()
+    _DATA["initialized"] = True
 
 
 def load_state():
@@ -211,21 +247,6 @@ def save_state(state):
     temp_path.replace(STATE_PATH)
 
 
-KOROK_DATA = load_korok_data()
-COMPLETION_DATA = load_completion_data()
-KOROK_HASHES = {
-    int(entry["hash"], 16)
-    for group in ("hidden", "carry")
-    for entry in KOROK_DATA[group]
-}
-COMPLETION_BOOL_HASHES = {
-    int(item["value"], 16)
-    for category in COMPLETION_DATA["categories"]
-    if category["kind"] == "bool"
-    for item in category["items"]
-}
-TRACKED_HASHES = KOROK_HASHES | COMPLETION_BOOL_HASHES
-TRACKED_SAVE_PATHS = scan_tracked_saves()
 PAYLOAD_CACHE = {
     "mtimes": None,
     "payload": None,
@@ -233,11 +254,12 @@ PAYLOAD_CACHE = {
 
 
 def snapshot_tracked_saves():
-    if not TRACKED_SAVE_PATHS:
+    tracked_save_paths = _DATA["tracked_save_paths"] or []
+    if not tracked_save_paths:
         raise ValueError("No tracked save files. Check config.json save_path/save_file.")
 
     snapshot = []
-    for path in TRACKED_SAVE_PATHS:
+    for path in tracked_save_paths:
         try:
             snapshot.append({"path": path, "mtime": os.path.getmtime(path)})
         except FileNotFoundError:
@@ -313,6 +335,7 @@ def find_hash_table_end(data):
 
 
 def parse_save_values(data):
+    tracked_hashes = _DATA["tracked_hashes"] or set()
     if len(data) < 0x30 or read_u32(data, 0) != 0x01020304:
         raise ValueError("Not a TOTK progress.sav file")
 
@@ -320,7 +343,7 @@ def parse_save_values(data):
     values = {}
     for offset in range(0x28, table_end, 8):
         hash_value = read_u32(data, offset)
-        if hash_value in TRACKED_HASHES:
+        if hash_value in tracked_hashes:
             values[hash_value] = read_u32(data, offset + 4)
     return values
 
@@ -372,9 +395,10 @@ def parse_guid_values(data):
 
 
 def build_markers(values):
+    korok_data = _DATA["korok_data"] or {"hidden": [], "carry": []}
     markers = []
     for kind in ("hidden", "carry"):
-        for entry in KOROK_DATA[kind]:
+        for entry in korok_data[kind]:
             hash_value = int(entry["hash"], 16)
             raw_value = values.get(hash_value, 0)
             obtained = raw_value != 0 if kind == "hidden" else raw_value == CLEAR_HASH
@@ -389,8 +413,9 @@ def build_markers(values):
 
 
 def build_completion(values, guid_values):
+    completion_data = _DATA["completion_data"] or {"categories": []}
     categories = []
-    for category in COMPLETION_DATA["categories"]:
+    for category in completion_data["categories"]:
         items = []
         obtained_count = 0
         for item in category["items"]:
@@ -461,6 +486,7 @@ def update_state(markers, save_modified, active_save_path):
 
 def parse_current_save():
     with SERVER_LOCK:
+        initialize()
         snapshot = snapshot_tracked_saves()
         current_mtimes = mtimes_key(snapshot)
         if PAYLOAD_CACHE["mtimes"] == current_mtimes and PAYLOAD_CACHE["payload"] is not None:
@@ -508,8 +534,8 @@ def parse_current_save():
                 "carry": sum(1 for marker in obtained_markers if marker["kind"] == "carry"),
                 "totalLocations": len(obtained_markers),
                 "totalSeeds": sum(marker["seedValue"] for marker in obtained_markers),
-                "availableLocations": len(KOROK_DATA["hidden"]) + len(KOROK_DATA["carry"]),
-                "availableSeeds": len(KOROK_DATA["hidden"]) + len(KOROK_DATA["carry"]) * 2,
+                "availableLocations": len((_DATA["korok_data"] or {"hidden": [], "carry": []})["hidden"]) + len((_DATA["korok_data"] or {"hidden": [], "carry": []})["carry"]),
+                "availableSeeds": len((_DATA["korok_data"] or {"hidden": [], "carry": []})["hidden"]) + len((_DATA["korok_data"] or {"hidden": [], "carry": []})["carry"]) * 2,
             },
             "state": {
                 "latestObtainedId": state["latestObtainedId"],
@@ -525,6 +551,11 @@ def parse_current_save():
 
 
 class Handler(SimpleHTTPRequestHandler):
+    def log_message(self, format, *args):
+        # In PyInstaller --windowed apps, sys.stderr can be None which breaks the
+        # default BaseHTTPRequestHandler logging. Route it to logging instead.
+        logging.info("%s - - %s", self.address_string(), format % args)
+
     def end_headers(self):
         self.send_header("Cache-Control", "no-store")
         super().end_headers()
