@@ -376,7 +376,7 @@ h2 {
   height: 28px;
   border-radius: 8px;
   background: rgba(18, 24, 18, 0.72);
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.7), 0 0 18px rgba(76, 163, 255, 0.84);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.7), 0 0 18px rgba(104, 212, 111, 0.84);
   pointer-events: auto;
   transform: translate(-50%, -50%) scale(var(--iconScale, 1));
 }
@@ -386,7 +386,7 @@ h2 {
 .person-arm,
 .person-leg {
   position: absolute;
-  background: #ffffff;
+  background: #eaffea;
   display: block;
 }
 
@@ -396,7 +396,7 @@ h2 {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #8fd0ff;
+  background: #68d46f;
 }
 
 .person-body {
