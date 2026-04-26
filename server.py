@@ -2,6 +2,7 @@ import json
 import os
 import shutil
 import struct
+import sys
 import tempfile
 import time
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
@@ -10,11 +11,30 @@ from threading import Lock
 from urllib.parse import urlparse
 
 
-ROOT = Path(__file__).resolve().parent
-CONFIG_PATH = ROOT / "config.json"
+APP_NAME = "3243_zelda_korok_helper"
+
+
+def resource_root() -> Path:
+    if getattr(sys, "frozen", False) and hasattr(sys, "_MEIPASS"):
+        return Path(sys._MEIPASS)  # type: ignore[attr-defined]
+    return Path(__file__).resolve().parent
+
+
+def user_data_root() -> Path:
+    base = os.environ.get("APPDATA") or os.environ.get("LOCALAPPDATA") or str(Path.home())
+    root = Path(base) / APP_NAME
+    root.mkdir(parents=True, exist_ok=True)
+    return root
+
+
+ROOT = resource_root()
+USER_DATA_ROOT = user_data_root()
+
+CONFIG_PATH = USER_DATA_ROOT / "config.json"
+STATE_PATH = USER_DATA_ROOT / "state.json"
+
 KOROK_DATA_PATH = ROOT / "korok_data.json"
 COMPLETION_DATA_PATH = ROOT / "completion_data.json"
-STATE_PATH = ROOT / "state.json"
 HOST = "127.0.0.1"
 PORT = 8000
 
@@ -68,11 +88,18 @@ def add_log(message):
 
 
 def load_config():
+    if not CONFIG_PATH.exists():
+        template_path = ROOT / "config.json"
+        if template_path.exists():
+            CONFIG_PATH.write_text(template_path.read_text(encoding="utf-8"), encoding="utf-8")
+        else:
+            CONFIG_PATH.write_text(json.dumps({"save_path": ""}, indent=2), encoding="utf-8")
+
     with CONFIG_PATH.open("r", encoding="utf-8") as file:
         config = json.load(file)
     save_path = config.get("save_path")
     if not save_path:
-        raise ValueError("config.json must define save_path")
+        raise ValueError(f"{CONFIG_PATH} must define save_path")
     save_file = config.get("save_file")
     if not save_file:
         return {"mode": "single", "save_path": Path(save_path), "save_file": Path(save_path).name}
