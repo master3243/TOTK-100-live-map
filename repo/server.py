@@ -11,27 +11,23 @@ from threading import Lock
 from urllib.parse import urlparse
 
 
-APP_NAME = "3243_zelda_korok_helper"
-
-
 def resource_root() -> Path:
     if getattr(sys, "frozen", False) and hasattr(sys, "_MEIPASS"):
         return Path(sys._MEIPASS)  # type: ignore[attr-defined]
     return Path(__file__).resolve().parent
 
 
-def user_data_root() -> Path:
-    base = os.environ.get("APPDATA") or os.environ.get("LOCALAPPDATA") or str(Path.home())
-    root = Path(base) / APP_NAME
-    root.mkdir(parents=True, exist_ok=True)
-    return root
+def runtime_root() -> Path:
+    if getattr(sys, "frozen", False):
+        return Path(sys.executable).resolve().parent
+    return Path(__file__).resolve().parent
 
 
 ROOT = resource_root()
-USER_DATA_ROOT = user_data_root()
+RUNTIME_ROOT = runtime_root()
 
-CONFIG_PATH = USER_DATA_ROOT / "config.json"
-STATE_PATH = USER_DATA_ROOT / "state.json"
+CONFIG_PATH = RUNTIME_ROOT / "config.json"
+STATE_PATH = RUNTIME_ROOT / "state.json"
 
 KOROK_DATA_PATH = ROOT / "korok_data.json"
 COMPLETION_DATA_PATH = ROOT / "completion_data.json"
