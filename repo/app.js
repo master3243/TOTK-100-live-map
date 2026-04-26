@@ -107,6 +107,16 @@ function updateTransform() {
   guideLayer.style.transform = transform;
   markerLayer.style.transform = transform;
   zoomValue.textContent = `${Math.round(scale * 100)}%`;
+  updateIconScale();
+}
+
+function updateIconScale() {
+  // The map is scaled via CSS transform; compensate marker size so icons stay readable.
+  // ZeldaDungeon-style: markers remain closer to a consistent pixel size while zooming.
+  // When zoomed OUT (small scale) we want icons to get larger for visibility.
+  const normalized = Math.max(scale || 1, 0.12);
+  const iconScale = clamp(1 / (normalized ** 1.1), 0.55, 4.0);
+  markerLayer.style.setProperty("--iconScale", iconScale.toFixed(4));
 }
 
 function centerMap() {

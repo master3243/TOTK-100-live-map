@@ -378,7 +378,7 @@ h2 {
   background: rgba(18, 24, 18, 0.72);
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.7), 0 0 18px rgba(76, 163, 255, 0.84);
   pointer-events: auto;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(var(--iconScale, 1));
 }
 
 .person-head,
@@ -443,24 +443,23 @@ h2 {
 
 .korok-marker {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   border: 0;
   background: url("assets/zd-icons/korok.png") center / contain no-repeat;
   opacity: 0.92;
   pointer-events: auto;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(var(--iconScale, 1));
 }
 
 .korok-marker.obtained {
-  background: url("assets/zd-icons/korok2.png") center / contain no-repeat;
   opacity: 0.9;
   filter: grayscale(1) brightness(0.85) contrast(1.1);
 }
 
 .korok-marker.unobtained {
-  width: 18px;
-  height: 18px;
+  width: 24px;
+  height: 24px;
   background: url("assets/zd-icons/korok.png") center / contain no-repeat;
   opacity: 0.92;
   filter: none;
@@ -468,18 +467,21 @@ h2 {
 
 .korok-marker.carry {
   background: url("assets/zd-icons/korok2.png") center / contain no-repeat;
+  width: 24px;
+  height: 24px;
+  background-size: 112% 112%;
 }
 
 .korok-marker.latest {
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   background: url("assets/zd-icons/korok.png") center / contain no-repeat;
   opacity: 1;
 }
 
 .korok-marker.nearest {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   background: url("assets/zd-icons/korok.png") center / contain no-repeat;
   opacity: 1;
   animation: korokBounce 1.15s ease-in-out infinite;
@@ -518,7 +520,7 @@ h2 {
   background: url("assets/zd-icons/objective.png") center / contain no-repeat;
   opacity: 0.86;
   pointer-events: auto;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(var(--iconScale, 1));
 }
 
 .completion-caves {
@@ -555,6 +557,7 @@ h2 {
 
 .completion-stone_talus {
   background: url("assets/zd-icons/ore.png") center / contain no-repeat;
+  background-size: 120% 120%;
 }
 
 .completion-molduga {
@@ -669,11 +672,11 @@ h2 {
 @keyframes korokBounce {
   0%,
   100% {
-    transform: translate(-50%, -50%) translateY(0) scale(1);
+    transform: translate(-50%, -50%) translateY(0) scale(var(--iconScale, 1));
   }
 
   50% {
-    transform: translate(-50%, -50%) translateY(-6px) scale(1.04);
+    transform: translate(-50%, -50%) translateY(-6px) scale(calc(var(--iconScale, 1) * 1.04));
   }
 }
 
