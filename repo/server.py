@@ -163,6 +163,8 @@ def load_completion_data():
 def load_state():
     if not STATE_PATH.exists():
         return {
+            "activeSavePath": None,
+            "saves": {},
             "obtainedKorokIds": [],
             "latestObtainedId": None,
             "latestObtainedAt": None,
@@ -542,6 +544,7 @@ class Handler(SimpleHTTPRequestHandler):
                 self.send_json(200, parse_current_save())
             except Exception as error:
                 add_log(f"Error: {error}")
+                logging.exception("Error handling /api/koroks")
                 self.send_json(500, {"error": str(error)})
             return
         if parsed.path == "/api/log":

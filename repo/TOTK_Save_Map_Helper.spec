@@ -5,7 +5,7 @@ a = Analysis(
     ['M:\\MyFiles\\Code\\Python\\Scripts\\zelda_korok_helper\\repo\\server.py'],
     pathex=[],
     binaries=[],
-    datas=[('M:\\MyFiles\\Code\\Python\\Scripts\\zelda_korok_helper\\repo\\index.html', '.'), ('M:\\MyFiles\\Code\\Python\\Scripts\\zelda_korok_helper\\repo\\styles.css', '.'), ('M:\\MyFiles\\Code\\Python\\Scripts\\zelda_korok_helper\\repo\\app.js', '.'), ('M:\\MyFiles\\Code\\Python\\Scripts\\zelda_korok_helper\\repo\\korok_data.json', '.'), ('M:\\MyFiles\\Code\\Python\\Scripts\\zelda_korok_helper\\repo\\completion_data.json', '.'), ('M:\\MyFiles\\Code\\Python\\Scripts\\zelda_korok_helper\\repo\\config.json', '.')],
+    datas=[('M:\\MyFiles\\Code\\Python\\Scripts\\zelda_korok_helper\\repo\\index.html', '.'), ('M:\\MyFiles\\Code\\Python\\Scripts\\zelda_korok_helper\\repo\\styles.css', '.'), ('M:\\MyFiles\\Code\\Python\\Scripts\\zelda_korok_helper\\repo\\app.js', '.'), ('M:\\MyFiles\\Code\\Python\\Scripts\\zelda_korok_helper\\repo\\korok_data.json', '.'), ('M:\\MyFiles\\Code\\Python\\Scripts\\zelda_korok_helper\\repo\\completion_data.json', '.'), ('M:\\MyFiles\\Code\\Python\\Scripts\\zelda_korok_helper\\repo\\assets', 'assets'), ('M:\\MyFiles\\Code\\Python\\Scripts\\zelda_korok_helper\\repo\\config.json', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -35,4 +35,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    icon=['M:\\MyFiles\\Code\\Python\\Scripts\\zelda_korok_helper\\repo\\.pyinstaller-build\\app.ico'],
 )

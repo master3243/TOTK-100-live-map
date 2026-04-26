@@ -13,6 +13,7 @@ THIS PROJECT IS 100% CREATED BY CODEX 5.5 MEDIUM. THIS IS VIBE SLOP.
 Local browser prototype for comparing a Tears of the Kingdom save file against map data.
 
 ```powershell
+cd .\repo\
 python server.py
 ```
 

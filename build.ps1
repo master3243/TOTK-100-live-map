@@ -18,6 +18,11 @@ Write-Host "Project dir: $ProjectDir"
 Write-Host "Working dir: $scriptDir"
 Write-Host "Python:      $(Get-Command python -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source)"
 
+$outExe = Join-Path $scriptDir ("{0}.exe" -f $Name)
+if (Test-Path $outExe) {
+  Remove-Item -Force $outExe
+}
+
 $repoIndex = Join-Path $ProjectDir "index.html"
 $repoStyles = Join-Path $ProjectDir "styles.css"
 $repoApp = Join-Path $ProjectDir "app.js"
@@ -25,14 +30,39 @@ $repoKoroks = Join-Path $ProjectDir "korok_data.json"
 $repoCompletion = Join-Path $ProjectDir "completion_data.json"
 $repoServer = Join-Path $ProjectDir "server.py"
 $repoConfig = Join-Path $ProjectDir "config.json"
+$defaultIconPng = Join-Path $ProjectDir "assets\\zd-icons\\korok.png"
+$iconTool = Join-Path $ProjectDir "tools\\png_to_ico.py"
+$iconOut = Join-Path $ProjectDir ".pyinstaller-build\\app.ico"
+$repoAssets = Join-Path $ProjectDir "assets"
 
 foreach ($p in @($repoServer,$repoIndex,$repoStyles,$repoApp,$repoKoroks,$repoCompletion)) {
   if (-not (Test-Path $p)) { throw "Missing required file: $p" }
 }
 
+if (-not $Icon -and (Test-Path $defaultIconPng)) {
+  $Icon = $defaultIconPng
+}
+
+if ($Icon) {
+  if (-not (Test-Path $Icon)) { throw "Icon file not found: $Icon" }
+  if ($Icon.ToLower().EndsWith(".png")) {
+    if (-not (Test-Path $iconTool)) { throw "Missing icon tool: $iconTool" }
+    New-Item -ItemType Directory -Force -Path (Split-Path -Parent $iconOut) | Out-Null
+    Write-Host "Converting PNG icon to ICO..."
+    & python $iconTool --input $Icon --output $iconOut
+    if ($LASTEXITCODE -ne 0) { throw "Icon conversion failed (see output above)." }
+    $Icon = $iconOut
+  }
+}
+if ($Icon) {
+  Write-Host "Using icon:  $Icon"
+  if (-not (Test-Path $Icon)) { throw "Resolved icon missing: $Icon" }
+}
+
 Push-Location $scriptDir
 try {
 $args = @(
+  "--noconfirm",
   "--onefile",
   "--clean",
   "--name", $Name,
@@ -46,6 +76,10 @@ $args = @(
   "--add-data", "$repoCompletion;.",
   $repoServer
 )
+
+if (Test-Path $repoAssets) {
+  $args = $args[0..($args.Length-2)] + @("--add-data", "$repoAssets;assets", $args[-1])
+}
 
 if ($Windowed) {
   $args = @("--windowed") + $args
@@ -65,12 +99,11 @@ if ($LASTEXITCODE -ne 0) {
   throw "PyInstaller failed with exit code $LASTEXITCODE"
 }
 
-$out = Join-Path $scriptDir ("{0}.exe" -f $Name)
-if (-not (Test-Path $out)) {
-  throw "Build finished but output not found: $out"
+if (-not (Test-Path $outExe)) {
+  throw "Build finished but output not found: $outExe"
 }
 
-Write-Host "Done. Output is in $out"
+Write-Host "Done. Output is in $outExe"
 } finally {
   Pop-Location
 }
