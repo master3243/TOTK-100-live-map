@@ -117,7 +117,9 @@ function updateIconScale() {
   // When zoomed OUT (small scale) we want icons to get larger for visibility.
   const normalized = Math.max(scale || 1, 0.12);
   const iconScale = clamp(1 / (normalized ** 1.1), 0.55, 4.0);
-  markerLayer.style.setProperty("--iconScale", iconScale.toFixed(4));
+  const iconScaleStr = iconScale.toFixed(4);
+  markerLayer.style.setProperty("--iconScale", iconScaleStr);
+  guideLayer.style.setProperty("--iconScale", iconScaleStr);
 }
 
 function centerMap() {
@@ -413,7 +415,7 @@ function appendCompassArrow(origin, target, className) {
   arrow.className = `compass-arrow ${className}`;
   arrow.style.left = `${origin.mapX}px`;
   arrow.style.top = `${origin.mapY}px`;
-  arrow.style.transform = `translate(-50%, -50%) rotate(${direction.angle}rad)`;
+  arrow.style.setProperty("--compass-rotate", `${direction.angle}rad`);
   return arrow;
 }
 
