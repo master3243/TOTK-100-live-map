@@ -576,7 +576,7 @@ h2 {
 }
 
 .completion-gleeok {
-  background: url("assets/zd-icons/gleeok.png") center / contain no-repeat;
+  background: url("assets/zd-icons/gleeok.svg") center / contain no-repeat;
   box-shadow: 0 0 0 2px rgba(18, 24, 18, 0.72), 0 0 14px rgba(236, 111, 131, 0.72);
 }
 

@@ -325,7 +325,7 @@ Current local icons include:
 - `schematic.png`
 - `skull.png`
 - `monster.png`
-- `gleeok.png`
+- `gleeok.svg`
 - `leaf.png`
 - `star.png`
 
@@ -335,7 +335,7 @@ CSS maps category classes to icons. For example:
 - `.completion-wells` uses `well.png`.
 - `.completion-yiga_schematic` uses `schematic.png`.
 - Most minibosses use `skull.png` or `monster.png`.
-- Gleeok uses `gleeok.png`.
+- Gleeok uses `gleeok.svg`.
 
 ## Logs
 
