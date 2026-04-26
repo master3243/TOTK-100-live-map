@@ -494,14 +494,8 @@ function renderMarkers(markers = korokMarkers, categories = completionCategories
     element.className = classes.join(" ");
     element.style.left = `${marker.mapX}px`;
     element.style.top = `${marker.mapY}px`;
-    element.title = markerLabel(marker);
+    element.removeAttribute("title");
     attachTooltip(element, korokTooltip(marker));
-    if (marker.kind === "carry") {
-      const badge = document.createElement("span");
-      badge.className = "seed-badge";
-      badge.textContent = "x2";
-      element.appendChild(badge);
-    }
     fragment.appendChild(element);
   }
 
@@ -520,7 +514,7 @@ function renderMarkers(markers = korokMarkers, categories = completionCategories
       element.className = `completion-marker completion-${marker.categoryId}`;
       element.style.left = `${marker.mapX}px`;
       element.style.top = `${marker.mapY}px`;
-      element.title = completionLabel(marker);
+      element.removeAttribute("title");
       attachTooltip(element, completionTooltip(marker));
       fragment.appendChild(element);
     }
@@ -531,7 +525,7 @@ function renderMarkers(markers = korokMarkers, categories = completionCategories
     link.className = "link-marker";
     link.style.left = `${playerPosition.mapX}px`;
     link.style.top = `${playerPosition.mapY}px`;
-    link.title = "Link's current save location";
+    link.removeAttribute("title");
     link.innerHTML = '<span class="person-head"></span><span class="person-body"></span><span class="person-arm left"></span><span class="person-arm right"></span><span class="person-leg left"></span><span class="person-leg right"></span>';
     attachTooltip(link, playerTooltip(playerPosition));
     fragment.appendChild(link);

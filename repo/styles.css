@@ -8,6 +8,11 @@
   --accent: #d7b35a;
   --accent-2: #6db7a7;
   --shadow: 0 18px 60px rgba(0, 0, 0, 0.38);
+  --svg-icon-filter: invert(90%) sepia(51%) saturate(731%) hue-rotate(359deg) brightness(89%) contrast(104%)
+    drop-shadow(-1px -1px 0px #000000)
+    drop-shadow(1px -1px 0px #000000)
+    drop-shadow(1px 1px 0px #000000)
+    drop-shadow(-1px 1px 0px #000000);
 }
 
 * {
@@ -441,57 +446,47 @@ h2 {
   width: 20px;
   height: 20px;
   border: 0;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 50% 54%, rgba(104, 212, 111, 0.92) 0 33%, transparent 34%),
-    url("assets/zd-icons/korok.png") center / contain no-repeat;
+  background: url("assets/zd-icons/korok.png") center / contain no-repeat;
   opacity: 0.92;
   pointer-events: auto;
-  box-shadow: 0 0 0 2px rgba(18, 24, 18, 0.78), 0 0 14px rgba(104, 212, 111, 0.78);
   transform: translate(-50%, -50%);
 }
 
 .korok-marker.obtained {
-  background:
-    radial-gradient(circle at 50% 54%, rgba(104, 212, 111, 0.92) 0 33%, transparent 34%),
-    url("assets/zd-icons/korok.png") center / contain no-repeat;
-  box-shadow: 0 0 0 2px rgba(18, 24, 18, 0.78), 0 0 16px rgba(104, 212, 111, 0.82);
+  background: url("assets/zd-icons/korok2.png") center / contain no-repeat;
+  opacity: 0.9;
+  filter: grayscale(1) brightness(0.85) contrast(1.1);
 }
 
 .korok-marker.unobtained {
   width: 18px;
   height: 18px;
-  background:
-    radial-gradient(circle at 50% 54%, rgba(212, 138, 82, 0.94) 0 33%, transparent 34%),
-    url("assets/zd-icons/korok.png") center / contain no-repeat;
-  opacity: 0.78;
-  box-shadow: 0 0 0 2px rgba(18, 24, 18, 0.72), 0 0 13px rgba(212, 138, 82, 0.68);
+  background: url("assets/zd-icons/korok.png") center / contain no-repeat;
+  opacity: 0.92;
+  filter: none;
+}
+
+.korok-marker.carry {
+  background: url("assets/zd-icons/korok2.png") center / contain no-repeat;
 }
 
 .korok-marker.latest {
   width: 26px;
   height: 26px;
-  background:
-    radial-gradient(circle at 50% 54%, rgba(244, 207, 99, 0.95) 0 34%, transparent 35%),
-    url("assets/zd-icons/korok.png") center / contain no-repeat;
+  background: url("assets/zd-icons/korok.png") center / contain no-repeat;
   opacity: 1;
-  box-shadow: 0 0 0 3px rgba(18, 24, 18, 0.85), 0 0 28px rgba(244, 207, 99, 0.95);
 }
 
 .korok-marker.nearest {
   width: 28px;
   height: 28px;
-  background:
-    radial-gradient(circle at 50% 54%, rgba(212, 138, 82, 0.98) 0 34%, transparent 35%),
-    url("assets/zd-icons/korok.png") center / contain no-repeat;
+  background: url("assets/zd-icons/korok.png") center / contain no-repeat;
   opacity: 1;
-  animation: korokPulse 1.35s ease-in-out infinite;
-  box-shadow: 0 0 0 4px rgba(18, 24, 18, 0.84), 0 0 34px rgba(212, 138, 82, 0.98);
+  animation: korokBounce 1.15s ease-in-out infinite;
 }
 
 .korok-marker.link-nearest {
-  animation: korokPulse 1.55s ease-in-out infinite;
-  box-shadow: 0 0 0 4px rgba(18, 24, 18, 0.84), 0 0 28px rgba(76, 163, 255, 0.9);
+  animation: korokBounce 1.15s ease-in-out infinite;
 }
 
 .seed-badge {
@@ -520,64 +515,58 @@ h2 {
   width: 22px;
   height: 22px;
   border: 0;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle, rgba(191, 165, 255, 0.84) 0 38%, transparent 39%),
-    url("assets/zd-icons/objective.png") center / contain no-repeat;
+  background: url("assets/zd-icons/objective.png") center / contain no-repeat;
   opacity: 0.86;
   pointer-events: auto;
-  box-shadow: 0 0 0 2px rgba(18, 24, 18, 0.72), 0 0 13px rgba(202, 165, 255, 0.66);
   transform: translate(-50%, -50%);
 }
 
 .completion-caves {
   background: url("assets/zd-icons/cave.png") center / contain no-repeat;
-  box-shadow: 0 0 0 2px rgba(18, 24, 18, 0.72), 0 0 13px rgba(131, 208, 210, 0.68);
 }
 
 .completion-wells {
   background: url("assets/zd-icons/well.png") center / contain no-repeat;
-  box-shadow: 0 0 0 2px rgba(18, 24, 18, 0.72), 0 0 13px rgba(131, 208, 210, 0.68);
 }
 
 .completion-hudson_sign {
   background: url("assets/zd-icons/hudsonsign.svg") center / contain no-repeat;
-  box-shadow: 0 0 0 2px rgba(18, 24, 18, 0.72), 0 0 13px rgba(241, 182, 96, 0.68);
+}
+
+.completion-hudson_sign,
+.completion-hinox,
+.completion-frox,
+.completion-molduga,
+.completion-gleeok {
+  filter: var(--svg-icon-filter);
 }
 
 .completion-yiga_schematic {
   background: url("assets/zd-icons/schematic.png") center / contain no-repeat;
-  box-shadow: 0 0 0 2px rgba(18, 24, 18, 0.72), 0 0 13px rgba(241, 182, 96, 0.68);
 }
 
 .completion-flux_construct {
   background: url("assets/zd-icons/monster.png") center / contain no-repeat;
-  box-shadow: 0 0 0 2px rgba(18, 24, 18, 0.72), 0 0 14px rgba(236, 111, 131, 0.72);
 }
 
 .completion-hinox {
   background: url("assets/zd-icons/hinox.svg") center / contain no-repeat;
-  box-shadow: 0 0 0 2px rgba(18, 24, 18, 0.72), 0 0 14px rgba(236, 111, 131, 0.72);
 }
 
 .completion-stone_talus {
-  background: url("assets/zd-icons/skull.png") center / contain no-repeat;
-  box-shadow: 0 0 0 2px rgba(18, 24, 18, 0.72), 0 0 14px rgba(236, 111, 131, 0.72);
+  background: url("assets/zd-icons/ore.png") center / contain no-repeat;
 }
 
 .completion-molduga {
   background: url("assets/zd-icons/molduga.svg") center / contain no-repeat;
-  box-shadow: 0 0 0 2px rgba(18, 24, 18, 0.72), 0 0 14px rgba(236, 111, 131, 0.72);
 }
 
 .completion-frox {
   background: url("assets/zd-icons/frox.svg") center / contain no-repeat;
-  box-shadow: 0 0 0 2px rgba(18, 24, 18, 0.72), 0 0 14px rgba(236, 111, 131, 0.72);
 }
 
 .completion-gleeok {
   background: url("assets/zd-icons/gleeok.svg") center / contain no-repeat;
-  box-shadow: 0 0 0 2px rgba(18, 24, 18, 0.72), 0 0 14px rgba(236, 111, 131, 0.72);
 }
 
 .completion-chasms {
@@ -674,6 +663,17 @@ h2 {
 
   50% {
     transform: translate(-50%, -50%) scale(1.35);
+  }
+}
+
+@keyframes korokBounce {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) translateY(-6px) scale(1.04);
   }
 }
 
