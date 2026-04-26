@@ -27,6 +27,7 @@ const cursorValue = document.querySelector("#cursorValue");
 const saveStatus = document.querySelector("#saveStatus");
 const seedCount = document.querySelector("#seedCount");
 const locationCount = document.querySelector("#locationCount");
+const completionistSummary = document.querySelector("#completionistSummary");
 const logEntries = document.querySelector("#logEntries");
 const viewLatest = document.querySelector("#viewLatest");
 const viewPlayer = document.querySelector("#viewPlayer");
@@ -724,6 +725,12 @@ function updateSaveSummary(payload) {
   saveStatus.textContent = modified.toLocaleTimeString();
   seedCount.textContent = `${payload.counts.totalSeeds} / ${payload.counts.availableSeeds}`;
   locationCount.textContent = `${payload.counts.totalLocations} / ${payload.counts.availableLocations}`;
+
+  const categories = payload.completion || [];
+  const totalCategories = categories.length;
+  const completedCategories = categories.filter((c) => (c.remaining ?? 0) === 0).length;
+  completionistSummary.textContent =
+    totalCategories > 0 ? `${completedCategories} / ${totalCategories}` : "-- / --";
 }
 
 function updatePlayerAutoPan(payload) {
@@ -782,6 +789,7 @@ async function refreshKoroks() {
     saveStatus.textContent = "Error";
     seedCount.textContent = "-- / --";
     locationCount.textContent = "-- / --";
+    completionistSummary.textContent = "-- / --";
     console.error(error);
   }
 }
