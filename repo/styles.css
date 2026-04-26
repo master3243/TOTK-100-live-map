@@ -377,6 +377,11 @@ h2 {
   overflow: visible;
 }
 
+.player-guide-connector line {
+  stroke: rgba(140, 200, 255, 0.55);
+  stroke-width: 1.35;
+}
+
 .link-marker {
   position: absolute;
   width: 22px;

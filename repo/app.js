@@ -76,6 +76,8 @@ const overlayGroups = {
 
 const minScale = 0.18;
 const maxScale = 6;
+/** Max zoom when auto-framing the player guide arrow (200%). */
+const playerGuideMaxScale = 2;
 
 let activeLayer = "surface";
 let scale = 1;
@@ -99,6 +101,8 @@ let lastLogSignature = "";
 let lastLogId = 0;
 let pendingPanPoint = null;
 let lastPlayerPanKey = null;
+/** When unchanged, skip re-applying player-guide zoom/pan (avoids jumps on unrelated overlay toggles). */
+let lastPlayerGuideFrameKey = "";
 
 function clamp(value, min, max) {
   return Math.min(Math.max(value, min), max);
@@ -435,6 +439,85 @@ function appendCompassArrow(origin, target, className) {
   return arrow;
 }
 
+/** Distance from viewport center to edge along a unit direction (viewport px). */
+function viewportEdgeDistanceAlongRay(viewWidth, viewHeight, nx, ny) {
+  const cx = viewWidth / 2;
+  const cy = viewHeight / 2;
+  let t = Infinity;
+  if (nx > 1e-9) {
+    t = Math.min(t, (viewWidth - cx) / nx);
+  }
+  if (nx < -1e-9) {
+    t = Math.min(t, (0 - cx) / nx);
+  }
+  if (ny > 1e-9) {
+    t = Math.min(t, (viewHeight - cy) / ny);
+  }
+  if (ny < -1e-9) {
+    t = Math.min(t, (0 - cy) / ny);
+  }
+  return t;
+}
+
+/** Center the player on screen and zoom so the target sits halfway from center to the viewport edge along that ray (cap 200%). */
+function applyPlayerGuideView(player, target) {
+  if (!imageWidth || !imageHeight) {
+    return;
+  }
+  const rect = viewport.getBoundingClientRect();
+  const vw = rect.width;
+  const vh = rect.height;
+  if (vw < 1 || vh < 1) {
+    return;
+  }
+
+  const vx = target.mapX - player.mapX;
+  const vy = target.mapY - player.mapY;
+  const mapLen = Math.hypot(vx, vy);
+  if (mapLen < 1e-6) {
+    return;
+  }
+
+  const nx = vx / mapLen;
+  const ny = vy / mapLen;
+  const edgeDist = viewportEdgeDistanceAlongRay(vw, vh, nx, ny);
+  if (!Number.isFinite(edgeDist) || edgeDist <= 0) {
+    return;
+  }
+
+  const desiredScreenDist = 0.5 * edgeDist;
+  let nextScale = desiredScreenDist / mapLen;
+  nextScale = clamp(nextScale, minScale, Math.min(playerGuideMaxScale, maxScale));
+
+  scale = nextScale;
+  offsetX = vw / 2 - player.mapX * scale;
+  offsetY = vh / 2 - player.mapY * scale;
+  updateTransform();
+}
+
+function appendPlayerGuideConnector(player, target) {
+  if (!imageWidth || !imageHeight) {
+    return null;
+  }
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("class", "player-guide-connector");
+  svg.setAttribute("width", String(imageWidth));
+  svg.setAttribute("height", String(imageHeight));
+  svg.style.position = "absolute";
+  svg.style.left = "0";
+  svg.style.top = "0";
+  svg.style.pointerEvents = "none";
+
+  const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+  line.setAttribute("x1", String(player.mapX));
+  line.setAttribute("y1", String(player.mapY));
+  line.setAttribute("x2", String(target.mapX));
+  line.setAttribute("y2", String(target.mapY));
+  line.setAttribute("vector-effect", "non-scaling-stroke");
+  svg.appendChild(line);
+  return svg;
+}
+
 function updateLatestObtained(markers, state) {
   latestObtainedId = state.latestObtainedId || null;
   if (!latestObtainedId) {
@@ -478,6 +561,10 @@ function renderGuide(markers) {
   linkNearestUnobtainedId = null;
   linkNearestCompletionId = null;
 
+  if (!overlayInputs.playerGuide.checked) {
+    lastPlayerGuideFrameKey = "";
+  }
+
   if (!overlayInputs.guide.checked && !overlayInputs.playerGuide.checked) {
     return;
   }
@@ -515,7 +602,13 @@ function renderGuide(markers) {
     }
   }
 
-  if (playerPosition && playerPosition.layer === activeLayer && overlayInputs.playerGuide.checked) {
+  if (
+    imageWidth
+    && imageHeight
+    && playerPosition
+    && playerPosition.layer === activeLayer
+    && overlayInputs.playerGuide.checked
+  ) {
     const nearestFromLink = findNearestPlayerGuideTarget(
       playerPosition,
       visibleUnobtained,
@@ -527,10 +620,21 @@ function renderGuide(markers) {
       } else {
         linkNearestUnobtainedId = nearestFromLink.id;
       }
+      const frameKey = `${nearestFromLink.id}|${Math.round(playerPosition.x)}|${Math.round(playerPosition.z)}|${activeLayer}`;
+      if (frameKey !== lastPlayerGuideFrameKey) {
+        lastPlayerGuideFrameKey = frameKey;
+        applyPlayerGuideView(playerPosition, nearestFromLink);
+      }
+      const connector = appendPlayerGuideConnector(playerPosition, nearestFromLink);
+      if (connector) {
+        fragment.appendChild(connector);
+      }
       const arrow = appendCompassArrow(playerPosition, nearestFromLink, "link-arrow");
       if (arrow) {
         fragment.appendChild(arrow);
       }
+    } else {
+      lastPlayerGuideFrameKey = "";
     }
   }
 
@@ -921,6 +1025,17 @@ Object.entries(groupInputs).forEach(([groupName, input]) => {
     event.stopPropagation();
   });
   input.addEventListener("change", () => {
+    const items = enabledGroupItems(overlayGroups[groupName]);
+    const checkedCount = items.filter((item) => item.checked).length;
+    // Clicks on "−" often hit the label, not the input, so preventDefault on the input never runs.
+    // Browser then does indeterminate → checked without updating children: header true, children still mixed.
+    if (input.checked && checkedCount > 0 && checkedCount < items.length) {
+      setGroupChecked(groupName, false);
+      if (groupName === "player") {
+        panToPlayerNow();
+      }
+      return;
+    }
     setGroupChecked(groupName, input.checked);
     if (groupName === "player") {
       panToPlayerNow();
