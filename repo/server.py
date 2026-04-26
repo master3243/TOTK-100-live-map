@@ -12,6 +12,7 @@ from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from threading import Lock
 from urllib.parse import urlparse
+from urllib.parse import parse_qs
 
 
 def resource_root() -> Path:
@@ -55,6 +56,7 @@ SKY_MIN_Y = 750
 DEPTHS_MAX_Y = -100
 LOG_LIMIT = 200
 LOG_ENTRIES = []
+LOG_NEXT_ID = 1
 SERVER_LOCK = Lock()
 
 _DATA = {
@@ -113,8 +115,10 @@ def layer_for_y(y):
 
 
 def add_log(message):
+    global LOG_NEXT_ID
     timestamp = time.strftime("%H:%M:%S")
-    LOG_ENTRIES.append({"time": timestamp, "message": message})
+    LOG_ENTRIES.append({"id": LOG_NEXT_ID, "time": timestamp, "message": message})
+    LOG_NEXT_ID += 1
     del LOG_ENTRIES[:-LOG_LIMIT]
 
 
@@ -550,6 +554,18 @@ def parse_current_save():
         return payload
 
 
+def health_status():
+    with SERVER_LOCK:
+        initialize()
+        snapshot = snapshot_tracked_saves()
+        active = select_active_save(snapshot)
+        # Keep this tiny (<100B typical): client uses it as a change token.
+        # Use mtime + file name + parent folder for stability without long paths.
+        path = Path(active["path"])
+        label = f"{path.parent.name}/{path.name}"
+        return f"{label}|{active['mtime']}"
+
+
 class Handler(SimpleHTTPRequestHandler):
     def log_message(self, format, *args):
         # In PyInstaller --windowed apps, sys.stderr can be None which breaks the
@@ -568,8 +584,24 @@ class Handler(SimpleHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(body)
 
+    def send_text(self, status, body):
+        data = str(body).encode("utf-8")
+        self.send_response(status)
+        self.send_header("Content-Type", "text/plain; charset=utf-8")
+        self.send_header("Content-Length", str(len(data)))
+        self.end_headers()
+        self.wfile.write(data)
+
     def do_GET(self):
         parsed = urlparse(self.path)
+        if parsed.path == "/api/health":
+            try:
+                self.send_text(200, health_status())
+            except Exception as error:
+                add_log(f"Error: {error}")
+                logging.exception("Error handling /api/health")
+                self.send_text(500, str(error))
+            return
         if parsed.path == "/api/koroks":
             try:
                 self.send_json(200, parse_current_save())
@@ -580,6 +612,16 @@ class Handler(SimpleHTTPRequestHandler):
             return
         if parsed.path == "/api/log":
             self.send_json(200, {"entries": LOG_ENTRIES[-LOG_LIMIT:]})
+            return
+        if parsed.path == "/api/delta_log":
+            query = parse_qs(parsed.query or "")
+            try:
+                last_id = int((query.get("last_id") or ["0"])[0])
+            except ValueError:
+                last_id = 0
+            entries = [entry for entry in LOG_ENTRIES if entry.get("id", 0) > last_id]
+            latest_id = LOG_ENTRIES[-1]["id"] if LOG_ENTRIES else last_id
+            self.send_json(200, {"entries": entries, "latestId": latest_id})
             return
         return super().do_GET()
 

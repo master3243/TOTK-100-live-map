@@ -94,6 +94,7 @@ let nearestUnobtainedId = null;
 let linkNearestUnobtainedId = null;
 let didInitialLatestPan = false;
 let lastLogSignature = "";
+let lastLogId = 0;
 let pendingPanPoint = null;
 let lastPlayerPanKey = null;
 
@@ -621,6 +622,28 @@ async function refreshKoroks() {
   }
 }
 
+let lastHealthKey = null;
+
+async function refreshHealth() {
+  try {
+    const response = await fetch("/api/health", { cache: "no-store" });
+    if (!response.ok) {
+      const msg = await response.text();
+      throw new Error(msg || "Health check failed");
+    }
+
+    const key = (await response.text()).trim() || null;
+    const changed = key && key !== lastHealthKey;
+    lastHealthKey = key;
+
+    if (changed) {
+      await refreshKoroks();
+    }
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 function renderLog(entries) {
   const signature = entries.map((entry) => `${entry.time}|${entry.message}`).join("\n");
   if (signature === lastLogSignature) {
@@ -648,10 +671,28 @@ function renderLog(entries) {
 
 async function refreshLog() {
   try {
-    const response = await fetch("/api/log", { cache: "no-store" });
+    const response = await fetch(`/api/delta_log?last_id=${encodeURIComponent(lastLogId)}`, { cache: "no-store" });
     const payload = await response.json();
     if (response.ok) {
-      renderLog(payload.entries || []);
+      const entries = payload.entries || [];
+      if (entries.length) {
+        // Merge deltas into the existing rendered log by re-rendering.
+        // LOG_LIMIT is small, so this is cheap and avoids UI complexity.
+        // Fetch full log only once (first run) or when we detect a gap.
+        const maxId = Math.max(...entries.map((e) => e.id || 0));
+        lastLogId = Math.max(lastLogId, maxId, payload.latestId || 0);
+      } else if (payload.latestId) {
+        lastLogId = Math.max(lastLogId, payload.latestId);
+      }
+
+      // If we haven't rendered anything yet, or we got new entries, refresh full list once.
+      if (!lastLogSignature || entries.length) {
+        const full = await fetch("/api/log", { cache: "no-store" });
+        const fullPayload = await full.json();
+        if (full.ok) {
+          renderLog(fullPayload.entries || []);
+        }
+      }
     }
   } catch (error) {
     console.error(error);
@@ -811,7 +852,7 @@ window.addEventListener("resize", centerMap);
 
 loadLayer(activeLayer);
 syncAllGroupStates();
-refreshKoroks();
+refreshHealth();
 refreshLog();
-setInterval(refreshKoroks, 2500);
+setInterval(refreshHealth, 1000);
 setInterval(refreshLog, 2500);
