@@ -32,10 +32,8 @@ const viewLatest = document.querySelector("#viewLatest");
 const viewPlayer = document.querySelector("#viewPlayer");
 const layerButtons = document.querySelectorAll(".layer-button");
 const overlayInputs = {
-  obtainedSingle: document.querySelector("#showObtainedSingle"),
-  obtainedPair: document.querySelector("#showObtainedPair"),
-  unobtainedSingle: document.querySelector("#showUnobtainedSingle"),
-  unobtainedPair: document.querySelector("#showUnobtainedPair"),
+  obtainedKoroks: document.querySelector("#showObtainedKoroks"),
+  unobtainedKoroks: document.querySelector("#showUnobtainedKoroks"),
   guide: document.querySelector("#showGuide"),
   autoPan: document.querySelector("#autoPan"),
   playerLocation: document.querySelector("#showPlayerLocation"),
@@ -43,8 +41,7 @@ const overlayInputs = {
   playerAutoPan: document.querySelector("#playerAutoPan"),
 };
 const groupInputs = {
-  obtained: document.querySelector("#groupObtained"),
-  unobtained: document.querySelector("#groupUnobtained"),
+  korok: document.querySelector("#groupKorok"),
   player: document.querySelector("#groupPlayer"),
   completion: document.querySelector("#groupCompletion"),
 };
@@ -67,8 +64,12 @@ const completionCounts = Object.fromEntries(
   Object.keys(completionInputs).map((id) => [id, document.querySelector(`#completionCount-${id}`)]),
 );
 const overlayGroups = {
-  obtained: [overlayInputs.obtainedSingle, overlayInputs.obtainedPair],
-  unobtained: [overlayInputs.unobtainedSingle, overlayInputs.unobtainedPair, overlayInputs.guide, overlayInputs.autoPan],
+  korok: [
+    overlayInputs.obtainedKoroks,
+    overlayInputs.unobtainedKoroks,
+    overlayInputs.guide,
+    overlayInputs.autoPan,
+  ],
   player: [overlayInputs.playerLocation, overlayInputs.playerGuide, overlayInputs.playerAutoPan],
   completion: Object.values(completionInputs),
 };
@@ -92,6 +93,7 @@ let latestObtainedId = null;
 let previousLatestObtainedId = null;
 let nearestUnobtainedId = null;
 let linkNearestUnobtainedId = null;
+let linkNearestCompletionId = null;
 let didInitialLatestPan = false;
 let lastLogSignature = "";
 let lastLogId = 0;
@@ -203,22 +205,12 @@ function getVisibleMarkers(markers) {
     if (marker.layer !== activeLayer) {
       return false;
     }
-
-    const isPair = marker.kind === "carry";
-
-    if (marker.obtained && !isPair && !overlayInputs.obtainedSingle.checked) {
+    if (marker.obtained && !overlayInputs.obtainedKoroks.checked) {
       return false;
     }
-    if (marker.obtained && isPair && !overlayInputs.obtainedPair.checked) {
+    if (!marker.obtained && !overlayInputs.unobtainedKoroks.checked) {
       return false;
     }
-    if (!marker.obtained && !isPair && !overlayInputs.unobtainedSingle.checked) {
-      return false;
-    }
-    if (!marker.obtained && isPair && !overlayInputs.unobtainedPair.checked) {
-      return false;
-    }
-
     return true;
   });
 }
@@ -273,7 +265,7 @@ function setGroupChecked(groupName, checked) {
   for (const item of enabledGroupItems(overlayGroups[groupName])) {
     item.checked = checked;
   }
-  if (checked && groupName === "unobtained" && overlayInputs.autoPan.checked) {
+  if (checked && groupName === "korok" && overlayInputs.autoPan.checked) {
     overlayInputs.playerAutoPan.checked = false;
   }
   if (checked && groupName === "player" && overlayInputs.playerAutoPan.checked) {
@@ -392,6 +384,30 @@ function findNearestUnobtained(origin, markers) {
   return nearest;
 }
 
+/** Closest target for the player guide: unobtained koroks and visible missing completion pins (world XZ). */
+function findNearestPlayerGuideTarget(origin, korokCandidates, completionCandidates) {
+  let nearest = null;
+  let nearestDistance = Number.POSITIVE_INFINITY;
+
+  for (const marker of korokCandidates) {
+    const distance = Math.hypot(marker.x - origin.x, marker.z - origin.z);
+    if (distance < nearestDistance) {
+      nearest = marker;
+      nearestDistance = distance;
+    }
+  }
+
+  for (const marker of completionCandidates) {
+    const distance = Math.hypot(marker.x - origin.x, marker.z - origin.z);
+    if (distance < nearestDistance) {
+      nearest = marker;
+      nearestDistance = distance;
+    }
+  }
+
+  return nearest;
+}
+
 function arrowDirection(origin, target) {
   const dx = target.mapX - origin.mapX;
   const dy = target.mapY - origin.mapY;
@@ -460,26 +476,35 @@ function renderGuide(markers) {
   guideLayer.replaceChildren();
   nearestUnobtainedId = null;
   linkNearestUnobtainedId = null;
+  linkNearestCompletionId = null;
 
   if (!overlayInputs.guide.checked && !overlayInputs.playerGuide.checked) {
     return;
   }
 
   const visibleUnobtained = markers.filter((marker) => {
-    const isPair = marker.kind === "carry";
     return marker.layer === activeLayer
       && !marker.obtained
-      && ((!isPair && overlayInputs.unobtainedSingle.checked) || (isPair && overlayInputs.unobtainedPair.checked));
+      && overlayInputs.unobtainedKoroks.checked;
   });
 
-  if (!visibleUnobtained.length) {
-    return;
+  const visibleCompletionMissing = [];
+  for (const category of completionCategories) {
+    const input = completionInputs[category.id];
+    if (!input || !input.checked) {
+      continue;
+    }
+    for (const item of category.items) {
+      if (item.layer === activeLayer) {
+        visibleCompletionMissing.push(item);
+      }
+    }
   }
 
   const fragment = document.createDocumentFragment();
 
   const latest = markers.find((marker) => marker.id === latestObtainedId && marker.obtained && marker.layer === activeLayer);
-  if (latest && overlayInputs.guide.checked) {
+  if (latest && overlayInputs.guide.checked && visibleUnobtained.length) {
     const nearest = findNearestUnobtained(latest, visibleUnobtained);
     if (nearest) {
       nearestUnobtainedId = nearest.id;
@@ -491,9 +516,17 @@ function renderGuide(markers) {
   }
 
   if (playerPosition && playerPosition.layer === activeLayer && overlayInputs.playerGuide.checked) {
-    const nearestFromLink = findNearestUnobtained(playerPosition, visibleUnobtained);
+    const nearestFromLink = findNearestPlayerGuideTarget(
+      playerPosition,
+      visibleUnobtained,
+      visibleCompletionMissing,
+    );
     if (nearestFromLink) {
-      linkNearestUnobtainedId = nearestFromLink.id;
+      if (Object.hasOwn(nearestFromLink, "categoryId")) {
+        linkNearestCompletionId = nearestFromLink.id;
+      } else {
+        linkNearestUnobtainedId = nearestFromLink.id;
+      }
       const arrow = appendCompassArrow(playerPosition, nearestFromLink, "link-arrow");
       if (arrow) {
         fragment.appendChild(arrow);
@@ -542,7 +575,11 @@ function renderMarkers(markers = korokMarkers, categories = completionCategories
       }
 
       const element = document.createElement("span");
-      element.className = `completion-marker completion-${marker.categoryId}`;
+      const classes = ["completion-marker", `completion-${marker.categoryId}`];
+      if (marker.id === linkNearestCompletionId) {
+        classes.push("link-nearest");
+      }
+      element.className = classes.join(" ");
       element.style.left = `${marker.mapX}px`;
       element.style.top = `${marker.mapY}px`;
       element.removeAttribute("title");

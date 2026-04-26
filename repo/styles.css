@@ -498,6 +498,10 @@ h2 {
   animation: korokBounce 1.15s ease-in-out infinite;
 }
 
+.completion-marker.link-nearest {
+  animation: korokBounce 1.15s ease-in-out infinite;
+}
+
 .seed-badge {
   position: absolute;
   left: 14px;
