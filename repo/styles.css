@@ -555,16 +555,18 @@ h2 {
 }
 
 .completion-flux_construct {
-  background: url("assets/zd-icons/monster.png") center / contain no-repeat;
+  width: 34px;
+  height: 34px;
+  background: url("assets/zd-icons/square.png") center / contain no-repeat;
 }
 
 .completion-hinox {
-  background: url("assets/zd-icons/hinox.svg") center / contain no-repeat;
+  background: url("assets/zd-icons/hinox.svg") center / 88% 88% no-repeat;
 }
 
 .completion-stone_talus {
   background: url("assets/zd-icons/ore.png") center / contain no-repeat;
-  background-size: 120% 120%;
+  background-size: 148% 148%;
 }
 
 .completion-molduga {

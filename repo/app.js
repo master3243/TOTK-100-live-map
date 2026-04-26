@@ -645,7 +645,14 @@ async function refreshKoroks() {
 
 let lastHealthKey = null;
 
+function isTabVisible() {
+  return document.visibilityState === "visible";
+}
+
 async function refreshHealth() {
+  if (!isTabVisible()) {
+    return;
+  }
   try {
     const response = await fetch("/api/health", { cache: "no-store" });
     if (!response.ok) {
@@ -691,6 +698,9 @@ function renderLog(entries) {
 }
 
 async function refreshLog() {
+  if (!isTabVisible()) {
+    return;
+  }
   try {
     const response = await fetch(`/api/delta_log?last_id=${encodeURIComponent(lastLogId)}`, { cache: "no-store" });
     const payload = await response.json();
@@ -877,3 +887,10 @@ refreshHealth();
 refreshLog();
 setInterval(refreshHealth, 1000);
 setInterval(refreshLog, 2500);
+
+document.addEventListener("visibilitychange", () => {
+  if (isTabVisible()) {
+    refreshHealth();
+    refreshLog();
+  }
+});
