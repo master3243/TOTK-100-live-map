@@ -711,11 +711,18 @@ function renderMarkers(markers = korokMarkers, categories = completionCategories
 function updateCompletionCounts(categories) {
   for (const category of categories) {
     const count = completionCounts[category.id];
+    const input = completionInputs[category.id];
+    const label = input?.closest("label");
+    const remaining = category.remaining ?? 0;
+    const obtained = category.obtained ?? 0;
+    const total = category.total ?? remaining + obtained;
     if (count) {
-      const remaining = category.remaining ?? 0;
-      const obtained = category.obtained ?? 0;
-      const total = category.total ?? remaining + obtained;
       count.textContent = `${remaining} (${obtained}/${total})`;
+    }
+    if (label) {
+      const complete = remaining === 0;
+      label.classList.toggle("completion-row-complete", complete);
+      label.classList.toggle("completion-row-incomplete", !complete);
     }
   }
 }

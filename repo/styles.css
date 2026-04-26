@@ -193,6 +193,26 @@ h2 {
   padding: 2px 6px;
 }
 
+.completion-list label.completion-row-complete {
+  color: #8fdfaa;
+}
+
+.completion-list label.completion-row-complete .count-badge {
+  border-color: rgba(120, 210, 150, 0.45);
+  background: rgba(80, 160, 110, 0.18);
+  color: #b8f0cc;
+}
+
+.completion-list label.completion-row-incomplete {
+  color: #f0a0a0;
+}
+
+.completion-list label.completion-row-incomplete .count-badge {
+  border-color: rgba(230, 120, 120, 0.45);
+  background: rgba(200, 70, 70, 0.16);
+  color: #ffc8c8;
+}
+
 .log-panel {
   margin-top: auto;
 }
