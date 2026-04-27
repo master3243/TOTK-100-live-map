@@ -567,6 +567,24 @@ h2 {
 
 .completion-caves {
   background: url("assets/zd-icons/cave.png") center / contain no-repeat;
+  z-index: 2;
+}
+
+.completion-towers {
+  background: url("assets/zd-icons/square.png") center / contain no-repeat;
+}
+
+.completion-shrines {
+  background: url("assets/zd-icons/treasure.png") center / contain no-repeat;
+}
+
+.completion-lightroots {
+  background: url("assets/zd-icons/leaf.png") center / contain no-repeat;
+}
+
+.completion-bubbulfrogs {
+  background: url("assets/zd-icons/monster.png") center / contain no-repeat;
+  z-index: 1;
 }
 
 .completion-wells {
@@ -587,6 +605,16 @@ h2 {
 
 .completion-yiga_schematic {
   background: url("assets/zd-icons/schematic.png") center / contain no-repeat;
+}
+
+.completion-schema_stone {
+  background: url("assets/zd-icons/schematic.png") center / contain no-repeat;
+}
+
+.completion-dungeon_bosses {
+  width: 30px;
+  height: 30px;
+  background: url("assets/zd-icons/skull.png") center / contain no-repeat;
 }
 
 .completion-flux_construct {
@@ -628,6 +656,14 @@ h2 {
   background:
     radial-gradient(circle, rgba(191, 165, 255, 0.84) 0 38%, transparent 39%),
     url("assets/zd-icons/sageswill.png") center / contain no-repeat;
+}
+
+.completion-general_locations {
+  width: 20px;
+  height: 20px;
+  background: url("assets/zd-icons/objective.png") center / contain no-repeat;
+  opacity: 1;
+  filter: drop-shadow(0 0 4px rgba(255, 246, 210, 0.95)) drop-shadow(0 0 2px rgba(12, 14, 12, 0.9));
 }
 
 /* Points east at 0rad; JS sets --compass-rotate; --iconScale matches korok/link markers. */

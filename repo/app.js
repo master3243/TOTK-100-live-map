@@ -28,6 +28,7 @@ const saveStatus = document.querySelector("#saveStatus");
 const seedCount = document.querySelector("#seedCount");
 const locationCount = document.querySelector("#locationCount");
 const completionistSummary = document.querySelector("#completionistSummary");
+const compendiumSummary = document.querySelector("#compendiumSummary");
 const logEntries = document.querySelector("#logEntries");
 const viewPlayer = document.querySelector("#viewPlayer");
 const layerButtons = document.querySelectorAll(".layer-button");
@@ -44,8 +45,13 @@ const groupInputs = {
   completion: document.querySelector("#groupCompletion"),
 };
 const completionInputs = {
+  towers: document.querySelector("#completion-towers"),
+  shrines: document.querySelector("#completion-shrines"),
+  lightroots: document.querySelector("#completion-lightroots"),
   caves: document.querySelector("#completion-caves"),
+  bubbulfrogs: document.querySelector("#completion-bubbulfrogs"),
   hudson_sign: document.querySelector("#completion-hudson_sign"),
+  dungeon_bosses: document.querySelector("#completion-dungeon_bosses"),
   flux_construct: document.querySelector("#completion-flux_construct"),
   hinox: document.querySelector("#completion-hinox"),
   stone_talus: document.querySelector("#completion-stone_talus"),
@@ -57,6 +63,8 @@ const completionInputs = {
   yiga_schematic: document.querySelector("#completion-yiga_schematic"),
   old_map: document.querySelector("#completion-old_map"),
   sage_will: document.querySelector("#completion-sage_will"),
+  schema_stone: document.querySelector("#completion-schema_stone"),
+  general_locations: document.querySelector("#completion-general_locations"),
 };
 const completionCounts = Object.fromEntries(
   Object.keys(completionInputs).map((id) => [id, document.querySelector(`#completionCount-${id}`)]),
@@ -806,6 +814,11 @@ function updateSaveSummary(payload) {
   const completedCategories = categories.filter((c) => (c.remaining ?? 0) === 0).length;
   completionistSummary.textContent =
     totalCategories > 0 ? `${completedCategories} / ${totalCategories}` : "-- / --";
+
+  const compendium = (payload.completionStats || []).find((stat) => stat.id === "compendium");
+  compendiumSummary.textContent = compendium
+    ? `${compendium.obtained} / ${compendium.total}`
+    : "-- / --";
 }
 
 function updatePlayerAutoPan(payload) {
@@ -857,6 +870,7 @@ async function refreshKoroks() {
     seedCount.textContent = "-- / --";
     locationCount.textContent = "-- / --";
     completionistSummary.textContent = "-- / --";
+    compendiumSummary.textContent = "-- / --";
     console.error(error);
   }
 }

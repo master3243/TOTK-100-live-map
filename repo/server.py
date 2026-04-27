@@ -188,10 +188,15 @@ def initialize():
         if category["kind"] == "bool"
         for item in category["items"]
     }
+    completion_stat_hashes = {
+        int(item["value"], 16)
+        for stat in completion_data.get("stats", [])
+        for item in stat["items"]
+    }
 
     _DATA["korok_data"] = korok_data
     _DATA["completion_data"] = completion_data
-    _DATA["tracked_hashes"] = korok_hashes | completion_bool_hashes
+    _DATA["tracked_hashes"] = korok_hashes | completion_bool_hashes | completion_stat_hashes
     _DATA["tracked_save_paths"] = scan_tracked_saves()
     _DATA["initialized"] = True
 
@@ -405,6 +410,8 @@ def build_completion(values, guid_values):
     for category in completion_data["categories"]:
         items = []
         obtained_count = 0
+        target_value = category.get("targetValue")
+        target_raw = int(target_value, 16) if target_value else None
         for item in category["items"]:
             if category["kind"] == "guid":
                 obtained = int(item["value"]) in guid_values
@@ -412,7 +419,7 @@ def build_completion(values, guid_values):
             else:
                 hash_value = int(item["value"], 16)
                 raw = values.get(hash_value, 0)
-                obtained = raw != 0
+                obtained = raw == target_raw if target_raw is not None else raw != 0
                 raw_value = f"{raw:08x}"
 
             if obtained:
@@ -435,9 +442,42 @@ def build_completion(values, guid_values):
             "obtained": obtained_count,
             "remaining": total - obtained_count,
             "items": items,
+            "defaultVisible": category.get("defaultVisible", True),
             "sourceCounts": category.get("sourceCounts", {}),
         })
     return categories
+
+
+def build_completion_stats(values):
+    completion_data = _DATA["completion_data"] or {"stats": []}
+    stats = []
+    for stat in completion_data.get("stats", []):
+        target_value = stat.get("targetValue")
+        target_raw = int(target_value, 16) if target_value else None
+        obtained_count = 0
+        for item in stat["items"]:
+            hash_value = int(item["value"], 16)
+            raw = values.get(hash_value, 0)
+            if stat["kind"] == "reverse" and target_raw is not None:
+                obtained = raw != target_raw
+            elif target_raw is not None:
+                obtained = raw == target_raw
+            else:
+                obtained = raw != 0
+            if obtained:
+                obtained_count += 1
+
+        total = len(stat["items"])
+        stats.append({
+            "id": stat["id"],
+            "label": stat["label"],
+            "kind": stat["kind"],
+            "total": total,
+            "obtained": obtained_count,
+            "remaining": total - obtained_count,
+            "sourceCounts": stat.get("sourceCounts", {}),
+        })
+    return stats
 
 
 def update_state(markers, save_modified, active_save_path):
@@ -493,6 +533,7 @@ def parse_current_save():
         player_position = parse_player_position(data)
         markers = build_markers(values)
         completion = build_completion(values, guid_values)
+        completion_stats = build_completion_stats(values)
         obtained_markers = [marker for marker in markers if marker["obtained"]]
         update_state(markers, save_modified, save_path)
         add_log(f"Parsed {save_label(save_path)}: {sum(marker['seedValue'] for marker in obtained_markers)}/1000 seeds")
@@ -517,6 +558,7 @@ def parse_current_save():
             },
             "markers": markers,
             "completion": completion,
+            "completionStats": completion_stats,
         }
         PAYLOAD_CACHE["mtimes"] = current_mtimes
         PAYLOAD_CACHE["payload"] = payload

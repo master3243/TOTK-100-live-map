@@ -17,9 +17,9 @@
         <section class="panel" aria-label="Map layers">
           <h2>Map Layer</h2>
           <div class="segmented" role="group" aria-label="Choose map layer">
+            <button class="layer-button" type="button" data-layer="depths">Depths</button>
             <button class="layer-button active" type="button" data-layer="surface">Surface</button>
             <button class="layer-button" type="button" data-layer="sky">Sky</button>
-            <button class="layer-button" type="button" data-layer="depths">Depths</button>
           </div>
         </section>
 
@@ -55,6 +55,10 @@
             <div>
               <dt>Completionist</dt>
               <dd id="completionistSummary">-- / --</dd>
+            </div>
+            <div>
+              <dt>Compendium</dt>
+              <dd id="compendiumSummary">-- / --</dd>
             </div>
           </dl>
         </section>
@@ -108,14 +112,39 @@
               </summary>
               <div class="check-list completion-list">
                 <label>
+                  <input id="completion-towers" type="checkbox" checked>
+                  <span>Towers</span>
+                  <span class="count-badge" id="completionCount-towers">0</span>
+                </label>
+                <label>
+                  <input id="completion-shrines" type="checkbox" checked>
+                  <span>Shrines</span>
+                  <span class="count-badge" id="completionCount-shrines">0</span>
+                </label>
+                <label>
+                  <input id="completion-lightroots" type="checkbox" checked>
+                  <span>Lightroots</span>
+                  <span class="count-badge" id="completionCount-lightroots">0</span>
+                </label>
+                <label>
                   <input id="completion-caves" type="checkbox" checked>
                   <span>Caves</span>
                   <span class="count-badge" id="completionCount-caves">0</span>
                 </label>
                 <label>
+                  <input id="completion-bubbulfrogs" type="checkbox" checked>
+                  <span>Bubbulfrogs</span>
+                  <span class="count-badge" id="completionCount-bubbulfrogs">0</span>
+                </label>
+                <label>
                   <input id="completion-hudson_sign" type="checkbox" checked>
                   <span>Hudson Sign</span>
                   <span class="count-badge" id="completionCount-hudson_sign">0</span>
+                </label>
+                <label>
+                  <input id="completion-dungeon_bosses" type="checkbox" checked>
+                  <span>Depths Dungeon Bosses</span>
+                  <span class="count-badge" id="completionCount-dungeon_bosses">0</span>
                 </label>
                 <label>
                   <input id="completion-flux_construct" type="checkbox" checked>
@@ -171,6 +200,16 @@
                   <input id="completion-sage_will" type="checkbox" checked>
                   <span>Sage's Will</span>
                   <span class="count-badge" id="completionCount-sage_will">0</span>
+                </label>
+                <label>
+                  <input id="completion-schema_stone" type="checkbox" checked>
+                  <span>Schema Stones</span>
+                  <span class="count-badge" id="completionCount-schema_stone">0</span>
+                </label>
+                <label>
+                  <input id="completion-general_locations" type="checkbox" checked>
+                  <span>General Locations</span>
+                  <span class="count-badge" id="completionCount-general_locations">0</span>
                 </label>
               </div>
             </details>

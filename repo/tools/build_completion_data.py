@@ -11,8 +11,13 @@ LAYER_FIX = 500
 
 
 CATEGORIES = [
+    {"id": "towers", "label": "Towers", "hashes": "TOWERS_ACTIVATED", "coords": "TOWERS", "kind": "bool"},
+    {"id": "shrines", "label": "Shrines", "hashes": "SHRINES_STATUS", "coords": "SHRINES", "kind": "bool", "target": "Clear"},
+    {"id": "lightroots", "label": "Lightroots", "hashes": "LIGHTROOTS_STATUS", "coords": "LIGHTROOTS", "kind": "bool", "target": "Open"},
     {"id": "caves", "label": "Caves", "hashes": "LOCATION_CAVES_VISITED2", "coords": "LOCATION_CAVES", "kind": "bool"},
+    {"id": "bubbulfrogs", "label": "Bubbulfrogs", "hashes": "BUBBULS_GUIDS", "coords": "LOCATION_BUBBULS", "kind": "guid"},
     {"id": "hudson_sign", "label": "Hudson Sign", "hashes": "ADDISON_COMPLETED", "coords": "ADDISON", "kind": "guid"},
+    {"id": "dungeon_bosses", "label": "Depths Dungeon Bosses", "hashes": "BOSSES_REMATCH_DEFEATED", "coords": "BOSSES_REMATCH", "kind": "bool"},
     {"id": "flux_construct", "label": "Flux Constructs", "hashes": "BOSSES_FLUX_CONSTRUCT_DEFEATED", "coords": "BOSSES_FLUX_CONSTRUCT", "kind": "bool"},
     {"id": "hinox", "label": "Hinox", "hashes": "BOSSES_HINOXES_DEFEATED", "coords": "BOSSES_HINOXES", "kind": "bool"},
     {"id": "stone_talus", "label": "Stone Talus", "hashes": "BOSSES_TALUSES_DEFEATED", "coords": "BOSSES_TALUSES", "kind": "bool"},
@@ -21,9 +26,16 @@ CATEGORIES = [
     {"id": "gleeok", "label": "Gleeok", "hashes": "BOSSES_GLEEOKS_DEFEATED", "coords": "BOSSES_GLEEOKS", "kind": "bool"},
     {"id": "wells", "label": "Wells", "hashes": "LOCATION_WELLS_VISITED2", "coords": "LOCATION_WELLS", "kind": "bool"},
     {"id": "chasms", "label": "Chasms", "hashes": "LOCATION_CHASMS_VISITED2", "coords": "LOCATION_CHASMS", "kind": "bool"},
+    {"id": "schema_stone", "label": "Schema Stones", "hashes": "SCHEMATICS_STONE_FOUND", "coords": "SCHEMATICS_STONE", "kind": "bool"},
     {"id": "yiga_schematic", "label": "Yiga Schematic", "hashes": "SCHEMATICS_YIGA_FOUND", "coords": "SCHEMATICS_YIGA", "kind": "bool"},
     {"id": "old_map", "label": "Old Map", "hashes": "TREASURE_MAPS_FOUND", "coords": "TREASURE_MAPS", "kind": "bool"},
     {"id": "sage_will", "label": "Sage's Will", "hashes": "SAGE_WILLS_FOUND", "coords": "SAGE_WILLS", "kind": "guid"},
+    {"id": "general_locations", "label": "General Locations", "hashes": "LOCATIONS_VISITED", "coords": "LOCATIONS", "kind": "bool"},
+]
+
+
+STATS = [
+    {"id": "compendium", "label": "Compendium", "hashes": "COMPENDIUM_STATUS", "kind": "reverse", "target": "Unopened"},
 ]
 
 
@@ -161,6 +173,14 @@ def layer_for(y):
     return "surface"
 
 
+def target_value(value):
+    if value is None:
+        return None
+    if isinstance(value, str):
+        return f"{murmur3_32(value):08x}"
+    return f"{int(value):08x}"
+
+
 def main():
     completism = (REFERENCES / "zelda-totk.completism.js").read_text(encoding="utf-8")
     coordinates = (REFERENCES / "zelda-totk.coordinates.js").read_text(encoding="utf-8")
@@ -185,13 +205,28 @@ def main():
             "id": category["id"],
             "label": category["label"],
             "kind": category["kind"],
+            "targetValue": target_value(category.get("target")),
+            "defaultVisible": category.get("defaultVisible", True),
             "items": items,
             "sourceCounts": {"ids": len(ids), "coordinates": len(coords)},
         })
-    OUTPUT.write_text(json.dumps({"categories": categories}, indent=2), encoding="utf-8")
+    stats = []
+    for stat in STATS:
+        ids = parse_hashes(completism, stat["hashes"], "bool")
+        stats.append({
+            "id": stat["id"],
+            "label": stat["label"],
+            "kind": stat["kind"],
+            "targetValue": target_value(stat.get("target")),
+            "items": [{"id": f"{stat['id']}-{index + 1:03d}", "value": value} for index, value in enumerate(ids)],
+            "sourceCounts": {"ids": len(ids)},
+        })
+    OUTPUT.write_text(json.dumps({"categories": categories, "stats": stats}, indent=2), encoding="utf-8")
     print(f"Wrote {OUTPUT}")
     for category in categories:
         print(category["id"], len(category["items"]), category["sourceCounts"])
+    for stat in stats:
+        print(stat["id"], len(stat["items"]), stat["sourceCounts"])
 
 
 if __name__ == "__main__":
