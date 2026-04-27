@@ -410,6 +410,7 @@ h2 {
   background: rgba(18, 24, 18, 0.72);
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.7), 0 0 18px rgba(104, 212, 111, 0.84);
   pointer-events: auto;
+  cursor: pointer;
   transform: translate(-50%, -50%) scale(var(--iconScale, 1));
 }
 
@@ -481,6 +482,7 @@ h2 {
   background: url("assets/zd-icons/korok.png") center / contain no-repeat;
   opacity: 0.92;
   pointer-events: auto;
+  cursor: pointer;
   transform: translate(-50%, -50%) scale(var(--iconScale, 1));
 }
 
@@ -541,6 +543,7 @@ h2 {
   background: url("assets/zd-icons/objective.png") center / contain no-repeat;
   opacity: 0.86;
   pointer-events: auto;
+  cursor: pointer;
   transform: translate(-50%, -50%) scale(var(--iconScale, 1));
 }
 
@@ -658,7 +661,33 @@ h2 {
   color: var(--text);
   font-size: 12px;
   line-height: 1.35;
-  pointer-events: none;
+  pointer-events: auto;
+  cursor: default;
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.map-tooltip .tooltip-close {
+  position: absolute;
+  right: 8px;
+  top: 7px;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: rgba(255, 255, 255, 0.82);
+  font: inherit;
+  font-size: 13px;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+.map-tooltip .tooltip-close:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.22);
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .map-tooltip strong {

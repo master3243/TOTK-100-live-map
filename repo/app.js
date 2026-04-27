@@ -338,16 +338,123 @@ function positionTooltip(event) {
   mapTooltip.style.top = `${Math.max(8, top)}px`;
 }
 
+let isTooltipPinned = false;
+let tooltipPinnedAtMs = 0;
+let lastDragEndAtMs = 0;
+let didPanThisGesture = false;
+let lastPanEndAtMs = 0;
+
+function setTooltipPinned(pinned) {
+  isTooltipPinned = pinned;
+  if (!pinned) {
+    mapTooltip.hidden = true;
+    mapTooltip.classList.remove("pinned");
+  } else {
+    mapTooltip.hidden = false;
+    mapTooltip.classList.add("pinned");
+  }
+}
+
+function setTooltipContent(html, { pinned = false } = {}) {
+  if (pinned) {
+    mapTooltip.innerHTML = `<button class="tooltip-close" type="button" aria-label="Close tooltip" title="Close">×</button>${html}`;
+  } else {
+    mapTooltip.innerHTML = html;
+  }
+}
+
 function attachTooltip(element, html) {
   element.addEventListener("pointerenter", (event) => {
-    mapTooltip.innerHTML = html;
+    if (isTooltipPinned) {
+      return;
+    }
+    setTooltipContent(html, { pinned: false });
     positionTooltip(event);
   });
-  element.addEventListener("pointermove", positionTooltip);
+  element.addEventListener("pointermove", (event) => {
+    if (isTooltipPinned) {
+      return;
+    }
+    positionTooltip(event);
+  });
   element.addEventListener("pointerleave", () => {
-    mapTooltip.hidden = true;
+    if (isTooltipPinned) {
+      return;
+    }
+    // Hover tooltips are intentionally "sticky" and do not dismiss on leave.
+    // They update when hovering another marker or dismiss when clicking elsewhere.
+  });
+  element.addEventListener("pointerdown", (event) => {
+    // Pin tooltip on press; prevents the viewport drag handler from swallowing the click.
+    event.stopPropagation();
+    event.preventDefault();
+    tooltipPinnedAtMs = performance.now();
+    setTooltipContent(html, { pinned: true });
+    setTooltipPinned(true);
+    positionTooltip(event);
   });
 }
+
+// Close pinned tooltip when clicking outside it.
+document.addEventListener("click", (event) => {
+  if (mapTooltip.hidden) {
+    return;
+  }
+  // After panning, browsers often fire a click on mouseup; don't treat that as a dismiss action.
+  if (performance.now() - lastPanEndAtMs < 350) {
+    return;
+  }
+  // Some browsers still dispatch a click on mouseup after we pin on pointerdown.
+  // Ignore those immediate clicks so the tooltip doesn't instantly close.
+  if (isTooltipPinned && performance.now() - tooltipPinnedAtMs < 300) {
+    return;
+  }
+  const target = event.target;
+  if (target && mapTooltip.contains(target)) {
+    return;
+  }
+  if (isTooltipPinned) {
+    setTooltipPinned(false);
+  } else {
+    mapTooltip.hidden = true;
+  }
+});
+
+// Close button inside pinned tooltip.
+mapTooltip.addEventListener("click", (event) => {
+  const target = event.target;
+  if (target instanceof HTMLElement && target.closest(".tooltip-close")) {
+    event.preventDefault();
+    event.stopPropagation();
+    setTooltipPinned(false);
+  }
+});
+
+// Tooltip should block map panning, but still allow text selection.
+mapTooltip.addEventListener("pointerdown", (event) => {
+  event.stopPropagation();
+});
+mapTooltip.addEventListener("pointermove", (event) => {
+  event.stopPropagation();
+});
+mapTooltip.addEventListener("pointerup", (event) => {
+  event.stopPropagation();
+});
+mapTooltip.addEventListener("pointercancel", (event) => {
+  event.stopPropagation();
+});
+
+// Escape closes pinned or sticky hover tooltip.
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape") {
+    return;
+  }
+  if (mapTooltip.hidden) {
+    return;
+  }
+  event.preventDefault();
+  setTooltipPinned(false);
+});
 
 function findNearestUnobtained(origin, markers) {
   let nearest = null;
@@ -832,6 +939,11 @@ mapImage.addEventListener("load", () => {
     pendingPanPoint = null;
     return;
   }
+
+  // If save data arrived before the image loaded, the guide arrow may have been skipped
+  // (it requires imageWidth/imageHeight). Re-render now that the map is ready.
+  renderGuide(korokMarkers);
+  renderMarkers();
 });
 
 mapImage.addEventListener("error", () => {
@@ -848,6 +960,7 @@ viewport.addEventListener("pointerdown", (event) => {
   viewport.setPointerCapture(event.pointerId);
   activePointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
   viewport.classList.add("dragging");
+  didPanThisGesture = false;
 
   if (activePointers.size === 1) {
     dragStart = {
@@ -883,6 +996,9 @@ viewport.addEventListener("pointermove", (event) => {
   activePointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
 
   if (activePointers.size === 1 && dragStart) {
+    if (Math.hypot(event.clientX - dragStart.x, event.clientY - dragStart.y) > 3) {
+      didPanThisGesture = true;
+    }
     offsetX = dragStart.offsetX + event.clientX - dragStart.x;
     offsetY = dragStart.offsetY + event.clientY - dragStart.y;
     updateTransform();
@@ -900,6 +1016,12 @@ viewport.addEventListener("pointermove", (event) => {
 function endPointer(event) {
   activePointers.delete(event.pointerId);
   viewport.classList.toggle("dragging", activePointers.size > 0);
+  if (!activePointers.size) {
+    lastDragEndAtMs = performance.now();
+    if (didPanThisGesture) {
+      lastPanEndAtMs = lastDragEndAtMs;
+    }
+  }
   dragStart = null;
   pinchStart = null;
 
