@@ -1,4 +1,4 @@
-const layers = {
+﻿const layers = {
   surface: {
     label: "surface",
     src: "assets/surface.jpg",
@@ -21,6 +21,7 @@ const mapImage = document.querySelector("#mapImage");
 const guideLayer = document.querySelector("#guideLayer");
 const markerLayer = document.querySelector("#markerLayer");
 const mapTooltip = document.querySelector("#mapTooltip");
+const statTooltip = document.querySelector("#statTooltip");
 const loadingState = document.querySelector("#loadingState");
 const zoomValue = document.querySelector("#zoomValue");
 const cursorValue = document.querySelector("#cursorValue");
@@ -30,9 +31,12 @@ const locationCount = document.querySelector("#locationCount");
 const completionistSummary = document.querySelector("#completionistSummary");
 const compendiumSummary = document.querySelector("#compendiumSummary");
 const pristineWeaponsSummary = document.querySelector("#pristineWeaponsSummary");
+const fabricsSummary = document.querySelector("#fabricsSummary");
 const logEntries = document.querySelector("#logEntries");
 const viewPlayer = document.querySelector("#viewPlayer");
 const layerButtons = document.querySelectorAll(".layer-button");
+let currentPristineWeaponsStat = null;
+let currentFabricsStat = null;
 const overlayInputs = {
   obtainedKoroks: document.querySelector("#showObtainedKoroks"),
   unobtainedKoroks: document.querySelector("#showUnobtainedKoroks"),
@@ -346,6 +350,32 @@ function playerTooltip(position) {
   ]);
 }
 
+function pristineWeaponsTooltip(stat) {
+  return statListTooltip(stat, "Pristine Weapons", "All pristine weapons unlocked.");
+}
+
+function fabricsTooltip(stat) {
+  return statListTooltip(stat, "Fabrics", "All fabrics collected.");
+}
+
+function statListTooltip(stat, title, completeText) {
+  if (!stat) {
+    return tooltipRows(title, [
+      { label: "Status", value: "No save data loaded" },
+    ]);
+  }
+  const missing = stat.missing || [];
+  const rows = tooltipRows(title, [
+    { label: "Collected", value: `${stat.obtained} / ${stat.total}` },
+    { label: "Left", value: stat.remaining },
+  ]);
+  if (!missing.length) {
+    return `${rows}<p class="tooltip-note">${escapeHtml(completeText)}</p>`;
+  }
+  const items = missing.map((item) => `<li>${escapeHtml(item.label || item.id)}</li>`).join("");
+  return `${rows}<div class="tooltip-section-title">Still left</div><ul class="tooltip-list">${items}</ul>`;
+}
+
 function positionTooltip(event) {
   const rect = viewport.getBoundingClientRect();
   const gap = 14;
@@ -365,12 +395,33 @@ function positionTooltip(event) {
   mapTooltip.style.top = `${Math.max(8, top)}px`;
 }
 
+function positionStatTooltip(event) {
+  const gap = 14;
+  statTooltip.hidden = false;
+  const tooltipRect = statTooltip.getBoundingClientRect();
+  let left = event.clientX + gap;
+  let top = event.clientY + gap;
+
+  if (left + tooltipRect.width > window.innerWidth - 8) {
+    left = event.clientX - tooltipRect.width - gap;
+  }
+  if (top + tooltipRect.height > window.innerHeight - 8) {
+    top = window.innerHeight - tooltipRect.height - 8;
+  }
+
+  statTooltip.style.left = `${Math.max(8, left)}px`;
+  statTooltip.style.top = `${Math.max(8, top)}px`;
+}
+
 let isTooltipPinned = false;
+let isStatTooltipPinned = false;
 let tooltipPinnedAtMs = 0;
+let statTooltipPinnedAtMs = 0;
 let lastDragEndAtMs = 0;
 let didPanThisGesture = false;
 let lastPanEndAtMs = 0;
 let tooltipPinnedOwner = null;
+let statTooltipPinnedOwner = null;
 let tooltipPinCandidate = null;
 
 function setTooltipPinned(pinned) {
@@ -390,9 +441,32 @@ function setTooltipPinned(pinned) {
 
 function setTooltipContent(html, { pinned = false } = {}) {
   if (pinned) {
-    mapTooltip.innerHTML = `<button class="tooltip-close" type="button" aria-label="Close tooltip" title="Close">×</button>${html}`;
+    mapTooltip.innerHTML = `<button class="tooltip-close" type="button" aria-label="Close tooltip" title="Close">&times;</button>${html}`;
   } else {
     mapTooltip.innerHTML = html;
+  }
+}
+
+function setStatTooltipPinned(pinned) {
+  isStatTooltipPinned = pinned;
+  if (!pinned) {
+    if (statTooltipPinnedOwner instanceof HTMLElement) {
+      statTooltipPinnedOwner.classList.remove("tooltip-pinned-owner");
+    }
+    statTooltipPinnedOwner = null;
+    statTooltip.hidden = true;
+    statTooltip.classList.remove("pinned");
+  } else {
+    statTooltip.hidden = false;
+    statTooltip.classList.add("pinned");
+  }
+}
+
+function setStatTooltipContent(html, { pinned = false } = {}) {
+  if (pinned) {
+    statTooltip.innerHTML = `<button class="tooltip-close" type="button" aria-label="Close tooltip" title="Close">&times;</button>${html}`;
+  } else {
+    statTooltip.innerHTML = html;
   }
 }
 
@@ -434,8 +508,75 @@ function attachTooltip(element, html) {
   });
 }
 
+function attachStatTooltip(element, getHtml) {
+  element.addEventListener("pointerenter", (event) => {
+    if (isStatTooltipPinned) {
+      return;
+    }
+    setStatTooltipContent(getHtml(), { pinned: false });
+    positionStatTooltip(event);
+  });
+  element.addEventListener("pointermove", (event) => {
+    if (isStatTooltipPinned) {
+      return;
+    }
+    positionStatTooltip(event);
+  });
+  element.addEventListener("pointerleave", () => {
+    if (isStatTooltipPinned) {
+      return;
+    }
+    statTooltip.hidden = true;
+  });
+  element.addEventListener("focus", () => {
+    if (isStatTooltipPinned) {
+      return;
+    }
+    setStatTooltipContent(getHtml(), { pinned: false });
+    const rect = element.getBoundingClientRect();
+    positionStatTooltip({ clientX: rect.right, clientY: rect.top });
+  });
+  element.addEventListener("blur", () => {
+    if (isStatTooltipPinned) {
+      return;
+    }
+    statTooltip.hidden = true;
+  });
+  element.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    if (statTooltipPinnedOwner instanceof HTMLElement) {
+      statTooltipPinnedOwner.classList.remove("tooltip-pinned-owner");
+    }
+    statTooltipPinnedOwner = element;
+    statTooltipPinnedOwner.classList.add("tooltip-pinned-owner");
+    statTooltipPinnedAtMs = performance.now();
+    setStatTooltipContent(getHtml(), { pinned: true });
+    setStatTooltipPinned(true);
+    positionStatTooltip(event);
+  });
+}
+
 // Close pinned tooltip when clicking outside it.
 document.addEventListener("click", (event) => {
+  if (!statTooltip.hidden) {
+    if (isStatTooltipPinned && performance.now() - statTooltipPinnedAtMs < 300) {
+      return;
+    }
+    const target = event.target;
+    if (target && statTooltip.contains(target)) {
+      return;
+    }
+    if (target instanceof HTMLElement && target.closest(".hover-stat")) {
+      return;
+    }
+    if (isStatTooltipPinned) {
+      setStatTooltipPinned(false);
+    } else {
+      statTooltip.hidden = true;
+    }
+  }
+
   if (mapTooltip.hidden) {
     return;
   }
@@ -469,6 +610,15 @@ mapTooltip.addEventListener("click", (event) => {
   }
 });
 
+statTooltip.addEventListener("click", (event) => {
+  const target = event.target;
+  if (target instanceof HTMLElement && target.closest(".tooltip-close")) {
+    event.preventDefault();
+    event.stopPropagation();
+    setStatTooltipPinned(false);
+  }
+});
+
 // Tooltip should block map panning, but still allow text selection.
 mapTooltip.addEventListener("pointerdown", (event) => {
   event.stopPropagation();
@@ -482,17 +632,37 @@ mapTooltip.addEventListener("pointerup", (event) => {
 mapTooltip.addEventListener("pointercancel", (event) => {
   event.stopPropagation();
 });
+mapTooltip.addEventListener("wheel", (event) => {
+  event.stopPropagation();
+}, { passive: true });
+
+statTooltip.addEventListener("pointerdown", (event) => {
+  event.stopPropagation();
+});
+statTooltip.addEventListener("pointermove", (event) => {
+  event.stopPropagation();
+});
+statTooltip.addEventListener("pointerup", (event) => {
+  event.stopPropagation();
+});
+statTooltip.addEventListener("pointercancel", (event) => {
+  event.stopPropagation();
+});
+statTooltip.addEventListener("wheel", (event) => {
+  event.stopPropagation();
+}, { passive: true });
 
 // Escape closes pinned or sticky hover tooltip.
 document.addEventListener("keydown", (event) => {
   if (event.key !== "Escape") {
     return;
   }
-  if (mapTooltip.hidden) {
+  if (mapTooltip.hidden && statTooltip.hidden) {
     return;
   }
   event.preventDefault();
   setTooltipPinned(false);
+  setStatTooltipPinned(false);
 });
 
 function findNearestUnobtained(origin, markers) {
@@ -822,6 +992,7 @@ function updateSaveSummary(payload) {
     : "-- / --";
 
   const pristineWeapons = (payload.completionStats || []).find((stat) => stat.id === "pristine_weapons");
+  currentPristineWeaponsStat = pristineWeapons || null;
   pristineWeaponsSummary.textContent = pristineWeapons
     ? `${pristineWeapons.obtained} / ${pristineWeapons.total}`
     : "-- / --";
@@ -831,8 +1002,22 @@ function updateSaveSummary(payload) {
       ? `Still locked:\n${missingWeapons.map((item) => item.label).join("\n")}`
       : "All pristine weapons unlocked"
     : "No pristine weapon data loaded";
-  pristineWeaponsSummary.title = hoverText;
+  pristineWeaponsSummary.removeAttribute("title");
   pristineWeaponsSummary.setAttribute("aria-label", hoverText);
+
+  const fabrics = (payload.completionStats || []).find((stat) => stat.id === "fabrics");
+  currentFabricsStat = fabrics || null;
+  fabricsSummary.textContent = fabrics
+    ? `${fabrics.obtained} / ${fabrics.total}`
+    : "-- / --";
+  const missingFabrics = fabrics?.missing || [];
+  const fabricsHoverText = fabrics
+    ? missingFabrics.length
+      ? `Still left:\n${missingFabrics.map((item) => item.label).join("\n")}`
+      : "All fabrics collected"
+    : "No fabric data loaded";
+  fabricsSummary.removeAttribute("title");
+  fabricsSummary.setAttribute("aria-label", fabricsHoverText);
 }
 
 function updatePlayerAutoPan(payload) {
@@ -885,9 +1070,14 @@ async function refreshKoroks() {
     locationCount.textContent = "-- / --";
     completionistSummary.textContent = "-- / --";
     compendiumSummary.textContent = "-- / --";
+    currentPristineWeaponsStat = null;
+    currentFabricsStat = null;
     pristineWeaponsSummary.textContent = "-- / --";
-    pristineWeaponsSummary.title = "No pristine weapon data loaded";
-    pristineWeaponsSummary.setAttribute("aria-label", pristineWeaponsSummary.title);
+    fabricsSummary.textContent = "-- / --";
+    pristineWeaponsSummary.removeAttribute("title");
+    fabricsSummary.removeAttribute("title");
+    pristineWeaponsSummary.setAttribute("aria-label", "No pristine weapon data loaded");
+    fabricsSummary.setAttribute("aria-label", "No fabric data loaded");
     console.error(error);
   }
 }
@@ -1209,6 +1399,8 @@ Object.entries(groupInputs).forEach(([groupName, input]) => {
 });
 
 viewPlayer.addEventListener("click", viewPlayerLocation);
+attachStatTooltip(pristineWeaponsSummary, () => pristineWeaponsTooltip(currentPristineWeaponsStat));
+attachStatTooltip(fabricsSummary, () => fabricsTooltip(currentFabricsStat));
 
 window.addEventListener("resize", preserveMapCenterOnViewportResize);
 

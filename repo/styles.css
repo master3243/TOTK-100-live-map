@@ -300,6 +300,15 @@ h2 {
   text-underline-offset: 3px;
 }
 
+.stats dd.hover-stat.tooltip-pinned-owner {
+  color: var(--accent);
+  text-decoration-style: solid;
+}
+
+.stats dd.hover-stat.tooltip-pinned-owner::after {
+  content: none;
+}
+
 .quiet {
   color: var(--muted);
   font-size: 14px;
@@ -727,6 +736,14 @@ h2 {
   -webkit-user-select: none;
 }
 
+.stat-tooltip {
+  position: fixed;
+  z-index: 30;
+  max-width: min(340px, calc(100vw - 16px));
+  max-height: min(420px, calc(100vh - 16px));
+  overflow: auto;
+}
+
 .map-tooltip.pinned {
   user-select: text;
   -webkit-user-select: text;
@@ -806,6 +823,28 @@ h2 {
 .map-tooltip .tooltip-link:hover {
   border-color: rgba(215, 179, 90, 0.5);
   background: rgba(215, 179, 90, 0.18);
+}
+
+.map-tooltip .tooltip-note {
+  margin: 8px 0 0;
+  color: var(--text);
+}
+
+.map-tooltip .tooltip-section-title {
+  display: block;
+  margin-top: 10px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.map-tooltip .tooltip-list {
+  margin: 7px 0 0;
+  padding-left: 16px;
+  color: var(--text);
+}
+
+.map-tooltip .tooltip-list li + li {
+  margin-top: 3px;
 }
 
 @keyframes korokPulse {

@@ -16286,6 +16286,192 @@
       "sourceCounts": {
         "ids": 33
       }
+    },
+    {
+      "id": "fabrics",
+      "label": "Fabrics",
+      "kind": "positive",
+      "targetValue": null,
+      "includeMissing": true,
+      "items": [
+        {
+          "id": "Default",
+          "value": "7ff848d1",
+          "label": "Ordinary Fabric",
+          "fabricId": "Obj_SubstituteCloth_Default"
+        },
+        {
+          "id": "Pattern00",
+          "value": "b65bc9d7",
+          "label": "Goron Fabric",
+          "fabricId": "Obj_SubstituteCloth_00"
+        },
+        {
+          "id": "Pattern01",
+          "value": "41929f49",
+          "label": "Zora Fabric",
+          "fabricId": "Obj_SubstituteCloth_01"
+        },
+        {
+          "id": "Pattern02",
+          "value": "084da01f",
+          "label": "Gerudo Fabric",
+          "fabricId": "Obj_SubstituteCloth_02"
+        },
+        {
+          "id": "Pattern03",
+          "value": "31a2d1cc",
+          "label": "Royal Hyrulean Fabric",
+          "fabricId": "Obj_SubstituteCloth_03"
+        },
+        {
+          "id": "Pattern04",
+          "value": "865f713d",
+          "label": "Zonai Fabric",
+          "fabricId": "Obj_SubstituteCloth_04"
+        },
+        {
+          "id": "Pattern05",
+          "value": "30669b55",
+          "label": "Sheikah Fabric",
+          "fabricId": "Obj_SubstituteCloth_05"
+        },
+        {
+          "id": "Pattern06",
+          "value": "022aef11",
+          "label": "Yiga Fabric",
+          "fabricId": "Obj_SubstituteCloth_06"
+        },
+        {
+          "id": "Pattern07",
+          "value": "112734b9",
+          "label": "Monster-Control-Crew Fabric",
+          "fabricId": "Obj_SubstituteCloth_07"
+        },
+        {
+          "id": "Pattern08",
+          "value": "dbc821f2",
+          "label": "Zonai Survey Team Fabric",
+          "fabricId": "Obj_SubstituteCloth_08"
+        },
+        {
+          "id": "Pattern09",
+          "value": "1ecc8c93",
+          "label": "Horse-God Fabric",
+          "fabricId": "Obj_SubstituteCloth_09"
+        },
+        {
+          "id": "Pattern10",
+          "value": "405203b9",
+          "label": "Lurelin Village Fabric",
+          "fabricId": "Obj_SubstituteCloth_10"
+        },
+        {
+          "id": "Pattern11",
+          "value": "7c38e018",
+          "label": "Lucky Clover Gazette Fabric",
+          "fabricId": "Obj_SubstituteCloth_11"
+        },
+        {
+          "id": "Pattern12",
+          "value": "0636a9e7",
+          "label": "Hudson Construction Fabric",
+          "fabricId": "Obj_SubstituteCloth_12"
+        },
+        {
+          "id": "Pattern13",
+          "value": "09865592",
+          "label": "Koltin's Fabric",
+          "fabricId": "Obj_SubstituteCloth_13"
+        },
+        {
+          "id": "Pattern14",
+          "value": "57129d72",
+          "label": "Korok Fabric",
+          "fabricId": "Obj_SubstituteCloth_14"
+        },
+        {
+          "id": "Pattern15",
+          "value": "f4035866",
+          "label": "Grizzlemaw-Bear Fabric",
+          "fabricId": "Obj_SubstituteCloth_15"
+        },
+        {
+          "id": "Pattern16",
+          "value": "c80d0bf1",
+          "label": "Robbie's Fabric",
+          "fabricId": "Obj_SubstituteCloth_16"
+        },
+        {
+          "id": "Pattern17",
+          "value": "96427113",
+          "label": "Cece Fabric",
+          "fabricId": "Obj_SubstituteCloth_17"
+        },
+        {
+          "id": "Pattern18",
+          "value": "8ef713e8",
+          "label": "Aerocuda Fabric",
+          "fabricId": "Obj_SubstituteCloth_18"
+        },
+        {
+          "id": "Pattern19",
+          "value": "92754bbd",
+          "label": "Eldin-Ostrich Fabric",
+          "fabricId": "Obj_SubstituteCloth_19"
+        },
+        {
+          "id": "Pattern20",
+          "value": "94d2472d",
+          "label": "Cucco Fabric",
+          "fabricId": "Obj_SubstituteCloth_20"
+        },
+        {
+          "id": "Pattern21",
+          "value": "e6cacf83",
+          "label": "Horse Fabric",
+          "fabricId": "Obj_SubstituteCloth_21"
+        },
+        {
+          "id": "Pattern22",
+          "value": "85a4e8e3",
+          "label": "Chuchu Fabric",
+          "fabricId": "Obj_SubstituteCloth_22"
+        },
+        {
+          "id": "Pattern23",
+          "value": "ca1847dd",
+          "label": "Lynel Fabric",
+          "fabricId": "Obj_SubstituteCloth_23"
+        },
+        {
+          "id": "Pattern24",
+          "value": "8c007dbc",
+          "label": "Gleeok Fabric",
+          "fabricId": "Obj_SubstituteCloth_24"
+        },
+        {
+          "id": "Pattern25",
+          "value": "a2aec992",
+          "label": "Stalnox Fabric",
+          "fabricId": "Obj_SubstituteCloth_25"
+        },
+        {
+          "id": "Pattern55",
+          "value": "93e7260f",
+          "label": "Nostalgic Fabric",
+          "fabricId": "Obj_SubstituteCloth_55"
+        },
+        {
+          "id": "Pattern56",
+          "value": "6688319b",
+          "label": "Addison's Fabric",
+          "fabricId": "Obj_SubstituteCloth_56"
+        }
+      ],
+      "sourceCounts": {
+        "ids": 29
+      }
     }
   ]
 }

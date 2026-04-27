@@ -37,6 +37,39 @@ CATEGORIES = [
 STATS = [
     {"id": "compendium", "label": "Compendium", "hashes": "COMPENDIUM_STATUS", "kind": "reverse", "target": "Unopened"},
     {"id": "pristine_weapons", "label": "Pristine Weapons", "source": "pristine_weapons", "kind": "positive", "includeMissing": True},
+    {"id": "fabrics", "label": "Fabrics", "source": "fabrics", "kind": "positive", "includeMissing": True},
+]
+
+COLLECTABLE_FABRICS = [
+    ("Default", "Ordinary Fabric"),
+    ("Pattern00", "Goron Fabric"),
+    ("Pattern01", "Zora Fabric"),
+    ("Pattern02", "Gerudo Fabric"),
+    ("Pattern03", "Royal Hyrulean Fabric"),
+    ("Pattern04", "Zonai Fabric"),
+    ("Pattern05", "Sheikah Fabric"),
+    ("Pattern06", "Yiga Fabric"),
+    ("Pattern07", "Monster-Control-Crew Fabric"),
+    ("Pattern08", "Zonai Survey Team Fabric"),
+    ("Pattern09", "Horse-God Fabric"),
+    ("Pattern10", "Lurelin Village Fabric"),
+    ("Pattern11", "Lucky Clover Gazette Fabric"),
+    ("Pattern12", "Hudson Construction Fabric"),
+    ("Pattern13", "Koltin's Fabric"),
+    ("Pattern14", "Korok Fabric"),
+    ("Pattern15", "Grizzlemaw-Bear Fabric"),
+    ("Pattern16", "Robbie's Fabric"),
+    ("Pattern17", "Cece Fabric"),
+    ("Pattern18", "Aerocuda Fabric"),
+    ("Pattern19", "Eldin-Ostrich Fabric"),
+    ("Pattern20", "Cucco Fabric"),
+    ("Pattern21", "Horse Fabric"),
+    ("Pattern22", "Chuchu Fabric"),
+    ("Pattern23", "Lynel Fabric"),
+    ("Pattern24", "Gleeok Fabric"),
+    ("Pattern25", "Stalnox Fabric"),
+    ("Pattern55", "Nostalgic Fabric"),
+    ("Pattern56", "Addison's Fabric"),
 ]
 
 
@@ -191,6 +224,28 @@ def parse_pristine_weapon_items(equipment_text):
     return items
 
 
+def parse_fabric_items(hashes_text):
+    hash_by_pattern = {}
+    pattern = re.compile(r"^([0-9a-fA-F]{8});Bool;OwnedParasailPattern\.(Default|Pattern\d+)$")
+    for line in hashes_text.splitlines():
+        match = pattern.match(line.strip())
+        if not match:
+            continue
+        hash_by_pattern[match.group(2)] = match.group(1).lower()
+
+    items = []
+    for pattern_id, label in COLLECTABLE_FABRICS:
+        if pattern_id not in hash_by_pattern:
+            raise ValueError(f"Missing fabric hash for {pattern_id}")
+        items.append({
+            "id": pattern_id,
+            "value": hash_by_pattern[pattern_id],
+            "label": label,
+            "fabricId": "Obj_SubstituteCloth_Default" if pattern_id == "Default" else f"Obj_SubstituteCloth_{pattern_id.replace('Pattern', '')}",
+        })
+    return items
+
+
 def layer_for(y):
     if y >= 750:
         return "sky"
@@ -211,6 +266,7 @@ def main():
     completism = (REFERENCES / "zelda-totk.completism.js").read_text(encoding="utf-8")
     coordinates = (REFERENCES / "zelda-totk.coordinates.js").read_text(encoding="utf-8")
     equipment = (REFERENCES / "zelda-totk.class.equipment.js").read_text(encoding="utf-8")
+    hashes = (REFERENCES / "zelda-totk.hashes.csv").read_text(encoding="utf-8")
     categories = []
     for category in CATEGORIES:
         ids = parse_hashes(completism, category["hashes"], category["kind"])
@@ -241,6 +297,8 @@ def main():
     for stat in STATS:
         if stat.get("source") == "pristine_weapons":
             items = parse_pristine_weapon_items(equipment)
+        elif stat.get("source") == "fabrics":
+            items = parse_fabric_items(hashes)
         else:
             ids = parse_hashes(completism, stat["hashes"], "bool")
             items = [{"id": f"{stat['id']}-{index + 1:03d}", "value": value} for index, value in enumerate(ids)]
