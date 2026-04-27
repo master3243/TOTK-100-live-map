@@ -294,6 +294,12 @@ h2 {
   font-variant-numeric: tabular-nums;
 }
 
+.stats dd.hover-stat {
+  cursor: help;
+  text-decoration: underline dotted color-mix(in srgb, var(--accent-2) 60%, transparent);
+  text-underline-offset: 3px;
+}
+
 .quiet {
   color: var(--muted);
   font-size: 14px;

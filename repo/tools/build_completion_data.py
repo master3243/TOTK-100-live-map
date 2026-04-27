@@ -36,6 +36,7 @@ CATEGORIES = [
 
 STATS = [
     {"id": "compendium", "label": "Compendium", "hashes": "COMPENDIUM_STATUS", "kind": "reverse", "target": "Unopened"},
+    {"id": "pristine_weapons", "label": "Pristine Weapons", "source": "pristine_weapons", "kind": "positive", "includeMissing": True},
 ]
 
 
@@ -165,6 +166,31 @@ def parse_coordinates(text, name):
     return rows
 
 
+def parse_pristine_weapon_items(equipment_text):
+    match = re.search(r"Equipment\.WEAPONS_DECAYED_TO_PRISTINE\s*=\s*\{(.*?)\};", equipment_text, re.S)
+    if not match:
+        raise ValueError("Could not find WEAPONS_DECAYED_TO_PRISTINE")
+
+    items = []
+    pattern = re.compile(
+        r"['\"](?P<decayed>Weapon_(?:Sword|Lsword|Spear)_\d+)['\"]\s*:\s*"
+        r"['\"](?P<pristine>Weapon_(?:Sword|Lsword|Spear)_\d+)['\"]"
+        r"\s*,?\s*(?://\s*(?P<label>[^\r\n]+))?"
+    )
+    for match in pattern.finditer(match.group(1)):
+        label = (match.group("label") or match.group("pristine")).strip()
+        decayed_id = match.group("decayed")
+        pristine_id = match.group("pristine")
+        items.append({
+            "id": pristine_id,
+            "value": f"{murmur3_32('EquipmentDeathCount.' + decayed_id):08x}",
+            "label": label,
+            "decayedId": decayed_id,
+            "pristineId": pristine_id,
+        })
+    return items
+
+
 def layer_for(y):
     if y >= 750:
         return "sky"
@@ -184,6 +210,7 @@ def target_value(value):
 def main():
     completism = (REFERENCES / "zelda-totk.completism.js").read_text(encoding="utf-8")
     coordinates = (REFERENCES / "zelda-totk.coordinates.js").read_text(encoding="utf-8")
+    equipment = (REFERENCES / "zelda-totk.class.equipment.js").read_text(encoding="utf-8")
     categories = []
     for category in CATEGORIES:
         ids = parse_hashes(completism, category["hashes"], category["kind"])
@@ -212,14 +239,19 @@ def main():
         })
     stats = []
     for stat in STATS:
-        ids = parse_hashes(completism, stat["hashes"], "bool")
+        if stat.get("source") == "pristine_weapons":
+            items = parse_pristine_weapon_items(equipment)
+        else:
+            ids = parse_hashes(completism, stat["hashes"], "bool")
+            items = [{"id": f"{stat['id']}-{index + 1:03d}", "value": value} for index, value in enumerate(ids)]
         stats.append({
             "id": stat["id"],
             "label": stat["label"],
             "kind": stat["kind"],
             "targetValue": target_value(stat.get("target")),
-            "items": [{"id": f"{stat['id']}-{index + 1:03d}", "value": value} for index, value in enumerate(ids)],
-            "sourceCounts": {"ids": len(ids)},
+            "includeMissing": stat.get("includeMissing", False),
+            "items": items,
+            "sourceCounts": {"ids": len(items)},
         })
     OUTPUT.write_text(json.dumps({"categories": categories, "stats": stats}, indent=2), encoding="utf-8")
     print(f"Wrote {OUTPUT}")

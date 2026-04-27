@@ -14001,6 +14001,7 @@
       "label": "Compendium",
       "kind": "reverse",
       "targetValue": "8d96a2c5",
+      "includeMissing": false,
       "items": [
         {
           "id": "compendium-001",
@@ -16041,6 +16042,249 @@
       ],
       "sourceCounts": {
         "ids": 509
+      }
+    },
+    {
+      "id": "pristine_weapons",
+      "label": "Pristine Weapons",
+      "kind": "positive",
+      "targetValue": null,
+      "includeMissing": true,
+      "items": [
+        {
+          "id": "Weapon_Sword_001",
+          "value": "39f93a30",
+          "label": "Traveler's Sword",
+          "decayedId": "Weapon_Sword_106",
+          "pristineId": "Weapon_Sword_001"
+        },
+        {
+          "id": "Weapon_Sword_002",
+          "value": "a9f00300",
+          "label": "Soldier's Broadsword",
+          "decayedId": "Weapon_Sword_112",
+          "pristineId": "Weapon_Sword_002"
+        },
+        {
+          "id": "Weapon_Sword_003",
+          "value": "50557318",
+          "label": "Knight's Broadsword",
+          "decayedId": "Weapon_Sword_113",
+          "pristineId": "Weapon_Sword_003"
+        },
+        {
+          "id": "Weapon_Sword_024",
+          "value": "27d807b0",
+          "label": "Royal Broadsword",
+          "decayedId": "Weapon_Sword_124",
+          "pristineId": "Weapon_Sword_024"
+        },
+        {
+          "id": "Weapon_Sword_025",
+          "value": "3dc96502",
+          "label": "Forest Dweller's Sword",
+          "decayedId": "Weapon_Sword_125",
+          "pristineId": "Weapon_Sword_025"
+        },
+        {
+          "id": "Weapon_Sword_027",
+          "value": "1435013c",
+          "label": "Zora Sword",
+          "decayedId": "Weapon_Sword_127",
+          "pristineId": "Weapon_Sword_027"
+        },
+        {
+          "id": "Weapon_Sword_029",
+          "value": "d6211a3b",
+          "label": "Gerudo Scimitar",
+          "decayedId": "Weapon_Sword_129",
+          "pristineId": "Weapon_Sword_029"
+        },
+        {
+          "id": "Weapon_Sword_031",
+          "value": "47bbf37a",
+          "label": "Feathered Edge",
+          "decayedId": "Weapon_Sword_131",
+          "pristineId": "Weapon_Sword_031"
+        },
+        {
+          "id": "Weapon_Sword_041",
+          "value": "b9fa308b",
+          "label": "Eightfold Blade",
+          "decayedId": "Weapon_Sword_114",
+          "pristineId": "Weapon_Sword_041"
+        },
+        {
+          "id": "Weapon_Sword_047",
+          "value": "200311fb",
+          "label": "Royal Guard's Sword",
+          "decayedId": "Weapon_Sword_147",
+          "pristineId": "Weapon_Sword_047"
+        },
+        {
+          "id": "Weapon_Sword_103",
+          "value": "416e7439",
+          "label": "Wooden Stick",
+          "decayedId": "Weapon_Sword_168",
+          "pristineId": "Weapon_Sword_103"
+        },
+        {
+          "id": "Weapon_Lsword_001",
+          "value": "6147a3f3",
+          "label": "Traveler's Claymore",
+          "decayedId": "Weapon_Lsword_106",
+          "pristineId": "Weapon_Lsword_001"
+        },
+        {
+          "id": "Weapon_Lsword_002",
+          "value": "2b53b900",
+          "label": "Soldier's Claymore",
+          "decayedId": "Weapon_Lsword_112",
+          "pristineId": "Weapon_Lsword_002"
+        },
+        {
+          "id": "Weapon_Lsword_003",
+          "value": "51eb5232",
+          "label": "Knight's Claymore",
+          "decayedId": "Weapon_Lsword_113",
+          "pristineId": "Weapon_Lsword_003"
+        },
+        {
+          "id": "Weapon_Lsword_024",
+          "value": "2a3c5306",
+          "label": "Royal Claymore",
+          "decayedId": "Weapon_Lsword_124",
+          "pristineId": "Weapon_Lsword_024"
+        },
+        {
+          "id": "Weapon_Lsword_027",
+          "value": "82bc5fce",
+          "label": "Zora Longsword",
+          "decayedId": "Weapon_Lsword_127",
+          "pristineId": "Weapon_Lsword_027"
+        },
+        {
+          "id": "Weapon_Lsword_029",
+          "value": "52d62303",
+          "label": "Gerudo Claymore",
+          "decayedId": "Weapon_Lsword_129",
+          "pristineId": "Weapon_Lsword_029"
+        },
+        {
+          "id": "Weapon_Lsword_036",
+          "value": "e8605be0",
+          "label": "Cobble Crusher",
+          "decayedId": "Weapon_Lsword_136",
+          "pristineId": "Weapon_Lsword_036"
+        },
+        {
+          "id": "Weapon_Lsword_041",
+          "value": "efc0b908",
+          "label": "Eightfold Longblade",
+          "decayedId": "Weapon_Lsword_114",
+          "pristineId": "Weapon_Lsword_041"
+        },
+        {
+          "id": "Weapon_Lsword_047",
+          "value": "8d861fa2",
+          "label": "Royal Guard's Claymore",
+          "decayedId": "Weapon_Lsword_147",
+          "pristineId": "Weapon_Lsword_047"
+        },
+        {
+          "id": "Weapon_Lsword_103",
+          "value": "9a67c31d",
+          "label": "Thick Stick",
+          "decayedId": "Weapon_Lsword_168",
+          "pristineId": "Weapon_Lsword_103"
+        },
+        {
+          "id": "Weapon_Lsword_051",
+          "value": "48978e2e",
+          "label": "Giant Boomerang",
+          "decayedId": "Weapon_Lsword_174",
+          "pristineId": "Weapon_Lsword_051"
+        },
+        {
+          "id": "Weapon_Spear_001",
+          "value": "59b92288",
+          "label": "Traveler's Spear",
+          "decayedId": "Weapon_Spear_106",
+          "pristineId": "Weapon_Spear_001"
+        },
+        {
+          "id": "Weapon_Spear_002",
+          "value": "a358c1f3",
+          "label": "Soldier's Spear",
+          "decayedId": "Weapon_Spear_112",
+          "pristineId": "Weapon_Spear_002"
+        },
+        {
+          "id": "Weapon_Spear_003",
+          "value": "798d8d3c",
+          "label": "Knight's Halberd",
+          "decayedId": "Weapon_Spear_113",
+          "pristineId": "Weapon_Spear_003"
+        },
+        {
+          "id": "Weapon_Spear_024",
+          "value": "c65605d6",
+          "label": "Royal Halberd",
+          "decayedId": "Weapon_Spear_124",
+          "pristineId": "Weapon_Spear_024"
+        },
+        {
+          "id": "Weapon_Spear_025",
+          "value": "e5fc7340",
+          "label": "Forest Dweller's Spear",
+          "decayedId": "Weapon_Spear_125",
+          "pristineId": "Weapon_Spear_025"
+        },
+        {
+          "id": "Weapon_Spear_027",
+          "value": "87217bec",
+          "label": "Zora Spear",
+          "decayedId": "Weapon_Spear_127",
+          "pristineId": "Weapon_Spear_027"
+        },
+        {
+          "id": "Weapon_Spear_029",
+          "value": "07d3d4a7",
+          "label": "Gerudo Spear",
+          "decayedId": "Weapon_Spear_129",
+          "pristineId": "Weapon_Spear_029"
+        },
+        {
+          "id": "Weapon_Spear_030",
+          "value": "4f8754a9",
+          "label": "Throwing Spear",
+          "decayedId": "Weapon_Spear_173",
+          "pristineId": "Weapon_Spear_030"
+        },
+        {
+          "id": "Weapon_Spear_032",
+          "value": "e58b15d2",
+          "label": "Feathered Spear",
+          "decayedId": "Weapon_Spear_132",
+          "pristineId": "Weapon_Spear_032"
+        },
+        {
+          "id": "Weapon_Spear_047",
+          "value": "82847dee",
+          "label": "Royal Guard's Spear",
+          "decayedId": "Weapon_Spear_147",
+          "pristineId": "Weapon_Spear_047"
+        },
+        {
+          "id": "Weapon_Spear_103",
+          "value": "70be2851",
+          "label": "Long Stick",
+          "decayedId": "Weapon_Spear_168",
+          "pristineId": "Weapon_Spear_103"
+        }
+      ],
+      "sourceCounts": {
+        "ids": 33
       }
     }
   ]

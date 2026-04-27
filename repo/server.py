@@ -455,6 +455,7 @@ def build_completion_stats(values):
         target_value = stat.get("targetValue")
         target_raw = int(target_value, 16) if target_value else None
         obtained_count = 0
+        missing_items = []
         for item in stat["items"]:
             hash_value = int(item["value"], 16)
             raw = values.get(hash_value, 0)
@@ -466,9 +467,16 @@ def build_completion_stats(values):
                 obtained = raw != 0
             if obtained:
                 obtained_count += 1
+            elif stat.get("includeMissing"):
+                missing_items.append({
+                    "id": item["id"],
+                    "label": item.get("label") or item["id"],
+                    "value": item["value"],
+                    "rawValue": raw,
+                })
 
         total = len(stat["items"])
-        stats.append({
+        summary = {
             "id": stat["id"],
             "label": stat["label"],
             "kind": stat["kind"],
@@ -476,7 +484,10 @@ def build_completion_stats(values):
             "obtained": obtained_count,
             "remaining": total - obtained_count,
             "sourceCounts": stat.get("sourceCounts", {}),
-        })
+        }
+        if stat.get("includeMissing"):
+            summary["missing"] = missing_items
+        stats.append(summary)
     return stats
 
 

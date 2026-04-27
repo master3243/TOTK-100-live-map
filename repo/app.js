@@ -29,6 +29,7 @@ const seedCount = document.querySelector("#seedCount");
 const locationCount = document.querySelector("#locationCount");
 const completionistSummary = document.querySelector("#completionistSummary");
 const compendiumSummary = document.querySelector("#compendiumSummary");
+const pristineWeaponsSummary = document.querySelector("#pristineWeaponsSummary");
 const logEntries = document.querySelector("#logEntries");
 const viewPlayer = document.querySelector("#viewPlayer");
 const layerButtons = document.querySelectorAll(".layer-button");
@@ -819,6 +820,19 @@ function updateSaveSummary(payload) {
   compendiumSummary.textContent = compendium
     ? `${compendium.obtained} / ${compendium.total}`
     : "-- / --";
+
+  const pristineWeapons = (payload.completionStats || []).find((stat) => stat.id === "pristine_weapons");
+  pristineWeaponsSummary.textContent = pristineWeapons
+    ? `${pristineWeapons.obtained} / ${pristineWeapons.total}`
+    : "-- / --";
+  const missingWeapons = pristineWeapons?.missing || [];
+  const hoverText = pristineWeapons
+    ? missingWeapons.length
+      ? `Still locked:\n${missingWeapons.map((item) => item.label).join("\n")}`
+      : "All pristine weapons unlocked"
+    : "No pristine weapon data loaded";
+  pristineWeaponsSummary.title = hoverText;
+  pristineWeaponsSummary.setAttribute("aria-label", hoverText);
 }
 
 function updatePlayerAutoPan(payload) {
@@ -871,6 +885,9 @@ async function refreshKoroks() {
     locationCount.textContent = "-- / --";
     completionistSummary.textContent = "-- / --";
     compendiumSummary.textContent = "-- / --";
+    pristineWeaponsSummary.textContent = "-- / --";
+    pristineWeaponsSummary.title = "No pristine weapon data loaded";
+    pristineWeaponsSummary.setAttribute("aria-label", pristineWeaponsSummary.title);
     console.error(error);
   }
 }
