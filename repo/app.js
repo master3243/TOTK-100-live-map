@@ -289,7 +289,21 @@ function tooltipRows(title, rows) {
 }
 
 function korokTooltip(marker) {
-  return tooltipRows(markerLabel(marker), [
+  const match = /^(hidden|carry)-(\d+)$/.exec(marker.id || "");
+  const kind = match?.[1] || null;
+  const index = match ? Number.parseInt(match[2], 10) : null;
+  let zdNumber = null;
+  if (kind === "hidden" && Number.isFinite(index)) {
+    zdNumber = index + 99; // hidden-001 -> Korok0100
+  } else if (kind === "carry" && Number.isFinite(index)) {
+    zdNumber = index - 1; // carry-001 -> Korok0000
+  }
+  const zdCode = zdNumber == null ? null : `Korok${String(zdNumber).padStart(4, "0")}`;
+  const zdUrl = zdCode
+    ? `https://www.zeldadungeon.net/tears-of-the-kingdom-interactive-map/?m=${encodeURIComponent(zdCode)}`
+    : null;
+
+  const base = tooltipRows(markerLabel(marker), [
     { label: "Status", value: marker.obtained ? "Obtained" : "Unobtained" },
     { label: "Type", value: marker.kind === "carry" ? "Pair, 2 seeds" : "Single seed" },
     { label: "Layer", value: formatLayer(marker.layer) },
@@ -297,6 +311,10 @@ function korokTooltip(marker) {
     { label: "Map", value: `${formatNumber(marker.mapX)}, ${formatNumber(marker.mapY)}` },
     { label: "Save value", value: marker.rawValue },
   ]);
+  if (!zdUrl) {
+    return base;
+  }
+  return `${base}<div class="tooltip-actions"><a class="tooltip-link" href="${zdUrl}" target="_blank" rel="noopener noreferrer">Open Zelda Dungeon</a></div>`;
 }
 
 function completionTooltip(marker) {
@@ -343,10 +361,16 @@ let tooltipPinnedAtMs = 0;
 let lastDragEndAtMs = 0;
 let didPanThisGesture = false;
 let lastPanEndAtMs = 0;
+let tooltipPinnedOwner = null;
+let tooltipPinCandidate = null;
 
 function setTooltipPinned(pinned) {
   isTooltipPinned = pinned;
   if (!pinned) {
+    if (tooltipPinnedOwner instanceof HTMLElement) {
+      tooltipPinnedOwner.classList.remove("tooltip-pinned-owner");
+    }
+    tooltipPinnedOwner = null;
     mapTooltip.hidden = true;
     mapTooltip.classList.remove("pinned");
   } else {
@@ -381,17 +405,23 @@ function attachTooltip(element, html) {
     if (isTooltipPinned) {
       return;
     }
-    // Hover tooltips are intentionally "sticky" and do not dismiss on leave.
-    // They update when hovering another marker or dismiss when clicking elsewhere.
+    // Hide on hover-leave, but not during/just after a pan gesture (pointer-capture can emit leave on release).
+    if (viewport.classList.contains("dragging")) {
+      return;
+    }
+    if (performance.now() - lastDragEndAtMs < 350) {
+      return;
+    }
+    mapTooltip.hidden = true;
   });
   element.addEventListener("pointerdown", (event) => {
-    // Pin tooltip on press; prevents the viewport drag handler from swallowing the click.
-    event.stopPropagation();
-    event.preventDefault();
-    tooltipPinnedAtMs = performance.now();
-    setTooltipContent(html, { pinned: true });
-    setTooltipPinned(true);
-    positionTooltip(event);
+    // Allow drag-to-pan even when starting on an icon.
+    // If the gesture ends without panning, we'll pin on pointerup.
+    tooltipPinCandidate = {
+      pointerId: event.pointerId,
+      element,
+      html,
+    };
   });
 }
 
@@ -954,6 +984,14 @@ viewport.addEventListener("wheel", (event) => {
   event.preventDefault();
   const direction = event.deltaY > 0 ? 0.9 : 1.1;
   zoomAt(scale * direction, event.clientX, event.clientY);
+  // If the user zooms while dragging, keep dragStart in sync so the map doesn't jump
+  // on the next pointermove (which uses dragStart.offsetX/Y as the baseline).
+  if (activePointers.size === 1 && dragStart) {
+    dragStart.x = event.clientX;
+    dragStart.y = event.clientY;
+    dragStart.offsetX = offsetX;
+    dragStart.offsetY = offsetY;
+  }
 }, { passive: false });
 
 viewport.addEventListener("pointerdown", (event) => {
@@ -988,6 +1026,18 @@ viewport.addEventListener("pointermove", (event) => {
   const mapX = Math.round((event.clientX - rect.left - offsetX) / scale);
   const mapY = Math.round((event.clientY - rect.top - offsetY) / scale);
   cursorValue.textContent = imageWidth ? `${mapX}, ${mapY}` : "--, --";
+
+  // If a hover-tooltip is visible but we're not over a marker (and it's not pinned), dismiss it.
+  // This catches cases where pointerleave didn't fire (e.g. DOM re-render while hovering).
+  if (!isTooltipPinned && !mapTooltip.hidden && !viewport.classList.contains("dragging")) {
+    const underPointer = document.elementFromPoint(event.clientX, event.clientY);
+    const overTooltip = underPointer instanceof HTMLElement && underPointer.closest("#mapTooltip");
+    const overMarker = underPointer instanceof HTMLElement
+      && underPointer.closest(".korok-marker, .completion-marker, .link-marker");
+    if (!overTooltip && !overMarker) {
+      mapTooltip.hidden = true;
+    }
+  }
 
   if (!activePointers.has(event.pointerId)) {
     return;
@@ -1024,6 +1074,37 @@ function endPointer(event) {
   }
   dragStart = null;
   pinchStart = null;
+
+  if (!activePointers.size && didPanThisGesture && !isTooltipPinned && !mapTooltip.hidden) {
+    const underPointer = document.elementFromPoint(event.clientX, event.clientY);
+    const isMarker = underPointer instanceof HTMLElement
+      && underPointer.closest(".korok-marker, .completion-marker, .link-marker");
+    // If the drag ended away from a marker (or on the tooltip itself), dismiss hover tooltip.
+    if (!isMarker) {
+      mapTooltip.hidden = true;
+    }
+  }
+
+  // If the gesture started on an icon and we did NOT pan, treat it as a click and pin the tooltip.
+  if (
+    tooltipPinCandidate
+    && tooltipPinCandidate.pointerId === event.pointerId
+    && !didPanThisGesture
+    && tooltipPinCandidate.element instanceof HTMLElement
+  ) {
+    tooltipPinnedAtMs = performance.now();
+    if (tooltipPinnedOwner instanceof HTMLElement) {
+      tooltipPinnedOwner.classList.remove("tooltip-pinned-owner");
+    }
+    tooltipPinnedOwner = tooltipPinCandidate.element;
+    tooltipPinnedOwner.classList.add("tooltip-pinned-owner");
+    setTooltipContent(tooltipPinCandidate.html, { pinned: true });
+    setTooltipPinned(true);
+    positionTooltip(event);
+  }
+  if (tooltipPinCandidate && tooltipPinCandidate.pointerId === event.pointerId) {
+    tooltipPinCandidate = null;
+  }
 
   if (activePointers.size === 1) {
     const point = Array.from(activePointers.values())[0];

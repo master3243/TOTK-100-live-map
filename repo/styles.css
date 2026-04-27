@@ -547,6 +547,24 @@ h2 {
   transform: translate(-50%, -50%) scale(var(--iconScale, 1));
 }
 
+/* Highlight the marker that owns a pinned tooltip. */
+.tooltip-pinned-owner::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.16) 0%, rgba(90, 200, 255, 0.04) 55%, transparent 70%);
+  box-shadow:
+    0 0 0 2px rgba(150, 220, 255, 0.55),
+    0 0 16px rgba(120, 200, 255, 0.55),
+    0 0 34px rgba(80, 160, 255, 0.25);
+  pointer-events: none;
+}
+
 .completion-caves {
   background: url("assets/zd-icons/cave.png") center / contain no-repeat;
 }
@@ -663,6 +681,11 @@ h2 {
   line-height: 1.35;
   pointer-events: auto;
   cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.map-tooltip.pinned {
   user-select: text;
   -webkit-user-select: text;
 }
@@ -717,6 +740,30 @@ h2 {
   margin: 0;
   overflow-wrap: anywhere;
   color: var(--text);
+}
+
+.map-tooltip .tooltip-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.map-tooltip .tooltip-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(215, 179, 90, 0.32);
+  background: rgba(215, 179, 90, 0.12);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.map-tooltip .tooltip-link:hover {
+  border-color: rgba(215, 179, 90, 0.5);
+  background: rgba(215, 179, 90, 0.18);
 }
 
 @keyframes korokPulse {
