@@ -271,6 +271,7 @@ function selectedDemoSave() {
   return {
     src: selected?.dataset.src || "assets/dummy.sav",
     filename: selected?.dataset.filename || "dummy.sav",
+    label: selected?.dataset.label || "Endgame Save (~70%)",
   };
 }
 
@@ -1773,18 +1774,20 @@ function showManualSaveDropUi() {
   }
 }
 
-async function uploadManualSave(file) {
+async function uploadManualSave(file, options = {}) {
   hideManualSaveDropUi();
   if (!file) {
     return;
   }
+  const loadedLabel = options.loadedLabel || file.name || "save file";
+  const sourceLabel = options.sourceLabel || "Manual upload";
   setSaveLoading(true, "Loading");
   try {
     if (window.TOTK_USE_PYODIDE) {
       const payload = await uploadManualSaveViaPyodide(file);
       applySavePayload(payload);
-      setSaveLoading(false, `Loaded ${file.name || "save file"}`);
-      saveStatus.textContent = "Manual upload";
+      setSaveLoading(false, `Loaded ${loadedLabel}`);
+      saveStatus.textContent = sourceLabel;
       return;
     }
     const response = await fetch("/api/upload_save", {
@@ -1800,16 +1803,16 @@ async function uploadManualSave(file) {
       throw new Error(payload.error || "Could not parse uploaded save");
     }
     applySavePayload(payload);
-    setSaveLoading(false, `Loaded ${file.name || "save file"}`);
-    saveStatus.textContent = "Manual upload";
+    setSaveLoading(false, `Loaded ${loadedLabel}`);
+    saveStatus.textContent = sourceLabel;
   } catch (error) {
     // Helpful fallback for static hosting: if the backend is missing, try Pyodide once.
     if (!window.TOTK_USE_PYODIDE) {
       try {
         const payload = await uploadManualSaveViaPyodide(file);
         applySavePayload(payload);
-        setSaveLoading(false, `Loaded ${file.name || "save file"}`);
-        saveStatus.textContent = "Manual upload";
+        setSaveLoading(false, `Loaded ${loadedLabel}`);
+        saveStatus.textContent = sourceLabel;
         return;
       } catch {
         // keep original error below
@@ -2369,7 +2372,10 @@ if (demoModalConfirm) {
       }
       const bytes = await response.arrayBuffer();
       const demoFile = new File([bytes], demoSave.filename, { type: "application/octet-stream" });
-      await uploadManualSave(demoFile);
+      await uploadManualSave(demoFile, {
+        loadedLabel: demoSave.label,
+        sourceLabel: "Demo save",
+      });
     } catch (error) {
       setSaveLoading(false, "Demo load failed");
       console.error(error);
