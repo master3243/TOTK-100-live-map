@@ -617,6 +617,14 @@ h2 {
   filter: drop-shadow(0 0 5px rgba(120, 230, 160, 0.72));
 }
 
+.completion-marker.obtained.completion-hudson_sign,
+.completion-marker.obtained.completion-hinox,
+.completion-marker.obtained.completion-frox,
+.completion-marker.obtained.completion-molduga,
+.completion-marker.obtained.completion-gleeok {
+  filter: var(--svg-icon-filter) drop-shadow(0 0 5px rgba(120, 230, 160, 0.72));
+}
+
 /* Highlight the marker that owns a pinned tooltip. */
 .tooltip-pinned-owner::after {
   content: "";
@@ -641,15 +649,15 @@ h2 {
 }
 
 .completion-towers {
-  background: url("assets/zd-icons/square.png") center / contain no-repeat;
+  background: url("assets/zd-icons/tower.png") center / contain no-repeat;
 }
 
 .completion-shrines {
-  background: url("assets/zd-icons/treasure.png") center / contain no-repeat;
+  background: url("assets/zd-icons/shrine.png") center / contain no-repeat;
 }
 
 .completion-lightroots {
-  background: url("assets/zd-icons/leaf.png") center / contain no-repeat;
+  background: url("assets/zd-icons/lightroot.png") center / contain no-repeat;
 }
 
 .completion-bubbulfrogs {
