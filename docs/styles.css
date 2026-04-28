@@ -1317,3 +1317,72 @@ body.save-drop-active {
     border-width: 1px;
   }
 }
+
+/* JS-driven narrow mode (keeps behavior consistent across mobile browsers). */
+body.narrow-layout {
+  overflow: auto;
+}
+
+body.narrow-layout .app {
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(520px, 1fr);
+  height: 100svh;
+}
+
+body.narrow-layout .sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: min(360px, 92vw);
+  max-width: 92vw;
+  transform: translateX(-105%);
+  transition: transform 180ms ease;
+  padding: 16px;
+  z-index: 60;
+  border-right: 1px solid var(--line);
+  border-bottom: 0;
+}
+
+body.narrow-layout.sidebar-open .sidebar {
+  transform: translateX(0);
+}
+
+body.narrow-layout .sidebar-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.narrow-layout.sidebar-open .sidebar-toggle {
+  display: none;
+}
+
+body.narrow-layout.sidebar-open {
+  overflow: hidden;
+}
+
+body.narrow-layout .brand {
+  padding-bottom: 0;
+}
+
+body.narrow-layout h1 {
+  font-size: 22px;
+}
+
+body.narrow-layout .toolbar {
+  top: 12px;
+  right: 12px;
+}
+
+body.narrow-layout .layer-stack {
+  left: 12px;
+  gap: 6px;
+}
+
+body.narrow-layout .layer-button {
+  width: 54px;
+  height: 54px;
+  background-size: 44px 44px;
+  border-width: 1px;
+}

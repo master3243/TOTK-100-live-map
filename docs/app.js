@@ -156,6 +156,15 @@ function clamp(value, min, max) {
   return Math.min(Math.max(value, min), max);
 }
 
+function isNarrowLayout() {
+  return window.matchMedia("(max-width: 820px)").matches
+    || window.matchMedia("(hover: none) and (pointer: coarse)").matches;
+}
+
+function updateNarrowLayoutClass() {
+  document.body.classList.toggle("narrow-layout", isNarrowLayout());
+}
+
 function updateTransform() {
   const transform = `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
   mapImage.style.transform = transform;
@@ -1990,7 +1999,9 @@ attachStatTooltip(pristineWeaponsSummary, () => pristineWeaponsTooltip(currentPr
 attachStatTooltip(fabricsSummary, () => fabricsTooltip(currentFabricsStat));
 
 window.addEventListener("resize", preserveMapCenterOnViewportResize);
+window.addEventListener("resize", updateNarrowLayoutClass);
 
+updateNarrowLayoutClass();
 loadLayer(activeLayer);
 syncAllGroupStates();
 if (window.TOTK_USE_PYODIDE) {
