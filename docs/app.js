@@ -48,18 +48,16 @@ const layerButtons = document.querySelectorAll(".layer-button");
 let currentPristineWeaponsStat = null;
 let currentFabricsStat = null;
 const overlayInputs = {
-  obtainedKoroks: document.querySelector("#showObtainedKoroks"),
-  unobtainedKoroks: document.querySelector("#showUnobtainedKoroks"),
   playerLocation: document.querySelector("#showPlayerLocation"),
   playerGuide: document.querySelector("#showPlayerGuide"),
   playerAutoPan: document.querySelector("#playerAutoPan"),
 };
 const groupInputs = {
-  korok: document.querySelector("#groupKorok"),
   player: document.querySelector("#groupPlayer"),
   completion: document.querySelector("#groupCompletion"),
 };
 const completionInputs = {
+  koroks: document.querySelector("#completion-koroks"),
   towers: document.querySelector("#completion-towers"),
   shrines: document.querySelector("#completion-shrines"),
   lightroots: document.querySelector("#completion-lightroots"),
@@ -101,12 +99,10 @@ const completionObtainedToggles = Object.fromEntries(
   }),
 );
 const overlayGroups = {
-  korok: [
-    overlayInputs.obtainedKoroks,
-    overlayInputs.unobtainedKoroks,
-  ],
   player: [overlayInputs.playerLocation, overlayInputs.playerGuide, overlayInputs.playerAutoPan],
-  completion: Object.values(completionInputs),
+  completion: [
+    ...Object.values(completionInputs),
+  ],
 };
 
 function anyCompletionEyesOpen() {
@@ -155,6 +151,7 @@ let pendingPanPoint = null;
 let lastPlayerPanKey = null;
 /** When unchanged, skip re-applying player-guide zoom/pan (avoids jumps on unrelated overlay toggles). */
 let lastPlayerGuideFrameKey = "";
+let korokCountSummary = null;
 
 function clamp(value, min, max) {
   return Math.min(Math.max(value, min), max);
@@ -320,10 +317,10 @@ function getVisibleMarkers(markers) {
     if (marker.layer !== activeLayer) {
       return false;
     }
-    if (marker.obtained && !overlayInputs.obtainedKoroks.checked) {
+    if (!completionInputs.koroks?.checked) {
       return false;
     }
-    if (!marker.obtained && !overlayInputs.unobtainedKoroks.checked) {
+    if (marker.obtained && !completionShowObtained.koroks) {
       return false;
     }
     return true;
@@ -1254,7 +1251,7 @@ function renderGuide(markers) {
   const visibleUnobtained = markers.filter((marker) => {
     return marker.layer === activeLayer
       && !marker.obtained
-      && overlayInputs.unobtainedKoroks.checked;
+      && completionInputs.koroks?.checked;
   });
 
   const visibleCompletionMissing = [];
@@ -1398,6 +1395,32 @@ function renderMarkers(markers = korokMarkers, categories = completionCategories
 function updateCompletionCounts(categories) {
   let totalObtained = 0;
   let totalTotal = 0;
+
+  // Koroks live outside the payload.completion categories; keep the row consistent anyway.
+  const korokCount = completionCounts.koroks;
+  const korokInput = completionInputs.koroks;
+  const korokLabel = korokInput?.closest("label");
+  if (korokCount) {
+    korokCount.textContent = korokCountSummary?.text ?? "--";
+  }
+  const korokToggle = completionObtainedToggles.koroks;
+  if (korokToggle) {
+    const obtained = korokCountSummary?.obtained ?? 0;
+    korokToggle.disabled = obtained === 0;
+    korokToggle.classList.toggle("active", completionShowObtained.koroks);
+    korokToggle.setAttribute("aria-pressed", completionShowObtained.koroks ? "true" : "false");
+    korokToggle.title = completionShowObtained.koroks ? "Hide obtained" : "Show obtained";
+    korokToggle.setAttribute(
+      "aria-label",
+      `${completionShowObtained.koroks ? "Hide" : "Show"} obtained Koroks`,
+    );
+  }
+  if (korokLabel) {
+    const complete = Boolean(korokCountSummary) && korokCountSummary.remaining === 0;
+    korokLabel.classList.toggle("completion-row-complete", complete);
+    korokLabel.classList.toggle("completion-row-incomplete", !complete);
+  }
+
   for (const category of categories) {
     const count = completionCounts[category.id];
     const input = completionInputs[category.id];
@@ -1439,6 +1462,11 @@ function updateSaveSummary(payload) {
   saveStatus.textContent = modified.toLocaleTimeString();
   seedCount.textContent = `${payload.counts.totalSeeds} / ${payload.counts.availableSeeds}`;
   locationCount.textContent = `${payload.counts.totalLocations} / ${payload.counts.availableLocations}`;
+
+  const obtained = payload.counts.totalLocations ?? 0;
+  const total = payload.counts.availableLocations ?? 0;
+  const remaining = Math.max(0, total - obtained);
+  korokCountSummary = { obtained, total, remaining, text: `${remaining} (${obtained}/${total})` };
 
   const categories = payload.completion || [];
   const totalCategories = categories.length;
@@ -1511,10 +1539,10 @@ function applySavePayload(payload) {
   playerPosition = payload.player || null;
   completionCategories = payload.completion || [];
   updatePlayerAutoPan(payload);
+  updateSaveSummary(payload);
   updateCompletionCounts(completionCategories);
   renderGuide(payload.markers);
   renderMarkers(payload.markers, completionCategories);
-  updateSaveSummary(payload);
   updateTargetControls();
 }
 

@@ -21,7 +21,7 @@
         <div class="brand">
           <p class="eyebrow">Tears of the Kingdom</p>
           <h1>Save Map Helper</h1>
-          <h2>v1.0.6</h2>
+          <h2>v1.0.7</h2>
           <div class="save-upload">
             <input id="manualSaveInput" type="file" accept=".sav,application/octet-stream">
             <label class="upload-button" for="manualSaveInput">Upload save</label>
@@ -83,23 +83,6 @@
           <div class="overlay-groups">
             <details class="overlay-group">
               <summary class="group-title">
-                <input id="groupKorok" class="group-toggle" type="checkbox" checked>
-                <span>Korok</span>
-              </summary>
-              <div class="check-list">
-                <label>
-                  <input id="showObtainedKoroks" type="checkbox">
-                  <span>Obtained</span>
-                </label>
-                <label>
-                  <input id="showUnobtainedKoroks" type="checkbox" checked>
-                  <span>Unobtained</span>
-                </label>
-              </div>
-            </details>
-
-            <details class="overlay-group">
-              <summary class="group-title">
                 <input id="groupPlayer" class="group-toggle" type="checkbox" checked>
                 <span>Player</span>
               </summary>
@@ -128,6 +111,11 @@
                 <button id="completionEyesToggle" class="show-obtained-toggle group-eye-toggle" type="button" aria-label="Show obtained completion items" aria-pressed="false" title="Show obtained"></button>
               </summary>
               <div class="check-list completion-list">
+                <label>
+                  <input id="completion-koroks" type="checkbox" checked>
+                  <span>Koroks</span>
+                  <span class="count-badge" id="completionCount-koroks">0</span>
+                </label>
                 <label>
                   <input id="completion-towers" type="checkbox" checked>
                   <span>Towers</span>
