@@ -885,6 +885,17 @@ h2 {
   font-weight: 700;
 }
 
+.map-tooltip .tooltip-link-icon {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .map-tooltip .tooltip-link:hover {
   border-color: rgba(215, 179, 90, 0.5);
   background: rgba(215, 179, 90, 0.18);

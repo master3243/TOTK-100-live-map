@@ -310,6 +310,8 @@ function escapeHtml(value) {
 }
 
 const OBJMAP_TOTK_ZOOM = 8;
+const EXTERNAL_LINK_ICON =
+  '<svg class="tooltip-link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11"/></svg>';
 
 /** Leading decimal in korok `note` is often the 64-bit map object id used by objmap. */
 function parseLeadingUInt64FromNote(note) {
@@ -428,7 +430,7 @@ function tooltipExternalLinks(links) {
   const anchors = links
     .map(
       (link) =>
-        `<a class="tooltip-link" href="${escapeHtml(link.href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(link.label)}</a>`,
+        `<a class="tooltip-link" href="${escapeHtml(link.href)}" target="_blank" rel="noopener noreferrer">${EXTERNAL_LINK_ICON}<span>${escapeHtml(link.label)}</span></a>`,
     )
     .join("");
   return `<div class="tooltip-actions">${anchors}</div>`;
@@ -467,7 +469,7 @@ function korokTooltip(marker) {
   ]);
   const links = [];
   if (zdUrl) {
-    links.push({ href: zdUrl, label: "Open Zelda Dungeon" });
+    links.push({ href: zdUrl, label: "Zelda Dungeon" });
   }
   const objmapUrl = buildObjmapTotkUrl(marker);
   if (objmapUrl) {
