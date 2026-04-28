@@ -1776,6 +1776,14 @@ mapImage.addEventListener("error", () => {
   loadingState.textContent = "Map image failed to load. Check your network connection.";
 });
 
+// Prevent the browser's native image drag from ever activating during panning.
+mapImage.addEventListener("dragstart", (event) => {
+  event.preventDefault();
+});
+viewport.addEventListener("dragstart", (event) => {
+  event.preventDefault();
+});
+
 viewport.addEventListener("wheel", (event) => {
   event.preventDefault();
   const direction = event.deltaY > 0 ? 0.9 : 1.1;

@@ -738,6 +738,7 @@ body.save-drop-active {
   height: auto;
   max-width: none;
   user-select: none;
+  -webkit-user-drag: none;
   transform-origin: 0 0;
   will-change: transform;
 }
