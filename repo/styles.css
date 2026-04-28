@@ -692,9 +692,9 @@ body.save-drop-active {
 
 .korok-marker.carry {
   background: url("assets/zd-icons/korok2.png") center / contain no-repeat;
-  width: 24px;
   height: 24px;
-  background-size: 112% 112%;
+  width: calc(24px * 1.28);
+  background-size: contain;
 }
 
 .korok-marker.link-nearest {
