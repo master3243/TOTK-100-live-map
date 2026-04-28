@@ -9,7 +9,7 @@ $ErrorActionPreference = "Stop"
 
 $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 if (-not $ProjectDir) {
-  $ProjectDir = Join-Path $scriptDir "repo"
+  $ProjectDir = Join-Path $scriptDir "docs"
 }
 $ProjectDir = (Resolve-Path $ProjectDir).Path
 
