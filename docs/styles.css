@@ -331,6 +331,30 @@ h2 {
   overflow-wrap: anywhere;
 }
 
+.save-loading .save-upload-status::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 8px;
+  border-radius: 50%;
+  border: 2px solid rgba(243, 239, 226, 0.28);
+  border-top-color: rgba(215, 179, 90, 0.95);
+  vertical-align: -1px;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.save-loading .upload-button,
+.save-loading .demo-button {
+  opacity: 0.65;
+  cursor: default;
+  pointer-events: none;
+}
+
 .demo-button {
   display: inline-flex;
   align-items: center;

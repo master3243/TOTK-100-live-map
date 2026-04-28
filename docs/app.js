@@ -1630,6 +1630,22 @@ function hideManualSaveDropUi() {
   }
 }
 
+function setSaveLoading(loading, statusText) {
+  document.body.classList.toggle("save-loading", loading);
+  if (manualSaveStatus && typeof statusText === "string") {
+    manualSaveStatus.textContent = statusText;
+  }
+  if (manualSaveInput) {
+    manualSaveInput.disabled = loading;
+  }
+  if (demoSaveButton) {
+    demoSaveButton.disabled = loading;
+  }
+  if (viewport) {
+    viewport.setAttribute("aria-busy", loading ? "true" : "false");
+  }
+}
+
 function showManualSaveDropUi() {
   document.body.classList.add("save-drop-active");
   if (saveDropLayer) {
@@ -1643,12 +1659,12 @@ async function uploadManualSave(file) {
   if (!file) {
     return;
   }
-  manualSaveStatus.textContent = "Uploading...";
+  setSaveLoading(true, "Loading save…");
   try {
     if (window.TOTK_USE_PYODIDE) {
       const payload = await uploadManualSaveViaPyodide(file);
       applySavePayload(payload);
-      manualSaveStatus.textContent = `Loaded ${file.name || "save file"}`;
+      setSaveLoading(false, `Loaded ${file.name || "save file"}`);
       saveStatus.textContent = "Manual upload";
       return;
     }
@@ -1665,7 +1681,7 @@ async function uploadManualSave(file) {
       throw new Error(payload.error || "Could not parse uploaded save");
     }
     applySavePayload(payload);
-    manualSaveStatus.textContent = `Loaded ${file.name || "save file"}`;
+    setSaveLoading(false, `Loaded ${file.name || "save file"}`);
     saveStatus.textContent = "Manual upload";
   } catch (error) {
     // Helpful fallback for static hosting: if the backend is missing, try Pyodide once.
@@ -1673,18 +1689,19 @@ async function uploadManualSave(file) {
       try {
         const payload = await uploadManualSaveViaPyodide(file);
         applySavePayload(payload);
-        manualSaveStatus.textContent = `Loaded ${file.name || "save file"}`;
+        setSaveLoading(false, `Loaded ${file.name || "save file"}`);
         saveStatus.textContent = "Manual upload";
         return;
       } catch {
         // keep original error below
       }
     }
-    manualSaveStatus.textContent = "Upload failed";
+    setSaveLoading(false, "Load failed");
     saveStatus.textContent = "Error";
     console.error(error);
   } finally {
     manualSaveInput.value = "";
+    setSaveLoading(false);
   }
 }
 
@@ -1816,13 +1833,13 @@ def parse_uploaded_save(path: str, filename: str = "progress.sav", mtime: float 
 }
 
 async function uploadManualSaveViaPyodide(file) {
-  manualSaveStatus.textContent = "Loading Python parser…";
+  setSaveLoading(true, "Loading Python parser…");
   const pyodide = await ensurePyodide();
   const bytes = new Uint8Array(await file.arrayBuffer());
   pyodide.FS.mkdirTree("/tmp");
   pyodide.FS.writeFile("/tmp/upload.sav", bytes);
 
-  manualSaveStatus.textContent = "Parsing save…";
+  setSaveLoading(true, "Parsing save…");
   const mtime = Math.floor((file.lastModified || Date.now()) / 1000);
   const pyResult = await pyodide.runPythonAsync(`parse_uploaded_save("/tmp/upload.sav", ${JSON.stringify(file.name || "progress.sav")}, ${mtime})`);
   const result = pyResult.toJs({ dict_converter: Object.fromEntries });
@@ -2225,7 +2242,7 @@ if (demoModalConfirm) {
     event.stopPropagation();
     setDemoModalOpen(false);
     try {
-      manualSaveStatus.textContent = "Loading demo…";
+      setSaveLoading(true, "Loading demo…");
       const response = await fetch("assets/dummy.sav", { cache: "no-store" });
       if (!response.ok) {
         throw new Error(`Could not load demo file (HTTP ${response.status})`);
@@ -2234,7 +2251,7 @@ if (demoModalConfirm) {
       const demoFile = new File([bytes], "dummy.sav", { type: "application/octet-stream" });
       await uploadManualSave(demoFile);
     } catch (error) {
-      manualSaveStatus.textContent = "Demo load failed";
+      setSaveLoading(false, "Demo load failed");
       console.error(error);
     }
   });
