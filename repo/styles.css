@@ -803,7 +803,9 @@ h2 {
 
 .map-tooltip .tooltip-actions {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
+  gap: 8px;
   margin-top: 10px;
 }
 

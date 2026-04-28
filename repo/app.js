@@ -296,6 +296,77 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
+const OBJMAP_TOTK_ZOOM = 8;
+
+/** Leading decimal in korok `note` is often the 64-bit map object id used by objmap. */
+function parseLeadingUInt64FromNote(note) {
+  if (!note || typeof note !== "string") {
+    return null;
+  }
+  const match = /^(\d{12,})/.exec(note.trim());
+  if (!match) {
+    return null;
+  }
+  try {
+    return BigInt(match[1]);
+  } catch {
+    return null;
+  }
+}
+
+function markerObjmapQueryHash(marker) {
+  const fromNote = parseLeadingUInt64FromNote(marker.note);
+  if (fromNote != null) {
+    return fromNote;
+  }
+  const raw = (marker.hash || marker.value || "").trim();
+  if (/^[0-9a-fA-F]{8}$/.test(raw)) {
+    return BigInt(`0x${raw}`);
+  }
+  return null;
+}
+
+function formatLayerForObjmap(layer) {
+  const map = {
+    surface: "Surface",
+    sky: "Sky",
+    depths: "Depths",
+  };
+  if (layer && map[layer]) {
+    return map[layer];
+  }
+  if (!layer) {
+    return "Surface";
+  }
+  return layer.charAt(0).toUpperCase() + layer.slice(1).toLowerCase();
+}
+
+/** https://objmap-totk.zeldamods.org — zoom z8, world X/Z, layer, ?q=0x… */
+function buildObjmapTotkUrl(marker) {
+  const q = markerObjmapQueryHash(marker);
+  if (q == null || !Number.isFinite(marker.x) || !Number.isFinite(marker.z)) {
+    return null;
+  }
+  const qHex = q.toString(16).padStart(16, "0");
+  const x = Math.round(marker.x);
+  const z = Math.round(marker.z);
+  const layerName = formatLayerForObjmap(marker.layer);
+  return `https://objmap-totk.zeldamods.org/#/map/z${OBJMAP_TOTK_ZOOM},${x},${z},${layerName}?q=0x${qHex}`;
+}
+
+function tooltipExternalLinks(links) {
+  if (!links.length) {
+    return "";
+  }
+  const anchors = links
+    .map(
+      (link) =>
+        `<a class="tooltip-link" href="${escapeHtml(link.href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(link.label)}</a>`,
+    )
+    .join("");
+  return `<div class="tooltip-actions">${anchors}</div>`;
+}
+
 function tooltipRows(title, rows) {
   const rowHtml = rows
     .filter((row) => row.value !== undefined && row.value !== null && row.value !== "")
@@ -327,14 +398,22 @@ function korokTooltip(marker) {
     { label: "Map", value: `${formatNumber(marker.mapX)}, ${formatNumber(marker.mapY)}` },
     { label: "Save value", value: marker.rawValue },
   ]);
-  if (!zdUrl) {
+  const links = [];
+  if (zdUrl) {
+    links.push({ href: zdUrl, label: "Open Zelda Dungeon" });
+  }
+  const objmapUrl = buildObjmapTotkUrl(marker);
+  if (objmapUrl) {
+    links.push({ href: objmapUrl, label: "Zelda DB" });
+  }
+  if (!links.length) {
     return base;
   }
-  return `${base}<div class="tooltip-actions"><a class="tooltip-link" href="${zdUrl}" target="_blank" rel="noopener noreferrer">Open Zelda Dungeon</a></div>`;
+  return `${base}${tooltipExternalLinks(links)}`;
 }
 
 function completionTooltip(marker) {
-  return tooltipRows(completionLabel(marker), [
+  const base = tooltipRows(completionLabel(marker), [
     { label: "Category", value: marker.categoryLabel },
     { label: "Status", value: "Unobtained" },
     { label: "Layer", value: formatLayer(marker.layer) },
@@ -342,6 +421,11 @@ function completionTooltip(marker) {
     { label: "Map", value: `${formatNumber(marker.mapX)}, ${formatNumber(marker.mapY)}` },
     { label: "Source", value: marker.note },
   ]);
+  const objmapUrl = buildObjmapTotkUrl(marker);
+  if (!objmapUrl) {
+    return base;
+  }
+  return `${base}${tooltipExternalLinks([{ href: objmapUrl, label: "Zelda DB" }])}`;
 }
 
 function playerTooltip(position) {
