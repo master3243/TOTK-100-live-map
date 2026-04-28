@@ -22,7 +22,7 @@
         <div class="brand">
           <p class="eyebrow">Tears of the Kingdom</p>
           <h1>Save Map Helper</h1>
-          <h2>v1.0.16</h2>
+          <h2>v1.0.17</h2>
           <div class="save-upload">
             <input id="manualSaveInput" type="file" accept=".sav,application/octet-stream">
             <label class="upload-button" for="manualSaveInput">Upload save</label>
@@ -277,6 +277,10 @@
           <button id="demoModalCancel" class="control-button" type="button">Cancel</button>
         </div>
       </div>
+    </div>
+
+    <div id="saveLoadingOverlay" class="save-loading-overlay" hidden aria-hidden="true">
+      <div class="save-loading-card" role="status" aria-live="polite">Loading</div>
     </div>
 
     <script src="app.js"></script>

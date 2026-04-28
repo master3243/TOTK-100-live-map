@@ -355,6 +355,32 @@ h2 {
   pointer-events: none;
 }
 
+.save-loading-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 140000;
+  display: grid;
+  place-items: center;
+  background: rgba(10, 12, 11, 0.35);
+  backdrop-filter: blur(1.5px);
+}
+
+.save-loading-card {
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(215, 179, 90, 0.28);
+  background: rgba(18, 23, 21, 0.88);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.65),
+    0 14px 46px rgba(0, 0, 0, 0.35),
+    0 0 22px rgba(215, 179, 90, 0.18);
+  color: rgba(243, 239, 226, 0.95);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .demo-button {
   display: inline-flex;
   align-items: center;

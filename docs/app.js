@@ -38,6 +38,7 @@ const demoSaveButton = document.querySelector("#demoSaveButton");
 const demoModal = document.querySelector("#demoModal");
 const demoModalCancel = document.querySelector("#demoModalCancel");
 const demoModalConfirm = document.querySelector("#demoModalConfirm");
+const saveLoadingOverlay = document.querySelector("#saveLoadingOverlay");
 const saveDropLayer = document.querySelector("#saveDropLayer");
 const sidebarToggle = document.querySelector("#sidebarToggle");
 const sidebarBackdrop = document.querySelector("#sidebarBackdrop");
@@ -1632,8 +1633,13 @@ function hideManualSaveDropUi() {
 
 function setSaveLoading(loading, statusText) {
   document.body.classList.toggle("save-loading", loading);
+  if (saveLoadingOverlay) {
+    saveLoadingOverlay.hidden = !loading;
+    saveLoadingOverlay.setAttribute("aria-hidden", loading ? "false" : "true");
+  }
   if (manualSaveStatus && typeof statusText === "string") {
-    manualSaveStatus.textContent = statusText;
+    // Keep a minimal inline status for screen readers; visual loading is centered overlay.
+    manualSaveStatus.textContent = "Loading";
   }
   if (manualSaveInput) {
     manualSaveInput.disabled = loading;
@@ -1659,7 +1665,7 @@ async function uploadManualSave(file) {
   if (!file) {
     return;
   }
-  setSaveLoading(true, "Loading save…");
+  setSaveLoading(true, "Loading");
   try {
     if (window.TOTK_USE_PYODIDE) {
       const payload = await uploadManualSaveViaPyodide(file);
@@ -1833,13 +1839,13 @@ def parse_uploaded_save(path: str, filename: str = "progress.sav", mtime: float 
 }
 
 async function uploadManualSaveViaPyodide(file) {
-  setSaveLoading(true, "Loading Python parser…");
+  setSaveLoading(true, "Loading");
   const pyodide = await ensurePyodide();
   const bytes = new Uint8Array(await file.arrayBuffer());
   pyodide.FS.mkdirTree("/tmp");
   pyodide.FS.writeFile("/tmp/upload.sav", bytes);
 
-  setSaveLoading(true, "Parsing save…");
+  setSaveLoading(true, "Loading");
   const mtime = Math.floor((file.lastModified || Date.now()) / 1000);
   const pyResult = await pyodide.runPythonAsync(`parse_uploaded_save("/tmp/upload.sav", ${JSON.stringify(file.name || "progress.sav")}, ${mtime})`);
   const result = pyResult.toJs({ dict_converter: Object.fromEntries });
@@ -2242,7 +2248,7 @@ if (demoModalConfirm) {
     event.stopPropagation();
     setDemoModalOpen(false);
     try {
-      setSaveLoading(true, "Loading demo…");
+      setSaveLoading(true, "Loading");
       const response = await fetch("assets/dummy.sav", { cache: "no-store" });
       if (!response.ok) {
         throw new Error(`Could not load demo file (HTTP ${response.status})`);
