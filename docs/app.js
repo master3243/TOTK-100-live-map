@@ -165,7 +165,10 @@ function clamp(value, min, max) {
 }
 
 function isNarrowLayout() {
-  return window.matchMedia("(max-width: 820px)").matches
+  // Some mobile browsers report hover/pointer media queries inconsistently.
+  // Use innerWidth as a reliable fallback.
+  return window.innerWidth <= 820
+    || window.matchMedia("(max-width: 820px)").matches
     || window.matchMedia("(hover: none) and (pointer: coarse)").matches;
 }
 
