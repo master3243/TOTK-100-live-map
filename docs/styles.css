@@ -187,6 +187,29 @@ h2 {
   padding-right: 4px;
 }
 
+.markers-menu .check-list label {
+  font-size: 13px;
+}
+
+.markers-menu .check-list label span:first-of-type {
+  flex: 1 1 68%;
+  min-width: 0;
+}
+
+.markers-menu .check-list label .count-badge {
+  flex: 0 0 auto;
+  min-width: 80px;
+  text-align: center;
+}
+
+.markers-menu .check-list label .show-obtained-toggle {
+  flex: 0 0 auto;
+}
+
+.markers-menu .completion-list .count-badge {
+  font-size: 10px;
+}
+
 .check-list {
   display: grid;
   gap: 10px;
@@ -195,7 +218,7 @@ h2 {
 .check-list label {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   color: var(--muted);
   font-size: 14px;
   line-height: 1.25;
