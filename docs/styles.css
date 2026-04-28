@@ -454,6 +454,44 @@ h2 {
   color: rgba(243, 239, 226, 0.92);
 }
 
+.demo-save-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.demo-save-options label {
+  min-height: 54px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 7px;
+  padding: 8px;
+  border: 1px solid rgba(243, 239, 226, 0.14);
+  border-radius: 8px;
+  background: rgba(243, 239, 226, 0.04);
+  color: rgba(243, 239, 226, 0.88);
+  cursor: pointer;
+}
+
+.demo-save-options label:has(input:checked) {
+  border-color: rgba(251, 204, 74, 0.72);
+  background: rgba(251, 204, 74, 0.12);
+  color: rgba(255, 248, 224, 0.98);
+}
+
+.demo-save-options input {
+  margin: 0;
+  accent-color: var(--accent);
+}
+
+.demo-save-options span {
+  min-width: 0;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
 .modal-actions {
   margin-top: 14px;
   display: flex;
@@ -468,6 +506,16 @@ h2 {
   min-height: 0;
   padding: 0 9px;
   font-size: 11px;
+}
+
+@media (max-width: 460px) {
+  .demo-save-options {
+    grid-template-columns: 1fr;
+  }
+
+  .demo-save-options label {
+    min-height: 38px;
+  }
 }
 
 body.save-drop-active {

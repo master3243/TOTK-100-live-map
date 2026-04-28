@@ -4,7 +4,7 @@ Local interactive Tears of the Kingdom map that loads your save file and shows y
 
  The local version can automatically load your save file every second and updates the map in real time.
 
-But the browser version is ok-ish but requires manual save file upload every time.
+But the browser version is ok-ish but requires manual save file upload every time. The website runs completely in your browser with the files hosted by GitHub so there is no server.
 
 # BROWSER VERSION: **[https://master3243.github.io/TOTK-100-live-map/](https://master3243.github.io/TOTK-100-live-map/)**
 
@@ -12,11 +12,13 @@ But the browser version is ok-ish but requires manual save file upload every tim
 
 If you are playing Tears of the Kingdom and want to get 100% without spending hours manually tracking which Koroks/Things you already got, this project is for you. As mentioned, the best capability is it can read your save file live from your save folder and constantly update. That means you can leave the window open on a side monitor and it will be a live guide.
 
+However, the browser version is still useful for quick one time use.
+
 # Local Setup
 
-The local version of the app is MUCH better in terms of quality of life. The map updates in real-time as you play and constantly shows the next nearest unfinished Korok/Boss/etc.
+The local version of the app is much better in terms of quality of life. The map updates in real-time as you play and constantly shows the next nearest unfinished Korok/Boss/etc.
 
-If you want the local version you need to know how to setup a python environment (which is very simple, just look up a guide).
+If you want the local version, you need to know how to setup a python environment (which is very simple, just look up a guide online).
 
 The first step is to clone the repository.
 
@@ -39,7 +41,7 @@ Or if you don't want to open the browser automatically (`python .\docs\gui.py --
 
 ## build .exe
 
-You don't need to do this. But it was convenient when you can just double click it to start the app.
+I don't recommend doing this unless you are a developer and know what you are doing. For me, it was convenient to have an .exe file I can just double click to start the app.
 
 To build a .exe locally:
 
@@ -48,15 +50,6 @@ cd REPO_FOLDER
 conda activate ./env
 ./build.ps1
 ```
-
-## Current milestone
-
-- Real Tears of the Kingdom map imagery for Surface, Sky, and Depths.
-- Mouse drag panning.
-- Wheel, button, and touch pinch zooming.
-- Cursor image coordinates for future save-data overlays.
-- Live read-only parsing of the configured `progress.sav`.
-- Obtained Korok locations drawn from save flags and refreshed every 2.5 seconds.
 
 ## Credits / Thanks
 
@@ -72,6 +65,4 @@ Huge thanks to the following people for public resources that made this project 
 
 # Disclaimer
 
-THIS PROJECT IS CREATED BY CODEX-5.5-MEDIUM AND CURSOR ON AUTO. But it did require tons of guidence from me in terms of what features I want and bugs/workflows that need improvements.
-
-This is why the project does not (and never will) modify any save files. I don't trust AI code that modifies something as sensitive as a save file. It might cause corruptions which I would never want to cause. Thus, this project is simply a read-only viewer.
+This project is developed with the help of codex-5.5-medium and cursor on auto. This is why the project does not (and never will) modify any save files. I don't trust AI code that modifies something as sensitive as a save file especially when the loading logic isn't 100% clear. If I had chosen to do that it could have potentially introduced corruptions which I would never want to cause. Thus, this project is simply a read-only viewer.

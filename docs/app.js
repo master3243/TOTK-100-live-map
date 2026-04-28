@@ -38,6 +38,8 @@ const demoSaveButton = document.querySelector("#demoSaveButton");
 const demoModal = document.querySelector("#demoModal");
 const demoModalCancel = document.querySelector("#demoModalCancel");
 const demoModalConfirm = document.querySelector("#demoModalConfirm");
+const demoSaveInputs = document.querySelectorAll('input[name="demoSave"]');
+const markersMenu = document.querySelector("#markersMenu");
 const saveLoadingOverlay = document.querySelector("#saveLoadingOverlay");
 const saveDropLayer = document.querySelector("#saveDropLayer");
 const sidebarToggle = document.querySelector("#sidebarToggle");
@@ -253,8 +255,22 @@ function setDemoModalOpen(open) {
   if (!demoModal) {
     return;
   }
+  if (open) {
+    const defaultDemoSave = demoModal.querySelector('input[name="demoSave"][value="endgame"]');
+    if (defaultDemoSave) {
+      defaultDemoSave.checked = true;
+    }
+  }
   demoModal.hidden = !open;
   demoModal.setAttribute("aria-hidden", open ? "false" : "true");
+}
+
+function selectedDemoSave() {
+  const selected = Array.from(demoSaveInputs).find((input) => input.checked);
+  return {
+    src: selected?.dataset.src || "assets/dummy.sav",
+    filename: selected?.dataset.filename || "dummy.sav",
+  };
 }
 
 function updateIconScale() {
@@ -1603,9 +1619,13 @@ function viewPlayerLocation() {
 }
 
 function applySavePayload(payload) {
+  const isFirstSaveLoad = !hasLoadedAnySave;
   hasLoadedAnySave = true;
   document.body.classList.remove("awaiting-manual-save");
   document.body.classList.remove("no-save-loaded");
+  if (isFirstSaveLoad && markersMenu) {
+    markersMenu.open = true;
+  }
   closeSidebarAfterSaveIfNeeded();
   playerPosition = payload.player || null;
   completionCategories = payload.completion || [];
@@ -2280,12 +2300,13 @@ if (demoModalConfirm) {
     setDemoModalOpen(false);
     try {
       setSaveLoading(true, "Loading");
-      const response = await fetch("assets/dummy.sav", { cache: "no-store" });
+      const demoSave = selectedDemoSave();
+      const response = await fetch(demoSave.src, { cache: "no-store" });
       if (!response.ok) {
         throw new Error(`Could not load demo file (HTTP ${response.status})`);
       }
       const bytes = await response.arrayBuffer();
-      const demoFile = new File([bytes], "dummy.sav", { type: "application/octet-stream" });
+      const demoFile = new File([bytes], demoSave.filename, { type: "application/octet-stream" });
       await uploadManualSave(demoFile);
     } catch (error) {
       setSaveLoading(false, "Demo load failed");

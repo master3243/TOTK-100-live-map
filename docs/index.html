@@ -104,7 +104,7 @@
               </div>
             </details>
 
-            <details class="overlay-group markers-menu">
+            <details id="markersMenu" class="overlay-group markers-menu">
               <summary class="group-title">
                 <input id="groupCompletion" class="group-toggle" type="checkbox" checked>
                 <span>Markers</span>
@@ -271,7 +271,22 @@
     <div id="demoModal" class="modal-backdrop" hidden aria-hidden="true">
       <div class="modal" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle">
         <div class="modal-title" id="demoModalTitle">Load demo save file?</div>
-        <div class="modal-body">This will load <code>assets/dummy.sav</code> into the map.</div>
+        <div class="modal-body">
+          <div class="demo-save-options" role="radiogroup" aria-label="Demo save file">
+            <label>
+              <input type="radio" name="demoSave" value="beginner" data-src="assets/beginner.sav" data-filename="beginner.sav">
+              <span>Beginner Save</span>
+            </label>
+            <label>
+              <input type="radio" name="demoSave" value="endgame" data-src="assets/dummy.sav" data-filename="dummy.sav" checked>
+              <span>Endgame Save (~70%)</span>
+            </label>
+            <label>
+              <input type="radio" name="demoSave" value="almost100" data-src="assets/almost%20100%25.sav" data-filename="almost 100%.sav">
+              <span>100% Save (almost)</span>
+            </label>
+          </div>
+        </div>
         <div class="modal-actions">
           <button id="demoModalConfirm" class="upload-button" type="button">Load demo</button>
           <button id="demoModalCancel" class="control-button" type="button">Cancel</button>
