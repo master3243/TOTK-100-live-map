@@ -21,7 +21,7 @@
         <div class="brand">
           <p class="eyebrow">Tears of the Kingdom</p>
           <h1>Save Map Helper</h1>
-          <h2>v1.0.7</h2>
+          <h2>v1.0.8</h2>
           <div class="save-upload">
             <input id="manualSaveInput" type="file" accept=".sav,application/octet-stream">
             <label class="upload-button" for="manualSaveInput">Upload save</label>
@@ -78,7 +78,7 @@
           </dl>
         </section>
 
-        <section class="panel" aria-label="Overlay options">
+        <section class="panel overlay-panel" aria-label="Overlay options">
           <h2>Overlays</h2>
           <div class="overlay-groups">
             <details class="overlay-group">
@@ -106,7 +106,7 @@
             <details class="overlay-group">
               <summary class="group-title">
                 <input id="groupCompletion" class="group-toggle" type="checkbox" checked>
-                <span>Completionist</span>
+                <span>Markers</span>
                 <span class="count-badge completion-total-badge" id="completionTotalSummary">-- / --</span>
                 <button id="completionEyesToggle" class="show-obtained-toggle group-eye-toggle" type="button" aria-label="Show obtained completion items" aria-pressed="false" title="Show obtained"></button>
               </summary>
@@ -148,7 +148,7 @@
                 </label>
                 <label>
                   <input id="completion-dungeon_bosses" type="checkbox" checked>
-                  <span>Depths Dungeon Bosses</span>
+                  <span>Dungeon Bosses</span>
                   <span class="count-badge" id="completionCount-dungeon_bosses">0</span>
                 </label>
                 <label>

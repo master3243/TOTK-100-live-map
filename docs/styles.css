@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
 :root {
   --bg: #101312;
   --panel: #1b211f;
@@ -29,7 +31,7 @@ body {
   overflow: hidden;
   background: var(--bg);
   color: var(--text);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 button {
@@ -111,7 +113,7 @@ h2 {
 .group-title {
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 6px;
   color: var(--accent);
   cursor: pointer;
   font-size: 12px;
@@ -120,8 +122,50 @@ h2 {
   text-transform: uppercase;
 }
 
-.group-title span {
+.overlay-group > summary.group-title {
+  list-style: none;
+}
+
+.overlay-group > summary.group-title::-webkit-details-marker {
+  display: none;
+}
+
+.overlay-group > summary.group-title::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 6px solid rgba(243, 239, 226, 0.7);
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  transform: rotate(0deg);
+  transition: transform 160ms ease, border-left-color 160ms ease;
+  margin-left: 2px;
+  margin-right: 6px;
+  flex: 0 0 auto;
+  order: 1;
+}
+
+.overlay-group[open] > summary.group-title::before {
+  transform: rotate(90deg);
+  border-left-color: rgba(215, 179, 90, 0.95);
+}
+
+.group-title .group-toggle {
+  order: 0;
+}
+
+.group-title > span:not(.count-badge) {
   flex: 1;
+  order: 2;
+}
+
+.group-title > .count-badge {
+  flex: 0 0 auto;
+  order: 3;
+}
+
+.group-title > button {
+  order: 4;
 }
 
 .group-toggle {
@@ -139,6 +183,10 @@ h2 {
   display: none;
 }
 
+.overlay-panel {
+  padding-right: 4px;
+}
+
 .check-list {
   display: grid;
   gap: 10px;
@@ -147,7 +195,7 @@ h2 {
 .check-list label {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   color: var(--muted);
   font-size: 14px;
   line-height: 1.25;
@@ -378,15 +426,26 @@ body.save-drop-active {
   padding: 2px 6px;
 }
 
-.completion-total-badge {
+.completion-list label .count-badge {
   margin-left: auto;
+}
+
+.completion-list label .show-obtained-toggle {
+  margin-left: 2px;
+}
+
+.completion-total-badge {
   font-size: 11px;
   padding: 2px 8px;
   opacity: 0.95;
 }
 
+.group-title .completion-total-badge {
+  margin-left: 0;
+}
+
 .completion-total-badge + .group-eye-toggle {
-  margin-left: 10px;
+  margin-left: 0;
 }
 
 .show-obtained-toggle {
@@ -487,6 +546,35 @@ body.save-drop-active {
   cursor: pointer;
   font-size: 14px;
   font-weight: 700;
+}
+
+.log-panel > summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+}
+
+.log-panel > summary::-webkit-details-marker {
+  display: none;
+}
+
+.log-panel > summary::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 7px solid rgba(243, 239, 226, 0.7);
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  transform: rotate(0deg);
+  transition: transform 160ms ease, border-left-color 160ms ease;
+  margin-left: auto;
+  flex: 0 0 auto;
+}
+
+.log-panel[open] > summary::after {
+  transform: rotate(90deg);
+  border-left-color: rgba(215, 179, 90, 0.95);
 }
 
 .log-entries {
