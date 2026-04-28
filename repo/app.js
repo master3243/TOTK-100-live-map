@@ -327,14 +327,30 @@ function parseLeadingUInt64FromNote(note) {
   }
 }
 
-function markerObjmapQueryHash(marker) {
+function parseLocationFlagFromNote(note) {
+  if (!note || typeof note !== "string") {
+    return null;
+  }
+  const match = /\b(IsVisitLocation\.[\w_]+)\b/.exec(note);
+  return match ? match[1] : null;
+}
+
+function markerObjmapQuery(marker) {
+  const objmapId = (marker.objmapId || "").trim();
+  if (/^0x[0-9a-fA-F]{16}$/.test(objmapId)) {
+    return objmapId;
+  }
+  const locationFlag = parseLocationFlagFromNote(marker.note);
+  if (locationFlag) {
+    return locationFlag.replaceAll(".", " ");
+  }
   const fromNote = parseLeadingUInt64FromNote(marker.note);
   if (fromNote != null) {
-    return fromNote;
+    return `0x${fromNote.toString(16).padStart(16, "0")}`;
   }
   const raw = (marker.hash || marker.value || "").trim();
   if (/^[0-9a-fA-F]{8}$/.test(raw)) {
-    return BigInt(`0x${raw}`);
+    return `0x${raw}`;
   }
   return null;
 }
@@ -356,15 +372,14 @@ function formatLayerForObjmap(layer) {
 
 /** https://objmap-totk.zeldamods.org — zoom z8, world X/Z, layer, ?q=0x… */
 function buildObjmapTotkUrl(marker) {
-  const q = markerObjmapQueryHash(marker);
+  const q = markerObjmapQuery(marker);
   if (q == null || !Number.isFinite(marker.x) || !Number.isFinite(marker.z)) {
     return null;
   }
-  const qHex = q.toString(16).padStart(16, "0");
   const x = Math.round(marker.x);
   const z = Math.round(marker.z);
   const layerName = formatLayerForObjmap(marker.layer);
-  return `https://objmap-totk.zeldamods.org/#/map/z${OBJMAP_TOTK_ZOOM},${x},${z},${layerName}?q=0x${qHex}`;
+  return `https://objmap-totk.zeldamods.org/#/map/z${OBJMAP_TOTK_ZOOM},${x},${z},${layerName}?q=${encodeURIComponent(q)}`;
 }
 
 function tooltipExternalLinks(links) {

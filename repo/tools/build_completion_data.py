@@ -9,6 +9,42 @@ REFERENCES = ROOT / "references"
 OUTPUT = ROOT / "completion_data.json"
 LAYER_FIX = 500
 
+TOWER_LOCATION_NAMES = [
+    "Lookout Landing",
+    "Lindor's Brow",
+    "Pikida Stonegrove",
+    "Eldin Canyon",
+    "Ulri Mountain",
+    "Sahasra Slope",
+    "Upland Zorana",
+    "Hyrule Field",
+    "Gerudo Canyon",
+    "Gerudo Highlands",
+    "Rabella Wetlands",
+    "Thyphlo Ruins",
+    "Popla Foothills",
+    "Mount Lanayru",
+    "Rospro Pass",
+]
+
+TOWER_OBJMAP_IDS = [
+    "0xf5d609bea48ad8a7",
+    "0x0fc9e8295f1f88fd",
+    "0xd123cab576760e7a",
+    "0x2db057d38b410428",
+    "0xb3186e3b60f253e0",
+    "0x17e0e03b26704860",
+    "0xe7fca251fbcd90c0",
+    "0x38aac9054a75ba9f",
+    "0x5d34d120278b0839",
+    "0xbcdf97fc90e206fc",
+    "0x32dcf687f9affd88",
+    "0x5b8c27dcacdedda0",
+    "0x1096ee2cdaab6137",
+    "0x999f20de53cae3cf",
+    "0xc1c2ac34270e19c5",
+]
+
 
 CATEGORIES = [
     {"id": "towers", "label": "Towers", "hashes": "TOWERS_ACTIVATED", "coords": "TOWERS", "kind": "bool"},
@@ -262,6 +298,20 @@ def target_value(value):
     return f"{int(value):08x}"
 
 
+def generated_note(category_id, index, coord_note):
+    if coord_note:
+        return coord_note
+    if category_id == "towers" and index < len(TOWER_LOCATION_NAMES):
+        return f"IsVisitLocation.Tower{index + 1:02d} ({TOWER_LOCATION_NAMES[index]})"
+    return ""
+
+
+def objmap_id_for(category_id, index):
+    if category_id == "towers" and index < len(TOWER_OBJMAP_IDS):
+        return TOWER_OBJMAP_IDS[index]
+    return None
+
+
 def main():
     completism = (REFERENCES / "zelda-totk.completism.js").read_text(encoding="utf-8")
     coordinates = (REFERENCES / "zelda-totk.coordinates.js").read_text(encoding="utf-8")
@@ -275,15 +325,19 @@ def main():
         items = []
         for index in range(count):
             coord = coords[index]
-            items.append({
+            item = {
                 "id": f"{category['id']}-{index + 1:03d}",
                 "value": ids[index],
                 "x": coord["x"],
                 "y": coord["y"],
                 "z": coord["z"],
                 "layer": layer_for(coord["y"]),
-                "note": coord["note"],
-            })
+                "note": generated_note(category["id"], index, coord["note"]),
+            }
+            objmap_id = objmap_id_for(category["id"], index)
+            if objmap_id:
+                item["objmapId"] = objmap_id
+            items.append(item)
         categories.append({
             "id": category["id"],
             "label": category["label"],
