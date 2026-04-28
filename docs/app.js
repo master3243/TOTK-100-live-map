@@ -1581,6 +1581,9 @@ function applySavePayload(payload) {
   hasLoadedAnySave = true;
   document.body.classList.remove("awaiting-manual-save");
   document.body.classList.remove("no-save-loaded");
+  if (isNarrowLayout() && document.body.classList.contains("sidebar-open")) {
+    setSidebarOpen(false);
+  }
   playerPosition = payload.player || null;
   completionCategories = payload.completion || [];
   updatePlayerAutoPan(payload);
