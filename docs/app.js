@@ -176,6 +176,28 @@ function updateNarrowLayoutClass() {
   document.body.classList.toggle("narrow-layout", isNarrowLayout());
 }
 
+function shouldAutoCloseSidebarAfterSave() {
+  if (!document.body.classList.contains("sidebar-open")) {
+    return false;
+  }
+  const visualWidth = window.visualViewport?.width || window.innerWidth;
+  return document.body.classList.contains("narrow-layout")
+    || isNarrowLayout()
+    || visualWidth <= 820;
+}
+
+function closeSidebarAfterSaveIfNeeded() {
+  if (!shouldAutoCloseSidebarAfterSave()) {
+    return;
+  }
+  setSidebarOpen(false);
+  requestAnimationFrame(() => {
+    if (shouldAutoCloseSidebarAfterSave()) {
+      setSidebarOpen(false);
+    }
+  });
+}
+
 function clampPanToViewportCenterCell() {
   if (!imageWidth || !imageHeight) {
     return;
@@ -1584,9 +1606,7 @@ function applySavePayload(payload) {
   hasLoadedAnySave = true;
   document.body.classList.remove("awaiting-manual-save");
   document.body.classList.remove("no-save-loaded");
-  if (isNarrowLayout() && document.body.classList.contains("sidebar-open")) {
-    setSidebarOpen(false);
-  }
+  closeSidebarAfterSaveIfNeeded();
   playerPosition = payload.player || null;
   completionCategories = payload.completion || [];
   updatePlayerAutoPan(payload);
@@ -1595,6 +1615,7 @@ function applySavePayload(payload) {
   renderGuide(payload.markers);
   renderMarkers(payload.markers, completionCategories);
   updateTargetControls();
+  closeSidebarAfterSaveIfNeeded();
 }
 
 async function refreshKoroks() {
