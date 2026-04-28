@@ -43,6 +43,7 @@ const sidebarToggle = document.querySelector("#sidebarToggle");
 const sidebarBackdrop = document.querySelector("#sidebarBackdrop");
 const sidebarClose = document.querySelector("#sidebarClose");
 const logEntries = document.querySelector("#logEntries");
+const logPanel = logEntries?.closest(".log-panel") || null;
 const viewPlayer = document.querySelector("#viewPlayer");
 const layerButtons = document.querySelectorAll(".layer-button");
 let currentPristineWeaponsStat = null;
@@ -1835,6 +1836,11 @@ async function refreshHealth() {
 }
 
 function renderLog(entries) {
+  if (logPanel) {
+    const hasEntries = Boolean(entries?.length);
+    logPanel.hidden = !hasEntries;
+    logPanel.setAttribute("aria-hidden", hasEntries ? "false" : "true");
+  }
   const signature = entries.map((entry) => `${entry.time}|${entry.message}`).join("\n");
   if (signature === lastLogSignature) {
     return;
@@ -2278,6 +2284,10 @@ if (window.TOTK_USE_PYODIDE) {
   saveStatus.textContent = "Manual upload";
   if (!hasLoadedAnySave) {
     document.body.classList.add("awaiting-manual-save");
+  }
+  if (logPanel) {
+    logPanel.hidden = true;
+    logPanel.setAttribute("aria-hidden", "true");
   }
 } else {
   refreshHealth();
