@@ -1,3 +1,4 @@
+import ipaddress
 import json
 import logging
 import os
@@ -37,6 +38,60 @@ KOROK_DATA_PATH = ROOT / "korok_data.json"
 COMPLETION_DATA_PATH = ROOT / "completion_data.json"
 HOST = "127.0.0.1"
 PORT = 8000
+
+
+def _read_raw_config() -> dict:
+    if not CONFIG_PATH.exists():
+        return {}
+    try:
+        with CONFIG_PATH.open("r", encoding="utf-8") as file:
+            return json.load(file)
+    except Exception:
+        logging.exception("Could not read %s", CONFIG_PATH)
+        return {}
+
+
+def _parse_listen_host(value, default: str = "127.0.0.1") -> str:
+    if value is None:
+        return default
+    if isinstance(value, str):
+        text = value.strip()
+        return text if text else default
+    return str(value)
+
+
+def _parse_listen_port(value, default: int = 8000) -> int:
+    if value is None:
+        return default
+    try:
+        port = int(value)
+    except (TypeError, ValueError):
+        return default
+    if 1 <= port <= 65535:
+        return port
+    return default
+
+
+def apply_listen_settings_from_config() -> None:
+    """Set module-level HOST/PORT from config.json if present."""
+    global HOST, PORT
+    raw = _read_raw_config()
+    HOST = _parse_listen_host(raw.get("server_host"), HOST)
+    PORT = _parse_listen_port(raw.get("server_port"), PORT)
+
+
+def url_host_for_browser(listen_host: str) -> str:
+    """Host segment for a browser URL (127.0.0.1 when bound to all interfaces)."""
+    text = (listen_host or "").strip()
+    if not text or text == "0.0.0.0":
+        return "127.0.0.1"
+    try:
+        addr = ipaddress.ip_address(text)
+        if addr.version == 6:
+            return f"[{addr.compressed}]"
+        return addr.compressed
+    except ValueError:
+        return text
 
 SAVE_VERSIONS = {
     2307552: {"header": 0x0046C3C8, "metadata_start": 0x0003C050, "version": "v1.0"},
@@ -651,7 +706,8 @@ class Handler(SimpleHTTPRequestHandler):
 def main():
     setup_logging()
     os.chdir(ROOT)
-    url = f"http://{HOST}:{PORT}/"
+    apply_listen_settings_from_config()
+    url = f"http://{url_host_for_browser(HOST)}:{PORT}/"
     server = ThreadingHTTPServer((HOST, PORT), Handler)
     print(f"Serving TOTK helper at {url}")
     logging.info("Serving TOTK helper at %s", url)

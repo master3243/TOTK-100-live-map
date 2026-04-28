@@ -1,4 +1,6 @@
 {
-	"save_path": "C:\\Users\\master\\AppData\\Roaming\\eden\\nand\\user\\save\\0000000000000000\\AA018DFD0EC68181E05AB02FC16A68FB\\0100F2C0115B6000",
-	"save_file": "progress.sav"
+  "save_path": "C:\\Users\\master\\AppData\\Roaming\\eden\\nand\\user\\save\\0000000000000000\\AA018DFD0EC68181E05AB02FC16A68FB\\0100F2C0115B6000",
+  "save_file": "progress.sav",
+  "server_host": "127.0.0.1",
+  "server_port": 8001
 }

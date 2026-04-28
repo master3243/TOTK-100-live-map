@@ -45,7 +45,9 @@ def run():
     logging.getLogger().addHandler(TkLogHandler(log_queue))
 
     status_var = tk.StringVar(value="Stopped")
-    url_var = tk.StringVar(value=f"http://{server.HOST}:{server.PORT}/")
+    host_var = tk.StringVar(value="127.0.0.1")
+    port_var = tk.StringVar(value="8000")
+    url_var = tk.StringVar(value="http://127.0.0.1:8000/")
 
     server_thread: Optional[threading.Thread] = None
     httpd = {"server": None}
@@ -53,6 +55,81 @@ def run():
     def save_config(config: dict):
         server.CONFIG_PATH.write_text(json.dumps(config, indent=2), encoding="utf-8")
         logging.info("Wrote config: %s", server.CONFIG_PATH)
+
+    def rebuild_url():
+        listen_host = host_var.get().strip() or "127.0.0.1"
+        port_text = port_var.get().strip() or "8000"
+        try:
+            port = int(port_text)
+        except ValueError:
+            port = 8000
+        display_host = server.url_host_for_browser(listen_host)
+        url_var.set(f"http://{display_host}:{port}/")
+
+    def merge_server_keys_into_config():
+        if not server.CONFIG_PATH.exists():
+            return
+        try:
+            config = json.loads(server.CONFIG_PATH.read_text(encoding="utf-8"))
+        except Exception:
+            return
+        changed = False
+        if "server_host" not in config:
+            config["server_host"] = "127.0.0.1"
+            changed = True
+        if "server_port" not in config:
+            config["server_port"] = 8000
+            changed = True
+        if changed:
+            save_config(config)
+
+    def load_server_fields_from_config():
+        if not server.CONFIG_PATH.exists():
+            return
+        try:
+            config = json.loads(server.CONFIG_PATH.read_text(encoding="utf-8"))
+        except Exception:
+            return
+        host = config.get("server_host")
+        if isinstance(host, str) and host.strip():
+            host_var.set(host.strip())
+        port = config.get("server_port")
+        if port is not None:
+            try:
+                port_var.set(str(int(port)))
+            except (TypeError, ValueError):
+                pass
+        rebuild_url()
+
+    def persist_listen_settings(listen_host: str, listen_port: int):
+        config: dict = {}
+        if server.CONFIG_PATH.exists():
+            try:
+                config = json.loads(server.CONFIG_PATH.read_text(encoding="utf-8"))
+            except Exception:
+                config = {}
+        config["server_host"] = listen_host
+        config["server_port"] = listen_port
+        save_config(config)
+
+    def parse_listen_for_start():
+        listen_host = host_var.get().strip() or "127.0.0.1"
+        port_text = port_var.get().strip()
+        if not port_text:
+            messagebox.showwarning("TOTK Save Map Helper", "Port is empty.")
+            return None
+        try:
+            listen_port = int(port_text)
+        except ValueError:
+            messagebox.showwarning("TOTK Save Map Helper", f"Invalid port: {port_text!r}")
+            return None
+        if not (1 <= listen_port <= 65535):
+            messagebox.showwarning(
+                "TOTK Save Map Helper",
+                f"Port must be between 1 and 65535 (got {listen_port}).",
+            )
+            return None
+        return listen_host, listen_port
 
     def looks_like_save_root(folder: Path, save_file: str) -> bool:
         # Accept either:
@@ -138,6 +215,16 @@ def run():
         if server_thread and server_thread.is_alive():
             return
 
+        parsed = parse_listen_for_start()
+        if not parsed:
+            status_var.set("Stopped")
+            return
+        listen_host, listen_port = parsed
+        server.HOST = listen_host
+        server.PORT = listen_port
+        rebuild_url()
+        persist_listen_settings(listen_host, listen_port)
+
         def target():
             try:
                 server.initialize()
@@ -204,9 +291,15 @@ def run():
     ttk.Label(header, text="Status:").pack(side="left")
     ttk.Label(header, textvariable=status_var).pack(side="left", padx=(6, 0))
 
-    ttk.Label(header, text="URL:").pack(side="left", padx=(18, 0))
-    url_entry = ttk.Entry(header, textvariable=url_var, width=36)
-    url_entry.pack(side="left", padx=(6, 0))
+    bind_frame = ttk.Frame(main)
+    bind_frame.pack(fill="x", pady=(10, 0))
+    ttk.Label(bind_frame, text="Listen host:").grid(row=0, column=0, sticky="w")
+    ttk.Entry(bind_frame, textvariable=host_var, width=18).grid(row=0, column=1, padx=(6, 0), sticky="w")
+    ttk.Label(bind_frame, text="Port:").grid(row=0, column=2, padx=(14, 0), sticky="w")
+    ttk.Entry(bind_frame, textvariable=port_var, width=8).grid(row=0, column=3, padx=(6, 0), sticky="w")
+
+    host_var.trace_add("write", lambda *_: rebuild_url())
+    port_var.trace_add("write", lambda *_: rebuild_url())
 
     buttons = ttk.Frame(main)
     buttons.pack(fill="x", pady=(12, 8))
@@ -237,6 +330,8 @@ def run():
     poll_logs()
 
     ensure_config()
+    merge_server_keys_into_config()
+    load_server_fields_from_config()
 
     # Auto-start for convenience.
     root.after(250, start_server)
