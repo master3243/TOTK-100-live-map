@@ -53,6 +53,9 @@ const overlayInputs = {
   playerGuide: document.querySelector("#showPlayerGuide"),
   playerAutoPan: document.querySelector("#playerAutoPan"),
 };
+
+// Until we successfully parse at least one save payload, hide panels that depend on save data.
+document.body.classList.add("no-save-loaded");
 const groupInputs = {
   player: document.querySelector("#groupPlayer"),
   completion: document.querySelector("#groupCompletion"),
@@ -1027,6 +1030,13 @@ function worldToMap(x, z) {
   };
 }
 
+function mapToWorld(mapX, mapY) {
+  return {
+    x: HYRULE_MIN_X + (mapX / 6000) * (HYRULE_MAX_X - HYRULE_MIN_X),
+    z: HYRULE_MIN_Z + (mapY / 5000) * (HYRULE_MAX_Z - HYRULE_MIN_Z),
+  };
+}
+
 function parseTargetWorldFromNote(note) {
   if (!note || typeof note !== "string") {
     return null;
@@ -1569,6 +1579,7 @@ function viewPlayerLocation() {
 function applySavePayload(payload) {
   hasLoadedAnySave = true;
   document.body.classList.remove("awaiting-manual-save");
+  document.body.classList.remove("no-save-loaded");
   playerPosition = payload.player || null;
   completionCategories = payload.completion || [];
   updatePlayerAutoPan(payload);
@@ -1999,7 +2010,12 @@ viewport.addEventListener("pointermove", (event) => {
   const rect = viewport.getBoundingClientRect();
   const mapX = Math.round((event.clientX - rect.left - offsetX) / scale);
   const mapY = Math.round((event.clientY - rect.top - offsetY) / scale);
-  cursorValue.textContent = imageWidth ? `${mapX}, ${mapY}` : "--, --";
+  if (!imageWidth) {
+    cursorValue.textContent = "--, --";
+  } else {
+    const world = mapToWorld(mapX, mapY);
+    cursorValue.textContent = `X ${Math.round(world.x)}, Z ${Math.round(world.z)}`;
+  }
 
   // If a hover-tooltip is visible but we're not over a marker (and it's not pinned), dismiss it.
   // This catches cases where pointerleave didn't fire (e.g. DOM re-render while hovering).

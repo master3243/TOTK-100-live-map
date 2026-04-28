@@ -34,6 +34,11 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+.no-save-loaded .live-save-panel,
+.no-save-loaded .overlay-panel {
+  display: none;
+}
+
 button {
   border: 0;
   color: inherit;
@@ -1090,7 +1095,8 @@ body.save-drop-active {
 }
 
 .completion-marker.obtained {
-  filter: drop-shadow(0 0 5px rgba(120, 230, 160, 0.72));
+  opacity: 0.82;
+  filter: grayscale(1) brightness(0.88) contrast(1.05);
 }
 
 .completion-marker.obtained.completion-hudson_sign,
@@ -1098,7 +1104,8 @@ body.save-drop-active {
 .completion-marker.obtained.completion-frox,
 .completion-marker.obtained.completion-molduga,
 .completion-marker.obtained.completion-gleeok {
-  filter: var(--svg-icon-filter) drop-shadow(0 0 5px rgba(120, 230, 160, 0.72));
+  opacity: 0.82;
+  filter: var(--svg-icon-filter) grayscale(1) brightness(0.88) contrast(1.05);
 }
 
 /* Highlight the marker that owns a pinned tooltip. */
