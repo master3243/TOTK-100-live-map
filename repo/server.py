@@ -573,6 +573,60 @@ def update_state(markers, save_modified, active_save_path):
     return save_state_entry
 
 
+def build_save_payload(data, save_path, save_modified, snapshot=None, update_latest_state=True):
+    header = read_u32(data, 4)
+    metadata_start = read_u32(data, 8)
+    version_info = SAVE_VERSIONS.get(len(data))
+    known_version = (
+        version_info["version"]
+        if version_info and version_info["header"] == header and version_info["metadata_start"] == metadata_start
+        else "unknown/modded"
+    )
+    values = parse_save_values(data)
+    guid_values = parse_guid_values(data)
+    player_position = parse_player_position(data)
+    markers = build_markers(values)
+    completion = build_completion(values, guid_values)
+    completion_stats = build_completion_stats(values)
+    obtained_markers = [marker for marker in markers if marker["obtained"]]
+    if update_latest_state:
+        update_state(markers, save_modified, save_path)
+
+    return {
+        "savePath": str(save_path),
+        "trackedSaves": [
+            {"path": str(item["path"]), "mtime": item["mtime"]}
+            for item in (snapshot or [])
+        ],
+        "lastModified": save_modified,
+        "fileSize": len(data),
+        "version": known_version,
+        "player": player_position,
+        "counts": {
+            "hidden": sum(1 for marker in obtained_markers if marker["kind"] == "hidden"),
+            "carry": sum(1 for marker in obtained_markers if marker["kind"] == "carry"),
+            "totalLocations": len(obtained_markers),
+            "totalSeeds": sum(marker["seedValue"] for marker in obtained_markers),
+            "availableLocations": len((_DATA["korok_data"] or {"hidden": [], "carry": []})["hidden"]) + len((_DATA["korok_data"] or {"hidden": [], "carry": []})["carry"]),
+            "availableSeeds": len((_DATA["korok_data"] or {"hidden": [], "carry": []})["hidden"]) + len((_DATA["korok_data"] or {"hidden": [], "carry": []})["carry"]) * 2,
+        },
+        "markers": markers,
+        "completion": completion,
+        "completionStats": completion_stats,
+    }
+
+
+def parse_uploaded_save(data, filename):
+    with SERVER_LOCK:
+        initialize()
+        label = filename or "uploaded progress.sav"
+        save_modified = time.time()
+        payload = build_save_payload(data, f"manual upload: {label}", save_modified, snapshot=[], update_latest_state=False)
+        obtained_markers = [marker for marker in payload["markers"] if marker["obtained"]]
+        add_log(f"Parsed manual upload {label}: {sum(marker['seedValue'] for marker in obtained_markers)}/1000 seeds")
+        return payload
+
+
 def parse_current_save():
     with SERVER_LOCK:
         initialize()
@@ -591,46 +645,11 @@ def parse_current_save():
             add_log(f"Active save: {save_path}")
 
         data = read_save_bytes(save_path)
-        header = read_u32(data, 4)
-        metadata_start = read_u32(data, 8)
-        version_info = SAVE_VERSIONS.get(len(data))
-        known_version = (
-            version_info["version"]
-            if version_info and version_info["header"] == header and version_info["metadata_start"] == metadata_start
-            else "unknown/modded"
-        )
-        values = parse_save_values(data)
-        guid_values = parse_guid_values(data)
-        player_position = parse_player_position(data)
-        markers = build_markers(values)
-        completion = build_completion(values, guid_values)
-        completion_stats = build_completion_stats(values)
+        payload = build_save_payload(data, save_path, save_modified, snapshot=snapshot, update_latest_state=True)
+        markers = payload["markers"]
         obtained_markers = [marker for marker in markers if marker["obtained"]]
-        update_state(markers, save_modified, save_path)
         add_log(f"Parsed {save_label(save_path)}: {sum(marker['seedValue'] for marker in obtained_markers)}/1000 seeds")
 
-        payload = {
-            "savePath": str(save_path),
-            "trackedSaves": [
-                {"path": str(item["path"]), "mtime": item["mtime"]}
-                for item in snapshot
-            ],
-            "lastModified": save_modified,
-            "fileSize": len(data),
-            "version": known_version,
-            "player": player_position,
-            "counts": {
-                "hidden": sum(1 for marker in obtained_markers if marker["kind"] == "hidden"),
-                "carry": sum(1 for marker in obtained_markers if marker["kind"] == "carry"),
-                "totalLocations": len(obtained_markers),
-                "totalSeeds": sum(marker["seedValue"] for marker in obtained_markers),
-                "availableLocations": len((_DATA["korok_data"] or {"hidden": [], "carry": []})["hidden"]) + len((_DATA["korok_data"] or {"hidden": [], "carry": []})["carry"]),
-                "availableSeeds": len((_DATA["korok_data"] or {"hidden": [], "carry": []})["hidden"]) + len((_DATA["korok_data"] or {"hidden": [], "carry": []})["carry"]) * 2,
-            },
-            "markers": markers,
-            "completion": completion,
-            "completionStats": completion_stats,
-        }
         PAYLOAD_CACHE["mtimes"] = current_mtimes
         PAYLOAD_CACHE["payload"] = payload
         return payload
@@ -706,6 +725,24 @@ class Handler(SimpleHTTPRequestHandler):
             self.send_json(200, {"entries": entries, "latestId": latest_id})
             return
         return super().do_GET()
+
+    def do_POST(self):
+        parsed = urlparse(self.path)
+        if parsed.path == "/api/upload_save":
+            try:
+                length = int(self.headers.get("Content-Length", "0"))
+                if length <= 0:
+                    self.send_json(400, {"error": "No save file was uploaded"})
+                    return
+                data = self.rfile.read(length)
+                filename = self.headers.get("X-Filename", "uploaded progress.sav")
+                self.send_json(200, parse_uploaded_save(data, filename))
+            except Exception as error:
+                add_log(f"Upload error: {error}")
+                logging.exception("Error handling /api/upload_save")
+                self.send_json(500, {"error": str(error)})
+            return
+        self.send_json(404, {"error": "Not found"})
 
 
 def main():

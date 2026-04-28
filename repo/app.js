@@ -32,6 +32,8 @@ const completionistSummary = document.querySelector("#completionistSummary");
 const compendiumSummary = document.querySelector("#compendiumSummary");
 const pristineWeaponsSummary = document.querySelector("#pristineWeaponsSummary");
 const fabricsSummary = document.querySelector("#fabricsSummary");
+const manualSaveInput = document.querySelector("#manualSaveInput");
+const manualSaveStatus = document.querySelector("#manualSaveStatus");
 const logEntries = document.querySelector("#logEntries");
 const viewPlayer = document.querySelector("#viewPlayer");
 const layerButtons = document.querySelectorAll(".layer-button");
@@ -1260,6 +1262,17 @@ function viewPlayerLocation() {
   }
 }
 
+function applySavePayload(payload) {
+  playerPosition = payload.player || null;
+  completionCategories = payload.completion || [];
+  updatePlayerAutoPan(payload);
+  updateCompletionCounts(completionCategories);
+  renderGuide(payload.markers);
+  renderMarkers(payload.markers, completionCategories);
+  updateSaveSummary(payload);
+  updateTargetControls();
+}
+
 async function refreshKoroks() {
   try {
     const response = await fetch("/api/koroks", { cache: "no-store" });
@@ -1269,14 +1282,7 @@ async function refreshKoroks() {
       throw new Error(payload.error || "Could not load save data");
     }
 
-    playerPosition = payload.player || null;
-    completionCategories = payload.completion || [];
-    updatePlayerAutoPan(payload);
-    updateCompletionCounts(completionCategories);
-    renderGuide(payload.markers);
-    renderMarkers(payload.markers, completionCategories);
-    updateSaveSummary(payload);
-    updateTargetControls();
+    applySavePayload(payload);
   } catch (error) {
     saveStatus.textContent = "Error";
     seedCount.textContent = "-- / --";
@@ -1292,6 +1298,36 @@ async function refreshKoroks() {
     pristineWeaponsSummary.setAttribute("aria-label", "No pristine weapon data loaded");
     fabricsSummary.setAttribute("aria-label", "No fabric data loaded");
     console.error(error);
+  }
+}
+
+async function uploadManualSave(file) {
+  if (!file) {
+    return;
+  }
+  manualSaveStatus.textContent = "Uploading...";
+  try {
+    const response = await fetch("/api/upload_save", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/octet-stream",
+        "X-Filename": file.name || "progress.sav",
+      },
+      body: await file.arrayBuffer(),
+    });
+    const payload = await response.json();
+    if (!response.ok) {
+      throw new Error(payload.error || "Could not parse uploaded save");
+    }
+    applySavePayload(payload);
+    manualSaveStatus.textContent = `Loaded ${file.name || "save file"}`;
+    saveStatus.textContent = "Manual upload";
+  } catch (error) {
+    manualSaveStatus.textContent = "Upload failed";
+    saveStatus.textContent = "Error";
+    console.error(error);
+  } finally {
+    manualSaveInput.value = "";
   }
 }
 
@@ -1624,6 +1660,9 @@ Object.entries(groupInputs).forEach(([groupName, input]) => {
 });
 
 viewPlayer.addEventListener("click", viewPlayerLocation);
+manualSaveInput.addEventListener("change", () => {
+  uploadManualSave(manualSaveInput.files?.[0] || null);
+});
 attachStatTooltip(pristineWeaponsSummary, () => pristineWeaponsTooltip(currentPristineWeaponsStat));
 attachStatTooltip(fabricsSummary, () => fabricsTooltip(currentFabricsStat));
 

@@ -172,6 +172,50 @@ h2 {
   opacity: 0.42;
 }
 
+.save-upload {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 10px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.save-upload input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.upload-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border: 1px solid rgba(215, 179, 90, 0.36);
+  border-radius: 6px;
+  background: rgba(215, 179, 90, 0.14);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.upload-button:hover {
+  border-color: rgba(215, 179, 90, 0.55);
+  background: rgba(215, 179, 90, 0.2);
+}
+
+#manualSaveStatus {
+  min-width: 0;
+  color: var(--muted);
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
 .count-badge {
   min-width: 32px;
   padding: 2px 7px;
