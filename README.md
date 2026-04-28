@@ -2,13 +2,22 @@
 
 Local browser prototype for comparing a Tears of the Kingdom save file against map data.
 
-# Build
+# For Developers
+
+## to create a new environment
+
+`conda create -p ./env python=3.9`
+
+`pip install -r .\repo\requirements.txt`
+
+## build
+To build a .exe locally:
 
 `conda activate ./env`
 
 `./build.ps1`
 
-# Run
+## Run
 
 ```powershell
 conda activate ./env
