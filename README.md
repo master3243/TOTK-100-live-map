@@ -1,7 +1,5 @@
 # TOTK Save Map Helper
 
-THIS PROJECT IS 100% CREATED BY CODEX-5.5-MEDIUM AND CURSOR ON AUTO. THIS IS VIBE SLOP.
-
 Local browser prototype for comparing a Tears of the Kingdom save file against map data.
 
 # Build
@@ -30,3 +28,9 @@ Then open <http://127.0.0.1:8000/>.
 
 Map image seed source: <https://github.com/vguzman812/totk-coordinates-map> (MIT).
 Korok hash/coordinate reference source: <https://github.com/marcrobledo/savegame-editors>.
+
+# Disclaimer
+
+THIS PROJECT IS 100% CREATED BY CODEX-5.5-MEDIUM AND CURSOR ON AUTO. THIS IS VIBE SLOP.
+
+This is why the project does not (and never will) modify any save files. I don't trust AI code that modifies something as sensitive as a save file. It might cause corruptions which I would never want to cause. Thus, this project is only a read-only viewer of the save file.
