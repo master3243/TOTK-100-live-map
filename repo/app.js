@@ -67,6 +67,7 @@ const completionInputs = {
   chasms: document.querySelector("#completion-chasms"),
   yiga_schematic: document.querySelector("#completion-yiga_schematic"),
   old_map: document.querySelector("#completion-old_map"),
+  armor: document.querySelector("#completion-armor"),
   sage_will: document.querySelector("#completion-sage_will"),
   schema_stone: document.querySelector("#completion-schema_stone"),
   general_locations: document.querySelector("#completion-general_locations"),
@@ -361,6 +362,10 @@ function parseLocationFlagFromNote(note) {
 }
 
 function markerObjmapQuery(marker) {
+  const objmapQuery = (marker.objmapQuery || "").trim();
+  if (objmapQuery) {
+    return objmapQuery;
+  }
   const objmapId = (marker.objmapId || "").trim();
   if (/^0x[0-9a-fA-F]{16}$/.test(objmapId)) {
     return objmapId;

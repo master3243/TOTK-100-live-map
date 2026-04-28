@@ -65,6 +65,7 @@ CATEGORIES = [
     {"id": "schema_stone", "label": "Schema Stones", "hashes": "SCHEMATICS_STONE_FOUND", "coords": "SCHEMATICS_STONE", "kind": "bool"},
     {"id": "yiga_schematic", "label": "Yiga Schematic", "hashes": "SCHEMATICS_YIGA_FOUND", "coords": "SCHEMATICS_YIGA", "kind": "bool"},
     {"id": "old_map", "label": "Old Map", "hashes": "TREASURE_MAPS_FOUND", "coords": "TREASURE_MAPS", "kind": "bool"},
+    {"id": "armor", "label": "Armor", "source": "armor_locations", "kind": "bool"},
     {"id": "sage_will", "label": "Sage's Will", "hashes": "SAGE_WILLS_FOUND", "coords": "SAGE_WILLS", "kind": "guid"},
     {"id": "general_locations", "label": "General Locations", "hashes": "LOCATIONS_VISITED", "coords": "LOCATIONS", "kind": "bool"},
 ]
@@ -282,6 +283,76 @@ def parse_fabric_items(hashes_text):
     return items
 
 
+def parse_hash_csv(hashes_text):
+    hashes = {}
+    for line in hashes_text.splitlines():
+        parts = line.strip().split(";", 2)
+        if len(parts) == 3:
+            hashes[parts[2]] = parts[0].lower()
+    return hashes
+
+
+def parse_locale_names(locale_text):
+    names = {}
+    for match in re.finditer(r"(Armor_[A-Za-z0-9_]+)\s*:\s*'((?:\\'|[^'])*)'", locale_text):
+        item_id = match.group(1)
+        label = match.group(2).replace("\\'", "'")
+        if "★" in label:
+            continue
+        names[label] = item_id
+    return names
+
+
+def parse_armor_location_items(chests_by_layer, locale_text, hashes_text):
+    name_to_armor_id = parse_locale_names(locale_text)
+    name_to_armor_id["Champion's Leathers"] = "Armor_1106_Upper"
+    hash_by_flag = parse_hash_csv(hashes_text)
+
+    items = []
+    missing = []
+    for map_layer, chests_text in chests_by_layer.items():
+        data = json.loads(chests_text)
+        armor_group = next((group for group in data if group.get("name") == "Armor"), None)
+        if not armor_group:
+            raise ValueError(f"Could not find Armor group in zeldacentral-totk-{map_layer}-chests.json")
+
+        markers = []
+        for layer in armor_group.get("layers", []):
+            markers.extend(layer.get("markers", []))
+
+        for index, marker in enumerate(markers, start=1):
+            label = marker["name"]
+            armor_id = name_to_armor_id.get(label)
+            if not armor_id:
+                missing.append(label)
+                continue
+            value = hash_by_flag.get(f"IsGet.{armor_id}")
+            if not value:
+                missing.append(f"{label} ({armor_id})")
+                continue
+
+            coords = marker["coords"]
+            source_id = marker.get("id", f"armor-{map_layer}-{index:03d}")
+            x = float(coords[1])
+            y = float(marker.get("elv", 0))
+            z = -float(coords[0])
+            items.append({
+                "id": f"armor-{len(items) + 1:03d}",
+                "value": value,
+                "x": x,
+                "y": y,
+                "z": z,
+                "layer": map_layer,
+                "note": f"{source_id} - {label} - {armor_id}",
+                "armorId": armor_id,
+                "objmapQuery": armor_id,
+            })
+
+    if missing:
+        raise ValueError(f"Could not map armor markers: {', '.join(missing)}")
+    return items
+
+
 def layer_for(y):
     if y >= 750:
         return "sky"
@@ -317,8 +388,27 @@ def main():
     coordinates = (REFERENCES / "zelda-totk.coordinates.js").read_text(encoding="utf-8")
     equipment = (REFERENCES / "zelda-totk.class.equipment.js").read_text(encoding="utf-8")
     hashes = (REFERENCES / "zelda-totk.hashes.csv").read_text(encoding="utf-8")
+    locale = (REFERENCES / "zelda-totk.locale.en.js").read_text(encoding="utf-8")
+    zeldacentral_chests = {
+        "surface": (REFERENCES / "zeldacentral-totk-surface-chests.json").read_text(encoding="utf-8"),
+        "sky": (REFERENCES / "zeldacentral-totk-sky-chests.json").read_text(encoding="utf-8"),
+        "depths": (REFERENCES / "zeldacentral-totk-depths-chests.json").read_text(encoding="utf-8"),
+    }
     categories = []
     for category in CATEGORIES:
+        if category.get("source") == "armor_locations":
+            items = parse_armor_location_items(zeldacentral_chests, locale, hashes)
+            categories.append({
+                "id": category["id"],
+                "label": category["label"],
+                "kind": category["kind"],
+                "targetValue": target_value(category.get("target")),
+                "defaultVisible": category.get("defaultVisible", True),
+                "items": items,
+                "sourceCounts": {"ids": len(items), "coordinates": len(items)},
+            })
+            continue
+
         ids = parse_hashes(completism, category["hashes"], category["kind"])
         coords = parse_coordinates(coordinates, category["coords"])
         count = min(len(ids), len(coords))

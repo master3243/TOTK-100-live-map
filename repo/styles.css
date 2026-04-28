@@ -730,6 +730,17 @@ h2 {
   background: url("assets/zd-icons/oldmap.png") center / contain no-repeat;
 }
 
+.completion-armor {
+  width: 24px;
+  height: 24px;
+  background: url("assets/zd-icons/treasure.png") center / contain no-repeat;
+  filter: drop-shadow(0 0 4px rgba(255, 230, 150, 0.8)) drop-shadow(0 0 2px rgba(12, 14, 12, 0.9));
+}
+
+.completion-marker.obtained.completion-armor {
+  filter: drop-shadow(0 0 5px rgba(120, 230, 160, 0.72)) drop-shadow(0 0 2px rgba(12, 14, 12, 0.9));
+}
+
 .completion-sage_will {
   background:
     radial-gradient(circle, rgba(191, 165, 255, 0.84) 0 38%, transparent 39%),
