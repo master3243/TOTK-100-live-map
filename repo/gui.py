@@ -1,3 +1,4 @@
+import argparse
 import logging
 import queue
 import threading
@@ -23,7 +24,7 @@ class TkLogHandler(logging.Handler):
             pass
 
 
-def run():
+def run(*, skip_browser: bool = False):
     import tkinter as tk
     from tkinter import filedialog, messagebox
     from tkinter import ttk
@@ -243,7 +244,8 @@ def run():
         server_thread.start()
 
         # Give it a moment to bind before opening browser.
-        root.after(250, open_browser)
+        if not skip_browser:
+            root.after(250, open_browser)
 
     def stop_server():
         srv = httpd.get("server")
@@ -339,5 +341,12 @@ def run():
 
 
 if __name__ == "__main__":
-    run()
+    parser = argparse.ArgumentParser(description="TOTK Save Map Helper")
+    parser.add_argument(
+        "--skip-browser",
+        action="store_true",
+        help="Do not open the browser automatically when the server starts.",
+    )
+    _args = parser.parse_args()
+    run(skip_browser=_args.skip_browser)
 
