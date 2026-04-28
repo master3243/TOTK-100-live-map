@@ -34,6 +34,7 @@ const pristineWeaponsSummary = document.querySelector("#pristineWeaponsSummary")
 const fabricsSummary = document.querySelector("#fabricsSummary");
 const manualSaveInput = document.querySelector("#manualSaveInput");
 const manualSaveStatus = document.querySelector("#manualSaveStatus");
+const saveDropLayer = document.querySelector("#saveDropLayer");
 const logEntries = document.querySelector("#logEntries");
 const viewPlayer = document.querySelector("#viewPlayer");
 const layerButtons = document.querySelectorAll(".layer-button");
@@ -1301,7 +1302,28 @@ async function refreshKoroks() {
   }
 }
 
+function hasFileDragTransfer(event) {
+  return Boolean(event.dataTransfer?.types?.includes("Files"));
+}
+
+function hideManualSaveDropUi() {
+  document.body.classList.remove("save-drop-active");
+  if (saveDropLayer) {
+    saveDropLayer.hidden = true;
+    saveDropLayer.setAttribute("aria-hidden", "true");
+  }
+}
+
+function showManualSaveDropUi() {
+  document.body.classList.add("save-drop-active");
+  if (saveDropLayer) {
+    saveDropLayer.hidden = false;
+    saveDropLayer.setAttribute("aria-hidden", "false");
+  }
+}
+
 async function uploadManualSave(file) {
+  hideManualSaveDropUi();
   if (!file) {
     return;
   }
@@ -1663,6 +1685,52 @@ viewPlayer.addEventListener("click", viewPlayerLocation);
 manualSaveInput.addEventListener("change", () => {
   uploadManualSave(manualSaveInput.files?.[0] || null);
 });
+
+if (saveDropLayer) {
+  window.addEventListener("dragenter", (event) => {
+    if (!hasFileDragTransfer(event)) {
+      return;
+    }
+    event.preventDefault();
+    if (!document.body.classList.contains("save-drop-active")) {
+      showManualSaveDropUi();
+    }
+  });
+
+  window.addEventListener("dragover", (event) => {
+    if (!hasFileDragTransfer(event)) {
+      return;
+    }
+    event.preventDefault();
+    event.dataTransfer.dropEffect = "copy";
+  });
+
+  window.addEventListener("dragend", hideManualSaveDropUi);
+
+  saveDropLayer.addEventListener("drop", (event) => {
+    if (!document.body.classList.contains("save-drop-active")) {
+      return;
+    }
+    event.preventDefault();
+    event.stopPropagation();
+    const file = event.dataTransfer.files?.[0] || null;
+    hideManualSaveDropUi();
+    if (file) {
+      uploadManualSave(file);
+    }
+  });
+
+  saveDropLayer.addEventListener("dragleave", (event) => {
+    if (saveDropLayer.hidden) {
+      return;
+    }
+    const rt = event.relatedTarget;
+    if (rt instanceof Node && saveDropLayer.contains(rt)) {
+      return;
+    }
+    hideManualSaveDropUi();
+  });
+}
 attachStatTooltip(pristineWeaponsSummary, () => pristineWeaponsTooltip(currentPristineWeaponsStat));
 attachStatTooltip(fabricsSummary, () => fabricsTooltip(currentFabricsStat));
 

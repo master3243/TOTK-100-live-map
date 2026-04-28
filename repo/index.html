@@ -12,6 +12,11 @@
         <div class="brand">
           <p class="eyebrow">Tears of the Kingdom</p>
           <h1>Save Map Helper</h1>
+          <div class="save-upload">
+            <input id="manualSaveInput" type="file" accept=".sav,application/octet-stream">
+            <label class="upload-button" for="manualSaveInput">Upload save</label>
+            <span id="manualSaveStatus">Live tracking active</span>
+          </div>
         </div>
 
         <section class="panel stats" aria-label="Map status">
@@ -60,11 +65,6 @@
               <dd id="fabricsSummary" class="hover-stat" tabindex="0">-- / --</dd>
             </div>
           </dl>
-          <div class="save-upload">
-            <input id="manualSaveInput" type="file" accept=".sav,application/octet-stream">
-            <label class="upload-button" for="manualSaveInput">Upload save</label>
-            <span id="manualSaveStatus">Live tracking active</span>
-          </div>
         </section>
 
         <section class="panel" aria-label="Overlay options">
@@ -254,6 +254,13 @@
         </div>
       </section>
     </main>
+
+    <div id="saveDropLayer" class="save-drop-layer" hidden aria-hidden="true">
+      <div class="save-drop-inner">
+        <p class="save-drop-title">Drop save file</p>
+        <p class="save-drop-hint">Release to load (e.g. progress.sav)</p>
+      </div>
+    </div>
 
     <script src="app.js"></script>
   </body>
