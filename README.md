@@ -1,13 +1,12 @@
 # TOTK Save Map Helper
 
-Local interactive Tears of the Kingdom map that loads your save file and shows you what's missing (and where it is) on the map so you can easilly get closer to 100%.
+Local interactive Tears of the Kingdom map that loads your save file and shows you what's missing (and where it is) on the map so you can easily get closer to 100%.
 
  The local version can automatically load your save file every second and updates the map in real time.
 
-But the browser version is also good but requires manual save file upload every time.
+But the browser version is ok-ish but requires manual save file upload every time.
 
-# TRY IT ONLINE NOW **[https://master3243.github.io/TOTK-100-live-map/](https://master3243.github.io/TOTK-100-live-map/)**
-
+# BROWSER VERSION: **[https://master3243.github.io/TOTK-100-live-map/](https://master3243.github.io/TOTK-100-live-map/)**
 
 # For Developers/Local Setup
 
