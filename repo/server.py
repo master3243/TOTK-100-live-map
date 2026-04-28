@@ -464,6 +464,7 @@ def build_completion(values, guid_values):
     categories = []
     for category in completion_data["categories"]:
         items = []
+        obtained_items = []
         obtained_count = 0
         target_value = category.get("targetValue")
         target_raw = int(target_value, 16) if target_value else None
@@ -477,15 +478,18 @@ def build_completion(values, guid_values):
                 obtained = raw == target_raw if target_raw is not None else raw != 0
                 raw_value = f"{raw:08x}"
 
-            if obtained:
-                obtained_count += 1
-                continue
-
             marker = dict(item)
             marker.update(world_to_map(item["x"], item["z"]))
             marker["categoryId"] = category["id"]
             marker["categoryLabel"] = category["label"]
+            marker["obtained"] = obtained
             marker["rawValue"] = raw_value
+
+            if obtained:
+                obtained_count += 1
+                obtained_items.append(marker)
+                continue
+
             items.append(marker)
 
         total = len(category["items"])
@@ -497,6 +501,7 @@ def build_completion(values, guid_values):
             "obtained": obtained_count,
             "remaining": total - obtained_count,
             "items": items,
+            "obtainedItems": obtained_items,
             "defaultVisible": category.get("defaultVisible", True),
             "sourceCounts": category.get("sourceCounts", {}),
         })

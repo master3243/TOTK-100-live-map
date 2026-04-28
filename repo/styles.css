@@ -193,6 +193,57 @@ h2 {
   padding: 2px 6px;
 }
 
+.show-obtained-toggle {
+  position: relative;
+  width: 22px;
+  height: 20px;
+  padding: 0;
+  border: 1px solid rgba(243, 239, 226, 0.18);
+  border-radius: 6px;
+  background: rgba(18, 23, 21, 0.8);
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.show-obtained-toggle::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  width: 10px;
+  height: 6px;
+  border: 1.5px solid currentColor;
+  border-radius: 50%;
+  color: rgba(243, 239, 226, 0.72);
+}
+
+.show-obtained-toggle::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 10px;
+  width: 14px;
+  height: 1.5px;
+  border-radius: 999px;
+  background: rgba(243, 239, 226, 0.82);
+  transform: rotate(-38deg);
+  transform-origin: center;
+}
+
+.show-obtained-toggle.active {
+  border-color: rgba(109, 183, 167, 0.48);
+  background: rgba(109, 183, 167, 0.16);
+}
+
+.show-obtained-toggle.active::after {
+  display: none;
+}
+
+.show-obtained-toggle:disabled {
+  cursor: default;
+  opacity: 0.35;
+}
+
 .completion-list label.completion-row-complete {
   color: #8fdfaa;
 }
@@ -560,6 +611,10 @@ h2 {
   pointer-events: auto;
   cursor: pointer;
   transform: translate(-50%, -50%) scale(var(--iconScale, 1));
+}
+
+.completion-marker.obtained {
+  filter: drop-shadow(0 0 5px rgba(120, 230, 160, 0.72));
 }
 
 /* Highlight the marker that owns a pinned tooltip. */

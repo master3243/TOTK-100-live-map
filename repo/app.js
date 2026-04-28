@@ -74,6 +74,19 @@ const completionInputs = {
 const completionCounts = Object.fromEntries(
   Object.keys(completionInputs).map((id) => [id, document.querySelector(`#completionCount-${id}`)]),
 );
+const completionShowObtained = Object.fromEntries(Object.keys(completionInputs).map((id) => [id, false]));
+const completionObtainedToggles = Object.fromEntries(
+  Object.entries(completionCounts).map(([id, count]) => {
+    const button = document.createElement("button");
+    button.className = "show-obtained-toggle";
+    button.type = "button";
+    button.setAttribute("aria-label", `Show obtained ${id.replaceAll("_", " ")}`);
+    button.setAttribute("aria-pressed", "false");
+    button.title = "Show obtained";
+    count?.after(button);
+    return [id, button];
+  }),
+);
 const overlayGroups = {
   korok: [
     overlayInputs.obtainedKoroks,
@@ -276,7 +289,7 @@ function setGroupChecked(groupName, checked) {
 
 function completionLabel(marker) {
   const note = marker.note ? ` - ${marker.note}` : "";
-  return `Missing ${marker.categoryLabel}${note}`;
+  return `${marker.obtained ? "Obtained" : "Missing"} ${marker.categoryLabel}${note}`;
 }
 
 function formatNumber(value) {
@@ -415,7 +428,7 @@ function korokTooltip(marker) {
 function completionTooltip(marker) {
   const base = tooltipRows(completionLabel(marker), [
     { label: "Category", value: marker.categoryLabel },
-    { label: "Status", value: "Unobtained" },
+    { label: "Status", value: marker.obtained ? "Obtained" : "Unobtained" },
     { label: "Layer", value: formatLayer(marker.layer) },
     { label: "World", value: `X ${formatNumber(marker.x)}, Y ${formatNumber(marker.y)}, Z ${formatNumber(marker.z)}` },
     { label: "Map", value: `${formatNumber(marker.mapX)}, ${formatNumber(marker.mapY)}` },
@@ -1043,13 +1056,19 @@ function renderMarkers(markers = korokMarkers, categories = completionCategories
       continue;
     }
 
-    for (const marker of category.items) {
+    const categoryMarkers = completionShowObtained[category.id]
+      ? [...category.items, ...(category.obtainedItems || [])]
+      : category.items;
+    for (const marker of categoryMarkers) {
       if (marker.layer !== activeLayer) {
         continue;
       }
 
       const element = document.createElement("span");
       const classes = ["completion-marker", `completion-${marker.categoryId}`];
+      if (marker.obtained) {
+        classes.push("obtained");
+      }
       if (marker.id === linkNearestCompletionId) {
         classes.push("link-nearest");
       }
@@ -1087,6 +1106,17 @@ function updateCompletionCounts(categories) {
     const total = category.total ?? remaining + obtained;
     if (count) {
       count.textContent = `${remaining} (${obtained}/${total})`;
+    }
+    const toggle = completionObtainedToggles[category.id];
+    if (toggle) {
+      toggle.disabled = obtained === 0;
+      toggle.classList.toggle("active", completionShowObtained[category.id]);
+      toggle.setAttribute("aria-pressed", completionShowObtained[category.id] ? "true" : "false");
+      toggle.title = completionShowObtained[category.id] ? "Hide obtained" : "Show obtained";
+      toggle.setAttribute(
+        "aria-label",
+        `${completionShowObtained[category.id] ? "Hide" : "Show"} obtained ${category.label}`,
+      );
     }
     if (label) {
       const complete = remaining === 0;
@@ -1497,6 +1527,16 @@ Object.values(overlayInputs).forEach((input) => {
 
 Object.values(completionInputs).forEach((input) => {
   input.addEventListener("change", rerenderOverlays);
+});
+
+Object.entries(completionObtainedToggles).forEach(([id, button]) => {
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    completionShowObtained[id] = !completionShowObtained[id];
+    updateCompletionCounts(completionCategories);
+    renderMarkers();
+  });
 });
 
 Object.entries(groupInputs).forEach(([groupName, input]) => {
