@@ -1024,14 +1024,11 @@ function parseTargetWorldFromNote(note) {
   return { x, y, z };
 }
 
-function appendKorokPairLines(markers) {
+function appendKorokTargetLines(markers) {
   if (!imageWidth || !imageHeight) {
     return null;
   }
-  const carryMarkers = (markers || []).filter((marker) => marker?.kind === "carry");
-  if (!carryMarkers.length) {
-    return null;
-  }
+  const candidates = (markers || []).filter((marker) => marker && (marker.kind === "carry" || marker.kind === "hidden"));
 
   const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   svg.setAttribute("class", "korok-pair-lines");
@@ -1043,7 +1040,7 @@ function appendKorokPairLines(markers) {
   svg.style.pointerEvents = "none";
 
   let appended = 0;
-  for (const marker of carryMarkers) {
+  for (const marker of candidates) {
     const targetWorld = parseTargetWorldFromNote(marker.note);
     if (!targetWorld) {
       continue;
@@ -1056,13 +1053,17 @@ function appendKorokPairLines(markers) {
       continue;
     }
 
-    const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-    circle.setAttribute("cx", String(marker.mapX));
-    circle.setAttribute("cy", String(marker.mapY));
-    circle.setAttribute("r", "3.3");
-    circle.setAttribute("vector-effect", "non-scaling-stroke");
-    circle.setAttribute("class", marker.obtained ? "obtained" : "unobtained");
-    svg.appendChild(circle);
+    // Carry: icon at end, small circle at start.
+    // Hidden-with-target: icon stays at start, small circle at end.
+    if (marker.kind === "carry") {
+      const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      circle.setAttribute("cx", String(marker.mapX));
+      circle.setAttribute("cy", String(marker.mapY));
+      circle.setAttribute("r", "3.3");
+      circle.setAttribute("vector-effect", "non-scaling-stroke");
+      circle.setAttribute("class", marker.obtained ? "obtained" : "unobtained");
+      svg.appendChild(circle);
+    }
 
     const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
     line.setAttribute("x1", String(marker.mapX));
@@ -1072,6 +1073,16 @@ function appendKorokPairLines(markers) {
     line.setAttribute("vector-effect", "non-scaling-stroke");
     line.setAttribute("class", marker.obtained ? "obtained" : "unobtained");
     svg.appendChild(line);
+
+    if (marker.kind === "hidden") {
+      const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      circle.setAttribute("cx", String(targetMap.mapX));
+      circle.setAttribute("cy", String(targetMap.mapY));
+      circle.setAttribute("r", "3.0");
+      circle.setAttribute("vector-effect", "non-scaling-stroke");
+      circle.setAttribute("class", marker.obtained ? "obtained" : "unobtained");
+      svg.appendChild(circle);
+    }
     appended += 1;
   }
 
@@ -1314,9 +1325,9 @@ function renderMarkers(markers = korokMarkers, categories = completionCategories
   const fragment = document.createDocumentFragment();
 
   const visibleKoroks = getVisibleMarkers(markers);
-  const pairLines = appendKorokPairLines(visibleKoroks);
-  if (pairLines) {
-    fragment.appendChild(pairLines);
+  const targetLines = appendKorokTargetLines(visibleKoroks);
+  if (targetLines) {
+    fragment.appendChild(targetLines);
   }
 
   for (const marker of visibleKoroks) {
