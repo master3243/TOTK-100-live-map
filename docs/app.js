@@ -998,6 +998,89 @@ function worldDistanceWorld3D(a, b) {
   return Math.hypot(dx, dy, dz);
 }
 
+const HYRULE_MIN_X = -6000;
+const HYRULE_MAX_X = 6000;
+const HYRULE_MIN_Z = -5000;
+const HYRULE_MAX_Z = 5000;
+
+function worldToMap(x, z) {
+  return {
+    mapX: (x - HYRULE_MIN_X) / (HYRULE_MAX_X - HYRULE_MIN_X) * 6000,
+    mapY: (z - HYRULE_MIN_Z) / (HYRULE_MAX_Z - HYRULE_MIN_Z) * 5000,
+  };
+}
+
+function parseTargetWorldFromNote(note) {
+  if (!note || typeof note !== "string") {
+    return null;
+  }
+  const match = /\btarget:\s*\[\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*\]/i.exec(note);
+  if (!match) {
+    return null;
+  }
+  const x = Number(match[1]);
+  const y = Number(match[2]);
+  const z = Number(match[3]);
+  if (!Number.isFinite(x) || !Number.isFinite(y) || !Number.isFinite(z)) {
+    return null;
+  }
+  return { x, y, z };
+}
+
+function appendKorokPairLines(markers) {
+  if (!imageWidth || !imageHeight) {
+    return null;
+  }
+  const carryMarkers = (markers || []).filter((marker) => marker?.kind === "carry");
+  if (!carryMarkers.length) {
+    return null;
+  }
+
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("class", "korok-pair-lines");
+  svg.setAttribute("width", String(imageWidth));
+  svg.setAttribute("height", String(imageHeight));
+  svg.style.position = "absolute";
+  svg.style.left = "0";
+  svg.style.top = "0";
+  svg.style.pointerEvents = "none";
+
+  let appended = 0;
+  for (const marker of carryMarkers) {
+    const targetWorld = parseTargetWorldFromNote(marker.note);
+    if (!targetWorld) {
+      continue;
+    }
+    const targetMap = worldToMap(targetWorld.x, targetWorld.z);
+    if (!Number.isFinite(marker.mapX) || !Number.isFinite(marker.mapY)) {
+      continue;
+    }
+    if (!Number.isFinite(targetMap.mapX) || !Number.isFinite(targetMap.mapY)) {
+      continue;
+    }
+
+    const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    circle.setAttribute("cx", String(marker.mapX));
+    circle.setAttribute("cy", String(marker.mapY));
+    circle.setAttribute("r", "3.3");
+    circle.setAttribute("vector-effect", "non-scaling-stroke");
+    circle.setAttribute("class", marker.obtained ? "obtained" : "unobtained");
+    svg.appendChild(circle);
+
+    const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    line.setAttribute("x1", String(marker.mapX));
+    line.setAttribute("y1", String(marker.mapY));
+    line.setAttribute("x2", String(targetMap.mapX));
+    line.setAttribute("y2", String(targetMap.mapY));
+    line.setAttribute("vector-effect", "non-scaling-stroke");
+    line.setAttribute("class", marker.obtained ? "obtained" : "unobtained");
+    svg.appendChild(line);
+    appended += 1;
+  }
+
+  return appended ? svg : null;
+}
+
 function findNearestUnobtained(origin, markers) {
   let nearest = null;
   let nearestDistance = Number.POSITIVE_INFINITY;
@@ -1233,7 +1316,13 @@ function renderMarkers(markers = korokMarkers, categories = completionCategories
   completionCategories = categories;
   const fragment = document.createDocumentFragment();
 
-  for (const marker of getVisibleMarkers(markers)) {
+  const visibleKoroks = getVisibleMarkers(markers);
+  const pairLines = appendKorokPairLines(visibleKoroks);
+  if (pairLines) {
+    fragment.appendChild(pairLines);
+  }
+
+  for (const marker of visibleKoroks) {
     const element = document.createElement("span");
     const classes = ["korok-marker", marker.kind, marker.obtained ? "obtained" : "unobtained"];
     if (marker.id === linkNearestUnobtainedId) {
@@ -1241,8 +1330,20 @@ function renderMarkers(markers = korokMarkers, categories = completionCategories
     }
 
     element.className = classes.join(" ");
-    element.style.left = `${marker.mapX}px`;
-    element.style.top = `${marker.mapY}px`;
+    if (marker.kind === "carry") {
+      const targetWorld = parseTargetWorldFromNote(marker.note);
+      if (targetWorld) {
+        const targetMap = worldToMap(targetWorld.x, targetWorld.z);
+        element.style.left = `${targetMap.mapX}px`;
+        element.style.top = `${targetMap.mapY}px`;
+      } else {
+        element.style.left = `${marker.mapX}px`;
+        element.style.top = `${marker.mapY}px`;
+      }
+    } else {
+      element.style.left = `${marker.mapX}px`;
+      element.style.top = `${marker.mapY}px`;
+    }
     element.removeAttribute("title");
     attachTooltip(element, korokTooltip(marker));
     fragment.appendChild(element);

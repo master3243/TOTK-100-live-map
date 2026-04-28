@@ -773,6 +773,40 @@ body.save-drop-active {
   stroke-width: 1.35;
 }
 
+.korok-pair-lines {
+  display: block;
+  overflow: visible;
+}
+
+.korok-pair-lines circle {
+  fill: rgba(255, 220, 140, 0.85);
+  stroke: rgba(18, 24, 18, 0.75);
+  stroke-width: 1.1;
+}
+
+.korok-pair-lines circle.obtained {
+  opacity: 0.55;
+}
+
+.korok-pair-lines circle.unobtained {
+  opacity: 0.95;
+}
+
+.korok-pair-lines line {
+  stroke: rgba(255, 220, 140, 0.38);
+  stroke-width: 1.15;
+  stroke-linecap: round;
+}
+
+.korok-pair-lines line.obtained {
+  opacity: 0.45;
+  stroke-dasharray: 4 4;
+}
+
+.korok-pair-lines line.unobtained {
+  opacity: 0.85;
+}
+
 .link-marker {
   position: absolute;
   width: 22px;
