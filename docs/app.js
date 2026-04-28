@@ -34,6 +34,10 @@ const pristineWeaponsSummary = document.querySelector("#pristineWeaponsSummary")
 const fabricsSummary = document.querySelector("#fabricsSummary");
 const manualSaveInput = document.querySelector("#manualSaveInput");
 const manualSaveStatus = document.querySelector("#manualSaveStatus");
+const demoSaveButton = document.querySelector("#demoSaveButton");
+const demoModal = document.querySelector("#demoModal");
+const demoModalCancel = document.querySelector("#demoModalCancel");
+const demoModalConfirm = document.querySelector("#demoModalConfirm");
 const saveDropLayer = document.querySelector("#saveDropLayer");
 const sidebarToggle = document.querySelector("#sidebarToggle");
 const sidebarBackdrop = document.querySelector("#sidebarBackdrop");
@@ -175,6 +179,14 @@ function updateTransform() {
   if (isTooltipPinned) {
     positionPinnedMapTooltip();
   }
+}
+
+function setDemoModalOpen(open) {
+  if (!demoModal) {
+    return;
+  }
+  demoModal.hidden = !open;
+  demoModal.setAttribute("aria-hidden", open ? "false" : "true");
 }
 
 function updateIconScale() {
@@ -1949,6 +1961,51 @@ viewPlayer.addEventListener("click", viewPlayerLocation);
 manualSaveInput.addEventListener("change", () => {
   uploadManualSave(manualSaveInput.files?.[0] || null);
 });
+
+if (demoSaveButton) {
+  demoSaveButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    setDemoModalOpen(true);
+  });
+}
+
+if (demoModalCancel) {
+  demoModalCancel.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    setDemoModalOpen(false);
+  });
+}
+
+if (demoModal) {
+  demoModal.addEventListener("click", (event) => {
+    if (event.target === demoModal) {
+      setDemoModalOpen(false);
+    }
+  });
+}
+
+if (demoModalConfirm) {
+  demoModalConfirm.addEventListener("click", async (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    setDemoModalOpen(false);
+    try {
+      manualSaveStatus.textContent = "Loading demo…";
+      const response = await fetch("assets/dummy.sav", { cache: "no-store" });
+      if (!response.ok) {
+        throw new Error(`Could not load demo file (HTTP ${response.status})`);
+      }
+      const bytes = await response.arrayBuffer();
+      const demoFile = new File([bytes], "dummy.sav", { type: "application/octet-stream" });
+      await uploadManualSave(demoFile);
+    } catch (error) {
+      manualSaveStatus.textContent = "Demo load failed";
+      console.error(error);
+    }
+  });
+}
 
 if (saveDropLayer) {
   window.addEventListener("dragenter", (event) => {

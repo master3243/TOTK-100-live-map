@@ -186,7 +186,7 @@ h2 {
 
 .save-upload {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto auto;
   gap: 8px 10px;
   align-items: center;
   margin-top: 0;
@@ -221,11 +221,93 @@ h2 {
   background: rgba(215, 179, 90, 0.2);
 }
 
-#manualSaveStatus {
+.save-upload-status {
+  grid-column: 1 / -1;
   min-width: 0;
   color: var(--muted);
   font-size: 12px;
   overflow-wrap: anywhere;
+}
+
+.demo-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+  padding: 0 10px;
+  width: fit-content;
+  border: 1px solid rgba(243, 239, 226, 0.18);
+  border-radius: 6px;
+  background: rgba(18, 23, 21, 0.7);
+  color: rgba(243, 239, 226, 0.92);
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.demo-button:hover {
+  border-color: rgba(243, 239, 226, 0.28);
+  background: rgba(18, 23, 21, 0.82);
+}
+
+/* Simple modal */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 120000;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.modal-backdrop[hidden] {
+  display: none !important;
+}
+
+.modal {
+  width: min(420px, 92vw);
+  border-radius: 12px;
+  border: 1px solid rgba(243, 239, 226, 0.16);
+  background: #151c1a;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.6);
+  padding: 14px;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+  text-rendering: geometricPrecision;
+}
+
+.modal-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.modal-body {
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.modal-body code {
+  color: rgba(243, 239, 226, 0.92);
+}
+
+.modal-actions {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.modal-actions .control-button,
+.modal-actions .upload-button {
+  height: 24px;
+  line-height: 24px;
+  min-height: 0;
+  padding: 0 9px;
+  font-size: 11px;
 }
 
 body.save-drop-active {

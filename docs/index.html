@@ -21,11 +21,12 @@
         <div class="brand">
           <p class="eyebrow">Tears of the Kingdom</p>
           <h1>Save Map Helper</h1>
-          <h2>v1.0.3</h2>
+          <h2>v1.0.4</h2>
           <div class="save-upload">
             <input id="manualSaveInput" type="file" accept=".sav,application/octet-stream">
             <label class="upload-button" for="manualSaveInput">Upload save</label>
-            <span id="manualSaveStatus">Live tracking active</span>
+            <button id="demoSaveButton" class="demo-button" type="button">Demo</button>
+            <div id="manualSaveStatus" class="save-upload-status" aria-live="polite">Live tracking active</div>
           </div>
         </div>
 
@@ -275,6 +276,17 @@
       <div class="save-drop-inner">
         <p class="save-drop-title">Drop save file</p>
         <p class="save-drop-hint">Release to load (e.g. progress.sav)</p>
+      </div>
+    </div>
+
+    <div id="demoModal" class="modal-backdrop" hidden aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle">
+        <div class="modal-title" id="demoModalTitle">Load demo save file?</div>
+        <div class="modal-body">This will load <code>assets/dummy.sav</code> into the map.</div>
+        <div class="modal-actions">
+          <button id="demoModalCancel" class="control-button" type="button">Cancel</button>
+          <button id="demoModalConfirm" class="upload-button" type="button">Load demo</button>
+        </div>
       </div>
     </div>
 
