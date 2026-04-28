@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TOTK Save Map Helper</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+      // Optional: GitHub Pages / static mode can enable Python parsing in-browser via Pyodide.
+      // You can force-enable with ?pyodide=1
+      window.TOTK_USE_PYODIDE = new URLSearchParams(location.search).has("pyodide")
+        || location.hostname.endsWith("github.io");
+    </script>
   </head>
   <body>
     <main class="app">

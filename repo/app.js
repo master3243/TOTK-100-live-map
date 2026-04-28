@@ -1335,6 +1335,13 @@ async function uploadManualSave(file) {
   }
   manualSaveStatus.textContent = "Uploading...";
   try {
+    if (window.TOTK_USE_PYODIDE) {
+      const payload = await uploadManualSaveViaPyodide(file);
+      applySavePayload(payload);
+      manualSaveStatus.textContent = `Loaded ${file.name || "save file"}`;
+      saveStatus.textContent = "Manual upload";
+      return;
+    }
     const response = await fetch("/api/upload_save", {
       method: "POST",
       headers: {
@@ -1351,12 +1358,166 @@ async function uploadManualSave(file) {
     manualSaveStatus.textContent = `Loaded ${file.name || "save file"}`;
     saveStatus.textContent = "Manual upload";
   } catch (error) {
+    // Helpful fallback for static hosting: if the backend is missing, try Pyodide once.
+    if (!window.TOTK_USE_PYODIDE) {
+      try {
+        const payload = await uploadManualSaveViaPyodide(file);
+        applySavePayload(payload);
+        manualSaveStatus.textContent = `Loaded ${file.name || "save file"}`;
+        saveStatus.textContent = "Manual upload";
+        return;
+      } catch {
+        // keep original error below
+      }
+    }
     manualSaveStatus.textContent = "Upload failed";
     saveStatus.textContent = "Error";
     console.error(error);
   } finally {
     manualSaveInput.value = "";
   }
+}
+
+let _pyodidePromise = null;
+let _pyodideReady = false;
+
+function pyodideAssetUrl(path) {
+  // Keep relative to the current directory so this works under /repo/ and /docs/ equally.
+  const base = new URL(".", window.location.href);
+  return new URL(path, base).toString();
+}
+
+async function loadPyodideScript() {
+  if (typeof window.loadPyodide === "function") {
+    return;
+  }
+  await new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = "https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js";
+    script.async = true;
+    script.onload = () => resolve();
+    script.onerror = () => reject(new Error("Failed to load Pyodide"));
+    document.head.appendChild(script);
+  });
+}
+
+async function ensurePyodide() {
+  if (_pyodidePromise) {
+    return _pyodidePromise;
+  }
+  _pyodidePromise = (async () => {
+    await loadPyodideScript();
+    const pyodide = await window.loadPyodide({ indexURL: "https://cdn.jsdelivr.net/pyodide/v0.26.2/full/" });
+
+    // Stage required Python + data files into the in-browser FS.
+    pyodide.FS.mkdirTree("/app");
+    const [serverPy, korokJson, completionJson] = await Promise.all([
+      fetch(pyodideAssetUrl("server.py"), { cache: "no-store" }).then((r) => r.text()),
+      fetch(pyodideAssetUrl("korok_data.json"), { cache: "no-store" }).then((r) => r.text()),
+      fetch(pyodideAssetUrl("completion_data.json"), { cache: "no-store" }).then((r) => r.text()),
+    ]);
+    pyodide.FS.writeFile("/app/server.py", serverPy, { encoding: "utf8" });
+    pyodide.FS.writeFile("/app/korok_data.json", korokJson, { encoding: "utf8" });
+    pyodide.FS.writeFile("/app/completion_data.json", completionJson, { encoding: "utf8" });
+
+    // Define a small Python entrypoint that reuses the existing parsing logic from server.py,
+    // but avoids filesystem scanning / HTTP server pieces.
+    await pyodide.runPythonAsync(`
+import sys, json, time
+from pathlib import Path
+
+sys.path.insert(0, "/app")
+import server as _srv
+
+_DATA_READY = False
+
+def _ensure_data_ready():
+    global _DATA_READY
+    if _DATA_READY:
+        return
+    korok_data = _srv.load_korok_data()
+    completion_data = _srv.load_completion_data()
+    korok_hashes = {
+        int(entry["hash"], 16)
+        for group in ("hidden", "carry")
+        for entry in korok_data[group]
+    }
+    completion_bool_hashes = {
+        int(item["value"], 16)
+        for category in completion_data["categories"]
+        if category["kind"] == "bool"
+        for item in category["items"]
+    }
+    completion_stat_hashes = {
+        int(item["value"], 16)
+        for stat in completion_data.get("stats", [])
+        for item in stat["items"]
+    }
+    _srv._DATA["korok_data"] = korok_data
+    _srv._DATA["completion_data"] = completion_data
+    _srv._DATA["tracked_hashes"] = korok_hashes | completion_bool_hashes | completion_stat_hashes
+    _DATA_READY = True
+
+def parse_uploaded_save(path: str, filename: str = "progress.sav", mtime: float | None = None):
+    _ensure_data_ready()
+    data = Path(path).read_bytes()
+    header = _srv.read_u32(data, 4)
+    metadata_start = _srv.read_u32(data, 8)
+    version_info = _srv.SAVE_VERSIONS.get(len(data))
+    known_version = (
+        version_info["version"]
+        if version_info and version_info["header"] == header and version_info["metadata_start"] == metadata_start
+        else "unknown/modded"
+    )
+
+    values = _srv.parse_save_values(data)
+    guid_values = _srv.parse_guid_values(data)
+    player_position = _srv.parse_player_position(data)
+    markers = _srv.build_markers(values)
+    completion = _srv.build_completion(values, guid_values)
+    completion_stats = _srv.build_completion_stats(values)
+    obtained_markers = [m for m in markers if m.get("obtained")]
+    save_modified = int(mtime if mtime is not None else time.time())
+
+    return {
+        "savePath": filename,
+        "trackedSaves": [],
+        "lastModified": save_modified,
+        "fileSize": len(data),
+        "version": known_version,
+        "player": player_position,
+        "counts": {
+            "hidden": sum(1 for m in obtained_markers if m.get("kind") == "hidden"),
+            "carry": sum(1 for m in obtained_markers if m.get("kind") == "carry"),
+            "totalLocations": len(obtained_markers),
+            "totalSeeds": sum(m.get("seedValue", 1) for m in obtained_markers),
+            "availableLocations": len(_srv._DATA["korok_data"]["hidden"]) + len(_srv._DATA["korok_data"]["carry"]),
+            "availableSeeds": len(_srv._DATA["korok_data"]["hidden"]) + len(_srv._DATA["korok_data"]["carry"]) * 2,
+        },
+        "markers": markers,
+        "completion": completion,
+        "completionStats": completion_stats,
+    }
+`);
+    _pyodideReady = true;
+    return pyodide;
+  })();
+  return _pyodidePromise;
+}
+
+async function uploadManualSaveViaPyodide(file) {
+  manualSaveStatus.textContent = "Loading Python parser…";
+  const pyodide = await ensurePyodide();
+  const bytes = new Uint8Array(await file.arrayBuffer());
+  pyodide.FS.mkdirTree("/tmp");
+  pyodide.FS.writeFile("/tmp/upload.sav", bytes);
+
+  manualSaveStatus.textContent = "Parsing save…";
+  const mtime = Math.floor((file.lastModified || Date.now()) / 1000);
+  const pyResult = await pyodide.runPythonAsync(`parse_uploaded_save("/tmp/upload.sav", ${JSON.stringify(file.name || "progress.sav")}, ${mtime})`);
+  const result = pyResult.toJs({ dict_converter: Object.fromEntries });
+  pyResult.destroy?.();
+  return result;
 }
 
 let lastHealthKey = null;
@@ -1744,12 +1905,21 @@ window.addEventListener("resize", preserveMapCenterOnViewportResize);
 
 loadLayer(activeLayer);
 syncAllGroupStates();
-refreshHealth();
-refreshLog();
-setInterval(refreshHealth, 1000);
-setInterval(refreshLog, 2500);
+if (window.TOTK_USE_PYODIDE) {
+  // Static/manual mode: no backend polling. Manual uploads are parsed in-browser.
+  manualSaveStatus.textContent = "Manual upload mode (Pyodide)";
+  saveStatus.textContent = "Manual upload";
+} else {
+  refreshHealth();
+  refreshLog();
+  setInterval(refreshHealth, 1000);
+  setInterval(refreshLog, 2500);
+}
 
 document.addEventListener("visibilitychange", () => {
+  if (window.TOTK_USE_PYODIDE) {
+    return;
+  }
   if (isTabVisible()) {
     refreshHealth();
     refreshLog();
