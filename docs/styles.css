@@ -359,10 +359,18 @@ h2 {
   position: fixed;
   inset: 0;
   z-index: 140000;
-  display: grid;
+  display: none;
   place-items: center;
   background: rgba(10, 12, 11, 0.35);
   backdrop-filter: blur(1.5px);
+}
+
+.save-loading .save-loading-overlay {
+  display: grid;
+}
+
+.save-loading-overlay[hidden] {
+  display: none !important;
 }
 
 .save-loading-card {

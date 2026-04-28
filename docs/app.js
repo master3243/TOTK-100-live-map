@@ -1637,9 +1637,13 @@ function setSaveLoading(loading, statusText) {
     saveLoadingOverlay.hidden = !loading;
     saveLoadingOverlay.setAttribute("aria-hidden", loading ? "false" : "true");
   }
-  if (manualSaveStatus && typeof statusText === "string") {
-    // Keep a minimal inline status for screen readers; visual loading is centered overlay.
-    manualSaveStatus.textContent = "Loading";
+  if (manualSaveStatus) {
+    if (loading) {
+      // Keep a minimal inline status for screen readers; visual loading is centered overlay.
+      manualSaveStatus.textContent = "Loading";
+    } else if (typeof statusText === "string") {
+      manualSaveStatus.textContent = statusText;
+    }
   }
   if (manualSaveInput) {
     manualSaveInput.disabled = loading;
