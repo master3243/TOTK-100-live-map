@@ -1,30 +1,48 @@
 # TOTK Save Map Helper
 
-Local browser prototype for comparing a Tears of the Kingdom save file against map data.
+Local interactive Tears of the Kingdom map that loads your save file and shows you what's missing (and where it is) on the map so you can easilly get closer to 100%.
 
-# For Developers
+ The local version can automatically load your save file every second and updates the map in real time.
+
+But the browser version is also good but requires manual save file upload every time.
+
+# TRY IT ONLINE NOW **[https://master3243.github.io/TOTK-100-live-map/](https://master3243.github.io/TOTK-100-live-map/)**
+
+
+# For Developers/Local Setup
+
+The local version of the app is MUCH better in terms of quality of life. The map updates in real-time as you play and constantly shows the next nearest unobtained Korok/Boss/etc.
+
+If you want the local version you need to know how to setup a python environment (which is very simply).
 
 ## to create a new environment
 
-`conda create -p ./env python=3.9`
+```powershell
+cd REPO_FOLDER
+conda create -p ./env python=3.9
+pip install -r .\repo\requirements.txt
+```
 
-`pip install -r .\repo\requirements.txt`
-
-## build
-To build a .exe locally:
-
-`conda activate ./env`
-
-`./build.ps1`
-
-## Run
+## Run Locally
 
 ```powershell
 conda activate ./env
-python .\repo\gui.py --skip-browser
+python .\repo\gui.py
 ```
 
-Then open <http://127.0.0.1:8000/>.
+Or if you don't want to open the browser automatically (`python .\repo\gui.py --skip-browser`)
+
+## build .exe
+
+You don't need to do this. But it was convenient when you can just double click it to start the app.
+
+To build a .exe locally:
+
+```powershell
+cd REPO_FOLDER
+conda activate ./env
+./build.ps1
+```
 
 ## Current milestone
 
@@ -35,11 +53,20 @@ Then open <http://127.0.0.1:8000/>.
 - Live read-only parsing of the configured `progress.sav`.
 - Obtained Korok locations drawn from save flags and refreshed every 2.5 seconds.
 
-Map image seed source: <https://github.com/vguzman812/totk-coordinates-map> (MIT).
-Korok hash/coordinate reference source: <https://github.com/marcrobledo/savegame-editors>.
+## Credits / Thanks
+
+Huge thanks to the following people for public resources that made this project possible.
+
+- **Map imagery seed**: [`vguzman812/totk-coordinates-map`](https://github.com/vguzman812/totk-coordinates-map)
+- **Save parsing + korok hash/coordinate reference**: [`marcrobledo/savegame-editors`](https://github.com/marcrobledo/savegame-editors)
+- **Icon pack source (stored in `assets/zd-icons/`)**: [`zeldadungeon.net/maps/totk/icons/`](https://www.zeldadungeon.net/maps/totk/icons/)
+- **In-browser Python runtime for the GitHub Pages/manual-upload mode**: [Pyodide](https://pyodide.org/)
+- **Third-party JS bundled under `docs/references/`**:
+  - [`FileSaver.js`](https://github.com/eligrey/FileSaver.js) (eligrey)
+  - Marc Robledo’s helper libraries (MarcFile/Tooltips/DragAndDrop) referenced in the bundled `savegame-editor.js`
 
 # Disclaimer
 
-THIS PROJECT IS 100% CREATED BY CODEX-5.5-MEDIUM AND CURSOR ON AUTO. THIS IS VIBE SLOP.
+THIS PROJECT IS CREATED BY CODEX-5.5-MEDIUM AND CURSOR ON AUTO. But it did require tons of guidence from me in terms of what features I want and bugs/workflows that need improvements.
 
-This is why the project does not (and never will) modify any save files. I don't trust AI code that modifies something as sensitive as a save file. It might cause corruptions which I would never want to cause. Thus, this project is only a read-only viewer of the save file.
+This is why the project does not (and never will) modify any save files. I don't trust AI code that modifies something as sensitive as a save file. It might cause corruptions which I would never want to cause. Thus, this project is simply a read-only viewer.
