@@ -1054,12 +1054,12 @@ function appendKorokTargetLines(markers) {
     }
 
     // Carry: icon at end, small circle at start.
-    // Hidden-with-target: icon stays at start, small circle at end.
-    if (marker.kind === "carry") {
+    // Hidden-with-target: icon at end (target), small circle at start (entry).
+    if (marker.kind === "carry" || marker.kind === "hidden") {
       const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
       circle.setAttribute("cx", String(marker.mapX));
       circle.setAttribute("cy", String(marker.mapY));
-      circle.setAttribute("r", "3.3");
+      circle.setAttribute("r", marker.kind === "carry" ? "3.3" : "3.0");
       circle.setAttribute("vector-effect", "non-scaling-stroke");
       circle.setAttribute("class", marker.obtained ? "obtained" : "unobtained");
       svg.appendChild(circle);
@@ -1073,16 +1073,6 @@ function appendKorokTargetLines(markers) {
     line.setAttribute("vector-effect", "non-scaling-stroke");
     line.setAttribute("class", marker.obtained ? "obtained" : "unobtained");
     svg.appendChild(line);
-
-    if (marker.kind === "hidden") {
-      const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-      circle.setAttribute("cx", String(targetMap.mapX));
-      circle.setAttribute("cy", String(targetMap.mapY));
-      circle.setAttribute("r", "3.0");
-      circle.setAttribute("vector-effect", "non-scaling-stroke");
-      circle.setAttribute("class", marker.obtained ? "obtained" : "unobtained");
-      svg.appendChild(circle);
-    }
     appended += 1;
   }
 
@@ -1339,6 +1329,16 @@ function renderMarkers(markers = korokMarkers, categories = completionCategories
 
     element.className = classes.join(" ");
     if (marker.kind === "carry") {
+      const targetWorld = parseTargetWorldFromNote(marker.note);
+      if (targetWorld) {
+        const targetMap = worldToMap(targetWorld.x, targetWorld.z);
+        element.style.left = `${targetMap.mapX}px`;
+        element.style.top = `${targetMap.mapY}px`;
+      } else {
+        element.style.left = `${marker.mapX}px`;
+        element.style.top = `${marker.mapY}px`;
+      }
+    } else if (marker.kind === "hidden") {
       const targetWorld = parseTargetWorldFromNote(marker.note);
       if (targetWorld) {
         const targetMap = worldToMap(targetWorld.x, targetWorld.z);
