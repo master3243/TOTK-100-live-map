@@ -898,17 +898,14 @@ function setSidebarOpen(open) {
     sidebarClose.hidden = !open;
     sidebarClose.setAttribute("aria-hidden", open ? "false" : "true");
   }
-  if (sidebarToggle) {
-    sidebarToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-    sidebarToggle.setAttribute("title", open ? "Close menu" : "Menu");
-  }
+  // Keep the hamburger as "open menu"; close is via the top-right X, backdrop, or Escape.
 }
 
 if (sidebarToggle) {
   sidebarToggle.addEventListener("click", (event) => {
     event.preventDefault();
     event.stopPropagation();
-    setSidebarOpen(!document.body.classList.contains("sidebar-open"));
+    setSidebarOpen(true);
   });
 }
 

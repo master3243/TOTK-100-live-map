@@ -529,32 +529,6 @@ body.save-drop-active {
   top: 6px;
 }
 
-body.sidebar-open .sidebar-toggle-icon {
-  background: transparent;
-}
-
-body.sidebar-open .sidebar-toggle-icon::before {
-  top: 0;
-  transform: rotate(45deg);
-}
-
-body.sidebar-open .sidebar-toggle-icon::after {
-  top: 0;
-  transform: rotate(-45deg);
-}
-
-@media (max-width: 820px) {
-  body.sidebar-open .sidebar-toggle-icon {
-    background: rgba(243, 239, 226, 0.92);
-  }
-  body.sidebar-open .sidebar-toggle-icon::before,
-  body.sidebar-open .sidebar-toggle-icon::after {
-    transform: none;
-    top: 0;
-    opacity: 0;
-  }
-}
-
 .sidebar-backdrop {
   position: absolute;
   inset: 0;
@@ -1308,6 +1282,10 @@ body.sidebar-open .sidebar-toggle-icon::after {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+  }
+
+  body.sidebar-open .sidebar-toggle {
+    display: none;
   }
 
   body.sidebar-open {
