@@ -14,15 +14,6 @@
           <h1>Save Map Helper</h1>
         </div>
 
-        <section class="panel" aria-label="Map layers">
-          <h2>Map Layer</h2>
-          <div class="segmented" role="group" aria-label="Choose map layer">
-            <button class="layer-button" type="button" data-layer="depths">Depths</button>
-            <button class="layer-button active" type="button" data-layer="surface">Surface</button>
-            <button class="layer-button" type="button" data-layer="sky">Sky</button>
-          </div>
-        </section>
-
         <section class="panel stats" aria-label="Map status">
           <h2>View</h2>
           <dl>
@@ -241,6 +232,12 @@
       </aside>
 
       <section class="map-shell" aria-label="Interactive TOTK map">
+        <div class="layer-stack" role="group" aria-label="Choose map layer">
+          <button class="layer-button layer-sky" type="button" data-layer="sky" aria-label="Sky map" title="Sky"></button>
+          <button class="layer-button layer-surface active" type="button" data-layer="surface" aria-label="Surface map" title="Surface"></button>
+          <button class="layer-button layer-depths" type="button" data-layer="depths" aria-label="Depths map" title="Depths"></button>
+        </div>
+
         <div class="toolbar" aria-label="Map controls">
           <button class="icon-button" id="zoomOut" type="button" aria-label="Zoom out" title="Zoom out">-</button>
           <button class="icon-button" id="zoomIn" type="button" aria-label="Zoom in" title="Zoom in">+</button>
