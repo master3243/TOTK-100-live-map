@@ -263,6 +263,32 @@ h2 {
   margin-top: 0;
 }
 
+.awaiting-manual-save .save-upload {
+  position: relative;
+  padding: 10px 10px 12px;
+  margin: -10px -10px 0;
+  border-radius: 12px;
+}
+
+.awaiting-manual-save .save-upload::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  pointer-events: none;
+  box-shadow:
+    0 0 0 1px rgba(215, 179, 90, 0.28),
+    0 0 22px rgba(215, 179, 90, 0.26),
+    0 0 46px rgba(215, 179, 90, 0.18);
+  animation: manualSaveGlow 1.9s ease-in-out infinite;
+}
+
+@keyframes manualSaveGlow {
+  0% { opacity: 0.55; }
+  50% { opacity: 1; }
+  100% { opacity: 0.55; }
+}
+
 .save-upload input[type="file"] {
   position: absolute;
   width: 1px;

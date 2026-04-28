@@ -9,6 +9,7 @@
       // Optional: GitHub Pages / static mode can enable Python parsing in-browser via Pyodide.
       // You can force-enable with ?pyodide=1
       window.TOTK_USE_PYODIDE = new URLSearchParams(location.search).has("pyodide")
+        || location.protocol === "file:"
         || location.hostname.endsWith("github.io");
     </script>
   </head>
@@ -21,7 +22,7 @@
         <div class="brand">
           <p class="eyebrow">Tears of the Kingdom</p>
           <h1>Save Map Helper</h1>
-          <h2>v1.0.10</h2>
+          <h2>v1.0.11</h2>
           <div class="save-upload">
             <input id="manualSaveInput" type="file" accept=".sav,application/octet-stream">
             <label class="upload-button" for="manualSaveInput">Upload save</label>

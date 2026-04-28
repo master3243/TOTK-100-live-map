@@ -152,6 +152,7 @@ let lastPlayerPanKey = null;
 /** When unchanged, skip re-applying player-guide zoom/pan (avoids jumps on unrelated overlay toggles). */
 let lastPlayerGuideFrameKey = "";
 let korokCountSummary = null;
+let hasLoadedAnySave = false;
 
 function clamp(value, min, max) {
   return Math.min(Math.max(value, min), max);
@@ -937,6 +938,11 @@ document.addEventListener("keydown", (event) => {
     setSidebarOpen(false);
     return;
   }
+  if (document.body.classList.contains("save-drop-active")) {
+    event.preventDefault();
+    hideManualSaveDropUi();
+    return;
+  }
   if (mapTooltip.hidden && statTooltip.hidden) {
     return;
   }
@@ -1547,6 +1553,8 @@ function viewPlayerLocation() {
 }
 
 function applySavePayload(payload) {
+  hasLoadedAnySave = true;
+  document.body.classList.remove("awaiting-manual-save");
   playerPosition = payload.player || null;
   completionCategories = payload.completion || [];
   updatePlayerAutoPan(payload);
@@ -2213,7 +2221,23 @@ if (saveDropLayer) {
     event.dataTransfer.dropEffect = "copy";
   });
 
+  // Note: "dragend" often won't fire on window when dragging files from the OS.
+  // Keep it anyway, but also hide on other "abort" signals below.
   window.addEventListener("dragend", hideManualSaveDropUi);
+  window.addEventListener("drop", hideManualSaveDropUi);
+  window.addEventListener("blur", hideManualSaveDropUi);
+  window.addEventListener("dragleave", (event) => {
+    // When leaving the browser window entirely, relatedTarget is usually null.
+    if (!document.body.classList.contains("save-drop-active")) {
+      return;
+    }
+    if (!hasFileDragTransfer(event)) {
+      return;
+    }
+    if (event.relatedTarget == null) {
+      hideManualSaveDropUi();
+    }
+  });
 
   saveDropLayer.addEventListener("drop", (event) => {
     if (!document.body.classList.contains("save-drop-active")) {
@@ -2252,6 +2276,9 @@ if (window.TOTK_USE_PYODIDE) {
   // Static/manual mode: no backend polling. Manual uploads are parsed in-browser.
   manualSaveStatus.textContent = "Manual upload mode (Pyodide)";
   saveStatus.textContent = "Manual upload";
+  if (!hasLoadedAnySave) {
+    document.body.classList.add("awaiting-manual-save");
+  }
 } else {
   refreshHealth();
   refreshLog();
