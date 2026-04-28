@@ -35,6 +35,9 @@ const fabricsSummary = document.querySelector("#fabricsSummary");
 const manualSaveInput = document.querySelector("#manualSaveInput");
 const manualSaveStatus = document.querySelector("#manualSaveStatus");
 const saveDropLayer = document.querySelector("#saveDropLayer");
+const sidebarToggle = document.querySelector("#sidebarToggle");
+const sidebarBackdrop = document.querySelector("#sidebarBackdrop");
+const sidebarClose = document.querySelector("#sidebarClose");
 const logEntries = document.querySelector("#logEntries");
 const viewPlayer = document.querySelector("#viewPlayer");
 const layerButtons = document.querySelectorAll(".layer-button");
@@ -872,6 +875,11 @@ document.addEventListener("keydown", (event) => {
   if (event.key !== "Escape") {
     return;
   }
+  if (document.body.classList.contains("sidebar-open")) {
+    event.preventDefault();
+    setSidebarOpen(false);
+    return;
+  }
   if (mapTooltip.hidden && statTooltip.hidden) {
     return;
   }
@@ -879,6 +887,46 @@ document.addEventListener("keydown", (event) => {
   setTooltipPinned(false);
   setStatTooltipPinned(false);
 });
+
+function setSidebarOpen(open) {
+  document.body.classList.toggle("sidebar-open", open);
+  if (sidebarBackdrop) {
+    sidebarBackdrop.hidden = !open;
+    sidebarBackdrop.setAttribute("aria-hidden", open ? "false" : "true");
+  }
+  if (sidebarClose) {
+    sidebarClose.hidden = !open;
+    sidebarClose.setAttribute("aria-hidden", open ? "false" : "true");
+  }
+  if (sidebarToggle) {
+    sidebarToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    sidebarToggle.setAttribute("title", open ? "Close menu" : "Menu");
+  }
+}
+
+if (sidebarToggle) {
+  sidebarToggle.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    setSidebarOpen(!document.body.classList.contains("sidebar-open"));
+  });
+}
+
+if (sidebarBackdrop) {
+  sidebarBackdrop.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    setSidebarOpen(false);
+  });
+}
+
+if (sidebarClose) {
+  sidebarClose.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    setSidebarOpen(false);
+  });
+}
 
 const WORLD_DISTANCE_Y_WEIGHT = 3;
 

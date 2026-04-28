@@ -15,6 +15,9 @@
   <body>
     <main class="app">
       <aside class="sidebar" aria-label="Map tools">
+        <button id="sidebarClose" class="sidebar-close" type="button" aria-label="Close menu" title="Close" hidden aria-hidden="true">
+          <span class="sidebar-close-icon" aria-hidden="true"></span>
+        </button>
         <div class="brand">
           <p class="eyebrow">Tears of the Kingdom</p>
           <h1>Save Map Helper</h1>
@@ -240,6 +243,10 @@
       </aside>
 
       <section class="map-shell" aria-label="Interactive TOTK map">
+        <button id="sidebarToggle" class="sidebar-toggle" type="button" aria-label="Open menu" title="Menu">
+          <span class="sidebar-toggle-icon" aria-hidden="true"></span>
+        </button>
+        <div id="sidebarBackdrop" class="sidebar-backdrop" hidden aria-hidden="true"></div>
         <div class="layer-stack" role="group" aria-label="Choose map layer">
           <button class="layer-button layer-sky" type="button" data-layer="sky" aria-label="Sky map" title="Sky"></button>
           <button class="layer-button layer-surface active" type="button" data-layer="surface" aria-label="Surface map" title="Surface"></button>
