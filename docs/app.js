@@ -169,7 +169,46 @@ function updateNarrowLayoutClass() {
   document.body.classList.toggle("narrow-layout", isNarrowLayout());
 }
 
+function clampPanToViewportCenterCell() {
+  if (!imageWidth || !imageHeight) {
+    return;
+  }
+  const rect = viewport.getBoundingClientRect();
+  if (rect.width < 1 || rect.height < 1) {
+    return;
+  }
+
+  const mapW = imageWidth * scale;
+  const mapH = imageHeight * scale;
+
+  const cellLeft = rect.width / 5;
+  const cellRight = (rect.width * 4) / 5;
+  const cellTop = rect.height / 5;
+  const cellBottom = (rect.height * 4) / 5;
+
+  // Keep each map edge OUTSIDE the center cell:
+  // leftEdge <= cellLeft, rightEdge >= cellRight, topEdge <= cellTop, bottomEdge >= cellBottom
+  const minOffsetX = cellRight - mapW;
+  const maxOffsetX = cellLeft;
+  const minOffsetY = cellBottom - mapH;
+  const maxOffsetY = cellTop;
+
+  if (minOffsetX > maxOffsetX) {
+    // Map is smaller than the center cell in this axis; just center it.
+    offsetX = (rect.width - mapW) / 2;
+  } else {
+    offsetX = clamp(offsetX, minOffsetX, maxOffsetX);
+  }
+
+  if (minOffsetY > maxOffsetY) {
+    offsetY = (rect.height - mapH) / 2;
+  } else {
+    offsetY = clamp(offsetY, minOffsetY, maxOffsetY);
+  }
+}
+
 function updateTransform() {
+  clampPanToViewportCenterCell();
   const transform = `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
   mapImage.style.transform = transform;
   guideLayer.style.transform = transform;
