@@ -665,6 +665,35 @@ function fabricsTooltip(stat) {
   return statListTooltip(stat, "Fabrics", "All fabrics collected.");
 }
 
+function completionistTooltip() {
+  if (!completionCategories.length) {
+    return tooltipRows("Completionist", [
+      { label: "Status", value: "No save data loaded" },
+    ]);
+  }
+  const total = completionCategories.length;
+  const complete = completionCategories.filter((category) => (category.remaining ?? 0) === 0).length;
+  const missing = [...completionCategories]
+    .filter((category) => (category.remaining ?? 0) > 0)
+    .sort((a, b) => (b.remaining ?? 0) - (a.remaining ?? 0));
+  const rows = tooltipRows("Completionist", [
+    { label: "Complete", value: `${complete} / ${total} categories` },
+    { label: "Left", value: missing.length },
+  ]);
+  if (!missing.length) {
+    return `${rows}<p class="tooltip-note">All completionist categories are done.</p>`;
+  }
+  const items = missing
+    .map((category) => {
+      const remaining = category.remaining ?? 0;
+      const obtained = category.obtained ?? 0;
+      const categoryTotal = category.total ?? remaining + obtained;
+      return `<li>${escapeHtml(category.label)} <span class="tooltip-list-note">${remaining} left (${obtained}/${categoryTotal})</span></li>`;
+    })
+    .join("");
+  return `${rows}<div class="tooltip-section-title">Still left</div><ul class="tooltip-list">${items}</ul>`;
+}
+
 function sortStatMissingByLabel(items) {
   return [...(items || [])].sort((a, b) =>
     String(a.label || a.id || "").localeCompare(String(b.label || b.id || ""), undefined, { sensitivity: "base" }),
@@ -843,7 +872,17 @@ function attachTooltip(element, html) {
   });
 }
 
-function attachStatTooltip(element, getHtml) {
+function pulseMarkersMenu() {
+  if (!markersMenu) {
+    return;
+  }
+  markersMenu.open = true;
+  markersMenu.classList.remove("menu-glow");
+  void markersMenu.offsetWidth;
+  markersMenu.classList.add("menu-glow");
+}
+
+function attachStatTooltip(element, getHtml, { onClick = null } = {}) {
   element.addEventListener("pointerenter", (event) => {
     if (isStatTooltipPinned) {
       return;
@@ -889,6 +928,7 @@ function attachStatTooltip(element, getHtml) {
     setStatTooltipContent(getHtml(), { pinned: true });
     setStatTooltipPinned(true);
     positionStatTooltip(event);
+    onClick?.(event);
   });
 }
 
@@ -2378,6 +2418,7 @@ if (saveDropLayer) {
 }
 attachStatTooltip(pristineWeaponsSummary, () => pristineWeaponsTooltip(currentPristineWeaponsStat));
 attachStatTooltip(fabricsSummary, () => fabricsTooltip(currentFabricsStat));
+attachStatTooltip(completionistSummary, completionistTooltip, { onClick: pulseMarkersMenu });
 
 window.addEventListener("resize", preserveMapCenterOnViewportResize);
 window.addEventListener("resize", updateNarrowLayoutClass);

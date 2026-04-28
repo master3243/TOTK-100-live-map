@@ -155,6 +155,25 @@ h2 {
   border-left-color: rgba(215, 179, 90, 0.95);
 }
 
+.markers-menu.menu-glow {
+  animation: markers-menu-glow 1200ms ease-out;
+}
+
+@keyframes markers-menu-glow {
+  0%,
+  100% {
+    filter: none;
+  }
+
+  18% {
+    filter: drop-shadow(0 0 12px rgba(251, 204, 74, 0.78));
+  }
+
+  45% {
+    filter: drop-shadow(0 0 18px rgba(91, 217, 151, 0.72));
+  }
+}
+
 .group-title .group-toggle {
   order: 0;
 }
@@ -1521,6 +1540,11 @@ body.save-drop-active {
 
 .map-tooltip .tooltip-list li + li {
   margin-top: 3px;
+}
+
+.map-tooltip .tooltip-list-note {
+  color: var(--muted);
+  font-size: 11px;
 }
 
 @keyframes korokPulse {
