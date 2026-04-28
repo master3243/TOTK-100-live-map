@@ -8,11 +8,17 @@ But the browser version is ok-ish but requires manual save file upload every tim
 
 # BROWSER VERSION: **[https://master3243.github.io/TOTK-100-live-map/](https://master3243.github.io/TOTK-100-live-map/)**
 
-# For Developers/Local Setup
+# Who is this for?
 
-The local version of the app is MUCH better in terms of quality of life. The map updates in real-time as you play and constantly shows the next nearest unobtained Korok/Boss/etc.
+If you are playing Tears of the Kingdom and want to get 100% without spending hours manually tracking which Koroks/Things you already got, this project is for you. As mentioned, the best capability is it can read your save file live from your save folder and constantly update. That means you can leave the window open on a side monitor and it will be a live guide.
 
-If you want the local version you need to know how to setup a python environment (which is very simply).
+# Local Setup
+
+The local version of the app is MUCH better in terms of quality of life. The map updates in real-time as you play and constantly shows the next nearest unfinished Korok/Boss/etc.
+
+If you want the local version you need to know how to setup a python environment (which is very simple, just look up a guide).
+
+The first step is to clone the repository.
 
 ## to create a new environment
 
