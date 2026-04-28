@@ -327,6 +327,21 @@ function parseLeadingUInt64FromNote(note) {
   }
 }
 
+function parseAnyUInt64FromNote(note) {
+  if (!note || typeof note !== "string") {
+    return null;
+  }
+  const match = /\b(\d{12,})\b/.exec(note);
+  if (!match) {
+    return null;
+  }
+  try {
+    return BigInt(match[1]);
+  } catch {
+    return null;
+  }
+}
+
 function parseLeadingHex64FromNote(note) {
   if (!note || typeof note !== "string") {
     return null;
@@ -347,6 +362,18 @@ function markerObjmapQuery(marker) {
   const objmapId = (marker.objmapId || "").trim();
   if (/^0x[0-9a-fA-F]{16}$/.test(objmapId)) {
     return objmapId;
+  }
+  if (marker.categoryId === "yiga_schematic") {
+    return "yiga";
+  }
+  if (marker.categoryId === "schema_stone") {
+    return "Abandoned Mine";
+  }
+  if (marker.categoryId === "old_map") {
+    const oldMapId = parseAnyUInt64FromNote(marker.note);
+    if (oldMapId != null) {
+      return oldMapId.toString(10);
+    }
   }
   const locationFlag = parseLocationFlagFromNote(marker.note);
   if (locationFlag) {
