@@ -2339,7 +2339,7 @@ loadLayer(activeLayer);
 syncAllGroupStates();
 if (window.TOTK_USE_PYODIDE) {
   // Static/manual mode: no backend polling. Manual uploads are parsed in-browser.
-  manualSaveStatus.textContent = "Manual upload mode (Pyodide)";
+  setSaveLoading(false, "Manual upload mode (Pyodide)");
   saveStatus.textContent = "Manual upload";
   if (!hasLoadedAnySave) {
     document.body.classList.add("awaiting-manual-save");
@@ -2349,6 +2349,7 @@ if (window.TOTK_USE_PYODIDE) {
     logPanel.setAttribute("aria-hidden", "true");
   }
 } else {
+  setSaveLoading(false, "Live tracking active");
   refreshHealth();
   refreshLog();
   setInterval(refreshHealth, 1000);
