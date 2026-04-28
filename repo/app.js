@@ -327,6 +327,14 @@ function parseLeadingUInt64FromNote(note) {
   }
 }
 
+function parseLeadingHex64FromNote(note) {
+  if (!note || typeof note !== "string") {
+    return null;
+  }
+  const match = /^(0x[0-9a-fA-F]{16})\b/.exec(note.trim());
+  return match ? match[1] : null;
+}
+
 function parseLocationFlagFromNote(note) {
   if (!note || typeof note !== "string") {
     return null;
@@ -343,6 +351,10 @@ function markerObjmapQuery(marker) {
   const locationFlag = parseLocationFlagFromNote(marker.note);
   if (locationFlag) {
     return locationFlag.replaceAll(".", " ");
+  }
+  const hexFromNote = parseLeadingHex64FromNote(marker.note);
+  if (hexFromNote != null) {
+    return hexFromNote;
   }
   const fromNote = parseLeadingUInt64FromNote(marker.note);
   if (fromNote != null) {
