@@ -138,6 +138,7 @@ let offsetX = 0;
 let offsetY = 0;
 let imageWidth = 0;
 let imageHeight = 0;
+let hasLoadedAnyMapImage = false;
 let activePointers = new Map();
 let dragStart = null;
 let pinchStart = null;
@@ -305,6 +306,18 @@ function loadLayer(layerName) {
   loadingState.classList.remove("hidden");
   mapImage.alt = layers[layerName].alt;
   mapImage.src = layers[layerName].src;
+
+  // While the image is still loading (especially on first launch), we don't yet know natural dimensions,
+  if (!imageWidth || !imageHeight) {
+    scale = 1;
+    offsetX = 0;
+    offsetY = 0;
+    const transform = "translate(0px, 0px) scale(1)";
+    mapImage.style.transform = transform;
+    guideLayer.style.transform = transform;
+    markerLayer.style.transform = transform;
+    zoomValue.textContent = "100%";
+  }
 
   layerButtons.forEach((button) => {
     button.classList.toggle("active", button.dataset.layer === layerName);
@@ -1908,7 +1921,10 @@ mapImage.addEventListener("load", () => {
   imageHeight = nh;
   loadingState.classList.add("hidden");
 
-  if (!sameDimensions) {
+  if (!hasLoadedAnyMapImage) {
+    hasLoadedAnyMapImage = true;
+    centerMap();
+  } else if (!sameDimensions) {
     centerMap();
   } else {
     updateTransform();
