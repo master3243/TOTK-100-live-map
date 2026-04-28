@@ -2,6 +2,8 @@
 
 THIS PROJECT IS 100% CREATED BY CODEX 5.5 MEDIUM. THIS IS VIBE SLOP.
 
+Local browser prototype for comparing a Tears of the Kingdom save file against map data.
+
 # Build
 
 `conda activate ./env`
@@ -10,11 +12,9 @@ THIS PROJECT IS 100% CREATED BY CODEX 5.5 MEDIUM. THIS IS VIBE SLOP.
 
 # Run
 
-Local browser prototype for comparing a Tears of the Kingdom save file against map data.
-
 ```powershell
 conda activate ./env
-python .\repo\server.py
+python .\repo\gui.py --skip-browser
 ```
 
 Then open <http://127.0.0.1:8000/>.
