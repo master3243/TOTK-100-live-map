@@ -1,4 +1,4 @@
-﻿const layers = {
+const layers = {
   surface: {
     label: "surface",
     src: "assets/surface.jpg",
@@ -665,6 +665,19 @@ document.addEventListener("keydown", (event) => {
   setStatTooltipPinned(false);
 });
 
+const WORLD_DISTANCE_Y_WEIGHT = 3;
+
+/** World-space distance using X, Y, Z; vertical separation counts 10× vs horizontal (same Y as server payloads). */
+function worldDistanceWorld3D(a, b) {
+  const dx = a.x - b.x;
+  const dz = a.z - b.z;
+  if (!Number.isFinite(a.y) || !Number.isFinite(b.y)) {
+    return Math.hypot(dx, dz);
+  }
+  const dy = WORLD_DISTANCE_Y_WEIGHT * (a.y - b.y);
+  return Math.hypot(dx, dy, dz);
+}
+
 function findNearestUnobtained(origin, markers) {
   let nearest = null;
   let nearestDistance = Number.POSITIVE_INFINITY;
@@ -674,7 +687,7 @@ function findNearestUnobtained(origin, markers) {
       continue;
     }
 
-    const distance = Math.hypot(marker.x - origin.x, marker.z - origin.z);
+    const distance = worldDistanceWorld3D(marker, origin);
     if (distance < nearestDistance) {
       nearest = marker;
       nearestDistance = distance;
@@ -684,13 +697,13 @@ function findNearestUnobtained(origin, markers) {
   return nearest;
 }
 
-/** Closest target for the player guide: unobtained koroks and visible missing completion pins (world XZ). */
+/** Closest target for the player guide: unobtained koroks and visible missing completion pins (world XYZ). */
 function findNearestPlayerGuideTarget(origin, korokCandidates, completionCandidates) {
   let nearest = null;
   let nearestDistance = Number.POSITIVE_INFINITY;
 
   for (const marker of korokCandidates) {
-    const distance = Math.hypot(marker.x - origin.x, marker.z - origin.z);
+    const distance = worldDistanceWorld3D(marker, origin);
     if (distance < nearestDistance) {
       nearest = marker;
       nearestDistance = distance;
@@ -698,7 +711,7 @@ function findNearestPlayerGuideTarget(origin, korokCandidates, completionCandida
   }
 
   for (const marker of completionCandidates) {
-    const distance = Math.hypot(marker.x - origin.x, marker.z - origin.z);
+    const distance = worldDistanceWorld3D(marker, origin);
     if (distance < nearestDistance) {
       nearest = marker;
       nearestDistance = distance;
