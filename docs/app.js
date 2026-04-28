@@ -79,6 +79,8 @@ const completionCounts = Object.fromEntries(
   Object.keys(completionInputs).map((id) => [id, document.querySelector(`#completionCount-${id}`)]),
 );
 const completionShowObtained = Object.fromEntries(Object.keys(completionInputs).map((id) => [id, false]));
+const completionEyesToggle = document.querySelector("#completionEyesToggle");
+const completionTotalSummary = document.querySelector("#completionTotalSummary");
 const completionObtainedToggles = Object.fromEntries(
   Object.entries(completionCounts).map(([id, count]) => {
     const button = document.createElement("button");
@@ -99,6 +101,27 @@ const overlayGroups = {
   player: [overlayInputs.playerLocation, overlayInputs.playerGuide, overlayInputs.playerAutoPan],
   completion: Object.values(completionInputs),
 };
+
+function anyCompletionEyesOpen() {
+  return Object.values(completionShowObtained).some(Boolean);
+}
+
+function setAllCompletionEyes(open) {
+  for (const id of Object.keys(completionShowObtained)) {
+    completionShowObtained[id] = open;
+  }
+}
+
+function updateCompletionEyesToggleUi() {
+  if (!completionEyesToggle) {
+    return;
+  }
+  const open = anyCompletionEyesOpen();
+  completionEyesToggle.classList.toggle("active", open);
+  completionEyesToggle.setAttribute("aria-pressed", open ? "true" : "false");
+  completionEyesToggle.title = open ? "Hide obtained (all)" : "Show obtained (all)";
+  completionEyesToggle.setAttribute("aria-label", open ? "Hide obtained completion items" : "Show obtained completion items");
+}
 
 const minScale = 0.18;
 const maxScale = 6;
@@ -1167,6 +1190,8 @@ function renderMarkers(markers = korokMarkers, categories = completionCategories
 }
 
 function updateCompletionCounts(categories) {
+  let totalObtained = 0;
+  let totalTotal = 0;
   for (const category of categories) {
     const count = completionCounts[category.id];
     const input = completionInputs[category.id];
@@ -1174,6 +1199,8 @@ function updateCompletionCounts(categories) {
     const remaining = category.remaining ?? 0;
     const obtained = category.obtained ?? 0;
     const total = category.total ?? remaining + obtained;
+    totalObtained += obtained;
+    totalTotal += total;
     if (count) {
       count.textContent = `${remaining} (${obtained}/${total})`;
     }
@@ -1194,6 +1221,11 @@ function updateCompletionCounts(categories) {
       label.classList.toggle("completion-row-incomplete", !complete);
     }
   }
+  if (completionTotalSummary) {
+    completionTotalSummary.textContent = categories.length ? `${totalObtained} / ${totalTotal}` : "-- / --";
+    completionTotalSummary.setAttribute("title", "Obtained / total (all completion categories)");
+  }
+  updateCompletionEyesToggleUi();
 }
 
 function updateSaveSummary(payload) {
@@ -1824,6 +1856,17 @@ Object.entries(completionObtainedToggles).forEach(([id, button]) => {
     renderMarkers();
   });
 });
+
+if (completionEyesToggle) {
+  completionEyesToggle.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    const anyOpen = anyCompletionEyesOpen();
+    setAllCompletionEyes(!anyOpen);
+    updateCompletionCounts(completionCategories);
+    renderMarkers();
+  });
+}
 
 Object.entries(groupInputs).forEach(([groupName, input]) => {
   input.addEventListener("click", (event) => {

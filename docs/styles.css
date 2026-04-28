@@ -131,6 +131,10 @@ h2 {
   margin-top: 9px;
 }
 
+.overlay-group:not([open]) .group-eye-toggle {
+  display: none;
+}
+
 .check-list {
   display: grid;
   gap: 10px;
@@ -288,6 +292,17 @@ body.save-drop-active {
   padding: 2px 6px;
 }
 
+.completion-total-badge {
+  margin-left: auto;
+  font-size: 11px;
+  padding: 2px 8px;
+  opacity: 0.95;
+}
+
+.completion-total-badge + .group-eye-toggle {
+  margin-left: 10px;
+}
+
 .show-obtained-toggle {
   position: relative;
   width: 22px;
@@ -337,6 +352,24 @@ body.save-drop-active {
 .show-obtained-toggle:disabled {
   cursor: default;
   opacity: 0.35;
+}
+
+.group-eye-toggle {
+  margin-left: 8px;
+  width: 24px;
+  height: 22px;
+  border-color: rgba(243, 239, 226, 0.22);
+  background: rgba(18, 23, 21, 0.65);
+}
+
+.group-eye-toggle::before {
+  left: 6px;
+  top: 7px;
+}
+
+.group-eye-toggle::after {
+  left: 5px;
+  top: 11px;
 }
 
 .completion-list label.completion-row-complete {

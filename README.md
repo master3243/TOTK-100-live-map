@@ -19,17 +19,17 @@ If you want the local version you need to know how to setup a python environment
 ```powershell
 cd REPO_FOLDER
 conda create -p ./env python=3.9
-pip install -r .\repo\requirements.txt
+pip install -r .\docs\requirements.txt
 ```
 
 ## Run Locally
 
 ```powershell
 conda activate ./env
-python .\repo\gui.py
+python .\docs\gui.py
 ```
 
-Or if you don't want to open the browser automatically (`python .\repo\gui.py --skip-browser`)
+Or if you don't want to open the browser automatically (`python .\docs\gui.py --skip-browser`)
 
 ## build .exe
 
