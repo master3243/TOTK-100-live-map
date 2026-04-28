@@ -51,6 +51,7 @@ const viewPlayer = document.querySelector("#viewPlayer");
 const layerButtons = document.querySelectorAll(".layer-button");
 let currentPristineWeaponsStat = null;
 let currentFabricsStat = null;
+let currentCompendiumStat = null;
 const overlayInputs = {
   playerLocation: document.querySelector("#showPlayerLocation"),
   playerGuide: document.querySelector("#showPlayerGuide"),
@@ -665,6 +666,10 @@ function fabricsTooltip(stat) {
   return statListTooltip(stat, "Fabrics", "All fabrics collected.");
 }
 
+function compendiumTooltip(stat) {
+  return statListTooltip(stat, "Compendium", "All compendium pictures registered.");
+}
+
 function completionistTooltip() {
   if (!completionCategories.length) {
     return tooltipRows("Completionist", [
@@ -700,7 +705,7 @@ function sortStatMissingByLabel(items) {
   );
 }
 
-function statListTooltip(stat, title, completeText) {
+function statListTooltip(stat, title, completeText, { formatItem = null } = {}) {
   if (!stat) {
     return tooltipRows(title, [
       { label: "Status", value: "No save data loaded" },
@@ -711,10 +716,15 @@ function statListTooltip(stat, title, completeText) {
     { label: "Collected", value: `${stat.obtained} / ${stat.total}` },
     { label: "Left", value: stat.remaining },
   ]);
+  if (!missing.length && stat.remaining > 0) {
+    return `${rows}<p class="tooltip-note">Missing list not available from the current save payload yet.</p>`;
+  }
   if (!missing.length) {
     return `${rows}<p class="tooltip-note">${escapeHtml(completeText)}</p>`;
   }
-  const items = missing.map((item) => `<li>${escapeHtml(item.label || item.id)}</li>`).join("");
+  const items = missing
+    .map((item) => `<li>${escapeHtml(formatItem ? formatItem(item) : item.label || item.id)}</li>`)
+    .join("");
   return `${rows}<div class="tooltip-section-title">Still left</div><ul class="tooltip-list">${items}</ul>`;
 }
 
@@ -1598,9 +1608,18 @@ function updateSaveSummary(payload) {
     totalCategories > 0 ? `${completedCategories} / ${totalCategories}` : "-- / --";
 
   const compendium = (payload.completionStats || []).find((stat) => stat.id === "compendium");
+  currentCompendiumStat = compendium || null;
   compendiumSummary.textContent = compendium
     ? `${compendium.obtained} / ${compendium.total}`
     : "-- / --";
+  const missingCompendium = sortStatMissingByLabel(compendium?.missing);
+  const compendiumHoverText = compendium
+    ? missingCompendium.length
+      ? `Still missing:\n${missingCompendium.map((item) => item.label || item.id).join("\n")}`
+      : "All compendium pictures registered"
+    : "No compendium data loaded";
+  compendiumSummary.removeAttribute("title");
+  compendiumSummary.setAttribute("aria-label", compendiumHoverText);
 
   const pristineWeapons = (payload.completionStats || []).find((stat) => stat.id === "pristine_weapons");
   currentPristineWeaponsStat = pristineWeapons || null;
@@ -1694,12 +1713,15 @@ async function refreshKoroks() {
     locationCount.textContent = "-- / --";
     completionistSummary.textContent = "-- / --";
     compendiumSummary.textContent = "-- / --";
+    currentCompendiumStat = null;
     currentPristineWeaponsStat = null;
     currentFabricsStat = null;
     pristineWeaponsSummary.textContent = "-- / --";
     fabricsSummary.textContent = "-- / --";
     pristineWeaponsSummary.removeAttribute("title");
     fabricsSummary.removeAttribute("title");
+    compendiumSummary.removeAttribute("title");
+    compendiumSummary.setAttribute("aria-label", "No compendium data loaded");
     pristineWeaponsSummary.setAttribute("aria-label", "No pristine weapon data loaded");
     fabricsSummary.setAttribute("aria-label", "No fabric data loaded");
     console.error(error);
@@ -2418,6 +2440,7 @@ if (saveDropLayer) {
 }
 attachStatTooltip(pristineWeaponsSummary, () => pristineWeaponsTooltip(currentPristineWeaponsStat));
 attachStatTooltip(fabricsSummary, () => fabricsTooltip(currentFabricsStat));
+attachStatTooltip(compendiumSummary, () => compendiumTooltip(currentCompendiumStat));
 attachStatTooltip(completionistSummary, completionistTooltip, { onClick: pulseMarkersMenu });
 
 window.addEventListener("resize", preserveMapCenterOnViewportResize);

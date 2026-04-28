@@ -14964,2043 +14964,2552 @@
       "label": "Compendium",
       "kind": "reverse",
       "targetValue": "8d96a2c5",
-      "includeMissing": false,
+      "includeMissing": true,
       "items": [
         {
           "id": "compendium-001",
-          "value": "bbf256d3"
+          "value": "bbf256d3",
+          "label": "PictureBookData.Animal_Bear_A"
         },
         {
           "id": "compendium-002",
-          "value": "9ff57115"
+          "value": "9ff57115",
+          "label": "PictureBookData.Animal_Bear_B"
         },
         {
           "id": "compendium-003",
-          "value": "20a5ace9"
+          "value": "20a5ace9",
+          "label": "PictureBookData.Animal_Boar_A"
         },
         {
           "id": "compendium-004",
-          "value": "35fc77fb"
+          "value": "35fc77fb",
+          "label": "PictureBookData.Animal_Boar_B"
         },
         {
           "id": "compendium-005",
-          "value": "c5b45cc3"
+          "value": "c5b45cc3",
+          "label": "PictureBookData.Animal_Bull_A"
         },
         {
           "id": "compendium-006",
-          "value": "67386b44"
+          "value": "67386b44",
+          "label": "PictureBookData.Animal_Cassowary_A"
         },
         {
           "id": "compendium-007",
-          "value": "1f2816d2"
+          "value": "1f2816d2",
+          "label": "PictureBookData.Animal_Cow_A"
         },
         {
           "id": "compendium-008",
-          "value": "493a7ea3"
+          "value": "493a7ea3",
+          "label": "PictureBookData.Animal_Crow_A"
         },
         {
           "id": "compendium-009",
-          "value": "68b56527"
+          "value": "68b56527",
+          "label": "PictureBookData.Animal_Deer_A"
         },
         {
           "id": "compendium-010",
-          "value": "6cb0007b"
+          "value": "6cb0007b",
+          "label": "PictureBookData.Animal_Doe_A"
         },
         {
           "id": "compendium-011",
-          "value": "8ffb9003"
+          "value": "8ffb9003",
+          "label": "PictureBookData.Animal_Dog_A"
         },
         {
           "id": "compendium-012",
-          "value": "02679e6b"
+          "value": "02679e6b",
+          "label": "PictureBookData.Animal_Elk_A"
         },
         {
           "id": "compendium-013",
-          "value": "6e07db97"
+          "value": "6e07db97",
+          "label": "PictureBookData.Animal_Fox_A"
         },
         {
           "id": "compendium-014",
-          "value": "c07f48ea"
+          "value": "c07f48ea",
+          "label": "PictureBookData.Animal_Fox_B"
         },
         {
           "id": "compendium-015",
-          "value": "6da0cf5e"
+          "value": "6da0cf5e",
+          "label": "PictureBookData.Animal_Goat_A"
         },
         {
           "id": "compendium-016",
-          "value": "fc25d4cd"
+          "value": "fc25d4cd",
+          "label": "PictureBookData.Animal_Gull_A"
         },
         {
           "id": "compendium-017",
-          "value": "a4d56e2a"
+          "value": "a4d56e2a",
+          "label": "PictureBookData.Animal_Hawk_A"
         },
         {
           "id": "compendium-018",
-          "value": "2ad49566"
+          "value": "2ad49566",
+          "label": "PictureBookData.Animal_Heron_A"
         },
         {
           "id": "compendium-019",
-          "value": "e1f15720"
+          "value": "e1f15720",
+          "label": "PictureBookData.Animal_Heron_B"
         },
         {
           "id": "compendium-020",
-          "value": "3e602b46"
+          "value": "3e602b46",
+          "label": "PictureBookData.Animal_Insect_A"
         },
         {
           "id": "compendium-021",
-          "value": "ec235bfa"
+          "value": "ec235bfa",
+          "label": "PictureBookData.Animal_Insect_AA"
         },
         {
           "id": "compendium-022",
-          "value": "84d32b47"
+          "value": "84d32b47",
+          "label": "PictureBookData.Animal_Insect_AB"
         },
         {
           "id": "compendium-023",
-          "value": "01490087"
+          "value": "01490087",
+          "label": "PictureBookData.Animal_Insect_AG"
         },
         {
           "id": "compendium-024",
-          "value": "3c2fb3ee"
+          "value": "3c2fb3ee",
+          "label": "PictureBookData.Animal_Insect_AH"
         },
         {
           "id": "compendium-025",
-          "value": "3642c73c"
+          "value": "3642c73c",
+          "label": "PictureBookData.Animal_Insect_AI"
         },
         {
           "id": "compendium-026",
-          "value": "f920e70e"
+          "value": "f920e70e",
+          "label": "PictureBookData.Animal_Insect_B"
         },
         {
           "id": "compendium-027",
-          "value": "15a33b87"
+          "value": "15a33b87",
+          "label": "PictureBookData.Animal_Insect_C"
         },
         {
           "id": "compendium-028",
-          "value": "75464337"
+          "value": "75464337",
+          "label": "PictureBookData.Animal_Insect_E"
         },
         {
           "id": "compendium-029",
-          "value": "cd8c3c57"
+          "value": "cd8c3c57",
+          "label": "PictureBookData.Animal_Insect_F"
         },
         {
           "id": "compendium-030",
-          "value": "55382e37"
+          "value": "55382e37",
+          "label": "PictureBookData.Animal_Insect_G"
         },
         {
           "id": "compendium-031",
-          "value": "1858e8dd"
+          "value": "1858e8dd",
+          "label": "PictureBookData.Animal_Insect_H"
         },
         {
           "id": "compendium-032",
-          "value": "6757a6de"
+          "value": "6757a6de",
+          "label": "PictureBookData.Animal_Insect_I"
         },
         {
           "id": "compendium-033",
-          "value": "44f1f621"
+          "value": "44f1f621",
+          "label": "PictureBookData.Animal_Insect_M"
         },
         {
           "id": "compendium-034",
-          "value": "3828b66d"
+          "value": "3828b66d",
+          "label": "PictureBookData.Animal_Insect_N"
         },
         {
           "id": "compendium-035",
-          "value": "22651add"
+          "value": "22651add",
+          "label": "PictureBookData.Animal_Insect_P"
         },
         {
           "id": "compendium-036",
-          "value": "75d00262"
+          "value": "75d00262",
+          "label": "PictureBookData.Animal_Insect_Q"
         },
         {
           "id": "compendium-037",
-          "value": "abf2a04b"
+          "value": "abf2a04b",
+          "label": "PictureBookData.Animal_Insect_R"
         },
         {
           "id": "compendium-038",
-          "value": "6f86c8b9"
+          "value": "6f86c8b9",
+          "label": "PictureBookData.Animal_Insect_S"
         },
         {
           "id": "compendium-039",
-          "value": "d472a12f"
+          "value": "d472a12f",
+          "label": "PictureBookData.Animal_Insect_T"
         },
         {
           "id": "compendium-040",
-          "value": "19599dd4"
+          "value": "19599dd4",
+          "label": "PictureBookData.Animal_Insect_X"
         },
         {
           "id": "compendium-041",
-          "value": "de35c394"
+          "value": "de35c394",
+          "label": "PictureBookData.Animal_Kokko_A"
         },
         {
           "id": "compendium-042",
-          "value": "f0236290"
+          "value": "f0236290",
+          "label": "PictureBookData.Animal_LittleBird_A"
         },
         {
           "id": "compendium-043",
-          "value": "c8bb96c7"
+          "value": "c8bb96c7",
+          "label": "PictureBookData.Animal_LittleBird_B"
         },
         {
           "id": "compendium-044",
-          "value": "c3a304ce"
+          "value": "c3a304ce",
+          "label": "PictureBookData.Animal_LittleBird_C"
         },
         {
           "id": "compendium-045",
-          "value": "a1d8dcb4"
+          "value": "a1d8dcb4",
+          "label": "PictureBookData.Animal_LittleBird_D"
         },
         {
           "id": "compendium-046",
-          "value": "0d58f543"
+          "value": "0d58f543",
+          "label": "PictureBookData.Animal_LittleBird_E"
         },
         {
           "id": "compendium-047",
-          "value": "a7df9c3b"
+          "value": "a7df9c3b",
+          "label": "PictureBookData.Animal_LittleBird_F"
         },
         {
           "id": "compendium-048",
-          "value": "fc0f6a2b"
+          "value": "fc0f6a2b",
+          "label": "PictureBookData.Animal_Pao_A"
         },
         {
           "id": "compendium-049",
-          "value": "63c5ae50"
+          "value": "63c5ae50",
+          "label": "PictureBookData.Animal_Pigeon_A"
         },
         {
           "id": "compendium-050",
-          "value": "2b00690e"
+          "value": "2b00690e",
+          "label": "PictureBookData.Animal_Pigeon_B"
         },
         {
           "id": "compendium-051",
-          "value": "253b60a7"
+          "value": "253b60a7",
+          "label": "PictureBookData.Animal_Ptarmigan_A"
         },
         {
           "id": "compendium-052",
-          "value": "2e9545fe"
+          "value": "2e9545fe",
+          "label": "PictureBookData.Animal_Ptarmigan_B"
         },
         {
           "id": "compendium-053",
-          "value": "9b647c91"
+          "value": "9b647c91",
+          "label": "PictureBookData.Animal_RupeeRabbit_A"
         },
         {
           "id": "compendium-054",
-          "value": "9a51e52f"
+          "value": "9a51e52f",
+          "label": "PictureBookData.Animal_Sheep_A"
         },
         {
           "id": "compendium-055",
-          "value": "21fc60d6"
+          "value": "21fc60d6",
+          "label": "PictureBookData.Animal_SkyCassowary_A"
         },
         {
           "id": "compendium-056",
-          "value": "fc74cc86"
+          "value": "fc74cc86",
+          "label": "PictureBookData.Animal_SkyGull_A"
         },
         {
           "id": "compendium-057",
-          "value": "bffa39cb"
+          "value": "bffa39cb",
+          "label": "PictureBookData.Animal_SkyPigeon_A"
         },
         {
           "id": "compendium-058",
-          "value": "bcc8c897"
+          "value": "bcc8c897",
+          "label": "PictureBookData.Animal_Squirrel_A"
         },
         {
           "id": "compendium-059",
-          "value": "d2ea1926"
+          "value": "d2ea1926",
+          "label": "PictureBookData.Animal_Sunazarashi_A"
         },
         {
           "id": "compendium-060",
-          "value": "fbe1a117"
+          "value": "fbe1a117",
+          "label": "PictureBookData.Animal_SunazarashiSP_C"
         },
         {
           "id": "compendium-061",
-          "value": "3ce769f7"
+          "value": "3ce769f7",
+          "label": "PictureBookData.Animal_WildDuck_A"
         },
         {
           "id": "compendium-062",
-          "value": "eaf99d94"
+          "value": "eaf99d94",
+          "label": "PictureBookData.Animal_WildGoat_A"
         },
         {
           "id": "compendium-063",
-          "value": "c77de65d"
+          "value": "c77de65d",
+          "label": "PictureBookData.Animal_Wolf_A"
         },
         {
           "id": "compendium-064",
-          "value": "75136d15"
+          "value": "75136d15",
+          "label": "PictureBookData.Animal_Wolf_B"
         },
         {
           "id": "compendium-065",
-          "value": "8c8ad39d"
+          "value": "8c8ad39d",
+          "label": "PictureBookData.Animal_Wolf_C"
         },
         {
           "id": "compendium-066",
-          "value": "6f9cc89f"
+          "value": "6f9cc89f",
+          "label": "PictureBookData.BeeHome"
         },
         {
           "id": "compendium-067",
-          "value": "88ce0934"
+          "value": "88ce0934",
+          "label": "PictureBookData.BombFruit"
         },
         {
           "id": "compendium-068",
-          "value": "e924b49a"
+          "value": "e924b49a",
+          "label": "PictureBookData.ConfusionFruit"
         },
         {
           "id": "compendium-069",
-          "value": "5b8c4548"
+          "value": "5b8c4548",
+          "label": "PictureBookData.ElectricalFruit"
         },
         {
           "id": "compendium-070",
-          "value": "555ae72f"
+          "value": "555ae72f",
+          "label": "PictureBookData.Enemy_Assassin_Junior"
         },
         {
           "id": "compendium-071",
-          "value": "72d8d162"
+          "value": "72d8d162",
+          "label": "PictureBookData.Enemy_Assassin_Middle"
         },
         {
           "id": "compendium-072",
-          "value": "5db54071"
+          "value": "5db54071",
+          "label": "PictureBookData.Enemy_Assassin_Senior"
         },
         {
           "id": "compendium-073",
-          "value": "ccfec897"
+          "value": "ccfec897",
+          "label": "PictureBookData.Enemy_Bokoblin_Bone_Junior"
         },
         {
           "id": "compendium-074",
-          "value": "8055ec45"
+          "value": "8055ec45",
+          "label": "PictureBookData.Enemy_Bokoblin_Boss_Dark"
         },
         {
           "id": "compendium-075",
-          "value": "963d2101"
+          "value": "963d2101",
+          "label": "PictureBookData.Enemy_Bokoblin_Boss_Junior"
         },
         {
           "id": "compendium-076",
-          "value": "ea75017d"
+          "value": "ea75017d",
+          "label": "PictureBookData.Enemy_Bokoblin_Boss_Middle"
         },
         {
           "id": "compendium-077",
-          "value": "ac883102"
+          "value": "ac883102",
+          "label": "PictureBookData.Enemy_Bokoblin_Boss_Senior"
         },
         {
           "id": "compendium-078",
-          "value": "8f2873a2"
+          "value": "8f2873a2",
+          "label": "PictureBookData.Enemy_Bokoblin_Dark"
         },
         {
           "id": "compendium-079",
-          "value": "57c928a5"
+          "value": "57c928a5",
+          "label": "PictureBookData.Enemy_Bokoblin_Junior"
         },
         {
           "id": "compendium-080",
-          "value": "9e3167de"
+          "value": "9e3167de",
+          "label": "PictureBookData.Enemy_Bokoblin_Middle"
         },
         {
           "id": "compendium-081",
-          "value": "1f00344d"
+          "value": "1f00344d",
+          "label": "PictureBookData.Enemy_Bokoblin_Senior"
         },
         {
           "id": "compendium-082",
-          "value": "b957a2fe"
+          "value": "b957a2fe",
+          "label": "PictureBookData.Enemy_CaveMaster_000"
         },
         {
           "id": "compendium-083",
-          "value": "82b59987"
+          "value": "82b59987",
+          "label": "PictureBookData.Enemy_CDungeon_Practice"
         },
         {
           "id": "compendium-084",
-          "value": "eb6de132"
+          "value": "eb6de132",
+          "label": "PictureBookData.Enemy_Chuchu_Electric_Junior"
         },
         {
           "id": "compendium-085",
-          "value": "2365eeeb"
+          "value": "2365eeeb",
+          "label": "PictureBookData.Enemy_Chuchu_Fire_Junior"
         },
         {
           "id": "compendium-086",
-          "value": "e47c543f"
+          "value": "e47c543f",
+          "label": "PictureBookData.Enemy_Chuchu_Ice_Junior"
         },
         {
           "id": "compendium-087",
-          "value": "1175e981"
+          "value": "1175e981",
+          "label": "PictureBookData.Enemy_Chuchu_Junior"
         },
         {
           "id": "compendium-088",
-          "value": "173ba2f0"
+          "value": "173ba2f0",
+          "label": "PictureBookData.Enemy_Dragon_Darkness"
         },
         {
           "id": "compendium-089",
-          "value": "49898008"
+          "value": "49898008",
+          "label": "PictureBookData.Enemy_Dragon_Electric"
         },
         {
           "id": "compendium-090",
-          "value": "b413e809"
+          "value": "b413e809",
+          "label": "PictureBookData.Enemy_Dragon_Fire"
         },
         {
           "id": "compendium-091",
-          "value": "b112aeb9"
+          "value": "b112aeb9",
+          "label": "PictureBookData.Enemy_Dragon_Ice"
         },
         {
           "id": "compendium-092",
-          "value": "f45d1d19"
+          "value": "f45d1d19",
+          "label": "PictureBookData.Enemy_Dragon_Light_001"
         },
         {
           "id": "compendium-093",
-          "value": "ff3031d8"
+          "value": "ff3031d8",
+          "label": "PictureBookData.Enemy_Drake_Electric"
         },
         {
           "id": "compendium-094",
-          "value": "be16c7e0"
+          "value": "be16c7e0",
+          "label": "PictureBookData.Enemy_Drake_Fire"
         },
         {
           "id": "compendium-095",
-          "value": "0c245c74"
+          "value": "0c245c74",
+          "label": "PictureBookData.Enemy_Drake_Ice"
         },
         {
           "id": "compendium-096",
-          "value": "5808e0be"
+          "value": "5808e0be",
+          "label": "PictureBookData.Enemy_Drake_Mix"
         },
         {
           "id": "compendium-097",
-          "value": "8d99b51e"
+          "value": "8d99b51e",
+          "label": "PictureBookData.Enemy_DungeonBoss_Gerudo"
         },
         {
           "id": "compendium-098",
-          "value": "56073084"
+          "value": "56073084",
+          "label": "PictureBookData.Enemy_DungeonBoss_Goron"
         },
         {
           "id": "compendium-099",
-          "value": "c4321da7"
+          "value": "c4321da7",
+          "label": "PictureBookData.Enemy_DungeonBoss_Rito"
         },
         {
           "id": "compendium-100",
-          "value": "e6cc7624"
+          "value": "e6cc7624",
+          "label": "PictureBookData.Enemy_DungeonBoss_Zonau"
         },
         {
           "id": "compendium-101",
-          "value": "d6f66f72"
+          "value": "d6f66f72",
+          "label": "PictureBookData.Enemy_DungeonBoss_Zora"
         },
         {
           "id": "compendium-102",
-          "value": "fe0bb89a"
+          "value": "fe0bb89a",
+          "label": "PictureBookData.Enemy_Ganondorf"
         },
         {
           "id": "compendium-103",
-          "value": "fd23c479"
+          "value": "fd23c479",
+          "label": "PictureBookData.Enemy_Ganondorf_Miasma"
         },
         {
           "id": "compendium-104",
-          "value": "f394c10d"
+          "value": "f394c10d",
+          "label": "PictureBookData.Enemy_Giant_Bone"
         },
         {
           "id": "compendium-105",
-          "value": "37016c65"
+          "value": "37016c65",
+          "label": "PictureBookData.Enemy_Giant_Junior"
         },
         {
           "id": "compendium-106",
-          "value": "906bb450"
+          "value": "906bb450",
+          "label": "PictureBookData.Enemy_Giant_Middle"
         },
         {
           "id": "compendium-107",
-          "value": "5552aa25"
+          "value": "5552aa25",
+          "label": "PictureBookData.Enemy_Giant_Senior"
         },
         {
           "id": "compendium-108",
-          "value": "a92d4e29"
+          "value": "a92d4e29",
+          "label": "PictureBookData.Enemy_Golem_Fire"
         },
         {
           "id": "compendium-109",
-          "value": "8d3f4383"
+          "value": "8d3f4383",
+          "label": "PictureBookData.Enemy_Golem_Fort_A"
         },
         {
           "id": "compendium-110",
-          "value": "2dfe9bf4"
+          "value": "2dfe9bf4",
+          "label": "PictureBookData.Enemy_Golem_Ice"
         },
         {
           "id": "compendium-111",
-          "value": "4dd087a4"
+          "value": "4dd087a4",
+          "label": "PictureBookData.Enemy_Golem_Junior"
         },
         {
           "id": "compendium-112",
-          "value": "850c4b5c"
+          "value": "850c4b5c",
+          "label": "PictureBookData.Enemy_Golem_Little"
         },
         {
           "id": "compendium-113",
-          "value": "239b0555"
+          "value": "239b0555",
+          "label": "PictureBookData.Enemy_Golem_Little_Fire"
         },
         {
           "id": "compendium-114",
-          "value": "0102f72d"
+          "value": "0102f72d",
+          "label": "PictureBookData.Enemy_Golem_Little_Ice"
         },
         {
           "id": "compendium-115",
-          "value": "bafb3b52"
+          "value": "bafb3b52",
+          "label": "PictureBookData.Enemy_Golem_Middle"
         },
         {
           "id": "compendium-116",
-          "value": "0d667900"
+          "value": "0d667900",
+          "label": "PictureBookData.Enemy_Golem_Senior"
         },
         {
           "id": "compendium-117",
-          "value": "a4fb851a"
+          "value": "a4fb851a",
+          "label": "PictureBookData.Enemy_Horablin_Dark"
         },
         {
           "id": "compendium-118",
-          "value": "5a8da868"
+          "value": "5a8da868",
+          "label": "PictureBookData.Enemy_Horablin_Junior"
         },
         {
           "id": "compendium-119",
-          "value": "4b0fab2d"
+          "value": "4b0fab2d",
+          "label": "PictureBookData.Enemy_Horablin_Middle"
         },
         {
           "id": "compendium-120",
-          "value": "daeb7c3e"
+          "value": "daeb7c3e",
+          "label": "PictureBookData.Enemy_Horablin_Senior"
         },
         {
           "id": "compendium-121",
-          "value": "6fdcee17"
+          "value": "6fdcee17",
+          "label": "PictureBookData.Enemy_Keese"
         },
         {
           "id": "compendium-122",
-          "value": "d0a74c91"
+          "value": "d0a74c91",
+          "label": "PictureBookData.Enemy_Keese_Electric"
         },
         {
           "id": "compendium-123",
-          "value": "9a33bfc9"
+          "value": "9a33bfc9",
+          "label": "PictureBookData.Enemy_Keese_Fire"
         },
         {
           "id": "compendium-124",
-          "value": "f7859470"
+          "value": "f7859470",
+          "label": "PictureBookData.Enemy_Keese_Ice"
         },
         {
           "id": "compendium-125",
-          "value": "37096b43"
+          "value": "37096b43",
+          "label": "PictureBookData.Enemy_LikeLike_Crack"
         },
         {
           "id": "compendium-126",
-          "value": "5196eb4e"
+          "value": "5196eb4e",
+          "label": "PictureBookData.Enemy_LikeLike_Electric"
         },
         {
           "id": "compendium-127",
-          "value": "dc0b441f"
+          "value": "dc0b441f",
+          "label": "PictureBookData.Enemy_LikeLike_Fire"
         },
         {
           "id": "compendium-128",
-          "value": "573a526d"
+          "value": "573a526d",
+          "label": "PictureBookData.Enemy_LikeLike_Ice"
         },
         {
           "id": "compendium-129",
-          "value": "0cdcd04b"
+          "value": "0cdcd04b",
+          "label": "PictureBookData.Enemy_LikeLike_Plane"
         },
         {
           "id": "compendium-130",
-          "value": "0c02c64a"
+          "value": "0c02c64a",
+          "label": "PictureBookData.Enemy_LikeLike_Tar"
         },
         {
           "id": "compendium-131",
-          "value": "59b5e1c6"
+          "value": "59b5e1c6",
+          "label": "PictureBookData.Enemy_Lizalfos_Bone_Junior"
         },
         {
           "id": "compendium-132",
-          "value": "55c27208"
+          "value": "55c27208",
+          "label": "PictureBookData.Enemy_Lizalfos_Dark"
         },
         {
           "id": "compendium-133",
-          "value": "23d94985"
+          "value": "23d94985",
+          "label": "PictureBookData.Enemy_Lizalfos_Electric"
         },
         {
           "id": "compendium-134",
-          "value": "55d6125a"
+          "value": "55d6125a",
+          "label": "PictureBookData.Enemy_Lizalfos_Fire"
         },
         {
           "id": "compendium-135",
-          "value": "ea2991c4"
+          "value": "ea2991c4",
+          "label": "PictureBookData.Enemy_Lizalfos_Ice"
         },
         {
           "id": "compendium-136",
-          "value": "2e029532"
+          "value": "2e029532",
+          "label": "PictureBookData.Enemy_Lizalfos_Junior"
         },
         {
           "id": "compendium-137",
-          "value": "e397589e"
+          "value": "e397589e",
+          "label": "PictureBookData.Enemy_Lizalfos_Middle"
         },
         {
           "id": "compendium-138",
-          "value": "31faa0e4"
+          "value": "31faa0e4",
+          "label": "PictureBookData.Enemy_Lizalfos_Senior"
         },
         {
           "id": "compendium-139",
-          "value": "8e25a0ce"
+          "value": "8e25a0ce",
+          "label": "PictureBookData.Enemy_Lynel_Dark"
         },
         {
           "id": "compendium-140",
-          "value": "e1056c6d"
+          "value": "e1056c6d",
+          "label": "PictureBookData.Enemy_Lynel_Junior"
         },
         {
           "id": "compendium-141",
-          "value": "51f683ed"
+          "value": "51f683ed",
+          "label": "PictureBookData.Enemy_Lynel_Middle"
         },
         {
           "id": "compendium-142",
-          "value": "a99a62b6"
+          "value": "a99a62b6",
+          "label": "PictureBookData.Enemy_Lynel_Senior"
         },
         {
           "id": "compendium-143",
-          "value": "abaff9ad"
+          "value": "abaff9ad",
+          "label": "PictureBookData.Enemy_MiddleBoss_Goron"
         },
         {
           "id": "compendium-144",
-          "value": "9293a6a6"
+          "value": "9293a6a6",
+          "label": "PictureBookData.Enemy_Mogurudo_Baby_Junior"
         },
         {
           "id": "compendium-145",
-          "value": "197415c3"
+          "value": "197415c3",
+          "label": "PictureBookData.Enemy_Mogurudo_Junior"
         },
         {
           "id": "compendium-146",
-          "value": "05bdd321"
+          "value": "05bdd321",
+          "label": "PictureBookData.Enemy_Mogurudo_Middle"
         },
         {
           "id": "compendium-147",
-          "value": "6d904649"
+          "value": "6d904649",
+          "label": "PictureBookData.Enemy_Mogurudo_Senior"
         },
         {
           "id": "compendium-148",
-          "value": "3c8a71a0"
+          "value": "3c8a71a0",
+          "label": "PictureBookData.Enemy_Moriblin_Bone_Junior"
         },
         {
           "id": "compendium-149",
-          "value": "f45ab07f"
+          "value": "f45ab07f",
+          "label": "PictureBookData.Enemy_Moriblin_Dark"
         },
         {
           "id": "compendium-150",
-          "value": "83bb7e9c"
+          "value": "83bb7e9c",
+          "label": "PictureBookData.Enemy_Moriblin_Junior"
         },
         {
           "id": "compendium-151",
-          "value": "60ac8c69"
+          "value": "60ac8c69",
+          "label": "PictureBookData.Enemy_Moriblin_Middle"
         },
         {
           "id": "compendium-152",
-          "value": "579481a0"
+          "value": "579481a0",
+          "label": "PictureBookData.Enemy_Moriblin_Senior"
         },
         {
           "id": "compendium-153",
-          "value": "d5dac147"
+          "value": "d5dac147",
+          "label": "PictureBookData.Enemy_Octarock"
         },
         {
           "id": "compendium-154",
-          "value": "34d6584c"
+          "value": "34d6584c",
+          "label": "PictureBookData.Enemy_Octarock_Desert"
         },
         {
           "id": "compendium-155",
-          "value": "b2c2ac62"
+          "value": "b2c2ac62",
+          "label": "PictureBookData.Enemy_Octarock_Forest"
         },
         {
           "id": "compendium-156",
-          "value": "d29597f5"
+          "value": "d29597f5",
+          "label": "PictureBookData.Enemy_Octarock_Snow"
         },
         {
           "id": "compendium-157",
-          "value": "01e19529"
+          "value": "01e19529",
+          "label": "PictureBookData.Enemy_Octarock_Stone"
         },
         {
           "id": "compendium-158",
-          "value": "daf10794"
+          "value": "daf10794",
+          "label": "PictureBookData.Enemy_PhantomGanon"
         },
         {
           "id": "compendium-159",
-          "value": "a5d1a436"
+          "value": "a5d1a436",
+          "label": "PictureBookData.Enemy_Sandworm"
         },
         {
           "id": "compendium-160",
-          "value": "8a9062d0"
+          "value": "8a9062d0",
+          "label": "PictureBookData.Enemy_Toby_Junior"
         },
         {
           "id": "compendium-161",
-          "value": "6ac879b4"
+          "value": "6ac879b4",
+          "label": "PictureBookData.Enemy_Treant_Broadleaf"
         },
         {
           "id": "compendium-162",
-          "value": "ea7b209b"
+          "value": "ea7b209b",
+          "label": "PictureBookData.Enemy_Wizzrobe_Electric"
         },
         {
           "id": "compendium-163",
-          "value": "32b6585d"
+          "value": "32b6585d",
+          "label": "PictureBookData.Enemy_Wizzrobe_Electric_Senior"
         },
         {
           "id": "compendium-164",
-          "value": "278ed7f7"
+          "value": "278ed7f7",
+          "label": "PictureBookData.Enemy_Wizzrobe_Fire"
         },
         {
           "id": "compendium-165",
-          "value": "316fc0e7"
+          "value": "316fc0e7",
+          "label": "PictureBookData.Enemy_Wizzrobe_Fire_Senior"
         },
         {
           "id": "compendium-166",
-          "value": "c885774b"
+          "value": "c885774b",
+          "label": "PictureBookData.Enemy_Wizzrobe_Ice"
         },
         {
           "id": "compendium-167",
-          "value": "10ed97c2"
+          "value": "10ed97c2",
+          "label": "PictureBookData.Enemy_Wizzrobe_Ice_Senior"
         },
         {
           "id": "compendium-168",
-          "value": "244a3293"
+          "value": "244a3293",
+          "label": "PictureBookData.Enemy_Zombie_Boss_Junior"
         },
         {
           "id": "compendium-169",
-          "value": "d9a58129"
+          "value": "d9a58129",
+          "label": "PictureBookData.Enemy_Zombie_Junior"
         },
         {
           "id": "compendium-170",
-          "value": "2b73f5d2"
+          "value": "2b73f5d2",
+          "label": "PictureBookData.Enemy_Zonau_BlockMaster_Junior"
         },
         {
           "id": "compendium-171",
-          "value": "a61ae2af"
+          "value": "a61ae2af",
+          "label": "PictureBookData.Enemy_Zonau_BlockMaster_Middle"
         },
         {
           "id": "compendium-172",
-          "value": "c5657979"
+          "value": "c5657979",
+          "label": "PictureBookData.Enemy_Zonau_BlockMaster_Senior"
         },
         {
           "id": "compendium-173",
-          "value": "2680889b"
+          "value": "2680889b",
+          "label": "PictureBookData.Enemy_Zonau_Golem_Dark"
         },
         {
           "id": "compendium-174",
-          "value": "67a37207"
+          "value": "67a37207",
+          "label": "PictureBookData.Enemy_Zonau_Golem_Junior"
         },
         {
           "id": "compendium-175",
-          "value": "ee20304b"
+          "value": "ee20304b",
+          "label": "PictureBookData.Enemy_Zonau_Golem_Middle"
         },
         {
           "id": "compendium-176",
-          "value": "0e90e7ba"
+          "value": "0e90e7ba",
+          "label": "PictureBookData.Enemy_Zonau_Golem_Senior"
         },
         {
           "id": "compendium-177",
-          "value": "3b3aecad"
+          "value": "3b3aecad",
+          "label": "PictureBookData.Enemy_Zonau_Robot_Dark"
         },
         {
           "id": "compendium-178",
-          "value": "82c9e4fe"
+          "value": "82c9e4fe",
+          "label": "PictureBookData.Enemy_Zonau_Robot_Junior"
         },
         {
           "id": "compendium-179",
-          "value": "e531ba22"
+          "value": "e531ba22",
+          "label": "PictureBookData.Enemy_Zonau_Robot_Middle"
         },
         {
           "id": "compendium-180",
-          "value": "9e717af0"
+          "value": "9e717af0",
+          "label": "PictureBookData.Enemy_Zonau_Robot_Senior"
         },
         {
           "id": "compendium-181",
-          "value": "50922e11"
+          "value": "50922e11",
+          "label": "PictureBookData.FireFruit"
         },
         {
           "id": "compendium-182",
-          "value": "3a87563a"
+          "value": "3a87563a",
+          "label": "PictureBookData.FldObj_HyliaWoodWell_A_02"
         },
         {
           "id": "compendium-183",
-          "value": "b3bda8db"
+          "value": "b3bda8db",
+          "label": "PictureBookData.FldObj_Pinecone_A_01"
         },
         {
           "id": "compendium-184",
-          "value": "696a05be"
+          "value": "696a05be",
+          "label": "PictureBookData.GameRomHorse"
         },
         {
           "id": "compendium-185",
-          "value": "f16260cf"
+          "value": "f16260cf",
+          "label": "PictureBookData.GameRomHorse00L"
         },
         {
           "id": "compendium-186",
-          "value": "b237fe07"
+          "value": "b237fe07",
+          "label": "PictureBookData.GameRomHorse00S"
         },
         {
           "id": "compendium-187",
-          "value": "36876763"
+          "value": "36876763",
+          "label": "PictureBookData.GameRomHorse01L"
         },
         {
           "id": "compendium-188",
-          "value": "63d8ed36"
+          "value": "63d8ed36",
+          "label": "PictureBookData.GameRomHorseBone"
         },
         {
           "id": "compendium-189",
-          "value": "2e74e2bb"
+          "value": "2e74e2bb",
+          "label": "PictureBookData.GameRomHorseGold"
         },
         {
           "id": "compendium-190",
-          "value": "cde7bb16"
+          "value": "cde7bb16",
+          "label": "PictureBookData.GameRomHorseZelda"
         },
         {
           "id": "compendium-191",
-          "value": "16f34cd4"
+          "value": "16f34cd4",
+          "label": "PictureBookData.IceFruit"
         },
         {
           "id": "compendium-192",
-          "value": "b8db0aa5"
+          "value": "b8db0aa5",
+          "label": "PictureBookData.Item_Enemy_100"
         },
         {
           "id": "compendium-193",
-          "value": "2a6fb429"
+          "value": "2a6fb429",
+          "label": "PictureBookData.Item_Enemy_101"
         },
         {
           "id": "compendium-194",
-          "value": "e095cc2a"
+          "value": "e095cc2a",
+          "label": "PictureBookData.Item_Enemy_102"
         },
         {
           "id": "compendium-195",
-          "value": "24a8c17f"
+          "value": "24a8c17f",
+          "label": "PictureBookData.Item_Enemy_103"
         },
         {
           "id": "compendium-196",
-          "value": "82fde6eb"
+          "value": "82fde6eb",
+          "label": "PictureBookData.Item_Enemy_106"
         },
         {
           "id": "compendium-197",
-          "value": "15d4e07d"
+          "value": "15d4e07d",
+          "label": "PictureBookData.Item_Enemy_107"
         },
         {
           "id": "compendium-198",
-          "value": "a7d72e93"
+          "value": "a7d72e93",
+          "label": "PictureBookData.Item_Enemy_108"
         },
         {
           "id": "compendium-199",
-          "value": "dc016f78"
+          "value": "dc016f78",
+          "label": "PictureBookData.Item_Enemy_109"
         },
         {
           "id": "compendium-200",
-          "value": "43fba1d0"
+          "value": "43fba1d0",
+          "label": "PictureBookData.Item_Enemy_117"
         },
         {
           "id": "compendium-201",
-          "value": "9fbcadec"
+          "value": "9fbcadec",
+          "label": "PictureBookData.Item_Enemy_118"
         },
         {
           "id": "compendium-202",
-          "value": "d31bfdeb"
+          "value": "d31bfdeb",
+          "label": "PictureBookData.Item_Enemy_119"
         },
         {
           "id": "compendium-203",
-          "value": "b8ce35ac"
+          "value": "b8ce35ac",
+          "label": "PictureBookData.Item_Enemy_132"
         },
         {
           "id": "compendium-204",
-          "value": "bd7f8fac"
+          "value": "bd7f8fac",
+          "label": "PictureBookData.Item_Enemy_133"
         },
         {
           "id": "compendium-205",
-          "value": "679f5e3b"
+          "value": "679f5e3b",
+          "label": "PictureBookData.Item_Enemy_134"
         },
         {
           "id": "compendium-206",
-          "value": "8f6104e2"
+          "value": "8f6104e2",
+          "label": "PictureBookData.Item_Enemy_142"
         },
         {
           "id": "compendium-207",
-          "value": "289b770d"
+          "value": "289b770d",
+          "label": "PictureBookData.Item_Enemy_143"
         },
         {
           "id": "compendium-208",
-          "value": "f58ed663"
+          "value": "f58ed663",
+          "label": "PictureBookData.Item_Enemy_144"
         },
         {
           "id": "compendium-209",
-          "value": "91f94b7b"
+          "value": "91f94b7b",
+          "label": "PictureBookData.Item_Enemy_148"
         },
         {
           "id": "compendium-210",
-          "value": "d23cc404"
+          "value": "d23cc404",
+          "label": "PictureBookData.Item_Enemy_149"
         },
         {
           "id": "compendium-211",
-          "value": "0b94350d"
+          "value": "0b94350d",
+          "label": "PictureBookData.Item_Enemy_15"
         },
         {
           "id": "compendium-212",
-          "value": "3b58d40e"
+          "value": "3b58d40e",
+          "label": "PictureBookData.Item_Enemy_150"
         },
         {
           "id": "compendium-213",
-          "value": "ab3e9ffc"
+          "value": "ab3e9ffc",
+          "label": "PictureBookData.Item_Enemy_151"
         },
         {
           "id": "compendium-214",
-          "value": "b52b1fbb"
+          "value": "b52b1fbb",
+          "label": "PictureBookData.Item_Enemy_153"
         },
         {
           "id": "compendium-215",
-          "value": "423a6d9d"
+          "value": "423a6d9d",
+          "label": "PictureBookData.Item_Enemy_154"
         },
         {
           "id": "compendium-216",
-          "value": "7a97e08d"
+          "value": "7a97e08d",
+          "label": "PictureBookData.Item_Enemy_155"
         },
         {
           "id": "compendium-217",
-          "value": "58d389e0"
+          "value": "58d389e0",
+          "label": "PictureBookData.Item_Enemy_16"
         },
         {
           "id": "compendium-218",
-          "value": "093e348e"
+          "value": "093e348e",
+          "label": "PictureBookData.Item_Enemy_166"
         },
         {
           "id": "compendium-219",
-          "value": "fce0c986"
+          "value": "fce0c986",
+          "label": "PictureBookData.Item_Enemy_167"
         },
         {
           "id": "compendium-220",
-          "value": "d550e487"
+          "value": "d550e487",
+          "label": "PictureBookData.Item_Enemy_168"
         },
         {
           "id": "compendium-221",
-          "value": "780fd0f5"
+          "value": "780fd0f5",
+          "label": "PictureBookData.Item_Enemy_169"
         },
         {
           "id": "compendium-222",
-          "value": "bf011907"
+          "value": "bf011907",
+          "label": "PictureBookData.Item_Enemy_17"
         },
         {
           "id": "compendium-223",
-          "value": "4b7c6001"
+          "value": "4b7c6001",
+          "label": "PictureBookData.Item_Enemy_181"
         },
         {
           "id": "compendium-224",
-          "value": "1b37c2c9"
+          "value": "1b37c2c9",
+          "label": "PictureBookData.Item_Enemy_182"
         },
         {
           "id": "compendium-225",
-          "value": "1f87aa41"
+          "value": "1f87aa41",
+          "label": "PictureBookData.Item_Enemy_183"
         },
         {
           "id": "compendium-226",
-          "value": "99d05bb4"
+          "value": "99d05bb4",
+          "label": "PictureBookData.Item_Enemy_184"
         },
         {
           "id": "compendium-227",
-          "value": "e0fc57d2"
+          "value": "e0fc57d2",
+          "label": "PictureBookData.Item_Enemy_186"
         },
         {
           "id": "compendium-228",
-          "value": "03e9fdf4"
+          "value": "03e9fdf4",
+          "label": "PictureBookData.Item_Enemy_187"
         },
         {
           "id": "compendium-229",
-          "value": "484e35ed"
+          "value": "484e35ed",
+          "label": "PictureBookData.Item_Enemy_188"
         },
         {
           "id": "compendium-230",
-          "value": "b3309765"
+          "value": "b3309765",
+          "label": "PictureBookData.Item_Enemy_19"
         },
         {
           "id": "compendium-231",
-          "value": "87db27a0"
+          "value": "87db27a0",
+          "label": "PictureBookData.Item_Enemy_191"
         },
         {
           "id": "compendium-232",
-          "value": "4cd238f2"
+          "value": "4cd238f2",
+          "label": "PictureBookData.Item_Enemy_192"
         },
         {
           "id": "compendium-233",
-          "value": "257e13b2"
+          "value": "257e13b2",
+          "label": "PictureBookData.Item_Enemy_193"
         },
         {
           "id": "compendium-234",
-          "value": "87834862"
+          "value": "87834862",
+          "label": "PictureBookData.Item_Enemy_208"
         },
         {
           "id": "compendium-235",
-          "value": "8787c477"
+          "value": "8787c477",
+          "label": "PictureBookData.Item_Enemy_210"
         },
         {
           "id": "compendium-236",
-          "value": "acbd7a7d"
+          "value": "acbd7a7d",
+          "label": "PictureBookData.Item_Enemy_211"
         },
         {
           "id": "compendium-237",
-          "value": "0fa65a4c"
+          "value": "0fa65a4c",
+          "label": "PictureBookData.Item_Enemy_212"
         },
         {
           "id": "compendium-238",
-          "value": "1155491d"
+          "value": "1155491d",
+          "label": "PictureBookData.Item_Enemy_213"
         },
         {
           "id": "compendium-239",
-          "value": "770242b1"
+          "value": "770242b1",
+          "label": "PictureBookData.Item_Enemy_214"
         },
         {
           "id": "compendium-240",
-          "value": "4601b30e"
+          "value": "4601b30e",
+          "label": "PictureBookData.Item_Enemy_215"
         },
         {
           "id": "compendium-241",
-          "value": "37e10a3f"
+          "value": "37e10a3f",
+          "label": "PictureBookData.Item_Enemy_216"
         },
         {
           "id": "compendium-242",
-          "value": "528381a0"
+          "value": "528381a0",
+          "label": "PictureBookData.Item_Enemy_217"
         },
         {
           "id": "compendium-243",
-          "value": "6fba0162"
+          "value": "6fba0162",
+          "label": "PictureBookData.Item_Enemy_218"
         },
         {
           "id": "compendium-244",
-          "value": "2f9df402"
+          "value": "2f9df402",
+          "label": "PictureBookData.Item_Enemy_228"
         },
         {
           "id": "compendium-245",
-          "value": "4e79ebaf"
+          "value": "4e79ebaf",
+          "label": "PictureBookData.Item_Enemy_229"
         },
         {
           "id": "compendium-246",
-          "value": "92d53fd6"
+          "value": "92d53fd6",
+          "label": "PictureBookData.Item_Enemy_230"
         },
         {
           "id": "compendium-247",
-          "value": "fe657a94"
+          "value": "fe657a94",
+          "label": "PictureBookData.Item_Enemy_231"
         },
         {
           "id": "compendium-248",
-          "value": "79906655"
+          "value": "79906655",
+          "label": "PictureBookData.Item_Enemy_40"
         },
         {
           "id": "compendium-249",
-          "value": "5f7b067f"
+          "value": "5f7b067f",
+          "label": "PictureBookData.Item_Enemy_58"
         },
         {
           "id": "compendium-250",
-          "value": "4027851d"
+          "value": "4027851d",
+          "label": "PictureBookData.Item_Enemy_59"
         },
         {
           "id": "compendium-251",
-          "value": "90d3efe9"
+          "value": "90d3efe9",
+          "label": "PictureBookData.Item_Enemy_60"
         },
         {
           "id": "compendium-252",
-          "value": "198e9c1d"
+          "value": "198e9c1d",
+          "label": "PictureBookData.Item_Enemy_64"
         },
         {
           "id": "compendium-253",
-          "value": "d18a0a62"
+          "value": "d18a0a62",
+          "label": "PictureBookData.Item_Enemy_66"
         },
         {
           "id": "compendium-254",
-          "value": "ccb23b90"
+          "value": "ccb23b90",
+          "label": "PictureBookData.Item_Enemy_67"
         },
         {
           "id": "compendium-255",
-          "value": "04a01831"
+          "value": "04a01831",
+          "label": "PictureBookData.Item_Enemy_69"
         },
         {
           "id": "compendium-256",
-          "value": "c9d75295"
+          "value": "c9d75295",
+          "label": "PictureBookData.Item_Enemy_77"
         },
         {
           "id": "compendium-257",
-          "value": "b0e8d8bf"
+          "value": "b0e8d8bf",
+          "label": "PictureBookData.Item_Enemy_78"
         },
         {
           "id": "compendium-258",
-          "value": "46cc8cb3"
+          "value": "46cc8cb3",
+          "label": "PictureBookData.Item_Enemy_79"
         },
         {
           "id": "compendium-259",
-          "value": "dc7bce05"
+          "value": "dc7bce05",
+          "label": "PictureBookData.Item_Enemy_80"
         },
         {
           "id": "compendium-260",
-          "value": "32dd2638"
+          "value": "32dd2638",
+          "label": "PictureBookData.Item_Enemy_89"
         },
         {
           "id": "compendium-261",
-          "value": "b433e385"
+          "value": "b433e385",
+          "label": "PictureBookData.Item_Enemy_90"
         },
         {
           "id": "compendium-262",
-          "value": "1d5668a0"
+          "value": "1d5668a0",
+          "label": "PictureBookData.Item_Enemy_91"
         },
         {
           "id": "compendium-263",
-          "value": "8b87d599"
+          "value": "8b87d599",
+          "label": "PictureBookData.Item_Enemy_92"
         },
         {
           "id": "compendium-264",
-          "value": "872d7f1f"
+          "value": "872d7f1f",
+          "label": "PictureBookData.Item_FishGet_A"
         },
         {
           "id": "compendium-265",
-          "value": "0bd40497"
+          "value": "0bd40497",
+          "label": "PictureBookData.Item_FishGet_AA"
         },
         {
           "id": "compendium-266",
-          "value": "d878474c"
+          "value": "d878474c",
+          "label": "PictureBookData.Item_FishGet_AC"
         },
         {
           "id": "compendium-267",
-          "value": "74f5c7e8"
+          "value": "74f5c7e8",
+          "label": "PictureBookData.Item_FishGet_B"
         },
         {
           "id": "compendium-268",
-          "value": "e6eadc89"
+          "value": "e6eadc89",
+          "label": "PictureBookData.Item_FishGet_C"
         },
         {
           "id": "compendium-269",
-          "value": "36d0ede2"
+          "value": "36d0ede2",
+          "label": "PictureBookData.Item_FishGet_D"
         },
         {
           "id": "compendium-270",
-          "value": "3f8496e7"
+          "value": "3f8496e7",
+          "label": "PictureBookData.Item_FishGet_E"
         },
         {
           "id": "compendium-271",
-          "value": "1b3a9be5"
+          "value": "1b3a9be5",
+          "label": "PictureBookData.Item_FishGet_F"
         },
         {
           "id": "compendium-272",
-          "value": "28d46680"
+          "value": "28d46680",
+          "label": "PictureBookData.Item_FishGet_G"
         },
         {
           "id": "compendium-273",
-          "value": "657c16ae"
+          "value": "657c16ae",
+          "label": "PictureBookData.Item_FishGet_H"
         },
         {
           "id": "compendium-274",
-          "value": "1c603046"
+          "value": "1c603046",
+          "label": "PictureBookData.Item_FishGet_I"
         },
         {
           "id": "compendium-275",
-          "value": "7434267c"
+          "value": "7434267c",
+          "label": "PictureBookData.Item_FishGet_J"
         },
         {
           "id": "compendium-276",
-          "value": "818f5bfb"
+          "value": "818f5bfb",
+          "label": "PictureBookData.Item_FishGet_L"
         },
         {
           "id": "compendium-277",
-          "value": "20ad257b"
+          "value": "20ad257b",
+          "label": "PictureBookData.Item_FishGet_M"
         },
         {
           "id": "compendium-278",
-          "value": "8f7dc71a"
+          "value": "8f7dc71a",
+          "label": "PictureBookData.Item_FishGet_X"
         },
         {
           "id": "compendium-279",
-          "value": "51fb9b55"
+          "value": "51fb9b55",
+          "label": "PictureBookData.Item_FishGet_Z"
         },
         {
           "id": "compendium-280",
-          "value": "1f325b54"
+          "value": "1f325b54",
+          "label": "PictureBookData.Item_Fruit_A"
         },
         {
           "id": "compendium-281",
-          "value": "708a0b74"
+          "value": "708a0b74",
+          "label": "PictureBookData.Item_Fruit_B"
         },
         {
           "id": "compendium-282",
-          "value": "5f85be00"
+          "value": "5f85be00",
+          "label": "PictureBookData.Item_Fruit_C"
         },
         {
           "id": "compendium-283",
-          "value": "8506f030"
+          "value": "8506f030",
+          "label": "PictureBookData.Item_Fruit_E"
         },
         {
           "id": "compendium-284",
-          "value": "5bc81607"
+          "value": "5bc81607",
+          "label": "PictureBookData.Item_Fruit_F"
         },
         {
           "id": "compendium-285",
-          "value": "7b264eb5"
+          "value": "7b264eb5",
+          "label": "PictureBookData.Item_Fruit_G"
         },
         {
           "id": "compendium-286",
-          "value": "e7d31dce"
+          "value": "e7d31dce",
+          "label": "PictureBookData.Item_Fruit_H"
         },
         {
           "id": "compendium-287",
-          "value": "4a87f5ef"
+          "value": "4a87f5ef",
+          "label": "PictureBookData.Item_Fruit_I"
         },
         {
           "id": "compendium-288",
-          "value": "d877fd9d"
+          "value": "d877fd9d",
+          "label": "PictureBookData.Item_Fruit_J"
         },
         {
           "id": "compendium-289",
-          "value": "5fec19b9"
+          "value": "5fec19b9",
+          "label": "PictureBookData.Item_Fruit_M"
         },
         {
           "id": "compendium-290",
-          "value": "6a47ac80"
+          "value": "6a47ac80",
+          "label": "PictureBookData.Item_Fruit_N"
         },
         {
           "id": "compendium-291",
-          "value": "5f0b9728"
+          "value": "5f0b9728",
+          "label": "PictureBookData.Item_Fruit_P"
         },
         {
           "id": "compendium-292",
-          "value": "fa478599"
+          "value": "fa478599",
+          "label": "PictureBookData.Item_InsectGet_K"
         },
         {
           "id": "compendium-293",
-          "value": "45e8f779"
+          "value": "45e8f779",
+          "label": "PictureBookData.Item_InsectGet_O"
         },
         {
           "id": "compendium-294",
-          "value": "64506bab"
+          "value": "64506bab",
+          "label": "PictureBookData.Item_InsectGet_Z"
         },
         {
           "id": "compendium-295",
-          "value": "f9e6054e"
+          "value": "f9e6054e",
+          "label": "PictureBookData.Item_Mushroom_A"
         },
         {
           "id": "compendium-296",
-          "value": "7ffab325"
+          "value": "7ffab325",
+          "label": "PictureBookData.Item_Mushroom_B"
         },
         {
           "id": "compendium-297",
-          "value": "4e773b46"
+          "value": "4e773b46",
+          "label": "PictureBookData.Item_Mushroom_C"
         },
         {
           "id": "compendium-298",
-          "value": "9dee7aa8"
+          "value": "9dee7aa8",
+          "label": "PictureBookData.Item_Mushroom_E"
         },
         {
           "id": "compendium-299",
-          "value": "d4cecf02"
+          "value": "d4cecf02",
+          "label": "PictureBookData.Item_Mushroom_F"
         },
         {
           "id": "compendium-300",
-          "value": "b330315a"
+          "value": "b330315a",
+          "label": "PictureBookData.Item_Mushroom_H"
         },
         {
           "id": "compendium-301",
-          "value": "4adaf59a"
+          "value": "4adaf59a",
+          "label": "PictureBookData.Item_Mushroom_J"
         },
         {
           "id": "compendium-302",
-          "value": "1151f05b"
+          "value": "1151f05b",
+          "label": "PictureBookData.Item_Mushroom_L"
         },
         {
           "id": "compendium-303",
-          "value": "1e38132d"
+          "value": "1e38132d",
+          "label": "PictureBookData.Item_Mushroom_M"
         },
         {
           "id": "compendium-304",
-          "value": "bd9709ab"
+          "value": "bd9709ab",
+          "label": "PictureBookData.Item_Mushroom_N"
         },
         {
           "id": "compendium-305",
-          "value": "27f5ff56"
+          "value": "27f5ff56",
+          "label": "PictureBookData.Item_Mushroom_O"
         },
         {
           "id": "compendium-306",
-          "value": "fddd2a59"
+          "value": "fddd2a59",
+          "label": "PictureBookData.Item_Mushroom_P"
         },
         {
           "id": "compendium-307",
-          "value": "c5060686"
+          "value": "c5060686",
+          "label": "PictureBookData.Item_MushroomGet_D"
         },
         {
           "id": "compendium-308",
-          "value": "9ecd61a8"
+          "value": "9ecd61a8",
+          "label": "PictureBookData.Item_MushroomGet_K"
         },
         {
           "id": "compendium-309",
-          "value": "8d89329a"
+          "value": "8d89329a",
+          "label": "PictureBookData.Item_PlantGet_A"
         },
         {
           "id": "compendium-310",
-          "value": "0f0ae12c"
+          "value": "0f0ae12c",
+          "label": "PictureBookData.Item_PlantGet_B"
         },
         {
           "id": "compendium-311",
-          "value": "0b28103c"
+          "value": "0b28103c",
+          "label": "PictureBookData.Item_PlantGet_C"
         },
         {
           "id": "compendium-312",
-          "value": "efc08e37"
+          "value": "efc08e37",
+          "label": "PictureBookData.Item_PlantGet_E"
         },
         {
           "id": "compendium-313",
-          "value": "978c4e34"
+          "value": "978c4e34",
+          "label": "PictureBookData.Item_PlantGet_F"
         },
         {
           "id": "compendium-314",
-          "value": "e895260d"
+          "value": "e895260d",
+          "label": "PictureBookData.Item_PlantGet_G"
         },
         {
           "id": "compendium-315",
-          "value": "ec284207"
+          "value": "ec284207",
+          "label": "PictureBookData.Item_PlantGet_H"
         },
         {
           "id": "compendium-316",
-          "value": "71451f4d"
+          "value": "71451f4d",
+          "label": "PictureBookData.Item_PlantGet_I"
         },
         {
           "id": "compendium-317",
-          "value": "4a8c7c25"
+          "value": "4a8c7c25",
+          "label": "PictureBookData.Item_PlantGet_J"
         },
         {
           "id": "compendium-318",
-          "value": "8b033c0d"
+          "value": "8b033c0d",
+          "label": "PictureBookData.Item_PlantGet_L"
         },
         {
           "id": "compendium-319",
-          "value": "700bc62f"
+          "value": "700bc62f",
+          "label": "PictureBookData.Item_PlantGet_M"
         },
         {
           "id": "compendium-320",
-          "value": "9039e0c8"
+          "value": "9039e0c8",
+          "label": "PictureBookData.Item_PlantGet_O"
         },
         {
           "id": "compendium-321",
-          "value": "ac85e805"
+          "value": "ac85e805",
+          "label": "PictureBookData.Item_PlantGet_Q"
         },
         {
           "id": "compendium-322",
-          "value": "5a83b363"
+          "value": "5a83b363",
+          "label": "PictureBookData.Item_PlantGet_R"
         },
         {
           "id": "compendium-323",
-          "value": "4819dccd"
+          "value": "4819dccd",
+          "label": "PictureBookData.Item_PlantGet_S"
         },
         {
           "id": "compendium-324",
-          "value": "1c66f16f"
+          "value": "1c66f16f",
+          "label": "PictureBookData.Item_PlantGet_U"
         },
         {
           "id": "compendium-325",
-          "value": "799ac1ac"
+          "value": "799ac1ac",
+          "label": "PictureBookData.LightBall_Large"
         },
         {
           "id": "compendium-326",
-          "value": "88106c97"
+          "value": "88106c97",
+          "label": "PictureBookData.LightBall_Small"
         },
         {
           "id": "compendium-327",
-          "value": "2a3b35a1"
+          "value": "2a3b35a1",
+          "label": "PictureBookData.LightFruit"
         },
         {
           "id": "compendium-328",
-          "value": "415fa2e9"
+          "value": "415fa2e9",
+          "label": "PictureBookData.NormalArrow"
         },
         {
           "id": "compendium-329",
-          "value": "5cd1ba6a"
+          "value": "5cd1ba6a",
+          "label": "PictureBookData.Obj_Mineral_A_01"
         },
         {
           "id": "compendium-330",
-          "value": "b4a2920a"
+          "value": "b4a2920a",
+          "label": "PictureBookData.Obj_Mineral_B_01"
         },
         {
           "id": "compendium-331",
-          "value": "f57187e7"
+          "value": "f57187e7",
+          "label": "PictureBookData.Obj_Mineral_C_01"
         },
         {
           "id": "compendium-332",
-          "value": "2ca13ad0"
+          "value": "2ca13ad0",
+          "label": "PictureBookData.Obj_Mineral_D_01"
         },
         {
           "id": "compendium-333",
-          "value": "05012601"
+          "value": "05012601",
+          "label": "PictureBookData.SmokeFruit"
         },
         {
           "id": "compendium-334",
-          "value": "5f902760"
+          "value": "5f902760",
+          "label": "PictureBookData.TBox_Field_Iron"
         },
         {
           "id": "compendium-335",
-          "value": "5ef0e7f5"
+          "value": "5ef0e7f5",
+          "label": "PictureBookData.WaterFruit"
         },
         {
           "id": "compendium-336",
-          "value": "df03d54a"
+          "value": "df03d54a",
+          "label": "PictureBookData.Weapon_Bow_001"
         },
         {
           "id": "compendium-337",
-          "value": "98a3b62f"
+          "value": "98a3b62f",
+          "label": "PictureBookData.Weapon_Bow_002"
         },
         {
           "id": "compendium-338",
-          "value": "fdd8dc3a"
+          "value": "fdd8dc3a",
+          "label": "PictureBookData.Weapon_Bow_003"
         },
         {
           "id": "compendium-339",
-          "value": "e16ab457"
+          "value": "e16ab457",
+          "label": "PictureBookData.Weapon_Bow_004"
         },
         {
           "id": "compendium-340",
-          "value": "0112568a"
+          "value": "0112568a",
+          "label": "PictureBookData.Weapon_Bow_006"
         },
         {
           "id": "compendium-341",
-          "value": "030469d8"
+          "value": "030469d8",
+          "label": "PictureBookData.Weapon_Bow_009"
         },
         {
           "id": "compendium-342",
-          "value": "e545e2a4"
+          "value": "e545e2a4",
+          "label": "PictureBookData.Weapon_Bow_011"
         },
         {
           "id": "compendium-343",
-          "value": "5b756769"
+          "value": "5b756769",
+          "label": "PictureBookData.Weapon_Bow_013"
         },
         {
           "id": "compendium-344",
-          "value": "5547650c"
+          "value": "5547650c",
+          "label": "PictureBookData.Weapon_Bow_014"
         },
         {
           "id": "compendium-345",
-          "value": "da3f9276"
+          "value": "da3f9276",
+          "label": "PictureBookData.Weapon_Bow_015"
         },
         {
           "id": "compendium-346",
-          "value": "185e360a"
+          "value": "185e360a",
+          "label": "PictureBookData.Weapon_Bow_016"
         },
         {
           "id": "compendium-347",
-          "value": "eb19768e"
+          "value": "eb19768e",
+          "label": "PictureBookData.Weapon_Bow_017"
         },
         {
           "id": "compendium-348",
-          "value": "73a5aa4a"
+          "value": "73a5aa4a",
+          "label": "PictureBookData.Weapon_Bow_026"
         },
         {
           "id": "compendium-349",
-          "value": "6dea7e15"
+          "value": "6dea7e15",
+          "label": "PictureBookData.Weapon_Bow_027"
         },
         {
           "id": "compendium-350",
-          "value": "95dcd251"
+          "value": "95dcd251",
+          "label": "PictureBookData.Weapon_Bow_028"
         },
         {
           "id": "compendium-351",
-          "value": "7e734f5d"
+          "value": "7e734f5d",
+          "label": "PictureBookData.Weapon_Bow_029"
         },
         {
           "id": "compendium-352",
-          "value": "1b4cb647"
+          "value": "1b4cb647",
+          "label": "PictureBookData.Weapon_Bow_030"
         },
         {
           "id": "compendium-353",
-          "value": "d02e8f8a"
+          "value": "d02e8f8a",
+          "label": "PictureBookData.Weapon_Bow_032"
         },
         {
           "id": "compendium-354",
-          "value": "b0371d15"
+          "value": "b0371d15",
+          "label": "PictureBookData.Weapon_Bow_033"
         },
         {
           "id": "compendium-355",
-          "value": "f073249b"
+          "value": "f073249b",
+          "label": "PictureBookData.Weapon_Bow_035"
         },
         {
           "id": "compendium-356",
-          "value": "f0d6b92f"
+          "value": "f0d6b92f",
+          "label": "PictureBookData.Weapon_Bow_036"
         },
         {
           "id": "compendium-357",
-          "value": "5b80fd10"
+          "value": "5b80fd10",
+          "label": "PictureBookData.Weapon_Bow_038"
         },
         {
           "id": "compendium-358",
-          "value": "84f66e79"
+          "value": "84f66e79",
+          "label": "PictureBookData.Weapon_Bow_040"
         },
         {
           "id": "compendium-359",
-          "value": "b229b841"
+          "value": "b229b841",
+          "label": "PictureBookData.Weapon_Bow_072"
         },
         {
           "id": "compendium-360",
-          "value": "bc92c563"
+          "value": "bc92c563",
+          "label": "PictureBookData.Weapon_Bow_101"
         },
         {
           "id": "compendium-361",
-          "value": "02842f06"
+          "value": "02842f06",
+          "label": "PictureBookData.Weapon_Bow_104"
         },
         {
           "id": "compendium-362",
-          "value": "6d476246"
+          "value": "6d476246",
+          "label": "PictureBookData.Weapon_Bow_105"
         },
         {
           "id": "compendium-363",
-          "value": "e4ac2257"
+          "value": "e4ac2257",
+          "label": "PictureBookData.Weapon_Bow_106"
         },
         {
           "id": "compendium-364",
-          "value": "a35edab0"
+          "value": "a35edab0",
+          "label": "PictureBookData.Weapon_Bow_107"
         },
         {
           "id": "compendium-365",
-          "value": "dd8752b5"
+          "value": "dd8752b5",
+          "label": "PictureBookData.Weapon_Bow_166"
         },
         {
           "id": "compendium-366",
-          "value": "56289d29"
+          "value": "56289d29",
+          "label": "PictureBookData.Weapon_Lsword_001"
         },
         {
           "id": "compendium-367",
-          "value": "783175a4"
+          "value": "783175a4",
+          "label": "PictureBookData.Weapon_Lsword_002"
         },
         {
           "id": "compendium-368",
-          "value": "42d033bb"
+          "value": "42d033bb",
+          "label": "PictureBookData.Weapon_Lsword_003"
         },
         {
           "id": "compendium-369",
-          "value": "8ac112d2"
+          "value": "8ac112d2",
+          "label": "PictureBookData.Weapon_Lsword_019"
         },
         {
           "id": "compendium-370",
-          "value": "6cab9f5b"
+          "value": "6cab9f5b",
+          "label": "PictureBookData.Weapon_Lsword_020"
         },
         {
           "id": "compendium-371",
-          "value": "ad360b3b"
+          "value": "ad360b3b",
+          "label": "PictureBookData.Weapon_Lsword_024"
         },
         {
           "id": "compendium-372",
-          "value": "1efd490b"
+          "value": "1efd490b",
+          "label": "PictureBookData.Weapon_Lsword_027"
         },
         {
           "id": "compendium-373",
-          "value": "3d094bbb"
+          "value": "3d094bbb",
+          "label": "PictureBookData.Weapon_Lsword_029"
         },
         {
           "id": "compendium-374",
-          "value": "75d301bf"
+          "value": "75d301bf",
+          "label": "PictureBookData.Weapon_Lsword_036"
         },
         {
           "id": "compendium-375",
-          "value": "9c64daf3"
+          "value": "9c64daf3",
+          "label": "PictureBookData.Weapon_Lsword_038"
         },
         {
           "id": "compendium-376",
-          "value": "2d9701ae"
+          "value": "2d9701ae",
+          "label": "PictureBookData.Weapon_Lsword_041"
         },
         {
           "id": "compendium-377",
-          "value": "39db9816"
+          "value": "39db9816",
+          "label": "PictureBookData.Weapon_Lsword_045"
         },
         {
           "id": "compendium-378",
-          "value": "890ad720"
+          "value": "890ad720",
+          "label": "PictureBookData.Weapon_Lsword_047"
         },
         {
           "id": "compendium-379",
-          "value": "dd641497"
+          "value": "dd641497",
+          "label": "PictureBookData.Weapon_Lsword_051"
         },
         {
           "id": "compendium-380",
-          "value": "6e98878a"
+          "value": "6e98878a",
+          "label": "PictureBookData.Weapon_Lsword_054"
         },
         {
           "id": "compendium-381",
-          "value": "d3555b68"
+          "value": "d3555b68",
+          "label": "PictureBookData.Weapon_Lsword_057"
         },
         {
           "id": "compendium-382",
-          "value": "31cfe8fb"
+          "value": "31cfe8fb",
+          "label": "PictureBookData.Weapon_Lsword_059"
         },
         {
           "id": "compendium-383",
-          "value": "b85d6edf"
+          "value": "b85d6edf",
+          "label": "PictureBookData.Weapon_Lsword_060"
         },
         {
           "id": "compendium-384",
-          "value": "f140f20e"
+          "value": "f140f20e",
+          "label": "PictureBookData.Weapon_Lsword_101"
         },
         {
           "id": "compendium-385",
-          "value": "809bbfb9"
+          "value": "809bbfb9",
+          "label": "PictureBookData.Weapon_Lsword_103"
         },
         {
           "id": "compendium-386",
-          "value": "5c82563a"
+          "value": "5c82563a",
+          "label": "PictureBookData.Weapon_Lsword_106"
         },
         {
           "id": "compendium-387",
-          "value": "25a271c3"
+          "value": "25a271c3",
+          "label": "PictureBookData.Weapon_Lsword_108"
         },
         {
           "id": "compendium-388",
-          "value": "b46bb968"
+          "value": "b46bb968",
+          "label": "PictureBookData.Weapon_Lsword_109"
         },
         {
           "id": "compendium-389",
-          "value": "c8e985bb"
+          "value": "c8e985bb",
+          "label": "PictureBookData.Weapon_Lsword_112"
         },
         {
           "id": "compendium-390",
-          "value": "0db36bbf"
+          "value": "0db36bbf",
+          "label": "PictureBookData.Weapon_Lsword_113"
         },
         {
           "id": "compendium-391",
-          "value": "7cf50779"
+          "value": "7cf50779",
+          "label": "PictureBookData.Weapon_Lsword_114"
         },
         {
           "id": "compendium-392",
-          "value": "ff665863"
+          "value": "ff665863",
+          "label": "PictureBookData.Weapon_Lsword_124"
         },
         {
           "id": "compendium-393",
-          "value": "4182a6d6"
+          "value": "4182a6d6",
+          "label": "PictureBookData.Weapon_Lsword_127"
         },
         {
           "id": "compendium-394",
-          "value": "6f864868"
+          "value": "6f864868",
+          "label": "PictureBookData.Weapon_Lsword_129"
         },
         {
           "id": "compendium-395",
-          "value": "b1bc25db"
+          "value": "b1bc25db",
+          "label": "PictureBookData.Weapon_Lsword_136"
         },
         {
           "id": "compendium-396",
-          "value": "6dfa7ecb"
+          "value": "6dfa7ecb",
+          "label": "PictureBookData.Weapon_Lsword_147"
         },
         {
           "id": "compendium-397",
-          "value": "dc7d4767"
+          "value": "dc7d4767",
+          "label": "PictureBookData.Weapon_Lsword_161"
         },
         {
           "id": "compendium-398",
-          "value": "3e87f458"
+          "value": "3e87f458",
+          "label": "PictureBookData.Weapon_Lsword_163"
         },
         {
           "id": "compendium-399",
-          "value": "1e37a076"
+          "value": "1e37a076",
+          "label": "PictureBookData.Weapon_Lsword_164"
         },
         {
           "id": "compendium-400",
-          "value": "ea4ee734"
+          "value": "ea4ee734",
+          "label": "PictureBookData.Weapon_Lsword_166"
         },
         {
           "id": "compendium-401",
-          "value": "196829d9"
+          "value": "196829d9",
+          "label": "PictureBookData.Weapon_Lsword_174"
         },
         {
           "id": "compendium-402",
-          "value": "c5866cff"
+          "value": "c5866cff",
+          "label": "PictureBookData.Weapon_Shield_001"
         },
         {
           "id": "compendium-403",
-          "value": "95fb09f5"
+          "value": "95fb09f5",
+          "label": "PictureBookData.Weapon_Shield_002"
         },
         {
           "id": "compendium-404",
-          "value": "39a60d3b"
+          "value": "39a60d3b",
+          "label": "PictureBookData.Weapon_Shield_003"
         },
         {
           "id": "compendium-405",
-          "value": "69b44761"
+          "value": "69b44761",
+          "label": "PictureBookData.Weapon_Shield_004"
         },
         {
           "id": "compendium-406",
-          "value": "0aaf5498"
+          "value": "0aaf5498",
+          "label": "PictureBookData.Weapon_Shield_005"
         },
         {
           "id": "compendium-407",
-          "value": "9af2af6d"
+          "value": "9af2af6d",
+          "label": "PictureBookData.Weapon_Shield_006"
         },
         {
           "id": "compendium-408",
-          "value": "5133aa6c"
+          "value": "5133aa6c",
+          "label": "PictureBookData.Weapon_Shield_007"
         },
         {
           "id": "compendium-409",
-          "value": "6aea3c23"
+          "value": "6aea3c23",
+          "label": "PictureBookData.Weapon_Shield_008"
         },
         {
           "id": "compendium-410",
-          "value": "33e250f7"
+          "value": "33e250f7",
+          "label": "PictureBookData.Weapon_Shield_009"
         },
         {
           "id": "compendium-411",
-          "value": "f4aab6f4"
+          "value": "f4aab6f4",
+          "label": "PictureBookData.Weapon_Shield_016"
         },
         {
           "id": "compendium-412",
-          "value": "ae2a7ded"
+          "value": "ae2a7ded",
+          "label": "PictureBookData.Weapon_Shield_017"
         },
         {
           "id": "compendium-413",
-          "value": "1414aed0"
+          "value": "1414aed0",
+          "label": "PictureBookData.Weapon_Shield_018"
         },
         {
           "id": "compendium-414",
-          "value": "6a7de12a"
+          "value": "6a7de12a",
+          "label": "PictureBookData.Weapon_Shield_021"
         },
         {
           "id": "compendium-415",
-          "value": "d35d2bb2"
+          "value": "d35d2bb2",
+          "label": "PictureBookData.Weapon_Shield_022"
         },
         {
           "id": "compendium-416",
-          "value": "b38ffafb"
+          "value": "b38ffafb",
+          "label": "PictureBookData.Weapon_Shield_023"
         },
         {
           "id": "compendium-417",
-          "value": "792a5ec0"
+          "value": "792a5ec0",
+          "label": "PictureBookData.Weapon_Shield_025"
         },
         {
           "id": "compendium-418",
-          "value": "2a037682"
+          "value": "2a037682",
+          "label": "PictureBookData.Weapon_Shield_026"
         },
         {
           "id": "compendium-419",
-          "value": "ee1db1bc"
+          "value": "ee1db1bc",
+          "label": "PictureBookData.Weapon_Shield_030"
         },
         {
           "id": "compendium-420",
-          "value": "dfeb2e80"
+          "value": "dfeb2e80",
+          "label": "PictureBookData.Weapon_Shield_031"
         },
         {
           "id": "compendium-421",
-          "value": "b78feb8b"
+          "value": "b78feb8b",
+          "label": "PictureBookData.Weapon_Shield_032"
         },
         {
           "id": "compendium-422",
-          "value": "85f862ea"
+          "value": "85f862ea",
+          "label": "PictureBookData.Weapon_Shield_033"
         },
         {
           "id": "compendium-423",
-          "value": "695af4f6"
+          "value": "695af4f6",
+          "label": "PictureBookData.Weapon_Shield_034"
         },
         {
           "id": "compendium-424",
-          "value": "126ca7f2"
+          "value": "126ca7f2",
+          "label": "PictureBookData.Weapon_Shield_035"
         },
         {
           "id": "compendium-425",
-          "value": "13207bcc"
+          "value": "13207bcc",
+          "label": "PictureBookData.Weapon_Shield_036"
         },
         {
           "id": "compendium-426",
-          "value": "8bb9d774"
+          "value": "8bb9d774",
+          "label": "PictureBookData.Weapon_Shield_037"
         },
         {
           "id": "compendium-427",
-          "value": "b6b881ba"
+          "value": "b6b881ba",
+          "label": "PictureBookData.Weapon_Shield_040"
         },
         {
           "id": "compendium-428",
-          "value": "0118107e"
+          "value": "0118107e",
+          "label": "PictureBookData.Weapon_Shield_041"
         },
         {
           "id": "compendium-429",
-          "value": "cb4b52e2"
+          "value": "cb4b52e2",
+          "label": "PictureBookData.Weapon_Shield_042"
         },
         {
           "id": "compendium-430",
-          "value": "d9ad3906"
+          "value": "d9ad3906",
+          "label": "PictureBookData.Weapon_Shield_057"
         },
         {
           "id": "compendium-431",
-          "value": "9ceb5a30"
+          "value": "9ceb5a30",
+          "label": "PictureBookData.Weapon_Shield_101"
         },
         {
           "id": "compendium-432",
-          "value": "e21c9abf"
+          "value": "e21c9abf",
+          "label": "PictureBookData.Weapon_Shield_102"
         },
         {
           "id": "compendium-433",
-          "value": "35a4be45"
+          "value": "35a4be45",
+          "label": "PictureBookData.Weapon_Shield_103"
         },
         {
           "id": "compendium-434",
-          "value": "51c3c55d"
+          "value": "51c3c55d",
+          "label": "PictureBookData.Weapon_Shield_107"
         },
         {
           "id": "compendium-435",
-          "value": "ee187589"
+          "value": "ee187589",
+          "label": "PictureBookData.Weapon_Spear_001"
         },
         {
           "id": "compendium-436",
-          "value": "1e9668ed"
+          "value": "1e9668ed",
+          "label": "PictureBookData.Weapon_Spear_002"
         },
         {
           "id": "compendium-437",
-          "value": "bb39460d"
+          "value": "bb39460d",
+          "label": "PictureBookData.Weapon_Spear_003"
         },
         {
           "id": "compendium-438",
-          "value": "61906d1c"
+          "value": "61906d1c",
+          "label": "PictureBookData.Weapon_Spear_021"
         },
         {
           "id": "compendium-439",
-          "value": "526e9423"
+          "value": "526e9423",
+          "label": "PictureBookData.Weapon_Spear_022"
         },
         {
           "id": "compendium-440",
-          "value": "2d889b61"
+          "value": "2d889b61",
+          "label": "PictureBookData.Weapon_Spear_024"
         },
         {
           "id": "compendium-441",
-          "value": "65d9cffb"
+          "value": "65d9cffb",
+          "label": "PictureBookData.Weapon_Spear_025"
         },
         {
           "id": "compendium-442",
-          "value": "9de31ad4"
+          "value": "9de31ad4",
+          "label": "PictureBookData.Weapon_Spear_027"
         },
         {
           "id": "compendium-443",
-          "value": "00d63d4b"
+          "value": "00d63d4b",
+          "label": "PictureBookData.Weapon_Spear_029"
         },
         {
           "id": "compendium-444",
-          "value": "6dc9d131"
+          "value": "6dc9d131",
+          "label": "PictureBookData.Weapon_Spear_030"
         },
         {
           "id": "compendium-445",
-          "value": "dacaa4e9"
+          "value": "dacaa4e9",
+          "label": "PictureBookData.Weapon_Spear_032"
         },
         {
           "id": "compendium-446",
-          "value": "bca58bda"
+          "value": "bca58bda",
+          "label": "PictureBookData.Weapon_Spear_036"
         },
         {
           "id": "compendium-447",
-          "value": "d52cff76"
+          "value": "d52cff76",
+          "label": "PictureBookData.Weapon_Spear_038"
         },
         {
           "id": "compendium-448",
-          "value": "ec1e60d5"
+          "value": "ec1e60d5",
+          "label": "PictureBookData.Weapon_Spear_047"
         },
         {
           "id": "compendium-449",
-          "value": "cdee3052"
+          "value": "cdee3052",
+          "label": "PictureBookData.Weapon_Spear_050"
         },
         {
           "id": "compendium-450",
-          "value": "25089680"
+          "value": "25089680",
+          "label": "PictureBookData.Weapon_Spear_101"
         },
         {
           "id": "compendium-451",
-          "value": "05f65fb4"
+          "value": "05f65fb4",
+          "label": "PictureBookData.Weapon_Spear_103"
         },
         {
           "id": "compendium-452",
-          "value": "625835d7"
+          "value": "625835d7",
+          "label": "PictureBookData.Weapon_Spear_106"
         },
         {
           "id": "compendium-453",
-          "value": "75f32973"
+          "value": "75f32973",
+          "label": "PictureBookData.Weapon_Spear_108"
         },
         {
           "id": "compendium-454",
-          "value": "299c0203"
+          "value": "299c0203",
+          "label": "PictureBookData.Weapon_Spear_109"
         },
         {
           "id": "compendium-455",
-          "value": "b54aec01"
+          "value": "b54aec01",
+          "label": "PictureBookData.Weapon_Spear_112"
         },
         {
           "id": "compendium-456",
-          "value": "157db793"
+          "value": "157db793",
+          "label": "PictureBookData.Weapon_Spear_113"
         },
         {
           "id": "compendium-457",
-          "value": "dd8860ba"
+          "value": "dd8860ba",
+          "label": "PictureBookData.Weapon_Spear_124"
         },
         {
           "id": "compendium-458",
-          "value": "f99bcd4f"
+          "value": "f99bcd4f",
+          "label": "PictureBookData.Weapon_Spear_125"
         },
         {
           "id": "compendium-459",
-          "value": "29a9cfbb"
+          "value": "29a9cfbb",
+          "label": "PictureBookData.Weapon_Spear_127"
         },
         {
           "id": "compendium-460",
-          "value": "a7f74017"
+          "value": "a7f74017",
+          "label": "PictureBookData.Weapon_Spear_129"
         },
         {
           "id": "compendium-461",
-          "value": "985f02c5"
+          "value": "985f02c5",
+          "label": "PictureBookData.Weapon_Spear_132"
         },
         {
           "id": "compendium-462",
-          "value": "f0e20bcd"
+          "value": "f0e20bcd",
+          "label": "PictureBookData.Weapon_Spear_147"
         },
         {
           "id": "compendium-463",
-          "value": "dfe95eb0"
+          "value": "dfe95eb0",
+          "label": "PictureBookData.Weapon_Spear_161"
         },
         {
           "id": "compendium-464",
-          "value": "acaf6ca5"
+          "value": "acaf6ca5",
+          "label": "PictureBookData.Weapon_Spear_163"
         },
         {
           "id": "compendium-465",
-          "value": "d63f0a6a"
+          "value": "d63f0a6a",
+          "label": "PictureBookData.Weapon_Spear_164"
         },
         {
           "id": "compendium-466",
-          "value": "1696e9d9"
+          "value": "1696e9d9",
+          "label": "PictureBookData.Weapon_Spear_166"
         },
         {
           "id": "compendium-467",
-          "value": "70dc2dba"
+          "value": "70dc2dba",
+          "label": "PictureBookData.Weapon_Spear_173"
         },
         {
           "id": "compendium-468",
-          "value": "3389df22"
+          "value": "3389df22",
+          "label": "PictureBookData.Weapon_Sword_001"
         },
         {
           "id": "compendium-469",
-          "value": "97625c5b"
+          "value": "97625c5b",
+          "label": "PictureBookData.Weapon_Sword_002"
         },
         {
           "id": "compendium-470",
-          "value": "1755d43b"
+          "value": "1755d43b",
+          "label": "PictureBookData.Weapon_Sword_003"
         },
         {
           "id": "compendium-471",
-          "value": "453aeeb1"
+          "value": "453aeeb1",
+          "label": "PictureBookData.Weapon_Sword_019"
         },
         {
           "id": "compendium-472",
-          "value": "d530c3dc"
+          "value": "d530c3dc",
+          "label": "PictureBookData.Weapon_Sword_020"
         },
         {
           "id": "compendium-473",
-          "value": "a29e03ee"
+          "value": "a29e03ee",
+          "label": "PictureBookData.Weapon_Sword_021"
         },
         {
           "id": "compendium-474",
-          "value": "a8edcfb2"
+          "value": "a8edcfb2",
+          "label": "PictureBookData.Weapon_Sword_022"
         },
         {
           "id": "compendium-475",
-          "value": "835d8b66"
+          "value": "835d8b66",
+          "label": "PictureBookData.Weapon_Sword_024"
         },
         {
           "id": "compendium-476",
-          "value": "5ee05f4c"
+          "value": "5ee05f4c",
+          "label": "PictureBookData.Weapon_Sword_025"
         },
         {
           "id": "compendium-477",
-          "value": "fad43bc1"
+          "value": "fad43bc1",
+          "label": "PictureBookData.Weapon_Sword_027"
         },
         {
           "id": "compendium-478",
-          "value": "394b1b7a"
+          "value": "394b1b7a",
+          "label": "PictureBookData.Weapon_Sword_029"
         },
         {
           "id": "compendium-479",
-          "value": "b528ed2b"
+          "value": "b528ed2b",
+          "label": "PictureBookData.Weapon_Sword_031"
         },
         {
           "id": "compendium-480",
-          "value": "0e243b82"
+          "value": "0e243b82",
+          "label": "PictureBookData.Weapon_Sword_041"
         },
         {
           "id": "compendium-481",
-          "value": "34816bfb"
+          "value": "34816bfb",
+          "label": "PictureBookData.Weapon_Sword_043"
         },
         {
           "id": "compendium-482",
-          "value": "73325594"
+          "value": "73325594",
+          "label": "PictureBookData.Weapon_Sword_044"
         },
         {
           "id": "compendium-483",
-          "value": "f7bd2d2b"
+          "value": "f7bd2d2b",
+          "label": "PictureBookData.Weapon_Sword_047"
         },
         {
           "id": "compendium-484",
-          "value": "0a2f2fa1"
+          "value": "0a2f2fa1",
+          "label": "PictureBookData.Weapon_Sword_051"
         },
         {
           "id": "compendium-485",
-          "value": "ecfa5766"
+          "value": "ecfa5766",
+          "label": "PictureBookData.Weapon_Sword_052"
         },
         {
           "id": "compendium-486",
-          "value": "8c52dacd"
+          "value": "8c52dacd",
+          "label": "PictureBookData.Weapon_Sword_057"
         },
         {
           "id": "compendium-487",
-          "value": "b9627088"
+          "value": "b9627088",
+          "label": "PictureBookData.Weapon_Sword_058"
         },
         {
           "id": "compendium-488",
-          "value": "e5cc93b7"
+          "value": "e5cc93b7",
+          "label": "PictureBookData.Weapon_Sword_059"
         },
         {
           "id": "compendium-489",
-          "value": "2668e51f"
+          "value": "2668e51f",
+          "label": "PictureBookData.Weapon_Sword_070"
         },
         {
           "id": "compendium-490",
-          "value": "8a8c8570"
+          "value": "8a8c8570",
+          "label": "PictureBookData.Weapon_Sword_101"
         },
         {
           "id": "compendium-491",
-          "value": "b23944dd"
+          "value": "b23944dd",
+          "label": "PictureBookData.Weapon_Sword_103"
         },
         {
           "id": "compendium-492",
-          "value": "f43a072a"
+          "value": "f43a072a",
+          "label": "PictureBookData.Weapon_Sword_105"
         },
         {
           "id": "compendium-493",
-          "value": "fbbd3492"
+          "value": "fbbd3492",
+          "label": "PictureBookData.Weapon_Sword_106"
         },
         {
           "id": "compendium-494",
-          "value": "5b09bacb"
+          "value": "5b09bacb",
+          "label": "PictureBookData.Weapon_Sword_107"
         },
         {
           "id": "compendium-495",
-          "value": "27a3778d"
+          "value": "27a3778d",
+          "label": "PictureBookData.Weapon_Sword_108"
         },
         {
           "id": "compendium-496",
-          "value": "617ebcb4"
+          "value": "617ebcb4",
+          "label": "PictureBookData.Weapon_Sword_109"
         },
         {
           "id": "compendium-497",
-          "value": "3390f921"
+          "value": "3390f921",
+          "label": "PictureBookData.Weapon_Sword_112"
         },
         {
           "id": "compendium-498",
-          "value": "67bb6a7c"
+          "value": "67bb6a7c",
+          "label": "PictureBookData.Weapon_Sword_113"
         },
         {
           "id": "compendium-499",
-          "value": "e7204752"
+          "value": "e7204752",
+          "label": "PictureBookData.Weapon_Sword_114"
         },
         {
           "id": "compendium-500",
-          "value": "a5383c88"
+          "value": "a5383c88",
+          "label": "PictureBookData.Weapon_Sword_124"
         },
         {
           "id": "compendium-501",
-          "value": "3c4b7b8d"
+          "value": "3c4b7b8d",
+          "label": "PictureBookData.Weapon_Sword_125"
         },
         {
           "id": "compendium-502",
-          "value": "827ea767"
+          "value": "827ea767",
+          "label": "PictureBookData.Weapon_Sword_127"
         },
         {
           "id": "compendium-503",
-          "value": "a8a2e7b8"
+          "value": "a8a2e7b8",
+          "label": "PictureBookData.Weapon_Sword_129"
         },
         {
           "id": "compendium-504",
-          "value": "6dd46b75"
+          "value": "6dd46b75",
+          "label": "PictureBookData.Weapon_Sword_131"
         },
         {
           "id": "compendium-505",
-          "value": "df76d934"
+          "value": "df76d934",
+          "label": "PictureBookData.Weapon_Sword_147"
         },
         {
           "id": "compendium-506",
-          "value": "5c906c16"
+          "value": "5c906c16",
+          "label": "PictureBookData.Weapon_Sword_161"
         },
         {
           "id": "compendium-507",
-          "value": "9820338e"
+          "value": "9820338e",
+          "label": "PictureBookData.Weapon_Sword_163"
         },
         {
           "id": "compendium-508",
-          "value": "50446d5d"
+          "value": "50446d5d",
+          "label": "PictureBookData.Weapon_Sword_164"
         },
         {
           "id": "compendium-509",
-          "value": "d471103a"
+          "value": "d471103a",
+          "label": "PictureBookData.Weapon_Sword_166"
         }
       ],
       "sourceCounts": {
