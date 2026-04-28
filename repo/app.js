@@ -522,13 +522,19 @@ function fabricsTooltip(stat) {
   return statListTooltip(stat, "Fabrics", "All fabrics collected.");
 }
 
+function sortStatMissingByLabel(items) {
+  return [...(items || [])].sort((a, b) =>
+    String(a.label || a.id || "").localeCompare(String(b.label || b.id || ""), undefined, { sensitivity: "base" }),
+  );
+}
+
 function statListTooltip(stat, title, completeText) {
   if (!stat) {
     return tooltipRows(title, [
       { label: "Status", value: "No save data loaded" },
     ]);
   }
-  const missing = stat.missing || [];
+  const missing = sortStatMissingByLabel(stat.missing);
   const rows = tooltipRows(title, [
     { label: "Collected", value: `${stat.obtained} / ${stat.total}` },
     { label: "Left", value: stat.remaining },
@@ -1212,10 +1218,10 @@ function updateSaveSummary(payload) {
   pristineWeaponsSummary.textContent = pristineWeapons
     ? `${pristineWeapons.obtained} / ${pristineWeapons.total}`
     : "-- / --";
-  const missingWeapons = pristineWeapons?.missing || [];
+  const missingWeapons = sortStatMissingByLabel(pristineWeapons?.missing);
   const hoverText = pristineWeapons
     ? missingWeapons.length
-      ? `Still locked:\n${missingWeapons.map((item) => item.label).join("\n")}`
+      ? `Still locked:\n${missingWeapons.map((item) => item.label || item.id).join("\n")}`
       : "All pristine weapons unlocked"
     : "No pristine weapon data loaded";
   pristineWeaponsSummary.removeAttribute("title");
@@ -1226,10 +1232,10 @@ function updateSaveSummary(payload) {
   fabricsSummary.textContent = fabrics
     ? `${fabrics.obtained} / ${fabrics.total}`
     : "-- / --";
-  const missingFabrics = fabrics?.missing || [];
+  const missingFabrics = sortStatMissingByLabel(fabrics?.missing);
   const fabricsHoverText = fabrics
     ? missingFabrics.length
-      ? `Still left:\n${missingFabrics.map((item) => item.label).join("\n")}`
+      ? `Still left:\n${missingFabrics.map((item) => item.label || item.id).join("\n")}`
       : "All fabrics collected"
     : "No fabric data loaded";
   fabricsSummary.removeAttribute("title");
