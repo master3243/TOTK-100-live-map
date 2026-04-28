@@ -120,6 +120,9 @@ function updateTransform() {
   markerLayer.style.transform = transform;
   zoomValue.textContent = `${Math.round(scale * 100)}%`;
   updateIconScale();
+  if (isTooltipPinned) {
+    positionPinnedMapTooltip();
+  }
 }
 
 function updateIconScale() {
@@ -376,23 +379,45 @@ function statListTooltip(stat, title, completeText) {
   return `${rows}<div class="tooltip-section-title">Still left</div><ul class="tooltip-list">${items}</ul>`;
 }
 
-function positionTooltip(event) {
+function positionTooltipAtClient(clientX, clientY) {
   const rect = viewport.getBoundingClientRect();
   const gap = 14;
   mapTooltip.hidden = false;
   const tooltipRect = mapTooltip.getBoundingClientRect();
-  let left = event.clientX - rect.left + gap;
-  let top = event.clientY - rect.top + gap;
+  let left = clientX - rect.left + gap;
+  let top = clientY - rect.top + gap;
 
   if (left + tooltipRect.width > rect.width - 8) {
-    left = event.clientX - rect.left - tooltipRect.width - gap;
+    left = clientX - rect.left - tooltipRect.width - gap;
   }
   if (top + tooltipRect.height > rect.height - 8) {
-    top = event.clientY - rect.top - tooltipRect.height - gap;
+    top = clientY - rect.top - tooltipRect.height - gap;
   }
 
   mapTooltip.style.left = `${Math.max(8, left)}px`;
   mapTooltip.style.top = `${Math.max(8, top)}px`;
+}
+
+function positionTooltip(event) {
+  positionTooltipAtClient(event.clientX, event.clientY);
+}
+
+/** Keep pinned map tooltip aligned with its marker while panning / zooming. */
+function positionPinnedMapTooltip() {
+  if (!isTooltipPinned || !(tooltipPinnedOwner instanceof HTMLElement)) {
+    return;
+  }
+  if (!tooltipPinnedOwner.isConnected) {
+    setTooltipPinned(false);
+    return;
+  }
+  const br = tooltipPinnedOwner.getBoundingClientRect();
+  if (br.width < 2 && br.height < 2) {
+    return;
+  }
+  const clientX = br.right;
+  const clientY = br.top + br.height * 0.5;
+  positionTooltipAtClient(clientX, clientY);
 }
 
 function positionStatTooltip(event) {
@@ -1334,7 +1359,9 @@ function endPointer(event) {
     tooltipPinnedOwner.classList.add("tooltip-pinned-owner");
     setTooltipContent(tooltipPinCandidate.html, { pinned: true });
     setTooltipPinned(true);
-    positionTooltip(event);
+    requestAnimationFrame(() => {
+      positionPinnedMapTooltip();
+    });
   }
   if (tooltipPinCandidate && tooltipPinCandidate.pointerId === event.pointerId) {
     tooltipPinCandidate = null;
