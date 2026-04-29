@@ -517,6 +517,14 @@ function parseLocationFlagFromNote(note) {
   return match ? match[1] : null;
 }
 
+function parseLeadingFlagFromNote(note) {
+  if (!note || typeof note !== "string") {
+    return null;
+  }
+  const match = /^([A-Za-z_][\w_]*(?:\.[\w_]+)*)\b/.exec(note.trim());
+  return match ? match[1] : null;
+}
+
 function markerObjmapQuery(marker) {
   const objmapQuery = (marker.objmapQuery || "").trim();
   if (objmapQuery) {
@@ -536,6 +544,12 @@ function markerObjmapQuery(marker) {
     const oldMapId = parseAnyUInt64FromNote(marker.note);
     if (oldMapId != null) {
       return oldMapId.toString(10);
+    }
+  }
+  if (marker.categoryId === "general_locations") {
+    const generalLocationFlag = parseLeadingFlagFromNote(marker.note);
+    if (generalLocationFlag) {
+      return generalLocationFlag.replaceAll(".", " ");
     }
   }
   const locationFlag = parseLocationFlagFromNote(marker.note);

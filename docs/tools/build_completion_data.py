@@ -72,7 +72,7 @@ CATEGORIES = [
 
 
 STATS = [
-    {"id": "compendium", "label": "Compendium", "hashes": "COMPENDIUM_STATUS", "kind": "reverse", "target": "Unopened"},
+    {"id": "compendium", "label": "Compendium", "hashes": "COMPENDIUM_STATUS", "kind": "reverse", "target": "Unopened", "includeMissing": True},
     {"id": "pristine_weapons", "label": "Pristine Weapons", "source": "pristine_weapons", "kind": "positive", "includeMissing": True},
     {"id": "fabrics", "label": "Fabrics", "source": "fabrics", "kind": "positive", "includeMissing": True},
 ]
@@ -199,18 +199,75 @@ def strip_comments(text):
     return text
 
 
+def iter_active_array_rows(text, name):
+    array = extract_array(text, name)[1:-1]
+    in_block = False
+    for line in array.splitlines():
+        code = ""
+        comment = ""
+        index = 0
+        in_quote = None
+        escaped = False
+        while index < len(line):
+            char = line[index]
+            nxt = line[index + 1] if index + 1 < len(line) else ""
+            if in_block:
+                if char == "*" and nxt == "/":
+                    in_block = False
+                    index += 2
+                    continue
+                index += 1
+                continue
+            if in_quote:
+                code += char
+                if escaped:
+                    escaped = False
+                elif char == "\\":
+                    escaped = True
+                elif char == in_quote:
+                    in_quote = None
+                index += 1
+                continue
+            if char in "\"'":
+                in_quote = char
+                code += char
+                index += 1
+                continue
+            if char == "/" and nxt == "*":
+                in_block = True
+                index += 2
+                continue
+            if char == "/" and nxt == "/":
+                comment = line[index + 2:].strip()
+                break
+            code += char
+            index += 1
+
+        code = code.strip()
+        if code:
+            yield code, comment
+
+
+def parse_hash_rows(text, name, kind):
+    rows = []
+    for code, comment in iter_active_array_rows(text, name):
+        matches = list(re.finditer(r"hash\(\s*(['\"])(.*?)\1\s*\)|(0x[0-9a-fA-F]+)|(['\"])(0x[0-9a-fA-F]+|\d+)\4", code))
+        for item in matches:
+            if item.group(2) is not None:
+                value = f"{murmur3_32(item.group(2)):08x}" if kind == "bool" else str(int(item.group(2), 0))
+            elif item.group(3):
+                value = f"{int(item.group(3), 16):08x}" if kind == "bool" else str(int(item.group(3), 16))
+            elif item.group(5):
+                raw = item.group(5)
+                value = f"{int(raw, 0):08x}" if kind == "bool" else str(int(raw, 0))
+            else:
+                continue
+            rows.append({"value": value, "note": comment if len(matches) == 1 else ""})
+    return rows
+
+
 def parse_hashes(text, name, kind):
-    array = strip_comments(extract_array(text, name))
-    values = []
-    for item in re.finditer(r"hash\(\s*(['\"])(.*?)\1\s*\)|(0x[0-9a-fA-F]+)|(['\"])(0x[0-9a-fA-F]+|\d+)\4", array):
-        if item.group(2) is not None:
-            values.append(f"{murmur3_32(item.group(2)):08x}" if kind == "bool" else str(int(item.group(2), 0)))
-        elif item.group(3):
-            values.append(f"{int(item.group(3), 16):08x}" if kind == "bool" else str(int(item.group(3), 16)))
-        elif item.group(5):
-            raw = item.group(5)
-            values.append(f"{int(raw, 0):08x}" if kind == "bool" else str(int(raw, 0)))
-    return values
+    return [row["value"] for row in parse_hash_rows(text, name, kind)]
 
 
 def eval_number(expr):
@@ -223,15 +280,17 @@ def eval_number(expr):
 
 
 def parse_coordinates(text, name):
-    array = extract_array(text, name)[1:-1]
     rows = []
     pattern = re.compile(r"\[\s*([^,\]]+)\s*,\s*([^,\]]+)\s*,\s*([^\]]+)\]\s*,?\s*(?://\s*([^\r\n]+))?")
-    for match in pattern.finditer(array):
+    for code, comment in iter_active_array_rows(text, name):
+        match = pattern.search(code)
+        if not match:
+            continue
         rows.append({
             "x": eval_number(match.group(1).strip()),
             "y": eval_number(match.group(2).strip()),
             "z": eval_number(match.group(3).strip()),
-            "note": (match.group(4) or "").strip(),
+            "note": (match.group(4) or comment or "").strip(),
         })
     return rows
 
@@ -383,6 +442,38 @@ def objmap_id_for(category_id, index):
     return None
 
 
+def normalize_source_note(note):
+    return re.sub(r"\s+", " ", (note or "").strip())
+
+
+def validate_source_alignment(category_id, hash_rows, coords):
+    if category_id != "general_locations":
+        return
+    if len(hash_rows) != len(coords):
+        raise ValueError(
+            f"General Locations source mismatch: {len(hash_rows)} active hashes vs {len(coords)} active coordinates"
+        )
+    mismatches = []
+    for index, (hash_row, coord) in enumerate(zip(hash_rows, coords), start=1):
+        hash_note = normalize_source_note(hash_row.get("note"))
+        coord_note = normalize_source_note(coord.get("note"))
+        if hash_note and coord_note and hash_note != coord_note:
+            mismatches.append(f"{index}: hash={hash_note!r}, coord={coord_note!r}")
+    if mismatches:
+        preview = "; ".join(mismatches[:8])
+        extra = "" if len(mismatches) <= 8 else f"; ... {len(mismatches) - 8} more"
+        raise ValueError(f"General Locations hash/coordinate alignment failed: {preview}{extra}")
+
+
+def compendium_labels_by_value(hashes_text):
+    labels = {}
+    for line in hashes_text.splitlines():
+        match = re.match(r"^([0-9a-fA-F]{8});Enum;(PictureBookData\..+)\.State$", line.strip())
+        if match:
+            labels[match.group(1).lower()] = match.group(2)
+    return labels
+
+
 def main():
     completism = (REFERENCES / "zelda-totk.completism.js").read_text(encoding="utf-8")
     coordinates = (REFERENCES / "zelda-totk.coordinates.js").read_text(encoding="utf-8")
@@ -409,15 +500,17 @@ def main():
             })
             continue
 
-        ids = parse_hashes(completism, category["hashes"], category["kind"])
+        hash_rows = parse_hash_rows(completism, category["hashes"], category["kind"])
         coords = parse_coordinates(coordinates, category["coords"])
-        count = min(len(ids), len(coords))
+        validate_source_alignment(category["id"], hash_rows, coords)
+        count = min(len(hash_rows), len(coords))
         items = []
         for index in range(count):
             coord = coords[index]
+            hash_row = hash_rows[index]
             item = {
                 "id": f"{category['id']}-{index + 1:03d}",
-                "value": ids[index],
+                "value": hash_row["value"],
                 "x": coord["x"],
                 "y": coord["y"],
                 "z": coord["z"],
@@ -435,9 +528,10 @@ def main():
             "targetValue": target_value(category.get("target")),
             "defaultVisible": category.get("defaultVisible", True),
             "items": items,
-            "sourceCounts": {"ids": len(ids), "coordinates": len(coords)},
+            "sourceCounts": {"ids": len(hash_rows), "coordinates": len(coords)},
         })
     stats = []
+    compendium_labels = compendium_labels_by_value(hashes)
     for stat in STATS:
         if stat.get("source") == "pristine_weapons":
             items = parse_pristine_weapon_items(equipment)
@@ -445,7 +539,12 @@ def main():
             items = parse_fabric_items(hashes)
         else:
             ids = parse_hashes(completism, stat["hashes"], "bool")
-            items = [{"id": f"{stat['id']}-{index + 1:03d}", "value": value} for index, value in enumerate(ids)]
+            items = []
+            for index, value in enumerate(ids):
+                item = {"id": f"{stat['id']}-{index + 1:03d}", "value": value}
+                if stat["id"] == "compendium" and value in compendium_labels:
+                    item["label"] = compendium_labels[value]
+                items.append(item)
         stats.append({
             "id": stat["id"],
             "label": stat["label"],
