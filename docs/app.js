@@ -564,6 +564,9 @@ function markerObjmapQuery(marker) {
   if (fromNote != null) {
     return `0x${fromNote.toString(16).padStart(16, "0")}`;
   }
+  if (marker.categoryId === "bubbulfrogs" && /^\d+$/.test(String(marker.value || ""))) {
+    return `0x${BigInt(marker.value).toString(16).padStart(16, "0")}`;
+  }
   const raw = (marker.hash || marker.value || "").trim();
   if (/^[0-9a-fA-F]{8}$/.test(raw)) {
     return `0x${raw}`;
