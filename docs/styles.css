@@ -1373,7 +1373,13 @@ body.save-drop-active {
 }
 
 .completion-marker.obtained.completion-armor {
-  filter: drop-shadow(0 0 5px rgba(120, 230, 160, 0.72)) drop-shadow(0 0 2px rgba(12, 14, 12, 0.9));
+  opacity: 0.82;
+  filter:
+    grayscale(1)
+    brightness(0.9)
+    contrast(1.08)
+    drop-shadow(0 0 5px rgba(120, 230, 160, 0.48))
+    drop-shadow(0 0 2px rgba(12, 14, 12, 0.9));
 }
 
 .completion-sage_will {
