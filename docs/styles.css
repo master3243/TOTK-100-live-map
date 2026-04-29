@@ -102,7 +102,6 @@ h2 {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  margin-top: 8px;
   color: var(--accent-2);
   font-size: 12px;
   font-weight: 700;
@@ -121,6 +120,11 @@ h2 {
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+.sidebar-source-link {
+  align-self: flex-start;
+  margin-top: auto;
 }
 
 .panel {
@@ -741,10 +745,6 @@ body.save-drop-active {
   border-color: rgba(230, 120, 120, 0.45);
   background: rgba(200, 70, 70, 0.16);
   color: #ffc8c8;
-}
-
-.log-panel {
-  margin-top: auto;
 }
 
 .log-panel summary {
