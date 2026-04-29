@@ -18132,7 +18132,14 @@
             "Armor_002_Head",
             "Armor_003_Head",
             "Armor_004_Head",
-            "Armor_015_Head",
+            "Armor_015_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-056",
+          "label": "Hylian Hood (lowered)",
+          "baseId": "Armor_1152_Head",
+          "ids": [
             "Armor_1152_Head",
             "Armor_1153_Head",
             "Armor_1154_Head",
@@ -18141,7 +18148,7 @@
           ]
         },
         {
-          "id": "armor_inventory-056",
+          "id": "armor_inventory-057",
           "label": "Hylian Trousers",
           "baseId": "Armor_001_Lower",
           "ids": [
@@ -18153,7 +18160,7 @@
           ]
         },
         {
-          "id": "armor_inventory-057",
+          "id": "armor_inventory-058",
           "label": "Hylian Tunic",
           "baseId": "Armor_001_Upper",
           "ids": [
@@ -18165,7 +18172,7 @@
           ]
         },
         {
-          "id": "armor_inventory-058",
+          "id": "armor_inventory-059",
           "label": "Island Lobster Shirt",
           "baseId": "Armor_175_Upper",
           "ids": [
@@ -18173,7 +18180,7 @@
           ]
         },
         {
-          "id": "armor_inventory-059",
+          "id": "armor_inventory-060",
           "label": "Korok Mask",
           "baseId": "Armor_176_Head",
           "ids": [
@@ -18181,7 +18188,7 @@
           ]
         },
         {
-          "id": "armor_inventory-060",
+          "id": "armor_inventory-061",
           "label": "Lightning Helm",
           "baseId": "Armor_115_Head",
           "ids": [
@@ -18189,7 +18196,7 @@
           ]
         },
         {
-          "id": "armor_inventory-061",
+          "id": "armor_inventory-062",
           "label": "Lizalfos Mask",
           "baseId": "Armor_055_Head",
           "ids": [
@@ -18197,7 +18204,7 @@
           ]
         },
         {
-          "id": "armor_inventory-062",
+          "id": "armor_inventory-063",
           "label": "Lynel Mask",
           "baseId": "Armor_056_Head",
           "ids": [
@@ -18205,7 +18212,7 @@
           ]
         },
         {
-          "id": "armor_inventory-063",
+          "id": "armor_inventory-064",
           "label": "Majora's Mask",
           "baseId": "Armor_172_Head",
           "ids": [
@@ -18213,7 +18220,7 @@
           ]
         },
         {
-          "id": "armor_inventory-064",
+          "id": "armor_inventory-065",
           "label": "Mask of Awakening",
           "baseId": "Armor_1096_Head",
           "ids": [
@@ -18225,7 +18232,7 @@
           ]
         },
         {
-          "id": "armor_inventory-065",
+          "id": "armor_inventory-066",
           "label": "Midna's Helmet",
           "baseId": "Armor_173_Head",
           "ids": [
@@ -18233,7 +18240,7 @@
           ]
         },
         {
-          "id": "armor_inventory-066",
+          "id": "armor_inventory-067",
           "label": "Miner's Mask",
           "baseId": "Armor_1051_Head",
           "ids": [
@@ -18245,7 +18252,7 @@
           ]
         },
         {
-          "id": "armor_inventory-067",
+          "id": "armor_inventory-068",
           "label": "Miner's Top",
           "baseId": "Armor_1051_Upper",
           "ids": [
@@ -18257,7 +18264,7 @@
           ]
         },
         {
-          "id": "armor_inventory-068",
+          "id": "armor_inventory-069",
           "label": "Miner's Trousers",
           "baseId": "Armor_1051_Lower",
           "ids": [
@@ -18269,7 +18276,7 @@
           ]
         },
         {
-          "id": "armor_inventory-069",
+          "id": "armor_inventory-070",
           "label": "Moblin Mask",
           "baseId": "Armor_045_Head",
           "ids": [
@@ -18277,7 +18284,7 @@
           ]
         },
         {
-          "id": "armor_inventory-070",
+          "id": "armor_inventory-071",
           "label": "Mystic Headpiece",
           "baseId": "Armor_1086_Head",
           "ids": [
@@ -18285,7 +18292,7 @@
           ]
         },
         {
-          "id": "armor_inventory-071",
+          "id": "armor_inventory-072",
           "label": "Mystic Robe",
           "baseId": "Armor_1086_Upper",
           "ids": [
@@ -18293,7 +18300,7 @@
           ]
         },
         {
-          "id": "armor_inventory-072",
+          "id": "armor_inventory-073",
           "label": "Mystic Trousers",
           "baseId": "Armor_1086_Lower",
           "ids": [
@@ -18301,7 +18308,7 @@
           ]
         },
         {
-          "id": "armor_inventory-073",
+          "id": "armor_inventory-074",
           "label": "Opal Earrings",
           "baseId": "Armor_028_Head",
           "ids": [
@@ -18313,7 +18320,7 @@
           ]
         },
         {
-          "id": "armor_inventory-074",
+          "id": "armor_inventory-075",
           "label": "Phantom Armor",
           "baseId": "Armor_171_Upper",
           "ids": [
@@ -18321,7 +18328,7 @@
           ]
         },
         {
-          "id": "armor_inventory-075",
+          "id": "armor_inventory-076",
           "label": "Phantom Greaves",
           "baseId": "Armor_171_Lower",
           "ids": [
@@ -18329,7 +18336,7 @@
           ]
         },
         {
-          "id": "armor_inventory-076",
+          "id": "armor_inventory-077",
           "label": "Phantom Helmet",
           "baseId": "Armor_171_Head",
           "ids": [
@@ -18337,7 +18344,7 @@
           ]
         },
         {
-          "id": "armor_inventory-077",
+          "id": "armor_inventory-078",
           "label": "Radiant Mask",
           "baseId": "Armor_017_Head",
           "ids": [
@@ -18349,7 +18356,7 @@
           ]
         },
         {
-          "id": "armor_inventory-078",
+          "id": "armor_inventory-079",
           "label": "Radiant Shirt",
           "baseId": "Armor_017_Upper",
           "ids": [
@@ -18361,7 +18368,7 @@
           ]
         },
         {
-          "id": "armor_inventory-079",
+          "id": "armor_inventory-080",
           "label": "Radiant Tights",
           "baseId": "Armor_017_Lower",
           "ids": [
@@ -18373,7 +18380,7 @@
           ]
         },
         {
-          "id": "armor_inventory-080",
+          "id": "armor_inventory-081",
           "label": "Ravio's Hood",
           "baseId": "Armor_177_Head",
           "ids": [
@@ -18381,7 +18388,7 @@
           ]
         },
         {
-          "id": "armor_inventory-081",
+          "id": "armor_inventory-082",
           "label": "Royal Guard Boots",
           "baseId": "Armor_179_Lower",
           "ids": [
@@ -18393,7 +18400,7 @@
           ]
         },
         {
-          "id": "armor_inventory-082",
+          "id": "armor_inventory-083",
           "label": "Royal Guard Cap",
           "baseId": "Armor_179_Head",
           "ids": [
@@ -18405,7 +18412,7 @@
           ]
         },
         {
-          "id": "armor_inventory-083",
+          "id": "armor_inventory-084",
           "label": "Royal Guard Uniform",
           "baseId": "Armor_179_Upper",
           "ids": [
@@ -18417,7 +18424,7 @@
           ]
         },
         {
-          "id": "armor_inventory-084",
+          "id": "armor_inventory-085",
           "label": "Rubber Armor",
           "baseId": "Armor_046_Upper",
           "ids": [
@@ -18429,7 +18436,7 @@
           ]
         },
         {
-          "id": "armor_inventory-085",
+          "id": "armor_inventory-086",
           "label": "Rubber Helm",
           "baseId": "Armor_046_Head",
           "ids": [
@@ -18441,7 +18448,7 @@
           ]
         },
         {
-          "id": "armor_inventory-086",
+          "id": "armor_inventory-087",
           "label": "Rubber Tights",
           "baseId": "Armor_046_Lower",
           "ids": [
@@ -18453,7 +18460,7 @@
           ]
         },
         {
-          "id": "armor_inventory-087",
+          "id": "armor_inventory-088",
           "label": "Ruby Circlet",
           "baseId": "Armor_025_Head",
           "ids": [
@@ -18465,7 +18472,7 @@
           ]
         },
         {
-          "id": "armor_inventory-088",
+          "id": "armor_inventory-089",
           "label": "Sand Boots",
           "baseId": "Armor_049_Lower",
           "ids": [
@@ -18477,7 +18484,7 @@
           ]
         },
         {
-          "id": "armor_inventory-089",
+          "id": "armor_inventory-090",
           "label": "Sapphire Circlet",
           "baseId": "Armor_026_Head",
           "ids": [
@@ -18489,7 +18496,7 @@
           ]
         },
         {
-          "id": "armor_inventory-090",
+          "id": "armor_inventory-091",
           "label": "Sheik's Mask",
           "baseId": "Armor_220_Head",
           "ids": [
@@ -18501,7 +18508,7 @@
           ]
         },
         {
-          "id": "armor_inventory-091",
+          "id": "armor_inventory-092",
           "label": "Snow Boots",
           "baseId": "Armor_141_Lower",
           "ids": [
@@ -18513,7 +18520,7 @@
           ]
         },
         {
-          "id": "armor_inventory-092",
+          "id": "armor_inventory-093",
           "label": "Snowquill Headdress",
           "baseId": "Armor_009_Head",
           "ids": [
@@ -18525,7 +18532,7 @@
           ]
         },
         {
-          "id": "armor_inventory-093",
+          "id": "armor_inventory-094",
           "label": "Snowquill Trousers",
           "baseId": "Armor_009_Lower",
           "ids": [
@@ -18537,7 +18544,7 @@
           ]
         },
         {
-          "id": "armor_inventory-094",
+          "id": "armor_inventory-095",
           "label": "Snowquill Tunic",
           "baseId": "Armor_009_Upper",
           "ids": [
@@ -18549,7 +18556,7 @@
           ]
         },
         {
-          "id": "armor_inventory-095",
+          "id": "armor_inventory-096",
           "label": "Soldier's Armor",
           "baseId": "Armor_020_Upper",
           "ids": [
@@ -18561,7 +18568,7 @@
           ]
         },
         {
-          "id": "armor_inventory-096",
+          "id": "armor_inventory-097",
           "label": "Soldier's Greaves",
           "baseId": "Armor_020_Lower",
           "ids": [
@@ -18573,7 +18580,7 @@
           ]
         },
         {
-          "id": "armor_inventory-097",
+          "id": "armor_inventory-098",
           "label": "Soldier's Helm",
           "baseId": "Armor_020_Head",
           "ids": [
@@ -18585,7 +18592,7 @@
           ]
         },
         {
-          "id": "armor_inventory-098",
+          "id": "armor_inventory-099",
           "label": "Stealth Chest Guard",
           "baseId": "Armor_012_Upper",
           "ids": [
@@ -18597,7 +18604,7 @@
           ]
         },
         {
-          "id": "armor_inventory-099",
+          "id": "armor_inventory-100",
           "label": "Stealth Mask",
           "baseId": "Armor_012_Head",
           "ids": [
@@ -18609,7 +18616,7 @@
           ]
         },
         {
-          "id": "armor_inventory-100",
+          "id": "armor_inventory-101",
           "label": "Stealth Tights",
           "baseId": "Armor_012_Lower",
           "ids": [
@@ -18621,7 +18628,7 @@
           ]
         },
         {
-          "id": "armor_inventory-101",
+          "id": "armor_inventory-102",
           "label": "Tingle's Hood",
           "baseId": "Armor_174_Head",
           "ids": [
@@ -18629,7 +18636,7 @@
           ]
         },
         {
-          "id": "armor_inventory-102",
+          "id": "armor_inventory-103",
           "label": "Tingle's Shirt",
           "baseId": "Armor_174_Upper",
           "ids": [
@@ -18637,7 +18644,7 @@
           ]
         },
         {
-          "id": "armor_inventory-103",
+          "id": "armor_inventory-104",
           "label": "Tingle's Tights",
           "baseId": "Armor_174_Lower",
           "ids": [
@@ -18645,7 +18652,7 @@
           ]
         },
         {
-          "id": "armor_inventory-104",
+          "id": "armor_inventory-105",
           "label": "Topaz Earrings",
           "baseId": "Armor_027_Head",
           "ids": [
@@ -18657,7 +18664,7 @@
           ]
         },
         {
-          "id": "armor_inventory-105",
+          "id": "armor_inventory-106",
           "label": "Trousers of Awakening",
           "baseId": "Armor_1096_Lower",
           "ids": [
@@ -18669,7 +18676,7 @@
           ]
         },
         {
-          "id": "armor_inventory-106",
+          "id": "armor_inventory-107",
           "label": "Trousers of the Hero",
           "baseId": "Armor_230_Lower",
           "ids": [
@@ -18681,7 +18688,7 @@
           ]
         },
         {
-          "id": "armor_inventory-107",
+          "id": "armor_inventory-108",
           "label": "Trousers of the Sky",
           "baseId": "Armor_215_Lower",
           "ids": [
@@ -18693,7 +18700,7 @@
           ]
         },
         {
-          "id": "armor_inventory-108",
+          "id": "armor_inventory-109",
           "label": "Trousers of the Wild",
           "baseId": "Armor_005_Lower",
           "ids": [
@@ -18705,7 +18712,7 @@
           ]
         },
         {
-          "id": "armor_inventory-109",
+          "id": "armor_inventory-110",
           "label": "Trousers of the Wind",
           "baseId": "Armor_205_Lower",
           "ids": [
@@ -18717,7 +18724,7 @@
           ]
         },
         {
-          "id": "armor_inventory-110",
+          "id": "armor_inventory-111",
           "label": "Trousers of Time",
           "baseId": "Armor_200_Lower",
           "ids": [
@@ -18729,7 +18736,7 @@
           ]
         },
         {
-          "id": "armor_inventory-111",
+          "id": "armor_inventory-112",
           "label": "Trousers of Twilight",
           "baseId": "Armor_210_Lower",
           "ids": [
@@ -18741,7 +18748,7 @@
           ]
         },
         {
-          "id": "armor_inventory-112",
+          "id": "armor_inventory-113",
           "label": "Tunic of Awakening",
           "baseId": "Armor_1096_Upper",
           "ids": [
@@ -18753,7 +18760,7 @@
           ]
         },
         {
-          "id": "armor_inventory-113",
+          "id": "armor_inventory-114",
           "label": "Tunic of Memories",
           "baseId": "Armor_116_Upper",
           "ids": [
@@ -18765,7 +18772,7 @@
           ]
         },
         {
-          "id": "armor_inventory-114",
+          "id": "armor_inventory-115",
           "label": "Tunic of the Depths",
           "baseId": "Armor_1141_Upper",
           "ids": [
@@ -18777,7 +18784,7 @@
           ]
         },
         {
-          "id": "armor_inventory-115",
+          "id": "armor_inventory-116",
           "label": "Tunic of the Hero",
           "baseId": "Armor_230_Upper",
           "ids": [
@@ -18789,7 +18796,7 @@
           ]
         },
         {
-          "id": "armor_inventory-116",
+          "id": "armor_inventory-117",
           "label": "Tunic of the Sky",
           "baseId": "Armor_215_Upper",
           "ids": [
@@ -18801,7 +18808,7 @@
           ]
         },
         {
-          "id": "armor_inventory-117",
+          "id": "armor_inventory-118",
           "label": "Tunic of the Wild",
           "baseId": "Armor_005_Upper",
           "ids": [
@@ -18813,7 +18820,7 @@
           ]
         },
         {
-          "id": "armor_inventory-118",
+          "id": "armor_inventory-119",
           "label": "Tunic of the Wind",
           "baseId": "Armor_205_Upper",
           "ids": [
@@ -18825,7 +18832,7 @@
           ]
         },
         {
-          "id": "armor_inventory-119",
+          "id": "armor_inventory-120",
           "label": "Tunic of Time",
           "baseId": "Armor_200_Upper",
           "ids": [
@@ -18837,7 +18844,7 @@
           ]
         },
         {
-          "id": "armor_inventory-120",
+          "id": "armor_inventory-121",
           "label": "Tunic of Twilight",
           "baseId": "Armor_210_Upper",
           "ids": [
@@ -18849,7 +18856,7 @@
           ]
         },
         {
-          "id": "armor_inventory-121",
+          "id": "armor_inventory-122",
           "label": "Vah Medoh Divine Helm",
           "baseId": "Armor_182_Head",
           "ids": [
@@ -18861,7 +18868,7 @@
           ]
         },
         {
-          "id": "armor_inventory-122",
+          "id": "armor_inventory-123",
           "label": "Vah Naboris Divine Helm",
           "baseId": "Armor_184_Head",
           "ids": [
@@ -18873,7 +18880,7 @@
           ]
         },
         {
-          "id": "armor_inventory-123",
+          "id": "armor_inventory-124",
           "label": "Vah Rudania Divine Helm",
           "baseId": "Armor_183_Head",
           "ids": [
@@ -18885,7 +18892,7 @@
           ]
         },
         {
-          "id": "armor_inventory-124",
+          "id": "armor_inventory-125",
           "label": "Vah Ruta Divine Helm",
           "baseId": "Armor_181_Head",
           "ids": [
@@ -18897,7 +18904,7 @@
           ]
         },
         {
-          "id": "armor_inventory-125",
+          "id": "armor_inventory-126",
           "label": "Well-Worn Hair Band",
           "baseId": "Armor_1151_Head",
           "ids": [
@@ -18905,7 +18912,7 @@
           ]
         },
         {
-          "id": "armor_inventory-126",
+          "id": "armor_inventory-127",
           "label": "Yiga Armor",
           "baseId": "Armor_1300_Upper",
           "ids": [
@@ -18917,7 +18924,7 @@
           ]
         },
         {
-          "id": "armor_inventory-127",
+          "id": "armor_inventory-128",
           "label": "Yiga Mask",
           "baseId": "Armor_1300_Head",
           "ids": [
@@ -18929,7 +18936,7 @@
           ]
         },
         {
-          "id": "armor_inventory-128",
+          "id": "armor_inventory-129",
           "label": "Yiga Tights",
           "baseId": "Armor_1300_Lower",
           "ids": [
@@ -18941,7 +18948,7 @@
           ]
         },
         {
-          "id": "armor_inventory-129",
+          "id": "armor_inventory-130",
           "label": "Zant's Helmet",
           "baseId": "Armor_178_Head",
           "ids": [
@@ -18949,7 +18956,7 @@
           ]
         },
         {
-          "id": "armor_inventory-130",
+          "id": "armor_inventory-131",
           "label": "Zonaite Helm",
           "baseId": "Armor_1091_Head",
           "ids": [
@@ -18961,7 +18968,7 @@
           ]
         },
         {
-          "id": "armor_inventory-131",
+          "id": "armor_inventory-132",
           "label": "Zonaite Shin Guards",
           "baseId": "Armor_1091_Lower",
           "ids": [
@@ -18973,7 +18980,7 @@
           ]
         },
         {
-          "id": "armor_inventory-132",
+          "id": "armor_inventory-133",
           "label": "Zonaite Waistguard",
           "baseId": "Armor_1091_Upper",
           "ids": [
@@ -18985,7 +18992,7 @@
           ]
         },
         {
-          "id": "armor_inventory-133",
+          "id": "armor_inventory-134",
           "label": "Zora Armor",
           "baseId": "Armor_006_Upper",
           "ids": [
@@ -18997,7 +19004,7 @@
           ]
         },
         {
-          "id": "armor_inventory-134",
+          "id": "armor_inventory-135",
           "label": "Zora Greaves",
           "baseId": "Armor_006_Lower",
           "ids": [
@@ -19009,7 +19016,7 @@
           ]
         },
         {
-          "id": "armor_inventory-135",
+          "id": "armor_inventory-136",
           "label": "Zora Helm",
           "baseId": "Armor_006_Head",
           "ids": [
@@ -19022,7 +19029,7 @@
         }
       ],
       "sourceCounts": {
-        "ids": 135,
+        "ids": 136,
         "arrayHash": 1
       },
       "arrayHash": "754e8549"
@@ -19418,12 +19425,20 @@
           "baseId": "Armor_001_Head",
           "upgradedId": "Armor_015_Head",
           "upgradedIds": [
-            "Armor_015_Head",
-            "Armor_1156_Head"
+            "Armor_015_Head"
           ]
         },
         {
           "id": "armor_upgraded-044",
+          "label": "Hylian Hood (lowered)",
+          "baseId": "Armor_1152_Head",
+          "upgradedId": "Armor_1156_Head",
+          "upgradedIds": [
+            "Armor_1156_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-045",
           "label": "Hylian Trousers",
           "baseId": "Armor_001_Lower",
           "upgradedId": "Armor_015_Lower",
@@ -19432,7 +19447,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-045",
+          "id": "armor_upgraded-046",
           "label": "Hylian Tunic",
           "baseId": "Armor_001_Upper",
           "upgradedId": "Armor_015_Upper",
@@ -19441,7 +19456,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-046",
+          "id": "armor_upgraded-047",
           "label": "Mask of Awakening",
           "baseId": "Armor_1096_Head",
           "upgradedId": "Armor_1100_Head",
@@ -19450,7 +19465,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-047",
+          "id": "armor_upgraded-048",
           "label": "Miner's Mask",
           "baseId": "Armor_1051_Head",
           "upgradedId": "Armor_1055_Head",
@@ -19459,7 +19474,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-048",
+          "id": "armor_upgraded-049",
           "label": "Miner's Top",
           "baseId": "Armor_1051_Upper",
           "upgradedId": "Armor_1055_Upper",
@@ -19468,7 +19483,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-049",
+          "id": "armor_upgraded-050",
           "label": "Miner's Trousers",
           "baseId": "Armor_1051_Lower",
           "upgradedId": "Armor_1055_Lower",
@@ -19477,7 +19492,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-050",
+          "id": "armor_upgraded-051",
           "label": "Opal Earrings",
           "baseId": "Armor_028_Head",
           "upgradedId": "Armor_136_Head",
@@ -19486,7 +19501,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-051",
+          "id": "armor_upgraded-052",
           "label": "Radiant Mask",
           "baseId": "Armor_017_Head",
           "upgradedId": "Armor_090_Head",
@@ -19495,7 +19510,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-052",
+          "id": "armor_upgraded-053",
           "label": "Radiant Shirt",
           "baseId": "Armor_017_Upper",
           "upgradedId": "Armor_090_Upper",
@@ -19504,7 +19519,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-053",
+          "id": "armor_upgraded-054",
           "label": "Radiant Tights",
           "baseId": "Armor_017_Lower",
           "upgradedId": "Armor_090_Lower",
@@ -19513,7 +19528,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-054",
+          "id": "armor_upgraded-055",
           "label": "Royal Guard Boots",
           "baseId": "Armor_179_Lower",
           "upgradedId": "Armor_1149_Lower",
@@ -19522,7 +19537,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-055",
+          "id": "armor_upgraded-056",
           "label": "Royal Guard Cap",
           "baseId": "Armor_179_Head",
           "upgradedId": "Armor_1149_Head",
@@ -19531,7 +19546,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-056",
+          "id": "armor_upgraded-057",
           "label": "Royal Guard Uniform",
           "baseId": "Armor_179_Upper",
           "upgradedId": "Armor_1149_Upper",
@@ -19540,7 +19555,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-057",
+          "id": "armor_upgraded-058",
           "label": "Rubber Armor",
           "baseId": "Armor_046_Upper",
           "upgradedId": "Armor_106_Upper",
@@ -19549,7 +19564,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-058",
+          "id": "armor_upgraded-059",
           "label": "Rubber Helm",
           "baseId": "Armor_046_Head",
           "upgradedId": "Armor_106_Head",
@@ -19558,7 +19573,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-059",
+          "id": "armor_upgraded-060",
           "label": "Rubber Tights",
           "baseId": "Armor_046_Lower",
           "upgradedId": "Armor_106_Lower",
@@ -19567,7 +19582,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-060",
+          "id": "armor_upgraded-061",
           "label": "Ruby Circlet",
           "baseId": "Armor_025_Head",
           "upgradedId": "Armor_124_Head",
@@ -19576,7 +19591,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-061",
+          "id": "armor_upgraded-062",
           "label": "Sand Boots",
           "baseId": "Armor_049_Lower",
           "upgradedId": "Armor_155_Lower",
@@ -19585,7 +19600,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-062",
+          "id": "armor_upgraded-063",
           "label": "Sapphire Circlet",
           "baseId": "Armor_026_Head",
           "upgradedId": "Armor_128_Head",
@@ -19594,7 +19609,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-063",
+          "id": "armor_upgraded-064",
           "label": "Sheik's Mask",
           "baseId": "Armor_220_Head",
           "upgradedId": "Armor_224_Head",
@@ -19603,7 +19618,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-064",
+          "id": "armor_upgraded-065",
           "label": "Snow Boots",
           "baseId": "Armor_141_Lower",
           "upgradedId": "Armor_159_Lower",
@@ -19612,7 +19627,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-065",
+          "id": "armor_upgraded-066",
           "label": "Snowquill Headdress",
           "baseId": "Armor_009_Head",
           "upgradedId": "Armor_073_Head",
@@ -19621,7 +19636,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-066",
+          "id": "armor_upgraded-067",
           "label": "Snowquill Trousers",
           "baseId": "Armor_009_Lower",
           "upgradedId": "Armor_073_Lower",
@@ -19630,7 +19645,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-067",
+          "id": "armor_upgraded-068",
           "label": "Snowquill Tunic",
           "baseId": "Armor_009_Upper",
           "upgradedId": "Armor_073_Upper",
@@ -19639,7 +19654,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-068",
+          "id": "armor_upgraded-069",
           "label": "Soldier's Armor",
           "baseId": "Armor_020_Upper",
           "upgradedId": "Armor_098_Upper",
@@ -19648,7 +19663,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-069",
+          "id": "armor_upgraded-070",
           "label": "Soldier's Greaves",
           "baseId": "Armor_020_Lower",
           "upgradedId": "Armor_098_Lower",
@@ -19657,7 +19672,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-070",
+          "id": "armor_upgraded-071",
           "label": "Soldier's Helm",
           "baseId": "Armor_020_Head",
           "upgradedId": "Armor_098_Head",
@@ -19666,7 +19681,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-071",
+          "id": "armor_upgraded-072",
           "label": "Stealth Chest Guard",
           "baseId": "Armor_012_Upper",
           "upgradedId": "Armor_079_Upper",
@@ -19675,7 +19690,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-072",
+          "id": "armor_upgraded-073",
           "label": "Stealth Mask",
           "baseId": "Armor_012_Head",
           "upgradedId": "Armor_079_Head",
@@ -19684,7 +19699,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-073",
+          "id": "armor_upgraded-074",
           "label": "Stealth Tights",
           "baseId": "Armor_012_Lower",
           "upgradedId": "Armor_079_Lower",
@@ -19693,7 +19708,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-074",
+          "id": "armor_upgraded-075",
           "label": "Topaz Earrings",
           "baseId": "Armor_027_Head",
           "upgradedId": "Armor_132_Head",
@@ -19702,7 +19717,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-075",
+          "id": "armor_upgraded-076",
           "label": "Trousers of Awakening",
           "baseId": "Armor_1096_Lower",
           "upgradedId": "Armor_1100_Lower",
@@ -19711,7 +19726,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-076",
+          "id": "armor_upgraded-077",
           "label": "Trousers of the Hero",
           "baseId": "Armor_230_Lower",
           "upgradedId": "Armor_234_Lower",
@@ -19720,7 +19735,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-077",
+          "id": "armor_upgraded-078",
           "label": "Trousers of the Sky",
           "baseId": "Armor_215_Lower",
           "upgradedId": "Armor_219_Lower",
@@ -19729,7 +19744,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-078",
+          "id": "armor_upgraded-079",
           "label": "Trousers of the Wild",
           "baseId": "Armor_005_Lower",
           "upgradedId": "Armor_061_Lower",
@@ -19738,7 +19753,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-079",
+          "id": "armor_upgraded-080",
           "label": "Trousers of the Wind",
           "baseId": "Armor_205_Lower",
           "upgradedId": "Armor_209_Lower",
@@ -19747,7 +19762,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-080",
+          "id": "armor_upgraded-081",
           "label": "Trousers of Time",
           "baseId": "Armor_200_Lower",
           "upgradedId": "Armor_204_Lower",
@@ -19756,7 +19771,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-081",
+          "id": "armor_upgraded-082",
           "label": "Trousers of Twilight",
           "baseId": "Armor_210_Lower",
           "upgradedId": "Armor_214_Lower",
@@ -19765,7 +19780,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-082",
+          "id": "armor_upgraded-083",
           "label": "Tunic of Awakening",
           "baseId": "Armor_1096_Upper",
           "upgradedId": "Armor_1100_Upper",
@@ -19774,7 +19789,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-083",
+          "id": "armor_upgraded-084",
           "label": "Tunic of Memories",
           "baseId": "Armor_116_Upper",
           "upgradedId": "Armor_151_Upper",
@@ -19783,7 +19798,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-084",
+          "id": "armor_upgraded-085",
           "label": "Tunic of the Depths",
           "baseId": "Armor_1141_Upper",
           "upgradedId": "Armor_1145_Upper",
@@ -19792,7 +19807,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-085",
+          "id": "armor_upgraded-086",
           "label": "Tunic of the Hero",
           "baseId": "Armor_230_Upper",
           "upgradedId": "Armor_234_Upper",
@@ -19801,7 +19816,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-086",
+          "id": "armor_upgraded-087",
           "label": "Tunic of the Sky",
           "baseId": "Armor_215_Upper",
           "upgradedId": "Armor_219_Upper",
@@ -19810,7 +19825,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-087",
+          "id": "armor_upgraded-088",
           "label": "Tunic of the Wild",
           "baseId": "Armor_005_Upper",
           "upgradedId": "Armor_061_Upper",
@@ -19819,7 +19834,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-088",
+          "id": "armor_upgraded-089",
           "label": "Tunic of the Wind",
           "baseId": "Armor_205_Upper",
           "upgradedId": "Armor_209_Upper",
@@ -19828,7 +19843,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-089",
+          "id": "armor_upgraded-090",
           "label": "Tunic of Time",
           "baseId": "Armor_200_Upper",
           "upgradedId": "Armor_204_Upper",
@@ -19837,7 +19852,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-090",
+          "id": "armor_upgraded-091",
           "label": "Tunic of Twilight",
           "baseId": "Armor_210_Upper",
           "upgradedId": "Armor_214_Upper",
@@ -19846,7 +19861,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-091",
+          "id": "armor_upgraded-092",
           "label": "Vah Medoh Divine Helm",
           "baseId": "Armor_182_Head",
           "upgradedId": "Armor_193_Head",
@@ -19855,7 +19870,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-092",
+          "id": "armor_upgraded-093",
           "label": "Vah Naboris Divine Helm",
           "baseId": "Armor_184_Head",
           "upgradedId": "Armor_169_Head",
@@ -19864,7 +19879,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-093",
+          "id": "armor_upgraded-094",
           "label": "Vah Rudania Divine Helm",
           "baseId": "Armor_183_Head",
           "upgradedId": "Armor_197_Head",
@@ -19873,7 +19888,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-094",
+          "id": "armor_upgraded-095",
           "label": "Vah Ruta Divine Helm",
           "baseId": "Armor_181_Head",
           "upgradedId": "Armor_189_Head",
@@ -19882,7 +19897,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-095",
+          "id": "armor_upgraded-096",
           "label": "Yiga Armor",
           "baseId": "Armor_1300_Upper",
           "upgradedId": "Armor_1304_Upper",
@@ -19891,7 +19906,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-096",
+          "id": "armor_upgraded-097",
           "label": "Yiga Mask",
           "baseId": "Armor_1300_Head",
           "upgradedId": "Armor_1304_Head",
@@ -19900,7 +19915,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-097",
+          "id": "armor_upgraded-098",
           "label": "Yiga Tights",
           "baseId": "Armor_1300_Lower",
           "upgradedId": "Armor_1304_Lower",
@@ -19909,7 +19924,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-098",
+          "id": "armor_upgraded-099",
           "label": "Zonaite Helm",
           "baseId": "Armor_1091_Head",
           "upgradedId": "Armor_1095_Head",
@@ -19918,7 +19933,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-099",
+          "id": "armor_upgraded-100",
           "label": "Zonaite Shin Guards",
           "baseId": "Armor_1091_Lower",
           "upgradedId": "Armor_1095_Lower",
@@ -19927,7 +19942,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-100",
+          "id": "armor_upgraded-101",
           "label": "Zonaite Waistguard",
           "baseId": "Armor_1091_Upper",
           "upgradedId": "Armor_1095_Upper",
@@ -19936,7 +19951,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-101",
+          "id": "armor_upgraded-102",
           "label": "Zora Armor",
           "baseId": "Armor_006_Upper",
           "upgradedId": "Armor_064_Upper",
@@ -19945,7 +19960,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-102",
+          "id": "armor_upgraded-103",
           "label": "Zora Greaves",
           "baseId": "Armor_006_Lower",
           "upgradedId": "Armor_064_Lower",
@@ -19954,7 +19969,7 @@
           ]
         },
         {
-          "id": "armor_upgraded-103",
+          "id": "armor_upgraded-104",
           "label": "Zora Helm",
           "baseId": "Armor_006_Head",
           "upgradedId": "Armor_064_Head",
@@ -19964,7 +19979,7 @@
         }
       ],
       "sourceCounts": {
-        "ids": 103,
+        "ids": 104,
         "arrayHash": 1
       },
       "arrayHash": "754e8549"
