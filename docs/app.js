@@ -526,6 +526,49 @@ function parseLeadingFlagFromNote(note) {
   return match ? match[1] : null;
 }
 
+function formatHexId(value, { pad64 = false } = {}) {
+  const raw = String(value || "").trim();
+  if (!raw) {
+    return null;
+  }
+  const hexMatch = /^0x([0-9a-fA-F]+)$/.exec(raw);
+  if (hexMatch) {
+    const hex = hexMatch[1].toLowerCase();
+    return `0x${pad64 ? hex.padStart(16, "0") : hex}`;
+  }
+  if (/^[0-9a-fA-F]{8}$/.test(raw)) {
+    return `0x${raw.toLowerCase()}`;
+  }
+  if (/^\d{12,}$/.test(raw)) {
+    try {
+      return `0x${BigInt(raw).toString(16).padStart(16, "0")}`;
+    } catch {
+      return null;
+    }
+  }
+  return null;
+}
+
+function markerHexId(marker) {
+  const objmapId = formatHexId(marker.objmapId, { pad64: true });
+  if (objmapId && /^0x[0-9a-f]{16}$/.test(objmapId)) {
+    return objmapId;
+  }
+  const noteHex = parseLeadingHex64FromNote(marker.note);
+  if (noteHex) {
+    return noteHex.toLowerCase();
+  }
+  const noteUInt64 = parseLeadingUInt64FromNote(marker.note);
+  if (noteUInt64 != null) {
+    return `0x${noteUInt64.toString(16).padStart(16, "0")}`;
+  }
+  return (
+    formatHexId(marker.rawValue, { pad64: true })
+    || formatHexId(marker.hash, { pad64: true })
+    || formatHexId(marker.value, { pad64: true })
+  );
+}
+
 function markerObjmapQuery(marker) {
   const objmapQuery = (marker.objmapQuery || "").trim();
   if (objmapQuery) {
@@ -653,6 +696,7 @@ function korokTooltip(marker) {
     { label: "World", value: `X ${formatNumber(marker.x)}, Y ${formatNumber(marker.y)}, Z ${formatNumber(marker.z)}` },
     { label: "Map", value: `${formatNumber(marker.mapX)}, ${formatNumber(marker.mapY)}` },
     { label: "Save value", value: marker.rawValue },
+    { label: "Hex", value: markerHexId(marker) },
   ]);
   const links = [];
   if (zdUrl) {
@@ -676,6 +720,7 @@ function completionTooltip(marker) {
     { label: "Layer", value: formatLayer(marker.layer) },
     { label: "World", value: `X ${formatNumber(marker.x)}, Y ${formatNumber(marker.y)}, Z ${formatNumber(marker.z)}` },
     { label: "Map", value: `${formatNumber(marker.mapX)}, ${formatNumber(marker.mapY)}` },
+    { label: "Hex", value: markerHexId(marker) },
     { label: "Source", value: displayNote },
   ]);
   const objmapUrl = buildObjmapTotkUrl(marker);
