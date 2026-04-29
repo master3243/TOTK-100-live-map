@@ -25,6 +25,9 @@ const statTooltip = document.querySelector("#statTooltip");
 const loadingState = document.querySelector("#loadingState");
 const zoomValue = document.querySelector("#zoomValue");
 const cursorValue = document.querySelector("#cursorValue");
+const liveSaveList = document.querySelector("#liveSaveList");
+const liveSaveCompletedToggleRow = document.querySelector("#liveSaveCompletedToggleRow");
+const liveSaveCompletedToggle = document.querySelector("#liveSaveCompletedToggle");
 const saveStatus = document.querySelector("#saveStatus");
 const seedCount = document.querySelector("#seedCount");
 const locationCount = document.querySelector("#locationCount");
@@ -145,6 +148,16 @@ const wheelZoomFactor = 1.1;
 const buttonZoomFactor = 1.25;
 /** Max zoom when auto-framing the player guide arrow (200%). */
 const playerGuideMaxScale = 2;
+const LIVE_SAVE_ROW_ORDER = [
+  "completionist",
+  "seeds",
+  "koroks",
+  "armor",
+  "armor-upgraded",
+  "compendium",
+  "pristine-weapons",
+  "fabrics",
+];
 
 let activeLayer = "surface";
 let scale = 1;
@@ -169,6 +182,7 @@ let lastPlayerPanKey = null;
 let lastPlayerGuideFrameKey = "";
 let korokCountSummary = null;
 let hasLoadedAnySave = false;
+let liveSaveCompletedExpanded = false;
 
 function clamp(value, min, max) {
   return Math.min(Math.max(value, min), max);
@@ -795,6 +809,48 @@ function sortStatMissingByLabel(items) {
   return [...(items || [])].sort((a, b) =>
     String(a.label || a.id || "").localeCompare(String(b.label || b.id || ""), undefined, { sensitivity: "base" }),
   );
+}
+
+function isCompletedRatioText(text) {
+  const match = /^\s*([\d,]+)\s*\/\s*([\d,]+)\s*$/.exec(String(text || ""));
+  if (!match) {
+    return false;
+  }
+  const current = Number.parseInt(match[1].replaceAll(",", ""), 10);
+  const total = Number.parseInt(match[2].replaceAll(",", ""), 10);
+  return Number.isFinite(current) && Number.isFinite(total) && total > 0 && current === total;
+}
+
+function updateLiveSaveRows() {
+  if (!liveSaveList || !liveSaveCompletedToggle || !liveSaveCompletedToggleRow) {
+    return;
+  }
+
+  const rows = Array.from(liveSaveList.querySelectorAll(":scope > div"));
+  const statusRow = rows.find((row) => row.dataset.liveRow === "status");
+  const metricRows = rows
+    .filter((row) => row.dataset.liveRow !== "status")
+    .sort((a, b) => LIVE_SAVE_ROW_ORDER.indexOf(a.dataset.liveRow) - LIVE_SAVE_ROW_ORDER.indexOf(b.dataset.liveRow));
+  const incompleteRows = [];
+  const completedRows = [];
+
+  for (const row of metricRows) {
+    const complete = isCompletedRatioText(row.querySelector("dd")?.textContent);
+    row.classList.toggle("live-save-row-complete", complete);
+    row.classList.toggle("live-save-row-collapsed", complete && !liveSaveCompletedExpanded);
+    if (complete) {
+      completedRows.push(row);
+    } else {
+      incompleteRows.push(row);
+    }
+  }
+
+  liveSaveList.replaceChildren(...[statusRow, ...incompleteRows, liveSaveCompletedToggleRow, ...completedRows].filter(Boolean));
+  liveSaveCompletedToggleRow.hidden = completedRows.length === 0;
+  liveSaveCompletedToggle.setAttribute("aria-expanded", liveSaveCompletedExpanded ? "true" : "false");
+  liveSaveCompletedToggle.textContent = liveSaveCompletedExpanded
+    ? `Hide completed (${completedRows.length})`
+    : `Show completed (${completedRows.length})`;
 }
 
 function statListTooltip(stat, title, completeText, { formatItem = null } = {}) {
@@ -1768,6 +1824,7 @@ function updateSaveSummary(payload) {
     : "No fabric data loaded";
   fabricsSummary.removeAttribute("title");
   fabricsSummary.setAttribute("aria-label", fabricsHoverText);
+  updateLiveSaveRows();
 }
 
 function updatePlayerAutoPan(payload) {
@@ -1848,6 +1905,7 @@ async function refreshKoroks() {
     compendiumSummary.setAttribute("aria-label", "No compendium data loaded");
     pristineWeaponsSummary.setAttribute("aria-label", "No pristine weapon data loaded");
     fabricsSummary.setAttribute("aria-label", "No fabric data loaded");
+    updateLiveSaveRows();
     console.error(error);
   }
 }
@@ -2579,6 +2637,13 @@ attachStatTooltip(compendiumSummary, () => compendiumTooltip(currentCompendiumSt
 attachStatTooltip(armorInventorySummary, () => armorInventoryTooltip(currentArmorInventoryStat));
 attachStatTooltip(armorUpgradedSummary, () => armorUpgradedTooltip(currentArmorUpgradedStat));
 attachStatTooltip(completionistSummary, completionistTooltip, { onClick: pulseMarkersMenu });
+
+if (liveSaveCompletedToggle) {
+  liveSaveCompletedToggle.addEventListener("click", () => {
+    liveSaveCompletedExpanded = !liveSaveCompletedExpanded;
+    updateLiveSaveRows();
+  });
+}
 
 window.addEventListener("resize", preserveMapCenterOnViewportResize);
 window.addEventListener("resize", updateNarrowLayoutClass);

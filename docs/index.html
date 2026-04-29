@@ -22,7 +22,7 @@
         <div class="brand">
           <p class="eyebrow">Tears of the Kingdom</p>
           <h1>Save Map Helper</h1>
-          <h2>v1.1.13</h2>
+          <h2>v1.1.14</h2>
           <div class="save-upload">
             <input id="manualSaveInput" type="file" accept=".sav,application/octet-stream">
             <label class="upload-button" for="manualSaveInput">Upload save</label>
@@ -47,44 +47,47 @@
 
         <section class="panel stats live-save-panel" aria-label="Save status">
           <h2>Live Save</h2>
-          <dl>
-            <div>
+          <dl id="liveSaveList">
+            <div data-live-row="status">
               <dt>Status</dt>
               <dd id="saveStatus">Waiting</dd>
             </div>
-            <div>
-              <dt>Seeds</dt>
-              <dd id="seedCount">-- / --</dd>
-            </div>
-            <div>
-              <dt>Koroks</dt>
-              <dd id="locationCount">-- / --</dd>
-            </div>
-            <div>
+            <div data-live-row="completionist">
               <dt>Completionist</dt>
               <dd id="completionistSummary" class="hover-stat" tabindex="0">-- / --</dd>
             </div>
-            <div>
+            <div data-live-row="seeds">
+              <dt>Seeds</dt>
+              <dd id="seedCount">-- / --</dd>
+            </div>
+            <div data-live-row="koroks">
+              <dt>Koroks</dt>
+              <dd id="locationCount">-- / --</dd>
+            </div>
+            <div data-live-row="armor">
               <dt>Armor</dt>
               <dd id="armorInventorySummary" class="hover-stat" tabindex="0">-- / --</dd>
             </div>
-            <div>
-              <dt>Armor (4-star upgraded)</dt>
+            <div data-live-row="armor-upgraded">
+              <dt>Armor (★★★★)</dt>
               <dd id="armorUpgradedSummary" class="hover-stat" tabindex="0">-- / --</dd>
             </div>
-            <div>
+            <div data-live-row="compendium">
               <dt>Compendium</dt>
               <dd id="compendiumSummary" class="hover-stat" tabindex="0">-- / --</dd>
             </div>
-            <div>
+            <div data-live-row="pristine-weapons">
               <dt>Pristine Weapons</dt>
               <dd id="pristineWeaponsSummary" class="hover-stat" tabindex="0">-- / --</dd>
             </div>
-            <div>
+            <div data-live-row="fabrics">
               <dt>Fabrics</dt>
               <dd id="fabricsSummary" class="hover-stat" tabindex="0">-- / --</dd>
             </div>
           </dl>
+          <div id="liveSaveCompletedToggleRow" class="live-save-completed-toggle-row" hidden>
+            <button id="liveSaveCompletedToggle" class="live-save-completed-toggle" type="button" aria-expanded="false">Show completed</button>
+          </div>
         </section>
 
         <section class="panel overlay-panel" aria-label="Overlay options">

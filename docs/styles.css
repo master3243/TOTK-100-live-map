@@ -814,6 +814,7 @@ body.save-drop-active {
 }
 
 .stats div {
+  position: relative;
   display: flex;
   justify-content: space-between;
   gap: 12px;
@@ -842,6 +843,79 @@ body.save-drop-active {
 
 .stats dd.hover-stat.tooltip-pinned-owner::after {
   content: none;
+}
+
+.live-save-panel dl {
+  gap: 8px;
+}
+
+.live-save-panel [data-live-row] {
+  min-height: 20px;
+}
+
+.live-save-completed-toggle-row {
+  display: block !important;
+}
+
+.live-save-completed-toggle-row[hidden] {
+  display: none !important;
+}
+
+.live-save-panel .live-save-row-complete {
+  padding-left: 10px;
+  opacity: 0.9;
+}
+
+.live-save-panel .live-save-row-collapsed {
+  display: none !important;
+}
+
+.live-save-panel .live-save-row-complete::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  bottom: 3px;
+  width: 4px;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 30% 25%, rgba(255, 242, 172, 0.95) 0 1px, transparent 1.4px),
+    radial-gradient(circle at 62% 58%, rgba(122, 236, 196, 0.8) 0 1px, transparent 1.5px),
+    linear-gradient(180deg, rgba(251, 204, 74, 0.95), rgba(108, 235, 190, 0.68));
+  box-shadow: 0 0 8px rgba(251, 204, 74, 0.28);
+}
+
+.live-save-panel .live-save-row-complete dt,
+.live-save-panel .live-save-row-complete dd {
+  color: rgba(209, 236, 209, 0.82);
+}
+
+.live-save-completed-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 2px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--accent-2);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.live-save-completed-toggle::before {
+  content: "▸";
+  font-size: 10px;
+  transform: translateY(-0.5px);
+}
+
+.live-save-completed-toggle[aria-expanded="true"]::before {
+  content: "▾";
+}
+
+.live-save-completed-toggle:hover {
+  color: var(--accent);
 }
 
 .quiet {
