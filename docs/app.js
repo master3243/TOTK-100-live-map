@@ -563,8 +563,7 @@ function markerHexId(marker) {
     return `0x${noteUInt64.toString(16).padStart(16, "0")}`;
   }
   return (
-    formatHexId(marker.rawValue, { pad64: true })
-    || formatHexId(marker.hash, { pad64: true })
+    formatHexId(marker.hash, { pad64: true })
     || formatHexId(marker.value, { pad64: true })
   );
 }
