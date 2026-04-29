@@ -98,6 +98,31 @@ h2 {
   line-height: 1.2;
 }
 
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 8px;
+  color: var(--accent-2);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  color: var(--accent);
+}
+
+.project-link-icon {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .panel {
   padding: 16px;
   border: 1px solid var(--line);
