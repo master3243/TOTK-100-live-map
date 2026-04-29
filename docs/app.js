@@ -31,6 +31,7 @@ const liveSaveCompletedToggle = document.querySelector("#liveSaveCompletedToggle
 const saveStatus = document.querySelector("#saveStatus");
 const seedCount = document.querySelector("#seedCount");
 const locationCount = document.querySelector("#locationCount");
+const recipesSummary = document.querySelector("#recipesSummary");
 const lifeSummary = document.querySelector("#lifeSummary");
 const staminaSummary = document.querySelector("#staminaSummary");
 const batterySummary = document.querySelector("#batterySummary");
@@ -63,6 +64,7 @@ let currentCompendiumStat = null;
 let currentArmorInventoryStat = null;
 let currentArmorUpgradedStat = null;
 let currentPlayerStats = null;
+let currentRecipes = null;
 const overlayInputs = {
   playerLocation: document.querySelector("#showPlayerLocation"),
   playerGuide: document.querySelector("#showPlayerGuide"),
@@ -164,11 +166,13 @@ const LIVE_SAVE_ROW_ORDER = [
   "compendium",
   "pristine-weapons",
   "fabrics",
+  "recipes",
 ];
 
 const PLAYER_MAX_LIFE_HEARTS = 38;
 const PLAYER_MAX_STAMINA_WHEELS = 3;
 const PLAYER_MAX_BATTERY_CELLS = 48;
+const PLAYER_MAX_RECIPES = 228;
 
 let activeLayer = "surface";
 let scale = 1;
@@ -804,6 +808,34 @@ function playerBatteryTooltip(stats) {
   ]);
 }
 
+function recipesTooltip(recipes) {
+  if (!recipes) {
+    return tooltipRows("Recipes", [{ label: "Status", value: "No save data loaded" }]);
+  }
+  const obtained = recipes.obtained ?? "--";
+  const total = recipes.total ?? PLAYER_MAX_RECIPES;
+  const extras = recipes.extras || [];
+
+  const collected = typeof obtained === "number" ? obtained : Number(obtained);
+  const left = Number.isFinite(collected) ? Math.max(total - collected, 0) : "--";
+
+  let html = tooltipRows("Recipes", [
+    {
+      label: "Collected",
+      value: `${obtained} / ${total}`,
+    },
+    { label: "Left", value: String(left) },
+  ]);
+
+  if (extras.length) {
+    html += `<p class="tooltip-note">⚠️ Unknown recipes found in save file</p>`;
+    const items = extras.map((id) => `<li>${escapeHtml(id)}</li>`).join("");
+    html += `<div class="tooltip-section-title">Extra cooked recipes</div><ul class="tooltip-list">${items}</ul>`;
+  }
+
+  return html;
+}
+
 function pristineWeaponsTooltip(stat) {
   return statListTooltip(stat, "Pristine Weapons", "All pristine weapons unlocked.");
 }
@@ -883,7 +915,10 @@ function updateLiveSaveRows() {
   const completedRows = [];
 
   for (const row of metricRows) {
-    const complete = isCompletedRatioText(row.querySelector("dd")?.textContent);
+    const liveRowId = row.dataset.liveRow;
+    const ddText = row.querySelector("dd")?.textContent;
+    let complete = false;
+    complete = isCompletedRatioText(ddText);
     row.classList.toggle("live-save-row-complete", complete);
     row.classList.toggle("live-save-row-collapsed", complete && !liveSaveCompletedExpanded);
     if (complete) {
@@ -1791,6 +1826,17 @@ function updateSaveSummary(payload) {
   saveStatus.textContent = modified.toLocaleTimeString();
   seedCount.textContent = `${payload.counts.totalSeeds} / ${payload.counts.availableSeeds}`;
   locationCount.textContent = `${payload.counts.totalLocations} / ${payload.counts.availableLocations}`;
+  const recipes = payload.recipes || null;
+  currentRecipes = recipes;
+  if (recipesSummary) {
+    if (!recipes) {
+      recipesSummary.textContent = "--";
+    } else {
+      const extras = recipes.extras || [];
+      const warningPrefix = extras.length ? "⚠️ " : "";
+      recipesSummary.textContent = `${warningPrefix}${recipes.obtained} / ${recipes.total}`;
+    }
+  }
   const stats = payload.playerStats || null;
   currentPlayerStats = stats;
 
@@ -2709,6 +2755,7 @@ attachStatTooltip(compendiumSummary, () => compendiumTooltip(currentCompendiumSt
 attachStatTooltip(armorInventorySummary, () => armorInventoryTooltip(currentArmorInventoryStat));
 attachStatTooltip(armorUpgradedSummary, () => armorUpgradedTooltip(currentArmorUpgradedStat));
 attachStatTooltip(completionistSummary, completionistTooltip, { onClick: pulseMarkersMenu });
+if (recipesSummary) attachStatTooltip(recipesSummary, () => recipesTooltip(currentRecipes));
 if (lifeSummary) attachStatTooltip(lifeSummary, () => playerLifeTooltip(currentPlayerStats));
 if (staminaSummary) attachStatTooltip(staminaSummary, () => playerStaminaTooltip(currentPlayerStats));
 if (batterySummary) attachStatTooltip(batterySummary, () => playerBatteryTooltip(currentPlayerStats));

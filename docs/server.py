@@ -36,6 +36,8 @@ STATE_PATH = RUNTIME_ROOT / "state.json"
 
 KOROK_DATA_PATH = ROOT / "korok_data.json"
 COMPLETION_DATA_PATH = ROOT / "completion_data.json"
+HASHES_DATA_PATH = ROOT / "references" / "zelda-totk.hashes.csv"
+RECIPE_REFERENCE_IDS_PATH = ROOT / "references" / "recipe_ids_mine_228.txt"
 HOST = "127.0.0.1"
 PORT = 8000
 
@@ -105,6 +107,7 @@ PLAYER_SAVE_POS_HASH = 0xC884818D
 PLAYER_MAX_LIFE_HASH = 0xFBE01DA1  # Int; PlayerStatus.MaxLife
 PLAYER_MAX_STAMINA_HASH = 0xF9212C74  # Float; PlayerStatus.MaxStamina
 PLAYER_MAX_ENERGY_HASH = 0xAFD01D68  # Float; PlayerStatus.MaxEnergy
+MAX_RECIPES = 228
 HYRULE_MIN_X = -6000
 HYRULE_MAX_X = 6000
 HYRULE_MIN_Z = -5000
@@ -121,6 +124,10 @@ _DATA = {
     "korok_data": None,
     "completion_data": None,
     "tracked_hashes": None,
+    "recipe_hashes": None,
+    "recipe_total": None,
+    "recipe_hash_to_id": None,
+    "recipe_reference_ids": None,
     "tracked_save_paths": None,
 }
 
@@ -229,6 +236,70 @@ def load_completion_data():
         return json.load(file)
 
 
+def load_recipe_cooked_hashes() -> set[int]:
+    """
+    Recipe "book" entries seem to be stored as per-recipe boolean flags.
+    We count how many of those flags are non-zero in the save.
+    """
+    if not HASHES_DATA_PATH.exists():
+        return set()
+
+    hashes: set[int] = set()
+    with HASHES_DATA_PATH.open("r", encoding="utf-8", errors="ignore") as file:
+        for raw_line in file:
+            line = raw_line.strip()
+            if not line:
+                continue
+            parts = line.split(";", 2)
+            if len(parts) < 3:
+                continue
+            hash_hex, _, var = parts
+            if var.startswith("RecipeCard.Content.Item_") and var.endswith(".IsCooked"):
+                try:
+                    hashes.add(int(hash_hex, 16))
+                except ValueError:
+                    continue
+    return hashes
+
+
+def load_recipe_hash_to_id() -> dict[int, str]:
+    """Map recipe cooked-flag hash -> recipe id (Item_*)."""
+    if not HASHES_DATA_PATH.exists():
+        return {}
+
+    mapping: dict[int, str] = {}
+    with HASHES_DATA_PATH.open("r", encoding="utf-8", errors="ignore") as file:
+        for raw_line in file:
+            line = raw_line.strip()
+            if not line:
+                continue
+            parts = line.split(";", 2)
+            if len(parts) != 3:
+                continue
+            hash_hex, _typ, var = parts
+            if not (var.startswith("RecipeCard.Content.Item_") and var.endswith(".IsCooked")):
+                continue
+            try:
+                h = int(hash_hex, 16)
+            except ValueError:
+                continue
+            recipe_id = var[len("RecipeCard.Content.") : -len(".IsCooked")]
+            mapping[h] = recipe_id
+    return mapping
+
+
+def load_recipe_reference_ids() -> set[str]:
+    """Load the canonical 228 recipe IDs to use for intersections."""
+    if not RECIPE_REFERENCE_IDS_PATH.exists():
+        return set()
+    ids = set()
+    for line in RECIPE_REFERENCE_IDS_PATH.read_text(encoding="utf-8", errors="ignore").splitlines():
+        item = line.strip()
+        if item:
+            ids.add(item)
+    return ids
+
+
 def initialize():
     if _DATA["initialized"]:
         return
@@ -258,9 +329,23 @@ def initialize():
         if stat.get("arrayHash")
     }
 
+    recipe_hash_to_id = load_recipe_hash_to_id()
+    recipe_hashes = set(recipe_hash_to_id.keys())
+    recipe_reference_ids = load_recipe_reference_ids()
+
     _DATA["korok_data"] = korok_data
     _DATA["completion_data"] = completion_data
-    _DATA["tracked_hashes"] = korok_hashes | completion_bool_hashes | completion_stat_hashes | completion_array_hashes
+    _DATA["recipe_hashes"] = recipe_hashes
+    _DATA["recipe_hash_to_id"] = recipe_hash_to_id
+    _DATA["recipe_reference_ids"] = recipe_reference_ids
+    _DATA["recipe_total"] = len(recipe_reference_ids) if recipe_reference_ids else min(len(recipe_hashes), MAX_RECIPES)
+    _DATA["tracked_hashes"] = (
+        korok_hashes
+        | completion_bool_hashes
+        | completion_stat_hashes
+        | completion_array_hashes
+        | recipe_hashes
+    )
     _DATA["tracked_save_paths"] = scan_tracked_saves()
     _DATA["initialized"] = True
 
@@ -695,6 +780,19 @@ def build_save_payload(data, save_path, save_modified, snapshot=None, update_lat
     guid_values = parse_guid_values(data)
     player_position = parse_player_position(data)
     player_stats = parse_player_max_stats(data)
+    recipe_hash_to_id = _DATA.get("recipe_hash_to_id") or {}
+    recipe_reference_ids = _DATA.get("recipe_reference_ids") or set()
+    recipe_total = _DATA.get("recipe_total") or len(recipe_reference_ids) or len(recipe_hash_to_id)
+
+    # Determine which cooked recipes are in (or out of) the canonical 228 set.
+    cooked_recipe_ids = {
+        recipe_hash_to_id[hash_value]
+        for hash_value in recipe_hash_to_id
+        if values.get(hash_value, 0) != 0
+    }
+    in_228 = cooked_recipe_ids & recipe_reference_ids
+    extra = sorted(cooked_recipe_ids - recipe_reference_ids)
+    recipes_obtained = len(in_228)
     markers = build_markers(values)
     completion = build_completion(values, guid_values)
     completion_stats = build_completion_stats(values, data)
@@ -713,6 +811,11 @@ def build_save_payload(data, save_path, save_modified, snapshot=None, update_lat
         "version": known_version,
         "player": player_position,
         "playerStats": player_stats,
+        "recipes": {
+            "obtained": recipes_obtained,
+            "total": recipe_total,
+            "extras": extra,
+        },
         "counts": {
             "hidden": sum(1 for marker in obtained_markers if marker["kind"] == "hidden"),
             "carry": sum(1 for marker in obtained_markers if marker["kind"] == "carry"),
