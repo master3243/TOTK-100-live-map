@@ -102,6 +102,9 @@ SAVE_VERSIONS = {
 META_SAVE_TYPE_HASH = 0xA3DB7114
 CLEAR_HASH = 0x62965740
 PLAYER_SAVE_POS_HASH = 0xC884818D
+PLAYER_MAX_LIFE_HASH = 0xFBE01DA1  # Int; PlayerStatus.MaxLife
+PLAYER_MAX_STAMINA_HASH = 0xF9212C74  # Float; PlayerStatus.MaxStamina
+PLAYER_MAX_ENERGY_HASH = 0xAFD01D68  # Float; PlayerStatus.MaxEnergy
 HYRULE_MIN_X = -6000
 HYRULE_MAX_X = 6000
 HYRULE_MIN_Z = -5000
@@ -431,6 +434,45 @@ def parse_player_position(data):
     return position
 
 
+def parse_player_max_stats(data):
+    """Parse max Life / Stamina / Battery from PlayerStatus.*."""
+
+    def read_by_hash_u32(hash_value: int):
+        pointer_offset = find_hash_value_offset(data, hash_value)
+        if pointer_offset is None:
+            return None
+        return read_u32(data, pointer_offset)
+
+    def read_by_hash_f32(hash_value: int):
+        pointer_offset = find_hash_value_offset(data, hash_value)
+        if pointer_offset is None:
+            return None
+        return read_f32(data, pointer_offset)
+
+    max_life = read_by_hash_u32(PLAYER_MAX_LIFE_HASH)
+    max_stamina = read_by_hash_f32(PLAYER_MAX_STAMINA_HASH)
+    max_energy = read_by_hash_f32(PLAYER_MAX_ENERGY_HASH)
+
+    if max_life is None or max_stamina is None or max_energy is None:
+        return None
+
+    # SavegameEditor reference scaling:
+    # - hearts are stored as quarters of life
+    # - stamina wheels and battery cells are stored as /1000 units
+    life_hearts = int(round(max_life / 4))
+    stamina_wheels = int(round(max_stamina / 1000))
+    battery_cells = int(round(max_energy / 1000))
+
+    return {
+        "maxLife": max_life,
+        "lifeHearts": life_hearts,
+        "maxStamina": max_stamina,
+        "staminaWheels": stamina_wheels,
+        "maxEnergy": max_energy,
+        "batteryCells": battery_cells,
+    }
+
+
 def parse_guid_values(data):
     pointer_offset = find_hash_value_offset(data, META_SAVE_TYPE_HASH)
     if pointer_offset is None:
@@ -652,6 +694,7 @@ def build_save_payload(data, save_path, save_modified, snapshot=None, update_lat
     values = parse_save_values(data)
     guid_values = parse_guid_values(data)
     player_position = parse_player_position(data)
+    player_stats = parse_player_max_stats(data)
     markers = build_markers(values)
     completion = build_completion(values, guid_values)
     completion_stats = build_completion_stats(values, data)
@@ -669,6 +712,7 @@ def build_save_payload(data, save_path, save_modified, snapshot=None, update_lat
         "fileSize": len(data),
         "version": known_version,
         "player": player_position,
+        "playerStats": player_stats,
         "counts": {
             "hidden": sum(1 for marker in obtained_markers if marker["kind"] == "hidden"),
             "carry": sum(1 for marker in obtained_markers if marker["kind"] == "carry"),

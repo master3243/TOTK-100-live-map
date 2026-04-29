@@ -31,6 +31,9 @@ const liveSaveCompletedToggle = document.querySelector("#liveSaveCompletedToggle
 const saveStatus = document.querySelector("#saveStatus");
 const seedCount = document.querySelector("#seedCount");
 const locationCount = document.querySelector("#locationCount");
+const lifeSummary = document.querySelector("#lifeSummary");
+const staminaSummary = document.querySelector("#staminaSummary");
+const batterySummary = document.querySelector("#batterySummary");
 const completionistSummary = document.querySelector("#completionistSummary");
 const armorInventorySummary = document.querySelector("#armorInventorySummary");
 const armorUpgradedSummary = document.querySelector("#armorUpgradedSummary");
@@ -59,6 +62,7 @@ let currentFabricsStat = null;
 let currentCompendiumStat = null;
 let currentArmorInventoryStat = null;
 let currentArmorUpgradedStat = null;
+let currentPlayerStats = null;
 const overlayInputs = {
   playerLocation: document.querySelector("#showPlayerLocation"),
   playerGuide: document.querySelector("#showPlayerGuide"),
@@ -152,12 +156,19 @@ const LIVE_SAVE_ROW_ORDER = [
   "completionist",
   "seeds",
   "koroks",
+  "life",
+  "stamina",
+  "battery",
   "armor",
   "armor-upgraded",
   "compendium",
   "pristine-weapons",
   "fabrics",
 ];
+
+const PLAYER_MAX_LIFE_HEARTS = 38;
+const PLAYER_MAX_STAMINA_WHEELS = 3;
+const PLAYER_MAX_BATTERY_CELLS = 48;
 
 let activeLayer = "surface";
 let scale = 1;
@@ -753,6 +764,43 @@ function playerTooltip(position) {
     { label: "World", value: `X ${formatNumber(position.x)}, Y ${formatNumber(position.y)}, Z ${formatNumber(position.z)}` },
     { label: "Map", value: `${formatNumber(position.mapX)}, ${formatNumber(position.mapY)}` },
     position.raw ? { label: "Raw save", value: `X ${formatNumber(position.raw.x)}, Y ${formatNumber(position.raw.y)}, Z ${formatNumber(position.raw.z)}` } : {},
+  ]);
+}
+
+function playerLifeTooltip(stats) {
+  if (!stats) {
+    return tooltipRows("Life", [{ label: "Status", value: "No save data loaded" }]);
+  }
+  return tooltipRows("Life", [
+    { label: "Max", value: `${Math.min(stats.lifeHearts, PLAYER_MAX_LIFE_HEARTS)} / ${PLAYER_MAX_LIFE_HEARTS} hearts` },
+    { label: "Raw maxLife", value: stats.maxLife },
+  ]);
+}
+
+function playerStaminaTooltip(stats) {
+  if (!stats) {
+    return tooltipRows("Stamina", [{ label: "Status", value: "No save data loaded" }]);
+  }
+  const rawUnits = stats.maxStamina / 1000;
+  const cappedUnits = Math.min(rawUnits, PLAYER_MAX_STAMINA_WHEELS);
+  // Truncate to 1 decimal without rounding up (prevents 2.99 -> 3.0).
+  const normalized = Math.abs(cappedUnits - PLAYER_MAX_STAMINA_WHEELS) < 1e-6
+    ? PLAYER_MAX_STAMINA_WHEELS
+    : Math.floor(cappedUnits * 10) / 10;
+  const formattedUnits = Number.isInteger(normalized) ? String(normalized) : normalized.toFixed(1);
+  return tooltipRows("Stamina", [
+    { label: "Max", value: `${formattedUnits} / ${PLAYER_MAX_STAMINA_WHEELS} wheels` },
+    { label: "Raw maxStamina", value: stats.maxStamina },
+  ]);
+}
+
+function playerBatteryTooltip(stats) {
+  if (!stats) {
+    return tooltipRows("Battery", [{ label: "Status", value: "No save data loaded" }]);
+  }
+  return tooltipRows("Battery", [
+    { label: "Max", value: `${Math.min(stats.batteryCells, PLAYER_MAX_BATTERY_CELLS)} / ${PLAYER_MAX_BATTERY_CELLS} cells` },
+    { label: "Raw maxEnergy", value: stats.maxEnergy },
   ]);
 }
 
@@ -1743,6 +1791,30 @@ function updateSaveSummary(payload) {
   saveStatus.textContent = modified.toLocaleTimeString();
   seedCount.textContent = `${payload.counts.totalSeeds} / ${payload.counts.availableSeeds}`;
   locationCount.textContent = `${payload.counts.totalLocations} / ${payload.counts.availableLocations}`;
+  const stats = payload.playerStats || null;
+  currentPlayerStats = stats;
+
+  if (lifeSummary) {
+    const currentLife = stats ? Math.min(stats.lifeHearts, PLAYER_MAX_LIFE_HEARTS) : null;
+    lifeSummary.textContent = currentLife == null ? "--" : `${currentLife} / ${PLAYER_MAX_LIFE_HEARTS}`;
+  }
+  if (staminaSummary) {
+    const rawUnits = stats ? stats.maxStamina / 1000 : null;
+    if (rawUnits == null) {
+      staminaSummary.textContent = "--";
+    } else {
+      const cappedUnits = Math.min(rawUnits, PLAYER_MAX_STAMINA_WHEELS);
+      const normalized = Math.abs(cappedUnits - PLAYER_MAX_STAMINA_WHEELS) < 1e-6
+        ? PLAYER_MAX_STAMINA_WHEELS
+        : Math.floor(cappedUnits * 10) / 10;
+      const formattedUnits = Number.isInteger(normalized) ? String(normalized) : normalized.toFixed(1);
+      staminaSummary.textContent = `${formattedUnits} / ${PLAYER_MAX_STAMINA_WHEELS}`;
+    }
+  }
+  if (batterySummary) {
+    const currentBattery = stats ? Math.min(stats.batteryCells, PLAYER_MAX_BATTERY_CELLS) : null;
+    batterySummary.textContent = currentBattery == null ? "--" : `${currentBattery} / ${PLAYER_MAX_BATTERY_CELLS}`;
+  }
 
   const obtained = payload.counts.totalLocations ?? 0;
   const total = payload.counts.availableLocations ?? 0;
@@ -2637,6 +2709,9 @@ attachStatTooltip(compendiumSummary, () => compendiumTooltip(currentCompendiumSt
 attachStatTooltip(armorInventorySummary, () => armorInventoryTooltip(currentArmorInventoryStat));
 attachStatTooltip(armorUpgradedSummary, () => armorUpgradedTooltip(currentArmorUpgradedStat));
 attachStatTooltip(completionistSummary, completionistTooltip, { onClick: pulseMarkersMenu });
+if (lifeSummary) attachStatTooltip(lifeSummary, () => playerLifeTooltip(currentPlayerStats));
+if (staminaSummary) attachStatTooltip(staminaSummary, () => playerStaminaTooltip(currentPlayerStats));
+if (batterySummary) attachStatTooltip(batterySummary, () => playerBatteryTooltip(currentPlayerStats));
 
 if (liveSaveCompletedToggle) {
   liveSaveCompletedToggle.addEventListener("click", () => {
