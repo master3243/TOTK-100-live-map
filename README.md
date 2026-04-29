@@ -20,36 +20,7 @@ The local version of the app is much better in terms of quality of life. The map
 
 If you want the local version, you need to know how to setup a python environment (which is very simple, just look up a guide online).
 
-The first step is to clone the repository.
-
-## to create a new environment
-
-```powershell
-cd REPO_FOLDER
-conda create -p ./env python=3.9
-pip install -r .\docs\requirements.txt
-```
-
-## Run Locally
-
-```powershell
-conda activate ./env
-python .\docs\gui.py
-```
-
-Or if you don't want to open the browser automatically (`python .\docs\gui.py --skip-browser`)
-
-## build .exe
-
-I don't recommend doing this unless you are a developer and know what you are doing. For me, it was convenient to have an .exe file I can just double click to start the app.
-
-To build a .exe locally:
-
-```powershell
-cd REPO_FOLDER
-conda activate ./env
-./build.ps1
-```
+The first step is to clone the repository then follow the instructions in the [docs/README.md](docs/README.md) file.
 
 ## Credits / Thanks
 
