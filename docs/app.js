@@ -445,7 +445,8 @@ function setGroupChecked(groupName, checked) {
 }
 
 function completionLabel(marker) {
-  const note = marker.note ? ` - ${marker.note}` : "";
+  const displayNote = displayMarkerNote(marker);
+  const note = displayNote ? ` - ${displayNote}` : "";
   return `${marker.obtained ? "Obtained" : "Missing"} ${marker.categoryLabel}${note}`;
 }
 
@@ -574,6 +575,14 @@ function markerObjmapQuery(marker) {
   return null;
 }
 
+function displayMarkerNote(marker) {
+  const note = marker.note || "";
+  if (marker.categoryId === "bubbulfrogs" && note.startsWith("xxxxxxxxxxxxxxx")) {
+    return `${marker.value}${note.slice("xxxxxxxxxxxxxxx".length)}`;
+  }
+  return note;
+}
+
 function formatLayerForObjmap(layer) {
   const map = {
     surface: "Surface",
@@ -660,13 +669,14 @@ function korokTooltip(marker) {
 }
 
 function completionTooltip(marker) {
+  const displayNote = displayMarkerNote(marker);
   const base = tooltipRows(completionLabel(marker), [
     { label: "Category", value: marker.categoryLabel },
     { label: "Status", value: marker.obtained ? "Obtained" : "Unobtained" },
     { label: "Layer", value: formatLayer(marker.layer) },
     { label: "World", value: `X ${formatNumber(marker.x)}, Y ${formatNumber(marker.y)}, Z ${formatNumber(marker.z)}` },
     { label: "Map", value: `${formatNumber(marker.mapX)}, ${formatNumber(marker.mapY)}` },
-    { label: "Source", value: marker.note },
+    { label: "Source", value: displayNote },
   ]);
   const objmapUrl = buildObjmapTotkUrl(marker);
   if (!objmapUrl) {
