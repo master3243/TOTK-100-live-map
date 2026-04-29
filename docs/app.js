@@ -2465,7 +2465,7 @@ loadLayer(activeLayer);
 syncAllGroupStates();
 if (window.TOTK_USE_PYODIDE) {
   // Static/manual mode: no backend polling. Manual uploads are parsed in-browser.
-  setSaveLoading(false, "Manual upload mode (Pyodide)");
+  setSaveLoading(false, "Manual upload mode");
   saveStatus.textContent = "Manual upload";
   if (!hasLoadedAnySave) {
     document.body.classList.add("awaiting-manual-save");
