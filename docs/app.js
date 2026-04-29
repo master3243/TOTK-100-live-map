@@ -2159,14 +2159,19 @@ async function ensurePyodide() {
 
     // Stage required Python + data files into the in-browser FS.
     pyodide.FS.mkdirTree("/app");
-    const [serverPy, korokJson, completionJson] = await Promise.all([
+    pyodide.FS.mkdirTree("/app/references");
+    const [serverPy, korokJson, completionJson, hashesCsv, recipeRefIds] = await Promise.all([
       fetch(pyodideAssetUrl("server.py"), { cache: "no-store" }).then((r) => r.text()),
       fetch(pyodideAssetUrl("korok_data.json"), { cache: "no-store" }).then((r) => r.text()),
       fetch(pyodideAssetUrl("completion_data.json"), { cache: "no-store" }).then((r) => r.text()),
+      fetch(pyodideAssetUrl("references/zelda-totk.hashes.csv"), { cache: "no-store" }).then((r) => r.text()),
+      fetch(pyodideAssetUrl("references/recipe_ids_mine_228.txt"), { cache: "no-store" }).then((r) => r.text()),
     ]);
     pyodide.FS.writeFile("/app/server.py", serverPy, { encoding: "utf8" });
     pyodide.FS.writeFile("/app/korok_data.json", korokJson, { encoding: "utf8" });
     pyodide.FS.writeFile("/app/completion_data.json", completionJson, { encoding: "utf8" });
+    pyodide.FS.writeFile("/app/references/zelda-totk.hashes.csv", hashesCsv, { encoding: "utf8" });
+    pyodide.FS.writeFile("/app/references/recipe_ids_mine_228.txt", recipeRefIds, { encoding: "utf8" });
 
     // Define a small Python entrypoint that reuses the existing parsing logic from server.py,
     // but avoids filesystem scanning / HTTP server pieces.
@@ -2207,9 +2212,22 @@ def _ensure_data_ready():
         for stat in completion_data.get("stats", [])
         if stat.get("arrayHash")
     }
+    recipe_hash_to_id = _srv.load_recipe_hash_to_id()
+    recipe_hashes = set(recipe_hash_to_id.keys())
+    recipe_reference_ids = _srv.load_recipe_reference_ids()
     _srv._DATA["korok_data"] = korok_data
     _srv._DATA["completion_data"] = completion_data
-    _srv._DATA["tracked_hashes"] = korok_hashes | completion_bool_hashes | completion_stat_hashes | completion_array_hashes
+    _srv._DATA["recipe_hash_to_id"] = recipe_hash_to_id
+    _srv._DATA["recipe_hashes"] = recipe_hashes
+    _srv._DATA["recipe_reference_ids"] = recipe_reference_ids
+    _srv._DATA["recipe_total"] = len(recipe_reference_ids) if recipe_reference_ids else _srv.MAX_RECIPES
+    _srv._DATA["tracked_hashes"] = (
+        korok_hashes
+        | completion_bool_hashes
+        | completion_stat_hashes
+        | completion_array_hashes
+        | recipe_hashes
+    )
     _DATA_READY = True
 
 def parse_uploaded_save(path: str, filename: str = "progress.sav", mtime: float | None = None):
@@ -2227,6 +2245,14 @@ def parse_uploaded_save(path: str, filename: str = "progress.sav", mtime: float 
     values = _srv.parse_save_values(data)
     guid_values = _srv.parse_guid_values(data)
     player_position = _srv.parse_player_position(data)
+    player_stats = _srv.parse_player_max_stats(data)
+    recipe_hash_to_id = _srv._DATA.get("recipe_hash_to_id") or {}
+    recipe_reference_ids = _srv._DATA.get("recipe_reference_ids") or set()
+    cooked_recipe_ids = {recipe_hash_to_id[h] for h in recipe_hash_to_id if values.get(h, 0) != 0}
+    in_228 = cooked_recipe_ids & recipe_reference_ids
+    extra = sorted(cooked_recipe_ids - recipe_reference_ids)
+    recipes_obtained = len(in_228)
+    recipe_total = _srv._DATA.get("recipe_total") or len(recipe_reference_ids) or _srv.MAX_RECIPES
     markers = _srv.build_markers(values)
     completion = _srv.build_completion(values, guid_values)
     completion_stats = _srv.build_completion_stats(values, data)
@@ -2240,6 +2266,12 @@ def parse_uploaded_save(path: str, filename: str = "progress.sav", mtime: float 
         "fileSize": len(data),
         "version": known_version,
         "player": player_position,
+        "playerStats": player_stats,
+        "recipes": {
+            "obtained": recipes_obtained,
+            "total": recipe_total,
+            "extras": extra,
+        },
         "counts": {
             "hidden": sum(1 for m in obtained_markers if m.get("kind") == "hidden"),
             "carry": sum(1 for m in obtained_markers if m.get("kind") == "carry"),
