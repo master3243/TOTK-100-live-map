@@ -136,6 +136,9 @@ function updateCompletionEyesToggleUi() {
 
 const minScale = 0.18;
 const maxScale = 6;
+const zoomStep = 0.05;
+const wheelZoomFactor = 1.1;
+const buttonZoomFactor = 1.25;
 /** Max zoom when auto-framing the player guide arrow (200%). */
 const playerGuideMaxScale = 2;
 
@@ -165,6 +168,11 @@ let hasLoadedAnySave = false;
 
 function clamp(value, min, max) {
   return Math.min(Math.max(value, min), max);
+}
+
+function snapScale(value) {
+  const snapped = Math.round(value / zoomStep) * zoomStep;
+  return clamp(Number(snapped.toFixed(4)), minScale, maxScale);
 }
 
 function isNarrowLayout() {
@@ -293,7 +301,7 @@ function centerMap() {
 
   const rect = viewport.getBoundingClientRect();
   const fit = Math.min(rect.width / imageWidth, rect.height / imageHeight);
-  scale = clamp(fit * 0.96, minScale, maxScale);
+  scale = snapScale(fit * 0.96);
   offsetX = (rect.width - imageWidth * scale) / 2;
   offsetY = (rect.height - imageHeight * scale) / 2;
   updateTransform();
@@ -324,7 +332,7 @@ function zoomAt(nextScale, clientX, clientY) {
   const mapX = (pointX - offsetX) / scale;
   const mapY = (pointY - offsetY) / scale;
 
-  scale = clamp(nextScale, minScale, maxScale);
+  scale = snapScale(nextScale);
   offsetX = pointX - mapX * scale;
   offsetY = pointY - mapY * scale;
   updateTransform();
@@ -332,7 +340,7 @@ function zoomAt(nextScale, clientX, clientY) {
 
 function panToMapPoint(mapX, mapY, nextScale = Math.max(scale, 0.72)) {
   const rect = viewport.getBoundingClientRect();
-  scale = clamp(nextScale, minScale, maxScale);
+  scale = snapScale(nextScale);
   offsetX = rect.width / 2 - mapX * scale;
   offsetY = rect.height / 2 - mapY * scale;
   updateTransform();
@@ -1322,7 +1330,7 @@ function applyPlayerGuideView(player, target) {
   let nextScale = desiredScreenDist / mapLen;
   nextScale = clamp(nextScale, minScale, Math.min(playerGuideMaxScale, maxScale));
 
-  scale = nextScale;
+  scale = snapScale(nextScale);
   offsetX = vw / 2 - player.mapX * scale;
   offsetY = vh / 2 - player.mapY * scale;
   updateTransform();
@@ -2106,8 +2114,8 @@ viewport.addEventListener("dragstart", (event) => {
 
 viewport.addEventListener("wheel", (event) => {
   event.preventDefault();
-  const direction = event.deltaY > 0 ? 0.9 : 1.1;
-  zoomAt(scale * direction, event.clientX, event.clientY);
+  const nextScale = event.deltaY > 0 ? scale / wheelZoomFactor : scale * wheelZoomFactor;
+  zoomAt(nextScale, event.clientX, event.clientY);
   // If the user zooms while dragging, keep dragStart in sync so the map doesn't jump
   // on the next pointermove (which uses dragStart.offsetX/Y as the baseline).
   if (activePointers.size === 1 && dragStart) {
@@ -2258,12 +2266,12 @@ viewport.addEventListener("pointerleave", () => {
 
 document.querySelector("#zoomIn").addEventListener("click", () => {
   const rect = viewport.getBoundingClientRect();
-  zoomAt(scale * 1.25, rect.left + rect.width / 2, rect.top + rect.height / 2);
+  zoomAt(scale * buttonZoomFactor, rect.left + rect.width / 2, rect.top + rect.height / 2);
 });
 
 document.querySelector("#zoomOut").addEventListener("click", () => {
   const rect = viewport.getBoundingClientRect();
-  zoomAt(scale / 1.25, rect.left + rect.width / 2, rect.top + rect.height / 2);
+  zoomAt(scale / buttonZoomFactor, rect.left + rect.width / 2, rect.top + rect.height / 2);
 });
 
 document.querySelector("#resetView").addEventListener("click", centerMap);
