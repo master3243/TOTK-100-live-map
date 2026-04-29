@@ -73,6 +73,8 @@ CATEGORIES = [
 
 STATS = [
     {"id": "compendium", "label": "Compendium", "hashes": "COMPENDIUM_STATUS", "kind": "reverse", "target": "Unopened", "includeMissing": True},
+    {"id": "armor_inventory", "label": "Armor", "source": "armor_inventory", "kind": "armor_inventory", "includeMissing": True},
+    {"id": "armor_upgraded", "label": "Armor (4-star upgraded)", "source": "armor_upgraded", "kind": "armor_upgraded", "includeMissing": True},
     {"id": "pristine_weapons", "label": "Pristine Weapons", "source": "pristine_weapons", "kind": "positive", "includeMissing": True},
     {"id": "fabrics", "label": "Fabrics", "source": "fabrics", "kind": "positive", "includeMissing": True},
 ]
@@ -351,6 +353,65 @@ def parse_hash_csv(hashes_text):
     return hashes
 
 
+def parse_armor_locale_rows(locale_text):
+    star = chr(0x2605)
+    rows = []
+    for match in re.finditer(r"(Armor_[A-Za-z0-9_]+)\s*:\s*'((?:\\'|[^'])*)'", locale_text):
+        item_id = match.group(1)
+        label = match.group(2).replace("\\'", "'")
+        if label.startswith("*"):
+            continue
+        star_count = label.count(star)
+        base_label = re.sub(rf"\s*{re.escape(star)}+$", "", label).strip()
+        if base_label == "Hylian Hood (lowered)":
+            base_label = "Hylian Hood"
+        rows.append({
+            "id": item_id,
+            "label": label,
+            "baseLabel": base_label,
+            "stars": star_count,
+        })
+    return rows
+
+
+def parse_armor_inventory_items(locale_text):
+    groups = {}
+    for row in parse_armor_locale_rows(locale_text):
+        groups.setdefault(row["baseLabel"], []).append(row)
+    items = []
+    for base_label in sorted(groups, key=str.lower):
+        base_rows = [row for row in groups[base_label] if row["stars"] == 0]
+        if not base_rows:
+            continue
+        items.append({
+            "id": f"armor_inventory-{len(items) + 1:03d}",
+            "label": base_label,
+            "baseId": base_rows[0]["id"],
+            "ids": sorted({row["id"] for row in groups[base_label]}),
+        })
+    return items
+
+
+def parse_armor_upgraded_items(locale_text):
+    groups = {}
+    for row in parse_armor_locale_rows(locale_text):
+        groups.setdefault(row["baseLabel"], []).append(row)
+    items = []
+    for base_label in sorted(groups, key=str.lower):
+        base_rows = [row for row in groups[base_label] if row["stars"] == 0]
+        four_star_rows = [row for row in groups[base_label] if row["stars"] == 4]
+        if not base_rows or not four_star_rows:
+            continue
+        items.append({
+            "id": f"armor_upgraded-{len(items) + 1:03d}",
+            "label": base_label,
+            "baseId": base_rows[0]["id"],
+            "upgradedId": four_star_rows[0]["id"],
+            "upgradedIds": sorted({row["id"] for row in four_star_rows}),
+        })
+    return items
+
+
 def parse_locale_names(locale_text):
     names = {}
     for match in re.finditer(r"(Armor_[A-Za-z0-9_]+)\s*:\s*'((?:\\'|[^'])*)'", locale_text):
@@ -532,11 +593,16 @@ def main():
         })
     stats = []
     compendium_labels = compendium_labels_by_value(hashes)
+    hash_by_flag = parse_hash_csv(hashes)
     for stat in STATS:
         if stat.get("source") == "pristine_weapons":
             items = parse_pristine_weapon_items(equipment)
         elif stat.get("source") == "fabrics":
             items = parse_fabric_items(hashes)
+        elif stat.get("source") == "armor_inventory":
+            items = parse_armor_inventory_items(locale)
+        elif stat.get("source") == "armor_upgraded":
+            items = parse_armor_upgraded_items(locale)
         else:
             ids = parse_hashes(completism, stat["hashes"], "bool")
             items = []
@@ -545,7 +611,7 @@ def main():
                 if stat["id"] == "compendium" and value in compendium_labels:
                     item["label"] = compendium_labels[value]
                 items.append(item)
-        stats.append({
+        stat_entry = {
             "id": stat["id"],
             "label": stat["label"],
             "kind": stat["kind"],
@@ -553,7 +619,11 @@ def main():
             "includeMissing": stat.get("includeMissing", False),
             "items": items,
             "sourceCounts": {"ids": len(items)},
-        })
+        }
+        if stat["kind"].startswith("armor_"):
+            stat_entry["arrayHash"] = hash_by_flag["Pouch.Armor.Content.Name"]
+            stat_entry["sourceCounts"]["arrayHash"] = 1
+        stats.append(stat_entry)
     OUTPUT.write_text(json.dumps({"categories": categories, "stats": stats}, indent=2), encoding="utf-8")
     print(f"Wrote {OUTPUT}")
     for category in categories:

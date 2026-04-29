@@ -17517,6 +17517,2459 @@
       }
     },
     {
+      "id": "armor_inventory",
+      "label": "Armor",
+      "kind": "armor_inventory",
+      "targetValue": null,
+      "includeMissing": true,
+      "items": [
+        {
+          "id": "armor_inventory-001",
+          "label": "Amber Earrings",
+          "baseId": "Armor_029_Head",
+          "ids": [
+            "Armor_029_Head",
+            "Armor_137_Head",
+            "Armor_138_Head",
+            "Armor_139_Head",
+            "Armor_140_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-002",
+          "label": "Ancient Hero's Aspect",
+          "baseId": "Armor_1036_Head",
+          "ids": [
+            "Armor_1036_Head",
+            "Armor_1037_Head",
+            "Armor_1038_Head",
+            "Armor_1039_Head",
+            "Armor_1040_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-003",
+          "label": "Archaic Legwear",
+          "baseId": "Armor_1043_Lower",
+          "ids": [
+            "Armor_1043_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-004",
+          "label": "Archaic Tunic",
+          "baseId": "Armor_1043_Upper",
+          "ids": [
+            "Armor_1043_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-005",
+          "label": "Archaic Warm Greaves",
+          "baseId": "Armor_1044_Lower",
+          "ids": [
+            "Armor_1044_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-006",
+          "label": "Barbarian Armor",
+          "baseId": "Armor_048_Upper",
+          "ids": [
+            "Armor_048_Upper",
+            "Armor_111_Upper",
+            "Armor_112_Upper",
+            "Armor_113_Upper",
+            "Armor_114_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-007",
+          "label": "Barbarian Helm",
+          "baseId": "Armor_048_Head",
+          "ids": [
+            "Armor_048_Head",
+            "Armor_111_Head",
+            "Armor_112_Head",
+            "Armor_113_Head",
+            "Armor_114_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-008",
+          "label": "Barbarian Leg Wraps",
+          "baseId": "Armor_048_Lower",
+          "ids": [
+            "Armor_048_Lower",
+            "Armor_111_Lower",
+            "Armor_112_Lower",
+            "Armor_113_Lower",
+            "Armor_114_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-009",
+          "label": "Bokoblin Mask",
+          "baseId": "Armor_022_Head",
+          "ids": [
+            "Armor_022_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-010",
+          "label": "Cap of the Hero",
+          "baseId": "Armor_230_Head",
+          "ids": [
+            "Armor_230_Head",
+            "Armor_231_Head",
+            "Armor_232_Head",
+            "Armor_233_Head",
+            "Armor_234_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-011",
+          "label": "Cap of the Sky",
+          "baseId": "Armor_215_Head",
+          "ids": [
+            "Armor_215_Head",
+            "Armor_216_Head",
+            "Armor_217_Head",
+            "Armor_218_Head",
+            "Armor_219_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-012",
+          "label": "Cap of the Wild",
+          "baseId": "Armor_005_Head",
+          "ids": [
+            "Armor_005_Head",
+            "Armor_035_Head",
+            "Armor_039_Head",
+            "Armor_060_Head",
+            "Armor_061_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-013",
+          "label": "Cap of the Wind",
+          "baseId": "Armor_205_Head",
+          "ids": [
+            "Armor_205_Head",
+            "Armor_206_Head",
+            "Armor_207_Head",
+            "Armor_208_Head",
+            "Armor_209_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-014",
+          "label": "Cap of Time",
+          "baseId": "Armor_200_Head",
+          "ids": [
+            "Armor_200_Head",
+            "Armor_201_Head",
+            "Armor_202_Head",
+            "Armor_203_Head",
+            "Armor_204_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-015",
+          "label": "Cap of Twilight",
+          "baseId": "Armor_210_Head",
+          "ids": [
+            "Armor_210_Head",
+            "Armor_211_Head",
+            "Armor_212_Head",
+            "Armor_213_Head",
+            "Armor_214_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-016",
+          "label": "Cece Hat",
+          "baseId": "Armor_1076_Head",
+          "ids": [
+            "Armor_1076_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-017",
+          "label": "Champion's Leather",
+          "baseId": "Armor_1106_Upper",
+          "ids": [
+            "Armor_1106_Upper",
+            "Armor_1107_Upper",
+            "Armor_1108_Upper",
+            "Armor_1109_Upper",
+            "Armor_1110_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-018",
+          "label": "Charged Headdress",
+          "baseId": "Armor_1066_Head",
+          "ids": [
+            "Armor_1066_Head",
+            "Armor_1067_Head",
+            "Armor_1068_Head",
+            "Armor_1069_Head",
+            "Armor_1070_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-019",
+          "label": "Charged Shirt",
+          "baseId": "Armor_1066_Upper",
+          "ids": [
+            "Armor_1066_Upper",
+            "Armor_1067_Upper",
+            "Armor_1068_Upper",
+            "Armor_1069_Upper",
+            "Armor_1070_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-020",
+          "label": "Charged Trousers",
+          "baseId": "Armor_1066_Lower",
+          "ids": [
+            "Armor_1066_Lower",
+            "Armor_1067_Lower",
+            "Armor_1068_Lower",
+            "Armor_1069_Lower",
+            "Armor_1070_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-021",
+          "label": "Climber's Bandanna",
+          "baseId": "Armor_014_Head",
+          "ids": [
+            "Armor_014_Head",
+            "Armor_083_Head",
+            "Armor_084_Head",
+            "Armor_085_Head",
+            "Armor_086_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-022",
+          "label": "Climbing Boots",
+          "baseId": "Armor_014_Lower",
+          "ids": [
+            "Armor_014_Lower",
+            "Armor_083_Lower",
+            "Armor_084_Lower",
+            "Armor_085_Lower",
+            "Armor_086_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-023",
+          "label": "Climbing Gear",
+          "baseId": "Armor_014_Upper",
+          "ids": [
+            "Armor_014_Upper",
+            "Armor_083_Upper",
+            "Armor_084_Upper",
+            "Armor_085_Upper",
+            "Armor_086_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-024",
+          "label": "Dark Hood",
+          "baseId": "Armor_160_Head",
+          "ids": [
+            "Armor_160_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-025",
+          "label": "Dark Trousers",
+          "baseId": "Armor_160_Lower",
+          "ids": [
+            "Armor_160_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-026",
+          "label": "Dark Tunic",
+          "baseId": "Armor_160_Upper",
+          "ids": [
+            "Armor_160_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-027",
+          "label": "Desert Voe Headband",
+          "baseId": "Armor_008_Head",
+          "ids": [
+            "Armor_008_Head",
+            "Armor_040_Head",
+            "Armor_065_Head",
+            "Armor_066_Head",
+            "Armor_067_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-028",
+          "label": "Desert Voe Spaulder",
+          "baseId": "Armor_008_Upper",
+          "ids": [
+            "Armor_008_Upper",
+            "Armor_040_Upper",
+            "Armor_065_Upper",
+            "Armor_066_Upper",
+            "Armor_067_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-029",
+          "label": "Desert Voe Trousers",
+          "baseId": "Armor_008_Lower",
+          "ids": [
+            "Armor_008_Lower",
+            "Armor_040_Lower",
+            "Armor_065_Lower",
+            "Armor_066_Lower",
+            "Armor_067_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-030",
+          "label": "Diamond Circlet",
+          "baseId": "Armor_024_Head",
+          "ids": [
+            "Armor_024_Head",
+            "Armor_117_Head",
+            "Armor_118_Head",
+            "Armor_119_Head",
+            "Armor_120_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-031",
+          "label": "Ember Headdress",
+          "baseId": "Armor_1061_Head",
+          "ids": [
+            "Armor_1061_Head",
+            "Armor_1062_Head",
+            "Armor_1063_Head",
+            "Armor_1064_Head",
+            "Armor_1065_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-032",
+          "label": "Ember Shirt",
+          "baseId": "Armor_1061_Upper",
+          "ids": [
+            "Armor_1061_Upper",
+            "Armor_1062_Upper",
+            "Armor_1063_Upper",
+            "Armor_1064_Upper",
+            "Armor_1065_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-033",
+          "label": "Ember Trousers",
+          "baseId": "Armor_1061_Lower",
+          "ids": [
+            "Armor_1061_Lower",
+            "Armor_1062_Lower",
+            "Armor_1063_Lower",
+            "Armor_1064_Lower",
+            "Armor_1065_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-034",
+          "label": "Evil Spirit Armor",
+          "baseId": "Armor_180_Upper",
+          "ids": [
+            "Armor_180_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-035",
+          "label": "Evil Spirit Greaves",
+          "baseId": "Armor_180_Lower",
+          "ids": [
+            "Armor_180_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-036",
+          "label": "Evil Spirit Mask",
+          "baseId": "Armor_180_Head",
+          "ids": [
+            "Armor_180_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-037",
+          "label": "Fierce Deity Armor",
+          "baseId": "Armor_225_Upper",
+          "ids": [
+            "Armor_225_Upper",
+            "Armor_226_Upper",
+            "Armor_227_Upper",
+            "Armor_228_Upper",
+            "Armor_229_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-038",
+          "label": "Fierce Deity Boots",
+          "baseId": "Armor_225_Lower",
+          "ids": [
+            "Armor_225_Lower",
+            "Armor_226_Lower",
+            "Armor_227_Lower",
+            "Armor_228_Lower",
+            "Armor_229_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-039",
+          "label": "Fierce Deity Mask",
+          "baseId": "Armor_225_Head",
+          "ids": [
+            "Armor_225_Head",
+            "Armor_226_Head",
+            "Armor_227_Head",
+            "Armor_228_Head",
+            "Armor_229_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-040",
+          "label": "Flamebreaker Armor",
+          "baseId": "Armor_011_Upper",
+          "ids": [
+            "Armor_011_Upper",
+            "Armor_037_Upper",
+            "Armor_074_Upper",
+            "Armor_075_Upper",
+            "Armor_076_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-041",
+          "label": "Flamebreaker Boots",
+          "baseId": "Armor_011_Lower",
+          "ids": [
+            "Armor_011_Lower",
+            "Armor_037_Lower",
+            "Armor_074_Lower",
+            "Armor_075_Lower",
+            "Armor_076_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-042",
+          "label": "Flamebreaker Helm",
+          "baseId": "Armor_011_Head",
+          "ids": [
+            "Armor_011_Head",
+            "Armor_037_Head",
+            "Armor_074_Head",
+            "Armor_075_Head",
+            "Armor_076_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-043",
+          "label": "Froggy Hood",
+          "baseId": "Armor_1046_Head",
+          "ids": [
+            "Armor_1046_Head",
+            "Armor_1047_Head",
+            "Armor_1048_Head",
+            "Armor_1049_Head",
+            "Armor_1050_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-044",
+          "label": "Froggy Leggings",
+          "baseId": "Armor_1046_Lower",
+          "ids": [
+            "Armor_1046_Lower",
+            "Armor_1047_Lower",
+            "Armor_1048_Lower",
+            "Armor_1049_Lower",
+            "Armor_1050_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-045",
+          "label": "Froggy Sleeve",
+          "baseId": "Armor_1046_Upper",
+          "ids": [
+            "Armor_1046_Upper",
+            "Armor_1047_Upper",
+            "Armor_1048_Upper",
+            "Armor_1049_Upper",
+            "Armor_1050_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-046",
+          "label": "Frostbite Headdress",
+          "baseId": "Armor_1071_Head",
+          "ids": [
+            "Armor_1071_Head",
+            "Armor_1072_Head",
+            "Armor_1073_Head",
+            "Armor_1074_Head",
+            "Armor_1075_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-047",
+          "label": "Frostbite Shirt",
+          "baseId": "Armor_1071_Upper",
+          "ids": [
+            "Armor_1071_Upper",
+            "Armor_1072_Upper",
+            "Armor_1073_Upper",
+            "Armor_1074_Upper",
+            "Armor_1075_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-048",
+          "label": "Frostbite Trousers",
+          "baseId": "Armor_1071_Lower",
+          "ids": [
+            "Armor_1071_Lower",
+            "Armor_1072_Lower",
+            "Armor_1073_Lower",
+            "Armor_1074_Lower",
+            "Armor_1075_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-049",
+          "label": "Gaiters of the Depths",
+          "baseId": "Armor_1141_Lower",
+          "ids": [
+            "Armor_1141_Lower",
+            "Armor_1142_Lower",
+            "Armor_1143_Lower",
+            "Armor_1144_Lower",
+            "Armor_1145_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-050",
+          "label": "Glide Mask",
+          "baseId": "Armor_1006_Head",
+          "ids": [
+            "Armor_1006_Head",
+            "Armor_1007_Head",
+            "Armor_1008_Head",
+            "Armor_1009_Head",
+            "Armor_1010_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-051",
+          "label": "Glide Shirt",
+          "baseId": "Armor_1006_Upper",
+          "ids": [
+            "Armor_1006_Upper",
+            "Armor_1007_Upper",
+            "Armor_1008_Upper",
+            "Armor_1009_Upper",
+            "Armor_1010_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-052",
+          "label": "Glide Tights",
+          "baseId": "Armor_1006_Lower",
+          "ids": [
+            "Armor_1006_Lower",
+            "Armor_1007_Lower",
+            "Armor_1008_Lower",
+            "Armor_1009_Lower",
+            "Armor_1010_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-053",
+          "label": "Hood of the Depths",
+          "baseId": "Armor_1141_Head",
+          "ids": [
+            "Armor_1141_Head",
+            "Armor_1142_Head",
+            "Armor_1143_Head",
+            "Armor_1144_Head",
+            "Armor_1145_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-054",
+          "label": "Horriblin Mask",
+          "baseId": "Armor_1125_Head",
+          "ids": [
+            "Armor_1125_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-055",
+          "label": "Hylian Hood",
+          "baseId": "Armor_001_Head",
+          "ids": [
+            "Armor_001_Head",
+            "Armor_002_Head",
+            "Armor_003_Head",
+            "Armor_004_Head",
+            "Armor_015_Head",
+            "Armor_1152_Head",
+            "Armor_1153_Head",
+            "Armor_1154_Head",
+            "Armor_1155_Head",
+            "Armor_1156_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-056",
+          "label": "Hylian Trousers",
+          "baseId": "Armor_001_Lower",
+          "ids": [
+            "Armor_001_Lower",
+            "Armor_002_Lower",
+            "Armor_003_Lower",
+            "Armor_004_Lower",
+            "Armor_015_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-057",
+          "label": "Hylian Tunic",
+          "baseId": "Armor_001_Upper",
+          "ids": [
+            "Armor_001_Upper",
+            "Armor_002_Upper",
+            "Armor_003_Upper",
+            "Armor_004_Upper",
+            "Armor_015_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-058",
+          "label": "Island Lobster Shirt",
+          "baseId": "Armor_175_Upper",
+          "ids": [
+            "Armor_175_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-059",
+          "label": "Korok Mask",
+          "baseId": "Armor_176_Head",
+          "ids": [
+            "Armor_176_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-060",
+          "label": "Lightning Helm",
+          "baseId": "Armor_115_Head",
+          "ids": [
+            "Armor_115_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-061",
+          "label": "Lizalfos Mask",
+          "baseId": "Armor_055_Head",
+          "ids": [
+            "Armor_055_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-062",
+          "label": "Lynel Mask",
+          "baseId": "Armor_056_Head",
+          "ids": [
+            "Armor_056_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-063",
+          "label": "Majora's Mask",
+          "baseId": "Armor_172_Head",
+          "ids": [
+            "Armor_172_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-064",
+          "label": "Mask of Awakening",
+          "baseId": "Armor_1096_Head",
+          "ids": [
+            "Armor_1096_Head",
+            "Armor_1097_Head",
+            "Armor_1098_Head",
+            "Armor_1099_Head",
+            "Armor_1100_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-065",
+          "label": "Midna's Helmet",
+          "baseId": "Armor_173_Head",
+          "ids": [
+            "Armor_173_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-066",
+          "label": "Miner's Mask",
+          "baseId": "Armor_1051_Head",
+          "ids": [
+            "Armor_1051_Head",
+            "Armor_1052_Head",
+            "Armor_1053_Head",
+            "Armor_1054_Head",
+            "Armor_1055_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-067",
+          "label": "Miner's Top",
+          "baseId": "Armor_1051_Upper",
+          "ids": [
+            "Armor_1051_Upper",
+            "Armor_1052_Upper",
+            "Armor_1053_Upper",
+            "Armor_1054_Upper",
+            "Armor_1055_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-068",
+          "label": "Miner's Trousers",
+          "baseId": "Armor_1051_Lower",
+          "ids": [
+            "Armor_1051_Lower",
+            "Armor_1052_Lower",
+            "Armor_1053_Lower",
+            "Armor_1054_Lower",
+            "Armor_1055_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-069",
+          "label": "Moblin Mask",
+          "baseId": "Armor_045_Head",
+          "ids": [
+            "Armor_045_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-070",
+          "label": "Mystic Headpiece",
+          "baseId": "Armor_1086_Head",
+          "ids": [
+            "Armor_1086_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-071",
+          "label": "Mystic Robe",
+          "baseId": "Armor_1086_Upper",
+          "ids": [
+            "Armor_1086_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-072",
+          "label": "Mystic Trousers",
+          "baseId": "Armor_1086_Lower",
+          "ids": [
+            "Armor_1086_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-073",
+          "label": "Opal Earrings",
+          "baseId": "Armor_028_Head",
+          "ids": [
+            "Armor_028_Head",
+            "Armor_133_Head",
+            "Armor_134_Head",
+            "Armor_135_Head",
+            "Armor_136_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-074",
+          "label": "Phantom Armor",
+          "baseId": "Armor_171_Upper",
+          "ids": [
+            "Armor_171_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-075",
+          "label": "Phantom Greaves",
+          "baseId": "Armor_171_Lower",
+          "ids": [
+            "Armor_171_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-076",
+          "label": "Phantom Helmet",
+          "baseId": "Armor_171_Head",
+          "ids": [
+            "Armor_171_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-077",
+          "label": "Radiant Mask",
+          "baseId": "Armor_017_Head",
+          "ids": [
+            "Armor_017_Head",
+            "Armor_087_Head",
+            "Armor_088_Head",
+            "Armor_089_Head",
+            "Armor_090_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-078",
+          "label": "Radiant Shirt",
+          "baseId": "Armor_017_Upper",
+          "ids": [
+            "Armor_017_Upper",
+            "Armor_087_Upper",
+            "Armor_088_Upper",
+            "Armor_089_Upper",
+            "Armor_090_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-079",
+          "label": "Radiant Tights",
+          "baseId": "Armor_017_Lower",
+          "ids": [
+            "Armor_017_Lower",
+            "Armor_087_Lower",
+            "Armor_088_Lower",
+            "Armor_089_Lower",
+            "Armor_090_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-080",
+          "label": "Ravio's Hood",
+          "baseId": "Armor_177_Head",
+          "ids": [
+            "Armor_177_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-081",
+          "label": "Royal Guard Boots",
+          "baseId": "Armor_179_Lower",
+          "ids": [
+            "Armor_1146_Lower",
+            "Armor_1147_Lower",
+            "Armor_1148_Lower",
+            "Armor_1149_Lower",
+            "Armor_179_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-082",
+          "label": "Royal Guard Cap",
+          "baseId": "Armor_179_Head",
+          "ids": [
+            "Armor_1146_Head",
+            "Armor_1147_Head",
+            "Armor_1148_Head",
+            "Armor_1149_Head",
+            "Armor_179_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-083",
+          "label": "Royal Guard Uniform",
+          "baseId": "Armor_179_Upper",
+          "ids": [
+            "Armor_1146_Upper",
+            "Armor_1147_Upper",
+            "Armor_1148_Upper",
+            "Armor_1149_Upper",
+            "Armor_179_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-084",
+          "label": "Rubber Armor",
+          "baseId": "Armor_046_Upper",
+          "ids": [
+            "Armor_046_Upper",
+            "Armor_103_Upper",
+            "Armor_104_Upper",
+            "Armor_105_Upper",
+            "Armor_106_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-085",
+          "label": "Rubber Helm",
+          "baseId": "Armor_046_Head",
+          "ids": [
+            "Armor_046_Head",
+            "Armor_103_Head",
+            "Armor_104_Head",
+            "Armor_105_Head",
+            "Armor_106_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-086",
+          "label": "Rubber Tights",
+          "baseId": "Armor_046_Lower",
+          "ids": [
+            "Armor_046_Lower",
+            "Armor_103_Lower",
+            "Armor_104_Lower",
+            "Armor_105_Lower",
+            "Armor_106_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-087",
+          "label": "Ruby Circlet",
+          "baseId": "Armor_025_Head",
+          "ids": [
+            "Armor_025_Head",
+            "Armor_121_Head",
+            "Armor_122_Head",
+            "Armor_123_Head",
+            "Armor_124_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-088",
+          "label": "Sand Boots",
+          "baseId": "Armor_049_Lower",
+          "ids": [
+            "Armor_049_Lower",
+            "Armor_152_Lower",
+            "Armor_153_Lower",
+            "Armor_154_Lower",
+            "Armor_155_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-089",
+          "label": "Sapphire Circlet",
+          "baseId": "Armor_026_Head",
+          "ids": [
+            "Armor_026_Head",
+            "Armor_125_Head",
+            "Armor_126_Head",
+            "Armor_127_Head",
+            "Armor_128_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-090",
+          "label": "Sheik's Mask",
+          "baseId": "Armor_220_Head",
+          "ids": [
+            "Armor_220_Head",
+            "Armor_221_Head",
+            "Armor_222_Head",
+            "Armor_223_Head",
+            "Armor_224_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-091",
+          "label": "Snow Boots",
+          "baseId": "Armor_141_Lower",
+          "ids": [
+            "Armor_141_Lower",
+            "Armor_156_Lower",
+            "Armor_157_Lower",
+            "Armor_158_Lower",
+            "Armor_159_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-092",
+          "label": "Snowquill Headdress",
+          "baseId": "Armor_009_Head",
+          "ids": [
+            "Armor_009_Head",
+            "Armor_036_Head",
+            "Armor_071_Head",
+            "Armor_072_Head",
+            "Armor_073_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-093",
+          "label": "Snowquill Trousers",
+          "baseId": "Armor_009_Lower",
+          "ids": [
+            "Armor_009_Lower",
+            "Armor_036_Lower",
+            "Armor_071_Lower",
+            "Armor_072_Lower",
+            "Armor_073_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-094",
+          "label": "Snowquill Tunic",
+          "baseId": "Armor_009_Upper",
+          "ids": [
+            "Armor_009_Upper",
+            "Armor_036_Upper",
+            "Armor_071_Upper",
+            "Armor_072_Upper",
+            "Armor_073_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-095",
+          "label": "Soldier's Armor",
+          "baseId": "Armor_020_Upper",
+          "ids": [
+            "Armor_020_Upper",
+            "Armor_095_Upper",
+            "Armor_096_Upper",
+            "Armor_097_Upper",
+            "Armor_098_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-096",
+          "label": "Soldier's Greaves",
+          "baseId": "Armor_020_Lower",
+          "ids": [
+            "Armor_020_Lower",
+            "Armor_095_Lower",
+            "Armor_096_Lower",
+            "Armor_097_Lower",
+            "Armor_098_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-097",
+          "label": "Soldier's Helm",
+          "baseId": "Armor_020_Head",
+          "ids": [
+            "Armor_020_Head",
+            "Armor_095_Head",
+            "Armor_096_Head",
+            "Armor_097_Head",
+            "Armor_098_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-098",
+          "label": "Stealth Chest Guard",
+          "baseId": "Armor_012_Upper",
+          "ids": [
+            "Armor_012_Upper",
+            "Armor_042_Upper",
+            "Armor_077_Upper",
+            "Armor_078_Upper",
+            "Armor_079_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-099",
+          "label": "Stealth Mask",
+          "baseId": "Armor_012_Head",
+          "ids": [
+            "Armor_012_Head",
+            "Armor_042_Head",
+            "Armor_077_Head",
+            "Armor_078_Head",
+            "Armor_079_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-100",
+          "label": "Stealth Tights",
+          "baseId": "Armor_012_Lower",
+          "ids": [
+            "Armor_012_Lower",
+            "Armor_042_Lower",
+            "Armor_077_Lower",
+            "Armor_078_Lower",
+            "Armor_079_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-101",
+          "label": "Tingle's Hood",
+          "baseId": "Armor_174_Head",
+          "ids": [
+            "Armor_174_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-102",
+          "label": "Tingle's Shirt",
+          "baseId": "Armor_174_Upper",
+          "ids": [
+            "Armor_174_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-103",
+          "label": "Tingle's Tights",
+          "baseId": "Armor_174_Lower",
+          "ids": [
+            "Armor_174_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-104",
+          "label": "Topaz Earrings",
+          "baseId": "Armor_027_Head",
+          "ids": [
+            "Armor_027_Head",
+            "Armor_129_Head",
+            "Armor_130_Head",
+            "Armor_131_Head",
+            "Armor_132_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-105",
+          "label": "Trousers of Awakening",
+          "baseId": "Armor_1096_Lower",
+          "ids": [
+            "Armor_1096_Lower",
+            "Armor_1097_Lower",
+            "Armor_1098_Lower",
+            "Armor_1099_Lower",
+            "Armor_1100_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-106",
+          "label": "Trousers of the Hero",
+          "baseId": "Armor_230_Lower",
+          "ids": [
+            "Armor_230_Lower",
+            "Armor_231_Lower",
+            "Armor_232_Lower",
+            "Armor_233_Lower",
+            "Armor_234_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-107",
+          "label": "Trousers of the Sky",
+          "baseId": "Armor_215_Lower",
+          "ids": [
+            "Armor_215_Lower",
+            "Armor_216_Lower",
+            "Armor_217_Lower",
+            "Armor_218_Lower",
+            "Armor_219_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-108",
+          "label": "Trousers of the Wild",
+          "baseId": "Armor_005_Lower",
+          "ids": [
+            "Armor_005_Lower",
+            "Armor_035_Lower",
+            "Armor_039_Lower",
+            "Armor_060_Lower",
+            "Armor_061_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-109",
+          "label": "Trousers of the Wind",
+          "baseId": "Armor_205_Lower",
+          "ids": [
+            "Armor_205_Lower",
+            "Armor_206_Lower",
+            "Armor_207_Lower",
+            "Armor_208_Lower",
+            "Armor_209_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-110",
+          "label": "Trousers of Time",
+          "baseId": "Armor_200_Lower",
+          "ids": [
+            "Armor_200_Lower",
+            "Armor_201_Lower",
+            "Armor_202_Lower",
+            "Armor_203_Lower",
+            "Armor_204_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-111",
+          "label": "Trousers of Twilight",
+          "baseId": "Armor_210_Lower",
+          "ids": [
+            "Armor_210_Lower",
+            "Armor_211_Lower",
+            "Armor_212_Lower",
+            "Armor_213_Lower",
+            "Armor_214_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-112",
+          "label": "Tunic of Awakening",
+          "baseId": "Armor_1096_Upper",
+          "ids": [
+            "Armor_1096_Upper",
+            "Armor_1097_Upper",
+            "Armor_1098_Upper",
+            "Armor_1099_Upper",
+            "Armor_1100_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-113",
+          "label": "Tunic of Memories",
+          "baseId": "Armor_116_Upper",
+          "ids": [
+            "Armor_116_Upper",
+            "Armor_148_Upper",
+            "Armor_149_Upper",
+            "Armor_150_Upper",
+            "Armor_151_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-114",
+          "label": "Tunic of the Depths",
+          "baseId": "Armor_1141_Upper",
+          "ids": [
+            "Armor_1141_Upper",
+            "Armor_1142_Upper",
+            "Armor_1143_Upper",
+            "Armor_1144_Upper",
+            "Armor_1145_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-115",
+          "label": "Tunic of the Hero",
+          "baseId": "Armor_230_Upper",
+          "ids": [
+            "Armor_230_Upper",
+            "Armor_231_Upper",
+            "Armor_232_Upper",
+            "Armor_233_Upper",
+            "Armor_234_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-116",
+          "label": "Tunic of the Sky",
+          "baseId": "Armor_215_Upper",
+          "ids": [
+            "Armor_215_Upper",
+            "Armor_216_Upper",
+            "Armor_217_Upper",
+            "Armor_218_Upper",
+            "Armor_219_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-117",
+          "label": "Tunic of the Wild",
+          "baseId": "Armor_005_Upper",
+          "ids": [
+            "Armor_005_Upper",
+            "Armor_035_Upper",
+            "Armor_039_Upper",
+            "Armor_060_Upper",
+            "Armor_061_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-118",
+          "label": "Tunic of the Wind",
+          "baseId": "Armor_205_Upper",
+          "ids": [
+            "Armor_205_Upper",
+            "Armor_206_Upper",
+            "Armor_207_Upper",
+            "Armor_208_Upper",
+            "Armor_209_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-119",
+          "label": "Tunic of Time",
+          "baseId": "Armor_200_Upper",
+          "ids": [
+            "Armor_200_Upper",
+            "Armor_201_Upper",
+            "Armor_202_Upper",
+            "Armor_203_Upper",
+            "Armor_204_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-120",
+          "label": "Tunic of Twilight",
+          "baseId": "Armor_210_Upper",
+          "ids": [
+            "Armor_210_Upper",
+            "Armor_211_Upper",
+            "Armor_212_Upper",
+            "Armor_213_Upper",
+            "Armor_214_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-121",
+          "label": "Vah Medoh Divine Helm",
+          "baseId": "Armor_182_Head",
+          "ids": [
+            "Armor_182_Head",
+            "Armor_190_Head",
+            "Armor_191_Head",
+            "Armor_192_Head",
+            "Armor_193_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-122",
+          "label": "Vah Naboris Divine Helm",
+          "baseId": "Armor_184_Head",
+          "ids": [
+            "Armor_168_Head",
+            "Armor_169_Head",
+            "Armor_184_Head",
+            "Armor_198_Head",
+            "Armor_199_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-123",
+          "label": "Vah Rudania Divine Helm",
+          "baseId": "Armor_183_Head",
+          "ids": [
+            "Armor_183_Head",
+            "Armor_194_Head",
+            "Armor_195_Head",
+            "Armor_196_Head",
+            "Armor_197_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-124",
+          "label": "Vah Ruta Divine Helm",
+          "baseId": "Armor_181_Head",
+          "ids": [
+            "Armor_181_Head",
+            "Armor_186_Head",
+            "Armor_187_Head",
+            "Armor_188_Head",
+            "Armor_189_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-125",
+          "label": "Well-Worn Hair Band",
+          "baseId": "Armor_1151_Head",
+          "ids": [
+            "Armor_1151_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-126",
+          "label": "Yiga Armor",
+          "baseId": "Armor_1300_Upper",
+          "ids": [
+            "Armor_1300_Upper",
+            "Armor_1301_Upper",
+            "Armor_1302_Upper",
+            "Armor_1303_Upper",
+            "Armor_1304_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-127",
+          "label": "Yiga Mask",
+          "baseId": "Armor_1300_Head",
+          "ids": [
+            "Armor_1300_Head",
+            "Armor_1301_Head",
+            "Armor_1302_Head",
+            "Armor_1303_Head",
+            "Armor_1304_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-128",
+          "label": "Yiga Tights",
+          "baseId": "Armor_1300_Lower",
+          "ids": [
+            "Armor_1300_Lower",
+            "Armor_1301_Lower",
+            "Armor_1302_Lower",
+            "Armor_1303_Lower",
+            "Armor_1304_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-129",
+          "label": "Zant's Helmet",
+          "baseId": "Armor_178_Head",
+          "ids": [
+            "Armor_178_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-130",
+          "label": "Zonaite Helm",
+          "baseId": "Armor_1091_Head",
+          "ids": [
+            "Armor_1091_Head",
+            "Armor_1092_Head",
+            "Armor_1093_Head",
+            "Armor_1094_Head",
+            "Armor_1095_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-131",
+          "label": "Zonaite Shin Guards",
+          "baseId": "Armor_1091_Lower",
+          "ids": [
+            "Armor_1091_Lower",
+            "Armor_1092_Lower",
+            "Armor_1093_Lower",
+            "Armor_1094_Lower",
+            "Armor_1095_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-132",
+          "label": "Zonaite Waistguard",
+          "baseId": "Armor_1091_Upper",
+          "ids": [
+            "Armor_1091_Upper",
+            "Armor_1092_Upper",
+            "Armor_1093_Upper",
+            "Armor_1094_Upper",
+            "Armor_1095_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-133",
+          "label": "Zora Armor",
+          "baseId": "Armor_006_Upper",
+          "ids": [
+            "Armor_006_Upper",
+            "Armor_007_Upper",
+            "Armor_062_Upper",
+            "Armor_063_Upper",
+            "Armor_064_Upper"
+          ]
+        },
+        {
+          "id": "armor_inventory-134",
+          "label": "Zora Greaves",
+          "baseId": "Armor_006_Lower",
+          "ids": [
+            "Armor_006_Lower",
+            "Armor_007_Lower",
+            "Armor_062_Lower",
+            "Armor_063_Lower",
+            "Armor_064_Lower"
+          ]
+        },
+        {
+          "id": "armor_inventory-135",
+          "label": "Zora Helm",
+          "baseId": "Armor_006_Head",
+          "ids": [
+            "Armor_006_Head",
+            "Armor_007_Head",
+            "Armor_062_Head",
+            "Armor_063_Head",
+            "Armor_064_Head"
+          ]
+        }
+      ],
+      "sourceCounts": {
+        "ids": 135,
+        "arrayHash": 1
+      },
+      "arrayHash": "754e8549"
+    },
+    {
+      "id": "armor_upgraded",
+      "label": "Armor (4-star upgraded)",
+      "kind": "armor_upgraded",
+      "targetValue": null,
+      "includeMissing": true,
+      "items": [
+        {
+          "id": "armor_upgraded-001",
+          "label": "Amber Earrings",
+          "baseId": "Armor_029_Head",
+          "upgradedId": "Armor_140_Head",
+          "upgradedIds": [
+            "Armor_140_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-002",
+          "label": "Ancient Hero's Aspect",
+          "baseId": "Armor_1036_Head",
+          "upgradedId": "Armor_1040_Head",
+          "upgradedIds": [
+            "Armor_1040_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-003",
+          "label": "Barbarian Armor",
+          "baseId": "Armor_048_Upper",
+          "upgradedId": "Armor_114_Upper",
+          "upgradedIds": [
+            "Armor_114_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-004",
+          "label": "Barbarian Helm",
+          "baseId": "Armor_048_Head",
+          "upgradedId": "Armor_114_Head",
+          "upgradedIds": [
+            "Armor_114_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-005",
+          "label": "Barbarian Leg Wraps",
+          "baseId": "Armor_048_Lower",
+          "upgradedId": "Armor_114_Lower",
+          "upgradedIds": [
+            "Armor_114_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-006",
+          "label": "Cap of the Hero",
+          "baseId": "Armor_230_Head",
+          "upgradedId": "Armor_234_Head",
+          "upgradedIds": [
+            "Armor_234_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-007",
+          "label": "Cap of the Sky",
+          "baseId": "Armor_215_Head",
+          "upgradedId": "Armor_219_Head",
+          "upgradedIds": [
+            "Armor_219_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-008",
+          "label": "Cap of the Wild",
+          "baseId": "Armor_005_Head",
+          "upgradedId": "Armor_061_Head",
+          "upgradedIds": [
+            "Armor_061_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-009",
+          "label": "Cap of the Wind",
+          "baseId": "Armor_205_Head",
+          "upgradedId": "Armor_209_Head",
+          "upgradedIds": [
+            "Armor_209_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-010",
+          "label": "Cap of Time",
+          "baseId": "Armor_200_Head",
+          "upgradedId": "Armor_204_Head",
+          "upgradedIds": [
+            "Armor_204_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-011",
+          "label": "Cap of Twilight",
+          "baseId": "Armor_210_Head",
+          "upgradedId": "Armor_214_Head",
+          "upgradedIds": [
+            "Armor_214_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-012",
+          "label": "Champion's Leather",
+          "baseId": "Armor_1106_Upper",
+          "upgradedId": "Armor_1110_Upper",
+          "upgradedIds": [
+            "Armor_1110_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-013",
+          "label": "Charged Headdress",
+          "baseId": "Armor_1066_Head",
+          "upgradedId": "Armor_1070_Head",
+          "upgradedIds": [
+            "Armor_1070_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-014",
+          "label": "Charged Shirt",
+          "baseId": "Armor_1066_Upper",
+          "upgradedId": "Armor_1070_Upper",
+          "upgradedIds": [
+            "Armor_1070_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-015",
+          "label": "Charged Trousers",
+          "baseId": "Armor_1066_Lower",
+          "upgradedId": "Armor_1070_Lower",
+          "upgradedIds": [
+            "Armor_1070_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-016",
+          "label": "Climber's Bandanna",
+          "baseId": "Armor_014_Head",
+          "upgradedId": "Armor_086_Head",
+          "upgradedIds": [
+            "Armor_086_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-017",
+          "label": "Climbing Boots",
+          "baseId": "Armor_014_Lower",
+          "upgradedId": "Armor_086_Lower",
+          "upgradedIds": [
+            "Armor_086_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-018",
+          "label": "Climbing Gear",
+          "baseId": "Armor_014_Upper",
+          "upgradedId": "Armor_086_Upper",
+          "upgradedIds": [
+            "Armor_086_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-019",
+          "label": "Desert Voe Headband",
+          "baseId": "Armor_008_Head",
+          "upgradedId": "Armor_067_Head",
+          "upgradedIds": [
+            "Armor_067_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-020",
+          "label": "Desert Voe Spaulder",
+          "baseId": "Armor_008_Upper",
+          "upgradedId": "Armor_067_Upper",
+          "upgradedIds": [
+            "Armor_067_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-021",
+          "label": "Desert Voe Trousers",
+          "baseId": "Armor_008_Lower",
+          "upgradedId": "Armor_067_Lower",
+          "upgradedIds": [
+            "Armor_067_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-022",
+          "label": "Diamond Circlet",
+          "baseId": "Armor_024_Head",
+          "upgradedId": "Armor_120_Head",
+          "upgradedIds": [
+            "Armor_120_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-023",
+          "label": "Ember Headdress",
+          "baseId": "Armor_1061_Head",
+          "upgradedId": "Armor_1065_Head",
+          "upgradedIds": [
+            "Armor_1065_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-024",
+          "label": "Ember Shirt",
+          "baseId": "Armor_1061_Upper",
+          "upgradedId": "Armor_1065_Upper",
+          "upgradedIds": [
+            "Armor_1065_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-025",
+          "label": "Ember Trousers",
+          "baseId": "Armor_1061_Lower",
+          "upgradedId": "Armor_1065_Lower",
+          "upgradedIds": [
+            "Armor_1065_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-026",
+          "label": "Fierce Deity Armor",
+          "baseId": "Armor_225_Upper",
+          "upgradedId": "Armor_229_Upper",
+          "upgradedIds": [
+            "Armor_229_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-027",
+          "label": "Fierce Deity Boots",
+          "baseId": "Armor_225_Lower",
+          "upgradedId": "Armor_229_Lower",
+          "upgradedIds": [
+            "Armor_229_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-028",
+          "label": "Fierce Deity Mask",
+          "baseId": "Armor_225_Head",
+          "upgradedId": "Armor_229_Head",
+          "upgradedIds": [
+            "Armor_229_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-029",
+          "label": "Flamebreaker Armor",
+          "baseId": "Armor_011_Upper",
+          "upgradedId": "Armor_076_Upper",
+          "upgradedIds": [
+            "Armor_076_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-030",
+          "label": "Flamebreaker Boots",
+          "baseId": "Armor_011_Lower",
+          "upgradedId": "Armor_076_Lower",
+          "upgradedIds": [
+            "Armor_076_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-031",
+          "label": "Flamebreaker Helm",
+          "baseId": "Armor_011_Head",
+          "upgradedId": "Armor_076_Head",
+          "upgradedIds": [
+            "Armor_076_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-032",
+          "label": "Froggy Hood",
+          "baseId": "Armor_1046_Head",
+          "upgradedId": "Armor_1050_Head",
+          "upgradedIds": [
+            "Armor_1050_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-033",
+          "label": "Froggy Leggings",
+          "baseId": "Armor_1046_Lower",
+          "upgradedId": "Armor_1050_Lower",
+          "upgradedIds": [
+            "Armor_1050_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-034",
+          "label": "Froggy Sleeve",
+          "baseId": "Armor_1046_Upper",
+          "upgradedId": "Armor_1050_Upper",
+          "upgradedIds": [
+            "Armor_1050_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-035",
+          "label": "Frostbite Headdress",
+          "baseId": "Armor_1071_Head",
+          "upgradedId": "Armor_1075_Head",
+          "upgradedIds": [
+            "Armor_1075_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-036",
+          "label": "Frostbite Shirt",
+          "baseId": "Armor_1071_Upper",
+          "upgradedId": "Armor_1075_Upper",
+          "upgradedIds": [
+            "Armor_1075_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-037",
+          "label": "Frostbite Trousers",
+          "baseId": "Armor_1071_Lower",
+          "upgradedId": "Armor_1075_Lower",
+          "upgradedIds": [
+            "Armor_1075_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-038",
+          "label": "Gaiters of the Depths",
+          "baseId": "Armor_1141_Lower",
+          "upgradedId": "Armor_1145_Lower",
+          "upgradedIds": [
+            "Armor_1145_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-039",
+          "label": "Glide Mask",
+          "baseId": "Armor_1006_Head",
+          "upgradedId": "Armor_1010_Head",
+          "upgradedIds": [
+            "Armor_1010_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-040",
+          "label": "Glide Shirt",
+          "baseId": "Armor_1006_Upper",
+          "upgradedId": "Armor_1010_Upper",
+          "upgradedIds": [
+            "Armor_1010_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-041",
+          "label": "Glide Tights",
+          "baseId": "Armor_1006_Lower",
+          "upgradedId": "Armor_1010_Lower",
+          "upgradedIds": [
+            "Armor_1010_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-042",
+          "label": "Hood of the Depths",
+          "baseId": "Armor_1141_Head",
+          "upgradedId": "Armor_1145_Head",
+          "upgradedIds": [
+            "Armor_1145_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-043",
+          "label": "Hylian Hood",
+          "baseId": "Armor_001_Head",
+          "upgradedId": "Armor_015_Head",
+          "upgradedIds": [
+            "Armor_015_Head",
+            "Armor_1156_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-044",
+          "label": "Hylian Trousers",
+          "baseId": "Armor_001_Lower",
+          "upgradedId": "Armor_015_Lower",
+          "upgradedIds": [
+            "Armor_015_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-045",
+          "label": "Hylian Tunic",
+          "baseId": "Armor_001_Upper",
+          "upgradedId": "Armor_015_Upper",
+          "upgradedIds": [
+            "Armor_015_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-046",
+          "label": "Mask of Awakening",
+          "baseId": "Armor_1096_Head",
+          "upgradedId": "Armor_1100_Head",
+          "upgradedIds": [
+            "Armor_1100_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-047",
+          "label": "Miner's Mask",
+          "baseId": "Armor_1051_Head",
+          "upgradedId": "Armor_1055_Head",
+          "upgradedIds": [
+            "Armor_1055_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-048",
+          "label": "Miner's Top",
+          "baseId": "Armor_1051_Upper",
+          "upgradedId": "Armor_1055_Upper",
+          "upgradedIds": [
+            "Armor_1055_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-049",
+          "label": "Miner's Trousers",
+          "baseId": "Armor_1051_Lower",
+          "upgradedId": "Armor_1055_Lower",
+          "upgradedIds": [
+            "Armor_1055_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-050",
+          "label": "Opal Earrings",
+          "baseId": "Armor_028_Head",
+          "upgradedId": "Armor_136_Head",
+          "upgradedIds": [
+            "Armor_136_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-051",
+          "label": "Radiant Mask",
+          "baseId": "Armor_017_Head",
+          "upgradedId": "Armor_090_Head",
+          "upgradedIds": [
+            "Armor_090_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-052",
+          "label": "Radiant Shirt",
+          "baseId": "Armor_017_Upper",
+          "upgradedId": "Armor_090_Upper",
+          "upgradedIds": [
+            "Armor_090_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-053",
+          "label": "Radiant Tights",
+          "baseId": "Armor_017_Lower",
+          "upgradedId": "Armor_090_Lower",
+          "upgradedIds": [
+            "Armor_090_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-054",
+          "label": "Royal Guard Boots",
+          "baseId": "Armor_179_Lower",
+          "upgradedId": "Armor_1149_Lower",
+          "upgradedIds": [
+            "Armor_1149_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-055",
+          "label": "Royal Guard Cap",
+          "baseId": "Armor_179_Head",
+          "upgradedId": "Armor_1149_Head",
+          "upgradedIds": [
+            "Armor_1149_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-056",
+          "label": "Royal Guard Uniform",
+          "baseId": "Armor_179_Upper",
+          "upgradedId": "Armor_1149_Upper",
+          "upgradedIds": [
+            "Armor_1149_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-057",
+          "label": "Rubber Armor",
+          "baseId": "Armor_046_Upper",
+          "upgradedId": "Armor_106_Upper",
+          "upgradedIds": [
+            "Armor_106_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-058",
+          "label": "Rubber Helm",
+          "baseId": "Armor_046_Head",
+          "upgradedId": "Armor_106_Head",
+          "upgradedIds": [
+            "Armor_106_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-059",
+          "label": "Rubber Tights",
+          "baseId": "Armor_046_Lower",
+          "upgradedId": "Armor_106_Lower",
+          "upgradedIds": [
+            "Armor_106_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-060",
+          "label": "Ruby Circlet",
+          "baseId": "Armor_025_Head",
+          "upgradedId": "Armor_124_Head",
+          "upgradedIds": [
+            "Armor_124_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-061",
+          "label": "Sand Boots",
+          "baseId": "Armor_049_Lower",
+          "upgradedId": "Armor_155_Lower",
+          "upgradedIds": [
+            "Armor_155_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-062",
+          "label": "Sapphire Circlet",
+          "baseId": "Armor_026_Head",
+          "upgradedId": "Armor_128_Head",
+          "upgradedIds": [
+            "Armor_128_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-063",
+          "label": "Sheik's Mask",
+          "baseId": "Armor_220_Head",
+          "upgradedId": "Armor_224_Head",
+          "upgradedIds": [
+            "Armor_224_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-064",
+          "label": "Snow Boots",
+          "baseId": "Armor_141_Lower",
+          "upgradedId": "Armor_159_Lower",
+          "upgradedIds": [
+            "Armor_159_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-065",
+          "label": "Snowquill Headdress",
+          "baseId": "Armor_009_Head",
+          "upgradedId": "Armor_073_Head",
+          "upgradedIds": [
+            "Armor_073_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-066",
+          "label": "Snowquill Trousers",
+          "baseId": "Armor_009_Lower",
+          "upgradedId": "Armor_073_Lower",
+          "upgradedIds": [
+            "Armor_073_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-067",
+          "label": "Snowquill Tunic",
+          "baseId": "Armor_009_Upper",
+          "upgradedId": "Armor_073_Upper",
+          "upgradedIds": [
+            "Armor_073_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-068",
+          "label": "Soldier's Armor",
+          "baseId": "Armor_020_Upper",
+          "upgradedId": "Armor_098_Upper",
+          "upgradedIds": [
+            "Armor_098_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-069",
+          "label": "Soldier's Greaves",
+          "baseId": "Armor_020_Lower",
+          "upgradedId": "Armor_098_Lower",
+          "upgradedIds": [
+            "Armor_098_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-070",
+          "label": "Soldier's Helm",
+          "baseId": "Armor_020_Head",
+          "upgradedId": "Armor_098_Head",
+          "upgradedIds": [
+            "Armor_098_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-071",
+          "label": "Stealth Chest Guard",
+          "baseId": "Armor_012_Upper",
+          "upgradedId": "Armor_079_Upper",
+          "upgradedIds": [
+            "Armor_079_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-072",
+          "label": "Stealth Mask",
+          "baseId": "Armor_012_Head",
+          "upgradedId": "Armor_079_Head",
+          "upgradedIds": [
+            "Armor_079_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-073",
+          "label": "Stealth Tights",
+          "baseId": "Armor_012_Lower",
+          "upgradedId": "Armor_079_Lower",
+          "upgradedIds": [
+            "Armor_079_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-074",
+          "label": "Topaz Earrings",
+          "baseId": "Armor_027_Head",
+          "upgradedId": "Armor_132_Head",
+          "upgradedIds": [
+            "Armor_132_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-075",
+          "label": "Trousers of Awakening",
+          "baseId": "Armor_1096_Lower",
+          "upgradedId": "Armor_1100_Lower",
+          "upgradedIds": [
+            "Armor_1100_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-076",
+          "label": "Trousers of the Hero",
+          "baseId": "Armor_230_Lower",
+          "upgradedId": "Armor_234_Lower",
+          "upgradedIds": [
+            "Armor_234_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-077",
+          "label": "Trousers of the Sky",
+          "baseId": "Armor_215_Lower",
+          "upgradedId": "Armor_219_Lower",
+          "upgradedIds": [
+            "Armor_219_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-078",
+          "label": "Trousers of the Wild",
+          "baseId": "Armor_005_Lower",
+          "upgradedId": "Armor_061_Lower",
+          "upgradedIds": [
+            "Armor_061_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-079",
+          "label": "Trousers of the Wind",
+          "baseId": "Armor_205_Lower",
+          "upgradedId": "Armor_209_Lower",
+          "upgradedIds": [
+            "Armor_209_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-080",
+          "label": "Trousers of Time",
+          "baseId": "Armor_200_Lower",
+          "upgradedId": "Armor_204_Lower",
+          "upgradedIds": [
+            "Armor_204_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-081",
+          "label": "Trousers of Twilight",
+          "baseId": "Armor_210_Lower",
+          "upgradedId": "Armor_214_Lower",
+          "upgradedIds": [
+            "Armor_214_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-082",
+          "label": "Tunic of Awakening",
+          "baseId": "Armor_1096_Upper",
+          "upgradedId": "Armor_1100_Upper",
+          "upgradedIds": [
+            "Armor_1100_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-083",
+          "label": "Tunic of Memories",
+          "baseId": "Armor_116_Upper",
+          "upgradedId": "Armor_151_Upper",
+          "upgradedIds": [
+            "Armor_151_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-084",
+          "label": "Tunic of the Depths",
+          "baseId": "Armor_1141_Upper",
+          "upgradedId": "Armor_1145_Upper",
+          "upgradedIds": [
+            "Armor_1145_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-085",
+          "label": "Tunic of the Hero",
+          "baseId": "Armor_230_Upper",
+          "upgradedId": "Armor_234_Upper",
+          "upgradedIds": [
+            "Armor_234_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-086",
+          "label": "Tunic of the Sky",
+          "baseId": "Armor_215_Upper",
+          "upgradedId": "Armor_219_Upper",
+          "upgradedIds": [
+            "Armor_219_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-087",
+          "label": "Tunic of the Wild",
+          "baseId": "Armor_005_Upper",
+          "upgradedId": "Armor_061_Upper",
+          "upgradedIds": [
+            "Armor_061_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-088",
+          "label": "Tunic of the Wind",
+          "baseId": "Armor_205_Upper",
+          "upgradedId": "Armor_209_Upper",
+          "upgradedIds": [
+            "Armor_209_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-089",
+          "label": "Tunic of Time",
+          "baseId": "Armor_200_Upper",
+          "upgradedId": "Armor_204_Upper",
+          "upgradedIds": [
+            "Armor_204_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-090",
+          "label": "Tunic of Twilight",
+          "baseId": "Armor_210_Upper",
+          "upgradedId": "Armor_214_Upper",
+          "upgradedIds": [
+            "Armor_214_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-091",
+          "label": "Vah Medoh Divine Helm",
+          "baseId": "Armor_182_Head",
+          "upgradedId": "Armor_193_Head",
+          "upgradedIds": [
+            "Armor_193_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-092",
+          "label": "Vah Naboris Divine Helm",
+          "baseId": "Armor_184_Head",
+          "upgradedId": "Armor_169_Head",
+          "upgradedIds": [
+            "Armor_169_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-093",
+          "label": "Vah Rudania Divine Helm",
+          "baseId": "Armor_183_Head",
+          "upgradedId": "Armor_197_Head",
+          "upgradedIds": [
+            "Armor_197_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-094",
+          "label": "Vah Ruta Divine Helm",
+          "baseId": "Armor_181_Head",
+          "upgradedId": "Armor_189_Head",
+          "upgradedIds": [
+            "Armor_189_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-095",
+          "label": "Yiga Armor",
+          "baseId": "Armor_1300_Upper",
+          "upgradedId": "Armor_1304_Upper",
+          "upgradedIds": [
+            "Armor_1304_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-096",
+          "label": "Yiga Mask",
+          "baseId": "Armor_1300_Head",
+          "upgradedId": "Armor_1304_Head",
+          "upgradedIds": [
+            "Armor_1304_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-097",
+          "label": "Yiga Tights",
+          "baseId": "Armor_1300_Lower",
+          "upgradedId": "Armor_1304_Lower",
+          "upgradedIds": [
+            "Armor_1304_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-098",
+          "label": "Zonaite Helm",
+          "baseId": "Armor_1091_Head",
+          "upgradedId": "Armor_1095_Head",
+          "upgradedIds": [
+            "Armor_1095_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-099",
+          "label": "Zonaite Shin Guards",
+          "baseId": "Armor_1091_Lower",
+          "upgradedId": "Armor_1095_Lower",
+          "upgradedIds": [
+            "Armor_1095_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-100",
+          "label": "Zonaite Waistguard",
+          "baseId": "Armor_1091_Upper",
+          "upgradedId": "Armor_1095_Upper",
+          "upgradedIds": [
+            "Armor_1095_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-101",
+          "label": "Zora Armor",
+          "baseId": "Armor_006_Upper",
+          "upgradedId": "Armor_064_Upper",
+          "upgradedIds": [
+            "Armor_064_Upper"
+          ]
+        },
+        {
+          "id": "armor_upgraded-102",
+          "label": "Zora Greaves",
+          "baseId": "Armor_006_Lower",
+          "upgradedId": "Armor_064_Lower",
+          "upgradedIds": [
+            "Armor_064_Lower"
+          ]
+        },
+        {
+          "id": "armor_upgraded-103",
+          "label": "Zora Helm",
+          "baseId": "Armor_006_Head",
+          "upgradedId": "Armor_064_Head",
+          "upgradedIds": [
+            "Armor_064_Head"
+          ]
+        }
+      ],
+      "sourceCounts": {
+        "ids": 103,
+        "arrayHash": 1
+      },
+      "arrayHash": "754e8549"
+    },
+    {
       "id": "pristine_weapons",
       "label": "Pristine Weapons",
       "kind": "positive",

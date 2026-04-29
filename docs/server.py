@@ -246,12 +246,18 @@ def initialize():
     completion_stat_hashes = {
         int(item["value"], 16)
         for stat in completion_data.get("stats", [])
+        if not stat.get("arrayHash")
         for item in stat["items"]
+    }
+    completion_array_hashes = {
+        int(stat["arrayHash"], 16)
+        for stat in completion_data.get("stats", [])
+        if stat.get("arrayHash")
     }
 
     _DATA["korok_data"] = korok_data
     _DATA["completion_data"] = completion_data
-    _DATA["tracked_hashes"] = korok_hashes | completion_bool_hashes | completion_stat_hashes
+    _DATA["tracked_hashes"] = korok_hashes | completion_bool_hashes | completion_stat_hashes | completion_array_hashes
     _DATA["tracked_save_paths"] = scan_tracked_saves()
     _DATA["initialized"] = True
 
@@ -441,6 +447,24 @@ def parse_guid_values(data):
     return values
 
 
+def read_string64_array(data, pointer):
+    if pointer is None or pointer < 0 or pointer + 4 > len(data):
+        return []
+
+    count = read_u32(data, pointer)
+    start = pointer + 4
+    if count <= 0 or start + count * 64 > len(data):
+        return []
+
+    values = []
+    for index in range(count):
+        raw = data[start + index * 64:start + (index + 1) * 64]
+        text = raw.split(b"\x00", 1)[0].decode("utf-8", errors="ignore").strip()
+        if text:
+            values.append(text)
+    return values
+
+
 def build_markers(values):
     korok_data = _DATA["korok_data"] or {"hidden": [], "carry": []}
     markers = []
@@ -508,10 +532,53 @@ def build_completion(values, guid_values):
     return categories
 
 
-def build_completion_stats(values):
+def build_armor_stat(stat, values, data):
+    array_hash = stat.get("arrayHash")
+    pointer = values.get(int(array_hash, 16), None) if array_hash else None
+    pouch_names = set(read_string64_array(data, pointer))
+    obtained_count = 0
+    missing_items = []
+
+    for item in stat["items"]:
+        if stat["kind"] == "armor_inventory":
+            obtained = any(armor_id in pouch_names for armor_id in item.get("ids", []))
+        else:
+            upgraded_ids = item.get("upgradedIds") or [item.get("upgradedId")]
+            obtained = any(armor_id in pouch_names for armor_id in upgraded_ids)
+        if obtained:
+            obtained_count += 1
+        elif stat.get("includeMissing"):
+            missing_items.append({
+                "id": item["id"],
+                "label": item.get("label") or item["id"],
+                "baseId": item.get("baseId"),
+                "upgradedId": item.get("upgradedId"),
+                "upgradedIds": item.get("upgradedIds"),
+            })
+
+    total = len(stat["items"])
+    summary = {
+        "id": stat["id"],
+        "label": stat["label"],
+        "kind": stat["kind"],
+        "total": total,
+        "obtained": obtained_count,
+        "remaining": total - obtained_count,
+        "sourceCounts": stat.get("sourceCounts", {}),
+    }
+    if stat.get("includeMissing"):
+        summary["missing"] = missing_items
+    return summary
+
+
+def build_completion_stats(values, data):
     completion_data = _DATA["completion_data"] or {"stats": []}
     stats = []
     for stat in completion_data.get("stats", []):
+        if stat["kind"].startswith("armor_"):
+            stats.append(build_armor_stat(stat, values, data))
+            continue
+
         target_value = stat.get("targetValue")
         target_raw = int(target_value, 16) if target_value else None
         obtained_count = 0
@@ -587,7 +654,7 @@ def build_save_payload(data, save_path, save_modified, snapshot=None, update_lat
     player_position = parse_player_position(data)
     markers = build_markers(values)
     completion = build_completion(values, guid_values)
-    completion_stats = build_completion_stats(values)
+    completion_stats = build_completion_stats(values, data)
     obtained_markers = [marker for marker in markers if marker["obtained"]]
     if update_latest_state:
         update_state(markers, save_modified, save_path)

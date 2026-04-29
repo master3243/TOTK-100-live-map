@@ -22,7 +22,7 @@
         <div class="brand">
           <p class="eyebrow">Tears of the Kingdom</p>
           <h1>Save Map Helper</h1>
-          <h2>v1.1.12</h2>
+          <h2>v1.1.13</h2>
           <div class="save-upload">
             <input id="manualSaveInput" type="file" accept=".sav,application/octet-stream">
             <label class="upload-button" for="manualSaveInput">Upload save</label>
@@ -63,6 +63,14 @@
             <div>
               <dt>Completionist</dt>
               <dd id="completionistSummary" class="hover-stat" tabindex="0">-- / --</dd>
+            </div>
+            <div>
+              <dt>Armor</dt>
+              <dd id="armorInventorySummary" class="hover-stat" tabindex="0">-- / --</dd>
+            </div>
+            <div>
+              <dt>Armor (4-star upgraded)</dt>
+              <dd id="armorUpgradedSummary" class="hover-stat" tabindex="0">-- / --</dd>
             </div>
             <div>
               <dt>Compendium</dt>
@@ -288,8 +296,12 @@
               <span>Endgame Save (~70%)</span>
             </label>
             <label>
-              <input type="radio" name="demoSave" value="almost100" data-src="assets/almost%20100%25.sav" data-filename="almost 100%.sav" data-label="100% Save (almost)">
-              <span>100% Save (almost)</span>
+              <input type="radio" name="demoSave" value="save98" data-src="assets/~98%25.sav" data-filename="~98%.sav" data-label="~98% Save">
+              <span>~98% Save</span>
+            </label>
+            <label>
+              <input type="radio" name="demoSave" value="save99" data-src="assets/~99%25.sav" data-filename="~99%.sav" data-label="~99% Save">
+              <span>~99% Save</span>
             </label>
           </div>
         </div>

@@ -29,6 +29,8 @@ const saveStatus = document.querySelector("#saveStatus");
 const seedCount = document.querySelector("#seedCount");
 const locationCount = document.querySelector("#locationCount");
 const completionistSummary = document.querySelector("#completionistSummary");
+const armorInventorySummary = document.querySelector("#armorInventorySummary");
+const armorUpgradedSummary = document.querySelector("#armorUpgradedSummary");
 const compendiumSummary = document.querySelector("#compendiumSummary");
 const pristineWeaponsSummary = document.querySelector("#pristineWeaponsSummary");
 const fabricsSummary = document.querySelector("#fabricsSummary");
@@ -52,6 +54,8 @@ const layerButtons = document.querySelectorAll(".layer-button");
 let currentPristineWeaponsStat = null;
 let currentFabricsStat = null;
 let currentCompendiumStat = null;
+let currentArmorInventoryStat = null;
+let currentArmorUpgradedStat = null;
 const overlayInputs = {
   playerLocation: document.querySelector("#showPlayerLocation"),
   playerGuide: document.querySelector("#showPlayerGuide"),
@@ -744,6 +748,14 @@ function pristineWeaponsTooltip(stat) {
 
 function fabricsTooltip(stat) {
   return statListTooltip(stat, "Fabrics", "All fabrics collected.");
+}
+
+function armorInventoryTooltip(stat) {
+  return statListTooltip(stat, "Armor", "All armor collected.");
+}
+
+function armorUpgradedTooltip(stat) {
+  return statListTooltip(stat, "Armor (4-star upgraded)", "All upgradeable armor is at 4 stars.");
 }
 
 function compendiumTooltip(stat) {
@@ -1687,6 +1699,34 @@ function updateSaveSummary(payload) {
   completionistSummary.textContent =
     totalCategories > 0 ? `${completedCategories} / ${totalCategories}` : "-- / --";
 
+  const armorInventory = (payload.completionStats || []).find((stat) => stat.id === "armor_inventory");
+  currentArmorInventoryStat = armorInventory || null;
+  armorInventorySummary.textContent = armorInventory
+    ? `${armorInventory.obtained} / ${armorInventory.total}`
+    : "-- / --";
+  const missingArmor = sortStatMissingByLabel(armorInventory?.missing);
+  const armorHoverText = armorInventory
+    ? missingArmor.length
+      ? `Still missing:\n${missingArmor.map((item) => item.label || item.id).join("\n")}`
+      : "All armor collected"
+    : "No armor data loaded";
+  armorInventorySummary.removeAttribute("title");
+  armorInventorySummary.setAttribute("aria-label", armorHoverText);
+
+  const armorUpgraded = (payload.completionStats || []).find((stat) => stat.id === "armor_upgraded");
+  currentArmorUpgradedStat = armorUpgraded || null;
+  armorUpgradedSummary.textContent = armorUpgraded
+    ? `${armorUpgraded.obtained} / ${armorUpgraded.total}`
+    : "-- / --";
+  const missingArmorUpgrades = sortStatMissingByLabel(armorUpgraded?.missing);
+  const armorUpgradedHoverText = armorUpgraded
+    ? missingArmorUpgrades.length
+      ? `Still left:\n${missingArmorUpgrades.map((item) => item.label || item.id).join("\n")}`
+      : "All upgradeable armor is at 4 stars"
+    : "No armor upgrade data loaded";
+  armorUpgradedSummary.removeAttribute("title");
+  armorUpgradedSummary.setAttribute("aria-label", armorUpgradedHoverText);
+
   const compendium = (payload.completionStats || []).find((stat) => stat.id === "compendium");
   currentCompendiumStat = compendium || null;
   compendiumSummary.textContent = compendium
@@ -1792,10 +1832,14 @@ async function refreshKoroks() {
     seedCount.textContent = "-- / --";
     locationCount.textContent = "-- / --";
     completionistSummary.textContent = "-- / --";
+    armorInventorySummary.textContent = "-- / --";
+    armorUpgradedSummary.textContent = "-- / --";
     compendiumSummary.textContent = "-- / --";
     currentCompendiumStat = null;
     currentPristineWeaponsStat = null;
     currentFabricsStat = null;
+    currentArmorInventoryStat = null;
+    currentArmorUpgradedStat = null;
     pristineWeaponsSummary.textContent = "-- / --";
     fabricsSummary.textContent = "-- / --";
     pristineWeaponsSummary.removeAttribute("title");
@@ -1979,11 +2023,17 @@ def _ensure_data_ready():
     completion_stat_hashes = {
         int(item["value"], 16)
         for stat in completion_data.get("stats", [])
+        if not stat.get("arrayHash")
         for item in stat["items"]
+    }
+    completion_array_hashes = {
+        int(stat["arrayHash"], 16)
+        for stat in completion_data.get("stats", [])
+        if stat.get("arrayHash")
     }
     _srv._DATA["korok_data"] = korok_data
     _srv._DATA["completion_data"] = completion_data
-    _srv._DATA["tracked_hashes"] = korok_hashes | completion_bool_hashes | completion_stat_hashes
+    _srv._DATA["tracked_hashes"] = korok_hashes | completion_bool_hashes | completion_stat_hashes | completion_array_hashes
     _DATA_READY = True
 
 def parse_uploaded_save(path: str, filename: str = "progress.sav", mtime: float | None = None):
@@ -2003,7 +2053,7 @@ def parse_uploaded_save(path: str, filename: str = "progress.sav", mtime: float 
     player_position = _srv.parse_player_position(data)
     markers = _srv.build_markers(values)
     completion = _srv.build_completion(values, guid_values)
-    completion_stats = _srv.build_completion_stats(values)
+    completion_stats = _srv.build_completion_stats(values, data)
     obtained_markers = [m for m in markers if m.get("obtained")]
     save_modified = int(mtime if mtime is not None else time.time())
 
@@ -2526,6 +2576,8 @@ if (saveDropLayer) {
 attachStatTooltip(pristineWeaponsSummary, () => pristineWeaponsTooltip(currentPristineWeaponsStat));
 attachStatTooltip(fabricsSummary, () => fabricsTooltip(currentFabricsStat));
 attachStatTooltip(compendiumSummary, () => compendiumTooltip(currentCompendiumStat));
+attachStatTooltip(armorInventorySummary, () => armorInventoryTooltip(currentArmorInventoryStat));
+attachStatTooltip(armorUpgradedSummary, () => armorUpgradedTooltip(currentArmorUpgradedStat));
 attachStatTooltip(completionistSummary, completionistTooltip, { onClick: pulseMarkersMenu });
 
 window.addEventListener("resize", preserveMapCenterOnViewportResize);
