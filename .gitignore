@@ -2,6 +2,7 @@ __pycache__/
 env/
 
 .pyinstaller-build/
+docs/*.spec
 *.exe
 *.log
 state.json
