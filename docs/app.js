@@ -58,13 +58,46 @@ const logEntries = document.querySelector("#logEntries");
 const logPanel = logEntries?.closest(".log-panel") || null;
 const viewPlayer = document.querySelector("#viewPlayer");
 const layerButtons = document.querySelectorAll(".layer-button");
-let currentPristineWeaponsStat = null;
-let currentFabricsStat = null;
-let currentCompendiumStat = null;
-let currentArmorInventoryStat = null;
-let currentArmorUpgradedStat = null;
+let currentCompletionStats = {};
 let currentPlayerStats = null;
 let currentRecipes = null;
+const completionStatSummaries = [
+  {
+    id: "armor_inventory",
+    element: armorInventorySummary,
+    missingPrefix: "Still missing",
+    completeText: "All armor collected",
+    emptyText: "No armor data loaded",
+  },
+  {
+    id: "armor_upgraded",
+    element: armorUpgradedSummary,
+    missingPrefix: "Still left",
+    completeText: "All upgradeable armor is at 4 stars",
+    emptyText: "No armor upgrade data loaded",
+  },
+  {
+    id: "compendium",
+    element: compendiumSummary,
+    missingPrefix: "Still missing",
+    completeText: "All compendium pictures registered",
+    emptyText: "No compendium data loaded",
+  },
+  {
+    id: "pristine_weapons",
+    element: pristineWeaponsSummary,
+    missingPrefix: "Still locked",
+    completeText: "All pristine weapons unlocked",
+    emptyText: "No pristine weapon data loaded",
+  },
+  {
+    id: "fabrics",
+    element: fabricsSummary,
+    missingPrefix: "Still left",
+    completeText: "All fabrics collected",
+    emptyText: "No fabric data loaded",
+  },
+];
 const overlayInputs = {
   playerLocation: document.querySelector("#showPlayerLocation"),
   playerGuide: document.querySelector("#showPlayerGuide"),
@@ -434,6 +467,11 @@ function markerLabel(marker) {
   const state = marker.obtained ? "Obtained" : "Missing";
   const kind = marker.kind === "carry" ? "carry pair" : "hidden Korok";
   return `${state} ${kind} ${marker.id}`;
+}
+
+function markerDisplayPoint(marker) {
+  const targetWorld = parseTargetWorldFromNote(marker.note);
+  return targetWorld ? worldToMap(targetWorld.x, targetWorld.z) : marker;
 }
 
 function enabledGroupItems(items) {
@@ -1681,30 +1719,9 @@ function renderMarkers(markers = korokMarkers, categories = completionCategories
     }
 
     element.className = classes.join(" ");
-    if (marker.kind === "carry") {
-      const targetWorld = parseTargetWorldFromNote(marker.note);
-      if (targetWorld) {
-        const targetMap = worldToMap(targetWorld.x, targetWorld.z);
-        element.style.left = `${targetMap.mapX}px`;
-        element.style.top = `${targetMap.mapY}px`;
-      } else {
-        element.style.left = `${marker.mapX}px`;
-        element.style.top = `${marker.mapY}px`;
-      }
-    } else if (marker.kind === "hidden") {
-      const targetWorld = parseTargetWorldFromNote(marker.note);
-      if (targetWorld) {
-        const targetMap = worldToMap(targetWorld.x, targetWorld.z);
-        element.style.left = `${targetMap.mapX}px`;
-        element.style.top = `${targetMap.mapY}px`;
-      } else {
-        element.style.left = `${marker.mapX}px`;
-        element.style.top = `${marker.mapY}px`;
-      }
-    } else {
-      element.style.left = `${marker.mapX}px`;
-      element.style.top = `${marker.mapY}px`;
-    }
+    const point = markerDisplayPoint(marker);
+    element.style.left = `${point.mapX}px`;
+    element.style.top = `${point.mapY}px`;
     element.removeAttribute("title");
     attachTooltip(element, korokTooltip(marker));
     fragment.appendChild(element);
@@ -1756,46 +1773,46 @@ function renderMarkers(markers = korokMarkers, categories = completionCategories
   markerLayer.replaceChildren(fragment);
 }
 
-function updateCompletionCounts(categories) {
-  let totalObtained = 0;
-  let totalTotal = 0;
+function completionCountText(category) {
+  const remaining = category.remaining ?? 0;
+  const obtained = category.obtained ?? 0;
+  const total = category.total ?? remaining + obtained;
+  return `${remaining} (${obtained}/${total})`;
+}
 
-  // Koroks live outside the payload.completion categories; keep the row consistent anyway.
-  const korokCount = completionCounts.koroks;
-  const korokInput = completionInputs.koroks;
-  const korokLabel = korokInput?.closest("label");
-  if (korokCount) {
-    korokCount.textContent = korokCountSummary?.text ?? "--";
-  }
-  const korokToggle = completionObtainedToggles.koroks;
-  if (korokToggle) {
-    const obtained = korokCountSummary?.obtained ?? 0;
-    korokToggle.disabled = obtained === 0;
-    korokToggle.classList.toggle("active", completionShowObtained.koroks);
-    korokToggle.setAttribute("aria-pressed", completionShowObtained.koroks ? "true" : "false");
-    korokToggle.title = completionShowObtained.koroks ? "Hide obtained" : "Show obtained";
-    korokToggle.setAttribute(
-      "aria-label",
-      `${completionShowObtained.koroks ? "Hide" : "Show"} obtained Koroks`,
-    );
-  }
-  if (korokLabel) {
-    const complete = Boolean(korokCountSummary) && korokCountSummary.remaining === 0;
-    korokLabel.classList.toggle("completion-row-complete", complete);
-    korokLabel.classList.toggle("completion-row-incomplete", !complete);
-  }
+function completionRowModels(categories) {
+  return [
+    korokCountSummary
+      ? {
+          id: "koroks",
+          label: "Koroks",
+          contributesToTotal: false,
+          ...korokCountSummary,
+        }
+      : {
+          id: "koroks",
+          label: "Koroks",
+          obtained: 0,
+          total: 0,
+          remaining: 0,
+          contributesToTotal: false,
+          unloaded: true,
+        },
+    ...categories.map((category) => ({
+      contributesToTotal: true,
+      ...category,
+    })),
+  ];
+}
 
-  for (const category of categories) {
+function updateCompletionRow(category) {
     const count = completionCounts[category.id];
     const input = completionInputs[category.id];
     const label = input?.closest("label");
     const remaining = category.remaining ?? 0;
     const obtained = category.obtained ?? 0;
-    const total = category.total ?? remaining + obtained;
-    totalObtained += obtained;
-    totalTotal += total;
     if (count) {
-      count.textContent = `${remaining} (${obtained}/${total})`;
+      count.textContent = category.unloaded ? "--" : completionCountText(category);
     }
     const toggle = completionObtainedToggles[category.id];
     if (toggle) {
@@ -1809,9 +1826,21 @@ function updateCompletionCounts(categories) {
       );
     }
     if (label) {
-      const complete = remaining === 0;
+      const complete = !category.unloaded && remaining === 0;
       label.classList.toggle("completion-row-complete", complete);
       label.classList.toggle("completion-row-incomplete", !complete);
+    }
+}
+
+function updateCompletionCounts(categories) {
+  let totalObtained = 0;
+  let totalTotal = 0;
+
+  for (const category of completionRowModels(categories)) {
+    updateCompletionRow(category);
+    if (category.contributesToTotal) {
+      totalObtained += category.obtained ?? 0;
+      totalTotal += category.total ?? (category.remaining ?? 0) + (category.obtained ?? 0);
     }
   }
   if (completionTotalSummary) {
@@ -1819,6 +1848,31 @@ function updateCompletionCounts(categories) {
     completionTotalSummary.setAttribute("title", "Obtained / total (all completion categories)");
   }
   updateCompletionEyesToggleUi();
+}
+
+function completionStatsById(stats) {
+  return Object.fromEntries((stats || []).map((stat) => [stat.id, stat]));
+}
+
+function completionStatAriaText(stat, config) {
+  if (!stat) {
+    return config.emptyText;
+  }
+  const missing = sortStatMissingByLabel(stat.missing);
+  if (!missing.length) {
+    return config.completeText;
+  }
+  return `${config.missingPrefix}:\n${missing.map((item) => item.label || item.id).join("\n")}`;
+}
+
+function updateCompletionStatSummary(config) {
+  if (!config.element) {
+    return;
+  }
+  const stat = currentCompletionStats[config.id] || null;
+  config.element.textContent = stat ? `${stat.obtained} / ${stat.total}` : "-- / --";
+  config.element.removeAttribute("title");
+  config.element.setAttribute("aria-label", completionStatAriaText(stat, config));
 }
 
 function updateSaveSummary(payload) {
@@ -1873,75 +1927,8 @@ function updateSaveSummary(payload) {
   completionistSummary.textContent =
     totalCategories > 0 ? `${completedCategories} / ${totalCategories}` : "-- / --";
 
-  const armorInventory = (payload.completionStats || []).find((stat) => stat.id === "armor_inventory");
-  currentArmorInventoryStat = armorInventory || null;
-  armorInventorySummary.textContent = armorInventory
-    ? `${armorInventory.obtained} / ${armorInventory.total}`
-    : "-- / --";
-  const missingArmor = sortStatMissingByLabel(armorInventory?.missing);
-  const armorHoverText = armorInventory
-    ? missingArmor.length
-      ? `Still missing:\n${missingArmor.map((item) => item.label || item.id).join("\n")}`
-      : "All armor collected"
-    : "No armor data loaded";
-  armorInventorySummary.removeAttribute("title");
-  armorInventorySummary.setAttribute("aria-label", armorHoverText);
-
-  const armorUpgraded = (payload.completionStats || []).find((stat) => stat.id === "armor_upgraded");
-  currentArmorUpgradedStat = armorUpgraded || null;
-  armorUpgradedSummary.textContent = armorUpgraded
-    ? `${armorUpgraded.obtained} / ${armorUpgraded.total}`
-    : "-- / --";
-  const missingArmorUpgrades = sortStatMissingByLabel(armorUpgraded?.missing);
-  const armorUpgradedHoverText = armorUpgraded
-    ? missingArmorUpgrades.length
-      ? `Still left:\n${missingArmorUpgrades.map((item) => item.label || item.id).join("\n")}`
-      : "All upgradeable armor is at 4 stars"
-    : "No armor upgrade data loaded";
-  armorUpgradedSummary.removeAttribute("title");
-  armorUpgradedSummary.setAttribute("aria-label", armorUpgradedHoverText);
-
-  const compendium = (payload.completionStats || []).find((stat) => stat.id === "compendium");
-  currentCompendiumStat = compendium || null;
-  compendiumSummary.textContent = compendium
-    ? `${compendium.obtained} / ${compendium.total}`
-    : "-- / --";
-  const missingCompendium = sortStatMissingByLabel(compendium?.missing);
-  const compendiumHoverText = compendium
-    ? missingCompendium.length
-      ? `Still missing:\n${missingCompendium.map((item) => item.label || item.id).join("\n")}`
-      : "All compendium pictures registered"
-    : "No compendium data loaded";
-  compendiumSummary.removeAttribute("title");
-  compendiumSummary.setAttribute("aria-label", compendiumHoverText);
-
-  const pristineWeapons = (payload.completionStats || []).find((stat) => stat.id === "pristine_weapons");
-  currentPristineWeaponsStat = pristineWeapons || null;
-  pristineWeaponsSummary.textContent = pristineWeapons
-    ? `${pristineWeapons.obtained} / ${pristineWeapons.total}`
-    : "-- / --";
-  const missingWeapons = sortStatMissingByLabel(pristineWeapons?.missing);
-  const hoverText = pristineWeapons
-    ? missingWeapons.length
-      ? `Still locked:\n${missingWeapons.map((item) => item.label || item.id).join("\n")}`
-      : "All pristine weapons unlocked"
-    : "No pristine weapon data loaded";
-  pristineWeaponsSummary.removeAttribute("title");
-  pristineWeaponsSummary.setAttribute("aria-label", hoverText);
-
-  const fabrics = (payload.completionStats || []).find((stat) => stat.id === "fabrics");
-  currentFabricsStat = fabrics || null;
-  fabricsSummary.textContent = fabrics
-    ? `${fabrics.obtained} / ${fabrics.total}`
-    : "-- / --";
-  const missingFabrics = sortStatMissingByLabel(fabrics?.missing);
-  const fabricsHoverText = fabrics
-    ? missingFabrics.length
-      ? `Still left:\n${missingFabrics.map((item) => item.label || item.id).join("\n")}`
-      : "All fabrics collected"
-    : "No fabric data loaded";
-  fabricsSummary.removeAttribute("title");
-  fabricsSummary.setAttribute("aria-label", fabricsHoverText);
+  currentCompletionStats = completionStatsById(payload.completionStats);
+  completionStatSummaries.forEach(updateCompletionStatSummary);
   updateLiveSaveRows();
 }
 
@@ -2007,22 +1994,8 @@ async function refreshKoroks() {
     seedCount.textContent = "-- / --";
     locationCount.textContent = "-- / --";
     completionistSummary.textContent = "-- / --";
-    armorInventorySummary.textContent = "-- / --";
-    armorUpgradedSummary.textContent = "-- / --";
-    compendiumSummary.textContent = "-- / --";
-    currentCompendiumStat = null;
-    currentPristineWeaponsStat = null;
-    currentFabricsStat = null;
-    currentArmorInventoryStat = null;
-    currentArmorUpgradedStat = null;
-    pristineWeaponsSummary.textContent = "-- / --";
-    fabricsSummary.textContent = "-- / --";
-    pristineWeaponsSummary.removeAttribute("title");
-    fabricsSummary.removeAttribute("title");
-    compendiumSummary.removeAttribute("title");
-    compendiumSummary.setAttribute("aria-label", "No compendium data loaded");
-    pristineWeaponsSummary.setAttribute("aria-label", "No pristine weapon data loaded");
-    fabricsSummary.setAttribute("aria-label", "No fabric data loaded");
+    currentCompletionStats = {};
+    completionStatSummaries.forEach(updateCompletionStatSummary);
     updateLiveSaveRows();
     console.error(error);
   }
@@ -2685,11 +2658,11 @@ if (saveDropLayer) {
     hideManualSaveDropUi();
   });
 }
-attachStatTooltip(pristineWeaponsSummary, () => pristineWeaponsTooltip(currentPristineWeaponsStat));
-attachStatTooltip(fabricsSummary, () => fabricsTooltip(currentFabricsStat));
-attachStatTooltip(compendiumSummary, () => compendiumTooltip(currentCompendiumStat));
-attachStatTooltip(armorInventorySummary, () => armorInventoryTooltip(currentArmorInventoryStat));
-attachStatTooltip(armorUpgradedSummary, () => armorUpgradedTooltip(currentArmorUpgradedStat));
+attachStatTooltip(pristineWeaponsSummary, () => pristineWeaponsTooltip(currentCompletionStats.pristine_weapons));
+attachStatTooltip(fabricsSummary, () => fabricsTooltip(currentCompletionStats.fabrics));
+attachStatTooltip(compendiumSummary, () => compendiumTooltip(currentCompletionStats.compendium));
+attachStatTooltip(armorInventorySummary, () => armorInventoryTooltip(currentCompletionStats.armor_inventory));
+attachStatTooltip(armorUpgradedSummary, () => armorUpgradedTooltip(currentCompletionStats.armor_upgraded));
 attachStatTooltip(completionistSummary, completionistTooltip, { onClick: pulseMarkersMenu });
 if (recipesSummary) attachStatTooltip(recipesSummary, () => recipesTooltip(currentRecipes));
 if (lifeSummary) attachStatTooltip(lifeSummary, () => playerLifeTooltip(currentPlayerStats));

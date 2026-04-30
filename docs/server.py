@@ -570,6 +570,18 @@ def read_string64_array(data, pointer):
     return values
 
 
+def progress_summary(definition, total, obtained_count):
+    return {
+        "id": definition["id"],
+        "label": definition["label"],
+        "kind": definition["kind"],
+        "total": total,
+        "obtained": obtained_count,
+        "remaining": total - obtained_count,
+        "sourceCounts": definition.get("sourceCounts", {}),
+    }
+
+
 def build_markers(values):
     korok_data = _DATA["korok_data"] or {"hidden": [], "carry": []}
     markers = []
@@ -621,19 +633,13 @@ def build_completion(values, guid_values):
 
             items.append(marker)
 
-        total = len(category["items"])
-        categories.append({
-            "id": category["id"],
-            "label": category["label"],
-            "kind": category["kind"],
-            "total": total,
-            "obtained": obtained_count,
-            "remaining": total - obtained_count,
+        summary = progress_summary(category, len(category["items"]), obtained_count)
+        summary.update({
             "items": items,
             "obtainedItems": obtained_items,
             "defaultVisible": category.get("defaultVisible", True),
-            "sourceCounts": category.get("sourceCounts", {}),
         })
+        categories.append(summary)
     return categories
 
 
@@ -661,16 +667,7 @@ def build_armor_stat(stat, values, data):
                 "upgradedIds": item.get("upgradedIds"),
             })
 
-    total = len(stat["items"])
-    summary = {
-        "id": stat["id"],
-        "label": stat["label"],
-        "kind": stat["kind"],
-        "total": total,
-        "obtained": obtained_count,
-        "remaining": total - obtained_count,
-        "sourceCounts": stat.get("sourceCounts", {}),
-    }
+    summary = progress_summary(stat, len(stat["items"]), obtained_count)
     if stat.get("includeMissing"):
         summary["missing"] = missing_items
     return summary
@@ -707,16 +704,7 @@ def build_completion_stats(values, data):
                     "rawValue": raw,
                 })
 
-        total = len(stat["items"])
-        summary = {
-            "id": stat["id"],
-            "label": stat["label"],
-            "kind": stat["kind"],
-            "total": total,
-            "obtained": obtained_count,
-            "remaining": total - obtained_count,
-            "sourceCounts": stat.get("sourceCounts", {}),
-        }
+        summary = progress_summary(stat, len(stat["items"]), obtained_count)
         if stat.get("includeMissing"):
             summary["missing"] = missing_items
         stats.append(summary)
