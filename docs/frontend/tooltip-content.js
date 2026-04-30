@@ -1,6 +1,6 @@
 
 function formatWorldCoordsXZy(position) {
-  return `X ${formatNumber(position.x)} Z ${formatNumber(-position.z)} (Y ${formatNumber(position.y)})`;
+  return `X ${formatNumber(position.x)}   Z ${formatNumber(-position.z)}   (Y ${formatNumber(position.y)})`;
 }
 
 function completionTooltip(marker) {
@@ -16,10 +16,10 @@ function completionTooltip(marker) {
     { label: "Status", value: marker.obtained ? "Obtained" : "Unobtained" },
     ...extraRows,
     { label: "Layer", value: formatLayer(marker.layer) },
-    { label: "World", value: formatWorldCoordsXZy(marker) },
     { label: "Map", value: `${formatNumber(marker.mapX)}, ${formatNumber(marker.mapY)}` },
     { label: "Hex", value: markerHexId(marker) },
     { label: "Source", value: displayNote },
+    { label: "World", value: formatWorldCoordsXZy(marker) },
   ]);
   const links = [];
   const zdUrl = marker.seedValue ? zeldaDungeonSeedUrl(marker) : null;
@@ -39,9 +39,9 @@ function completionTooltip(marker) {
 function playerTooltip(position) {
   return tooltipRows("Link's current location", [
     { label: "Layer", value: formatLayer(position.layer) },
-    { label: "World", value: formatWorldCoordsXZy(position) },
     { label: "Map", value: `${formatNumber(position.mapX)}, ${formatNumber(position.mapY)}` },
     position.raw ? { label: "Raw save", value: formatWorldCoordsXZy(position.raw) } : {},
+    { label: "World", value: formatWorldCoordsXZy(position) },
   ]);
 }
 

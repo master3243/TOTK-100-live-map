@@ -1586,6 +1586,18 @@ body.save-drop-active {
   color: var(--text);
 }
 
+.map-tooltip .tooltip-row-world dd {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  line-height: 1.2;
+  white-space: pre;
+}
+
+.map-tooltip .tooltip-row-world dt {
+  font-weight: 700;
+}
+
 .map-tooltip .tooltip-actions {
   display: flex;
   flex-wrap: wrap;

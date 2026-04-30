@@ -119,7 +119,14 @@ function tooltipExternalLinks(links) {
 function tooltipRows(title, rows) {
   const rowHtml = rows
     .filter((row) => row.value !== undefined && row.value !== null && row.value !== "")
-    .map((row) => `<div><dt>${escapeHtml(row.label)}</dt><dd>${escapeHtml(row.value)}</dd></div>`)
+    .map((row) => {
+      const cls = String(row.label ?? "")
+        .trim()
+        .toLowerCase()
+        .replaceAll(/[^a-z0-9]+/g, "-")
+        .replaceAll(/^-+|-+$/g, "");
+      return `<div class="tooltip-row-${cls}"><dt>${escapeHtml(row.label)}</dt><dd>${escapeHtml(row.value)}</dd></div>`;
+    })
     .join("");
   return `<strong>${escapeHtml(title)}</strong><dl>${rowHtml}</dl>`;
 }
