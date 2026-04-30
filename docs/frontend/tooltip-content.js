@@ -1,3 +1,8 @@
+
+function formatWorldCoordsXZy(position) {
+  return `X ${formatNumber(position.x)} Z ${formatNumber(-position.z)} (Y ${formatNumber(position.y)})`;
+}
+
 function completionTooltip(marker) {
   const displayNote = displayMarkerNote(marker);
   const extraRows = marker.seedValue
@@ -11,7 +16,7 @@ function completionTooltip(marker) {
     { label: "Status", value: marker.obtained ? "Obtained" : "Unobtained" },
     ...extraRows,
     { label: "Layer", value: formatLayer(marker.layer) },
-    { label: "World", value: `X ${formatNumber(marker.x)}, Y ${formatNumber(marker.y)}, Z ${formatNumber(marker.z)}` },
+    { label: "World", value: formatWorldCoordsXZy(marker) },
     { label: "Map", value: `${formatNumber(marker.mapX)}, ${formatNumber(marker.mapY)}` },
     { label: "Hex", value: markerHexId(marker) },
     { label: "Source", value: displayNote },
@@ -34,9 +39,9 @@ function completionTooltip(marker) {
 function playerTooltip(position) {
   return tooltipRows("Link's current location", [
     { label: "Layer", value: formatLayer(position.layer) },
-    { label: "World", value: `X ${formatNumber(position.x)}, Y ${formatNumber(position.y)}, Z ${formatNumber(position.z)}` },
+    { label: "World", value: formatWorldCoordsXZy(position) },
     { label: "Map", value: `${formatNumber(position.mapX)}, ${formatNumber(position.mapY)}` },
-    position.raw ? { label: "Raw save", value: `X ${formatNumber(position.raw.x)}, Y ${formatNumber(position.raw.y)}, Z ${formatNumber(position.raw.z)}` } : {},
+    position.raw ? { label: "Raw save", value: formatWorldCoordsXZy(position.raw) } : {},
   ]);
 }
 

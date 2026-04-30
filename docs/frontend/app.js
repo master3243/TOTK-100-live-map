@@ -90,7 +90,7 @@ viewport.addEventListener("pointermove", (event) => {
     cursorValue.textContent = "--, --";
   } else {
     const world = mapToWorld(mapX, mapY);
-    cursorValue.textContent = `X ${Math.round(world.x)}, Z ${Math.round(world.z)}`;
+    cursorValue.textContent = `X ${Math.round(world.x)}, Z ${Math.round(-world.z)}`;
   }
 
   // If a hover-tooltip is visible but we're not over a marker (and it's not pinned), dismiss it.
