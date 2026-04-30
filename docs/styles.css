@@ -1166,6 +1166,112 @@ body.save-drop-active {
   background-image: url("assets/zd-icons/korok2.png");
 }
 
+.nearest-delta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 2px;
+}
+
+.nearest-delta-separator {
+  color: rgba(243, 239, 226, 0.42);
+  font-weight: 700;
+}
+
+.nearest-delta-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-variant-numeric: tabular-nums;
+}
+
+.nearest-delta-arrow {
+  position: relative;
+  display: inline-block;
+  width: 2ch;
+  height: 2ch;
+  flex: 0 0 2ch;
+}
+
+.nearest-delta-arrow::before {
+  content: "";
+  position: absolute;
+  left: 16%;
+  top: 46%;
+  width: 62%;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.nearest-delta-arrow::after {
+  content: "";
+  position: absolute;
+  right: 10%;
+  top: 28%;
+  width: 0;
+  height: 0;
+  border-top: 0.38em solid transparent;
+  border-bottom: 0.38em solid transparent;
+  border-left: 0.55em solid var(--accent);
+}
+
+.nearest-delta-arrow.horizontal {
+  transform: rotate(var(--delta-rotate));
+}
+
+.nearest-delta-arrow.up {
+  transform: rotate(-90deg);
+}
+
+.nearest-delta-arrow.down {
+  transform: rotate(90deg);
+}
+
+.nearest-delta-arrow.up,
+.nearest-delta-arrow.down {
+  transform: none;
+}
+
+.nearest-delta-arrow.up::before,
+.nearest-delta-arrow.down::before {
+  left: 50%;
+  top: 28%;
+  width: 3px;
+  height: 58%;
+  transform: translateX(-50%);
+}
+
+.nearest-delta-arrow.up::before {
+  background: #65d47e;
+}
+
+.nearest-delta-arrow.down::before {
+  background: #e85d5d;
+}
+
+.nearest-delta-arrow.up::after,
+.nearest-delta-arrow.down::after {
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  border-left: 0.42em solid transparent;
+  border-right: 0.42em solid transparent;
+}
+
+.nearest-delta-arrow.up::after {
+  top: 8%;
+  border-bottom: 0.58em solid #65d47e;
+  border-top: 0;
+}
+
+.nearest-delta-arrow.down::after {
+  top: auto;
+  bottom: 8%;
+  border-top: 0.58em solid #e85d5d;
+  border-bottom: 0;
+}
+
 .marker-layer,
 .guide-layer {
   position: absolute;

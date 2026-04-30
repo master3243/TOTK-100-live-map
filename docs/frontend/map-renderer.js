@@ -51,6 +51,43 @@ function markerHudWorld(marker) {
   return parseTargetWorldFromNote(marker.note) || marker;
 }
 
+function appendDeltaHud(targetWorld) {
+  if (!playerPosition) {
+    return;
+  }
+  const dx = targetWorld.x - playerPosition.x;
+  const dz = targetWorld.z - playerPosition.z;
+  const dy = targetWorld.y - playerPosition.y;
+  const targetMap = worldToMap(targetWorld.x, targetWorld.z);
+  const direction = arrowDirection(playerPosition, targetMap);
+  const delta = document.createElement("span");
+  delta.className = "nearest-delta";
+
+  const separator = document.createElement("span");
+  separator.className = "nearest-delta-separator";
+  separator.textContent = "|";
+
+  const horizontal = document.createElement("span");
+  horizontal.className = "nearest-delta-group";
+  horizontal.append(document.createTextNode(formatNumber(Math.hypot(dx, dz))));
+  const horizontalArrow = document.createElement("span");
+  horizontalArrow.className = "nearest-delta-arrow horizontal";
+  horizontalArrow.style.setProperty("--delta-rotate", `${direction?.angle || 0}rad`);
+  horizontalArrow.setAttribute("aria-hidden", "true");
+  horizontal.append(horizontalArrow);
+
+  const vertical = document.createElement("span");
+  vertical.className = "nearest-delta-group vertical";
+  vertical.append(document.createTextNode(`(${formatNumber(Math.abs(dy))}`));
+  const verticalArrow = document.createElement("span");
+  verticalArrow.className = `nearest-delta-arrow ${dy < 0 ? "down" : "up"}`;
+  verticalArrow.setAttribute("aria-hidden", "true");
+  vertical.append(verticalArrow, document.createTextNode(")"));
+
+  delta.append(separator, horizontal, vertical);
+  nearestCoords.append(delta);
+}
+
 function setNearestCoords(marker) {
   if (!nearestCoords) {
     return;
@@ -72,6 +109,7 @@ function setNearestCoords(marker) {
   }
   icon.setAttribute("aria-hidden", "true");
   nearestCoords.append(icon, document.createTextNode(`X ${formatNumber(world.x)}  Z ${formatNumber(world.z)}  (Y ${formatNumber(world.y)})`));
+  appendDeltaHud(world);
 }
 
 function appendTargetLines(markers) {
