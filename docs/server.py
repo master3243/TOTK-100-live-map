@@ -229,14 +229,6 @@ def load_json(path):
         return json.load(file)
 
 
-def load_korok_data():
-    return load_json(KOROK_DATA_PATH)
-
-
-def load_completion_data():
-    return load_json(COMPLETION_DATA_PATH)
-
-
 def iter_hash_variables():
     if not HASHES_DATA_PATH.exists():
         return
@@ -273,34 +265,13 @@ def load_recipe_reference_ids() -> set[str]:
 
 def initialize_data():
     """Load static JSON/reference data and derive the hashes used by save parsing."""
-    korok_data = load_korok_data()
-    completion_data = load_completion_data()
-    korok_hashes = {
-        int(entry["hash"], 16)
-        for group in ("hidden", "carry")
-        for entry in korok_data[group]
-    }
-    completion_bool_hashes = {
-        int(item["value"], 16)
-        for category in completion_data["categories"]
-        if category["kind"] == "bool"
-        for item in category["items"]
-    }
-    completion_stat_hashes = {
-        int(item["value"], 16)
-        for stat in completion_data.get("stats", [])
-        if not stat.get("arrayHash")
-        for item in stat["items"]
-    }
-    completion_array_hashes = {
-        int(stat["arrayHash"], 16)
-        for stat in completion_data.get("stats", [])
-        if stat.get("arrayHash")
-    }
-
+    korok_data = load_json(KOROK_DATA_PATH)
+    completion_data = load_json(COMPLETION_DATA_PATH)
     recipe_hash_to_id = load_recipe_hash_to_id()
     recipe_hashes = set(recipe_hash_to_id.keys())
     recipe_reference_ids = load_recipe_reference_ids()
+    categories = completion_data["categories"]
+    stats = completion_data.get("stats", [])
 
     _DATA["korok_data"] = korok_data
     _DATA["completion_data"] = completion_data
@@ -309,10 +280,22 @@ def initialize_data():
     _DATA["recipe_reference_ids"] = recipe_reference_ids
     _DATA["recipe_total"] = len(recipe_reference_ids) if recipe_reference_ids else min(len(recipe_hashes), MAX_RECIPES)
     _DATA["tracked_hashes"] = (
-        korok_hashes
-        | completion_bool_hashes
-        | completion_stat_hashes
-        | completion_array_hashes
+        {
+            int(entry["hash"], 16)
+            for group in ("hidden", "carry")
+            for entry in korok_data[group]
+        }
+        | {
+            int(item["value"], 16)
+            for definition in [*categories, *(stat for stat in stats if not stat.get("arrayHash"))]
+            if definition["kind"] != "guid"
+            for item in definition["items"]
+        }
+        | {
+            int(stat["arrayHash"], 16)
+            for stat in stats
+            if stat.get("arrayHash")
+        }
         | recipe_hashes
     )
 
@@ -522,14 +505,6 @@ def progress_summary(definition, total, obtained_count):
     }
 
 
-def add_missing_item(missing_items, item, *keys):
-    missing_items.append({
-        "id": item["id"],
-        "label": item.get("label") or item["id"],
-        **{key: item.get(key) for key in keys if key in item},
-    })
-
-
 def make_progress_marker(entry, category, obtained, raw_value):
     marker = dict(entry)
     marker.update(world_to_map(entry["x"], entry["z"]))
@@ -539,6 +514,27 @@ def make_progress_marker(entry, category, obtained, raw_value):
     marker["obtained"] = obtained
     marker["rawValue"] = raw_value
     return marker
+
+
+def target_raw(definition):
+    value = definition.get("targetValue")
+    return int(value, 16) if value else None
+
+
+def is_raw_obtained(definition, raw):
+    expected = target_raw(definition)
+    if definition["kind"] == "reverse" and expected is not None:
+        return raw != expected
+    if expected is not None:
+        return raw == expected
+    return raw != 0
+
+
+def save_item_state(definition, item, values, guid_values=None):
+    if definition["kind"] == "guid":
+        return int(item["value"]) in (guid_values or set()), "guid", None
+    raw = values.get(int(item["value"], 16), 0)
+    return is_raw_obtained(definition, raw), f"{raw:08x}", raw
 
 
 def split_progress_items(definition, markers):
@@ -553,6 +549,16 @@ def split_progress_items(definition, markers):
         "defaultVisible": definition.get("defaultVisible", True),
     })
     return summary
+
+
+def build_map_category(category, values, guid_values):
+    return split_progress_items(
+        category,
+        [
+            make_progress_marker(item, category, *save_item_state(category, item, values, guid_values)[:2])
+            for item in category["items"]
+        ],
+    )
 
 
 def build_seed_category(values):
@@ -583,49 +589,44 @@ def build_seed_category(values):
 
 def build_completion(values, guid_values):
     completion_data = _DATA["completion_data"] or {"categories": []}
-    categories = [build_seed_category(values)]
-    for category in completion_data["categories"]:
-        markers = []
-        target_value = category.get("targetValue")
-        target_raw = int(target_value, 16) if target_value else None
-        for item in category["items"]:
-            if category["kind"] == "guid":
-                obtained = int(item["value"]) in guid_values
-                raw_value = "guid"
-            else:
-                hash_value = int(item["value"], 16)
-                raw = values.get(hash_value, 0)
-                obtained = raw == target_raw if target_raw is not None else raw != 0
-                raw_value = f"{raw:08x}"
+    return [build_seed_category(values)] + [
+        build_map_category(category, values, guid_values)
+        for category in completion_data["categories"]
+    ]
 
-            markers.append(make_progress_marker(item, category, obtained, raw_value))
 
-        categories.append(split_progress_items(category, markers))
-    return categories
+def build_stat_summary(stat, item_state, missing_keys=()):
+    obtained_count = 0
+    missing_items = []
+
+    for item in stat["items"]:
+        obtained, extra_missing = item_state(item)
+        if obtained:
+            obtained_count += 1
+        elif stat.get("includeMissing"):
+            missing_items.append({
+                "id": item["id"],
+                "label": item.get("label") or item["id"],
+                **{key: item.get(key) for key in missing_keys if key in item},
+                **extra_missing,
+            })
+
+    summary = progress_summary(stat, len(stat["items"]), obtained_count)
+    if stat.get("includeMissing"):
+        summary["missing"] = missing_items
+    return summary
 
 
 def build_armor_stat(stat, values, data):
     array_hash = stat.get("arrayHash")
     pointer = values.get(int(array_hash, 16), None) if array_hash else None
     pouch_names = set(read_string64_array(data, pointer))
-    obtained_count = 0
-    missing_items = []
 
-    for item in stat["items"]:
-        if stat["kind"] == "armor_inventory":
-            obtained = any(armor_id in pouch_names for armor_id in item.get("ids", []))
-        else:
-            upgraded_ids = item.get("upgradedIds") or [item.get("upgradedId")]
-            obtained = any(armor_id in pouch_names for armor_id in upgraded_ids)
-        if obtained:
-            obtained_count += 1
-        elif stat.get("includeMissing"):
-            add_missing_item(missing_items, item, "baseId", "upgradedId", "upgradedIds")
+    def item_state(item):
+        ids = item.get("ids", []) if stat["kind"] == "armor_inventory" else item.get("upgradedIds") or [item.get("upgradedId")]
+        return any(armor_id in pouch_names for armor_id in ids), {}
 
-    summary = progress_summary(stat, len(stat["items"]), obtained_count)
-    if stat.get("includeMissing"):
-        summary["missing"] = missing_items
-    return summary
+    return build_stat_summary(stat, item_state, ("baseId", "upgradedId", "upgradedIds"))
 
 
 def build_completion_stats(values, data):
@@ -636,29 +637,11 @@ def build_completion_stats(values, data):
             stats.append(build_armor_stat(stat, values, data))
             continue
 
-        target_value = stat.get("targetValue")
-        target_raw = int(target_value, 16) if target_value else None
-        obtained_count = 0
-        missing_items = []
-        for item in stat["items"]:
-            hash_value = int(item["value"], 16)
-            raw = values.get(hash_value, 0)
-            if stat["kind"] == "reverse" and target_raw is not None:
-                obtained = raw != target_raw
-            elif target_raw is not None:
-                obtained = raw == target_raw
-            else:
-                obtained = raw != 0
-            if obtained:
-                obtained_count += 1
-            elif stat.get("includeMissing"):
-                add_missing_item(missing_items, item, "value")
-                missing_items[-1]["rawValue"] = raw
+        def item_state(item, stat=stat):
+            obtained, _raw_value, raw = save_item_state(stat, item, values)
+            return obtained, {"rawValue": raw}
 
-        summary = progress_summary(stat, len(stat["items"]), obtained_count)
-        if stat.get("includeMissing"):
-            summary["missing"] = missing_items
-        stats.append(summary)
+        stats.append(build_stat_summary(stat, item_state, ("value",)))
     return stats
 
 
@@ -671,6 +654,23 @@ def seed_category_summary(completion):
         "seeds": seed_category.get("obtainedSeeds", seed_category["obtained"]),
         "totalLocations": seed_category["total"],
         "totalSeeds": seed_category.get("totalSeeds", seed_category["total"]),
+    }
+
+
+def build_recipe_summary(values):
+    recipe_hash_to_id = _DATA.get("recipe_hash_to_id") or {}
+    recipe_reference_ids = _DATA.get("recipe_reference_ids") or set()
+    recipe_total = _DATA.get("recipe_total") or len(recipe_reference_ids) or len(recipe_hash_to_id)
+    cooked_recipe_ids = {
+        recipe_hash_to_id[hash_value]
+        for hash_value in recipe_hash_to_id
+        if values.get(hash_value, 0) != 0
+    }
+    canonical_ids = cooked_recipe_ids & recipe_reference_ids
+    return {
+        "obtained": len(canonical_ids),
+        "total": recipe_total,
+        "extras": sorted(cooked_recipe_ids - recipe_reference_ids),
     }
 
 
@@ -687,19 +687,7 @@ def build_save_payload(data, save_path, save_modified, snapshot=None):
     guid_values = parse_guid_values(data)
     player_position = parse_player_position(data)
     player_stats = parse_player_max_stats(data)
-    recipe_hash_to_id = _DATA.get("recipe_hash_to_id") or {}
-    recipe_reference_ids = _DATA.get("recipe_reference_ids") or set()
-    recipe_total = _DATA.get("recipe_total") or len(recipe_reference_ids) or len(recipe_hash_to_id)
-
-    # Determine which cooked recipes are in (or out of) the canonical 228 set.
-    cooked_recipe_ids = {
-        recipe_hash_to_id[hash_value]
-        for hash_value in recipe_hash_to_id
-        if values.get(hash_value, 0) != 0
-    }
-    in_228 = cooked_recipe_ids & recipe_reference_ids
-    extra = sorted(cooked_recipe_ids - recipe_reference_ids)
-    recipes_obtained = len(in_228)
+    recipes = build_recipe_summary(values)
     completion = build_completion(values, guid_values)
     completion_stats = build_completion_stats(values, data)
     seed_summary = seed_category_summary(completion)
@@ -715,11 +703,7 @@ def build_save_payload(data, save_path, save_modified, snapshot=None):
         "version": known_version,
         "player": player_position,
         "playerStats": player_stats,
-        "recipes": {
-            "obtained": recipes_obtained,
-            "total": recipe_total,
-            "extras": extra,
-        },
+        "recipes": recipes,
         "counts": {
             "totalLocations": seed_summary["locations"],
             "totalSeeds": seed_summary["seeds"],
@@ -779,13 +763,17 @@ def health_status():
         return f"{label}|{active['mtime']}"
 
 
-class Handler(SimpleHTTPRequestHandler):
-    API_GET = {
-        "/api/health": (health_status, "text"),
-        "/api/progress": (parse_current_save, "json"),
-        "/api/log": (lambda: {"entries": LOG_ENTRIES[-LOG_LIMIT:]}, "json"),
-    }
+def delta_log_payload(query):
+    try:
+        last_id = int((query.get("last_id") or ["0"])[0])
+    except ValueError:
+        last_id = 0
+    entries = [entry for entry in LOG_ENTRIES if entry.get("id", 0) > last_id]
+    latest_id = LOG_ENTRIES[-1]["id"] if LOG_ENTRIES else last_id
+    return {"entries": entries, "latestId": latest_id}
 
+
+class Handler(SimpleHTTPRequestHandler):
     def log_message(self, format, *args):
         # In PyInstaller --windowed apps, sys.stderr can be None which breaks the
         # default BaseHTTPRequestHandler logging. Route it to logging instead.
@@ -809,65 +797,53 @@ class Handler(SimpleHTTPRequestHandler):
     def send_text(self, status, body):
         self.send_body(status, str(body), "text/plain")
 
-    def send_api_result(self, body, response_type="json"):
-        if response_type == "text":
-            self.send_text(200, body)
-        else:
-            self.send_json(200, body)
+    def read_request_body(self):
+        length = int(self.headers.get("Content-Length", "0"))
+        if length <= 0:
+            raise ValueError("No save file was uploaded")
+        return self.rfile.read(length)
 
-    def send_api_error(self, response_type, error):
-        if response_type == "text":
-            self.send_text(500, str(error))
-        else:
-            self.send_json(500, {"error": str(error)})
-
-    def handle_api_get(self, parsed):
-        if parsed.path == "/api/delta_log":
-            query = parse_qs(parsed.query or "")
-            try:
-                last_id = int((query.get("last_id") or ["0"])[0])
-            except ValueError:
-                last_id = 0
-            entries = [entry for entry in LOG_ENTRIES if entry.get("id", 0) > last_id]
-            latest_id = LOG_ENTRIES[-1]["id"] if LOG_ENTRIES else last_id
-            self.send_json(200, {"entries": entries, "latestId": latest_id})
-            return True
-
-        route = self.API_GET.get(parsed.path)
-        if not route:
-            return False
-        handler, response_type = route
-        try:
-            self.send_api_result(handler(), response_type)
-        except Exception as error:
-            add_log(f"Error: {error}")
-            logging.exception("Error handling %s", parsed.path)
-            self.send_api_error(response_type, error)
-        return True
+    def handle_upload_save(self):
+        filename = self.headers.get("X-Filename", "uploaded progress.sav")
+        return parse_uploaded_save(self.read_request_body(), filename)
 
     def do_GET(self):
         parsed = urlparse(self.path)
-        if self.handle_api_get(parsed):
+        try:
+            if parsed.path == "/api/health":
+                self.send_text(200, health_status())
+                return
+            if parsed.path == "/api/progress":
+                self.send_json(200, parse_current_save())
+                return
+            if parsed.path == "/api/log":
+                self.send_json(200, {"entries": LOG_ENTRIES[-LOG_LIMIT:]})
+                return
+            if parsed.path == "/api/delta_log":
+                self.send_json(200, delta_log_payload(parse_qs(parsed.query or "")))
+                return
+        except Exception as error:
+            add_log(f"Error: {error}")
+            logging.exception("Error handling %s", parsed.path)
+            if parsed.path == "/api/health":
+                self.send_text(500, str(error))
+            else:
+                self.send_json(500, {"error": str(error)})
             return
         return super().do_GET()
 
     def do_POST(self):
         parsed = urlparse(self.path)
-        if parsed.path == "/api/upload_save":
-            try:
-                length = int(self.headers.get("Content-Length", "0"))
-                if length <= 0:
-                    self.send_json(400, {"error": "No save file was uploaded"})
-                    return
-                data = self.rfile.read(length)
-                filename = self.headers.get("X-Filename", "uploaded progress.sav")
-                self.send_json(200, parse_uploaded_save(data, filename))
-            except Exception as error:
-                add_log(f"Upload error: {error}")
-                logging.exception("Error handling /api/upload_save")
-                self.send_json(500, {"error": str(error)})
+        if parsed.path != "/api/upload_save":
+            self.send_json(404, {"error": "Not found"})
             return
-        self.send_json(404, {"error": "Not found"})
+        try:
+            self.send_json(200, self.handle_upload_save())
+        except Exception as error:
+            add_log(f"Upload error: {error}")
+            logging.exception("Error handling %s", parsed.path)
+            status = 400 if isinstance(error, ValueError) else 500
+            self.send_json(status, {"error": str(error)})
 
 
 def main():
