@@ -940,6 +940,7 @@ body.save-drop-active {
   align-items: flex-start;
   gap: 8px;
   pointer-events: none;
+  transition: left 180ms ease;
 }
 
 .sidebar-toggle {
@@ -1852,6 +1853,10 @@ body.save-drop-active {
     display: none;
   }
 
+  body.sidebar-open .map-hud-corner {
+    left: calc(min(360px, 92vw) + 12px);
+  }
+
   body.sidebar-open {
     overflow: hidden;
   }
@@ -1920,6 +1925,10 @@ body.narrow-layout .sidebar-toggle {
 
 body.narrow-layout.sidebar-open .sidebar-toggle {
   display: none;
+}
+
+body.narrow-layout.sidebar-open .map-hud-corner {
+  left: calc(min(360px, 92vw) + 12px);
 }
 
 body.narrow-layout.sidebar-open {
