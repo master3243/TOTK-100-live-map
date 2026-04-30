@@ -1,4 +1,5 @@
 import ast
+import csv
 import json
 import re
 from pathlib import Path
@@ -9,6 +10,7 @@ REFERENCES = ROOT / "references"
 OUTPUT = ROOT / "completion_data.json"
 LAYER_FIX = 500
 ICON_Y_OFFSET = 106
+MASTER_MAP = REFERENCES / "TOTK master sheet - Map.csv"
 
 TOWER_LOCATION_NAMES = [
     "Lookout Landing",
@@ -68,7 +70,7 @@ CATEGORIES = [
     {"id": "old_map", "label": "Old Map", "hashes": "TREASURE_MAPS_FOUND", "coords": "TREASURE_MAPS", "kind": "bool"},
     {"id": "armor", "label": "Armor", "source": "armor_locations", "kind": "bool"},
     {"id": "sage_will", "label": "Sage's Will", "hashes": "SAGE_WILLS_FOUND", "coords": "SAGE_WILLS", "kind": "guid"},
-    {"id": "general_locations", "label": "General Locations", "hashes": "LOCATIONS_VISITED", "coords": "LOCATIONS", "kind": "bool"},
+    {"id": "general_locations", "label": "General Locations", "source": "master_map", "kind": "bool"},
 ]
 
 
@@ -114,6 +116,7 @@ COLLECTABLE_FABRICS = [
 
 
 def murmur3_32(text, seed=0):
+    """reference CSV / completism file uses murmur3_32. so we do it here as well."""
     data = bytearray(text.encode("utf-8"))
     length = len(data)
     c1 = 0xCC9E2D51
@@ -313,6 +316,51 @@ def parse_coordinates(text, name):
             "note": normalize_target_note_y((match.group(4) or comment or "").strip()),
         })
     return rows
+
+
+def parse_master_map_general_locations(path):
+    master_map_exclude_types = {"Korok", "Cave", "Well", "Shrine", "Lightroot", "Tower"}
+    items = []
+    with path.open(encoding="utf-8-sig", newline="") as handle:
+        reader = csv.reader(handle)
+        header = next(reader)
+        indexes = {name: header.index(name) for name in ("ActorName", "Name", "Type", "Flag To Unlock")}
+        for row_number, row in enumerate(reader, start=2):
+            if not row or len(row) <= indexes["Type"]:
+                continue
+            type_name = row[indexes["Type"]].strip()
+            if type_name in master_map_exclude_types:
+                continue
+
+            flag = row[indexes["Flag To Unlock"]].strip()
+            x, y, z = parse_master_map_coordinate(row, row_number)
+            actor_name = row[indexes["ActorName"]].strip()
+            name = row[indexes["Name"]].strip()
+            items.append({
+                "id": f"general_locations-{len(items) + 1:03d}",
+                "value": f"{murmur3_32(flag):08x}",
+                "x": x,
+                "y": y,
+                "z": z,
+                "layer": layer_for(y),
+                "label": name,
+                "note": " - ".join(part for part in (flag, name, type_name, actor_name) if part),
+            })
+    return items
+
+
+def parse_master_map_coordinate(row, row_number):
+    for index in range(5, len(row), 3):
+        if index + 2 >= len(row):
+            break
+        if row[index].strip() and row[index + 1].strip():
+            height = row[index + 2].strip()
+            return (
+                round(float(row[index]), 2),
+                round(float(height), 2) if height else 0.0,
+                round(float(row[index + 1]), 2),
+            )
+    raise ValueError(f"Missing map coordinate on row {row_number}")
 
 
 def parse_pristine_weapon_items(equipment_text):
@@ -519,29 +567,6 @@ def objmap_id_for(category_id, index):
     return None
 
 
-def normalize_source_note(note):
-    return re.sub(r"\s+", " ", (note or "").strip())
-
-
-def validate_source_alignment(category_id, hash_rows, coords):
-    if category_id != "general_locations":
-        return
-    if len(hash_rows) != len(coords):
-        raise ValueError(
-            f"General Locations source mismatch: {len(hash_rows)} active hashes vs {len(coords)} active coordinates"
-        )
-    mismatches = []
-    for index, (hash_row, coord) in enumerate(zip(hash_rows, coords), start=1):
-        hash_note = normalize_source_note(hash_row.get("note"))
-        coord_note = normalize_source_note(coord.get("note"))
-        if hash_note and coord_note and hash_note != coord_note:
-            mismatches.append(f"{index}: hash={hash_note!r}, coord={coord_note!r}")
-    if mismatches:
-        preview = "; ".join(mismatches[:8])
-        extra = "" if len(mismatches) <= 8 else f"; ... {len(mismatches) - 8} more"
-        raise ValueError(f"General Locations hash/coordinate alignment failed: {preview}{extra}")
-
-
 def compendium_labels_by_value(hashes_text):
     labels = {}
     for line in hashes_text.splitlines():
@@ -564,6 +589,19 @@ def main():
     }
     categories = []
     for category in CATEGORIES:
+        if category.get("source") == "master_map":
+            items = parse_master_map_general_locations(MASTER_MAP)
+            categories.append({
+                "id": category["id"],
+                "label": category["label"],
+                "kind": category["kind"],
+                "targetValue": target_value(category.get("target")),
+                "defaultVisible": category.get("defaultVisible", True),
+                "items": items,
+                "sourceCounts": {"rows": len(items)},
+            })
+            continue
+
         if category.get("source") == "armor_locations":
             items = parse_armor_location_items(zeldacentral_chests, locale, hashes)
             categories.append({
@@ -579,7 +617,6 @@ def main():
 
         hash_rows = parse_hash_rows(completism, category["hashes"], category["kind"])
         coords = parse_coordinates(coordinates, category["coords"])
-        validate_source_alignment(category["id"], hash_rows, coords)
         count = min(len(hash_rows), len(coords))
         items = []
         for index in range(count):
