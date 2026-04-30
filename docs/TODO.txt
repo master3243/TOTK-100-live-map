@@ -1,0 +1,5 @@
+list quest/side quest/shrine quest
+4 old map treasures not tracked I think (because they are weapons) but they should be tracked as they show a X on the map
+Key Items aren't tracked
+DLC fabrics? probably not
+6 Bridles/Saddles not tracked
