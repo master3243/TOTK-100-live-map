@@ -32,7 +32,7 @@ ROOT = resource_root()
 RUNTIME_ROOT = runtime_root()
 
 CONFIG_PATH = RUNTIME_ROOT / "config.json"
-KOROK_DATA_PATH = ROOT / "references" / "korok_data.json"
+KOROK_DATA_PATH = ROOT / "korok_data.json"
 COMPLETION_DATA_PATH = ROOT / "completion_data.json"
 HASHES_DATA_PATH = ROOT / "references" / "zelda-totk.hashes.csv"
 RECIPE_REFERENCE_IDS_PATH = ROOT / "references" / "recipe_ids_mine_228.txt"

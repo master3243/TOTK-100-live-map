@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REFERENCES = ROOT / "references"
-OUTPUT = ROOT / "references" / "korok_data.json"
+OUTPUT = ROOT / "korok_data.json"
 ICON_Y_OFFSET = 106
 
 
