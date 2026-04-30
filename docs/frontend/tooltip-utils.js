@@ -105,7 +105,7 @@ function formatLayerForObjmap(layer) {
 function buildObjmapTotkUrl(marker) {
   const q = markerObjmapQuery(marker);
   if (q == null || !Number.isFinite(marker.x) || !Number.isFinite(marker.z)) return null;
-  return `https://objmap-totk.zeldamods.org/#/map/z${OBJMAP_TOTK_ZOOM},${Math.round(marker.x)},${Math.round(marker.z)},${formatLayerForObjmap(marker.layer)}?q=${encodeURIComponent(q)}`;
+  return `https://objmap-totk.zeldamods.org/#/map/z${OBJMAP_TOTK_ZOOM},${Math.round(marker.x)},${Math.round(-marker.z)},${formatLayerForObjmap(marker.layer)}?q=${encodeURIComponent(q)}`;
 }
 
 function tooltipExternalLinks(links) {

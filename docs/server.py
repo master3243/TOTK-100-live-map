@@ -422,7 +422,7 @@ def parse_player_position(data):
     raw_y = read_f32(data, vector_offset + 4)
     raw_z = read_f32(data, vector_offset + 8)
     x = raw_x
-    z = raw_z
+    z = -raw_z
     position = {
         "x": x,
         "y": raw_y - 106,
