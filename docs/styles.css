@@ -1152,6 +1152,15 @@ body.save-drop-active {
   background-repeat: no-repeat;
 }
 
+.nearest-coords-icon.completion-koroks {
+  background-image: url("assets/zd-icons/korok.png");
+}
+
+.nearest-coords-icon.completion-koroks.carry {
+  width: 26px;
+  background-image: url("assets/zd-icons/korok2.png");
+}
+
 .marker-layer,
 .guide-layer {
   position: absolute;
