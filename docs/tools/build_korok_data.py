@@ -6,6 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 REFERENCES = ROOT / "references"
 OUTPUT = ROOT / "references" / "korok_data.json"
+ICON_Y_OFFSET = 106
 
 
 def read_text(path):
@@ -61,6 +62,23 @@ def parse_hashes(text, name):
     return [int(value, 16) for value in re.findall(r"0x[0-9a-fA-F]+", array_text)]
 
 
+def normalize_icon_y(value):
+    return round(value - ICON_Y_OFFSET, 2)
+
+
+def normalize_target_note_y(note):
+    def replace(match):
+        x, y, z = match.groups()
+        return f"target: [{x},{normalize_icon_y(float(y)):g},{z}]"
+
+    return re.sub(
+        r"target:\s*\[\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*\]",
+        replace,
+        note,
+        flags=re.I,
+    )
+
+
 def parse_coordinates(text, name):
     array_text = extract_js_array(text, name)
     rows = []
@@ -68,9 +86,9 @@ def parse_coordinates(text, name):
         rows.append(
             {
                 "x": float(match.group(1)),
-                "y": float(match.group(2)),
+                "y": normalize_icon_y(float(match.group(2))),
                 "z": float(match.group(3)),
-                "note": (match.group(4) or "").strip(),
+                "note": normalize_target_note_y((match.group(4) or "").strip()),
             }
         )
     return rows
