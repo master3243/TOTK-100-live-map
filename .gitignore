@@ -5,4 +5,3 @@ env/
 docs/*.spec
 *.exe
 *.log
-state.json

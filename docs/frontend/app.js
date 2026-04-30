@@ -207,10 +207,8 @@ let hasLoadedAnyMapImage = false;
 let activePointers = new Map();
 let dragStart = null;
 let pinchStart = null;
-let korokMarkers = [];
 let completionCategories = [];
 let playerPosition = null;
-let linkNearestUnobtainedId = null;
 let linkNearestCompletionId = null;
 let lastLogSignature = "";
 let lastLogId = 0;
@@ -218,7 +216,6 @@ let pendingPanPoint = null;
 let lastPlayerPanKey = null;
 /** When unchanged, skip re-applying player-guide zoom/pan (avoids jumps on unrelated overlay toggles). */
 let lastPlayerGuideFrameKey = "";
-let korokCountSummary = null;
 let hasLoadedAnySave = false;
 let liveSaveCompletedExpanded = false;
 
@@ -434,29 +431,8 @@ function loadLayer(layerName) {
     button.classList.toggle("active", button.dataset.layer === layerName);
   });
 
-  renderGuide(korokMarkers);
+  renderGuide();
   renderMarkers();
-}
-
-function getVisibleMarkers(markers) {
-  return markers.filter((marker) => {
-    if (marker.layer !== activeLayer) {
-      return false;
-    }
-    if (!completionInputs.koroks?.checked) {
-      return false;
-    }
-    if (marker.obtained && !completionShowObtained.koroks) {
-      return false;
-    }
-    return true;
-  });
-}
-
-function markerLabel(marker) {
-  const state = marker.obtained ? "Obtained" : "Missing";
-  const kind = marker.kind === "carry" ? "carry pair" : "hidden Korok";
-  return `${state} ${kind} ${marker.id}`;
 }
 
 function markerDisplayPoint(marker) {
@@ -491,7 +467,7 @@ function syncAllGroupStates() {
 
 function rerenderOverlays() {
   syncAllGroupStates();
-  renderGuide(korokMarkers);
+  renderGuide();
   renderMarkers();
 }
 
@@ -532,7 +508,7 @@ const OBJMAP_TOTK_ZOOM = 8;
 const EXTERNAL_LINK_ICON =
   '<svg class="tooltip-link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11"/></svg>';
 
-/** Leading decimal in korok `note` is often the 64-bit map object id used by objmap. */
+/** Leading decimal in a marker note is often the 64-bit map object id used by objmap. */
 function parseLeadingUInt64FromNote(note) {
   if (!note || typeof note !== "string") {
     return null;
@@ -734,35 +710,46 @@ function tooltipRows(title, rows) {
   return `<strong>${escapeHtml(title)}</strong><dl>${rowHtml}</dl>`;
 }
 
-function korokTooltip(marker) {
+function zeldaDungeonSeedUrl(marker) {
   const match = /^(hidden|carry)-(\d+)$/.exec(marker.id || "");
   const kind = match?.[1] || null;
   const index = match ? Number.parseInt(match[2], 10) : null;
   let zdNumber = null;
   if (kind === "hidden" && Number.isFinite(index)) {
-    zdNumber = index + 99; // hidden-001 -> Korok0100
+    zdNumber = index + 99;
   } else if (kind === "carry" && Number.isFinite(index)) {
-    zdNumber = index - 1; // carry-001 -> Korok0000
+    zdNumber = index - 1;
   }
   const zdCode = zdNumber == null ? null : `Korok${String(zdNumber).padStart(4, "0")}`;
-  const zdUrl = zdCode
+  return zdCode
     ? `https://www.zeldadungeon.net/tears-of-the-kingdom-interactive-map/?m=${encodeURIComponent(zdCode)}`
     : null;
+}
 
-  const base = tooltipRows(markerLabel(marker), [
+function completionTooltip(marker) {
+  const displayNote = displayMarkerNote(marker);
+  const extraRows = marker.seedValue
+    ? [
+        { label: "Type", value: marker.seedValue === 2 ? "Pair, 2 seeds" : "Single seed" },
+        { label: "Save value", value: marker.rawValue },
+      ]
+    : [];
+  const base = tooltipRows(completionLabel(marker), [
+    { label: "Category", value: marker.categoryLabel },
     { label: "Status", value: marker.obtained ? "Obtained" : "Unobtained" },
-    { label: "Type", value: marker.kind === "carry" ? "Pair, 2 seeds" : "Single seed" },
+    ...extraRows,
     { label: "Layer", value: formatLayer(marker.layer) },
     { label: "World", value: `X ${formatNumber(marker.x)}, Y ${formatNumber(marker.y)}, Z ${formatNumber(marker.z)}` },
     { label: "Map", value: `${formatNumber(marker.mapX)}, ${formatNumber(marker.mapY)}` },
-    { label: "Save value", value: marker.rawValue },
     { label: "Hex", value: markerHexId(marker) },
+    { label: "Source", value: displayNote },
   ]);
   const links = [];
+  const zdUrl = marker.seedValue ? zeldaDungeonSeedUrl(marker) : null;
+  const objmapUrl = buildObjmapTotkUrl(marker);
   if (zdUrl) {
     links.push({ href: zdUrl, label: "Zelda Dungeon" });
   }
-  const objmapUrl = buildObjmapTotkUrl(marker);
   if (objmapUrl) {
     links.push({ href: objmapUrl, label: "Zelda DB" });
   }
@@ -770,24 +757,6 @@ function korokTooltip(marker) {
     return base;
   }
   return `${base}${tooltipExternalLinks(links)}`;
-}
-
-function completionTooltip(marker) {
-  const displayNote = displayMarkerNote(marker);
-  const base = tooltipRows(completionLabel(marker), [
-    { label: "Category", value: marker.categoryLabel },
-    { label: "Status", value: marker.obtained ? "Obtained" : "Unobtained" },
-    { label: "Layer", value: formatLayer(marker.layer) },
-    { label: "World", value: `X ${formatNumber(marker.x)}, Y ${formatNumber(marker.y)}, Z ${formatNumber(marker.z)}` },
-    { label: "Map", value: `${formatNumber(marker.mapX)}, ${formatNumber(marker.mapY)}` },
-    { label: "Hex", value: markerHexId(marker) },
-    { label: "Source", value: displayNote },
-  ]);
-  const objmapUrl = buildObjmapTotkUrl(marker);
-  if (!objmapUrl) {
-    return base;
-  }
-  return `${base}${tooltipExternalLinks([{ href: objmapUrl, label: "Zelda DB" }])}`;
 }
 
 function playerTooltip(position) {
@@ -1386,14 +1355,14 @@ function parseTargetWorldFromNote(note) {
   return { x, y, z };
 }
 
-function appendKorokTargetLines(markers) {
+function appendTargetLines(markers) {
   if (!imageWidth || !imageHeight) {
     return null;
   }
-  const candidates = (markers || []).filter((marker) => marker && (marker.kind === "carry" || marker.kind === "hidden"));
+  const candidates = (markers || []).filter((marker) => marker && parseTargetWorldFromNote(marker.note));
 
   const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-  svg.setAttribute("class", "korok-pair-lines");
+  svg.setAttribute("class", "target-lines");
   svg.setAttribute("width", String(imageWidth));
   svg.setAttribute("height", String(imageHeight));
   svg.style.position = "absolute";
@@ -1404,9 +1373,6 @@ function appendKorokTargetLines(markers) {
   let appended = 0;
   for (const marker of candidates) {
     const targetWorld = parseTargetWorldFromNote(marker.note);
-    if (!targetWorld) {
-      continue;
-    }
     const targetMap = worldToMap(targetWorld.x, targetWorld.z);
     if (!Number.isFinite(marker.mapX) || !Number.isFinite(marker.mapY)) {
       continue;
@@ -1415,13 +1381,11 @@ function appendKorokTargetLines(markers) {
       continue;
     }
 
-    // Carry: icon at end, small circle at start.
-    // Hidden-with-target: icon at end (target), small circle at start (entry).
-    if (marker.kind === "carry" || marker.kind === "hidden") {
+    if (marker.seedValue) {
       const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
       circle.setAttribute("cx", String(marker.mapX));
       circle.setAttribute("cy", String(marker.mapY));
-      circle.setAttribute("r", marker.kind === "carry" ? "3.3" : "3.0");
+      circle.setAttribute("r", marker.seedValue === 2 ? "3.3" : "3.0");
       circle.setAttribute("vector-effect", "non-scaling-stroke");
       circle.setAttribute("class", marker.obtained ? "obtained" : "unobtained");
       svg.appendChild(circle);
@@ -1441,20 +1405,12 @@ function appendKorokTargetLines(markers) {
   return appended ? svg : null;
 }
 
-/** Closest target for the player guide: unobtained koroks and visible missing completion pins (world XYZ). */
-function findNearestPlayerGuideTarget(origin, korokCandidates, completionCandidates) {
+/** Closest target for the player guide: visible missing completion pins (world XYZ). */
+function findNearestPlayerGuideTarget(origin, candidates) {
   let nearest = null;
   let nearestDistance = Number.POSITIVE_INFINITY;
 
-  for (const marker of korokCandidates) {
-    const distance = worldDistanceWorld3D(marker, origin);
-    if (distance < nearestDistance) {
-      nearest = marker;
-      nearestDistance = distance;
-    }
-  }
-
-  for (const marker of completionCandidates) {
+  for (const marker of candidates) {
     const distance = worldDistanceWorld3D(marker, origin);
     if (distance < nearestDistance) {
       nearest = marker;
@@ -1579,9 +1535,27 @@ function updateTargetControls() {
   syncAllGroupStates();
 }
 
-function renderGuide(markers) {
+function visibleCompletionMarkers() {
+  const markers = [];
+  for (const category of completionCategories) {
+    const input = completionInputs[category.id];
+    if (!input || !input.checked) {
+      continue;
+    }
+    const categoryMarkers = completionShowObtained[category.id]
+      ? [...category.items, ...(category.obtainedItems || [])]
+      : category.items;
+    for (const marker of categoryMarkers) {
+      if (marker.layer === activeLayer) {
+        markers.push(marker);
+      }
+    }
+  }
+  return markers;
+}
+
+function renderGuide() {
   guideLayer.replaceChildren();
-  linkNearestUnobtainedId = null;
   linkNearestCompletionId = null;
 
   if (!overlayInputs.playerGuide.checked) {
@@ -1592,24 +1566,7 @@ function renderGuide(markers) {
     return;
   }
 
-  const visibleUnobtained = markers.filter((marker) => {
-    return marker.layer === activeLayer
-      && !marker.obtained
-      && completionInputs.koroks?.checked;
-  });
-
-  const visibleCompletionMissing = [];
-  for (const category of completionCategories) {
-    const input = completionInputs[category.id];
-    if (!input || !input.checked) {
-      continue;
-    }
-    for (const item of category.items) {
-      if (item.layer === activeLayer) {
-        visibleCompletionMissing.push(item);
-      }
-    }
-  }
+  const visibleMissing = visibleCompletionMarkers();
 
   const fragment = document.createDocumentFragment();
 
@@ -1620,17 +1577,9 @@ function renderGuide(markers) {
     && playerPosition.layer === activeLayer
     && overlayInputs.playerGuide.checked
   ) {
-    const nearestFromLink = findNearestPlayerGuideTarget(
-      playerPosition,
-      visibleUnobtained,
-      visibleCompletionMissing,
-    );
+    const nearestFromLink = findNearestPlayerGuideTarget(playerPosition, visibleMissing);
     if (nearestFromLink) {
-      if (Object.hasOwn(nearestFromLink, "categoryId")) {
-        linkNearestCompletionId = nearestFromLink.id;
-      } else {
-        linkNearestUnobtainedId = nearestFromLink.id;
-      }
+      linkNearestCompletionId = nearestFromLink.id;
       const frameKey = `${nearestFromLink.id}|${Math.round(playerPosition.x)}|${Math.round(playerPosition.z)}|${activeLayer}`;
       if (frameKey !== lastPlayerGuideFrameKey) {
         lastPlayerGuideFrameKey = frameKey;
@@ -1652,62 +1601,35 @@ function renderGuide(markers) {
   guideLayer.appendChild(fragment);
 }
 
-function renderMarkers(markers = korokMarkers, categories = completionCategories) {
-  korokMarkers = markers;
+function renderMarkers(categories = completionCategories) {
   completionCategories = categories;
   const fragment = document.createDocumentFragment();
 
-  const visibleKoroks = getVisibleMarkers(markers);
-  const targetLines = appendKorokTargetLines(visibleKoroks);
+  const visibleMarkers = visibleCompletionMarkers();
+  const targetLines = appendTargetLines(visibleMarkers);
   if (targetLines) {
     fragment.appendChild(targetLines);
   }
 
-  for (const marker of visibleKoroks) {
+  for (const marker of visibleMarkers) {
     const element = document.createElement("span");
-    const classes = ["korok-marker", marker.kind, marker.obtained ? "obtained" : "unobtained"];
-    if (marker.id === linkNearestUnobtainedId) {
+    const classes = ["completion-marker", `completion-${marker.categoryId}`];
+    if (marker.kind) {
+      classes.push(marker.kind);
+    }
+    if (marker.obtained) {
+      classes.push("obtained");
+    }
+    if (marker.id === linkNearestCompletionId) {
       classes.push("link-nearest");
     }
-
-    element.className = classes.join(" ");
     const point = markerDisplayPoint(marker);
+    element.className = classes.join(" ");
     element.style.left = `${point.mapX}px`;
     element.style.top = `${point.mapY}px`;
     element.removeAttribute("title");
-    attachTooltip(element, korokTooltip(marker));
+    attachTooltip(element, completionTooltip(marker));
     fragment.appendChild(element);
-  }
-
-  for (const category of categories) {
-    const input = completionInputs[category.id];
-    if (!input || !input.checked) {
-      continue;
-    }
-
-    const categoryMarkers = completionShowObtained[category.id]
-      ? [...category.items, ...(category.obtainedItems || [])]
-      : category.items;
-    for (const marker of categoryMarkers) {
-      if (marker.layer !== activeLayer) {
-        continue;
-      }
-
-      const element = document.createElement("span");
-      const classes = ["completion-marker", `completion-${marker.categoryId}`];
-      if (marker.obtained) {
-        classes.push("obtained");
-      }
-      if (marker.id === linkNearestCompletionId) {
-        classes.push("link-nearest");
-      }
-      element.className = classes.join(" ");
-      element.style.left = `${marker.mapX}px`;
-      element.style.top = `${marker.mapY}px`;
-      element.removeAttribute("title");
-      attachTooltip(element, completionTooltip(marker));
-      fragment.appendChild(element);
-    }
   }
 
   if (playerPosition && playerPosition.layer === activeLayer && overlayInputs.playerLocation.checked) {
@@ -1730,31 +1652,6 @@ function completionCountText(category) {
   const obtained = category.obtained ?? 0;
   const total = category.total ?? remaining + obtained;
   return `${remaining} (${obtained}/${total})`;
-}
-
-function completionRowModels(categories) {
-  return [
-    korokCountSummary
-      ? {
-          id: "koroks",
-          label: "Koroks",
-          contributesToTotal: false,
-          ...korokCountSummary,
-        }
-      : {
-          id: "koroks",
-          label: "Koroks",
-          obtained: 0,
-          total: 0,
-          remaining: 0,
-          contributesToTotal: false,
-          unloaded: true,
-        },
-    ...categories.map((category) => ({
-      contributesToTotal: true,
-      ...category,
-    })),
-  ];
 }
 
 function updateCompletionRow(category) {
@@ -1788,12 +1685,10 @@ function updateCompletionCounts(categories) {
   let totalObtained = 0;
   let totalTotal = 0;
 
-  for (const category of completionRowModels(categories)) {
+  for (const category of categories) {
     updateCompletionRow(category);
-    if (category.contributesToTotal) {
-      totalObtained += category.obtained ?? 0;
-      totalTotal += category.total ?? (category.remaining ?? 0) + (category.obtained ?? 0);
-    }
+    totalObtained += category.obtained ?? 0;
+    totalTotal += category.total ?? (category.remaining ?? 0) + (category.obtained ?? 0);
   }
   if (completionTotalSummary) {
     completionTotalSummary.textContent = categories.length ? `${totalObtained} / ${totalTotal}` : "-- / --";
@@ -1855,11 +1750,6 @@ function updateSaveSummary(payload) {
   currentPlayerStats = stats;
   playerStatSummaries.forEach(updatePlayerStatSummary);
 
-  const obtained = payload.counts.totalLocations ?? 0;
-  const total = payload.counts.availableLocations ?? 0;
-  const remaining = Math.max(0, total - obtained);
-  korokCountSummary = { obtained, total, remaining, text: `${remaining} (${obtained}/${total})` };
-
   const categories = payload.completion || [];
   const totalCategories = categories.length;
   const completedCategories = categories.filter((c) => (c.remaining ?? 0) === 0).length;
@@ -1912,15 +1802,15 @@ function applySavePayload(payload) {
   updatePlayerAutoPan(payload);
   updateSaveSummary(payload);
   updateCompletionCounts(completionCategories);
-  renderGuide(payload.markers);
-  renderMarkers(payload.markers, completionCategories);
+  renderGuide();
+  renderMarkers(completionCategories);
   updateTargetControls();
   closeSidebarAfterSaveIfNeeded();
 }
 
-async function refreshKoroks() {
+async function refreshProgress() {
   try {
-    const response = await fetch("/api/koroks", { cache: "no-store" });
+    const response = await fetch("/api/progress", { cache: "no-store" });
     const payload = await response.json();
 
     if (!response.ok) {
@@ -2099,7 +1989,7 @@ _srv.initialize_data()
 def parse_uploaded_save(path: str, filename: str = "progress.sav", mtime: float | None = None):
     data = Path(path).read_bytes()
     save_modified = int(mtime if mtime is not None else time.time())
-    return _srv.build_save_payload(data, filename, save_modified, snapshot=[], update_latest_state=False)
+    return _srv.build_save_payload(data, filename, save_modified, snapshot=[])
 `);
     _pyodideReady = true;
     return pyodide;
@@ -2144,7 +2034,7 @@ async function refreshHealth() {
     lastHealthKey = key;
 
     if (changed) {
-      await refreshKoroks();
+      await refreshProgress();
     }
   } catch (error) {
     console.error(error);
@@ -2241,7 +2131,7 @@ mapImage.addEventListener("load", () => {
 
   // If save data arrived before the image loaded, the guide arrow may have been skipped
   // (it requires imageWidth/imageHeight). Re-render now that the map is ready.
-  renderGuide(korokMarkers);
+  renderGuide();
   renderMarkers();
 });
 
@@ -2315,7 +2205,7 @@ viewport.addEventListener("pointermove", (event) => {
     const underPointer = document.elementFromPoint(event.clientX, event.clientY);
     const overTooltip = underPointer instanceof HTMLElement && underPointer.closest("#mapTooltip");
     const overMarker = underPointer instanceof HTMLElement
-      && underPointer.closest(".korok-marker, .completion-marker, .link-marker");
+      && underPointer.closest(".completion-marker, .link-marker");
     if (!overTooltip && !overMarker) {
       mapTooltip.hidden = true;
     }
@@ -2360,7 +2250,7 @@ function endPointer(event) {
   if (!activePointers.size && didPanThisGesture && !isTooltipPinned && !mapTooltip.hidden) {
     const underPointer = document.elementFromPoint(event.clientX, event.clientY);
     const isMarker = underPointer instanceof HTMLElement
-      && underPointer.closest(".korok-marker, .completion-marker, .link-marker");
+      && underPointer.closest(".completion-marker, .link-marker");
     // If the drag ended away from a marker (or on the tooltip itself), dismiss hover tooltip.
     if (!isMarker) {
       mapTooltip.hidden = true;

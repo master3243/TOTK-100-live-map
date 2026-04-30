@@ -1141,37 +1141,37 @@ body.save-drop-active {
   stroke-width: 1.35;
 }
 
-.korok-pair-lines {
+.target-lines {
   display: block;
   overflow: visible;
 }
 
-.korok-pair-lines circle {
+.target-lines circle {
   fill: rgba(255, 220, 140, 0.85);
   stroke: rgba(18, 24, 18, 0.75);
   stroke-width: 1.1;
 }
 
-.korok-pair-lines circle.obtained {
+.target-lines circle.obtained {
   opacity: 0.55;
 }
 
-.korok-pair-lines circle.unobtained {
+.target-lines circle.unobtained {
   opacity: 0.95;
 }
 
-.korok-pair-lines line {
+.target-lines line {
   stroke: rgba(255, 220, 140, 0.38);
   stroke-width: 1.15;
   stroke-linecap: round;
 }
 
-.korok-pair-lines line.obtained {
+.target-lines line.obtained {
   opacity: 0.45;
   stroke-dasharray: 4 4;
 }
 
-.korok-pair-lines line.unobtained {
+.target-lines line.unobtained {
   opacity: 0.85;
 }
 
@@ -1247,7 +1247,7 @@ body.save-drop-active {
   transform: rotate(-10deg);
 }
 
-.korok-marker {
+.completion-marker.completion-koroks {
   position: absolute;
   width: 24px;
   height: 24px;
@@ -1259,12 +1259,12 @@ body.save-drop-active {
   transform: translate(-50%, -50%) scale(var(--iconScale, 1));
 }
 
-.korok-marker.obtained {
+.completion-marker.completion-koroks.obtained {
   opacity: 0.9;
   filter: grayscale(1) brightness(0.85) contrast(1.1);
 }
 
-.korok-marker.unobtained {
+.completion-marker.completion-koroks:not(.obtained) {
   width: 24px;
   height: 24px;
   background: url("assets/zd-icons/korok.png") center / contain no-repeat;
@@ -1272,15 +1272,11 @@ body.save-drop-active {
   filter: none;
 }
 
-.korok-marker.carry {
+.completion-marker.completion-koroks.carry {
   background: url("assets/zd-icons/korok2.png") center / contain no-repeat;
   height: 24px;
   width: calc(24px * 1.28);
   background-size: contain;
-}
-
-.korok-marker.link-nearest {
-  animation: korokBounce 1.15s ease-in-out infinite;
 }
 
 .completion-marker.link-nearest {
@@ -1304,7 +1300,7 @@ body.save-drop-active {
   transform: none;
 }
 
-.korok-marker.unobtained .seed-badge {
+.completion-marker.completion-koroks:not(.obtained) .seed-badge {
   color: #ffe4c7;
 }
 
@@ -1470,7 +1466,7 @@ body.save-drop-active {
   filter: drop-shadow(0 0 4px rgba(255, 246, 210, 0.95)) drop-shadow(0 0 2px rgba(12, 14, 12, 0.9));
 }
 
-/* Points east at 0rad; JS sets --compass-rotate; --iconScale matches korok/link markers. */
+/* Points east at 0rad; JS sets --compass-rotate; --iconScale matches marker scale. */
 .compass-arrow {
   position: absolute;
   width: 78px;

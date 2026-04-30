@@ -32,8 +32,6 @@ ROOT = resource_root()
 RUNTIME_ROOT = runtime_root()
 
 CONFIG_PATH = RUNTIME_ROOT / "config.json"
-STATE_PATH = RUNTIME_ROOT / "state.json"
-
 KOROK_DATA_PATH = ROOT / "references" / "korok_data.json"
 COMPLETION_DATA_PATH = ROOT / "completion_data.json"
 HASHES_DATA_PATH = ROOT / "references" / "zelda-totk.hashes.csv"
@@ -328,43 +326,6 @@ def initialize():
     _DATA["initialized"] = True
 
 
-def load_state():
-    if not STATE_PATH.exists():
-        return {
-            "activeSavePath": None,
-            "saves": {},
-            "_exists": False,
-        }
-
-    with STATE_PATH.open("r", encoding="utf-8") as file:
-        state = json.load(file)
-
-    if "saves" not in state:
-        active_path = state.get("activeSavePath") or "__legacy__"
-        state = {
-            "activeSavePath": state.get("activeSavePath"),
-            "saves": {
-                active_path: {
-                    "obtainedKorokIds": state.get("obtainedKorokIds", []),
-                    "lastSaveModified": state.get("lastSaveModified"),
-                }
-            },
-        }
-
-    state.setdefault("activeSavePath", None)
-    state.setdefault("saves", {})
-    state["_exists"] = True
-    return state
-
-
-def save_state(state):
-    temp_path = STATE_PATH.with_suffix(".json.tmp")
-    persisted_state = {key: value for key, value in state.items() if not key.startswith("_")}
-    with temp_path.open("w", encoding="utf-8") as file:
-        json.dump(persisted_state, file, indent=2)
-    temp_path.replace(STATE_PATH)
-
-
 PAYLOAD_CACHE = {
     "mtimes": None,
     "payload": None,
@@ -569,31 +530,62 @@ def add_missing_item(missing_items, item, *keys):
     })
 
 
-def build_markers(values):
+def make_progress_marker(entry, category, obtained, raw_value):
+    marker = dict(entry)
+    marker.update(world_to_map(entry["x"], entry["z"]))
+    marker["layer"] = layer_for_y(entry.get("y", 0))
+    marker["categoryId"] = category["id"]
+    marker["categoryLabel"] = category["label"]
+    marker["obtained"] = obtained
+    marker["rawValue"] = raw_value
+    return marker
+
+
+def split_progress_items(definition, markers):
+    items = []
+    obtained_items = []
+    for marker in markers:
+        (obtained_items if marker["obtained"] else items).append(marker)
+    summary = progress_summary(definition, len(markers), len(obtained_items))
+    summary.update({
+        "items": items,
+        "obtainedItems": obtained_items,
+        "defaultVisible": definition.get("defaultVisible", True),
+    })
+    return summary
+
+
+def build_seed_category(values):
     korok_data = _DATA["korok_data"] or {"hidden": [], "carry": []}
+    definition = {
+        "id": "koroks",
+        "label": "Koroks",
+        "kind": "seed",
+        "sourceCounts": {
+            "locations": sum(len(korok_data[kind]) for kind in ("hidden", "carry")),
+            "seeds": len(korok_data["hidden"]) + len(korok_data["carry"]) * 2,
+        },
+    }
     markers = []
     for kind in ("hidden", "carry"):
         for entry in korok_data[kind]:
             hash_value = int(entry["hash"], 16)
             raw_value = values.get(hash_value, 0)
             obtained = raw_value != 0 if kind == "hidden" else raw_value == CLEAR_HASH
-            marker = dict(entry)
-            marker.update(world_to_map(entry["x"], entry["z"]))
-            marker["layer"] = layer_for_y(entry.get("y", 0))
-            marker["obtained"] = obtained
-            marker["rawValue"] = f"{raw_value:08x}"
+            marker = make_progress_marker(entry, definition, obtained, f"{raw_value:08x}")
             marker["seedValue"] = 2 if kind == "carry" else 1
             markers.append(marker)
-    return markers
+    category = split_progress_items(definition, markers)
+    category["obtainedSeeds"] = sum(marker["seedValue"] for marker in category["obtainedItems"])
+    category["totalSeeds"] = definition["sourceCounts"]["seeds"]
+    return category
 
 
 def build_completion(values, guid_values):
     completion_data = _DATA["completion_data"] or {"categories": []}
-    categories = []
+    categories = [build_seed_category(values)]
     for category in completion_data["categories"]:
-        items = []
-        obtained_items = []
-        obtained_count = 0
+        markers = []
         target_value = category.get("targetValue")
         target_raw = int(target_value, 16) if target_value else None
         for item in category["items"]:
@@ -606,27 +598,9 @@ def build_completion(values, guid_values):
                 obtained = raw == target_raw if target_raw is not None else raw != 0
                 raw_value = f"{raw:08x}"
 
-            marker = dict(item)
-            marker.update(world_to_map(item["x"], item["z"]))
-            marker["categoryId"] = category["id"]
-            marker["categoryLabel"] = category["label"]
-            marker["obtained"] = obtained
-            marker["rawValue"] = raw_value
+            markers.append(make_progress_marker(item, category, obtained, raw_value))
 
-            if obtained:
-                obtained_count += 1
-                obtained_items.append(marker)
-                continue
-
-            items.append(marker)
-
-        summary = progress_summary(category, len(category["items"]), obtained_count)
-        summary.update({
-            "items": items,
-            "obtainedItems": obtained_items,
-            "defaultVisible": category.get("defaultVisible", True),
-        })
-        categories.append(summary)
+        categories.append(split_progress_items(category, markers))
     return categories
 
 
@@ -688,29 +662,19 @@ def build_completion_stats(values, data):
     return stats
 
 
-def update_state(markers, save_modified, active_save_path):
-    state = load_state()
-    save_key = str(active_save_path)
-    save_state_entry = state["saves"].setdefault(
-        save_key,
-        {
-            "obtainedKorokIds": [],
-            "lastSaveModified": None,
-        },
-    )
-    previous_ids = set(save_state_entry["obtainedKorokIds"])
-    current_ids = {marker["id"] for marker in markers if marker["obtained"]}
-    first_seen_save = not save_state_entry["obtainedKorokIds"] and not save_state_entry["lastSaveModified"]
-    _ = sorted(current_ids - previous_ids) if state["_exists"] and not first_seen_save else []
-
-    save_state_entry["obtainedKorokIds"] = sorted(current_ids)
-    save_state_entry["lastSaveModified"] = save_modified
-    state["activeSavePath"] = str(active_save_path)
-    save_state(state)
-    return save_state_entry
+def seed_category_summary(completion):
+    seed_category = next((category for category in completion if category["kind"] == "seed"), None)
+    if not seed_category:
+        return {"locations": 0, "seeds": 0, "totalLocations": 0, "totalSeeds": 0}
+    return {
+        "locations": seed_category["obtained"],
+        "seeds": seed_category.get("obtainedSeeds", seed_category["obtained"]),
+        "totalLocations": seed_category["total"],
+        "totalSeeds": seed_category.get("totalSeeds", seed_category["total"]),
+    }
 
 
-def build_save_payload(data, save_path, save_modified, snapshot=None, update_latest_state=True):
+def build_save_payload(data, save_path, save_modified, snapshot=None):
     header = read_u32(data, 4)
     metadata_start = read_u32(data, 8)
     version_info = SAVE_VERSIONS.get(len(data))
@@ -736,15 +700,9 @@ def build_save_payload(data, save_path, save_modified, snapshot=None, update_lat
     in_228 = cooked_recipe_ids & recipe_reference_ids
     extra = sorted(cooked_recipe_ids - recipe_reference_ids)
     recipes_obtained = len(in_228)
-    markers = build_markers(values)
     completion = build_completion(values, guid_values)
     completion_stats = build_completion_stats(values, data)
-    obtained_markers = [marker for marker in markers if marker["obtained"]]
-    korok_data = _DATA["korok_data"] or {"hidden": [], "carry": []}
-    available_hidden = len(korok_data["hidden"])
-    available_carry = len(korok_data["carry"])
-    if update_latest_state:
-        update_state(markers, save_modified, save_path)
+    seed_summary = seed_category_summary(completion)
 
     return {
         "savePath": str(save_path),
@@ -763,14 +721,11 @@ def build_save_payload(data, save_path, save_modified, snapshot=None, update_lat
             "extras": extra,
         },
         "counts": {
-            "hidden": sum(1 for marker in obtained_markers if marker["kind"] == "hidden"),
-            "carry": sum(1 for marker in obtained_markers if marker["kind"] == "carry"),
-            "totalLocations": len(obtained_markers),
-            "totalSeeds": sum(marker["seedValue"] for marker in obtained_markers),
-            "availableLocations": available_hidden + available_carry,
-            "availableSeeds": available_hidden + available_carry * 2,
+            "totalLocations": seed_summary["locations"],
+            "totalSeeds": seed_summary["seeds"],
+            "availableLocations": seed_summary["totalLocations"],
+            "availableSeeds": seed_summary["totalSeeds"],
         },
-        "markers": markers,
         "completion": completion,
         "completionStats": completion_stats,
     }
@@ -781,9 +736,8 @@ def parse_uploaded_save(data, filename):
         initialize()
         label = filename or "uploaded progress.sav"
         save_modified = time.time()
-        payload = build_save_payload(data, f"manual upload: {label}", save_modified, snapshot=[], update_latest_state=False)
-        obtained_markers = [marker for marker in payload["markers"] if marker["obtained"]]
-        add_log(f"Parsed manual upload {label}: {sum(marker['seedValue'] for marker in obtained_markers)}/1000 seeds")
+        payload = build_save_payload(data, f"manual upload: {label}", save_modified, snapshot=[])
+        add_log(f"Parsed manual upload {label}: {payload['counts']['totalSeeds']}/1000 seeds")
         return payload
 
 
@@ -805,10 +759,8 @@ def parse_current_save():
             add_log(f"Active save: {save_path}")
 
         data = read_save_bytes(save_path)
-        payload = build_save_payload(data, save_path, save_modified, snapshot=snapshot, update_latest_state=True)
-        markers = payload["markers"]
-        obtained_markers = [marker for marker in markers if marker["obtained"]]
-        add_log(f"Parsed {save_label(save_path)}: {sum(marker['seedValue'] for marker in obtained_markers)}/1000 seeds")
+        payload = build_save_payload(data, save_path, save_modified, snapshot=snapshot)
+        add_log(f"Parsed {save_label(save_path)}: {payload['counts']['totalSeeds']}/1000 seeds")
 
         PAYLOAD_CACHE["mtimes"] = current_mtimes
         PAYLOAD_CACHE["payload"] = payload
@@ -830,7 +782,7 @@ def health_status():
 class Handler(SimpleHTTPRequestHandler):
     API_GET = {
         "/api/health": (health_status, "text"),
-        "/api/koroks": (parse_current_save, "json"),
+        "/api/progress": (parse_current_save, "json"),
         "/api/log": (lambda: {"entries": LOG_ENTRIES[-LOG_LIMIT:]}, "json"),
     }
 
