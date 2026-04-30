@@ -1,4 +1,4 @@
-const WORLD_DISTANCE_Y_WEIGHT = 3;
+const WORLD_DISTANCE_Y_WEIGHT = Math.sqrt(2);
 
 /** World-space distance using X, Y, Z; vertical separation counts 10× vs horizontal (same Y as server payloads). */
 function worldDistanceWorld3D(a, b) {
