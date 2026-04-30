@@ -10,7 +10,10 @@ REFERENCES = ROOT / "references"
 OUTPUT = ROOT / "completion_data.json"
 LAYER_FIX = 500
 ICON_Y_OFFSET = 106
+
 MASTER_MAP = REFERENCES / "TOTK master sheet - Map.csv"
+MASTER_MAP_SKIP = ( "_IsCompleted_Exp", "_IsAfter_DungeonBossDead_Exp" )  # Fix map csv
+MASTER_MAP_REPLACE = { "IsVisitLocation.HatenoLab": "IsVisitLocation.HatenoLabo" }  # Fix map csv
 
 TOWER_LOCATION_NAMES = [
     "Lookout Landing",
@@ -333,6 +336,10 @@ def parse_master_map_general_locations(path):
                 continue
 
             flag = row[indexes["Flag To Unlock"]].strip()
+            if any(s in flag for s in MASTER_MAP_SKIP):
+                continue
+            if flag in MASTER_MAP_REPLACE:
+                flag = MASTER_MAP_REPLACE[flag]
             x, y, z = parse_master_map_coordinate(row, row_number)
             actor_name = row[indexes["ActorName"]].strip()
             name = row[indexes["Name"]].strip()
