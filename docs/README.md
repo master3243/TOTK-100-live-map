@@ -39,3 +39,4 @@ to reproduce what github pages does:
 cd docs
 python -m http.server 8002
 ```
+Then open `http://localhost:8002/?pyodide=1`
