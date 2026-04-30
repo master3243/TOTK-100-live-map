@@ -1,6 +1,6 @@
 
 function formatWorldCoordsXZy(position) {
-  return `X ${formatNumber(position.x)}   Z ${formatNumber(-position.z)}   (Y ${formatNumber(position.y)})`;
+  return `X ${formatNumber(position.x)}   Z ${formatNumber(position.z)}   (Y ${formatNumber(position.y)})`;
 }
 
 function completionTooltip(marker) {

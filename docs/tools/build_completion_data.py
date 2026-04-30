@@ -292,7 +292,7 @@ def normalize_icon_y(value):
 def normalize_target_note_y(note):
     def replace(match):
         x, y, z = match.groups()
-        return f"target: [{x},{normalize_icon_y(float(y)):g},{z}]"
+        return f"target: [{x},{normalize_icon_y(float(y)):g},{-float(z):g}]"
 
     return re.sub(
         r"target:\s*\[\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*\]",
@@ -312,7 +312,7 @@ def parse_coordinates(text, name):
         rows.append({
             "x": eval_number(match.group(1).strip()),
             "y": normalize_icon_y(eval_number(match.group(2).strip())),
-            "z": eval_number(match.group(3).strip()),
+            "z": -eval_number(match.group(3).strip()),
             "note": normalize_target_note_y((match.group(4) or comment or "").strip()),
         })
     return rows
@@ -519,7 +519,7 @@ def parse_armor_location_items(chests_by_layer, locale_text, hashes_text):
             source_id = marker.get("id", f"armor-{map_layer}-{index:03d}")
             x = float(coords[1])
             y = normalize_icon_y(float(marker.get("elv", 0)))
-            z = -float(coords[0])
+            z = float(coords[0])
             items.append({
                 "id": f"armor-{len(items) + 1:03d}",
                 "value": value,

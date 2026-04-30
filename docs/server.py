@@ -425,10 +425,10 @@ def parse_player_position(data):
     z = raw_z
     position = {
         "x": x,
-        "y": raw_y - 105,
+        "y": raw_y - 106,
         "z": z,
         "raw": {"x": raw_x, "y": raw_y, "z": raw_z},
-        "layer": layer_for_y(raw_y - 105),
+        "layer": layer_for_y(raw_y - 106),
     }
     position.update(world_to_map(x, z))
     return position

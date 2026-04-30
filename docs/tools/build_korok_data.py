@@ -69,7 +69,7 @@ def normalize_icon_y(value):
 def normalize_target_note_y(note):
     def replace(match):
         x, y, z = match.groups()
-        return f"target: [{x},{normalize_icon_y(float(y)):g},{z}]"
+        return f"target: [{x},{normalize_icon_y(float(y)):g},{-float(z):g}]"
 
     return re.sub(
         r"target:\s*\[\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*\]",
@@ -87,7 +87,7 @@ def parse_coordinates(text, name):
             {
                 "x": float(match.group(1)),
                 "y": normalize_icon_y(float(match.group(2))),
-                "z": float(match.group(3)),
+                "z": -float(match.group(3)),
                 "note": normalize_target_note_y((match.group(4) or "").strip()),
             }
         )
