@@ -236,32 +236,6 @@ def load_completion_data():
         return json.load(file)
 
 
-def load_recipe_cooked_hashes() -> set[int]:
-    """
-    Recipe "book" entries seem to be stored as per-recipe boolean flags.
-    We count how many of those flags are non-zero in the save.
-    """
-    if not HASHES_DATA_PATH.exists():
-        return set()
-
-    hashes: set[int] = set()
-    with HASHES_DATA_PATH.open("r", encoding="utf-8", errors="ignore") as file:
-        for raw_line in file:
-            line = raw_line.strip()
-            if not line:
-                continue
-            parts = line.split(";", 2)
-            if len(parts) < 3:
-                continue
-            hash_hex, _, var = parts
-            if var.startswith("RecipeCard.Content.Item_") and var.endswith(".IsCooked"):
-                try:
-                    hashes.add(int(hash_hex, 16))
-                except ValueError:
-                    continue
-    return hashes
-
-
 def load_recipe_hash_to_id() -> dict[int, str]:
     """Map recipe cooked-flag hash -> recipe id (Item_*)."""
     if not HASHES_DATA_PATH.exists():
@@ -300,10 +274,8 @@ def load_recipe_reference_ids() -> set[str]:
     return ids
 
 
-def initialize():
-    if _DATA["initialized"]:
-        return
-
+def initialize_data():
+    """Load static JSON/reference data and derive the hashes used by save parsing."""
     korok_data = load_korok_data()
     completion_data = load_completion_data()
     korok_hashes = {
@@ -346,6 +318,13 @@ def initialize():
         | completion_array_hashes
         | recipe_hashes
     )
+
+
+def initialize():
+    if _DATA["initialized"]:
+        return
+
+    initialize_data()
     _DATA["tracked_save_paths"] = scan_tracked_saves()
     _DATA["initialized"] = True
 
@@ -375,7 +354,6 @@ def load_state():
 
     state.setdefault("activeSavePath", None)
     state.setdefault("saves", {})
-    state.setdefault("activeSavePath", None)
     state["_exists"] = True
     return state
 
@@ -797,6 +775,9 @@ def build_save_payload(data, save_path, save_modified, snapshot=None, update_lat
     completion = build_completion(values, guid_values)
     completion_stats = build_completion_stats(values, data)
     obtained_markers = [marker for marker in markers if marker["obtained"]]
+    korok_data = _DATA["korok_data"] or {"hidden": [], "carry": []}
+    available_hidden = len(korok_data["hidden"])
+    available_carry = len(korok_data["carry"])
     if update_latest_state:
         update_state(markers, save_modified, save_path)
 
@@ -821,8 +802,8 @@ def build_save_payload(data, save_path, save_modified, snapshot=None, update_lat
             "carry": sum(1 for marker in obtained_markers if marker["kind"] == "carry"),
             "totalLocations": len(obtained_markers),
             "totalSeeds": sum(marker["seedValue"] for marker in obtained_markers),
-            "availableLocations": len((_DATA["korok_data"] or {"hidden": [], "carry": []})["hidden"]) + len((_DATA["korok_data"] or {"hidden": [], "carry": []})["carry"]),
-            "availableSeeds": len((_DATA["korok_data"] or {"hidden": [], "carry": []})["hidden"]) + len((_DATA["korok_data"] or {"hidden": [], "carry": []})["carry"]) * 2,
+            "availableLocations": available_hidden + available_carry,
+            "availableSeeds": available_hidden + available_carry * 2,
         },
         "markers": markers,
         "completion": completion,
