@@ -19,14 +19,14 @@ const HYRULE_MAX_Z = 5000;
 function worldToMap(x, z) {
   return {
     mapX: (x - HYRULE_MIN_X) / (HYRULE_MAX_X - HYRULE_MIN_X) * 6000,
-    mapY: (z - HYRULE_MIN_Z) / (HYRULE_MAX_Z - HYRULE_MIN_Z) * 5000,
+    mapY: (HYRULE_MAX_Z - z) / (HYRULE_MAX_Z - HYRULE_MIN_Z) * 5000,
   };
 }
 
 function mapToWorld(mapX, mapY) {
   return {
     x: HYRULE_MIN_X + (mapX / 6000) * (HYRULE_MAX_X - HYRULE_MIN_X),
-    z: HYRULE_MIN_Z + (mapY / 5000) * (HYRULE_MAX_Z - HYRULE_MIN_Z),
+    z: HYRULE_MAX_Z - (mapY / 5000) * (HYRULE_MAX_Z - HYRULE_MIN_Z),
   };
 }
 

@@ -161,7 +161,7 @@ def read_f32(data, offset):
 def world_to_map(x, z):
     return {
         "mapX": (x - HYRULE_MIN_X) / (HYRULE_MAX_X - HYRULE_MIN_X) * 6000,
-        "mapY": (z - HYRULE_MIN_Z) / (HYRULE_MAX_Z - HYRULE_MIN_Z) * 5000,
+        "mapY": (HYRULE_MAX_Z - z) / (HYRULE_MAX_Z - HYRULE_MIN_Z) * 5000,
     }
 
 
