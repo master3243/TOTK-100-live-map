@@ -26,7 +26,7 @@ if (Test-Path $outExe) {
 $repoIndex = Join-Path $ProjectDir "index.html"
 $repoStyles = Join-Path $ProjectDir "styles.css"
 $repoApp = Join-Path $ProjectDir "app.js"
-$repoKoroks = Join-Path $ProjectDir "korok_data.json"
+$repoKoroks = Join-Path $ProjectDir "references\\korok_data.json"
 $repoCompletion = Join-Path $ProjectDir "completion_data.json"
 $repoServer = Join-Path $ProjectDir "server.py"
 $repoGui = Join-Path $ProjectDir "gui.py"
@@ -112,4 +112,3 @@ Write-Host "Done. Output is in $outExe"
 } finally {
   Pop-Location
 }
-

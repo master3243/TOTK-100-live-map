@@ -16,47 +16,27 @@ const layers = {
   },
 };
 
-const viewport = document.querySelector("#mapViewport");
-const mapImage = document.querySelector("#mapImage");
-const guideLayer = document.querySelector("#guideLayer");
-const markerLayer = document.querySelector("#markerLayer");
-const mapTooltip = document.querySelector("#mapTooltip");
-const statTooltip = document.querySelector("#statTooltip");
-const loadingState = document.querySelector("#loadingState");
-const zoomValue = document.querySelector("#zoomValue");
-const cursorValue = document.querySelector("#cursorValue");
-const liveSaveList = document.querySelector("#liveSaveList");
-const liveSaveCompletedToggleRow = document.querySelector("#liveSaveCompletedToggleRow");
-const liveSaveCompletedToggle = document.querySelector("#liveSaveCompletedToggle");
-const saveStatus = document.querySelector("#saveStatus");
-const seedCount = document.querySelector("#seedCount");
-const locationCount = document.querySelector("#locationCount");
-const recipesSummary = document.querySelector("#recipesSummary");
-const lifeSummary = document.querySelector("#lifeSummary");
-const staminaSummary = document.querySelector("#staminaSummary");
-const batterySummary = document.querySelector("#batterySummary");
-const completionistSummary = document.querySelector("#completionistSummary");
-const armorInventorySummary = document.querySelector("#armorInventorySummary");
-const armorUpgradedSummary = document.querySelector("#armorUpgradedSummary");
-const compendiumSummary = document.querySelector("#compendiumSummary");
-const pristineWeaponsSummary = document.querySelector("#pristineWeaponsSummary");
-const fabricsSummary = document.querySelector("#fabricsSummary");
-const manualSaveInput = document.querySelector("#manualSaveInput");
-const manualSaveStatus = document.querySelector("#manualSaveStatus");
-const demoSaveButton = document.querySelector("#demoSaveButton");
-const demoModal = document.querySelector("#demoModal");
-const demoModalCancel = document.querySelector("#demoModalCancel");
-const demoModalConfirm = document.querySelector("#demoModalConfirm");
+const $ = (selector) => document.querySelector(selector);
+const byId = (...ids) => Object.fromEntries(ids.map((id) => [id, $(`#${id}`)]));
+const {
+  mapViewport: viewport, mapImage, guideLayer, markerLayer, mapTooltip, statTooltip, loadingState,
+  zoomValue, cursorValue, liveSaveList, liveSaveCompletedToggleRow, liveSaveCompletedToggle,
+  saveStatus, seedCount, locationCount, recipesSummary, lifeSummary, staminaSummary, batterySummary,
+  completionistSummary, armorInventorySummary, armorUpgradedSummary, compendiumSummary,
+  pristineWeaponsSummary, fabricsSummary, manualSaveInput, manualSaveStatus, demoSaveButton,
+  demoModal, demoModalCancel, demoModalConfirm, markersMenu, saveLoadingOverlay, saveDropLayer,
+  sidebarToggle, sidebarBackdrop, sidebarClose, logEntries, viewPlayer,
+} = byId(
+  "mapViewport", "mapImage", "guideLayer", "markerLayer", "mapTooltip", "statTooltip", "loadingState",
+  "zoomValue", "cursorValue", "liveSaveList", "liveSaveCompletedToggleRow", "liveSaveCompletedToggle",
+  "saveStatus", "seedCount", "locationCount", "recipesSummary", "lifeSummary", "staminaSummary",
+  "batterySummary", "completionistSummary", "armorInventorySummary", "armorUpgradedSummary",
+  "compendiumSummary", "pristineWeaponsSummary", "fabricsSummary", "manualSaveInput", "manualSaveStatus",
+  "demoSaveButton", "demoModal", "demoModalCancel", "demoModalConfirm", "markersMenu", "saveLoadingOverlay",
+  "saveDropLayer", "sidebarToggle", "sidebarBackdrop", "sidebarClose", "logEntries", "viewPlayer",
+);
 const demoSaveInputs = document.querySelectorAll('input[name="demoSave"]');
-const markersMenu = document.querySelector("#markersMenu");
-const saveLoadingOverlay = document.querySelector("#saveLoadingOverlay");
-const saveDropLayer = document.querySelector("#saveDropLayer");
-const sidebarToggle = document.querySelector("#sidebarToggle");
-const sidebarBackdrop = document.querySelector("#sidebarBackdrop");
-const sidebarClose = document.querySelector("#sidebarClose");
-const logEntries = document.querySelector("#logEntries");
 const logPanel = logEntries?.closest(".log-panel") || null;
-const viewPlayer = document.querySelector("#viewPlayer");
 const layerButtons = document.querySelectorAll(".layer-button");
 let currentCompletionStats = {};
 let currentPlayerStats = null;
@@ -64,37 +44,47 @@ let currentRecipes = null;
 const completionStatSummaries = [
   {
     id: "armor_inventory",
+    title: "Armor",
     element: armorInventorySummary,
     missingPrefix: "Still missing",
     completeText: "All armor collected",
+    tooltipCompleteText: "All armor collected.",
     emptyText: "No armor data loaded",
   },
   {
     id: "armor_upgraded",
+    title: "Armor (4-star upgraded)",
     element: armorUpgradedSummary,
     missingPrefix: "Still left",
     completeText: "All upgradeable armor is at 4 stars",
+    tooltipCompleteText: "All upgradeable armor is at 4 stars.",
     emptyText: "No armor upgrade data loaded",
   },
   {
     id: "compendium",
+    title: "Compendium",
     element: compendiumSummary,
     missingPrefix: "Still missing",
     completeText: "All compendium pictures registered",
+    tooltipCompleteText: "All compendium pictures registered.",
     emptyText: "No compendium data loaded",
   },
   {
     id: "pristine_weapons",
+    title: "Pristine Weapons",
     element: pristineWeaponsSummary,
     missingPrefix: "Still locked",
     completeText: "All pristine weapons unlocked",
+    tooltipCompleteText: "All pristine weapons unlocked.",
     emptyText: "No pristine weapon data loaded",
   },
   {
     id: "fabrics",
+    title: "Fabrics",
     element: fabricsSummary,
     missingPrefix: "Still left",
     completeText: "All fabrics collected",
+    tooltipCompleteText: "All fabrics collected.",
     emptyText: "No fabric data loaded",
   },
 ];
@@ -110,34 +100,17 @@ const groupInputs = {
   player: document.querySelector("#groupPlayer"),
   completion: document.querySelector("#groupCompletion"),
 };
-const completionInputs = {
-  koroks: document.querySelector("#completion-koroks"),
-  towers: document.querySelector("#completion-towers"),
-  shrines: document.querySelector("#completion-shrines"),
-  lightroots: document.querySelector("#completion-lightroots"),
-  caves: document.querySelector("#completion-caves"),
-  bubbulfrogs: document.querySelector("#completion-bubbulfrogs"),
-  hudson_sign: document.querySelector("#completion-hudson_sign"),
-  dungeon_bosses: document.querySelector("#completion-dungeon_bosses"),
-  flux_construct: document.querySelector("#completion-flux_construct"),
-  hinox: document.querySelector("#completion-hinox"),
-  stone_talus: document.querySelector("#completion-stone_talus"),
-  molduga: document.querySelector("#completion-molduga"),
-  frox: document.querySelector("#completion-frox"),
-  gleeok: document.querySelector("#completion-gleeok"),
-  wells: document.querySelector("#completion-wells"),
-  chasms: document.querySelector("#completion-chasms"),
-  yiga_schematic: document.querySelector("#completion-yiga_schematic"),
-  old_map: document.querySelector("#completion-old_map"),
-  armor: document.querySelector("#completion-armor"),
-  sage_will: document.querySelector("#completion-sage_will"),
-  schema_stone: document.querySelector("#completion-schema_stone"),
-  general_locations: document.querySelector("#completion-general_locations"),
-};
+const completionIds = [
+  "koroks", "towers", "shrines", "lightroots", "caves", "bubbulfrogs", "hudson_sign",
+  "dungeon_bosses", "flux_construct", "hinox", "stone_talus", "molduga", "frox", "gleeok",
+  "wells", "chasms", "yiga_schematic", "old_map", "armor", "sage_will", "schema_stone",
+  "general_locations",
+];
+const completionInputs = Object.fromEntries(completionIds.map((id) => [id, $(`#completion-${id}`)]));
 const completionCounts = Object.fromEntries(
-  Object.keys(completionInputs).map((id) => [id, document.querySelector(`#completionCount-${id}`)]),
+  completionIds.map((id) => [id, $(`#completionCount-${id}`)]),
 );
-const completionShowObtained = Object.fromEntries(Object.keys(completionInputs).map((id) => [id, false]));
+const completionShowObtained = Object.fromEntries(completionIds.map((id) => [id, false]));
 const completionEyesToggle = document.querySelector("#completionEyesToggle");
 const completionTotalSummary = document.querySelector("#completionTotalSummary");
 const completionObtainedToggles = Object.fromEntries(
@@ -206,6 +179,23 @@ const PLAYER_MAX_LIFE_HEARTS = 38;
 const PLAYER_MAX_STAMINA_WHEELS = 3;
 const PLAYER_MAX_BATTERY_CELLS = 48;
 const PLAYER_MAX_RECIPES = 228;
+const playerStatSummaries = [
+  {
+    element: lifeSummary,
+    value: (stats) => stats && Math.min(stats.lifeHearts, PLAYER_MAX_LIFE_HEARTS),
+    total: PLAYER_MAX_LIFE_HEARTS,
+  },
+  {
+    element: staminaSummary,
+    value: (stats) => stats && formatStaminaUnits(stats.maxStamina),
+    total: PLAYER_MAX_STAMINA_WHEELS,
+  },
+  {
+    element: batterySummary,
+    value: (stats) => stats && Math.min(stats.batteryCells, PLAYER_MAX_BATTERY_CELLS),
+    total: PLAYER_MAX_BATTERY_CELLS,
+  },
+];
 
 let activeLayer = "surface";
 let scale = 1;
@@ -819,19 +809,20 @@ function playerLifeTooltip(stats) {
   ]);
 }
 
+function formatStaminaUnits(maxStamina) {
+  const cappedUnits = Math.min(maxStamina / 1000, PLAYER_MAX_STAMINA_WHEELS);
+  const normalized = Math.abs(cappedUnits - PLAYER_MAX_STAMINA_WHEELS) < 1e-6
+    ? PLAYER_MAX_STAMINA_WHEELS
+    : Math.floor(cappedUnits * 10) / 10;
+  return Number.isInteger(normalized) ? String(normalized) : normalized.toFixed(1);
+}
+
 function playerStaminaTooltip(stats) {
   if (!stats) {
     return tooltipRows("Stamina", [{ label: "Status", value: "No save data loaded" }]);
   }
-  const rawUnits = stats.maxStamina / 1000;
-  const cappedUnits = Math.min(rawUnits, PLAYER_MAX_STAMINA_WHEELS);
-  // Truncate to 1 decimal without rounding up (prevents 2.99 -> 3.0).
-  const normalized = Math.abs(cappedUnits - PLAYER_MAX_STAMINA_WHEELS) < 1e-6
-    ? PLAYER_MAX_STAMINA_WHEELS
-    : Math.floor(cappedUnits * 10) / 10;
-  const formattedUnits = Number.isInteger(normalized) ? String(normalized) : normalized.toFixed(1);
   return tooltipRows("Stamina", [
-    { label: "Max", value: `${formattedUnits} / ${PLAYER_MAX_STAMINA_WHEELS} wheels` },
+    { label: "Max", value: `${formatStaminaUnits(stats.maxStamina)} / ${PLAYER_MAX_STAMINA_WHEELS} wheels` },
     { label: "Raw maxStamina", value: stats.maxStamina },
   ]);
 }
@@ -872,26 +863,6 @@ function recipesTooltip(recipes) {
   }
 
   return html;
-}
-
-function pristineWeaponsTooltip(stat) {
-  return statListTooltip(stat, "Pristine Weapons", "All pristine weapons unlocked.");
-}
-
-function fabricsTooltip(stat) {
-  return statListTooltip(stat, "Fabrics", "All fabrics collected.");
-}
-
-function armorInventoryTooltip(stat) {
-  return statListTooltip(stat, "Armor", "All armor collected.");
-}
-
-function armorUpgradedTooltip(stat) {
-  return statListTooltip(stat, "Armor (4-star upgraded)", "All upgradeable armor is at 4 stars.");
-}
-
-function compendiumTooltip(stat) {
-  return statListTooltip(stat, "Compendium", "All compendium pictures registered.");
 }
 
 function completionistTooltip() {
@@ -1470,25 +1441,6 @@ function appendKorokTargetLines(markers) {
   return appended ? svg : null;
 }
 
-function findNearestUnobtained(origin, markers) {
-  let nearest = null;
-  let nearestDistance = Number.POSITIVE_INFINITY;
-
-  for (const marker of markers) {
-    if (marker.obtained) {
-      continue;
-    }
-
-    const distance = worldDistanceWorld3D(marker, origin);
-    if (distance < nearestDistance) {
-      nearest = marker;
-      nearestDistance = distance;
-    }
-  }
-
-  return nearest;
-}
-
 /** Closest target for the player guide: unobtained koroks and visible missing completion pins (world XYZ). */
 function findNearestPlayerGuideTarget(origin, korokCandidates, completionCandidates) {
   let nearest = null;
@@ -1875,6 +1827,14 @@ function updateCompletionStatSummary(config) {
   config.element.setAttribute("aria-label", completionStatAriaText(stat, config));
 }
 
+function updatePlayerStatSummary(config) {
+  if (!config.element) {
+    return;
+  }
+  const value = currentPlayerStats ? config.value(currentPlayerStats) : null;
+  config.element.textContent = value == null ? "--" : `${value} / ${config.total}`;
+}
+
 function updateSaveSummary(payload) {
   const modified = new Date(payload.lastModified * 1000);
   saveStatus.textContent = modified.toLocaleTimeString();
@@ -1893,28 +1853,7 @@ function updateSaveSummary(payload) {
   }
   const stats = payload.playerStats || null;
   currentPlayerStats = stats;
-
-  if (lifeSummary) {
-    const currentLife = stats ? Math.min(stats.lifeHearts, PLAYER_MAX_LIFE_HEARTS) : null;
-    lifeSummary.textContent = currentLife == null ? "--" : `${currentLife} / ${PLAYER_MAX_LIFE_HEARTS}`;
-  }
-  if (staminaSummary) {
-    const rawUnits = stats ? stats.maxStamina / 1000 : null;
-    if (rawUnits == null) {
-      staminaSummary.textContent = "--";
-    } else {
-      const cappedUnits = Math.min(rawUnits, PLAYER_MAX_STAMINA_WHEELS);
-      const normalized = Math.abs(cappedUnits - PLAYER_MAX_STAMINA_WHEELS) < 1e-6
-        ? PLAYER_MAX_STAMINA_WHEELS
-        : Math.floor(cappedUnits * 10) / 10;
-      const formattedUnits = Number.isInteger(normalized) ? String(normalized) : normalized.toFixed(1);
-      staminaSummary.textContent = `${formattedUnits} / ${PLAYER_MAX_STAMINA_WHEELS}`;
-    }
-  }
-  if (batterySummary) {
-    const currentBattery = stats ? Math.min(stats.batteryCells, PLAYER_MAX_BATTERY_CELLS) : null;
-    batterySummary.textContent = currentBattery == null ? "--" : `${currentBattery} / ${PLAYER_MAX_BATTERY_CELLS}`;
-  }
+  playerStatSummaries.forEach(updatePlayerStatSummary);
 
   const obtained = payload.counts.totalLocations ?? 0;
   const total = payload.counts.availableLocations ?? 0;
@@ -2135,13 +2074,13 @@ async function ensurePyodide() {
     pyodide.FS.mkdirTree("/app/references");
     const [serverPy, korokJson, completionJson, hashesCsv, recipeRefIds] = await Promise.all([
       fetch(pyodideAssetUrl("server.py"), { cache: "no-store" }).then((r) => r.text()),
-      fetch(pyodideAssetUrl("korok_data.json"), { cache: "no-store" }).then((r) => r.text()),
+      fetch(pyodideAssetUrl("references/korok_data.json"), { cache: "no-store" }).then((r) => r.text()),
       fetch(pyodideAssetUrl("completion_data.json"), { cache: "no-store" }).then((r) => r.text()),
       fetch(pyodideAssetUrl("references/zelda-totk.hashes.csv"), { cache: "no-store" }).then((r) => r.text()),
       fetch(pyodideAssetUrl("references/recipe_ids_mine_228.txt"), { cache: "no-store" }).then((r) => r.text()),
     ]);
     pyodide.FS.writeFile("/app/server.py", serverPy, { encoding: "utf8" });
-    pyodide.FS.writeFile("/app/korok_data.json", korokJson, { encoding: "utf8" });
+    pyodide.FS.writeFile("/app/references/korok_data.json", korokJson, { encoding: "utf8" });
     pyodide.FS.writeFile("/app/completion_data.json", completionJson, { encoding: "utf8" });
     pyodide.FS.writeFile("/app/references/zelda-totk.hashes.csv", hashesCsv, { encoding: "utf8" });
     pyodide.FS.writeFile("/app/references/recipe_ids_mine_228.txt", recipeRefIds, { encoding: "utf8" });
@@ -2658,11 +2597,11 @@ if (saveDropLayer) {
     hideManualSaveDropUi();
   });
 }
-attachStatTooltip(pristineWeaponsSummary, () => pristineWeaponsTooltip(currentCompletionStats.pristine_weapons));
-attachStatTooltip(fabricsSummary, () => fabricsTooltip(currentCompletionStats.fabrics));
-attachStatTooltip(compendiumSummary, () => compendiumTooltip(currentCompletionStats.compendium));
-attachStatTooltip(armorInventorySummary, () => armorInventoryTooltip(currentCompletionStats.armor_inventory));
-attachStatTooltip(armorUpgradedSummary, () => armorUpgradedTooltip(currentCompletionStats.armor_upgraded));
+completionStatSummaries.forEach((config) => {
+  attachStatTooltip(config.element, () =>
+    statListTooltip(currentCompletionStats[config.id], config.title, config.tooltipCompleteText),
+  );
+});
 attachStatTooltip(completionistSummary, completionistTooltip, { onClick: pulseMarkersMenu });
 if (recipesSummary) attachStatTooltip(recipesSummary, () => recipesTooltip(currentRecipes));
 if (lifeSummary) attachStatTooltip(lifeSummary, () => playerLifeTooltip(currentPlayerStats));

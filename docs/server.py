@@ -34,7 +34,7 @@ RUNTIME_ROOT = runtime_root()
 CONFIG_PATH = RUNTIME_ROOT / "config.json"
 STATE_PATH = RUNTIME_ROOT / "state.json"
 
-KOROK_DATA_PATH = ROOT / "korok_data.json"
+KOROK_DATA_PATH = ROOT / "references" / "korok_data.json"
 COMPLETION_DATA_PATH = ROOT / "completion_data.json"
 HASHES_DATA_PATH = ROOT / "references" / "zelda-totk.hashes.csv"
 RECIPE_REFERENCE_IDS_PATH = ROOT / "references" / "recipe_ids_mine_228.txt"
@@ -226,39 +226,39 @@ def scan_tracked_saves():
     return tracked
 
 
-def load_korok_data():
-    with KOROK_DATA_PATH.open("r", encoding="utf-8") as file:
+def load_json(path):
+    with path.open("r", encoding="utf-8") as file:
         return json.load(file)
+
+
+def load_korok_data():
+    return load_json(KOROK_DATA_PATH)
 
 
 def load_completion_data():
-    with COMPLETION_DATA_PATH.open("r", encoding="utf-8") as file:
-        return json.load(file)
+    return load_json(COMPLETION_DATA_PATH)
+
+
+def iter_hash_variables():
+    if not HASHES_DATA_PATH.exists():
+        return
+    with HASHES_DATA_PATH.open("r", encoding="utf-8", errors="ignore") as file:
+        for raw_line in file:
+            parts = raw_line.strip().split(";", 2)
+            if len(parts) != 3:
+                continue
+            try:
+                yield int(parts[0], 16), parts[2]
+            except ValueError:
+                continue
 
 
 def load_recipe_hash_to_id() -> dict[int, str]:
     """Map recipe cooked-flag hash -> recipe id (Item_*)."""
-    if not HASHES_DATA_PATH.exists():
-        return {}
-
     mapping: dict[int, str] = {}
-    with HASHES_DATA_PATH.open("r", encoding="utf-8", errors="ignore") as file:
-        for raw_line in file:
-            line = raw_line.strip()
-            if not line:
-                continue
-            parts = line.split(";", 2)
-            if len(parts) != 3:
-                continue
-            hash_hex, _typ, var = parts
-            if not (var.startswith("RecipeCard.Content.Item_") and var.endswith(".IsCooked")):
-                continue
-            try:
-                h = int(hash_hex, 16)
-            except ValueError:
-                continue
-            recipe_id = var[len("RecipeCard.Content.") : -len(".IsCooked")]
-            mapping[h] = recipe_id
+    for hash_value, var in iter_hash_variables() or ():
+        if var.startswith("RecipeCard.Content.Item_") and var.endswith(".IsCooked"):
+            mapping[hash_value] = var[len("RecipeCard.Content.") : -len(".IsCooked")]
     return mapping
 
 
@@ -266,12 +266,11 @@ def load_recipe_reference_ids() -> set[str]:
     """Load the canonical 228 recipe IDs to use for intersections."""
     if not RECIPE_REFERENCE_IDS_PATH.exists():
         return set()
-    ids = set()
-    for line in RECIPE_REFERENCE_IDS_PATH.read_text(encoding="utf-8", errors="ignore").splitlines():
-        item = line.strip()
-        if item:
-            ids.add(item)
-    return ids
+    return {
+        line.strip()
+        for line in RECIPE_REFERENCE_IDS_PATH.read_text(encoding="utf-8", errors="ignore").splitlines()
+        if line.strip()
+    }
 
 
 def initialize_data():
@@ -419,30 +418,20 @@ def describe_changed_mtimes(previous_key, current_snapshot):
     return changes
 
 
-def copy_stable_save(save_path):
-    temp = tempfile.NamedTemporaryFile(delete=False, suffix=".sav")
-    temp.close()
-    try:
-        shutil.copyfile(save_path, temp.name)
-        return Path(temp.name)
-    except Exception:
-        Path(temp.name).unlink(missing_ok=True)
-        raise
-
-
 def read_save_bytes(save_path):
     last_error = None
     for _ in range(4):
-        temp_path = None
+        temp = tempfile.NamedTemporaryFile(delete=False, suffix=".sav")
+        temp.close()
+        temp_path = Path(temp.name)
         try:
-            temp_path = copy_stable_save(save_path)
+            shutil.copyfile(save_path, temp_path)
             return temp_path.read_bytes()
         except (PermissionError, OSError) as error:
             last_error = error
             time.sleep(0.15)
         finally:
-            if temp_path:
-                temp_path.unlink(missing_ok=True)
+            temp_path.unlink(missing_ok=True)
     raise last_error
 
 
@@ -475,12 +464,16 @@ def find_hash_value_offset(data, hash_value):
     return None
 
 
+def read_hash_value(data, hash_value, reader=read_u32):
+    pointer_offset = find_hash_value_offset(data, hash_value)
+    return None if pointer_offset is None else reader(data, pointer_offset)
+
+
 def parse_player_position(data):
-    pointer_offset = find_hash_value_offset(data, PLAYER_SAVE_POS_HASH)
-    if pointer_offset is None:
+    vector_offset = read_hash_value(data, PLAYER_SAVE_POS_HASH)
+    if vector_offset is None:
         return None
 
-    vector_offset = read_u32(data, pointer_offset)
     raw_x = read_f32(data, vector_offset)
     raw_y = read_f32(data, vector_offset + 4)
     raw_z = read_f32(data, vector_offset + 8)
@@ -499,22 +492,9 @@ def parse_player_position(data):
 
 def parse_player_max_stats(data):
     """Parse max Life / Stamina / Battery from PlayerStatus.*."""
-
-    def read_by_hash_u32(hash_value: int):
-        pointer_offset = find_hash_value_offset(data, hash_value)
-        if pointer_offset is None:
-            return None
-        return read_u32(data, pointer_offset)
-
-    def read_by_hash_f32(hash_value: int):
-        pointer_offset = find_hash_value_offset(data, hash_value)
-        if pointer_offset is None:
-            return None
-        return read_f32(data, pointer_offset)
-
-    max_life = read_by_hash_u32(PLAYER_MAX_LIFE_HASH)
-    max_stamina = read_by_hash_f32(PLAYER_MAX_STAMINA_HASH)
-    max_energy = read_by_hash_f32(PLAYER_MAX_ENERGY_HASH)
+    max_life = read_hash_value(data, PLAYER_MAX_LIFE_HASH)
+    max_stamina = read_hash_value(data, PLAYER_MAX_STAMINA_HASH, read_f32)
+    max_energy = read_hash_value(data, PLAYER_MAX_ENERGY_HASH, read_f32)
 
     if max_life is None or max_stamina is None or max_energy is None:
         return None
@@ -537,11 +517,10 @@ def parse_player_max_stats(data):
 
 
 def parse_guid_values(data):
-    pointer_offset = find_hash_value_offset(data, META_SAVE_TYPE_HASH)
-    if pointer_offset is None:
+    guid_offset = read_hash_value(data, META_SAVE_TYPE_HASH)
+    if guid_offset is None:
         return set()
 
-    guid_offset = read_u32(data, pointer_offset)
     values = set()
     for offset in range(guid_offset, len(data) - 7, 8):
         lower = read_u32(data, offset)
@@ -580,6 +559,14 @@ def progress_summary(definition, total, obtained_count):
         "remaining": total - obtained_count,
         "sourceCounts": definition.get("sourceCounts", {}),
     }
+
+
+def add_missing_item(missing_items, item, *keys):
+    missing_items.append({
+        "id": item["id"],
+        "label": item.get("label") or item["id"],
+        **{key: item.get(key) for key in keys if key in item},
+    })
 
 
 def build_markers(values):
@@ -659,13 +646,7 @@ def build_armor_stat(stat, values, data):
         if obtained:
             obtained_count += 1
         elif stat.get("includeMissing"):
-            missing_items.append({
-                "id": item["id"],
-                "label": item.get("label") or item["id"],
-                "baseId": item.get("baseId"),
-                "upgradedId": item.get("upgradedId"),
-                "upgradedIds": item.get("upgradedIds"),
-            })
+            add_missing_item(missing_items, item, "baseId", "upgradedId", "upgradedIds")
 
     summary = progress_summary(stat, len(stat["items"]), obtained_count)
     if stat.get("includeMissing"):
@@ -697,12 +678,8 @@ def build_completion_stats(values, data):
             if obtained:
                 obtained_count += 1
             elif stat.get("includeMissing"):
-                missing_items.append({
-                    "id": item["id"],
-                    "label": item.get("label") or item["id"],
-                    "value": item["value"],
-                    "rawValue": raw,
-                })
+                add_missing_item(missing_items, item, "value")
+                missing_items[-1]["rawValue"] = raw
 
         summary = progress_summary(stat, len(stat["items"]), obtained_count)
         if stat.get("includeMissing"):
@@ -851,6 +828,12 @@ def health_status():
 
 
 class Handler(SimpleHTTPRequestHandler):
+    API_GET = {
+        "/api/health": (health_status, "text"),
+        "/api/koroks": (parse_current_save, "json"),
+        "/api/log": (lambda: {"entries": LOG_ENTRIES[-LOG_LIMIT:]}, "json"),
+    }
+
     def log_message(self, format, *args):
         # In PyInstaller --windowed apps, sys.stderr can be None which breaks the
         # default BaseHTTPRequestHandler logging. Route it to logging instead.
@@ -860,43 +843,33 @@ class Handler(SimpleHTTPRequestHandler):
         self.send_header("Cache-Control", "no-store")
         super().end_headers()
 
-    def send_json(self, status, payload):
-        body = json.dumps(payload).encode("utf-8")
+    def send_body(self, status, body, content_type):
+        data = body.encode("utf-8")
         self.send_response(status)
-        self.send_header("Content-Type", "application/json; charset=utf-8")
-        self.send_header("Content-Length", str(len(body)))
-        self.end_headers()
-        self.wfile.write(body)
-
-    def send_text(self, status, body):
-        data = str(body).encode("utf-8")
-        self.send_response(status)
-        self.send_header("Content-Type", "text/plain; charset=utf-8")
+        self.send_header("Content-Type", f"{content_type}; charset=utf-8")
         self.send_header("Content-Length", str(len(data)))
         self.end_headers()
         self.wfile.write(data)
 
-    def do_GET(self):
-        parsed = urlparse(self.path)
-        if parsed.path == "/api/health":
-            try:
-                self.send_text(200, health_status())
-            except Exception as error:
-                add_log(f"Error: {error}")
-                logging.exception("Error handling /api/health")
-                self.send_text(500, str(error))
-            return
-        if parsed.path == "/api/koroks":
-            try:
-                self.send_json(200, parse_current_save())
-            except Exception as error:
-                add_log(f"Error: {error}")
-                logging.exception("Error handling /api/koroks")
-                self.send_json(500, {"error": str(error)})
-            return
-        if parsed.path == "/api/log":
-            self.send_json(200, {"entries": LOG_ENTRIES[-LOG_LIMIT:]})
-            return
+    def send_json(self, status, payload):
+        self.send_body(status, json.dumps(payload), "application/json")
+
+    def send_text(self, status, body):
+        self.send_body(status, str(body), "text/plain")
+
+    def send_api_result(self, body, response_type="json"):
+        if response_type == "text":
+            self.send_text(200, body)
+        else:
+            self.send_json(200, body)
+
+    def send_api_error(self, response_type, error):
+        if response_type == "text":
+            self.send_text(500, str(error))
+        else:
+            self.send_json(500, {"error": str(error)})
+
+    def handle_api_get(self, parsed):
         if parsed.path == "/api/delta_log":
             query = parse_qs(parsed.query or "")
             try:
@@ -906,6 +879,23 @@ class Handler(SimpleHTTPRequestHandler):
             entries = [entry for entry in LOG_ENTRIES if entry.get("id", 0) > last_id]
             latest_id = LOG_ENTRIES[-1]["id"] if LOG_ENTRIES else last_id
             self.send_json(200, {"entries": entries, "latestId": latest_id})
+            return True
+
+        route = self.API_GET.get(parsed.path)
+        if not route:
+            return False
+        handler, response_type = route
+        try:
+            self.send_api_result(handler(), response_type)
+        except Exception as error:
+            add_log(f"Error: {error}")
+            logging.exception("Error handling %s", parsed.path)
+            self.send_api_error(response_type, error)
+        return True
+
+    def do_GET(self):
+        parsed = urlparse(self.path)
+        if self.handle_api_get(parsed):
             return
         return super().do_GET()
 
