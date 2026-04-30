@@ -26,7 +26,7 @@ if (Test-Path $outExe) {
 $repoIndex = Join-Path $ProjectDir "index.html"
 $repoStyles = Join-Path $ProjectDir "styles.css"
 $repoFrontend = Join-Path $ProjectDir "frontend"
-$repoKoroks = Join-Path $ProjectDir "references\\korok_data.json"
+$repoReferences = Join-Path $ProjectDir "references"
 $repoCompletion = Join-Path $ProjectDir "completion_data.json"
 $repoServer = Join-Path $ProjectDir "server.py"
 $repoGui = Join-Path $ProjectDir "gui.py"
@@ -36,8 +36,11 @@ $iconTool = Join-Path $ProjectDir "tools\\png_to_ico.py"
 $iconOut = Join-Path $ProjectDir ".pyinstaller-build\\app.ico"
 $repoAssets = Join-Path $ProjectDir "assets"
 
-foreach ($p in @($repoServer,$repoGui,$repoIndex,$repoStyles,$repoFrontend,$repoKoroks,$repoCompletion)) {
-  if (-not (Test-Path $p)) { throw "Missing required file: $p" }
+foreach ($p in @($repoServer,$repoGui,$repoIndex,$repoStyles,$repoFrontend,$repoCompletion)) {
+  if (-not (Test-Path $p)) { throw "Missing required path: $p" }
+}
+if (-not (Test-Path $repoReferences -PathType Container)) {
+  throw "Missing required directory: $repoReferences"
 }
 
 if (-not $Icon -and (Test-Path $defaultIconPng)) {
@@ -73,7 +76,7 @@ $args = @(
   "--add-data", "$repoIndex;.",
   "--add-data", "$repoStyles;.",
   "--add-data", "$repoFrontend;frontend",
-  "--add-data", "$repoKoroks;references",
+  "--add-data", "$repoReferences;references",
   "--add-data", "$repoCompletion;.",
   $repoGui
 )
