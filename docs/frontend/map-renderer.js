@@ -47,6 +47,33 @@ function parseTargetWorldFromNote(note) {
   return { x, y, z };
 }
 
+function markerHudWorld(marker) {
+  return parseTargetWorldFromNote(marker.note) || marker;
+}
+
+function setNearestCoords(marker) {
+  if (!nearestCoords) {
+    return;
+  }
+  if (!marker) {
+    nearestCoords.hidden = true;
+    nearestCoords.setAttribute("aria-hidden", "true");
+    nearestCoords.textContent = "";
+    return;
+  }
+  const world = markerHudWorld(marker);
+  nearestCoords.hidden = false;
+  nearestCoords.setAttribute("aria-hidden", "false");
+  nearestCoords.replaceChildren();
+  const icon = document.createElement("span");
+  icon.className = `nearest-coords-icon completion-${marker.categoryId}`;
+  if (marker.kind) {
+    icon.classList.add(marker.kind);
+  }
+  icon.setAttribute("aria-hidden", "true");
+  nearestCoords.append(icon, document.createTextNode(`X ${formatNumber(world.x)}  Z ${formatNumber(world.z)}  (Y ${formatNumber(world.y)})`));
+}
+
 function appendTargetLines(markers) {
   if (!imageWidth || !imageHeight) {
     return null;
@@ -249,6 +276,7 @@ function visibleCompletionMarkers() {
 function renderGuide() {
   guideLayer.replaceChildren();
   linkNearestCompletionId = null;
+  setNearestCoords(null);
 
   if (!overlayInputs.playerGuide.checked) {
     lastPlayerGuideFrameKey = "";
@@ -272,6 +300,7 @@ function renderGuide() {
     const nearestFromLink = findNearestPlayerGuideTarget(playerPosition, visibleMissing);
     if (nearestFromLink) {
       linkNearestCompletionId = nearestFromLink.id;
+      setNearestCoords(nearestFromLink);
       const frameKey = `${nearestFromLink.id}|${Math.round(playerPosition.x)}|${Math.round(playerPosition.z)}|${activeLayer}`;
       if (frameKey !== lastPlayerGuideFrameKey) {
         lastPlayerGuideFrameKey = frameKey;

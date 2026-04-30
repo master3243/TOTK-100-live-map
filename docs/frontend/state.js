@@ -18,6 +18,7 @@ const layers = {
 
 const {
   mapViewport: viewport, mapImage, guideLayer, markerLayer, mapTooltip, statTooltip, loadingState,
+  nearestCoords,
   zoomValue, cursorValue, liveSaveList, liveSaveCompletedToggleRow, liveSaveCompletedToggle,
   saveStatus, seedCount, locationCount, recipesSummary, lifeSummary, staminaSummary, batterySummary,
   completionistSummary, armorInventorySummary, armorUpgradedSummary, compendiumSummary,
@@ -26,6 +27,7 @@ const {
   sidebarToggle, sidebarBackdrop, sidebarClose, logEntries, viewPlayer,
 } = byId(
   "mapViewport", "mapImage", "guideLayer", "markerLayer", "mapTooltip", "statTooltip", "loadingState",
+  "nearestCoords",
   "zoomValue", "cursorValue", "liveSaveList", "liveSaveCompletedToggleRow", "liveSaveCompletedToggle",
   "saveStatus", "seedCount", "locationCount", "recipesSummary", "lifeSummary", "staminaSummary",
   "batterySummary", "completionistSummary", "armorInventorySummary", "armorUpgradedSummary",

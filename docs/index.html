@@ -22,7 +22,7 @@
         <div class="brand">
           <p class="eyebrow">Tears of the Kingdom</p>
           <h1>Save Map Helper</h1>
-          <h2>v1.3.2</h2>
+          <h2>v1.3.3</h2>
           <div class="save-upload">
             <input id="manualSaveInput" type="file" accept=".sav,application/octet-stream">
             <label class="upload-button" for="manualSaveInput">Upload save</label>
@@ -267,9 +267,12 @@
       </aside>
 
       <section class="map-shell" aria-label="Interactive TOTK map">
-        <button id="sidebarToggle" class="sidebar-toggle" type="button" aria-label="Open menu" title="Menu">
-          <span class="sidebar-toggle-icon" aria-hidden="true"></span>
-        </button>
+        <div class="map-hud-corner">
+          <button id="sidebarToggle" class="sidebar-toggle" type="button" aria-label="Open menu" title="Menu">
+            <span class="sidebar-toggle-icon" aria-hidden="true"></span>
+          </button>
+          <div id="nearestCoords" class="nearest-coords-hud" hidden aria-hidden="true"></div>
+        </div>
         <div id="sidebarBackdrop" class="sidebar-backdrop" hidden aria-hidden="true"></div>
         <div class="layer-stack" role="group" aria-label="Choose map layer">
           <button class="layer-button layer-sky" type="button" data-layer="sky" aria-label="Sky map" title="Sky"></button>
