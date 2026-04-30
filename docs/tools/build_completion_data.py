@@ -350,7 +350,7 @@ def parse_master_map_general_locations(path):
 
 
 def parse_master_map_coordinate(row, row_number):
-    for index in range(5, len(row), 3):
+    for index in range(4, len(row), 3):
         if index + 2 >= len(row):
             break
         if row[index].strip() and row[index + 1].strip():
