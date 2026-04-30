@@ -1140,6 +1140,10 @@ body.save-drop-active {
   -webkit-user-select: none;
 }
 
+.nearest-coords-hud[hidden] {
+  display: none;
+}
+
 .nearest-coords-icon {
   position: static;
   display: inline-block;
