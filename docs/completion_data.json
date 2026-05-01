@@ -23036,18 +23036,6 @@
         },
         {
           "id": "armor_inventory-055",
-          "label": "Hylian Hood",
-          "baseId": "Armor_001_Head",
-          "ids": [
-            "Armor_001_Head",
-            "Armor_002_Head",
-            "Armor_003_Head",
-            "Armor_004_Head",
-            "Armor_015_Head"
-          ]
-        },
-        {
-          "id": "armor_inventory-056",
           "label": "Hylian Hood (lowered)",
           "baseId": "Armor_1152_Head",
           "ids": [
@@ -23056,6 +23044,18 @@
             "Armor_1154_Head",
             "Armor_1155_Head",
             "Armor_1156_Head"
+          ]
+        },
+        {
+          "id": "armor_inventory-056",
+          "label": "Hylian Hood (non-lowered)",
+          "baseId": "Armor_001_Head",
+          "ids": [
+            "Armor_001_Head",
+            "Armor_002_Head",
+            "Armor_003_Head",
+            "Armor_004_Head",
+            "Armor_015_Head"
           ]
         },
         {
@@ -24332,20 +24332,20 @@
         },
         {
           "id": "armor_upgraded-043",
-          "label": "Hylian Hood",
-          "baseId": "Armor_001_Head",
-          "upgradedId": "Armor_015_Head",
-          "upgradedIds": [
-            "Armor_015_Head"
-          ]
-        },
-        {
-          "id": "armor_upgraded-044",
           "label": "Hylian Hood (lowered)",
           "baseId": "Armor_1152_Head",
           "upgradedId": "Armor_1156_Head",
           "upgradedIds": [
             "Armor_1156_Head"
+          ]
+        },
+        {
+          "id": "armor_upgraded-044",
+          "label": "Hylian Hood (non-lowered)",
+          "baseId": "Armor_001_Head",
+          "upgradedId": "Armor_015_Head",
+          "upgradedIds": [
+            "Armor_015_Head"
           ]
         },
         {

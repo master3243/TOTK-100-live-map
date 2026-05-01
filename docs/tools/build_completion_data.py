@@ -542,6 +542,8 @@ def parse_armor_locale_rows(locale_text):
             continue
         star_count = label.count(star)
         base_label = re.sub(rf"\s*{re.escape(star)}+$", "", label).strip()
+        if base_label == "Hylian Hood":
+            base_label = "Hylian Hood (non-lowered)"
         rows.append({
             "id": item_id,
             "label": label,
