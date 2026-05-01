@@ -1,9 +1,6 @@
 when save has above the 100% mark, should show warning symbol
-list quest/side quest/shrine quest
 4 old map treasures not tracked I think (because they are weapons) but they should be tracked as they show a X on the map
 remove recipes extra logic (no longer possible without hashes file)
-Key Items aren't tracked
-    6 Bridles/Saddles not tracked
 wont add: (silly stuff):
     - not sure locations listed is truly 100%, some dataminers show ~900 while here is ~350. Same for shops, not sure if they are all in ~350. 
         (I think there's a difference between all locations on the map including the ones automatically added when a tower is found (~900) and those that need to be visited aside from the towers (~350))

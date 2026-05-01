@@ -11,14 +11,44 @@ OUTPUT = ROOT / "completion_data.json"
 LAYER_FIX = 500
 ICON_Y_OFFSET = 106
 
-MASTER_MAP = REFERENCES / "TOTK master sheet - Map.csv"
-MASTER_MAP_SKIP = ( "_IsCompleted_Exp", "_IsAfter_DungeonBossDead_Exp" )  # Fix map csv
-MASTER_MAP_REPLACE = { "IsVisitLocation.HatenoLab": "IsVisitLocation.HatenoLabo" }  # Fix map csv
+GENERAL_LOCATIONS_CSV = REFERENCES / "TOTK master sheet - Map.csv"
+FOOD_CSV = REFERENCES / "TOTK master sheet - Food.csv"
+KEY_ITEM_CSV = REFERENCES / "TOTK master sheet - KeyItems.csv"
+MATERIALS_CSV = REFERENCES / "TOTK master sheet - Materials.csv"
+QUESTS_CSV = REFERENCES / "TOTK master sheet - Quests.csv"
 
-MASTER_FOOD = REFERENCES / "TOTK master sheet - Food.csv"
-MASTER_KEY_ITEMS = REFERENCES / "TOTK master sheet - KeyItems.csv"
-MASTER_MATERIALS = REFERENCES / "TOTK master sheet - Materials.csv"
-MASTER_QUESTS = REFERENCES / "TOTK master sheet - Quests.csv"
+COMPLETISM_JS = REFERENCES / "zelda-totk.completism.js"
+COORDINATES_JS = REFERENCES / "zelda-totk.coordinates.js"
+EQUIPMENT_JS = REFERENCES / "zelda-totk.class.equipment.js"
+HASHES_CSV = REFERENCES / "zelda-totk.hashes.csv"
+LOCALE_EN_JS = REFERENCES / "zelda-totk.locale.en.js"
+ZELDACENTRAL_CHESTS_SURFACE = REFERENCES / "zeldacentral-totk-surface-chests.json"
+ZELDACENTRAL_CHESTS_SKY = REFERENCES / "zeldacentral-totk-sky-chests.json"
+ZELDACENTRAL_CHESTS_DEPTHS = REFERENCES / "zeldacentral-totk-depths-chests.json"
+
+
+GENERAL_LOCATIONS_SKIP = ( "_IsCompleted_Exp", "_IsAfter_DungeonBossDead_Exp" )  # Fix map csv
+GENERAL_LOCATIONS_REPLACE = { "IsVisitLocation.HatenoLab": "IsVisitLocation.HatenoLabo" }  # Fix map csv
+
+KEY_ITEMS_SKIP = frozenset(
+    {
+        "Ultrahand",
+        "Fuse",
+        "Ascend",
+        "Recall",
+        "Autobuild",
+        "Energy Cell",
+        "Bubbul Gem",
+        "Light of Blessing",
+        "Sage's Will",
+        "Vow of Tulin, Sage of Wind",
+        "Vow of Yunobo, Sage of Fire",
+        "Vow of Sidon, Sage of Water",
+        "Vow of Riju, Sage of Lightning",
+        "Vow of Mineru, Sage of Spirit",
+        "Travel Medallion Prototype",
+    }
+)
 QUEST_TYPES = [
     ("quests_main", "Main Quests", "Main Quest"),
     ("quests_side", "Side Quests", "Side Quest"),
@@ -355,10 +385,10 @@ def parse_master_map_general_locations(path):
                 continue
 
             flag = row[indexes["Flag To Unlock"]].strip()
-            if any(s in flag for s in MASTER_MAP_SKIP):
+            if any(s in flag for s in GENERAL_LOCATIONS_SKIP):
                 continue
-            if flag in MASTER_MAP_REPLACE:
-                flag = MASTER_MAP_REPLACE[flag]
+            if flag in GENERAL_LOCATIONS_REPLACE:
+                flag = GENERAL_LOCATIONS_REPLACE[flag]
             x, y, z = parse_master_map_coordinate(row, row_number)
             actor_name = row[indexes["ActorName"]].strip()
             name = row[indexes["Name"]].strip()
@@ -441,15 +471,19 @@ def read_master_rows(path):
         return list(csv.DictReader(handle))
 
 
-def parse_master_actor_items(path, prefix):
+def parse_master_actor_items(path, prefix, skip_names=None):
+    skip = skip_names or frozenset()
     items = []
     for row in read_master_rows(path):
         actor_name = row["ActorName"].strip()
         if not actor_name:
             continue
+        label = row.get("Name", "").strip() or actor_name
+        if label in skip:
+            continue
         items.append({
             "id": f"{prefix}-{len(items) + 1:03d}",
-            "label": row.get("Name", "").strip() or actor_name,
+            "label": label,
             "actorName": actor_name,
         })
     return items
@@ -462,10 +496,10 @@ def parse_master_recipe_items(path):
     return items
 
 
-def parse_master_inventory_items(path, prefix, array_name):
+def parse_master_inventory_items(path, prefix, array_name, skip_names=None):
     return {
         "arrayHash": f"{murmur3_32(array_name):08x}",
-        "items": parse_master_actor_items(path, prefix),
+        "items": parse_master_actor_items(path, prefix, skip_names=skip_names),
     }
 
 
@@ -656,20 +690,20 @@ def compendium_labels_by_value(hashes_text):
 
 
 def main():
-    completism = (REFERENCES / "zelda-totk.completism.js").read_text(encoding="utf-8")
-    coordinates = (REFERENCES / "zelda-totk.coordinates.js").read_text(encoding="utf-8")
-    equipment = (REFERENCES / "zelda-totk.class.equipment.js").read_text(encoding="utf-8")  # for pristine count
-    hashes = (REFERENCES / "zelda-totk.hashes.csv").read_text(encoding="utf-8")
-    locale = (REFERENCES / "zelda-totk.locale.en.js").read_text(encoding="utf-8")  # for armor locations and count in inventory
+    completism = COMPLETISM_JS.read_text(encoding="utf-8")
+    coordinates = COORDINATES_JS.read_text(encoding="utf-8")
+    equipment = EQUIPMENT_JS.read_text(encoding="utf-8")
+    hashes = HASHES_CSV.read_text(encoding="utf-8")
+    locale = LOCALE_EN_JS.read_text(encoding="utf-8")
     zeldacentral_chests = {
-        "surface": (REFERENCES / "zeldacentral-totk-surface-chests.json").read_text(encoding="utf-8"),
-        "sky": (REFERENCES / "zeldacentral-totk-sky-chests.json").read_text(encoding="utf-8"),
-        "depths": (REFERENCES / "zeldacentral-totk-depths-chests.json").read_text(encoding="utf-8"),
+        "surface": ZELDACENTRAL_CHESTS_SURFACE.read_text(encoding="utf-8"),
+        "sky": ZELDACENTRAL_CHESTS_SKY.read_text(encoding="utf-8"),
+        "depths": ZELDACENTRAL_CHESTS_DEPTHS.read_text(encoding="utf-8"),
     }
     categories = []
     for category in CATEGORIES:
         if category.get("source") == "master_map":
-            items = parse_master_map_general_locations(MASTER_MAP)
+            items = parse_master_map_general_locations(GENERAL_LOCATIONS_CSV)
             categories.append({
                 "id": category["id"],
                 "label": category["label"],
@@ -732,15 +766,15 @@ def main():
         elif stat.get("source") == "fabrics":
             items = parse_fabric_items(hashes)
         elif stat.get("source") == "master_food":
-            items = parse_master_recipe_items(MASTER_FOOD)
+            items = parse_master_recipe_items(FOOD_CSV)
         elif stat.get("source") == "master_materials":
-            inventory = parse_master_inventory_items(MASTER_MATERIALS, "materials", "Pouch.Material.Content.Name")
+            inventory = parse_master_inventory_items(MATERIALS_CSV, "materials", "Pouch.Material.Content.Name")
             items = inventory["items"]
         elif stat.get("source") == "master_key_items":
-            inventory = parse_master_inventory_items(MASTER_KEY_ITEMS, "key_items", "Pouch.KeyItem.Content.Name")
+            inventory = parse_master_inventory_items(KEY_ITEM_CSV, "key_items", "Pouch.KeyItem.Content.Name", skip_names=KEY_ITEMS_SKIP)
             items = inventory["items"]
         elif stat.get("source") == "master_quests":
-            items = parse_master_quest_items(MASTER_QUESTS, stat["questType"])
+            items = parse_master_quest_items(QUESTS_CSV, stat["questType"])
         elif stat.get("source") == "armor_inventory":
             items = parse_armor_inventory_items(locale)
         elif stat.get("source") == "armor_upgraded":

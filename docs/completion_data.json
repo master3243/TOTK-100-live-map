@@ -27982,272 +27982,197 @@
       "items": [
         {
           "id": "key_items-001",
-          "label": "Ultrahand",
-          "actorName": "Obj_UltraHand"
-        },
-        {
-          "id": "key_items-002",
-          "label": "Fuse",
-          "actorName": "Obj_OneTouchBond"
-        },
-        {
-          "id": "key_items-003",
-          "label": "Ascend",
-          "actorName": "Obj_Tooreroof"
-        },
-        {
-          "id": "key_items-004",
-          "label": "Recall",
-          "actorName": "Obj_ReverseRecorder"
-        },
-        {
-          "id": "key_items-005",
-          "label": "Autobuild",
-          "actorName": "Obj_AutoBuilder"
-        },
-        {
-          "id": "key_items-006",
-          "label": "Vow of Tulin, Sage of Wind",
-          "actorName": "Obj_SageSoul_Rito"
-        },
-        {
-          "id": "key_items-007",
           "label": "Solemn Vow of Tulin, Sage of Wind",
           "actorName": "Obj_SageSoulPlus_Rito"
         },
         {
-          "id": "key_items-008",
-          "label": "Vow of Yunobo, Sage of Fire",
-          "actorName": "Obj_SageSoul_Goron"
-        },
-        {
-          "id": "key_items-009",
+          "id": "key_items-002",
           "label": "Solemn Vow of Yunobo, Sage of Fire",
           "actorName": "Obj_SageSoulPlus_Goron"
         },
         {
-          "id": "key_items-010",
-          "label": "Vow of Sidon, Sage of Water",
-          "actorName": "Obj_SageSoul_Zora"
-        },
-        {
-          "id": "key_items-011",
+          "id": "key_items-003",
           "label": "Solemn Vow of Sidon, Sage of Water",
           "actorName": "Obj_SageSoulPlus_Zora"
         },
         {
-          "id": "key_items-012",
-          "label": "Vow of Riju, Sage of Lightning",
-          "actorName": "Obj_SageSoul_Gerudo"
-        },
-        {
-          "id": "key_items-013",
+          "id": "key_items-004",
           "label": "Solemn Vow of Riju, Sage of Lightning",
           "actorName": "Obj_SageSoulPlus_Gerudo"
         },
         {
-          "id": "key_items-014",
-          "label": "Vow of Mineru, Sage of Spirit",
-          "actorName": "Obj_SageSoul_Zonau"
-        },
-        {
-          "id": "key_items-015",
+          "id": "key_items-005",
           "label": "Solemn Vow of Mineru, Sage of Spirit",
           "actorName": "Obj_SageSoulPlus_Zonau"
         },
         {
-          "id": "key_items-016",
+          "id": "key_items-006",
           "label": "Purah Pad",
           "actorName": "Obj_DRStone_Get"
         },
         {
-          "id": "key_items-017",
+          "id": "key_items-007",
           "label": "Camera",
           "actorName": "Obj_Camera"
         },
         {
-          "id": "key_items-018",
-          "label": "Energy Cell",
-          "actorName": "Obj_Battery_Get_Capacity"
-        },
-        {
-          "id": "key_items-019",
+          "id": "key_items-008",
           "label": "Paraglider",
           "actorName": "Parasail"
         },
         {
-          "id": "key_items-020",
-          "label": "Travel Medallion Prototype",
-          "actorName": "Obj_WarpDLC_Prototype"
-        },
-        {
-          "id": "key_items-021",
+          "id": "key_items-009",
           "label": "Travel Medallion",
           "actorName": "Obj_WarpDLC"
         },
         {
-          "id": "key_items-022",
+          "id": "key_items-010",
           "label": "Earthwake Manual",
           "actorName": "Obj_HiddenScroll_00"
         },
         {
-          "id": "key_items-023",
-          "label": "Light of Blessing",
-          "actorName": "Obj_DungeonClearSeal"
-        },
-        {
-          "id": "key_items-024",
-          "label": "Sage's Will",
-          "actorName": "Obj_SageWill"
-        },
-        {
-          "id": "key_items-025",
+          "id": "key_items-011",
           "label": "Korok Seed",
           "actorName": "Obj_KorokNuts"
         },
         {
-          "id": "key_items-026",
-          "label": "Bubbul Gem",
-          "actorName": "CaveMasterMedal"
-        },
-        {
-          "id": "key_items-027",
+          "id": "key_items-012",
           "label": "Poe",
           "actorName": "MinusRupee_00"
         },
         {
-          "id": "key_items-028",
+          "id": "key_items-013",
           "label": "Crystallized Charge",
           "actorName": "Energy_Material_01"
         },
         {
-          "id": "key_items-029",
+          "id": "key_items-014",
           "label": "Schema Stone",
           "actorName": "Obj_AutoBuilderDraft_00"
         },
         {
-          "id": "key_items-030",
+          "id": "key_items-015",
           "label": "Yiga Schematic",
           "actorName": "Obj_AutoBuilderDraftAssassin_00"
         },
         {
-          "id": "key_items-031",
+          "id": "key_items-016",
           "label": "Old Map",
           "actorName": "Obj_TreasureMap_00"
         },
         {
-          "id": "key_items-032",
+          "id": "key_items-017",
           "label": "Pony Points Card",
           "actorName": "Obj_StableHostlePointCard"
         },
         {
-          "id": "key_items-033",
+          "id": "key_items-018",
           "label": "Sleepover Ticket",
           "actorName": "Item_StableHostelAccommodationCoupon_A"
         },
         {
-          "id": "key_items-034",
+          "id": "key_items-019",
           "label": "All's Well",
           "actorName": "Obj_CaveWellHonor_00"
         },
         {
-          "id": "key_items-035",
+          "id": "key_items-020",
           "label": "Dispelling Darkness Medal",
           "actorName": "Obj_CheckPointHonor_00"
         },
         {
-          "id": "key_items-036",
+          "id": "key_items-021",
           "label": "Hestu's Gift",
           "actorName": "Obj_ProofKorok"
         },
         {
-          "id": "key_items-037",
+          "id": "key_items-022",
           "label": "Stone Talus Monster Medal",
           "actorName": "Obj_DefeatHonor_00"
         },
         {
-          "id": "key_items-038",
+          "id": "key_items-023",
           "label": "Hinox Monster Medal",
           "actorName": "Obj_DefeatHonor_01"
         },
         {
-          "id": "key_items-039",
+          "id": "key_items-024",
           "label": "Molduga Monster Medal",
           "actorName": "Obj_DefeatHonor_02"
         },
         {
-          "id": "key_items-040",
+          "id": "key_items-025",
           "label": "Gleeok Monster Medal",
           "actorName": "Obj_DefeatHonor_05"
         },
         {
-          "id": "key_items-041",
+          "id": "key_items-026",
           "label": "Frox Monster Medal",
           "actorName": "Obj_DefeatHonor_03"
         },
         {
-          "id": "key_items-042",
+          "id": "key_items-027",
           "label": "Flux Construct Monster Medal",
           "actorName": "Obj_DefeatHonor_04"
         },
         {
-          "id": "key_items-043",
+          "id": "key_items-028",
           "label": "Towing Harness",
           "actorName": "GameRomHorseSaddle_07"
         },
         {
-          "id": "key_items-044",
+          "id": "key_items-029",
           "label": "Traveler's Bridle",
           "actorName": "GameRomHorseReins_01"
         },
         {
-          "id": "key_items-045",
+          "id": "key_items-030",
           "label": "Knight's Bridle",
           "actorName": "GameRomHorseReins_03"
         },
         {
-          "id": "key_items-046",
+          "id": "key_items-031",
           "label": "Royal Bridle",
           "actorName": "GameRomHorseReins_02"
         },
         {
-          "id": "key_items-047",
+          "id": "key_items-032",
           "label": "Extravagant Bridle",
           "actorName": "GameRomHorseReins_05"
         },
         {
-          "id": "key_items-048",
+          "id": "key_items-033",
           "label": "Monster Bridle",
           "actorName": "GameRomHorseReins_04"
         },
         {
-          "id": "key_items-049",
+          "id": "key_items-034",
           "label": "Traveler's Saddle",
           "actorName": "GameRomHorseSaddle_01"
         },
         {
-          "id": "key_items-050",
+          "id": "key_items-035",
           "label": "Knight's Saddle",
           "actorName": "GameRomHorseSaddle_03"
         },
         {
-          "id": "key_items-051",
+          "id": "key_items-036",
           "label": "Royal Saddle",
           "actorName": "GameRomHorseSaddle_02"
         },
         {
-          "id": "key_items-052",
+          "id": "key_items-037",
           "label": "Extravagant Saddle",
           "actorName": "GameRomHorseSaddle_05"
         },
         {
-          "id": "key_items-053",
+          "id": "key_items-038",
           "label": "Monster Saddle",
           "actorName": "GameRomHorseSaddle_04"
         }
       ],
       "sourceCounts": {
-        "ids": 53,
+        "ids": 38,
         "arrayHash": 1
       },
       "arrayHash": "22c6530a"
