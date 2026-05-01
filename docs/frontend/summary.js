@@ -81,9 +81,24 @@ function updatePlayerStatSummary(config) {
   config.element.textContent = value == null ? "--" : `${value} / ${config.total}`;
 }
 
+function resetSaveSummary(statusText = "Error") {
+  saveStatus.textContent = statusText;
+  saveVersion.textContent = "--";
+  seedCount.textContent = "-- / --";
+  locationCount.textContent = "-- / --";
+  completionistSummary.textContent = "-- / --";
+  currentRecipes = null;
+  currentPlayerStats = null;
+  playerStatSummaries.forEach(updatePlayerStatSummary);
+  currentCompletionStats = {};
+  completionStatSummaries.forEach(updateCompletionStatSummary);
+  updateLiveSaveRows();
+}
+
 function updateSaveSummary(payload) {
   const modified = new Date(payload.lastModified * 1000);
   saveStatus.textContent = modified.toLocaleTimeString();
+  saveVersion.textContent = payload.version || "--";
   seedCount.textContent = `${payload.counts.totalSeeds} / ${payload.counts.availableSeeds}`;
   locationCount.textContent = `${payload.counts.totalLocations} / ${payload.counts.availableLocations}`;
   const recipes = payload.recipes || null;

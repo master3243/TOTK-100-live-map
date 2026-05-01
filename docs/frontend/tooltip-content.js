@@ -172,9 +172,9 @@ function updateLiveSaveRows() {
   }
 
   const rows = Array.from(liveSaveList.querySelectorAll(":scope > div"));
-  const statusRow = rows.find((row) => row.dataset.liveRow === "status");
+  const pinnedRows = rows.filter((row) => row.dataset.livePinned === "true");
   const metricRows = rows
-    .filter((row) => row.dataset.liveRow !== "status")
+    .filter((row) => !pinnedRows.includes(row))
     .sort((a, b) => LIVE_SAVE_ROW_ORDER.indexOf(a.dataset.liveRow) - LIVE_SAVE_ROW_ORDER.indexOf(b.dataset.liveRow));
   const incompleteRows = [];
   const completedRows = [];
@@ -191,7 +191,7 @@ function updateLiveSaveRows() {
     }
   }
 
-  liveSaveList.replaceChildren(...[statusRow, ...incompleteRows, liveSaveCompletedToggleRow, ...completedRows].filter(Boolean));
+  liveSaveList.replaceChildren(...[...pinnedRows, ...incompleteRows, liveSaveCompletedToggleRow, ...completedRows].filter(Boolean));
   liveSaveCompletedToggleRow.hidden = completedRows.length === 0;
   liveSaveCompletedToggle.setAttribute("aria-expanded", liveSaveCompletedExpanded ? "true" : "false");
   liveSaveCompletedToggle.textContent = liveSaveCompletedExpanded

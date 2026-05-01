@@ -22,7 +22,7 @@
         <div class="brand">
           <p class="eyebrow">Tears of the Kingdom</p>
           <h1>Save Map Helper</h1>
-          <h2>v1.5.6</h2>
+          <h2>v1.5.7</h2>
           <div class="save-upload">
             <input id="manualSaveInput" type="file" accept=".sav,application/octet-stream">
             <label class="upload-button" for="manualSaveInput">Upload save</label>
@@ -48,9 +48,13 @@
         <section class="panel stats live-save-panel" aria-label="Save status">
           <h2>Live Save</h2>
           <dl id="liveSaveList">
-            <div data-live-row="status">
+            <div data-live-row="status" data-live-pinned="true">
               <dt>Status</dt>
               <dd id="saveStatus">Waiting</dd>
+            </div>
+            <div data-live-row="version" data-live-pinned="true">
+              <dt>Version</dt>
+              <dd id="saveVersion">--</dd>
             </div>
             <div data-live-row="quests-main">
               <dt>Main Quests</dt>

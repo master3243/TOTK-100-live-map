@@ -56,13 +56,7 @@ async function refreshProgress() {
 
     applySavePayload(payload);
   } catch (error) {
-    saveStatus.textContent = "Error";
-    seedCount.textContent = "-- / --";
-    locationCount.textContent = "-- / --";
-    completionistSummary.textContent = "-- / --";
-    currentCompletionStats = {};
-    completionStatSummaries.forEach(updateCompletionStatSummary);
-    updateLiveSaveRows();
+    resetSaveSummary("Error");
     console.error(error);
   }
 }
@@ -157,7 +151,7 @@ async function uploadManualSave(file, options = {}) {
       }
     }
     setSaveLoading(false, "Load failed");
-    saveStatus.textContent = "Error";
+    resetSaveSummary("Error");
     console.error(error);
   } finally {
     manualSaveInput.value = "";
