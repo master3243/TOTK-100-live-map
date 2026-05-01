@@ -18835,76 +18835,6 @@
         },
         {
           "id": "general_locations-715",
-          "value": "95f4376e",
-          "x": 1682.0,
-          "y": 384.0,
-          "z": 2424.0,
-          "layer": "surface",
-          "label": "Inn",
-          "note": "IsVisitLocation.ShopInn_Goron - Inn - Shop - ShopInn_Goron"
-        },
-        {
-          "id": "general_locations-716",
-          "value": "bd8d6efa",
-          "x": 3473.0,
-          "y": 142.0,
-          "z": -2111.0,
-          "layer": "surface",
-          "label": "Inn",
-          "note": "IsVisitLocation.ShopInn_Hateno - Inn - Shop - ShopInn_Hateno"
-        },
-        {
-          "id": "general_locations-717",
-          "value": "25848470",
-          "x": 1836.0,
-          "y": 135.0,
-          "z": -1022.0,
-          "layer": "surface",
-          "label": "Inn",
-          "note": "IsVisitLocation.ShopInn_Kakariko - Inn - Shop - ShopInn_Kakariko"
-        },
-        {
-          "id": "general_locations-718",
-          "value": "f83c5e55",
-          "x": 411.0,
-          "y": 155.0,
-          "z": 2171.0,
-          "layer": "surface",
-          "label": "Inn",
-          "note": "IsVisitLocation.ShopInn_Korok - Inn - Shop - ShopInn_Korok"
-        },
-        {
-          "id": "general_locations-719",
-          "value": "f35d4902",
-          "x": -3268.0,
-          "y": 95.0,
-          "z": -2610.0,
-          "layer": "surface",
-          "label": "Inn",
-          "note": "IsVisitLocation.ShopInn_Oasis - Inn - Shop - ShopInn_Oasis"
-        },
-        {
-          "id": "general_locations-720",
-          "value": "714f8a77",
-          "x": -3612.0,
-          "y": 184.0,
-          "z": 1853.0,
-          "layer": "surface",
-          "label": "Inn",
-          "note": "IsVisitLocation.ShopInn_Rito - Inn - Shop - ShopInn_Rito"
-        },
-        {
-          "id": "general_locations-721",
-          "value": "8fbf7fc0",
-          "x": 4000.0,
-          "y": 130.0,
-          "z": 1596.0,
-          "layer": "surface",
-          "label": "Inn",
-          "note": "IsVisitLocation.ShopInn_UMiiVillage - Inn - Shop - ShopInn_UMiiVillage"
-        },
-        {
-          "id": "general_locations-722",
           "value": "c1d11035",
           "x": 2945.0,
           "y": 30.0,
@@ -18914,167 +18844,7 @@
           "note": "Revive_Inn - Inn - Shop - ShopInn_Uotori"
         },
         {
-          "id": "general_locations-723",
-          "value": "fc421319",
-          "x": 3296.0,
-          "y": 141.0,
-          "z": 509.0,
-          "layer": "surface",
-          "label": "Inn",
-          "note": "IsVisitLocation.ShopInn_Zora - Inn - Shop - ShopInn_Zora"
-        },
-        {
-          "id": "general_locations-724",
-          "value": "96e47c78",
-          "x": -206.0,
-          "y": 20.0,
-          "z": 77.0,
-          "layer": "surface",
-          "label": "General Store",
-          "note": "IsVisitLocation.ShopGeneral_BaseCamp - General Store - Shop - ShopGeneral_BaseCamp"
-        },
-        {
-          "id": "general_locations-725",
-          "value": "c6dd2e09",
-          "x": 1684.0,
-          "y": 386.0,
-          "z": 2463.0,
-          "layer": "surface",
-          "label": "General Store",
-          "note": "IsVisitLocation.ShopGeneral_Goron - General Store - Shop - ShopGeneral_Goron"
-        },
-        {
-          "id": "general_locations-726",
-          "value": "90561482",
-          "x": 3361.0,
-          "y": 134.0,
-          "z": -2172.0,
-          "layer": "surface",
-          "label": "General Store",
-          "note": "IsVisitLocation.ShopGeneral_Hateno - General Store - Shop - ShopGeneral_Hateno"
-        },
-        {
-          "id": "general_locations-727",
-          "value": "647ef742",
-          "x": 1826.0,
-          "y": 131.0,
-          "z": -1041.0,
-          "layer": "surface",
-          "label": "General Store",
-          "note": "IsVisitLocation.ShopGeneral_Kakariko - General Store - Shop - ShopGeneral_Kakariko"
-        },
-        {
-          "id": "general_locations-728",
-          "value": "b123b086",
-          "x": 432.0,
-          "y": 153.0,
-          "z": 2174.0,
-          "layer": "surface",
-          "label": "General Store",
-          "note": "IsVisitLocation.ShopGeneral_Korok - General Store - Shop - ShopGeneral_Korok"
-        },
-        {
-          "id": "general_locations-729",
-          "value": "2fcd6f09",
-          "x": -3262.0,
-          "y": 95.0,
-          "z": -2604.0,
-          "layer": "surface",
-          "label": "General Store",
-          "note": "IsVisitLocation.ShopGeneral_Oasis - General Store - Shop - ShopGeneral_Oasis"
-        },
-        {
-          "id": "general_locations-730",
-          "value": "902cba4c",
-          "x": -3645.0,
-          "y": 185.0,
-          "z": 1820.0,
-          "layer": "surface",
-          "label": "General Store",
-          "note": "IsVisitLocation.ShopGeneral_Rito - General Store - Shop - ShopGeneral_Rito"
-        },
-        {
-          "id": "general_locations-731",
-          "value": "b16b07ed",
-          "x": 4006.0,
-          "y": 129.0,
-          "z": 1634.0,
-          "layer": "surface",
-          "label": "General Store",
-          "note": "IsVisitLocation.ShopGeneral_UMiiVillage - General Store - Shop - ShopGeneral_UMiiVillage"
-        },
-        {
-          "id": "general_locations-732",
-          "value": "377293ab",
-          "x": 3323.0,
-          "y": 140.0,
-          "z": 491.0,
-          "layer": "surface",
-          "label": "General Store",
-          "note": "IsVisitLocation.ShopGeneral_Zora - General Store - Shop - ShopGeneral_Zora"
-        },
-        {
-          "id": "general_locations-733",
-          "value": "0cf82a55",
-          "x": -206.0,
-          "y": 20.0,
-          "z": 87.0,
-          "layer": "surface",
-          "label": "Armor Shop",
-          "note": "IsVisitLocation.ShopArmor_BaseCamp - Armor Shop - Shop - ShopArmor_BaseCamp"
-        },
-        {
-          "id": "general_locations-734",
-          "value": "65a83349",
-          "x": 1643.0,
-          "y": 385.0,
-          "z": 2409.0,
-          "layer": "surface",
-          "label": "Armor Shop",
-          "note": "IsVisitLocation.ShopArmor_Goron - Armor Shop - Shop - ShopArmor_Goron"
-        },
-        {
-          "id": "general_locations-735",
-          "value": "85a4eb38",
-          "x": 3357.0,
-          "y": 134.0,
-          "z": -2128.0,
-          "layer": "surface",
-          "label": "Armor Shop",
-          "note": "IsVisitLocation.ShopArmor_Hateno - Armor Shop - Shop - ShopArmor_Hateno"
-        },
-        {
-          "id": "general_locations-736",
-          "value": "4e1f1c3d",
-          "x": 1855.0,
-          "y": 134.0,
-          "z": -981.0,
-          "layer": "surface",
-          "label": "Armor Shop",
-          "note": "IsVisitLocation.ShopArmor_Kakariko - Armor Shop - Shop - ShopArmor_Kakariko"
-        },
-        {
-          "id": "general_locations-737",
-          "value": "b92b4cf9",
-          "x": -3631.0,
-          "y": 187.0,
-          "z": 1787.0,
-          "layer": "surface",
-          "label": "Armor Shop",
-          "note": "IsVisitLocation.ShopArmor_Rito - Armor Shop - Shop - ShopArmor_Rito"
-        },
-        {
-          "id": "general_locations-738",
-          "value": "7b537c48",
-          "x": 3404.0,
-          "y": 134.0,
-          "z": -2152.0,
-          "layer": "surface",
-          "label": "Dye Shop",
-          "note": "IsVisitLocation.ShopDye_Hateno - Dye Shop - Shop - ShopDye_Hateno"
-        },
-        {
-          "id": "general_locations-739",
+          "id": "general_locations-716",
           "value": "95eaf7f7",
           "x": -1413.0,
           "y": 125.0,
@@ -19084,7 +18854,7 @@
           "note": "IsVisitLocation.DragonTears01 - DragonTears01 - Tear - DragonTears01"
         },
         {
-          "id": "general_locations-740",
+          "id": "general_locations-717",
           "value": "d8f6148f",
           "x": -2551.0,
           "y": 320.0,
@@ -19094,7 +18864,7 @@
           "note": "IsVisitLocation.DragonTears02 - DragonTears02 - Tear - DragonTears02"
         },
         {
-          "id": "general_locations-741",
+          "id": "general_locations-718",
           "value": "ea112a5c",
           "x": 1828.0,
           "y": 90.0,
@@ -19104,7 +18874,7 @@
           "note": "IsVisitLocation.DragonTears03 - DragonTears03 - Tear - DragonTears03"
         },
         {
-          "id": "general_locations-742",
+          "id": "general_locations-719",
           "value": "0ba4de99",
           "x": 695.0,
           "y": 54.0,
@@ -19114,7 +18884,7 @@
           "note": "IsVisitLocation.DragonTears04 - DragonTears04 - Tear - DragonTears04"
         },
         {
-          "id": "general_locations-743",
+          "id": "general_locations-720",
           "value": "5a630ce5",
           "x": -3178.0,
           "y": 420.0,
@@ -19124,7 +18894,7 @@
           "note": "IsVisitLocation.DragonTears05 - DragonTears05 - Tear - DragonTears05"
         },
         {
-          "id": "general_locations-744",
+          "id": "general_locations-721",
           "value": "2146bc12",
           "x": -3096.0,
           "y": 212.0,
@@ -19134,7 +18904,7 @@
           "note": "IsVisitLocation.DragonTears06 - DragonTears06 - Tear - DragonTears06"
         },
         {
-          "id": "general_locations-745",
+          "id": "general_locations-722",
           "value": "9061714b",
           "x": 3326.0,
           "y": 6.0,
@@ -19144,7 +18914,7 @@
           "note": "IsVisitLocation.DragonTears07 - DragonTears07 - Tear - DragonTears07"
         },
         {
-          "id": "general_locations-746",
+          "id": "general_locations-723",
           "value": "7cc0375a",
           "x": -1864.0,
           "y": 238.0,
@@ -19154,7 +18924,7 @@
           "note": "IsVisitLocation.DragonTears08 - DragonTears08 - Tear - DragonTears08"
         },
         {
-          "id": "general_locations-747",
+          "id": "general_locations-724",
           "value": "a14c6ed1",
           "x": 4468.0,
           "y": 76.0,
@@ -19164,7 +18934,7 @@
           "note": "IsVisitLocation.DragonTears09 - DragonTears09 - Tear - DragonTears09"
         },
         {
-          "id": "general_locations-748",
+          "id": "general_locations-725",
           "value": "587df5b0",
           "x": -649.0,
           "y": 69.0,
@@ -19174,7 +18944,7 @@
           "note": "IsVisitLocation.DragonTears10 - DragonTears10 - Tear - DragonTears10"
         },
         {
-          "id": "general_locations-749",
+          "id": "general_locations-726",
           "value": "5279d33f",
           "x": 892.0,
           "y": 363.0,
@@ -19184,7 +18954,7 @@
           "note": "IsVisitLocation.DragonTears11 - DragonTears11 - Tear - DragonTears11"
         },
         {
-          "id": "general_locations-750",
+          "id": "general_locations-727",
           "value": "c595c991",
           "x": 4535.0,
           "y": 2.0,
@@ -19194,7 +18964,7 @@
           "note": "IsVisitLocation.DragonTears12 - DragonTears12 - Tear - DragonTears12"
         },
         {
-          "id": "general_locations-751",
+          "id": "general_locations-728",
           "value": "7fdf3de2",
           "x": 4296.0,
           "y": 150.0,
@@ -19204,7 +18974,7 @@
           "note": "HaveTalked.HorseGod001 - Malanya Spring - Great Fairy - MaronSpring"
         },
         {
-          "id": "general_locations-752",
+          "id": "general_locations-729",
           "value": "ce69eee8",
           "x": 1768.0,
           "y": 1.0,
@@ -19214,7 +18984,7 @@
           "note": "Fairy_MapOpen_DressFairy_00 - Great Fairy Fountain - Great Fairy - WeaponCureSpring_DressFairy_00"
         },
         {
-          "id": "general_locations-753",
+          "id": "general_locations-730",
           "value": "e8c15c64",
           "x": -1460.0,
           "y": 302.0,
@@ -19224,7 +18994,7 @@
           "note": "Fairy_MapOpen_DressFairy_01 - Great Fairy Fountain - Great Fairy - WeaponCureSpring_DressFairy_01"
         },
         {
-          "id": "general_locations-754",
+          "id": "general_locations-731",
           "value": "603bb97b",
           "x": -1557.0,
           "y": 77.0,
@@ -19234,7 +19004,7 @@
           "note": "Fairy_MapOpen_DressFairy_02 - Great Fairy Fountain - Great Fairy - WeaponCureSpring_DressFairy_02"
         },
         {
-          "id": "general_locations-755",
+          "id": "general_locations-732",
           "value": "95dfbc64",
           "x": 916.0,
           "y": 82.0,
@@ -19244,7 +19014,7 @@
           "note": "Fairy_MapOpen - Great Fairy Fountain - Great Fairy - WeaponCureSpring"
         },
         {
-          "id": "general_locations-756",
+          "id": "general_locations-733",
           "value": "ae38be8e",
           "x": 357.0,
           "y": 2306.0,
@@ -19254,7 +19024,7 @@
           "note": "IsAccessed_BatteryExchangeObj_FirstSkyIsland - Crystal Refinery - Shop - BatteryExchangeShop_00"
         },
         {
-          "id": "general_locations-757",
+          "id": "general_locations-734",
           "value": "7669aaf8",
           "x": -219.0,
           "y": 39.0,
@@ -19264,7 +19034,7 @@
           "note": "IsAccessed_BatteryExchangeObj_BaseCamp - Crystal Refinery - Shop - BatteryExchangeShop_01"
         },
         {
-          "id": "general_locations-758",
+          "id": "general_locations-735",
           "value": "271d7767",
           "x": 470.0,
           "y": 1371.0,
@@ -19274,7 +19044,7 @@
           "note": "HaveTalked.Npc_Zonau_Golem_Servant_FirstIsland_21 - Forge Construct - Shop - SmeltShopGolem_00"
         },
         {
-          "id": "general_locations-759",
+          "id": "general_locations-736",
           "value": "eb4316da",
           "x": -756.0,
           "y": -559.0,
@@ -19284,7 +19054,7 @@
           "note": "HaveKnownDemonStatue_00 - Bargainer Statue - Shop - DemonStatue_00"
         },
         {
-          "id": "general_locations-760",
+          "id": "general_locations-737",
           "value": "11796a9c",
           "x": 458.0,
           "y": -470.0,
@@ -19294,7 +19064,7 @@
           "note": "HaveKnownDemonStatue_01 - Bargainer Statue - Shop - DemonStatue_01"
         },
         {
-          "id": "general_locations-761",
+          "id": "general_locations-738",
           "value": "b5972943",
           "x": -1033.0,
           "y": -266.0,
@@ -19304,7 +19074,7 @@
           "note": "HaveKnownDemonStatue_02 - Bargainer Statue - Shop - DemonStatue_02"
         },
         {
-          "id": "general_locations-762",
+          "id": "general_locations-739",
           "value": "3bfe4eaa",
           "x": 3851.0,
           "y": -851.0,
@@ -19314,7 +19084,7 @@
           "note": "HaveKnownDemonStatue_03 - Bargainer Statue - Shop - DemonStatue_03"
         },
         {
-          "id": "general_locations-763",
+          "id": "general_locations-740",
           "value": "c28f5e5b",
           "x": 883.0,
           "y": -386.0,
@@ -19324,7 +19094,7 @@
           "note": "HaveKnownDemonStatue_04 - Bargainer Statue - Shop - DemonStatue_04"
         },
         {
-          "id": "general_locations-764",
+          "id": "general_locations-741",
           "value": "6567c950",
           "x": 3702.0,
           "y": -412.0,
@@ -19334,7 +19104,7 @@
           "note": "HaveKnownDemonStatue_05 - Bargainer Statue - Shop - DemonStatue_05"
         },
         {
-          "id": "general_locations-765",
+          "id": "general_locations-742",
           "value": "c9260338",
           "x": 1357.0,
           "y": -737.0,
@@ -19344,7 +19114,7 @@
           "note": "HavePlayedEvent.Npc_Zonau_Golem_Servant_ZonauChallenge_01_D_T - Smithing Construct - Shop - ForgeShopGolem"
         },
         {
-          "id": "general_locations-766",
+          "id": "general_locations-743",
           "value": "0d2be416",
           "x": -3810.0,
           "y": -487.0,
@@ -19354,7 +19124,7 @@
           "note": "IsActivated_Minus0012_NPCZonauGolem - Forge Construct - Shop - SmeltShopGolem_01"
         },
         {
-          "id": "general_locations-767",
+          "id": "general_locations-744",
           "value": "b3131cb8",
           "x": -3190.0,
           "y": -475.0,
@@ -19364,7 +19134,7 @@
           "note": "IsActivated_Minus0013_NPCZonauGolem - Forge Construct - Shop - SmeltShopGolem_02"
         },
         {
-          "id": "general_locations-768",
+          "id": "general_locations-745",
           "value": "8640e042",
           "x": 3244.0,
           "y": -750.0,
@@ -19374,7 +19144,7 @@
           "note": "IsActivated_Minus0014_NPCZonauGolem - Forge Construct - Shop - SmeltShopGolem_03"
         },
         {
-          "id": "general_locations-769",
+          "id": "general_locations-746",
           "value": "e9f8d8a5",
           "x": -3424.0,
           "y": -305.0,
@@ -19384,7 +19154,7 @@
           "note": "IsActivated_Minus0015_NPCZonauGolem - Forge Construct - Shop - SmeltShopGolem_04"
         },
         {
-          "id": "general_locations-770",
+          "id": "general_locations-747",
           "value": "8c7f44ad",
           "x": 1698.0,
           "y": -824.0,
@@ -19394,7 +19164,7 @@
           "note": "IsActivated_Minus0016_NPCZonauGolem - Forge Construct - Shop - SmeltShopGolem_05"
         },
         {
-          "id": "general_locations-771",
+          "id": "general_locations-748",
           "value": "fb6c9086",
           "x": 3957.0,
           "y": -576.0,
@@ -19404,7 +19174,7 @@
           "note": "IsActivated_Minus0017_NPCZonauGolem - Forge Construct - Shop - SmeltShopGolem_06"
         },
         {
-          "id": "general_locations-772",
+          "id": "general_locations-749",
           "value": "f465d65b",
           "x": 1767.0,
           "y": -629.0,
@@ -19414,7 +19184,7 @@
           "note": "IsActivated_Minus0018_NPCZonauGolem - Forge Construct - Shop - SmeltShopGolem_07"
         },
         {
-          "id": "general_locations-773",
+          "id": "general_locations-750",
           "value": "9dc92f29",
           "x": 3527.0,
           "y": -588.0,
@@ -19424,7 +19194,7 @@
           "note": "IsActivated_Minus0019_NPCZonauGolem - Forge Construct - Shop - SmeltShopGolem_08"
         },
         {
-          "id": "general_locations-774",
+          "id": "general_locations-751",
           "value": "179d880d",
           "x": 2953.0,
           "y": -453.0,
@@ -19434,7 +19204,7 @@
           "note": "IsActivated_Minus0020_NPCZonauGolem - Forge Construct - Shop - SmeltShopGolem_09"
         },
         {
-          "id": "general_locations-775",
+          "id": "general_locations-752",
           "value": "e5c46072",
           "x": -856.0,
           "y": -523.0,
@@ -19444,7 +19214,7 @@
           "note": "IsActivated_Minus0026_NPCZonauGolem - Forge Construct - Shop - SmeltShopGolem_10"
         },
         {
-          "id": "general_locations-776",
+          "id": "general_locations-753",
           "value": "47336bb0",
           "x": 2217.0,
           "y": 1150.0,
@@ -19454,7 +19224,7 @@
           "note": "IsShowSheikahCameraTarget.ZonauReliefSearch.Step1.Obj_Zonau_RockRelief_A_03 - Ancient Tablet - Ancient Tablet - ZonauRelief_03"
         },
         {
-          "id": "general_locations-777",
+          "id": "general_locations-754",
           "value": "ac6ec598",
           "x": 2915.0,
           "y": 803.0,
@@ -19464,7 +19234,7 @@
           "note": "IsShowSheikahCameraTarget.ZonauReliefSearch.Step1.Obj_Zonau_RockRelief_A_04 - Ancient Tablet - Ancient Tablet - ZonauRelief_04"
         },
         {
-          "id": "general_locations-778",
+          "id": "general_locations-755",
           "value": "31a3787b",
           "x": -4042.0,
           "y": 453.0,
@@ -19474,7 +19244,7 @@
           "note": "IsShowSheikahCameraTarget.ZonauReliefSearch.Step1.Obj_Zonau_RockRelief_A_05 - Ancient Tablet - Ancient Tablet - ZonauRelief_05"
         },
         {
-          "id": "general_locations-779",
+          "id": "general_locations-756",
           "value": "e294f6d1",
           "x": -1366.0,
           "y": 912.0,
@@ -19484,7 +19254,7 @@
           "note": "IsShowSheikahCameraTarget.ZonauReliefSearch.Step1.Obj_Zonau_RockRelief_A_06 - Ancient Tablet - Ancient Tablet - ZonauRelief_06"
         },
         {
-          "id": "general_locations-780",
+          "id": "general_locations-757",
           "value": "ff0cd9d5",
           "x": 481.0,
           "y": 402.0,
@@ -19494,7 +19264,7 @@
           "note": "IsShowSheikahCameraTarget.ZonauReliefSearch.Step1.Obj_Zonau_RockRelief_A_07 - Ancient Tablet - Ancient Tablet - ZonauRelief_07"
         },
         {
-          "id": "general_locations-781",
+          "id": "general_locations-758",
           "value": "3cb1e8bf",
           "x": -2447.0,
           "y": 1003.0,
@@ -19504,7 +19274,7 @@
           "note": "IsShowSheikahCameraTarget.ZonauReliefSearch.Step1.Obj_Zonau_RockRelief_A_08 - Ancient Tablet - Ancient Tablet - ZonauRelief_08"
         },
         {
-          "id": "general_locations-782",
+          "id": "general_locations-759",
           "value": "bbe384d1",
           "x": 2083.0,
           "y": 1343.0,
@@ -19514,7 +19284,7 @@
           "note": "IsShowSheikahCameraTarget.ZonauReliefSearch.Step1.Obj_Zonau_RockRelief_A_09 - Ancient Tablet - Ancient Tablet - ZonauRelief_09"
         },
         {
-          "id": "general_locations-783",
+          "id": "general_locations-760",
           "value": "5ab7008c",
           "x": 3919.0,
           "y": 1203.0,
@@ -19524,7 +19294,7 @@
           "note": "IsShowSheikahCameraTarget.ZonauReliefSearch.Step1.Obj_Zonau_RockRelief_A_10 - Ancient Tablet - Ancient Tablet - ZonauRelief_10"
         },
         {
-          "id": "general_locations-784",
+          "id": "general_locations-761",
           "value": "3918ef9e",
           "x": -3605.0,
           "y": 1597.0,
@@ -19534,7 +19304,7 @@
           "note": "IsShowSheikahCameraTarget.ZonauReliefSearch.Step1.Obj_Zonau_RockRelief_A_11 - Ancient Tablet - Ancient Tablet - ZonauRelief_11"
         },
         {
-          "id": "general_locations-785",
+          "id": "general_locations-762",
           "value": "f068c74c",
           "x": -45.0,
           "y": 1503.0,
@@ -19544,7 +19314,7 @@
           "note": "IsShowSheikahCameraTarget.ZonauReliefSearch.Step1.Obj_Zonau_RockRelief_A_12 - Ancient Tablet - Ancient Tablet - ZonauRelief_12"
         },
         {
-          "id": "general_locations-786",
+          "id": "general_locations-763",
           "value": "b6b32e0f",
           "x": -1239.0,
           "y": 987.0,
@@ -19554,7 +19324,7 @@
           "note": "IsShowSheikahCameraTarget.ZonauReliefSearch.Step1.Obj_Zonau_RockRelief_A_13 - Ancient Tablet - Ancient Tablet - ZonauRelief_13"
         },
         {
-          "id": "general_locations-787",
+          "id": "general_locations-764",
           "value": "31dfc96d",
           "x": 3580.0,
           "y": 1362.0,
@@ -19564,7 +19334,7 @@
           "note": "IsShowSheikahCameraTarget.ZonauReliefSearch.Step1.Obj_Zonau_RockRelief_A_14 - Ancient Tablet - Ancient Tablet - ZonauRelief_14"
         },
         {
-          "id": "general_locations-788",
+          "id": "general_locations-765",
           "value": "9b6a5c7d",
           "x": -3612.0,
           "y": 1656.0,
@@ -19574,7 +19344,7 @@
           "note": "RecycleBoxData.11015094637093146118.IsVisit - Device Dispenser - Device Dispenser - RBox_Field_S"
         },
         {
-          "id": "general_locations-789",
+          "id": "general_locations-766",
           "value": "33bed6b9",
           "x": 2321.0,
           "y": 1485.0,
@@ -19584,7 +19354,7 @@
           "note": "RecycleBoxData.11115447318048549580.IsVisit - Device Dispenser - Device Dispenser - RBox_Field_T"
         },
         {
-          "id": "general_locations-790",
+          "id": "general_locations-767",
           "value": "a4a0c1e1",
           "x": 1391.0,
           "y": 417.0,
@@ -19594,7 +19364,7 @@
           "note": "RecycleBoxData.12031291170945200222.IsVisit - Device Dispenser - Device Dispenser - RBox_Field_J_02"
         },
         {
-          "id": "general_locations-791",
+          "id": "general_locations-768",
           "value": "80ad67ca",
           "x": 769.0,
           "y": 1579.0,
@@ -19604,7 +19374,7 @@
           "note": "RecycleBoxData.1239041309371073748.IsVisit - Device Dispenser - Device Dispenser - RBox_Field_B"
         },
         {
-          "id": "general_locations-792",
+          "id": "general_locations-769",
           "value": "cb37cba6",
           "x": -1705.0,
           "y": 948.0,
@@ -19614,7 +19384,7 @@
           "note": "RecycleBoxData.1295595582221552811.IsVisit - Device Dispenser - Device Dispenser - RBox_Field_E_02"
         },
         {
-          "id": "general_locations-793",
+          "id": "general_locations-770",
           "value": "af95d7f2",
           "x": 1344.0,
           "y": 585.0,
@@ -19624,7 +19394,7 @@
           "note": "RecycleBoxData.1356218468874614116.IsVisit - Device Dispenser - Device Dispenser - RBox_Field_J"
         },
         {
-          "id": "general_locations-794",
+          "id": "general_locations-771",
           "value": "9ea4dc51",
           "x": 435.0,
           "y": 1443.0,
@@ -19634,7 +19404,7 @@
           "note": "RecycleBoxData.15205531352253250869.IsVisit - Device Dispenser - Device Dispenser - RBox_Field_A"
         },
         {
-          "id": "general_locations-795",
+          "id": "general_locations-772",
           "value": "6e27e851",
           "x": 4675.0,
           "y": 1789.0,
@@ -19644,7 +19414,7 @@
           "note": "RecycleBoxData.15451615410629823334.IsVisit - Device Dispenser - Device Dispenser - RBox_Field_N"
         },
         {
-          "id": "general_locations-796",
+          "id": "general_locations-773",
           "value": "7fe19c4e",
           "x": -1620.0,
           "y": 2.0,
@@ -19654,7 +19424,7 @@
           "note": "RecycleBoxData.15467851743395390442.IsVisit - Device Dispenser - Device Dispenser - RBox_Field_H_02"
         },
         {
-          "id": "general_locations-797",
+          "id": "general_locations-774",
           "value": "20c6ab34",
           "x": 3430.0,
           "y": 1317.0,
@@ -19664,7 +19434,7 @@
           "note": "RecycleBoxData.15575356905878991466.IsVisit - Device Dispenser - Device Dispenser - RBox_Field_C"
         },
         {
-          "id": "general_locations-798",
+          "id": "general_locations-775",
           "value": "8196cef8",
           "x": 3808.0,
           "y": 90.0,
@@ -19674,7 +19444,7 @@
           "note": "RecycleBoxData.16070251021340899088.IsVisit - Device Dispenser - Device Dispenser - RBox_Field_L_02"
         },
         {
-          "id": "general_locations-799",
+          "id": "general_locations-776",
           "value": "ba01ae92",
           "x": 443.0,
           "y": 1820.0,
@@ -19684,7 +19454,7 @@
           "note": "RecycleBoxData.16384479221673125997.IsVisit - Device Dispenser - Device Dispenser - RBox_Field_M"
         },
         {
-          "id": "general_locations-800",
+          "id": "general_locations-777",
           "value": "9dcd1483",
           "x": -1213.0,
           "y": 1007.0,
@@ -19694,7 +19464,7 @@
           "note": "RecycleBoxData.17433148769607751574.IsVisit - Device Dispenser - Device Dispenser - RBox_Field_D_02"
         },
         {
-          "id": "general_locations-801",
+          "id": "general_locations-778",
           "value": "b17658ee",
           "x": -3803.0,
           "y": 702.0,
@@ -19704,7 +19474,7 @@
           "note": "RecycleBoxData.17664154686634921768.IsVisit - Device Dispenser - Device Dispenser - RBox_Field_E"
         },
         {
-          "id": "general_locations-802",
+          "id": "general_locations-779",
           "value": "e16fe679",
           "x": 4558.0,
           "y": 1155.0,
@@ -19714,7 +19484,7 @@
           "note": "RecycleBoxData.18116875701019036673.IsVisit - Device Dispenser - Device Dispenser - RBox_Field_Q"
         },
         {
-          "id": "general_locations-803",
+          "id": "general_locations-780",
           "value": "a747e6d8",
           "x": -3455.0,
           "y": 1695.0,
@@ -19724,7 +19494,7 @@
           "note": "RecycleBoxData.18190666740725697704.IsVisit - Device Dispenser - Device Dispenser - RBox_Field_I_02"
         },
         {
-          "id": "general_locations-804",
+          "id": "general_locations-781",
           "value": "10f54076",
           "x": 1838.0,
           "y": 155.0,
@@ -19734,7 +19504,7 @@
           "note": "RecycleBoxData.18210954504481072128.IsVisit - Device Dispenser - Device Dispenser - RBox_Field_R_02"
         },
         {
-          "id": "general_locations-805",
+          "id": "general_locations-782",
           "value": "96297877",
           "x": 1778.0,
           "y": 918.0,
@@ -19744,7 +19514,7 @@
           "note": "RecycleBoxData.18338342182923259111.IsVisit - Device Dispenser - Device Dispenser - RBox_Field_R"
         },
         {
-          "id": "general_locations-806",
+          "id": "general_locations-783",
           "value": "816d62ee",
           "x": 215.0,
           "y": 755.0,
@@ -19754,7 +19524,7 @@
           "note": "RecycleBoxData.1974508051681740815.IsVisit - Device Dispenser - Device Dispenser - RBox_Field_M_02"
         },
         {
-          "id": "general_locations-807",
+          "id": "general_locations-784",
           "value": "82ca53e2",
           "x": -1772.0,
           "y": 1148.0,
@@ -19764,7 +19534,7 @@
           "note": "RecycleBoxData.2797201585583573628.IsVisit - Device Dispenser - Device Dispenser - RBox_Field_H"
         },
         {
-          "id": "general_locations-808",
+          "id": "general_locations-785",
           "value": "885441e9",
           "x": 2852.0,
           "y": 1212.0,
@@ -19774,7 +19544,7 @@
           "note": "RecycleBoxData.3335311452256716214.IsVisit - Device Dispenser - Device Dispenser - RBox_Field_K_02"
         },
         {
-          "id": "general_locations-809",
+          "id": "general_locations-786",
           "value": "90c2c180",
           "x": 1104.0,
           "y": 828.0,
@@ -19784,7 +19554,7 @@
           "note": "RecycleBoxData.5029380551850697234.IsVisit - Device Dispenser - Device Dispenser - RBox_Field_K"
         },
         {
-          "id": "general_locations-810",
+          "id": "general_locations-787",
           "value": "5b2c65ec",
           "x": 1983.0,
           "y": 1251.0,
@@ -19794,7 +19564,7 @@
           "note": "RecycleBoxData.5456563061356513399.IsVisit - Device Dispenser - Device Dispenser - RBox_Field_F"
         },
         {
-          "id": "general_locations-811",
+          "id": "general_locations-788",
           "value": "63ae4b5c",
           "x": 3755.0,
           "y": 1157.0,
@@ -19804,7 +19574,7 @@
           "note": "RecycleBoxData.5618536671597422861.IsVisit - Device Dispenser - Device Dispenser - RBox_Field_L"
         },
         {
-          "id": "general_locations-812",
+          "id": "general_locations-789",
           "value": "6612d7b4",
           "x": -2371.0,
           "y": 611.0,
@@ -19814,7 +19584,7 @@
           "note": "RecycleBoxData.6574360356613525746.IsVisit - Device Dispenser - Device Dispenser - RBox_Field_D"
         },
         {
-          "id": "general_locations-813",
+          "id": "general_locations-790",
           "value": "d93c006a",
           "x": 2916.0,
           "y": 951.0,
@@ -19824,7 +19594,7 @@
           "note": "RecycleBoxData.7833620787124592938.IsVisit - Device Dispenser - Device Dispenser - RBox_Field_G_02"
         },
         {
-          "id": "general_locations-814",
+          "id": "general_locations-791",
           "value": "bbe67181",
           "x": -3457.0,
           "y": 1943.0,
@@ -19834,7 +19604,7 @@
           "note": "RecycleBoxData.81618141019492151.IsVisit - Device Dispenser - Device Dispenser - RBox_Field_I"
         },
         {
-          "id": "general_locations-815",
+          "id": "general_locations-792",
           "value": "d40cb282",
           "x": 4511.0,
           "y": 1117.0,
@@ -19844,7 +19614,7 @@
           "note": "RecycleBoxData.9420253473696152512.IsVisit - Device Dispenser - Device Dispenser - RBox_Field_G"
         },
         {
-          "id": "general_locations-816",
+          "id": "general_locations-793",
           "value": "ec359b9e",
           "x": 2191.0,
           "y": -963.0,
@@ -19854,7 +19624,7 @@
           "note": "RecycleBoxData.1366206746798740666.IsVisit - Device Dispenser - Device Dispenser - RBox_Field_F_02"
         },
         {
-          "id": "general_locations-817",
+          "id": "general_locations-794",
           "value": "698c7010",
           "x": 1058.0,
           "y": -553.0,
@@ -19865,7 +19635,7 @@
         }
       ],
       "sourceCounts": {
-        "rows": 817
+        "rows": 794
       }
     }
   ],

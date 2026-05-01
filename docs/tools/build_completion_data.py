@@ -27,7 +27,7 @@ ZELDACENTRAL_CHESTS_SKY = REFERENCES / "zeldacentral-totk-sky-chests.json"
 ZELDACENTRAL_CHESTS_DEPTHS = REFERENCES / "zeldacentral-totk-depths-chests.json"
 
 
-GENERAL_LOCATIONS_SKIP = ( "_IsCompleted_Exp", "_IsAfter_DungeonBossDead_Exp" )  # Fix map csv
+GENERAL_LOCATIONS_SKIP = ( "_IsCompleted_Exp", "_IsAfter_DungeonBossDead_Exp", "IsVisitLocation.Shop" )  # Fix map csv
 GENERAL_LOCATIONS_REPLACE = { "IsVisitLocation.HatenoLab": "IsVisitLocation.HatenoLabo" }  # Fix map csv
 
 KEY_ITEMS_SKIP = frozenset(
