@@ -109,8 +109,8 @@ function setDemoModalOpen(open) {
 function selectedDemoSave() {
   const selected = Array.from(demoSaveInputs).find((input) => input.checked);
   return {
-    src: selected?.dataset.src || "assets/dummy.sav",
-    filename: selected?.dataset.filename || "dummy.sav",
+    src: selected?.dataset.src || "assets/mypause.sav",
+    filename: selected?.dataset.filename || "mypause.sav",
     label: selected?.dataset.label || "Endgame Save (~70%)",
   };
 }
