@@ -1,0 +1,57 @@
+This file is a summary of my analysis on locations that count towards 100% completion.
+This is the only complicated part as all other parts are counted directly by the game and informed to the player.
+
+There are 3 main sources I used:
+    - multiple save files collected from the internet and my playthrough
+    - (SGE) savegameeditor website which supplies (coordinates.js) (https://www.marcrobledo.com/savegame-editors/zelda-totk/)
+    - (GS) Google sheet (Data Spreadsheet for Tears of the Kingdom (1.4.0) by Phil) which supplies (TOTK master sheet - Map.csv) (https://docs.google.com/spreadsheets/d/1fBvQ17WHP3ASgtO8ode_rf1g4DfEHErMrHwwLppNTJM)
+other sources considered:
+    - Another Google sheet (Tears of the Kingdom 100% Tracker & Guide v2.0 (USen)) (https://docs.google.com/spreadsheets/d/1mRHxETl2bYvpRBGV7VzeW0bCdpmEbJJdt7aWAw9T0rY)
+        - Not considered for map locations because coordinates are not provided for locations
+        - BUT it does have locations in none of the main sources I considered so this is a future TODO.
+    - https://restite.org/mappct-totk/
+        - Also doesnt supply coordinates for locations but is convenient for counts
+
+
+
+----------------------------
+
+First, there is a typo in the GS sheet that was fixed by me. The flag (IsVisitLocation.HatenoLab) was renamed to (IsVisitLocation.HatenoLabo).
+
+SGE has 360 rows
+GS has 2305 rows
+
+For a flag, there are 8 possible combinations. (first column is if it is in save files/UI, second column is if it is in GS, third column is if it is in SGE)
+    [a] 0 0 0 - UNKNOWN (if in neither source then cant find it)
+    [b] 0 0 1 - NO (anything in SGE is in the save files and in GS)
+    [c] 0 1 0 - YES (33 rows; 23 shops not in SOME 100% save files, 10 not in ANY save file + 1478 rows if you consider rows from other collectibles like Koroks etc.)
+    [d] 0 1 1 - NO (same as [b]; anything in SGE is in the save files)
+    [e] 1 0 0 - UNKNOWN (if in neither source then cant find it)
+    [f] 1 0 1 - NO (anything in SGE is in GS)
+    [g] 1 1 0 - YES (434 rows; in Section 2)
+    [h] 1 1 1 - YES (360 rows; in Section 1)
+
+# Section 1
+
+How to filter GS to get SGE:
+
+        subtype == "IsVisitLocation" && Type in ['Location', 'Place', 'Tear', 'Stable'] (302 rows)
+        + Type == "Device Dispenser" (aka. subtype == "RecycleBoxData") (30 rows)
+        + Type == 'Great Fairy' (5 rows)
+        + Type == 'Shop' && manual selection (23 rows)
+        After filter: 360 (== zelda totk coordinates.js)
+
+# Section 2
+
+Comparing coordinates.js (SGE, 360 rows) vs google sheet (GS, 2305 rows):
+
+    EXCLUDE (Type in {"Korok", "Cave", "Well", "Shrine", "Lightroot", "Tower"}) from GS (not in SGE and not in UI) [1478 rows]
+    EXCLUDE (Type == "Temple") from GS (not in SGE, is in UI) [5 rows]
+    EXCLUDE (subtype == "IsOpenCannon") from GS (not in SGE, is in UI) [408 rows]
+    EXCLUDE (subtype == "IsShowSheikahCameraTarget") from GS (not in SGE, is in UI) [12 rows]
+    EXCLUDE SOME (Type == 'Shop') from GS, requires manual selection (this part is complicated and required manual testing with multiple save files) [9 rows in save file but not in SGE, 32 rows not in save file nor in SGE]
+    EXCLUDE single row (Flag == 'BuildHouse_IsCompleted_Exp') from GS (not in SGE and not in UI) [1 row]
+    FINAL GS COUNT: 2305 - 1478 - 5 - 408 - 12 - 41 - 1 = 360 (== SGE)
+    
+    i.e. going with current GS logic vs old SGE logic, we get temples (5) + sheikah camera targets (12) + locations that auto open with towers (408) + manual selected shops (9) = (434 rows)
+    P.S. - as mentioned above, 1 row required manual typo fix in GS (IsVisitLocation.HatenoLab -> IsVisitLocation.HatenoLabo)
