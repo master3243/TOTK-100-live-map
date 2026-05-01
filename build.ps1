@@ -37,6 +37,27 @@ $iconTool = Join-Path $ProjectDir "tools\\png_to_ico.py"
 $iconOut = Join-Path $ProjectDir ".pyinstaller-build\\app.ico"
 $repoAssets = Join-Path $ProjectDir "assets"
 
+$repoTools = Join-Path $ProjectDir "tools"
+$repoCompletionBuilder = Join-Path $repoTools "build_completion_data.py"
+$repoKorokBuilder = Join-Path $repoTools "build_korok_data.py"
+
+foreach ($p in @($repoCompletionBuilder,$repoKorokBuilder)) {
+  if (-not (Test-Path $p)) { throw "Missing required builder: $p" }
+}
+
+Push-Location $scriptDir
+try {
+  Write-Host "Building completion_data.json..."
+  & python $repoCompletionBuilder
+  if ($LASTEXITCODE -ne 0) { throw "build_completion_data.py failed with exit code $LASTEXITCODE" }
+
+  Write-Host "Building korok_data.json..."
+  & python $repoKorokBuilder
+  if ($LASTEXITCODE -ne 0) { throw "build_korok_data.py failed with exit code $LASTEXITCODE" }
+} finally {
+  Pop-Location
+}
+
 foreach ($p in @($repoServer,$repoGui,$repoIndex,$repoStyles,$repoFrontend,$repoCompletion,$repoKorok)) {
   if (-not (Test-Path $p)) { throw "Missing required path: $p" }
 }
