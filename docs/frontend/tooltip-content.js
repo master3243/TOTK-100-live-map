@@ -51,7 +51,7 @@ function playerLifeTooltip(stats) {
   }
   return tooltipRows("Life", [
     { label: "Max", value: `${Math.min(stats.lifeHearts, PLAYER_MAX_LIFE_HEARTS)} / ${PLAYER_MAX_LIFE_HEARTS} hearts` },
-    stats.lifeStaminaComplete ? { label: "Blessings", value: `${formatNumber(stats.lightBlessingEquivalent)} / ${PLAYER_MAX_BLESSINGS}` } : {},
+    stats.lifeStaminaComplete ? { label: "Life + Stamina Blessings", value: `${formatNumber(stats.lightBlessingEquivalent)} / ${PLAYER_MAX_BLESSINGS}` } : {},
     { label: "Raw maxLife", value: stats.maxLife },
   ]);
 }
@@ -70,7 +70,7 @@ function playerStaminaTooltip(stats) {
   }
   return tooltipRows("Stamina", [
     { label: "Max", value: `${formatStaminaUnits(stats.maxStamina)} / ${PLAYER_MAX_STAMINA_WHEELS} wheels` },
-    stats.lifeStaminaComplete ? { label: "Blessings", value: `${formatNumber(stats.lightBlessingEquivalent)} / ${PLAYER_MAX_BLESSINGS}` } : {},
+    stats.lifeStaminaComplete ? { label: "Life + Stamina Blessings", value: `${formatNumber(stats.lightBlessingEquivalent)} / ${PLAYER_MAX_BLESSINGS}` } : {},
     { label: "Raw maxStamina", value: stats.maxStamina },
   ]);
 }
