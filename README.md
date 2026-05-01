@@ -26,8 +26,14 @@ The first step is to clone the repository then follow the instructions in the [d
 
 Huge thanks to the following people for public resources that made this project possible.
 
-- **Map imagery seed**: [`vguzman812/totk-coordinates-map`](https://github.com/vguzman812/totk-coordinates-map)
 - **Save parsing + korok hash/coordinate reference**: [`marcrobledo/savegame-editors`](https://github.com/marcrobledo/savegame-editors)
+- **Google Sheet data from the TotK Data Collection Discord Community**: [`Data Spreadsheet for Tears of the Kingdom (1.4.0)`](https://docs.google.com/spreadsheets/d/1fBvQ17WHP3ASgtO8ode_rf1g4DfEHErMrHwwLppNTJM)
+  - "TotK Data Collection Discord Community for continually ensuring the quality and accuracy of the sheet
+  - KreaTV1 and DT12345, for assisting with damage research and testing
+  - Shozutko, for manually sorting quest captions
+  - Doge229, for kohga's construct image and promoting the sheet with the Rauru discord bot"
+  - Many members helped me personally (`Doge229`, `Phil`, and many others)
+- **Background Map**: [`vguzman812/totk-coordinates-map`](https://github.com/vguzman812/totk-coordinates-map)
 - **Icon pack source (stored in `assets/zd-icons/`)**: [`zeldadungeon.net/maps/totk/icons/`](https://www.zeldadungeon.net/maps/totk/icons/)
 - **In-browser Python runtime for the GitHub Pages/manual-upload mode**: [Pyodide](https://pyodide.org/)
 - **Third-party JS bundled under `docs/references/`**:

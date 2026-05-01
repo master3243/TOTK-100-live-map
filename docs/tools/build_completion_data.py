@@ -586,9 +586,9 @@ def compendium_labels_by_value(hashes_text):
 def main():
     completism = (REFERENCES / "zelda-totk.completism.js").read_text(encoding="utf-8")
     coordinates = (REFERENCES / "zelda-totk.coordinates.js").read_text(encoding="utf-8")
-    equipment = (REFERENCES / "zelda-totk.class.equipment.js").read_text(encoding="utf-8")
+    equipment = (REFERENCES / "zelda-totk.class.equipment.js").read_text(encoding="utf-8")  # for pristine count
     hashes = (REFERENCES / "zelda-totk.hashes.csv").read_text(encoding="utf-8")
-    locale = (REFERENCES / "zelda-totk.locale.en.js").read_text(encoding="utf-8")
+    locale = (REFERENCES / "zelda-totk.locale.en.js").read_text(encoding="utf-8")  # for armor locations and count in inventory
     zeldacentral_chests = {
         "surface": (REFERENCES / "zeldacentral-totk-surface-chests.json").read_text(encoding="utf-8"),
         "sky": (REFERENCES / "zeldacentral-totk-sky-chests.json").read_text(encoding="utf-8"),
