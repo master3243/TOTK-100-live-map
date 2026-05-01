@@ -22,7 +22,7 @@
         <div class="brand">
           <p class="eyebrow">Tears of the Kingdom</p>
           <h1>Save Map Helper</h1>
-          <h2>v1.5.4</h2>
+          <h2>v1.5.5</h2>
           <div class="save-upload">
             <input id="manualSaveInput" type="file" accept=".sav,application/octet-stream">
             <label class="upload-button" for="manualSaveInput">Upload save</label>
@@ -330,26 +330,86 @@
 
     <div id="demoModal" class="modal-backdrop" hidden aria-hidden="true">
       <div class="modal" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle">
-        <div class="modal-title" id="demoModalTitle">Load demo save file?</div>
+        <div class="modal-title" id="demoModalTitle">Load demo save</div>
         <div class="modal-body">
-          <div class="demo-save-options" role="radiogroup" aria-label="Demo save file">
-            <label>
+          <div class="demo-save-options" aria-label="Demo save file">
+            <label class="demo-save-choice">
               <input type="radio" name="demoSave" value="beginner" data-src="assets/beginner.sav" data-filename="beginner.sav" data-label="Beginner Save">
-              <span>Beginner Save</span>
+              <span>Beginner</span>
             </label>
-            <label>
+            <label class="demo-save-choice">
               <input type="radio" name="demoSave" value="endgame" data-src="assets/mypause.sav" data-filename="mypause.sav" data-label="Endgame Save (~70%)" checked>
               <span>Endgame Save (~70%)</span>
             </label>
-            <label>
-              <input type="radio" name="demoSave" value="save98" data-src="assets/98.sav" data-filename="98.sav" data-label="~98% Save">
-              <span>~98% Save</span>
-            </label>
-            <label>
-              <input type="radio" name="demoSave" value="save99" data-src="assets/99.sav" data-filename="99.sav" data-label="~99% Save">
-              <span>~99% Save</span>
-            </label>
           </div>
+          <details class="demo-more">
+            <summary>Show more demos</summary>
+            <div class="demo-more-list">
+              <div class="demo-save-row">
+                <label class="demo-save-row-button">
+                  <input type="radio" name="demoSave" value="100-1" data-src="assets/100-1.sav" data-filename="100-1.sav" data-label="100-1 Save">
+                  <span class="demo-row-title">100-1.sav</span>
+                  <span class="demo-row-meta">ShadowOne333 - Jun 27 2023</span>
+                  <span class="demo-row-description">Missing 11 icons, 2 materials, 24 pristine weapons.</span>
+                </label>
+                <a href="https://gbatemp.net/download/the-legend-of-zelda-tears-of-the-kingdom-100-save-file.38083/" target="_blank" rel="noopener noreferrer">Source</a>
+              </div>
+              <div class="demo-save-row">
+                <label class="demo-save-row-button">
+                  <input type="radio" name="demoSave" value="100-2" data-src="assets/100-2.sav" data-filename="100-2.sav" data-label="100-2 Save">
+                  <span class="demo-row-title">100-2.sav</span>
+                  <span class="demo-row-meta">Dominic-Dom - Jun 2 2023</span>
+                  <span class="demo-row-description">Missing many armor, 2 icons, 25 pristine weapons, 1 material, 1 key item (korok seeds).</span>
+                </label>
+                <a href="https://github.com/Dominic-Dom/Zelda-Tears-Of-The-Kingdom-100-Percent-Save" target="_blank" rel="noopener noreferrer">Source</a>
+              </div>
+              <div class="demo-save-row">
+                <label class="demo-save-row-button">
+                  <input type="radio" name="demoSave" value="100-3" data-src="assets/100-3.sav" data-filename="100-3.sav" data-label="100-3 Save">
+                  <span class="demo-row-title">100-3.sav</span>
+                  <span class="demo-row-meta">Either_Try2953 - Apr 21 2025</span>
+                  <span class="demo-row-description">Missing 23 general locations, 2 materials, 3 pristine weapons.</span>
+                </label>
+                <a href="https://www.reddit.com/r/yuzu/comments/1k46ke4/zelda_botw_and_totk_100_save_literally_everything/" target="_blank" rel="noopener noreferrer">Source</a>
+              </div>
+              <div class="demo-save-row">
+                <label class="demo-save-row-button">
+                  <input type="radio" name="demoSave" value="100-4" data-src="assets/100-4.sav" data-filename="100-4.sav" data-label="100-4 Save">
+                  <span class="demo-row-title">100-4.sav</span>
+                  <span class="demo-row-meta">SonicMaster 2022 - Aug 16 2023</span>
+                  <span class="demo-row-description">Missing 23 general locations, 2 materials, 14 pristine weapons, 1 armor, 1 fabric.</span>
+                </label>
+                <a href="https://www.youtube.com/watch?v=VmaX9AQlam8" target="_blank" rel="noopener noreferrer">Source</a>
+              </div>
+              <div class="demo-save-row">
+                <label class="demo-save-row-button">
+                  <input type="radio" name="demoSave" value="100-5" data-src="assets/100-5.sav" data-filename="100-5.sav" data-label="100-5 Save">
+                  <span class="demo-row-title">100-5.sav</span>
+                  <span class="demo-row-meta">Kiyako - May 13 2024</span>
+                  <span class="demo-row-description">Missing 2 icons, 27 pristine weapons, 1 key item (korok seeds).</span>
+                </label>
+                <a href="https://gamebanana.com/mods/513432" target="_blank" rel="noopener noreferrer">Source</a>
+              </div>
+              <div class="demo-save-row">
+                <label class="demo-save-row-button">
+                  <input type="radio" name="demoSave" value="beginner-2" data-src="assets/beginner-2.sav" data-filename="beginner-2.sav" data-label="Beginner 2 Save">
+                  <span class="demo-row-title">beginner-2.sav</span>
+                  <span class="demo-row-meta">SenseiDakara - May 20 2023</span>
+                  <span class="demo-row-description">Super map and max life/stamina, but little else.</span>
+                </label>
+                <a href="https://www.nexusmods.com/legendofzeldatearsofthekingdom/mods/7" target="_blank" rel="noopener noreferrer">Source</a>
+              </div>
+              <div class="demo-save-row">
+                <label class="demo-save-row-button">
+                  <input type="radio" name="demoSave" value="hacked-1" data-src="assets/hacked-1.sav" data-filename="hacked-1.sav" data-label="Hacked Save">
+                  <span class="demo-row-title">hacked-1.sav</span>
+                  <span class="demo-row-meta">totkguy - May 29 2023</span>
+                  <span class="demo-row-description">Hacked; all shrines/map, max life/stamina/fabrics, little else.</span>
+                </label>
+                <a href="https://gbatemp.net/threads/totk-pretty-much-100-savefile-noone-has-really-uploaded-one-so-thought-i-would.633684/" target="_blank" rel="noopener noreferrer">Source</a>
+              </div>
+            </div>
+          </details>
         </div>
         <div class="modal-actions">
           <button id="demoModalConfirm" class="upload-button" type="button">Load demo</button>

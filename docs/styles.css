@@ -476,7 +476,7 @@ h2 {
 }
 
 .modal {
-  width: min(420px, 92vw);
+  width: min(560px, 92vw);
   border-radius: 12px;
   border: 1px solid rgba(243, 239, 226, 0.16);
   background: #151c1a;
@@ -510,12 +510,12 @@ h2 {
   gap: 8px;
 }
 
-.demo-save-options label {
+.demo-save-choice {
   min-height: 54px;
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
   padding: 8px;
   border: 1px solid rgba(243, 239, 226, 0.14);
   border-radius: 8px;
@@ -524,22 +524,119 @@ h2 {
   cursor: pointer;
 }
 
-.demo-save-options label:has(input:checked) {
+.demo-save-choice:hover,
+.demo-save-choice:focus-within,
+.demo-save-choice:has(input:checked) {
   border-color: rgba(251, 204, 74, 0.72);
   background: rgba(251, 204, 74, 0.12);
   color: rgba(255, 248, 224, 0.98);
 }
 
-.demo-save-options input {
+.demo-save-choice span {
+  min-width: 0;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.demo-save-choice input,
+.demo-save-row-button input {
   margin: 0;
   accent-color: var(--accent);
 }
 
-.demo-save-options span {
-  min-width: 0;
+.demo-more {
+  margin-top: 10px;
+}
+
+.demo-more summary {
+  cursor: pointer;
+  color: rgba(251, 204, 74, 0.92);
   font-size: 12px;
   font-weight: 800;
-  line-height: 1.15;
+}
+
+.demo-more-list {
+  margin-top: 8px;
+  display: grid;
+  gap: 6px;
+  max-height: min(44vh, 360px);
+  overflow: auto;
+  padding-right: 2px;
+}
+
+.demo-save-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-items: center;
+  padding: 8px;
+  border: 1px solid rgba(243, 239, 226, 0.12);
+  border-radius: 8px;
+  background: rgba(243, 239, 226, 0.035);
+}
+
+.demo-save-row:hover,
+.demo-save-row:focus-within,
+.demo-save-row:has(input:checked) {
+  border-color: rgba(251, 204, 74, 0.72);
+  background: rgba(251, 204, 74, 0.12);
+}
+
+.demo-save-row-button {
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: rgba(243, 239, 226, 0.9);
+  text-align: left;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 8px;
+  align-items: start;
+}
+
+.demo-save-row-button:hover .demo-row-title,
+.demo-save-row-button:focus-within .demo-row-title,
+.demo-save-row-button:has(input:checked) .demo-row-title {
+  color: var(--accent);
+}
+
+.demo-save-row-button .demo-row-title,
+.demo-save-row-button .demo-row-meta,
+.demo-save-row-button .demo-row-description {
+  grid-column: 2;
+}
+
+.demo-row-title,
+.demo-row-meta,
+.demo-row-description {
+  display: block;
+}
+
+.demo-row-title {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.demo-row-meta,
+.demo-row-description {
+  margin-top: 2px;
+  font-size: 11px;
+  line-height: 1.25;
+  color: rgba(243, 239, 226, 0.68);
+}
+
+.demo-save-row a {
+  color: rgba(251, 204, 74, 0.9);
+  font-size: 11px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.demo-save-row a:hover {
+  text-decoration: underline;
 }
 
 .modal-actions {
@@ -563,8 +660,12 @@ h2 {
     grid-template-columns: 1fr;
   }
 
-  .demo-save-options label {
+  .demo-save-choice {
     min-height: 38px;
+  }
+
+  .demo-save-row {
+    grid-template-columns: 1fr;
   }
 }
 

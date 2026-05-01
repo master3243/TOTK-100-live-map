@@ -1,0 +1,35 @@
+100-1.sav:
+	Close to perfect, missing 11 icons, 2 material, 24 pristine waepons
+	https://gbatemp.net/download/the-legend-of-zelda-tears-of-the-kingdom-100-save-file.38083/
+	ShadowOne333
+	Jun 27 2023
+100-2.sav:
+	Missing dozens of armor, 2 icons, 25 pristine weapons, 1 material, 1 key item (no korok seed?)
+	https://github.com/Dominic-Dom/Zelda-Tears-Of-The-Kingdom-100-Percent-Save
+	Dominic-Dom
+	Jun 2 2023
+100-3.sav:
+	Close to perfect, Missing 23 general locations, 2 materials, 3 pristine weapons
+	https://www.reddit.com/r/yuzu/comments/1k46ke4/zelda_botw_and_totk_100_save_literally_everything/
+	Either_Try2953
+	Apr 21 2025
+100-4.sav:
+	Close, Missing 23 general locations, 2 materials, 14 pristine weapons, 1 armor (lowered hood), 1 fabric (nostalgic)
+	www.youtube.com/watch?v=VmaX9AQlam8
+	SonicMaster 2022
+	Aug 16 2023
+100-5.sav:
+	2 icons, 27 pristine weapons, 1 key item (no korok seed?)
+	https://gamebanana.com/mods/513432
+	Kiyako
+	May 13, 2024
+beginner-2.sav
+	super map and max life/stamina, but nothing else.
+	https://www.nexusmods.com/legendofzeldatearsofthekingdom/mods/7
+	SenseiDakara
+	May 20 2023
+hacked-1.sav
+	hacked, all shrines and all map, max life/stamina/fabrics but nothing else
+	https://gbatemp.net/threads/totk-pretty-much-100-savefile-noone-has-really-uploaded-one-so-thought-i-would.633684/
+	totkguy
+	May 29 2023
