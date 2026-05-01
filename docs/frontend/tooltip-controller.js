@@ -91,6 +91,20 @@ function setTooltipContent(html, { pinned = false } = {}) {
   }
 }
 
+function pinMapTooltip(element, html) {
+  tooltipPinnedAtMs = performance.now();
+  if (tooltipPinnedOwner instanceof HTMLElement) {
+    tooltipPinnedOwner.classList.remove("tooltip-pinned-owner");
+  }
+  tooltipPinnedOwner = element;
+  tooltipPinnedOwner.classList.add("tooltip-pinned-owner");
+  setTooltipContent(html, { pinned: true });
+  setTooltipPinned(true);
+  requestAnimationFrame(() => {
+    positionPinnedMapTooltip();
+  });
+}
+
 function setStatTooltipPinned(pinned) {
   isStatTooltipPinned = pinned;
   if (!pinned) {
@@ -149,6 +163,13 @@ function attachTooltip(element, html) {
       element,
       html,
     };
+  });
+  element.addEventListener("pointerup", (event) => {
+    if (viewport.contains(element) || !tooltipPinCandidate || tooltipPinCandidate.pointerId !== event.pointerId) {
+      return;
+    }
+    pinMapTooltip(element, html);
+    tooltipPinCandidate = null;
   });
 }
 

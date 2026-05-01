@@ -41,6 +41,11 @@ viewport.addEventListener("dragstart", (event) => {
   event.preventDefault();
 });
 
+function isMapTooltipOwnerElement(target) {
+  return target instanceof HTMLElement
+    && target.closest(".completion-marker, .link-marker, .nearest-coords-icon");
+}
+
 viewport.addEventListener("wheel", (event) => {
   event.preventDefault();
   const nextScale = event.deltaY > 0 ? scale / wheelZoomFactor : scale * wheelZoomFactor;
@@ -98,8 +103,7 @@ viewport.addEventListener("pointermove", (event) => {
   if (!isTooltipPinned && !mapTooltip.hidden && !viewport.classList.contains("dragging")) {
     const underPointer = document.elementFromPoint(event.clientX, event.clientY);
     const overTooltip = underPointer instanceof HTMLElement && underPointer.closest("#mapTooltip");
-    const overMarker = underPointer instanceof HTMLElement
-      && underPointer.closest(".completion-marker, .link-marker");
+    const overMarker = isMapTooltipOwnerElement(underPointer);
     if (!overTooltip && !overMarker) {
       mapTooltip.hidden = true;
     }
@@ -143,8 +147,7 @@ function endPointer(event) {
 
   if (!activePointers.size && didPanThisGesture && !isTooltipPinned && !mapTooltip.hidden) {
     const underPointer = document.elementFromPoint(event.clientX, event.clientY);
-    const isMarker = underPointer instanceof HTMLElement
-      && underPointer.closest(".completion-marker, .link-marker");
+    const isMarker = isMapTooltipOwnerElement(underPointer);
     // If the drag ended away from a marker (or on the tooltip itself), dismiss hover tooltip.
     if (!isMarker) {
       mapTooltip.hidden = true;
@@ -158,17 +161,7 @@ function endPointer(event) {
     && !didPanThisGesture
     && tooltipPinCandidate.element instanceof HTMLElement
   ) {
-    tooltipPinnedAtMs = performance.now();
-    if (tooltipPinnedOwner instanceof HTMLElement) {
-      tooltipPinnedOwner.classList.remove("tooltip-pinned-owner");
-    }
-    tooltipPinnedOwner = tooltipPinCandidate.element;
-    tooltipPinnedOwner.classList.add("tooltip-pinned-owner");
-    setTooltipContent(tooltipPinCandidate.html, { pinned: true });
-    setTooltipPinned(true);
-    requestAnimationFrame(() => {
-      positionPinnedMapTooltip();
-    });
+    pinMapTooltip(tooltipPinCandidate.element, tooltipPinCandidate.html);
   }
   if (tooltipPinCandidate && tooltipPinCandidate.pointerId === event.pointerId) {
     tooltipPinCandidate = null;

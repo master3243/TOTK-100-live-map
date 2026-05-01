@@ -107,7 +107,8 @@ function setNearestCoords(marker) {
   if (marker.kind) {
     icon.classList.add(marker.kind);
   }
-  icon.setAttribute("aria-hidden", "true");
+  icon.setAttribute("aria-label", completionLabel(marker));
+  attachTooltip(icon, completionTooltip(marker));
   nearestCoords.append(icon, document.createTextNode(`X ${formatNumber(world.x)}  Z ${formatNumber(world.z)}  (Y ${formatNumber(world.y)})`));
   appendDeltaHud(world);
 }

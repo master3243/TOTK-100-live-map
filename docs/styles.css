@@ -1247,7 +1247,7 @@ body.save-drop-active {
 }
 
 .nearest-coords-icon {
-  position: static;
+  position: relative;
   display: inline-block;
   flex: 0 0 auto;
   width: 20px;
@@ -1256,6 +1256,8 @@ body.save-drop-active {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  cursor: help;
+  pointer-events: auto;
 }
 
 .nearest-coords-icon.completion-koroks {
