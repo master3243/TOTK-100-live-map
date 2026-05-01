@@ -239,9 +239,10 @@ const LIVE_SAVE_ROW_ORDER = [
   "materials",
 ];
 
-const PLAYER_MAX_LIFE_HEARTS = 38;
+const PLAYER_MAX_LIFE_HEARTS = 40;
 const PLAYER_MAX_STAMINA_WHEELS = 3;
 const PLAYER_MAX_BATTERY_CELLS = 48;
+const PLAYER_MAX_BLESSINGS = 53;  // 152 shrines + 3 starting hearts + 6 hearts from dungeons + 1 from first statue + 5 starting stamina
 const playerStatSummaries = [
   {
     element: lifeSummary,

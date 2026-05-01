@@ -103,6 +103,7 @@ PLAYER_SAVE_POS_HASH = 0xC884818D
 PLAYER_MAX_LIFE_HASH = 0xFBE01DA1  # Int; PlayerStatus.MaxLife
 PLAYER_MAX_STAMINA_HASH = 0xF9212C74  # Float; PlayerStatus.MaxStamina
 PLAYER_MAX_ENERGY_HASH = 0xAFD01D68  # Float; PlayerStatus.MaxEnergy
+MAX_LIGHT_BLESSING = 53
 HYRULE_MIN_X = -6000
 HYRULE_MAX_X = 6000
 HYRULE_MIN_Z = -5000
@@ -400,6 +401,7 @@ def parse_player_max_stats(data):
     life_hearts = int(round(max_life / 4))
     stamina_wheels = int(round(max_stamina / 1000))
     battery_cells = int(round(max_energy / 1000))
+    light_blessing_equivalent = max_life / 4 + max_stamina / 200
 
     return {
         "maxLife": max_life,
@@ -408,6 +410,8 @@ def parse_player_max_stats(data):
         "staminaWheels": stamina_wheels,
         "maxEnergy": max_energy,
         "batteryCells": battery_cells,
+        "lightBlessingEquivalent": light_blessing_equivalent,
+        "lifeStaminaComplete": light_blessing_equivalent >= MAX_LIGHT_BLESSING,
     }
 
 

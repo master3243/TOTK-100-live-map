@@ -51,6 +51,7 @@ function playerLifeTooltip(stats) {
   }
   return tooltipRows("Life", [
     { label: "Max", value: `${Math.min(stats.lifeHearts, PLAYER_MAX_LIFE_HEARTS)} / ${PLAYER_MAX_LIFE_HEARTS} hearts` },
+    stats.lifeStaminaComplete ? { label: "Blessings", value: `${formatNumber(stats.lightBlessingEquivalent)} / ${PLAYER_MAX_BLESSINGS}` } : {},
     { label: "Raw maxLife", value: stats.maxLife },
   ]);
 }
@@ -69,6 +70,7 @@ function playerStaminaTooltip(stats) {
   }
   return tooltipRows("Stamina", [
     { label: "Max", value: `${formatStaminaUnits(stats.maxStamina)} / ${PLAYER_MAX_STAMINA_WHEELS} wheels` },
+    stats.lifeStaminaComplete ? { label: "Blessings", value: `${formatNumber(stats.lightBlessingEquivalent)} / ${PLAYER_MAX_BLESSINGS}` } : {},
     { label: "Raw maxStamina", value: stats.maxStamina },
   ]);
 }
@@ -157,6 +159,13 @@ function isCompletedRatioText(text) {
   return Number.isFinite(current) && Number.isFinite(total) && total > 0 && current === total;
 }
 
+function isLiveSaveRowComplete(row, text) {
+  if ((row.dataset.liveRow === "life" || row.dataset.liveRow === "stamina") && currentPlayerStats?.lifeStaminaComplete) {
+    return true;
+  }
+  return isCompletedRatioText(text);
+}
+
 function updateLiveSaveRows() {
   if (!liveSaveList || !liveSaveCompletedToggle || !liveSaveCompletedToggleRow) {
     return;
@@ -171,10 +180,8 @@ function updateLiveSaveRows() {
   const completedRows = [];
 
   for (const row of metricRows) {
-    const liveRowId = row.dataset.liveRow;
     const ddText = row.querySelector("dd")?.textContent;
-    let complete = false;
-    complete = isCompletedRatioText(ddText);
+    const complete = isLiveSaveRowComplete(row, ddText);
     row.classList.toggle("live-save-row-complete", complete);
     row.classList.toggle("live-save-row-collapsed", complete && !liveSaveCompletedExpanded);
     if (complete) {

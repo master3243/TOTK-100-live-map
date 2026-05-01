@@ -5,12 +5,8 @@ wont add: (silly stuff):
     - not sure locations listed is truly 100%, some dataminers show ~900 while here is ~350. Same for shops, not sure if they are all in ~350. 
         (I think there's a difference between all locations on the map including the ones automatically added when a tower is found (~900) and those that need to be visited aside from the towers (~350))
     - waepons/items/etc. could still show ???. not currently tracked.
-    - missing items from inventory
     - DLC fabrics
     - memories/Cutscenes (tears already tracked in locations, only 1 memory optional and not in a tear)
-    - Beating dungeons (if you havent finished the game what are you even doing here?)
+    - Beating dungeons (if you havent finished the game almost nothing else will be 100% anyways)
     - special/maxed horses in stable (not really part of 100%)
     - all 22 character profiles
-
-
-Look into and compare with: https://docs.google.com/spreadsheets/d/1fBvQ17WHP3ASgtO8ode_rf1g4DfEHErMrHwwLppNTJM (very useful sheet)
