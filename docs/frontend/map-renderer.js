@@ -51,9 +51,9 @@ function markerHudWorld(marker) {
   return parseTargetWorldFromNote(marker.note) || marker;
 }
 
-function appendDeltaHud(targetWorld) {
+function buildDeltaHud(targetWorld) {
   if (!playerPosition) {
-    return;
+    return null;
   }
   const dx = targetWorld.x - playerPosition.x;
   const dz = targetWorld.z - playerPosition.z;
@@ -62,10 +62,6 @@ function appendDeltaHud(targetWorld) {
   const direction = arrowDirection(playerPosition, targetMap);
   const delta = document.createElement("span");
   delta.className = "nearest-delta";
-
-  const separator = document.createElement("span");
-  separator.className = "nearest-delta-separator";
-  separator.textContent = "|";
 
   const horizontal = document.createElement("span");
   horizontal.className = "nearest-delta-group";
@@ -84,8 +80,8 @@ function appendDeltaHud(targetWorld) {
   verticalArrow.setAttribute("aria-hidden", "true");
   vertical.append(verticalArrow, document.createTextNode(")"));
 
-  delta.append(separator, horizontal, vertical);
-  nearestCoords.append(delta);
+  delta.append(horizontal, vertical);
+  return delta;
 }
 
 function setNearestCoords(marker) {
@@ -109,8 +105,15 @@ function setNearestCoords(marker) {
   }
   icon.setAttribute("aria-label", completionLabel(marker));
   attachTooltip(icon, completionTooltip(marker));
-  nearestCoords.append(icon, document.createTextNode(`X ${formatNumber(world.x)}  Z ${formatNumber(world.z)}  (Y ${formatNumber(world.y)})`));
-  appendDeltaHud(world);
+  const separator = document.createElement("span");
+  separator.className = "nearest-delta-separator";
+  separator.textContent = "|";
+  nearestCoords.append(
+    icon,
+    buildDeltaHud(world) || "",
+    separator,
+    document.createTextNode(`X ${formatNumber(world.x)}  Z ${formatNumber(world.z)}  (Y ${formatNumber(world.y)})`),
+  );
 }
 
 function appendTargetLines(markers) {

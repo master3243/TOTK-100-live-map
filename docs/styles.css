@@ -1273,7 +1273,6 @@ body.save-drop-active {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  margin-left: 2px;
 }
 
 .nearest-delta-separator {
@@ -1291,18 +1290,18 @@ body.save-drop-active {
 .nearest-delta-arrow {
   position: relative;
   display: inline-block;
-  width: 2ch;
+  width: 2.4ch;
   height: 2ch;
-  flex: 0 0 2ch;
+  flex: 0 0 2.4ch;
 }
 
 .nearest-delta-arrow::before {
   content: "";
   position: absolute;
-  left: 16%;
+  left: 8%;
   top: 46%;
-  width: 62%;
-  height: 3px;
+  width: 72%;
+  height: 4px;
   border-radius: 999px;
   background: var(--accent);
 }
@@ -1339,9 +1338,9 @@ body.save-drop-active {
 .nearest-delta-arrow.up::before,
 .nearest-delta-arrow.down::before {
   left: 50%;
-  top: 28%;
-  width: 3px;
-  height: 58%;
+  top: 8%;
+  width: 5px;
+  height: 78%;
   transform: translateX(-50%);
 }
 
@@ -1370,8 +1369,8 @@ body.save-drop-active {
 
 .nearest-delta-arrow.down::after {
   top: auto;
-  bottom: 8%;
-  border-top: 0.58em solid #e85d5d;
+  bottom: 4%;
+  border-top: 0.5em solid #e85d5d;
   border-bottom: 0;
 }
 
