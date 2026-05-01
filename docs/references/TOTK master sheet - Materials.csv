@@ -1,0 +1,1440 @@
+Name,Inventory Icon,Caption,Caption 2,Caption 3,Object Map Link,Element,Fusable,Destroyed on Hit (Fused),Fuse Attack Power (Sword),Fuse Attack Power (Large Sword),Fuse Attack Power (Spear),Fuse Attack Power (Arrow),Fuse Attack Power (Shield),Additional Element Attack Power (Burst),Additional Element Attack Power (Melee Projecile),Additional Element Attack Power (Melee Projecile from Rod),Fuse Property 1,Fuse Property 2,Fuse Property 3,Fuse Property 4,Fuse Replace Sharpness,Fuse Can Cut,Fuse Shatters Rock,Fuse Adds Shield Bash Attack,Fuse Disables Torch,Mineru Fuse Durability,Hearts Recovered,Cooking Effect,Cooking Effect Level,Cooking Effect Time Boost Duration,Cooking Critical Rate,Sell Price,Buy Price (Rupees),Buy Price (Poes),Dye Color,Needed for Quests,Needed for Armor Upgrades,Scales To,Scale Up On Weapon When Points Total Is,Spawn Time,Despawn Time,Flame Guard Level,Flammable,Burns Out,Freezable,Conducts Electricity,Is Character,Forest Dweller Cooldown (After Equip),Forest Dweller Cooldown (After Attack),Zonai Dispenser Capsule Count (1),Zonai Dispenser Capsule Count (2),Zonai Dispenser Capsule Count (3),Zonai Dispenser Capsule Count (4),Zonai Dispenser Capsule Count (5),Name (Japanese),Caption (Japanese),IsUsable,Cooking Tag 1,Cooking Tag 2,Cooking Tag 3,Cooking Tag (Custom),Cooking Tag (Custom) 2,Internal Fuse SubTypes,ActorName,MaterialCategory,MaterialCategory Order,PouchSortKey,Compendium #,Inventory Order (By type)
+Golden Apple,#REF!,"A rare, very sweet fruit that seems to have an
+extra sparkle to it. Sometimes found near
+normal apples.",-,-,Golden Apple,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,1.5,-,-,00:20,100%,8,32,-,Yellow,5,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,金のリンゴ,"普通のリンゴに混じって 時折見つかる神秘的な
+輝きを放つ果物  食べると味わった事のない
+甘味が口の中いっぱいに広がる",TRUE,CookFruit,-,-,Dessert Fruit,Apple or Wildberry,"[Blunt,ShieldSurfingslipperinessDown]",Item_Fruit_P,Fruit,01,,204,001
+Palm Fruit,#REF!,"Fruit from palm trees that grow near the
+ocean. It doesn't offer any special effects
+but will increase your heart recovery
+when used as an ingredient.",-,-,Palm Fruit,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,1,-,-,-,-,4,16,-,Light Yellow,0,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ヤシの実,"海辺のヤシの木に実るフルーツ
+特別な効果はないが料理に使うと
+ハートを回復させる効果がある",TRUE,CookFruit,-,-,Dessert Fruit,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning]",Item_Fruit_G,Fruit,01,,205,002
+Hylian Tomato,#REF!,"A fruit found widely from cold areas to warm
+climates. Full of nutrition, and kind of trendy
+lately. Use it in cooking to recover more
+hearts.",-,-,Hylian Tomato,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,1,-,-,-,-,4,16,-,Orange,0,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ハイラルトマト,"寒冷地から 温暖な気候まで 幅広く分布する果実
+栄養たっぷりで 近年注目されている
+料理に使うと ハートの回復量が増える",TRUE,CookFruit,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown]",Item_Fruit_M,Fruit,01,,207,003
+Apple,#REF!,"A common fruit eaten by people since ancient
+times. Eat it fresh, or cook it to increase
+its effect.",-,-,Apple,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,0.5,-,-,-,-,3,12,-,Red,1,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,リンゴ,"太古の昔から 人々に食べられている果物 
+そのまま食べてもいいし
+料理の材料に使えば 効果もアップする",TRUE,CookFruit,-,-,Dessert Fruit,Apple or Wildberry,"[Blunt,ShieldSurfingslipperinessDown]",Item_Fruit_A,Fruit,01,,203,004
+Wildberry,#REF!,"A fruit that grows in cold, snowy regions
+known for its tangy, sweet flavor. It doesn't
+offer any special effects, but it's a popular
+cooking ingredient.",-,-,Wildberry,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,0.5,-,-,-,-,3,12,-,Peach,0,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,イチゴ,"雪の降る寒い地方で実るフルーツ
+甘酸っぱい味が特徴で 特別な効果はないが
+料理にもよく使われる",TRUE,CookFruit,-,-,Dessert Fruit,Apple or Wildberry,"[Blunt,ShieldSurfingslipperinessDown]",Item_Fruit_B,Fruit,01,,206,005
+Voltfruit,#REF!,"Cacti found in the Gerudo Desert bear this
+sweet fruit. It's naturally insulated, so when
+cooked into a dish, it provides resistance
+against electricity.",-,-,Voltfruit,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,0.5,Shock Resistance,1,-,-,4,16,-,Orange,0,15,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ビリビリフルーツ,"ゲルド砂漠のサボテンに実るフルーツ
+甘い実には 絶縁成分が豊富に含まれており
+料理に使うと 電気の攻撃に強くなる効果がある",TRUE,CookFruit,-,-,Dessert Fruit,-,"[Blunt,ShieldSurfingslipperinessDown]",Item_Fruit_C,Fruit,01,,210,006
+Fleet-Lotus Seeds,#REF!,"The plant that bears these seeds grows near
+deep water. The roots draw nutrients from the
+water, which boosts your movement speed
+when the seeds are cooked into a dish.",-,-,Fleet-Lotus Seeds,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,0.5,Speed Up,2,-,-,5,20,-,Green,0,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ゴーゴーハスの実,"水辺に咲いているハスの実
+水中深く張り巡らせた根から集まった栄養は
+料理に使うと 移動速度が上がる効果として現れる",TRUE,CookFruit,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown]",Item_Fruit_E,Fruit,01,,211,007
+Hydromelon,#REF!,"This resilient fruit can flourish even in the
+heat of the desert. The hydrating liquid
+inside provides a cooling effect that, when
+cooked, increases your heat resistance.",-,-,Hydromelon,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,0.5,Heat Resistance,1,-,-,4,16,-,Green,0,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ヒンヤリメロン,"砂漠でも育つ特殊なフルーツ
+ジューシーな果肉には体温を下げる効果があり
+料理に使うと 暑さに耐える効果を発揮する",TRUE,CookFruit,-,-,Dessert Fruit,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning]",Item_Fruit_F,Fruit,01,,208,008
+Mighty Bananas,#REF!,"This fruit grows mainly in tropical forests
+of the Faron region. When it's used as an
+ingredient, the resulting dish will temporarily
+increase your attack power.",-,-,Mighty Bananas,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,0.5,Attack Up,2,-,-,5,20,-,Yellow,0,30,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ツルギバナナ,"主にフィローネ地方の 熱帯林に実るフルーツ
+皮に包まれた果肉には 筋力増強効果があるとされ
+調理すると 攻撃力が増す料理ができる",TRUE,CookFruit,-,-,Dessert Fruit,-,"[Blunt,ShieldSurfingslipperinessDown]",Item_Fruit_H,Fruit,01,,212,009
+Spicy Pepper,#REF!,"This pepper is exploding with spice.
+Cook with it to create dishes that
+will raise your body temperature and
+help you withstand the cold.",-,-,Spicy Pepper,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,0.5,Cold Resistance,1,-,-,3,12,-,Red,0,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ポカポカ草の実,"生で食べるとピリピリする実
+料理に使うと 体が暖まり
+寒いところでも耐えられるようになる",TRUE,CookFruit,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown]",Item_Fruit_I,Fruit,01,,209,010
+Fire Fruit,#REF!,"A fruit that generates heat when struck.
+Cooked correctly, its heating properties
+improve blood flow and stimulate muscles to
+raise attack power in high temperatures.",-,-,Fire Fruit,Fire,TRUE,TRUE,1,1,1,1,1,0,-,-,Fire Burst,Reusable On Forest Dweller Weapons,-,-,FALSE,FALSE,FALSE,TRUE,FALSE,1,0.25,Hot Weather Attack,1,-,-,3,12,-,Red,0,9,-,-,-,-,2,TRUE,TRUE,FALSE,FALSE,FALSE,00:01.333,00:02,0,0,0,0,0,火炎の実,"破裂すると熱を発する実 熱で筋肉を活性化する
+成分を含むため 料理にして食す事で
+高温時に強力な攻撃を繰り出せるようになる",TRUE,CookFruit,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,ShieldBash,ReuseSeed,ShieldSurfingNoStaggerWithDeath,ChemicalExplosionFire]",FireFruit,Fruit,01,1500,213,011
+Ice Fruit,#REF!,"A fruit that generates cold when struck.
+Cooked correctly, it gives off an effect that
+strengthens muscles and increases attack
+power in cold temperatures.",-,-,Ice Fruit,Ice,TRUE,TRUE,1,1,1,1,1,0,-,-,Ice Burst,Reusable On Forest Dweller Weapons,-,-,FALSE,FALSE,FALSE,TRUE,FALSE,1,0.25,Cold Weather Attack,1,-,-,3,12,-,White,0,9,-,-,-,-,2,TRUE,TRUE,FALSE,FALSE,FALSE,00:01.333,00:02,0,0,0,0,0,冷気の実,"破裂すると冷気を発する実 冷やすと普段使わない
+筋繊維を強化する作用があり 料理して食べれば
+寒冷時に強力な攻撃を繰り出せるようになる",TRUE,CookFruit,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,ShieldBash,ReuseSeed,ShieldSurfingNoStaggerWithDeath,ChemicalExplosionIce]",IceFruit,Fruit,01,1477,214,012
+Shock Fruit,#REF!,"When cooked correctly, this shockingly tasty
+fruit stimulates the consumer's muscles and
+grants increased attack power during
+thunderstorms.",-,-,Shock Fruit,Electric,TRUE,TRUE,1,1,1,1,1,0,-,-,Electric Burst,Reusable On Forest Dweller Weapons,-,-,FALSE,FALSE,FALSE,TRUE,FALSE,1,0.25,Stormy Weather Attack,1,-,-,3,12,-,Yellow,0,9,-,-,-,-,2,TRUE,TRUE,FALSE,FALSE,FALSE,00:01.333,00:02,0,0,0,0,0,電気の実,"破裂すると電気を発する実 雷鳴に反応して
+筋力を刺激する成分を含むため 料理にして食すと
+雷雨下で強力な攻撃を繰り出せるようになる",TRUE,CookFruit,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,ShieldBash,ReuseSeed,ShieldSurfingNoStaggerWithDeath,ChemicalExplosionElectric]",ElectricalFruit,Fruit,01,1454,216,013
+Splash Fruit,#REF!,"A fruit that contains pressurized water.
+Cooking it brings out its ability to enhance
+swim speed when ingested.",-,-,Splash Fruit,Water,TRUE,TRUE,1,1,1,1,1,0,-,-,Water Burst,Water Attack,Reusable On Forest Dweller Weapons,-,FALSE,FALSE,FALSE,TRUE,FALSE,1,0.25,Swim Speed Up,1,-,-,2,10,-,Light Blue,0,0,-,-,-,-,2,TRUE,TRUE,FALSE,FALSE,FALSE,00:01.333,00:02,0,0,0,0,0,水の実,"中に高圧の水を溜め込んだ木の実
+手足の動きを滑らかにする成分によって
+料理して食べると 速く泳げるようになる",TRUE,CookFruit,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,ShieldBash,ReuseSeed,ShieldSurfingNoStaggerWithDeath,ChemicalExplosionWater,WaterDamageUpElement]",WaterFruit,Fruit,01,1432,215,014
+Dazzlefruit,#REF!,"A fruit charged with powerful light. Break it to
+unleash dazzling sparkles that blind any
+monsters nearby.",-,-,Dazzlefruit,-,TRUE,TRUE,1,1,1,1,1,-,-,-,Dazzle Burst,Reusable On Forest Dweller Weapons,-,-,FALSE,FALSE,FALSE,TRUE,FALSE,1,0.25,-,1,-,-,5,20,-,Yellow,0,60,-,-,-,-,2,TRUE,TRUE,FALSE,FALSE,FALSE,00:03.333,00:06.666,0,0,0,0,0,カガヤキの実,"強い光をため込んだ木の実
+破裂すると周囲にまばゆい閃光を放ち
+光を受けた魔物の目をくらます事ができる",TRUE,CookFruit,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,ShieldBash,ReuseSeed,ShieldSurfingNoStaggerWithDeath,ChemicalExplosionLight]",LightFruit,Fruit,01,1419,217,015
+Bomb Flower,#REF!,"A dangerous flower that contains explosive
+elements. Does not mix well with fire or
+electricity, unless the goal is to blow
+things up.",-,-,Bomb Flower,Bomb,TRUE,TRUE,1,1,1,1,1,40,-,-,Bomb,Shield Surfing Spring,-,-,FALSE,FALSE,FALSE,TRUE,FALSE,1,-,-,-,-,-,10,40,16,Blue,0,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,バクダン花,"火薬によく似た成分を含んだ花
+衝撃を与えたり 火をつけたりすると
+周囲を巻き込んで爆発する",FALSE,CookForeign,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,ShieldBash,ShieldSurfingNoStaggerWithDeath,ShieldSurfingSpring,ChemicalExplosionBomb]",BombFruit,Fruit,01,1420,252,016
+Puffshroom,#REF!,"A mushroom that spreads a cloud of fine
+spores when a stimulus is applied. The bitter
+powder makes them inedible.",-,-,Puffshroom,-,TRUE,TRUE,1,1,1,1,1,-,-,-,Reusable On Forest Dweller Weapons,-,-,-,TRUE,FALSE,FALSE,TRUE,TRUE,1,-,-,-,-,-,10,40,16,Brown,0,9,-,-,-,-,2,TRUE,TRUE,FALSE,FALSE,FALSE,00:04,00:10,0,0,0,0,0,ケムリダケ,"非常に細かい胞子を蓄えたキノコ
+刺激を受けると 一面に胞子の粉塵を撒き散らす
+味はとても苦く 食べられたものではない",FALSE,CookForeign,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,ShieldBash,ReuseSeed,ShieldSurfingNoStaggerWithDeath,TorchNoBurning]",SmokeFruit,Fruit,01,1418,232,017
+Muddle Bud,#REF!,"A wildflower with a powerful odor that can
+disorient and confuse, making it difficult to
+tell friend from foe.",-,-,Muddle Bud,-,TRUE,TRUE,1,1,1,1,1,-,-,-,Confusion,Reusable On Forest Dweller Weapons,-,-,FALSE,FALSE,FALSE,TRUE,FALSE,1,-,-,-,-,-,10,40,16,Purple,0,0,-,-,-,-,2,TRUE,TRUE,FALSE,FALSE,FALSE,00:04,00:10,0,0,0,0,0,コンラン花,"強烈な臭いを放つ野生の花
+この臭いをかぐと 前後不覚になり 一時的に
+味方と敵の区別がつかなくなるという",FALSE,CookForeign,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,ShieldBash,ReuseSeed,ShieldSurfingNoStaggerWithDeath,ConfuseEffect]",ConfusionFruit,Fruit,01,1417,251,018
+Big Hearty Truffle,#REF!,"Years of going unpicked have allowed this
+hearty truffle to grow quite large. When
+cooked into a dish, it'll restore all hearts and
+temporarily increase your maximum hearts.",-,-,Big Hearty Truffle,-,TRUE,FALSE,1,1,1,1,-,-,-,-,Bouncy,Perfect Parry Always Disarms,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,3,Extra Hearts,16,-,-,25,100,-,Black,0,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,大マックストリュフ,"誰にも発見されず 大きく育ったマックストリュフ
+蓄えられた栄養も豊富で 料理に使うと
+ハートが全回復し さらに最大値を大きく増やす",TRUE,CookMushroom,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,PowHammer,GuardJustEnhance]",Item_Mushroom_N,Mushroom,02,,223,019
+Hearty Truffle,#REF!,"This rare mushroom has a rich scent.
+It'll restore all your hearts and temporarily
+increase your maximum hearts when used in
+cooking.",-,-,Hearty Truffle,-,TRUE,FALSE,1,1,1,1,-,-,-,-,Bouncy,Perfect Parry Always Disarms,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,2,Extra Hearts,4,-,-,20,80,-,Black,0,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,マックストリュフ,"かなり貴重なキノコの一種
+土の中で育ち 強い香りがある 料理に使うと
+ハート全回復と 最大値を増やす効果をもつ",TRUE,CookMushroom,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,PowHammer,GuardJustEnhance]",Item_Mushroom_F,Mushroom,02,,222,020
+Endura Shroom,#REF!,"A rare yellowish-orange mushroom. Cook it
+before eating to temporarily increase your
+stamina limit.",-,-,Endura Shroom,-,TRUE,FALSE,1,1,1,1,-,-,-,-,Bouncy,Perfect Parry Always Disarms,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,1,Extra Stamina,1,-,-,15,60,-,Orange,0,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ガッツダケ,"めったに取れない黄色いキノコ
+料理するとがんばりゲージの最大値が増える
+というとても貴重な効果を発揮する",TRUE,CookMushroom,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,PowHammer,GuardJustEnhance]",Item_Mushroom_O,Mushroom,02,,220,021
+Rushroom,#REF!,"A mushroom that can grow almost anywhere
+but prefers ceilings and sheer cliffs. Cook it
+before eating to temporarily increase your
+movement speed.",-,-,Rushroom,-,TRUE,FALSE,1,1,1,1,-,-,-,-,Bouncy,Perfect Parry Always Disarms,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,0.5,Speed Up,1,-,-,3,12,-,Purple,0,39,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ゴーゴーダケ,"天井や切り立った崖にむりやり生えるキノコ
+どこにでも生える生命力がすごい
+料理に使うと移動力が向上する効果がある",TRUE,CookMushroom,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,PowHammer,GuardJustEnhance]",Item_MushroomGet_D,Mushroom,02,,227,022
+Brightcap,#REF!,"A mushroom that grows in caves and contains
+luminescent enzymes. Cook it into a dish to
+give a glowing effect to anyone who eats it.",-,-,Brightcap,-,TRUE,FALSE,1,1,1,1,-,-,-,-,Bouncy,Perfect Parry Always Disarms,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,0.5,Glow,1,-,-,4,16,-,Light Yellow,10,15,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,アカリダケ,"洞窟に生える 光る酵素を含有したキノコ
+料理に使うと その発光成分で 食した者の
+身体が ぼんやり光る効能を得られる",TRUE,CookMushroom,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,PowHammer,GuardJustEnhance]",Item_MushroomGet_K,Mushroom,02,,231,023
+Stamella Shroom,#REF!,"A nutritious mushroom chock-full of natural
+energy. Cook it to release its stamina-
+restoration properties.",-,-,Stamella Shroom,-,TRUE,FALSE,1,1,1,1,-,-,-,-,Bouncy,Perfect Parry Always Disarms,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,0.5,Stamina Recovery,1,-,-,5,20,-,Green,0,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ガンバリダケ,"大地のエネルギーをたくさんため込んだ
+栄養満点のキノコ
+料理に使うと がんばりが回復する効果を得られる",TRUE,CookMushroom,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,PowHammer,GuardJustEnhance]",Item_Mushroom_A,Mushroom,02,,221,024
+Chillshroom,#REF!,"Often found at the base of pine trees in cold
+climates, these mushrooms are cool to the
+touch and can be used to cook dishes that
+allow you to stay cool even in arid regions.",-,-,Chillshroom,-,TRUE,FALSE,1,1,1,1,-,-,-,-,Bouncy,Perfect Parry Always Disarms,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,0.5,Heat Resistance,2,-,-,4,16,-,Blue,10,15,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ヒンヤリダケ,"雪山の針葉樹の根元によく生える
+触るとヒンヤリしていて 料理に使うと
+砂漠の暑さにも耐える事ができるようになる",TRUE,CookMushroom,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,PowHammer,GuardJustEnhance]",Item_Mushroom_B,Mushroom,02,,224,025
+Sunshroom,#REF!,"A bright-red mushroom that grows in hot
+climates. Imbued with the power of heat, 
+it can be used to cook dishes that will
+allow you to endure the bitter cold.",-,-,Sunshroom,-,TRUE,FALSE,1,1,1,1,-,-,-,-,Bouncy,Perfect Parry Always Disarms,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,0.5,Cold Resistance,2,-,-,4,16,-,Red,0,15,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ポカポカダケ,"主に気温の高い地域に生える真っ赤なキノコ
+見た目通り炎の力を宿しており 料理に使うと
+寒い雪山でも耐えられる効果が発揮される",TRUE,CookMushroom,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,PowHammer,GuardJustEnhance]",Item_Mushroom_C,Mushroom,02,,225,026
+Hylian Shroom,#REF!,"A common mushroom found near trees
+around Hyrule. Eat it to restore half a heart.",-,-,Hylian Shroom,-,TRUE,FALSE,1,1,1,1,-,-,-,-,Bouncy,Perfect Parry Always Disarms,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,0.5,-,-,-,-,3,12,-,Red,0,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ハイラルダケ,"ハイラルの森を代表するキノコ
+木のそばに生える事が多く
+食べるとハート回復の効果がある",TRUE,CookMushroom,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,PowHammer,GuardJustEnhance]",Item_Mushroom_E,Mushroom,02,,218,027
+Zapshroom,#REF!,"This mushroom grows wild in the Gerudo
+region. The cap is naturally insulated, so
+when used in cooking, it will offer protection
+against electricity.",-,-,Zapshroom,-,TRUE,FALSE,1,1,1,1,-,-,-,-,Bouncy,Perfect Parry Always Disarms,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,0.5,Shock Resistance,2,-,-,4,16,-,Yellow,0,15,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ビリビリダケ,"ゲルド地方でよく見かけられるキノコ
+傘の部分に 絶縁成分が豊富に含まれている
+料理に使うと 電撃に耐性を得られる",TRUE,CookMushroom,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,PowHammer,GuardJustEnhance]",Item_Mushroom_H,Mushroom,02,,226,028
+Silent Shroom,#REF!,"A strange mushroom that glows softly in
+the forest at night. Cooking it into a dish
+unlocks the nutrients in its cap, resulting in
+a meal that will allow you to move stealthily.",-,-,Silent Shroom,-,TRUE,FALSE,1,1,1,1,-,-,-,-,Bouncy,Perfect Parry Always Disarms,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,0.5,Stealth Up,2,-,-,3,12,-,Light Blue,0,24,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,シノビダケ,"夜になると静かに光る 不思議なキノコ
+料理に使うと 傘に含まれる成分で集中力が
+高まり 物音を立てずに行動できるようになる",TRUE,CookMushroom,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,PowHammer,GuardJustEnhance]",Item_Mushroom_J,Mushroom,02,,230,029
+Razorshroom,#REF!,"This mushroom is known for the natural slice
+in its cap. Eating it fosters your competitive
+spirit. Use it when cooking to prepare a dish
+that will increase your strength.",-,-,Razorshroom,-,TRUE,FALSE,1,1,1,1,-,-,-,-,Bouncy,Perfect Parry Always Disarms,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,0.5,Attack Up,2,-,-,5,20,-,Crimson,0,15,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ツルギダケ,"剣で斬りつけたようなヒビが特徴のキノコ
+料理に使うと 傘の裏のひだに含まれる成分により
+闘争心が向上し 攻撃力が増すと言われる",TRUE,CookMushroom,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,PowHammer,GuardJustEnhance]",Item_Mushroom_L,Mushroom,02,,228,030
+Ironshroom,#REF!,"The cap of this mushroom is very hard.
+Use it when cooking to prepare a dish
+that increases your defense.",-,-,Ironshroom,-,TRUE,FALSE,1,1,1,1,-,-,-,-,Bouncy,Perfect Parry Always Disarms,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,0.5,Defense Up,2,-,-,5,20,-,Brown,0,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ヨロイダケ,"傘がとても硬く発達したキノコ
+その傘に含まれる成分は 調理して食べると 
+体幹を強化する効能があり 防御力が増す",TRUE,CookMushroom,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,PowHammer,GuardJustEnhance]",Item_Mushroom_M,Mushroom,02,,229,031
+Skyshroom,#REF!,"A common mushroom that grows near trees
+on sky islands. Eat it to restore health.",-,-,Skyshroom,-,TRUE,FALSE,1,1,1,1,-,-,-,-,Bouncy,Perfect Parry Always Disarms,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,0.25,-,-,-,-,3,12,-,Light Blue,0,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ソラダケ,"空島の木の根元に生える ポピュラーなキノコ
+食べるとハート回復の効果がある",TRUE,CookMushroom,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,PowHammer,GuardJustEnhance]",Item_Mushroom_P,Mushroom,02,,219,032
+Big Hearty Radish,#REF!,"This hearty radish is much larger than the
+average radish. When cooked into a dish, it
+restores all your hearts and temporarily
+increases your maximum hearts.",-,-,Big Hearty Radish,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,FALSE,5,4,Extra Hearts,20,-,-,25,100,-,Peach,0,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,大マックスラディッシュ,"限界を超えて大きく育ったマックスラディッシュ
+滋養強壮成分がとても豊富で 料理に使うと
+ハートが全回復し さらに最大値を大きく増やす",TRUE,CookPlant,-,-,Radish,-,"[Blunt,ShieldSurfingslipperinessDown]",Item_PlantGet_C,Plant,03,,236,033
+Hearty Radish,#REF!,"A rare radish that grows best in sunny plains.
+Cook it before eating to restore all your hearts
+and temporarily increase your maximum
+hearts.",-,-,Hearty Radish,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,2.5,Extra Hearts,12,-,-,20,80,-,Peach,0,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,マックスラディッシュ,"日当たりの良い草原に自生する珍しいカブ
+料理に使うとハートが全回復し
+さらに最大値を増やす効果がある",TRUE,CookPlant,-,-,Radish,-,"[Blunt,ShieldSurfingslipperinessDown]",Item_PlantGet_B,Plant,03,,235,034
+Endura Carrot,#REF!,"Highly valued as a medicinal plant, this
+carrot contains large amounts of nourishing
+energy. When cooked into a dish, it boosts
+your stamina beyond its maximum limit.",-,-,Endura Carrot,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,2,Extra Stamina,4,-,-,20,80,-,Light Yellow,0,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ガッツニンジン,"薬草としても珍重されてきた 貴重なニンジン
+活力の源となる成分を大量に含んでおり
+調理すると がんばりゲージが限界を超えて増える",TRUE,CookPlant,-,-,Pumpkin or Carrot,Carrot,"[Blunt,ShieldSurfingslipperinessDown]",Item_PlantGet_Q,Plant,03,,241,035
+Hyrule Herb,#REF!,"This healthy herb has not changed since
+ancient times. Cook it before eating to
+increase the number of hearts it restores.",-,-,Hyrule Herb,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,1,-,-,-,-,3,12,-,Green,0,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ハイラル草,"はるか昔から 今の姿をしていたとされる ハーブ
+生命力に満ちあふれており 料理に使うと
+ハートを回復させる効果がある",TRUE,CookPlant,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown]",Item_PlantGet_A,Plant,03,,233,036
+Silent Princess,#REF!,"This lovely flower was said to have been a
+favorite of the princess of Hyrule. They were
+once feared to have gone extinct, but it's not
+uncommon to spot them growing in the wild.",-,-,Silent Princess,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,-,Stealth Up,3,-,-,10,30,-,White,0,72,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,姫しずか,"ハイラル王国の姫が愛したと言われる 可憐な花
+以前より絶滅が危惧される種だが
+近年 まれに自生しているのを見かける事ができる",FALSE,CookPlant,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown]",Item_PlantGet_J,Plant,03,,253,037
+Fortified Pumpkin,#REF!,"An extremely tough pumpkin raised for food.
+When cooked, that toughness manifests itself
+by considerably upping defense.",-,-,Fortified Pumpkin,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,0.5,Defense Up,2,-,-,5,20,-,Orange,0,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ヨロイカボチャ,"食用として栽培される とても硬いカボチャ
+料理に使うと カチコチ成分が効いて
+防御力を かなり上げる効果がある",TRUE,CookPlant,-,-,Pumpkin or Carrot,Pumpkin,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning]",Item_Fruit_J,Plant,03,,242,038
+Sun Pumpkin,#REF!,"A new variety of pumpkin that soaks up the
+sunshine in Hateno Village. Baked into a dish,
+it can help heal the effects of exposure
+to gloom.",-,-,Sun Pumpkin,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,0.5,Gloom Recovery,4,-,-,5,20,-,Green,0,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ヒダマリカボチャ,"ハテノ村で作られている新種のカボチャ
+太陽の光をたっぷり浴びて育ち 料理にすると
+瘴気に蝕まれた身体を 治癒する効果が得られる",TRUE,CookPlant,-,-,Pumpkin or Carrot,Pumpkin,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning]",Item_Fruit_N,Plant,03,,243,039
+Swift Carrot,#REF!,"This carrot is cultivated extensively in villages.
+It strengthens the legs and hips when cooked
+into a dish, which helps increase your
+movement speed.",-,-,Swift Carrot,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,0.5,Speed Up,1,-,-,4,16,-,Orange,0,10,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ゴーゴーニンジン,"村などでよく作られているニンジン
+足腰を強くする効能があると言われており 
+調理して食べると 移動速度が上がる",TRUE,CookPlant,-,-,Pumpkin or Carrot,Carrot,"[Blunt,ShieldSurfingslipperinessDown]",Item_PlantGet_M,Plant,03,,240,040
+Stambulb,#REF!,"A wild plant with bulging roots often found in
+cooler climates. It contains nutrients that
+increase endurance. Cook it to restore
+stamina.",-,-,Stambulb,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,0.5,Stamina Recovery,1,-,-,4,16,-,Light Yellow,0,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ガンバリ草,"冷涼な気候を好む 根元のふくらんだ野草
+そこに体力や持久力を強化する成分が含まれ
+料理に使うとがんばりが回復する効果が現れる",TRUE,CookPlant,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown]",Item_PlantGet_S,Plant,03,,234,041
+Korok Frond,#REF!,"A mysterious leaf that looks like it might be
+hiding something behind it. It has some
+medicinal value. Attach it to a stick and it
+can be used as a fan.",-,-,Korok Frond,-,TRUE,FALSE,1,1,1,1,-,-,-,-,Fan,-,-,-,TRUE,FALSE,FALSE,FALSE,FALSE,10,0.25,-,-,-,-,3,12,-,Green,0,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,コログの葉,"何かが隠れていそうな 不思議な葉っぱ
+ちょっとした薬効成分がある
+棒などに付けて うちわ代わりに使う事もできる",TRUE,CookPlant,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,Fan]",Item_PlantGet_U,Plant,03,1413,256,042
+Cool Safflina,#REF!,"This medicinal plant grows in high elevations,
+such as mountains in the Hebra or Gerudo
+regions. When cooked into a dish, it will
+temporarily increase your heat resistance.",-,-,Cool Safflina,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,0,Heat Resistance,1,-,-,3,12,-,Light Blue,0,9,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ヒンヤリハーブ,"ヘブラやゲルドの標高の高い山地で見かけられる
+薬草の一種  葉に身体を冷やす成分を持っており
+料理に使うと 耐暑効果を得る事ができる",TRUE,CookPlant,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown]",Item_PlantGet_E,Plant,03,,237,043
+Warm Safflina,#REF!,"This medicinal plant grows in hot regions,
+such as the Gerudo Desert. It's warm to the
+touch and increases your cold resistance
+when cooked into a dish.",-,-,Warm Safflina,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,0,Cold Resistance,1,-,-,3,12,-,Orange,0,9,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ポカポカハーブ,"ゲルド地方など 気温の高い場所で育つ薬草の一種
+実や葉は辛味成分が強く 料理に使うと
+寒さに強くなる効果を得る事ができる",TRUE,CookPlant,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown]",Item_PlantGet_F,Plant,03,,238,044
+Mighty Thistle,#REF!,"This medicinal plant is known for its sharp
+thorns and for the fruit it bears. The fruit
+contains a compound that increases attack
+power when cooked into a dish.",-,-,Mighty Thistle,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,0,Attack Up,1,-,-,5,20,-,Orange,0,9,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ツルギソウ,"葉や実にある鋭いトゲが特徴の薬草
+一時的に筋力を増やす特殊な成分が含まれていて
+料理に使うと 攻撃力が増える効果が発揮される",TRUE,CookPlant,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown]",Item_PlantGet_G,Plant,03,,245,045
+Armoranth,#REF!,"This tough medicinal plant cannot be
+broken, but it can be cooked. Its
+durable yet flexible fibers raise your
+defense when cooked into a dish.",-,-,Armoranth,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,0,Defense Up,1,-,-,5,20,-,Purple,0,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ヨロイソウ,"たとえ踏まれても折れない タフな薬草
+その丈夫でしなやかな繊維質は 料理して食べると
+体幹を強化する効能があり 防御力が増す",TRUE,CookPlant,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown]",Item_PlantGet_H,Plant,03,,246,046
+Blue Nightshade,#REF!,"A plant that grows in quieter areas of Hyrule.
+At night, it gives off a soft glow.
+Cook with it to increase your stealth.",-,-,Blue Nightshade,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,0,Stealth Up,1,-,-,4,16,-,Blue,4,24,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,しのび草,"主に森や草地に咲く花
+夜になるとほのかに光を放つ
+料理に使うと静かさを増やす効果が発揮される",TRUE,CookPlant,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown]",Item_PlantGet_I,Plant,03,,247,047
+Electric Safflina,#REF!,"This medicinal plant grows abundantly in the
+Gerudo Desert. Its peculiar fibers conduct
+electricity, which will increase your electricity
+resistance when cooked into a dish.",-,-,Electric Safflina,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,0,Shock Resistance,1,-,-,3,12,-,Light Yellow,0,24,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ビリビリハーブ,"ゲルド砂漠に多く自生している薬草の一種
+電流を外へと逃がす特殊な繊維質を持ち
+料理に使うと 電気への耐性を得る事ができる",TRUE,CookPlant,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown]",Item_PlantGet_L,Plant,03,,239,048
+Swift Violet,#REF!,"This vitality-rich flower blooms mainly on
+cliffsides. When cooked into a dish, the
+nourishing compounds increase your
+movement speed.",-,-,Swift Violet,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,0,Speed Up,2,-,-,10,40,-,Purple,0,90,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ゴーゴースミレ,"切り立った崖にも咲く 生命力豊かな花
+料理に使うと 蓄えられた滋養成分によって
+移動速度が上がる効果を得られる",TRUE,CookPlant,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown]",Item_PlantGet_O,Plant,03,,244,049
+Sundelion,#REF!,"A wild plant that grows in the sun at high
+altitudes. Soaked in sunlight, its petals can
+restore health depleted by gloom when used
+in cooking.",-,-,Sundelion,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,0,Gloom Recovery,12,-,-,8,32,-,Yellow,10,75,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ヒダマリ草,"日当たりの良い 高空に生える野草
+陽の光をたっぷり浴びて育った花弁は 料理すると
+瘴気に蝕まれた身体を 治癒する効能がある",TRUE,CookPlant,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown]",Item_PlantGet_R,Plant,03,,248,050
+Raw Gourmet Meat,#REF!,"This prized cut of meat is usually from a large
+animal. Any connoisseur would rank this
+tender, juicy cut of meat ""gourmet."" Expect
+an exquisite meal when cooking with this.",-,-,-,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,3,-,-,-,-,35,140,-,-,0,0,-,-,-,-,0,TRUE,TRUE,TRUE,FALSE,FALSE,-,-,0,0,0,0,0,極上ケモノ肉,"主に大型の動物から手に入る とても貴重な肉
+極上の名に負けない 旨味と食べごたえを持つ
+料理に使えば 絶品の出来上がりが期待できる",TRUE,CookMeat,-,-,Tier 3 Meat,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning]",Item_Meat_11,Meat,04,,-,051
+Raw Whole Bird,#REF!,"This prized meat can be obtained from
+certain birds. It gets full points for flavor,
+nutrition, and volume. It pairs perfectly with
+other ingredients or can be enjoyed alone.",-,-,-,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,3,-,-,-,-,35,140,-,-,0,0,-,-,-,-,0,TRUE,TRUE,TRUE,FALSE,FALSE,-,-,0,0,0,0,0,極上トリ肉,"一部の鳥から手に入る事がある とても貴重な肉
+味 栄養 ボリューム どれを取っても満点
+焼いても料理に使っても 大活躍する素材",TRUE,CookMeat,-,-,Tier 3 Meat,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning]",Item_Meat_12,Meat,04,,-,052
+Raw Prime Meat,#REF!,"A fresh, high-quality piece of animal meat.
+This stuff isn't easy to come by, so savor it.
+Cook it to recover more hearts.",-,-,Raw Prime Meat,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,1.5,-,-,-,-,15,60,-,-,0,0,-,-,-,-,0,TRUE,TRUE,TRUE,FALSE,FALSE,-,-,0,0,0,0,0,上ケモノ肉,"新鮮で上質な動物の肉
+なかなか手に入るものではないが
+料理に使うと高いハート回復効果がある",TRUE,CookMeat,-,-,Tier 2 Meat,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning]",Item_Meat_02,Meat,04,,-,053
+Raw Bird Thigh,#REF!,"A high-quality piece of meat that's hard to
+come by. You can eat it raw, but cooking it
+first will recover more hearts.",-,-,-,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,1.5,-,-,-,-,15,60,-,-,0,0,-,-,-,-,0,TRUE,TRUE,TRUE,FALSE,FALSE,-,-,0,0,0,0,0,上トリ肉,"鳥からたまに採る事ができる上等な肉
+そのままでも食べられるが 料理に使うと
+より高いハート回復効果を発揮する",TRUE,CookMeat,-,-,Tier 2 Meat,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning]",Item_Meat_07,Meat,04,,-,054
+Raw Meat,#REF!,"Meat obtained from animals in plains and
+forests. You can eat it raw, but cooking it will
+make it more delicious and nutritious.",-,-,Raw Meat,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,1,-,-,-,-,8,32,-,-,0,0,-,-,-,-,0,TRUE,TRUE,TRUE,FALSE,FALSE,-,-,0,0,0,0,0,ケモノ肉,"平原や森にいる動物から手に入る肉
+そのままでも食べられるが 調理すると
+おいしさアップでハートの回復量も増える",TRUE,CookMeat,-,-,Tier 1 Meat,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning]",Item_Meat_01,Meat,04,,-,055
+Raw Bird Drumstick,#REF!,"This meat is tougher and chewier than a
+standard steak. Tastes better cooked.",-,-,-,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,1,-,-,-,-,8,32,-,-,0,0,-,-,-,-,0,TRUE,TRUE,TRUE,FALSE,FALSE,-,-,0,0,0,0,0,トリ肉,"鳥から採れた新鮮な肉
+ケモノ肉に比べると脂が少なくヘルシー
+焼いて食べた方がおいしく食べられる",TRUE,CookMeat,-,-,Tier 1 Meat,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning]",Item_Meat_06,Meat,04,,-,056
+Courser Bee Honey,#REF!,"Honey straight from the hive is chock-full of
+nutrients. Cooking this into a meal unlocks
+the potential of these nutrients and provides
+a stamina-recovery effect.",-,-,Courser Bee Honey,-,TRUE,FALSE,1,1,1,1,-,-,-,-,Rod,Beehive,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,2,Stamina Recovery,2,-,-,10,40,-,Orange,3,15,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ガンバリバチのハチミツ,"巣から採れるハチミツは 栄養満点！
+その高栄養価により 隠し味として使った料理は
+がんばりゲージ回復の効果を持つ",TRUE,CookSpice,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,Rod,Beehive]",BeeHome,Boost,05,,254,057
+Hylian Rice,#REF!,"This grain is a favorite among residents of
+Kakariko Village. It's grown in regions with a
+lot of water and is quite versatile. Used as an
+ingredient in things like risotto and rice balls.",-,-,Hylian Rice,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,1,-,-,00:30,-,3,12,-,White,21,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ハイラル米,"カカリコ村などで好んで食べられる穀物
+主に水が豊富な地方で作られている
+リゾットやおにぎりといった 米料理の材料になる",TRUE,CookSpice,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown]",Item_Material_03,Boost,05,,-,058
+Bird Egg,#REF!,"A fresh bird egg necessary for making dishes
+such as omelets and crepes. You can snag
+them from birds' nests if you're sneaky.
+Nutritious and delicious, perfect for cooking.",-,-,Bird Egg,-,TRUE,TRUE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,1,1,-,-,01:00,10%,3,12,-,Yellow,10,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,トリのタマゴ,"新鮮な鳥のタマゴ
+太い木の上などに作られる 鳥の巣から手に入る
+栄養が豊富で 料理の材料に最適",TRUE,CookSpice,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,ShieldSurfingNoStaggerWithDeath]",Item_Material_04,Boost,05,,-,059
+Tabantha Wheat,#REF!,"This grain is cultivated extensively on the
+Tabantha Plains. It's ground finely with a
+millstone to be used in cooking. Use it to
+make things such as stews and breads.",-,-,Tabantha Wheat,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,1,-,-,00:30,-,3,12,-,Light Yellow,0,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,タバンタ小麦,"タバンタ地方の平原で 広く作られてきた穀物
+石臼で細かい粉にして料理に使う
+シチューやパンなどの材料になる",TRUE,CookSpice,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown]",Item_Material_07,Boost,05,,-,060
+Hateno Cheese,#REF!,"A cheese made from Hateno cow's milk.
+Add it to a warm dish, and enjoy its rich flavor
+and melty texture.",-,-,Hateno Cheese,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,1,-,-,00:50,10%,5,20,-,Light Yellow,1,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ハテノチーズ,"ハテノウシのミルクで作ったチーズ
+温かい料理に入れればとろーり溶けて
+濃厚な味わいが楽しめる",TRUE,CookSpice,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown]",Item_Material_10,Boost,05,,-,061
+Fresh Milk,#REF!,"This fresh milk comes from Hateno-bred cows
+and white goats from all across Hyrule. It's
+delicious on its own, but can be used in
+soups and stews too.",-,-,Fresh Milk,-,TRUE,TRUE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,TRUE,1,0.5,-,-,00:50,-,3,12,-,White,0,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,フレッシュミルク,"村などで飼われている ハテノウシやシロヤギから
+採れる新鮮なミルク  そのまま飲んでも
+美味しいが スープやシチューの材料にもなる",TRUE,CookSpice,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShieldSurfingNoStaggerWithDeath]",Item_Material_05,Boost,05,,-,062
+Acorn,#REF!,"Often found on the ground near trees.
+Squirrels adore this nut, so you may have
+competition while foraging. Add one to a
+meal for a nutty seasoning.",-,-,Acorn,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,0.25,-,-,00:20,-,2,8,-,Brown,3,30,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,どんぐり,"森に落ちている木の実
+リスの大好物で こっそりため込んでいる
+料理に使うと ハートの回復量が少し増える",TRUE,CookSpice,-,-,Nut,-,"[Blunt,ShieldSurfingslipperinessDown]",Item_Fruit_K,Boost,05,,-,063
+Chickaloo Tree Nut,#REF!,"Small birds love this nut. You can eat it raw
+for a minor effect, but it can also be added
+as a spice to other recipes.",-,-,Chickaloo Tree Nut,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,0.25,-,-,00:10,-,3,12,-,Crimson,0,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,小鳥の木の実,"小鳥が好む小さな木の実
+そのまま食べてもほとんど効果はないが
+料理に入れるスパイスとして使われる",TRUE,CookSpice,-,-,Nut,-,"[Blunt,ShieldSurfingslipperinessDown]",Item_Fruit_L,Boost,05,,-,064
+Cane Sugar,#REF!,"When boiled with other ingredients, the cane
+breaks down into a sweet juice necessary
+for making cakes and other sweets. It's
+commonly found in ingredients stores.",-,-,Cane Sugar,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,0,-,-,00:50,30%,3,12,-,Green,0,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,きび砂糖,"煮込んで出てくる甘い汁は
+ケーキなどのお菓子作りには欠かせない
+町や村の素材屋で売られている",TRUE,CookSpice,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown]",Item_Material_01,Boost,05,,-,065
+Goron Spice,#REF!,"Made from several types of spices, this
+secret Goron seasoning has been handed
+down for generations. An initial wave of
+spiciness paves the way for the sweetness.",-,-,Goron Spice,-,TRUE,TRUE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,TRUE,1,0,-,1,01:00,10%,4,16,-,Crimson,1,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ゴロンの香辛粉,"様々な香辛料を混ぜた ゴロン秘伝のスパイス
+ガツンとした辛さが 素材の旨さを引き出す 
+調合方法は 代々受け継がれているらしい",TRUE,CookSpice,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShieldSurfingNoStaggerWithDeath]",Item_Material_02,Boost,05,,-,066
+Goat Butter,#REF!,"Butter made from the milk of a domesticated
+white goat. In addition to being used in
+dishes like stews and meunière, it's often
+used when making cakes and other sweets.",-,-,Goat Butter,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,0,-,-,00:50,10%,3,12,-,Light Yellow,0,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ヤギのバター,"飼われているシロヤギのミルクで 作られたバター
+シチューやムニエルといった料理以外にも
+ケーキなどのお菓子作りで よく使われる",TRUE,CookSpice,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown]",Item_Material_06,Boost,05,,-,067
+Monster Extract,#REF!,"A result of Kilton's research into monsters,
+this suspicious spice can be used to punch
+up dishes while cooking. Apparently it can be
+used to make a number of monstrous meals.",-,-,Monster Extract,-,TRUE,TRUE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,TRUE,1,0,-,-,-,-,12,50,-,Purple,1,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,マモノエキス,"キルトンの魔物研究の成果のひとつ
+料理に混ぜて使う怪しいスパイス
+様々なマモノ料理が作れると言われているが…",TRUE,CookSpice,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShieldSurfingNoStaggerWithDeath]",Item_Material_08,Boost,05,,-,068
+Oil Jar,#REF!,"A mild oil extracted from plant seeds, it's very
+versatile in cooking and can coax flavors from
+ingredients used in many dishes. Also good
+for adding fuel to fire.",-,-,Oil Jar,-,TRUE,TRUE,1,1,1,1,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,1,0,-,-,00:50,10%,3,12,-,Light Yellow,0,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,油ツボ,"植物の種から抽出した クセが少ない油
+その用途は幅広く 料理に入れれば風味が増し
+たき火に入れれば 燃料として使う事もできる",TRUE,CookSpice,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShieldSurfingNoStaggerWithDeath]",Item_Material_09,Boost,05,,-,069
+Dark Clump,#REF!,"An unusual substance, it's cold to the touch,
+and it seems as though it's filled with pitch-
+black darkness. Use it in cooking to get a
+gloom-resistant effect.",-,-,-,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,0,Gloom Resistance,1,-,-,5,20,10,Purple,0,15,-,-,-,-,2,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,闇の塊,"漆黒の闇をたたえている 見た事が無い物質
+触ると心なしかひんやりしている
+料理に使うと 瘴気の影響を抑える効能がある",TRUE,CookSpice,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown]",Item_Material_11,Boost,05,,-,070
+Rock Salt,#REF!,"Crystallized salt from the ancient sea
+commonly used to season meals. 
+Cannot be eaten in this form.",-,-,Rock Salt,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,10,-,-,-,00:30,-,2,12,-,Peach,0,0,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,岩塩,"大昔の海の塩が結晶化した
+おいしい料理には欠かせない調味料の元
+そのままでは食べられない",FALSE,CookSpice,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning]",Item_Ore_H,Boost,05,,-,071
+Star Fragment,#REF!,"A mysterious stone fragment that fell from the
+sky. Its gem-like quality makes it highly
+valuable. One theory is that it has the power
+to light up its environment.",-,-,Star Fragment,-,TRUE,FALSE,1,1,1,1,-,-,-,-,Rod,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,10,-,-,-,01:00,100%,200,800,-,White,0,103,-,-,9pm - 4am,5am,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,星のかけら,"空の彼方から落ちてきた 不思議な石のかけら
+材質は宝石に近く価値が高い
+一説では あたりを照らす力を秘めているという",FALSE,CookLowPrice,CookSpice,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,Rod]",Item_Ore_J,Boost,05,,-,072
+Hearty Salmon,#REF!,"This fish makes its home in cold water, giving
+it extra layers of fat. It'll restore all your hearts
+and temporarily increase your maximum
+hearts when used in cooking.",-,-,Hearty Salmon,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,4,Extra Hearts,16,-,-,20,80,-,-,0,0,-,-,-,-,0,TRUE,TRUE,TRUE,FALSE,FALSE,-,-,0,0,0,0,0,マックスサーモン,"寒冷地の川や湖に棲む魚  調理して食べると
+寒さに耐えるため 体内に蓄えられた脂身が
+ハートを全回復し 最大値を増やす効果をもたらす",TRUE,CookFish,-,-,-,-,-,Item_FishGet_I,Fish,06,800,056,073
+Hearty Bass,#REF!,"This large fish lives near the water's edge.
+Its sizable body can store a lot of nutrients.
+When used in cooking, it'll restore all your
+hearts and increase your maximum hearts.",-,-,Hearty Bass,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,2,Extra Hearts,8,-,-,18,72,-,-,0,9,-,-,-,-,0,TRUE,TRUE,TRUE,FALSE,FALSE,-,-,0,0,0,0,0,マックスバス,"水辺に棲む大型の魚 大きな体にたくさんの
+栄養を蓄えていて 料理に使うとハートを全回復し
+さらに最大値を増やす効果がある",TRUE,CookFish,-,-,-,-,-,Item_FishGet_B,Fish,06,795,054,074
+Hyrule Bass,#REF!,"An ordinary fish that hasn't changed for
+ages. It can be eaten raw, but cooking
+it amplifies its healing benefits.",-,-,Hyrule Bass,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,-,-,-,-,6,24,-,-,0,15,-,-,-,-,0,TRUE,TRUE,TRUE,FALSE,FALSE,-,-,0,0,0,0,0,ハイラルバス,"はるか昔から 姿形が変わらない 一般的な魚
+そのままでも食べられるが 調理すると
+回復効果も大きくなる",TRUE,CookFish,-,-,Bass,-,-,Item_FishGet_A,Fish,06,790,053,075
+Staminoka Bass,#REF!,"This Hyrule bass got to be the biggest fish
+by never getting caught (until now). Its long
+life results in a cooked dish that will restore
+a lot of stamina.",-,-,Staminoka Bass,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,Stamina Recovery,4,-,-,18,72,-,-,1,0,-,-,-,-,0,TRUE,TRUE,TRUE,FALSE,FALSE,-,-,0,0,0,0,0,ガンバリバス,"長い間生きたハイラルバスと言われている
+生命力が非常に強く 調理して食べると
+がんばりゲージが一気に回復する",TRUE,CookFish,-,-,Bass,-,-,Item_FishGet_L,Fish,06,785,055,076
+Chillfin Trout,#REF!,"This blue trout prefers cold bodies of water.
+Its skin contains enzymes that keep its body
+cool, and when cooked into a dish, it will
+temporarily boost your heat resistance.",-,-,Chillfin Trout,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,Heat Resistance,3,-,-,6,24,-,-,0,30,-,-,-,-,0,TRUE,TRUE,TRUE,FALSE,FALSE,-,-,0,0,0,0,0,ヒンヤリマス,"冷たい水場を好む 青いマス  
+その皮には 身体を冷やす成分が含まれるといわれ
+調理して食べると 暑さに耐性を持つ事ができる",TRUE,CookFish,-,-,Trout,-,-,Item_FishGet_C,Fish,06,780,057,077
+Sizzlefin Trout,#REF!,"This red trout prefers warm bodies of water.
+It has a special organ specifically for storing
+heat. When cooked into a dish, it temporarily
+boosts your resistance to the cold.",-,-,Sizzlefin Trout,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,Cold Resistance,3,-,-,6,24,-,-,0,30,-,-,-,-,0,TRUE,TRUE,TRUE,FALSE,FALSE,-,-,0,0,0,0,0,ポカポカマス,"暖かい水場を好む赤いマス 体内に熱を蓄える
+特殊な臓器を持ち 食材として使うと 体を芯から
+温める効能を持つ料理を作る事ができる",TRUE,CookFish,-,-,Trout,-,-,Item_FishGet_J,Fish,06,775,058,078
+Voltfin Trout,#REF!,"This trout makes its home in the freshwater
+lakes. Its scales have an insulating
+compound that, when cooked into a dish,
+offers resistance to electricity.",-,-,Voltfin Trout,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,Shock Resistance,3,-,-,6,24,-,-,0,30,-,-,-,-,0,TRUE,TRUE,TRUE,FALSE,FALSE,-,-,0,0,0,0,0,ビリビリマス,"湖などの淡水に棲むマス
+絶縁成分を含む鱗は 食材に使うと
+電気に耐性を得られる料理になる",TRUE,CookFish,-,-,Trout,-,-,Item_FishGet_D,Fish,06,770,059,079
+Stealthfin Trout,#REF!,"Consuming the bioluminescent compound
+that makes this fish glow in the dark will
+increase concentration. Dishes cooked
+with it will suppress noise when consumed.",-,-,Stealthfin Trout,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,Stealth Up,2,-,-,10,40,-,-,0,30,-,-,-,-,0,TRUE,TRUE,TRUE,FALSE,FALSE,-,-,0,0,0,0,0,シノビマス,"暗いところで光る魚  鱗が持つ発光物質には
+集中力を高める成分が含まれており 料理に使うと
+慎重に物音を立てずに行動できるようになる",TRUE,CookFish,-,-,Trout,-,-,Item_FishGet_X,Fish,06,765,060,080
+Mighty Carp,#REF!,"This freshwater fish lives alongside its less
+mighty carp ilk. A compound in its liver
+promotes muscle growth. Dishes cooked with
+it will temporarily increase your attack power.",-,-,Mighty Carp,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,Attack Up,2,-,-,10,40,-,-,0,0,-,-,-,-,0,TRUE,TRUE,TRUE,FALSE,FALSE,-,-,0,0,0,0,0,ツルギゴイ,"淡水に生息するコイの仲間
+キモに含まれる成分に 筋力増強効果があるとされ
+料理して食べると 攻撃力が増す",TRUE,CookFish,-,-,Carp,-,-,Item_FishGet_E,Fish,06,760,061,081
+Armored Carp,#REF!,"Calcium deposits in the scales of this ancient
+fish make them as hard as armor. Cooking it
+into a dish will fortify your bones, temporarily
+increasing your defense.",-,-,Armored Carp,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,Defense Up,2,-,-,10,40,-,-,0,0,-,-,-,-,0,TRUE,TRUE,TRUE,FALSE,FALSE,-,-,0,0,0,0,0,ヨロイゴイ,"硬い鎧のような鱗を持った古代魚
+料理に使うと 鱗に蓄えられた成分で
+骨が強くなり 防御力が増す",TRUE,CookFish,-,-,Carp,-,-,Item_FishGet_H,Fish,06,755,062,082
+Sanke Carp,#REF!,"This wild armored carp has been bred into
+a prizewinning fish. Its beautifully colored
+markings do not occur in nature. It offers
+no special effects when cooked.",-,-,Sanke Carp,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,-,-,-,-,20,80,-,-,0,0,-,-,-,-,0,TRUE,TRUE,TRUE,FALSE,FALSE,-,-,0,0,0,0,0,サンケゴイ,"野生のヨロイゴイを人の手で改良した観賞魚
+自然界には存在しない美しい色と模様を持つ
+料理に使っても特別な効果はない",TRUE,CookFish,-,-,Carp,-,-,Item_FishGet_Z,Fish,06,750,063,083
+Ancient Arowana,#REF!,"A lively fish that hasn't changed much since
+ancient times. Its nutritious meat can restore
+a bit of health.",-,-,Ancient Arowana,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,-,-,-,-,6,24,-,-,1,0,-,-,-,-,0,TRUE,TRUE,TRUE,FALSE,FALSE,-,-,0,0,0,0,0,ムカシアロワナ,"今もなお太古の姿を残す 活力あふれる魚
+引き締まった身は栄養たっぷりで
+食べるとハートを回復する事ができる",TRUE,CookFish,-,-,-,-,-,Item_FishGet_AA,Fish,06,745,064,084
+Glowing Cave Fish,#REF!,"A luminous fish that lives in dark caves. When
+consumed, its light enzyme can make one's
+body glow.",-,-,Glowing Cave Fish,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,Glow,2,-,-,6,24,-,-,3,15,-,-,-,-,0,TRUE,TRUE,TRUE,FALSE,FALSE,-,-,0,0,0,0,0,アカリホラウオ,"暗い洞窟の中に生息する 発光する魚
+その光る酵素を含んだ料理は
+食べた者の身体を光らせる効能がある",TRUE,CookFish,-,-,-,-,-,Item_FishGet_AC,Fish,06,740,065,085
+Mighty Porgy,#REF!,"This ocean-dwelling fish comes with one rude
+attitude. The compounds in its flesh elevate
+your competitive spirit when it's cooked into
+a dish, thus increasing your attack power.",-,-,Mighty Porgy,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,Attack Up,3,-,-,10,40,-,-,0,0,-,-,-,-,0,TRUE,TRUE,TRUE,FALSE,FALSE,-,-,0,0,0,0,0,ツルギダイ,"海にいる気性の荒い魚
+調理して食べると 身に含まれる成分により
+闘争心が向上し 攻撃力が増すといわれる",TRUE,CookFish,-,-,Porgy,-,-,Item_FishGet_F,Fish,06,735,066,086
+Armored Porgy,#REF!,"This porgy's body is covered in armor-hard
+scales. The compounds in its scales, when
+cooked into a dish, fortify your bones and
+temporarily boost your defense.",-,-,Armored Porgy,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,Defense Up,3,-,-,10,40,-,-,0,0,-,-,-,-,0,TRUE,TRUE,TRUE,FALSE,FALSE,-,-,0,0,0,0,0,ヨロイダイ,"全身が硬い鱗で覆われているタイ
+料理に使うと 鱗に蓄えられた成分で
+骨が頑強になり 防御力が増える",TRUE,CookFish,-,-,Porgy,-,-,Item_FishGet_G,Fish,06,730,067,087
+Sneaky River Snail,#REF!,"This large, glow-in-the-dark snail lives in
+fresh water. When cooked into a dish, it
+heightens your senses so you can move
+about silently.",-,-,Sneaky River Snail,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,Stealth Up,1,-,-,6,24,-,-,0,15,-,-,-,-,0,TRUE,TRUE,TRUE,FALSE,FALSE,-,-,0,0,0,0,0,シノビタニシ,"淡水に生息する大きな巻き貝 料理に使うと
+聴覚が鋭くなり 物音を立てずに行動できる
+ようになる 夜になるとホタルのような光を放つ",TRUE,CookFish,-,-,Seafood,-,-,Item_FishGet_M,Fish,06,725,068,088
+Razorclaw Crab,#REF!,"This crab is well known for its exceptionally
+sharp pincers. When cooked, the strength
+compound in its claws will increase your
+attack power.",-,-,Razorclaw Crab,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,Attack Up,2,-,-,8,32,-,-,0,9,-,-,-,-,0,TRUE,TRUE,TRUE,FALSE,FALSE,-,-,0,0,0,0,0,ツルギガニ,"水辺に生息する 鋭いハサミが特徴のカニ
+ハサミの肉には 筋力を上げる成分が含まれており
+調理して食べると 攻撃力が増す",TRUE,CookFish,-,-,Seafood,Crab,-,Item_InsectGet_K,Fish,06,720,069,089
+Ironshell Crab,#REF!,"This crab's shell is particularly hard. When
+cooked into a dish, its fat and meat bolster
+the body to increase your defense.",-,-,Ironshell Crab,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,Defense Up,2,-,-,8,32,-,-,0,0,-,-,-,-,0,TRUE,TRUE,TRUE,FALSE,FALSE,-,-,0,0,0,0,0,ヨロイガニ,"カニの中でも特別に硬い殻を持つ ミソや身には
+体を丈夫にする栄養素があると言われ
+調理して食べると 防御力が増す効果がある",TRUE,CookFish,-,-,Seafood,Crab,-,Item_InsectGet_O,Fish,06,715,070,090
+Bright-Eyed Crab,#REF!,"This crab appears in large numbers when it
+rains. One bite of its delectable meat, and
+you'll forget all your exhaustion. Replenishes
+your stamina when cooked into a dish.",-,-,Bright-Eyed Crab,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,Stamina Recovery,2,-,-,8,32,-,-,10,0,-,-,-,-,0,TRUE,TRUE,TRUE,FALSE,FALSE,-,-,0,0,0,0,0,ガンバリガニ,"雨が降ると大量に現れる事で有名
+身がしっかりしており 疲れを忘れる旨味を持つ
+料理に使えば がんばりゲージを回復できる",TRUE,CookFish,-,-,Seafood,Crab,-,Item_InsectGet_Z,Fish,06,710,071,091
+Fairy,#REF!,"This fairy will fly from your pouch and heal
+you the moment you lose your last heart.
+It's easily mistaken for a firefly at first, but
+it glows in the daylight as well as night.",-,-,Fairy,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,5,-,-,-,-,2,-,-,-,0,0,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,TRUE,-,-,0,0,0,0,0,妖精,"力尽きてしまった時にポーチから飛び出して 
+瞬時に傷をいやしてくれる
+ホタルと違い 昼間も淡く輝いている",TRUE,CookOther,-,-,-,-,-,Animal_Insect_F,Fairy,07,,072,092
+Winterwing Butterfly,#REF!,"The powdery scales of this butterfly's wings
+cool the air near it. Watching it flutter around
+snowflakes is a thing of beauty. Cook it with
+monster parts for a heat-resistance elixir.",-,-,Winterwing Butterfly,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,Heat Resistance,1,-,-,2,-,-,Blue,0,15,-,-,4am - 9pm,9pm,0,TRUE,TRUE,TRUE,TRUE,TRUE,-,-,0,0,0,0,0,ヒンヤリアゲハ,"空気を冷やすリンプンを持つ 不思議なチョウ
+雪に交じって舞う姿が美しい 
+魔物の素材と煮込むと 暑さに耐えられる薬になる",TRUE,CookInsect,-,-,-,-,-,Animal_Insect_N,Insect,08,99,073,093
+Summerwing Butterfly,#REF!,"A butterfly found in the woods and plains of
+warm regions. Its wings absorb the warmth of
+the sun. Cook it with monster parts to create
+an elixir that makes you feel warm and fuzzy.",-,-,Summerwing Butterfly,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,Cold Resistance,1,-,-,2,-,-,Red,0,15,-,-,4am - 9pm,9pm,0,TRUE,TRUE,TRUE,TRUE,TRUE,-,-,0,0,0,0,0,ポカポカアゲハ,"森や平原などの暖かい地域に生息するチョウ
+太陽の光をため込んだリンプンは
+魔物の素材と煮込むと 体を温める薬になる",TRUE,CookInsect,-,-,-,-,-,Animal_Insect_Q,Insect,08,96,074,094
+Thunderwing Butterfly,#REF!,"This rare butterfly only shows itself when it
+rains. The organs in its body produce an
+insulating compound. When made into
+an elixir, it offers electrical resistance.",-,-,Thunderwing Butterfly,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,Shock Resistance,1,-,-,2,-,-,Yellow,0,9,-,-,4am - 9pm,-,0,TRUE,TRUE,TRUE,TRUE,TRUE,-,-,0,0,0,0,0,ビリビリアゲハ,"雨が降る時にしか姿を見せない 珍しいチョウ
+体内器官で絶縁成分を作り出す性質を持つ
+煮詰めて薬にすると 電撃に耐性を得られる",TRUE,CookInsect,-,-,-,-,-,Animal_Insect_R,Insect,08,93,075,095
+Smotherwing Butterfly,#REF!,"This rare butterfly lives in volcanic regions.
+Its body contains a heat-resistant liquid,
+which can be turned into a topical elixir
+that offers resistance to flames.",-,-,Smotherwing Butterfly,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,Flame Guard,2,-,-,2,-,-,Gray,0,24,-,-,4am - 9pm,9pm,0,TRUE,TRUE,TRUE,TRUE,TRUE,-,-,0,0,0,0,0,ヒケシアゲハ,"高熱の火山地帯に生息する 珍しいチョウ
+耐燃性の高い体液を 体内にため込んでおり
+煮込んで作る塗り薬は 炎に耐える効果を発揮する",TRUE,CookInsect,-,-,-,-,-,Animal_Insect_AB,Insect,08,91,076,096
+Cold Darner,#REF!,"This dragonfly prefers the cool shade of
+trees to the warmth of the sun. Its wings
+disperse heat from its body, which can be
+cooked into a heat-resistance elixir.",-,-,Cold Darner,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,Heat Resistance,2,-,-,2,-,-,Blue,0,15,-,-,4am - 9pm,9pm,0,TRUE,TRUE,TRUE,TRUE,TRUE,-,-,0,0,0,0,0,ヒンヤリヤンマ,"木陰など 涼しい場所を好むトンボ
+青く透き通った羽は 放熱成分を持つといわれ
+煮詰めると 暑さに耐性を発揮する薬となる",TRUE,CookInsect,-,-,-,-,-,Animal_Insect_C,Insect,08,89,077,097
+Warm Darner,#REF!,"This dragonfly has a special organ that
+causes it to sweat profusely. Cook it with
+monster parts for an elixir that will raise your
+core temperature so you can resist the cold.",-,-,Warm Darner,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,Cold Resistance,2,-,-,2,-,-,Red,0,15,-,-,4am - 9pm,9pm,0,TRUE,TRUE,TRUE,TRUE,TRUE,-,-,0,0,0,0,0,ポカポカヤンマ,"羽の先端の赤い模様が特徴的なトンボ
+羽に発汗作用がある成分を持ち
+魔物の素材と煮詰めると 寒さに耐性を得られる",TRUE,CookInsect,-,-,-,-,-,Animal_Insect_T,Insect,08,86,078,098
+Electric Darner,#REF!,"This rare dragonfly only appears in the rain.
+Its wings direct electricity away from its body.
+Cook it with monster parts for an electricity-
+resistance elixir.",-,-,Electric Darner,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,Shock Resistance,2,-,-,2,-,-,Yellow,0,15,-,-,4am - 9pm,-,0,TRUE,TRUE,TRUE,TRUE,TRUE,-,-,0,0,0,0,0,ビリビリヤンマ,"雨がふる時にしか姿を見せない 珍しいトンボ 
+長い羽は電流を体外へ逃がす特殊な成分を持ち 
+薬にするとその効能から 耐電性が向上する",TRUE,CookInsect,-,-,-,-,-,Animal_Insect_I,Insect,08,83,079,099
+Energetic Rhino Beetle,#REF!,"This valuable beetle can live up to 10
+years. When cooked with monster parts,
+its impressive vitality translates into an
+elixir that will greatly restore your stamina.",-,-,Energetic Rhino Beetle,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,Stamina Recovery,6,-,-,30,-,-,Yellow,0,9,-,-,7pm - 7am,-,0,TRUE,TRUE,TRUE,TRUE,TRUE,-,-,0,0,0,0,0,ガンバリカブト,"10年も生きるとされる 貴重なカブトムシ
+その強力な生命力は 薬にすると
+がんばりゲージを一気に回復する効果を生み出す",TRUE,CookInsect,-,-,-,-,-,Animal_Insect_AA,Insect,08,79,083,100
+Bladed Rhino Beetle,#REF!,"This beetle's razor-sharp horns demand that
+you handle it with care. Boil the horns
+alongside monster parts to concoct an elixir
+that will raise your attack power.",-,-,Bladed Rhino Beetle,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,Attack Up,1,-,-,4,-,-,Navy,0,9,-,-,7pm - 7am,-,0,TRUE,TRUE,TRUE,TRUE,TRUE,-,-,0,0,0,0,0,ツルギカブト,"森に生息する昆虫の王様  大きな角は
+煮込んで薬にすると 筋肉の血流量を増やす
+効果があるといわれ 攻撃力が増す",TRUE,CookInsect,-,-,-,-,-,Animal_Insect_G,Insect,08,76,081,101
+Rugged Rhino Beetle,#REF!,"This beetle's hard body resembles armor.
+When the shell is cooked with monster parts,
+the resulting elixir boosts your defense.",-,-,Rugged Rhino Beetle,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,Defense Up,1,-,-,4,-,-,Green,0,0,-,-,7pm - 7am,-,0,TRUE,TRUE,TRUE,TRUE,TRUE,-,-,0,0,0,0,0,ヨロイカブト,"鎧のように硬い体を持つカブトムシ
+その殻の成分は 煮込んで薬にすると 
+体幹を強化する効能があり 防御力が増す",TRUE,CookInsect,-,-,-,-,-,Animal_Insect_P,Insect,08,73,082,102
+Sunset Firefly,#REF!,"This firefly glows gently in the dark. When
+cooked with monster parts, the compound
+that causes it to glow results in an elixir that
+will allow you to move more quietly.",-,-,Sunset Firefly,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,Stealth Up,1,-,-,2,-,-,Purple,0,15,-,-,9pm - 4am,-,0,TRUE,TRUE,TRUE,TRUE,TRUE,-,-,0,0,0,0,0,シズカホタル,"夜になると淡く光る昆虫 体内に持つ発光物質は
+集中力を高める効果もあるといわれ
+薬にすると物音を立てずに行動が可能になる",TRUE,CookInsect,-,-,-,-,-,Animal_Insect_E,Insect,08,69,084,103
+Deep Firefly,#REF!,"A multi-winged insect that lives in the Depths.
+It excretes luminescent elements that can be
+cooked into an elixir, which will add a faint
+glow to anyone who consumes it.",-,-,Deep Firefly,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,Glow,2,-,-,2,-,-,Brown,0,39,-,-,-,-,0,TRUE,TRUE,TRUE,TRUE,TRUE,-,-,0,0,0,0,0,ヤミホタル,"暗い深穴に生息している 連なる羽をもつ虫
+分泌する発光成分を煮詰めると 薬になり
+服用者の身体が 淡く光る効果が得られる",TRUE,CookInsect,-,-,-,-,-,Animal_Insect_AI,Insect,08,66,085,104
+Restless Cricket,#REF!,"A very energetic cricket. Cook it
+with monster parts to create a
+stamina-recovery elixir.",-,-,Restless Cricket,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,Stamina Recovery,1,-,-,2,-,-,Green,0,0,-,-,-,-,0,TRUE,TRUE,TRUE,TRUE,TRUE,-,-,0,0,0,0,0,ガンバリバッタ,"エサを求めて丸一日 跳ね続けるスタミナを持つ
+通称ガンバッタ 体内に蓄えられた滋養分は
+がんばりゲージを回復する薬の元となる",TRUE,CookInsect,-,-,-,-,-,Animal_Insect_H,Insect,08,59,080,105
+Tireless Frog,#REF!,"This rare frog prefers dark and moist places.
+When cooked with monster parts, the elixir
+it produces will temporarily increase your
+maximum stamina.",-,-,Tireless Frog,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,2,Extra Stamina,2,-,-,20,-,-,Crimson,0,0,-,-,-,-,0,TRUE,TRUE,TRUE,TRUE,TRUE,-,-,0,0,0,0,0,ガッツガエル,"暗く湿った場所を好み あまり姿を見せないカエル
+キモが持つ成分に 代謝を活発にする効能があり
+薬にすると がんばりゲージが限界を超えて増える",FALSE,CookInsect,-,-,-,-,-,Animal_Insect_B,Frog,09,,087,106
+Hot-Footed Frog,#REF!,"A quick frog that can be found
+hopping around near water. Cook it with
+monster parts to draw out its speed-boost
+effect.",-,-,Hot-Footed Frog,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,Speed Up,2,-,-,2,-,-,Green,10,30,-,-,-,-,0,TRUE,TRUE,TRUE,TRUE,TRUE,-,-,0,0,0,0,0,ゴーゴーガエル,"水辺を素早く跳ね回るカエル
+その肉には俊敏性を増す物質が含まれており
+魔物の素材と煮込むと 移動速度を上げる薬になる",TRUE,CookInsect,-,-,-,-,-,Animal_Insect_A,Frog,09,49,086,107
+Sticky Frog,#REF!,"This frog likes to cling to walls and hang out.
+It oozes a substance that climbers can use
+to cling to wet surfaces.",-,-,Sticky Frog,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,Slip Resistance,2,-,-,10,-,-,Blue,0,30,-,-,-,-,0,TRUE,TRUE,TRUE,TRUE,TRUE,-,-,0,0,0,0,0,ハリツキガエル,"壁にくっついて じっとしているカエル
+分泌する成分は 滑り止めの代わりに使え
+濡れた壁面を登りやすくなる薬が作れる",TRUE,CookInsect,-,-,-,-,-,Animal_Insect_AG,Frog,09,46,088,108
+Hearty Lizard,#REF!,"This rare lizard lives deep in the forests. It
+feeds on high-nutrient foods, giving it great
+vitality. When used to make elixirs, they
+temporarily increase your maximum hearts.",-,-,Hearty Lizard,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,4,Extra Hearts,16,-,-,20,-,-,Blue,0,5,-,-,-,-,0,TRUE,TRUE,TRUE,TRUE,TRUE,-,-,0,0,0,0,0,マックストカゲ,"主に深い森に住む 希少なトカゲ
+栄養価の高い餌を食べ 生命力が非常に強い 
+薬の材料にすると ハートの最大値が大きく上がる",FALSE,CookInsect,-,-,-,-,-,Animal_Insect_M,Lizard,10,,090,109
+Hightail Lizard,#REF!,"A lizard found throughout Hyrule. It's a bit
+slow to react at times, but if given a chance
+to escape, it will dart off quickly. Cook it with
+monster parts for a speed-boosting elixir.",-,-,Hightail Lizard,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,Speed Up,1,-,-,2,-,-,Brown,0,21,-,-,-,-,0,TRUE,TRUE,TRUE,TRUE,TRUE,-,-,0,0,0,0,0,ゴーゴートカゲ,"草地や森で見かけられる とても素早く走るトカゲ
+その肉には 脚の筋力増強効果があるといわれ
+魔物素材と煮込めば 移動速度を上げる薬になる",TRUE,CookInsect,-,-,-,-,-,Animal_Insect_S,Lizard,10,39,089,110
+Fireproof Lizard,#REF!,"This rare lizard can only be found in the
+Eldin region. Its scales have heat-resistant
+properties, so when cooked with monster
+parts, it produces a fire-resistance elixir.",-,-,Fireproof Lizard,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,Flame Guard,1,-,-,5,-,-,Gray,0,15,-,-,-,-,0,TRUE,TRUE,TRUE,TRUE,TRUE,-,-,0,0,0,0,0,ヒケシトカゲ,"オルディン地方にだけ生息する 特殊なトカゲ
+鱗には耐火成分がたっぷり含まれており
+魔物の素材と煮込むと 炎に耐えられる薬となる",TRUE,CookInsect,-,-,-,-,-,Animal_Insect_X,Lizard,10,36,091,111
+Sticky Lizard,#REF!,"The suction of its toes allows this lizard to
+easily cling to walls. It could be an asset
+for a climber on wet surfaces if it were mixed
+into an elixir.",-,-,Sticky Lizard,-,FALSE,FALSE,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,Slip Resistance,1,-,-,8,-,-,White,0,24,-,-,-,-,0,TRUE,TRUE,TRUE,TRUE,TRUE,-,-,0,0,0,0,0,ハリツキトカゲ,"吸盤状の手足で どんな壁でも登っていくトカゲ
+煮詰めて吸着する成分を 凝縮する事で
+滑る壁面を登りやすくなる薬が作れる",TRUE,CookInsect,-,-,-,-,-,Animal_Insect_AH,Lizard,10,33,092,112
+Diamond,#REF!,"The most precious ore one can find. Its
+signature sparkle has charmed Hyruleans for
+generations. As such, it has sold for a very
+high price since ancient times.",-,-,Diamond,-,TRUE,FALSE,25,26,19,25,25,-,-,-,-,-,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,-,-,500,2000,-,White,13,27,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ダイヤモンド,"鉱脈から採れる鉱石の中では もっとも貴重
+美しい輝きは 古来より人々の心を捉え
+大変な高値で取引されてきた",FALSE,CookOre,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldBashAnmChange]",Item_Ore_A,Ore,11,,-,113
+Ruby,#REF!,"A precious red ore mined from large ore
+deposits. Rubies contain the power of fire and
+have fetched a high price since ancient times.",-,-,Ruby,Fire,TRUE,FALSE,1,1,1,1,-,80,6,12,Rod,Fire Burst,Warm,-,TRUE,FALSE,FALSE,FALSE,TRUE,10,-,-,-,-,-,110,440,-,Red,0,121,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ルビー,"鉱脈から採れる貴重な鉱石
+紅玉とも呼ばれ 炎の力を秘めると言われる
+古来よりかなり高値で取引されてきた",FALSE,CookOre,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,Rod,Warm,ChemicalExplosionFire]",Item_Ore_B,Ore,11,,-,114
+Sapphire,#REF!,"A precious blue ore mined from natural rock
+formations. Sapphires contain the very
+essence of ice. They've been known to
+fetch a high price since ancient times.",-,-,Sapphire,Ice,TRUE,FALSE,1,1,1,1,-,80,4,8,Rod,Ice Burst,Cold,-,TRUE,FALSE,FALSE,FALSE,TRUE,10,-,-,-,-,-,150,600,-,Blue,0,121,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,サファイア,"鉱脈から採れる貴重な鉱石
+青玉とも呼ばれ 氷の力を秘めると言われる
+古来よりかなり高値で取引されてきた",FALSE,CookOre,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,Rod,Cold,ChemicalExplosionIce,ChemicalExplosionIce]",Item_Ore_C,Ore,11,,-,115
+Topaz,#REF!,"This precious yellow ore contains the power
+of electricity. It's been known to fetch a
+high price since ancient times.",-,-,Topaz,Electric,TRUE,FALSE,1,1,1,1,-,80,5,10,Rod,Electric Burst,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,10,-,-,-,-,-,80,320,-,Yellow,0,121,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,トパーズ,"鉱脈から採れる貴重な鉱石
+黄玉とも呼ばれ 電気の力を秘めると言われる
+古来より高値で取引されてきた",FALSE,CookOre,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,Rod,ChemicalExplosionElectric]",Item_Ore_D,Ore,11,,-,116
+Opal,#REF!,"A valuable ore that gives off a mesmerizing
+iridescence similar to the inside of a seashell.
+It contains the power of water.",-,-,Opal,Water,TRUE,FALSE,1,1,1,1,-,10,3,6,Rod,Water Burst,Water Attack,-,TRUE,FALSE,FALSE,FALSE,TRUE,10,-,-,-,-,-,30,120,-,Light Yellow,0,376,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,オパール,"鉱脈から採れる鉱石の一つ
+貝殻のように複雑で美しい光を放つ石で
+水の力を宿すと言われる",FALSE,CookOre,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,Rod,ChemicalExplosionWater,WaterDamageUpElement]",Item_Ore_E,Ore,11,,-,117
+Amber,#REF!,"A fossilized resin with a caramelesque sheen
+to it. It's been valued as a component in
+decorations and crafting since ancient times.",-,-,Amber,-,TRUE,FALSE,4,4,4,4,4,-,-,-,-,-,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,-,-,10,40,-,Orange,10,665,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,コハク,"鉱脈などで採れる樹脂の化石
+美しいあめ色に輝き 古くから
+装飾品や工芸品にも使われてきた",FALSE,CookOre,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldBashAnmChange]",Item_Ore_F,Ore,11,,-,118
+Luminous Stone,#REF!,"This mysterious mineral gives off a pale blue
+glow in the dark, which some believe to be
+souls of the dead. Apparently, this stone can
+be used as a base to make special clothing.",-,-,Luminous Stone,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,10,-,-,-,-,-,20,80,-,Navy,0,450,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,夜光石,"夜になると 青白く光り出す不思議な鉱石
+死者の魂の灯火とも言われる
+この石を原料にした特殊な服もあるという",FALSE,CookOre,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning]",Item_Ore_G,Ore,11,,-,119
+Flint,#REF!,"Strike it with a metallic weapon to generate
+a spark. This fire starter breaks after one use,
+but it can create a long-lasting flame if you
+strike it near firewood.",-,-,Flint,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,10,-,-,-,-,-,5,20,-,Black,40,367,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,火打ち石,"金属などの硬い武器で叩くと火花が出る火種
+薪の束を近くに置いておくとたき火を起こせる
+一回で壊れてしまうが冒険にはとても役立つ",FALSE,CookOre,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning]",Item_Ore_I,Ore,11,,-,120
+Bokoblin Guts,#REF!,"A rare material obtained by defeating a
+Bokoblin. It convulses on its own every now
+and then, which is really creepy, but perhaps
+it has a use.",-,-,-,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,-,-,-,02:40,30%,20,80,-,Purple,0,45,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ボコブリンの肝,"ボコブリンを倒して手に入れたとても貴重な素材
+ちょっと動いていて気持ち悪い…
+何か使い道があるかもしれない",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning]",Item_Enemy_02,EnemyGuts,12,,-,121
+Moblin Guts,#REF!,"This prized ingredient can be obtained from
+Moblins. Its odor is too pungent for normal
+food preparation, but stew it with some
+critters to make elixirs.",-,-,-,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,-,-,-,02:40,30%,25,100,-,Light Blue,0,15,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,モリブリンの肝,"モリブリンから手に入る とても貴重な素材
+料理の材料としては 臭みが強すぎて使い物に
+ならないが 虫と一緒に煮込めば薬になる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning]",Item_Enemy_08,EnemyGuts,12,,-,122
+Horriblin Guts,#REF!,"Rare material dropped by a Horriblin. It's very
+bitter and unsuitable for cooking, but it makes
+an effective elixir when cooked with a critter.",-,-,-,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,-,-,-,02:40,30%,25,100,-,Light Yellow,0,39,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ホラブリンの肝,"ホラブリンから獲れる珍しい素材
+苦みが強すぎて料理に使うのは難しいが
+虫と一緒に煮込む事で効果の高い薬が作れる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning]",Item_Enemy_105,EnemyGuts,12,,-,123
+Gibdo Guts,#REF!,"The dried guts of a defeated Gibdo. It's said
+they're effective, vitality-rich ingredients that
+are useful in elixirs.",-,-,Gibdo Guts,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,-,-,-,01:20,100%,2,8,-,Purple,0,5,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ギブドの肝,"ギブドを倒すと時々落とす乾燥した肝
+生命力に満ちた 滋養成分が凝縮されていて
+非常に効果の高い薬が作れるとされている",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning]",Item_Enemy_121,EnemyGuts,12,,-,124
+Boss Bokoblin Guts,#REF!,"A rare material dropped by a Boss Bokoblin.
+It moves constantly and looks grotesque.
+Toss into a stew with some critters to create
+elixirs.",-,-,-,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,-,-,-,02:40,30%,60,240,-,Blue,0,9,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ボスボコブリンの肝,"ボスボコブリンから手に入れた 貴重な素材
+絶えず動いていて気味が悪い
+虫と煮込めば 良い薬の材料になる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning]",Item_Enemy_136,EnemyGuts,12,,-,125
+Lynel Guts,#REF!,"This highly sought-after ingredient can only
+be obtained from a Lynel. It pulses with the
+vitality of a Lynel, a strength that makes it
+invaluable as an ingredient for elixirs.",-,-,-,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,-,-,-,02:40,30%,200,800,-,Crimson,0,30,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ライネルの肝,"ライネルから獲る事ができる 貴重な素材
+脈打つように動いており ライネルの生命力の
+強さが伺える 薬の材料として価値が高い",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning]",Item_Enemy_14,EnemyGuts,12,,-,126
+Gleeok Guts,#REF!,"A rare and precious, albeit creepy, material
+that pulses even after its former owner has
+been vanquished. Cook it with a critter to
+make a powerful elixir.",-,-,-,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,-,-,-,02:40,30%,200,800,-,Black,1,18,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,グリオークの肝,"めったに見る事のできない とても貴重な素材
+常に力強く動き続けていて とても不気味
+虫と煮込んで作る薬は効果が大きく 重宝される",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning]",Item_Enemy_157,EnemyGuts,12,,-,127
+Frox Guts,#REF!,"Frox guts, still pulsing—possibly a vain
+attempt to circulate fluids through its former
+owner's large body. Cook it with a critter to
+make a powerful elixir.",-,-,-,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,-,-,-,02:40,30%,40,160,-,Yellow,0,18,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,デグガーマの肝,"デグガーマから獲れた脈打つ肝
+巨体に血流を送るためか 鼓動が力強い
+煎じて虫と煮込むと効果の高い薬が作れる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning]",Item_Enemy_190,EnemyGuts,12,,-,128
+Molduga Guts,#REF!,"A giant organ obtained from a Molduga. This
+invaluable ingredient is hard to come by,
+and its use is shrouded in mystery.",-,-,-,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,-,-,-,02:40,30%,110,440,-,Green,0,23,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,モルドラジークの肝,"モルドラジークから獲る事ができる 巨大な肝
+めったに手に入らない貴重な素材で
+薬の材料にできるが 他の使い道があると噂される",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning]",Item_Enemy_25,EnemyGuts,12,,-,129
+Hinox Guts,#REF!,"A giant, smelly Hinox organ of unknown
+function. Upon close inspection, it appears to
+be quivering. It can be used to make an
+elixir, but some say it has other uses as well.",-,-,-,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,-,-,-,02:40,30%,80,320,-,Yellow,0,33,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ヒノックスの肝,"ヒノックスから獲る事が出来る 大きな肝
+よく見ると 時々ゆっくり動いている
+薬の材料にできるが 他の使い道があると噂される",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning]",Item_Enemy_34,EnemyGuts,12,,-,130
+Red Chuchu Jelly,#REF!,"A jiggly substance that normally comes from
+a Fire Chuchu. It consistently gives off heat.
+If struck, it will explode in a ball of flame.",-,-,Red Chuchu Jelly,Fire,TRUE,TRUE,1,1,1,1,1,10,-,-,Fire Burst,Reusable On Forest Dweller Weapons,-,-,FALSE,FALSE,FALSE,TRUE,TRUE,1,-,-,-,01:20,10%,4,16,-,Red,0,24,-,-,-,-,0,FALSE,FALSE,TRUE,TRUE,FALSE,00:01.333,00:02,0,0,0,0,0,赤チュチュゼリー,"ファイアチュチュにそっくりな
+ぷるぷるした固まり  常に熱を発生していて
+叩くと破裂して炎を発生する",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldSurfingNoStaggerWithDeath,ChemicalExplosionFire,ReuseSeed]",Item_Enemy_15,Enemy,13,1499,258,131
+White Chuchu Jelly,#REF!,"A jiggly substance that came from an Ice
+Chuchu. It's cool to the touch, and squeezing
+it seems to relieve stress. If struck, it will
+explode in a cold mist.",-,-,White Chuchu Jelly,Ice,TRUE,TRUE,1,1,1,1,1,10,-,-,Ice Burst,Reusable On Forest Dweller Weapons,-,-,FALSE,FALSE,FALSE,TRUE,TRUE,1,-,-,-,01:20,10%,4,16,-,White,0,24,-,-,-,-,0,TRUE,TRUE,FALSE,TRUE,FALSE,00:01.333,00:02,0,0,0,0,0,白チュチュゼリー,"アイスチュチュにそっくりな ぷるぷるした固まり
+持ってみると ひんやりしてちょっと気持ちいい
+叩くと破裂して冷気をまき散らす",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldSurfingNoStaggerWithDeath,ChemicalExplosionIce,ReuseSeed]",Item_Enemy_17,Enemy,13,1476,259,132
+Yellow Chuchu Jelly,#REF!,"A jiggly substance that came from an
+Electric Chuchu. Electricity pulses through
+its gelatinous mass. If struck, it will explode
+in a burst of electric current.",-,-,Yellow Chuchu Jelly,Electric,TRUE,TRUE,1,1,1,1,1,10,-,-,Electric Burst,Reusable On Forest Dweller Weapons,-,-,FALSE,FALSE,FALSE,TRUE,TRUE,1,-,-,-,01:20,10%,4,16,-,Yellow,0,33,-,-,-,-,0,TRUE,TRUE,TRUE,TRUE,FALSE,00:01.333,00:02,0,0,0,0,0,黄チュチュゼリー,"エレキチュチュにそっくりな ぷるぷるした固まり
+しびれるほどではないが常にビリビリしている
+叩くと破裂して周りに電気を発生させる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldSurfingNoStaggerWithDeath,ChemicalExplosionElectric,ReuseSeed]",Item_Enemy_16,Enemy,13,1453,260,133
+Chuchu Jelly,#REF!,"A gelatinous substance that came from a
+Chuchu. It's unusable in this state, but
+applying a bit of elemental stimulation will
+change its form.",-,-,Chuchu Jelly,Water,TRUE,TRUE,1,1,1,1,1,0,-,-,Water Burst,Water Attack,Reusable On Forest Dweller Weapons,-,FALSE,FALSE,FALSE,TRUE,TRUE,1,-,-,-,00:40,-,2,8,-,Light Blue,0,15,-,-,-,-,0,TRUE,TRUE,TRUE,TRUE,FALSE,00:01.333,00:02,0,0,0,0,0,チュチュゼリー,"チュチュとそっくりなぷるぷるした固まり
+とても不安定な状態で
+何か刺激を与えると変化するらしい",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldSurfingNoStaggerWithDeath,ChemicalExplosionWater,WaterDamageUpElement,ReuseSeed]",Item_Enemy_40,Enemy,13,1431,257,134
+Octo Balloon,#REF!,"This inflatable Octorok organ has a lot of lift,
+so attach it to items you want to see float.
+An arrow can serve as a good way to stick
+one to a distant object.",-,-,Octo Balloon,-,TRUE,TRUE,1,1,1,1,-,-,-,-,Balloon,Bouncy,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,1,-,-,-,00:40,-,5,20,-,Purple,0,5,-,-,-,-,1,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,オクタ風船,"オクタ族の浮き袋  強い浮力を持つため
+この風船をくっ付けた物は 宙に浮き上がる
+矢に付けて飛ばせば 狙ったところに付けやすい",FALSE,CookEnemy,-,-,-,-,"[Blunt,BalloonFloat,ShieldSurfingslipperinessDown,TorchNoBurning,PowHammer,ShieldSurfingNoStaggerWithDeath]",Item_Enemy_57,Enemy,13,1414,-,135
+Keese Eyeball,#REF!,"These mysterious orbs scan their
+surroundings. Take advantage of their glaring
+awareness, and attach one to an arrow to
+grant a homing quality to the arrow.",-,-,-,-,TRUE,FALSE,1,1,1,1,-,-,-,-,Homing,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,-,-,-,01:20,10%,2,8,-,Orange,0,30,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,キースの目玉,"ギョロギョロと辺りを見渡す 不気味な素材
+矢に付けると 常に相手を見据える その瞳の力で
+狙った対象を追尾していく能力を与える",FALSE,CookEnemy,-,-,-,-,"[Blunt,Homing,ShieldSurfingslipperinessDown]",Item_Enemy_19,Enemy,13,1410,261,136
+Fire Keese Eyeball,#REF!,"Fire Keese eyeballs are imbued with heat and
+are useful in making elixirs. Attach one to an
+arrow to grant a homing quality to the arrow.",-,-,Fire Keese Eyeball,Fire,TRUE,FALSE,8,8,7,8,8,20,-,-,Homing,Fire Attack,Fire Burst,Warm,FALSE,FALSE,FALSE,TRUE,FALSE,5,-,-,-,01:20,10%,6,24,-,Red,0,0,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ファイアキースの目玉,"ファイアキースの熱気を帯びた目玉
+薬の材料として重宝するほか 矢に付ける事で
+命中率を上げる効能も得られる",FALSE,CookEnemy,-,-,-,-,"[Blunt,Homing,ShieldSurfingslipperinessDown,Homing,ChemicalAttackFire,ChemicalExplosionFire,ShieldBash,Warm]",Item_Enemy_117,Enemy,13,1409,262,137
+Ice Keese Eyeball,#REF!,"Ice Keese eyeballs are imbued with freezing
+power and are useful in making elixirs.
+Attach one to an arrow to grant a homing
+quality to the arrow.",-,-,-,Ice,TRUE,FALSE,4,4,4,4,4,20,-,-,Homing,Ice Attack,Ice Burst,Cold,FALSE,FALSE,FALSE,TRUE,FALSE,5,-,-,-,01:20,10%,6,24,-,Light Blue,0,0,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,アイスキースの目玉,"アイスキースの凍てつく目玉 一般的には
+薬の材料として使われているが 矢に付けると
+相手に命中しやすくなる効果が得られる",FALSE,CookEnemy,-,-,-,-,"[Blunt,Homing,ShieldSurfingslipperinessDown,Homing,ChemicalAttackIce,ChemicalExplosionIce,ShieldBash,Cold]",Item_Enemy_119,Enemy,13,1408,263,138
+Electric Keese Eyeball,#REF!,"Electric Keese eyeballs are imbued with
+electric power and are useful in making
+elixirs. Attach one to an arrow to grant a
+homing quality to the arrow.",-,-,-,Electric,TRUE,FALSE,6,6,5,6,6,20,-,-,Homing,Electric Attack,Electric Burst,-,FALSE,FALSE,FALSE,TRUE,FALSE,5,-,-,-,01:20,10%,6,24,-,Yellow,0,0,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,エレキースの目玉,"エレキースの電気を蓄えた目玉
+薬の材料に使えるのはもちろんの事
+矢に付ければ 目標に自分から向かう矢となる",FALSE,CookEnemy,-,-,-,-,"[Blunt,Homing,Homing,ShieldSurfingslipperinessDown,ChemicalAttackElectric,ChemicalExplosionElectric,ShieldBash]",Item_Enemy_118,Enemy,13,1407,264,139
+Octorok Eyeball,#REF!,"This can only be obtained from an Octorok-
+type enemy. Its nature is to focus on
+a moving object. Attach one to an arrow to
+grant a homing quality to the arrow.",-,-,Octorok Eyeball,-,TRUE,FALSE,3,3,3,3,-,-,-,-,Homing,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,-,-,-,01:20,10%,4,16,-,Yellow,0,6,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,オクタの目玉,"オクタ族から獲る事ができる素材
+動くものの方向を向く性質があり 矢に付けて
+命中率を上げるために使う事ができる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,Homing]",Item_Enemy_21,Enemy,13,1406,-,140
+Aerocuda Eyeball,#REF!,"This eyeball is constantly trying to focus on its
+targets. Cook it with a critter to make an
+elixir, or attach it to an arrow to grant a
+homing quality to the arrow.",-,-,Aerocuda Eyeball,-,TRUE,FALSE,4,4,4,4,-,-,-,-,Homing,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,-,-,-,01:20,10%,4,16,-,Orange,0,42,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,カックーダの目玉,"動くものを常に視界の中心にとらえる目玉
+虫と煮込むと 薬の材料として使えるほか
+矢に付けて命中率を上げる効果も得られる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,Homing]",Item_Enemy_66,Enemy,13,1405,269,141
+Keese Wing,#REF!,"An aerodynamic material dropped by a
+defeated Keese. Arrows and thrown weapons
+fly farther with this item attached.",-,-,Keese Wing,-,TRUE,FALSE,1,1,1,1,-,-,-,-,Long Throw,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,-,-,-,00:40,-,3,12,-,Gray,0,33,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,キースの羽,"キースを倒して手に入れた素材
+効率的に風を受けられる構造になっていて
+武器や矢につけると 遠くまで飛ばす事ができる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,LongThrow]",Item_Enemy_18,Enemy,13,1393,-,142
+Fire Keese Wing,#REF!,"A rare Fire Keese wing. It's not usually on fire,
+but it does produce a powerful blaze when
+stimulated.",-,-,Fire Keese Wing,Fire,TRUE,FALSE,2,2,2,2,2,20,-,-,Long Throw,Fire Attack,Fire Burst,Warm,FALSE,FALSE,FALSE,TRUE,FALSE,5,-,-,-,00:40,-,8,32,-,Red,0,45,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ファイアキースの羽,"珍しいファイアキースの羽
+普段は燃えていないが
+刺激を与える事で 強い熱を放つ",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,LongThrow,ChemicalAttackFire,ChemicalExplosionFire,ShieldBash,Warm]",Item_Enemy_44,Enemy,13,1392,-,143
+Ice Keese Wing,#REF!,"A rare Ice Keese wing. Don't let its pretty,
+frozen surface fool you. It blasts out a
+dangerous, freezing frost when stimulated.",-,-,-,Ice,TRUE,FALSE,2,2,2,2,2,20,-,-,Long Throw,Ice Attack,Ice Burst,Cold,FALSE,FALSE,FALSE,TRUE,FALSE,5,-,-,-,00:40,-,8,32,-,Blue,0,39,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,アイスキースの羽,"珍しいアイスキースの羽
+表面は凍りついたように キラキラと輝いている
+刺激を受けると 周りに冷気を振りまく",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,LongThrow,ChemicalAttackIce,ChemicalExplosionIce,ShieldBash,Cold]",Item_Enemy_46,Enemy,13,1391,-,144
+Electric Keese Wing,#REF!,"A rare Electric Keese wing. It's electrically
+charged and will shock everything around it
+when stimulated.",-,-,-,Electric,TRUE,FALSE,2,2,2,2,2,20,-,-,Long Throw,Electric Attack,Electric Burst,-,FALSE,FALSE,FALSE,TRUE,FALSE,5,-,-,-,00:40,-,8,32,-,Yellow,0,15,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,エレキースの羽,"珍しいエレキースの羽 発電器官は無いが
+電気を溜め込んでいて 刺激を与えると放出し
+周りのものをシビレさせる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,LongThrow,ChemicalAttackElectric,ChemicalExplosionElectric,ShieldBash]",Item_Enemy_45,Enemy,13,1390,-,145
+Aerocuda Wing,#REF!,"A large, wide Aerocuda wing. Arrows and
+thrown weapons fly farther with this item
+attached, even in a slight wind.",-,-,Aerocuda Wing,-,TRUE,FALSE,4,4,4,4,-,-,-,-,Long Throw,-,-,-,FALSE,FALSE,FALSE,FALSE,TRUE,5,-,-,-,00:40,-,6,24,-,Yellow,0,48,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,カックーダの羽,"カックーダが落とした大きな羽
+軽量で幅が広く 武器や矢につければ
+ほんのわずかな風で遠くまで飛ばす事ができる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,LongThrow]",Item_Enemy_124,Enemy,13,1389,-,146
+Gibdo Wing,#REF!,"A wing that catches the light. Arrows and
+thrown weapons fly farther with this item
+attached. Cook it with a critter to make an
+elixir.",-,-,Gibdo Wing,-,TRUE,FALSE,8,8,7,8,-,-,-,-,Long Throw,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,-,-,-,00:40,-,6,24,-,Navy,0,24,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ギブドの羽,"光の加減で不気味に輝く羽 武器や矢に付けると
+風を受けて遠くに飛ばせるようにできる
+また 虫と煮込んで 薬の材料にもなる",FALSE,CookEnemy,-,-,-,-,"[Blunt,LongThrow,ShieldSurfingslipperinessDown]",Item_Enemy_123,Enemy,13,1388,-,147
+Gleeok Wing,#REF!,"This aerodynamic wing segment from a
+Gleeok is thin and light but extremely sturdy.
+Arrows and thrown weapons fly farther with
+this item attached.",-,-,Gleeok Wing,-,TRUE,FALSE,24,25,19,24,-,-,-,-,Long Throw,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,-,-,-,00:40,-,38,152,-,Green,0,36,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,グリオークの羽,"グリオークが飛行する際に使う 整流効果のある羽
+薄く軽いが非常に丈夫で これを付けた武器や矢は
+風に乗せて遠くまで飛ばす事ができる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,LongThrow]",Item_Enemy_156,Enemy,13,1387,-,148
+Molduga Fin,#REF!,"A sturdy, wing-like dorsal fin with a thick
+membrane that regulates wind resistance.
+Arrows and thrown weapons fly farther with
+this item attached. It also works well in elixirs.",-,-,-,-,TRUE,FALSE,12,12,10,12,-,-,-,-,Long Throw,-,-,-,FALSE,FALSE,FALSE,FALSE,TRUE,10,-,-,-,01:20,10%,30,120,-,Brown,0,5,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,モルドラジークの背びれ,"翼のような膜をもつ丈夫な背びれ 風の流れを
+整える働きがあり 武器や矢に付けると遠くに
+飛ばす事ができる また 薬の材料にもなる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,LongThrow]",Item_Enemy_24,Enemy,13,1386,-,149
+Bokoblin Horn,#REF!,"A sharp horn with multiple barbs. Attach it to
+a weapon to increase its attack power, or
+cook it with a critter to make an elixir.",-,-,Bokoblin Horn,-,TRUE,FALSE,4,4,4,4,4,-,-,-,-,-,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,00:40,-,3,12,-,Light Yellow,0,15,Blue Bokoblin Horn,1200,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ボコブリンの角,"鋭利な突起が複数ある角 
+武器に付けると攻撃力が上がる
+また 虫と煮込んで薬の材料にもできる",FALSE,CookEnemy,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldBashAnmChange]",Item_Enemy_77,EnemyBlade,14,600,271,150
+Blue Bokoblin Horn,#REF!,"A two-pronged horn with sharp edges and
+tips. Attach it to a weapon to moderately
+increase its attack power, or brew it into an
+elixir.",-,-,Blue Bokoblin Horn,-,TRUE,FALSE,7,7,6,7,7,-,-,-,-,-,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,00:40,-,5,20,-,Gray,0,15,Black Bokoblin Horn,1733,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,青ボコブリンの角,"外側が鋭利な二又の角 武器に付けると 
+二つの先端を同時に突き刺す形となるため
+攻撃力がそこそこ上がる また 薬の材料にもなる",FALSE,CookEnemy,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldBashAnmChange]",Item_Enemy_78,EnemyBlade,14,595,272,151
+Black Bokoblin Horn,#REF!,"A vicious, three-pronged horn. Attach it to a
+weapon to greatly increase its attack power,
+or cook it with a critter to make an elixir.",-,-,Black Bokoblin Horn,-,TRUE,FALSE,17,17,13,17,17,-,-,-,-,-,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,00:40,-,9,36,-,Yellow,0,15,Silver Bokoblin Horn,3200,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,黒ボコブリンの角,"先端が三又状になった角 武器に付けて振るうと
+複数の刃で斬る形になり 攻撃力がかなり上がる 
+また 煎じて虫と煮込む事で 薬の材料にもなる",FALSE,CookEnemy,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldBashAnmChange]",Item_Enemy_79,EnemyBlade,14,590,273,152
+Silver Bokoblin Horn,#REF!,"A large, blade-like horn with a unique flourish
+on the tip. It's sharper than it looks. Attach it
+to a weapon to vastly increase attack power,
+or cook it with a critter to make an elixir.",-,-,-,-,TRUE,FALSE,31,32,24,31,31,-,-,-,-,-,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,00:40,-,25,100,-,Light Yellow,0,24,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,白銀ボコブリンの角,"先端にユニークな装飾が付いた 大きな刃物状の角
+見た目と裏腹に鋭く 武器に付けると攻撃力が
+すごく上がる 虫と煮込めば薬の材料にもなる",FALSE,CookEnemy,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldBashAnmChange]",Item_Enemy_80,EnemyBlade,14,585,274,153
+Boss Bokoblin Horn,#REF!,"The band on this sword-shaped horn shows
+that it belonged to a leader. Attach it to a
+weapon to increase its attack power, or cook
+it with a critter to make an elixir.",-,-,-,-,TRUE,FALSE,10,10,8,10,10,-,-,-,-,-,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,00:40,-,14,52,-,Light Yellow,0,9,Blue Boss Bokoblin Horn,2000,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ボスボコブリンの角,"群れのリーダーの証である帯が巻かれた 剣状の角
+武器に付けて攻撃力を上げる事ができるほか
+虫と煮込んで 薬の材料にする事もできる",FALSE,CookEnemy,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldBashAnmChange]",Item_Enemy_64,EnemyBlade,14,580,275,154
+Blue Boss Bokoblin Horn,#REF!,"An axe-shaped horn with a band to identify it
+as belonging to a leader. Attach it to a
+weapon to moderately increase attack power,
+or cook it with a critter to make an elixir.",-,-,-,-,TRUE,FALSE,16,16,13,16,16,-,-,-,Make Anything Cut,-,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,00:40,-,26,104,-,Gray,0,9,Black Boss Bokoblin Horn,2933,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,青ボスボコブリンの角,"リーダーを示す帯が巻かれた 斧状の角
+武器に付けると攻撃力がそこそこ上がる
+また 虫と煮込めば薬を作る事もできる",FALSE,CookEnemy,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldBashAnmChange,TreeCutter]",Item_Enemy_132,EnemyBlade,14,575,276,155
+Black Boss Bokoblin Horn,#REF!,"A double-edged, axe-shaped horn with two
+leader bands. Attach it to a weapon to greatly
+increase attack power, or cook it with a
+critter to make an elixir.",-,-,-,-,TRUE,FALSE,27,28,21,27,27,-,-,-,Make Anything Cut,-,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,00:40,-,36,144,-,Yellow,0,9,Silver Boss Bokoblin Horn,4533,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,黒ボスボコブリンの角,"リーダーの証の帯を2本もつ 両刃の斧状の角 
+武器に付ければ攻撃力がかなり上がる
+また 虫と煮込んで薬の材料にする事もできる",FALSE,CookEnemy,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldBashAnmChange,TreeCutter]",Item_Enemy_133,EnemyBlade,14,570,277,156
+Silver Boss Bokoblin Horn,#REF!,"A circular, serrated horn. The neatly tied strap
+contains arcane power. Attach it to a weapon
+to vastly increase attack power, or cook it
+with a critter to make an elixir.",-,-,-,-,TRUE,FALSE,37,38,28,37,37,-,-,-,Make Anything Cut,-,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,00:40,-,44,176,-,Gray,0,9,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,白銀ボスボコブリンの角,"側面が鋭利な環状の角 丁寧に結ばれた帯は
+魔力が宿っており 武器に付けると攻撃力が　
+すごく上がる  虫と煮込めば薬の材料にもなる",FALSE,CookEnemy,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldBashAnmChange,TreeCutter]",Item_Enemy_134,EnemyBlade,14,565,278,157
+Lizalfos Horn,#REF!,"A thin, sharp, knife-like horn. Attach it to a
+weapon to increase its attack power, or cook
+it with a critter to brew an elixir.",-,-,Lizalfos Horn,-,TRUE,FALSE,8,8,7,8,8,-,-,-,-,-,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,00:40,-,8,32,-,Light Yellow,0,9,Blue Lizalfos Horn,1733,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,リザルフォスの角,"薄く研ぎ澄まされたナイフ状の角
+武器に付けると攻撃力を上げる事ができる
+また 虫と煮込めば 薬の材料にもなる",FALSE,CookEnemy,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldBashAnmChange]",Item_Enemy_106,EnemyBlade,14,560,283,158
+Blue Lizalfos Horn,#REF!,"A very long, sword-like horn. Attach it to a
+weapon to moderately increase its attack
+power, or cook it with a critter to brew an
+elixir.",-,-,Blue Lizalfos Horn,-,TRUE,FALSE,16,16,13,16,16,-,-,-,-,-,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,00:40,-,10,40,-,Gray,0,15,Black Lizalfos Horn,2933,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,青リザルフォスの角,"天を突くように長く伸びた刀状の角
+武器に付けると攻撃力がそこそこ上がる
+また 虫と煮込んで 薬の材料にする事もできる",FALSE,CookEnemy,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldBashAnmChange]",Item_Enemy_107,EnemyBlade,14,555,284,159
+Black Lizalfos Horn,#REF!,"A blade-like, serrated horn. Attach it to a
+weapon to greatly increase its attack power,
+or cook it with a critter to brew an elixir.",-,-,-,-,TRUE,FALSE,26,27,20,26,26,-,-,-,-,-,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,00:40,-,15,60,-,Yellow,0,15,Silver Lizalfos Horn,4400,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,黒リザルフォスの角,"複数の切れ込みが入った刃物状の角
+武器に付けると攻撃力がかなり上がる
+また 薬の材料として使う事もできる",FALSE,CookEnemy,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldBashAnmChange]",Item_Enemy_108,EnemyBlade,14,550,285,160
+Silver Lizalfos Horn,#REF!,"A sickle-shaped horn that looks like it could
+slice anything it touches. Attach it to a
+weapon to vastly increase its attack power, or
+cook it with a critter to make an elixir.",-,-,-,-,TRUE,FALSE,34,35,26,34,34,-,-,-,-,-,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,00:40,-,30,120,-,Crimson,0,9,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,白銀リザルフォスの角,"触れるだけで何でも切り裂けそうな鎌状の角
+武器に付けると 攻撃力がすごく上がる
+また 虫と煮込む事で 薬の材料にもなる",FALSE,CookEnemy,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldBashAnmChange]",Item_Enemy_109,EnemyBlade,14,545,289,161
+Fire-Breath Lizalfos Horn,#REF!,"A horn that glows red with the power of fire.
+Cook it with a critter to make an elixir. The
+right combination could draw out the blazing
+power contained within.",-,-,Fire-Breath Lizalfos Horn,Fire,TRUE,FALSE,15,15,12,15,15,20,-,-,Fire Attack,Fire Burst,Warm,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,00:40,-,15,60,-,Red,0,30,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,火吹きリザルフォスの角,"炎の力を蓄え 赤熱した角
+虫と煮込むと 薬の材料になり 工夫次第で
+蓄えた炎の力を引き出す事も可能",FALSE,CookEnemy,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ChemicalAttackFire,Warm,ShieldBash,ChemicalExplosionFire,ShieldBashAnmChange]",Item_Enemy_58,EnemyBlade,14,540,286,162
+Ice-Breath Lizalfos Horn,#REF!,"The freezing power embedded in this horn's
+crystal tip can be used to your advantage if
+you know how. Otherwise, cook it with a
+critter to make an elixir.",-,-,Ice-Breath Lizalfos Horn,Ice,TRUE,FALSE,15,15,12,15,15,20,-,-,Ice Attack,Ice Burst,Cold,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,00:40,-,15,60,-,Light Blue,0,30,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,雹吐きリザルフォスの角,"先端の結晶に凍てつく冷気の力を蓄えた角
+虫と煮込むと 薬の材料になり
+使い方次第で その冷気を利用する事もできる",FALSE,CookEnemy,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ChemicalAttackIce,Cold,ShieldBash,ChemicalExplosionIce,ShieldBashAnmChange]",Item_Enemy_59,EnemyBlade,14,535,287,163
+Electric Lizalfos Horn,#REF!,"A horn charged with as much electricity as a
+bolt of lightning. Cook it with a critter to
+make an elixir. It will discharge electricity
+when stimulated.",-,-,Electric Lizalfos Horn,Electric,TRUE,FALSE,15,15,12,15,15,20,-,-,Electric Attack,Electric Burst,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,00:40,-,15,60,-,Yellow,0,33,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,シビレリザルフォスの角,"ほとばしる稲妻に匹敵する電気を蓄積した角
+虫と煮込めば 薬の材料として使えるほか
+刺激を与えると放電する性質も利用価値がある",FALSE,CookEnemy,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ChemicalAttackElectric,ShieldBash,ChemicalExplosionElectric,ShieldBashAnmChange]",Item_Enemy_60,EnemyBlade,14,530,288,164
+Lynel Saber Horn,#REF!,"This blade-like Lynel horn is extremely sharp.
+It increases a weapon's attack power when
+attached. Cook it with a critter to make an
+elixir.",-,-,Lynel Saber Horn,-,TRUE,FALSE,22,23,17,22,22,-,-,-,-,-,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,00:40,-,40,160,-,Brown,0,6,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ライネルの刃角,"ライネルの双角の片方である刃物状の角
+非常に鋭く 武器に付けると攻撃力が上がる
+また 虫と煮込めば薬の材料にもなる",FALSE,CookEnemy,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldBashAnmChange]",Item_Enemy_148,EnemyBlade,14,525,294,165
+Blue-Maned Lynel Saber Horn,#REF!,"The sharp, blade-like horn of a Blue-Maned
+Lynel. Attach it to a weapon to moderately
+increase its attack power. Cook it with a
+critter to make an elixir.",-,-,Blue-Maned Lynel Saber Horn,-,TRUE,FALSE,33,34,25,33,33,-,-,-,-,-,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,00:40,-,70,280,-,Gray,0,9,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,青髪ライネルの刃角,"青髪のライネルの双角の片方 全体が鋭い刃物状で
+武器に付けると攻撃力がそこそこ上がる
+虫と煮込んで薬の材料にする事もできる",FALSE,CookEnemy,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldBashAnmChange]",Item_Enemy_149,EnemyBlade,14,520,296,166
+White-Maned Lynel Saber Horn,#REF!,"This blade-like horn of a White-Maned Lynel
+can slash through just about anything. Attach
+it to a weapon to greatly increase attack
+power. Cook with a critter to make an elixir.",-,-,-,-,TRUE,FALSE,44,46,34,44,44,-,-,-,-,-,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,00:40,-,90,360,-,Brown,0,9,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,白髪ライネルの刃角,"白髪のライネルの双角の片方 連なる刃物の形状が
+触れた物を切り裂き 武器に付けるとかなり
+攻撃力が上がる 虫と煮込めば薬の材料にもなる",FALSE,CookEnemy,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldBashAnmChange]",Item_Enemy_150,EnemyBlade,14,515,298,167
+Silver Lynel Saber Horn,#REF!,"This piercing horn is sharpened to a point for
+maximum poking. Attach it to a weapon to
+vastly increase its attack power. Cook it with
+a critter to make an elixir.",-,-,-,-,TRUE,FALSE,55,57,42,55,55,-,-,-,-,-,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,00:40,-,150,600,-,Black,0,9,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,白銀ライネルの刃角,"極限まで研ぎ澄まされた 長く鋭い角 斬れ味は
+申し分なく 武器に付けると攻撃力がすごく上がる
+煎じて虫と煮込めば 薬の材料としても使える",FALSE,CookEnemy,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldBashAnmChange]",Item_Enemy_151,EnemyBlade,14,510,300,168
+Soldier Construct Horn,#REF!,"A blade-like horn from a Soldier Construct.
+It's very sharp, so handle with care.",-,-,Soldier Construct Horn,-,TRUE,FALSE,3,3,3,3,3,-,-,-,Zonai,-,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,-,-,2,8,-,Green,0,15,Soldier Construct II Horn,1066,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,1,2,3,4,5,兵隊ゴーレムの角,"兵隊ゴーレムの頭部にある 刃物状の角 
+とても鋭いため 取り扱うには注意が必要だ",FALSE,CookGolem,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldBashAnmChange,Zonau]",Item_Enemy_166,EnemyBlade,14,505,302,169
+Soldier Construct II Horn,#REF!,"A sharp, hooked horn dropped from a Soldier
+Construct II. It's well suited for slicing through
+small branches and plants. Attach it to a
+weapon to moderately increase attack power.",-,-,Soldier Construct II Horn,-,TRUE,FALSE,8,8,7,8,8,-,-,-,Zonai,-,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,-,-,4,16,-,Green,0,15,Soldier Construct III Horn,1866,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,1,2,3,4,5,兵隊ゴーレムの角(中等),"兵隊ゴーレム(中等)の頭部にある ナタのような角
+小枝の伐採や 草花の刈り取りに向いた形状で
+武器に付けると 攻撃力がそこそこ上がる",FALSE,CookGolem,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldBashAnmChange,Zonau]",Item_Enemy_167,EnemyBlade,14,500,303,170
+Soldier Construct III Horn,#REF!,"A serrated horn from a Soldier Construct III.
+Attach it to a weapon to greatly increase
+attack power. It can cut through plants and
+large trees.",-,-,Soldier Construct III Horn,-,TRUE,FALSE,18,18,14,18,18,-,-,-,Zonai,-,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,-,-,10,40,-,Green,0,15,Soldier Construct IV Horn,3333,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,1,2,3,4,5,兵隊ゴーレムの角(上等),"兵隊ゴーレム(上等)の頭部にある ノコギリ状の角
+武器に付けると 攻撃力がかなり上がり
+草花だけではなく 大きな樹木の伐採にも役立つ",FALSE,CookGolem,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldBashAnmChange,Zonau]",Item_Enemy_168,EnemyBlade,14,495,304,171
+Soldier Construct IV Horn,#REF!,"A horn embedded with a sharp disk. The disk
+spins mysteriously and can slice through
+almost anything. Attach the horn to a weapon
+and vastly increase its attack power.",-,-,-,-,TRUE,FALSE,24,25,19,24,24,-,-,-,Zonai,-,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,-,-,24,96,-,Green,0,15,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,1,2,3,4,5,兵隊ゴーレムの角(特等),"鋭い刃を持つ 円盤が付いた角
+円盤部分は 不思議な力で回転し 触れた物を
+切断する 武器に付けるとすごく攻撃力が上がる",FALSE,CookGolem,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldBashAnmChange,Zonau]",Item_Enemy_169,EnemyBlade,14,490,305,172
+Captain Construct I Horn,#REF!,"This wavy, double-edged, blade-like horn is
+formidable when it comes to slashing. Attach
+it to a weapon to increase attack power.",-,-,Captain Construct I Horn,-,TRUE,FALSE,5,5,4,5,5,-,-,-,Zonai,-,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,-,-,3,12,-,Green,0,15,Captain Construct II Horn,1333,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,1,2,3,4,5,隊長ゴーレムの角,"隊長ゴーレムの頭部にある 波打つ両刃状の角
+鋭利で 刃物の代わりに使うには申し分なく
+武器に付けると攻撃力を上げる事ができる",FALSE,CookGolem,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldBashAnmChange,Zonau]",Item_Enemy_67,EnemyBlade,14,485,306,173
+Captain Construct II Horn,#REF!,"A sharp, blade-like horn with a split tip that
+easily slices anything it touches. Attach it to a
+weapon to moderately increase attack power.",-,-,Captain Construct II Horn,-,TRUE,FALSE,15,15,12,15,15,-,-,-,Zonai,-,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,-,-,9,36,-,Green,0,15,Captain Construct III Horn,2800,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,1,2,3,4,5,隊長ゴーレムの角(中等),"先端が左右に分かれ 鉤状になった鋭い角
+触れるものを 簡単に切り裂く威力をもつ
+武器に付けると 攻撃力がそこそこ上がる",FALSE,CookGolem,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldBashAnmChange,Zonau]",Item_Enemy_191,EnemyBlade,14,480,307,174
+Captain Construct III Horn,#REF!,"A sharp, blade-like horn with a complex tip.
+It looks almost decorative. Attach it to a
+weapon to greatly increase attack power.",-,-,Captain Construct III Horn,-,TRUE,FALSE,25,26,19,25,25,-,-,-,Zonai,-,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,-,-,12,48,-,Green,0,15,Captain Construct IV Horn,4266,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,1,2,3,4,5,隊長ゴーレムの角(上等),"先端が まるで装飾されたような
+複雑な形状をした 鋭利な刃物状の角
+武器に付けると 攻撃力がかなり上がる",FALSE,CookGolem,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldBashAnmChange,Zonau]",Item_Enemy_192,EnemyBlade,14,475,308,175
+Captain Construct IV Horn,#REF!,"A mean-looking, branching, blade-like horn.
+Its edges and tips are extremely sharp. Attach
+it to a weapon to vastly increase its attack
+power.",-,-,-,-,TRUE,FALSE,35,36,27,35,35,-,-,-,Zonai,-,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,-,-,30,120,-,Green,0,0,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,1,2,3,4,5,隊長ゴーレムの角(特等),"根元から二つに分かれた 刃物状の角
+先端や突起は非常に斬れ味が鋭く
+武器に付けると 攻撃力がすごく上がる",FALSE,CookGolem,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldBashAnmChange,Zonau]",Item_Enemy_193,EnemyBlade,14,470,309,176
+Hinox Toenail,#REF!,"As tough as plate armor, this item increases
+an arrow's attack power when attached to it.
+Cook it with a critter to make an elixir.",-,-,Hinox Toenail,-,TRUE,FALSE,7,7,6,14,7,-,-,-,Make Anything Cut,-,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,01:20,10%,20,80,-,Brown,0,15,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ヒノックスの爪,"鎧の装甲のように分厚い爪
+矢じりに使うと 普段より攻撃力が上がる
+また 虫と煮込む事で薬の材料にもなる",FALSE,CookEnemy,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,TreeCutter,ShieldBash]",Item_Enemy_32,EnemyBlade,14,465,-,177
+Gleeok Flame Horn,#REF!,"A crown-like, fire-imbued horn of a Gleeok.
+Attach it to a weapon to vastly increase its
+attack power. Cook it with a critter to make
+an elixir.",-,-,-,Fire,TRUE,FALSE,30,31,23,30,30,20,-,-,Fire Attack,Fire Burst,No Fire Cooldown,Warm,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,00:40,-,70,280,-,Crimson,0,15,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,グリオークの火炎角,"炎をまとったグリオークの 頭部にある冠状の角
+刺激によって火を放ち 武器に付けると攻撃力が
+すごく上がる 煎じれば薬の材料にもなる",FALSE,CookEnemy,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ChemicalAttackFire,ChemicalExplosionFire,Warm,ChemicalFireInf]",Item_Enemy_153,EnemyBlade,14,460,315,178
+Gleeok Frost Horn,#REF!,"A crown-like, frost-imbued horn of a Gleeok.
+Attach it to a weapon to vastly increase its
+attack power. Cook it with a critter to make
+an elixir.",-,-,-,Ice,TRUE,FALSE,30,31,23,30,30,20,-,-,Ice Attack,Ice Burst,No Ice Cooldown,Cold,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,00:40,-,90,360,-,Navy,0,15,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,グリオークの氷雪角,"冷気を操るグリオークの冠状の角 凍えるほど
+冷たい刃を備えており 武器に付けると攻撃力が
+すごく上がる 虫と煮込んで薬の材料にもできる",FALSE,CookEnemy,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ChemicalAttackIce,ChemicalExplosionIce,Cold,ChemicalIceInf]",Item_Enemy_154,EnemyBlade,14,455,316,179
+Gleeok Thunder Horn,#REF!,"A crown-like, lightning-imbued horn of a
+Gleeok. Attach it to a weapon to vastly
+increase its attack power. Cook it with a
+critter to make an elixir.",-,-,Gleeok Thunder Horn,Electric,TRUE,FALSE,30,31,23,30,30,20,-,-,Electric Attack,Electric Burst,No Electric Cooldown,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,00:40,-,150,600,-,Yellow,0,15,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,グリオークの雷電角,"雷を帯びたグリオークの 頭部にある冠状の角
+溜めた電気を放電する性質があり 武器に付けると
+攻撃力がすごく上がる 煮込めば薬の材料にもなる",FALSE,CookEnemy,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ChemicalAttackElectric,ChemicalExplosionElectric,ChemicalElectricInf]",Item_Enemy_155,EnemyBlade,14,450,317,180
+Dinraal's Horn,#REF!,"A sharp horn of the red spirit, Dinraal. It is
+said to be the crystallized power of fire itself.
+Attach the blade-shaped horn to a weapon to
+vastly increase attack power.",-,-,-,Fire,TRUE,FALSE,26,27,20,26,26,20,-,-,Fire Attack,Fire Burst,Warm,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,30:00,100%,300,1200,-,Crimson,0,5,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,オルドラの角,"赤き精霊オルドラの鋭利な角
+炎の力が結晶化して 角になったと言われている
+刃物状で 武器に付けると攻撃力がすごく上がる",FALSE,CookLowPrice,CookSpice,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldBashAnmChange,ChemicalAttackFire,ChemicalExplosionFire,Warm,ShieldBash]",Item_Enemy_211,EnemyBlade,14,445,321,181
+Naydra's Horn,#REF!,"A sharp horn of the blue spirit, Naydra. It is
+said to be the crystallized power of ice itself.
+Attach the blade-shaped horn to a weapon to
+vastly increase attack power.",-,-,-,Ice,TRUE,FALSE,26,27,20,26,26,20,-,-,Ice Attack,Ice Burst,Cold,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,30:00,100%,300,1200,-,Light Blue,0,5,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ネルドラの角,"青き精霊ネルドラの鋭利な角
+氷の力が結晶化して 角になったと言われている
+刃物状で 武器に付けると攻撃力がすごく上がる",FALSE,CookLowPrice,CookSpice,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldBashAnmChange,ChemicalAttackIce,ChemicalExplosionIce,Cold,ShieldBash]",Item_Enemy_212,EnemyBlade,14,440,323,182
+Farosh's Horn,#REF!,"A sharp horn of the golden spirit, Farosh. It is
+said to be the crystallized power of electricity
+itself. Attach the blade-shaped horn to a
+weapon to vastly increase attack power.",-,-,Farosh's Horn,Electric,TRUE,FALSE,26,27,20,26,26,20,-,-,Electric Attack,Electric Burst,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,30:00,100%,300,1200,-,Light Yellow,0,5,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,フロドラの角,"黄金の精霊フロドラの鋭利な角
+雷の力が結晶化して 角になったと言われている
+刃物状で 武器に付けると攻撃力がすごく上がる",FALSE,CookLowPrice,CookSpice,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldBashAnmChange,ChemicalAttackElectric,ChemicalExplosionElectric,ShieldBash]",Item_Enemy_213,EnemyBlade,14,435,325,183
+Light Dragon's Horn,#REF!,"A horn chipped off the Light Dragon. Its
+gentle glow has a calming effect, and it has a
+mysterious healing power when attached to
+a weapon.",-,-,-,-,TRUE,FALSE,20,21,16,20,20,-,-,-,Attacks Heal,-,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,10,-,-,-,30:00,100%,300,1200,-,White,0,3,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,白龍の角,"白龍から欠け落ちた 角
+優しく光っていて 見ていると気持ちが落ち着く
+武器に付けると 使用者を癒す不思議な性質がある",FALSE,CookLowPrice,CookSpice,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldBashAnmChange,LifeHeal]",Item_Enemy_214,EnemyBlade,14,430,327,184
+Like Like Stone,#REF!,"A strange round stone from a Like Like,
+made of crystallized inner fluids. It's a good
+ingredient for elixirs.",-,-,-,-,TRUE,FALSE,4,4,4,4,4,-,-,-,-,-,-,-,TRUE,FALSE,TRUE,TRUE,TRUE,10,-,-,-,01:20,10%,15,60,-,White,0,0,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ライクライクの胃石,"ライクライクの中から出てきた奇妙な丸石
+体液が 結晶化してできた石で 
+その成分は 薬の材料になる事が知られている",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShatterWeapon,ShieldBash]",Item_Enemy_181,EnemyHammer,15,300,265,185
+Fire Like Stone,#REF!,"A stomach stone that persists even at high
+temperatures. It retains heat even outside the
+body of the creature that contained it, which
+makes it a useful elixir ingredient.",-,-,-,Fire,TRUE,FALSE,12,12,10,12,12,20,-,-,Fire Attack,Fire Burst,Warm,-,TRUE,FALSE,TRUE,TRUE,TRUE,10,-,-,-,01:20,10%,25,100,-,Red,0,15,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ファイアライクの胃石,"長くその高温の体内で 温められ続けた石
+体外に取り出した後も 常に熱を帯びており
+その効能は 薬の材料としても重宝する",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShatterWeapon,ChemicalAttackFire,Warm,ShieldBash,ChemicalExplosionFire]",Item_Enemy_182,EnemyHammer,15,300,266,186
+Ice Like Stone,#REF!,"A stomach stone kept cold inside a very low-
+temperature body. It stays cold, even outside
+the body of the creature that contained it.
+Cook it with a critter to make an elixir.",-,-,-,Ice,TRUE,FALSE,12,12,10,12,12,20,-,-,Ice Attack,Ice Burst,Cold,-,TRUE,FALSE,TRUE,TRUE,TRUE,10,-,-,-,01:20,10%,25,100,-,Light Blue,0,15,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,アイスライクの胃石,"非常に低温の体内で冷やされ続けた石
+体外に取り出した後も 氷のように冷たい
+虫と煮込んで 薬の材料にする事ができる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShatterWeapon,ShieldBash,ChemicalAttackIce,Cold,ChemicalExplosionIce]",Item_Enemy_184,EnemyHammer,15,290,267,187
+Shock Like Stone,#REF!,"A stomach stone exposed to high voltage
+inside the body of a Shock Like. It maintains
+some charge even outside the creature. Cook
+it with a critter to make an elixir.",-,-,-,Electric,TRUE,FALSE,12,12,10,12,12,20,-,-,Electric Attack,Electric Burst,-,-,TRUE,FALSE,TRUE,TRUE,TRUE,10,-,-,-,01:20,10%,25,100,-,Yellow,0,15,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,エレキライクの胃石,"エレキライクの体内で高電圧に晒され続けた石
+体外に取り出した後も わずかに帯電している
+虫と煮込むと 薬の材料としても使う事ができる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShatterWeapon,ShieldBash,ChemicalAttackElectric,ChemicalExplosionElectric]",Item_Enemy_183,EnemyHammer,15,285,268,188
+Moblin Horn,#REF!,"A hard horn that resulted from a skull
+mutation. Attach it to a weapon to increase
+its attack power, or cook it with a critter to
+make an elixir.",-,-,Moblin Horn,-,TRUE,FALSE,6,6,5,6,6,-,-,-,-,-,-,-,TRUE,FALSE,TRUE,TRUE,TRUE,10,-,-,-,00:40,-,5,20,-,Light Yellow,0,9,Blue Moblin Horn,1466,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,モリブリンの角,"頭部の骨が変形してできた 硬い角
+武器に付けると攻撃力が上がる
+また 虫と煮込む事で薬の材料にもなる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShatterWeapon]",Item_Enemy_89,EnemyHammer,15,280,279,189
+Blue Moblin Horn,#REF!,"A large, curved horn with two extremely hard
+tips. Attach it to a weapon to moderately
+increase its attack power, or cook it with a
+critter to make an elixir.",-,-,Blue Moblin Horn,-,TRUE,FALSE,13,13,10,13,13,-,-,-,-,-,-,-,TRUE,FALSE,TRUE,TRUE,TRUE,10,-,-,-,00:40,-,9,36,-,Brown,0,15,Black Moblin Horn,2533,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,青モリブリンの角,"左右に大きく分かれ湾曲した角 先端が最も硬く
+武器に付けると攻撃力がそこそこ上がる
+煎じて虫と煮込めば 薬の材料にもなる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShatterWeaponLv2,UnlikeHammer]",Item_Enemy_90,EnemyHammer,15,275,280,190
+Black Moblin Horn,#REF!,"A hefty horn with multiple tough barbs. 
+Attach it to a weapon to greatly increase its
+attack power, or cook it with a critter to make
+an elixir.",-,-,Black Moblin Horn,-,TRUE,FALSE,24,25,19,24,24,-,-,-,-,-,-,-,TRUE,FALSE,TRUE,TRUE,TRUE,10,-,-,-,00:40,-,15,60,-,Yellow,0,15,Silver Moblin Horn,4133,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,黒モリブリンの角,"岩のように硬い突起が複数生えた角
+重量があり 武器に付けると攻撃力がかなり上がる
+煎じて虫と煮込めば 薬の材料としても使える",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShatterWeaponLv3]",Item_Enemy_91,EnemyHammer,15,270,281,191
+Silver Moblin Horn,#REF!,"A nasty-looking, rock-hard horn. Attach it to
+a weapon to vastly increase its attack power,
+or cook it with a critter to make an elixir.",-,-,-,-,TRUE,FALSE,33,34,25,33,33,-,-,-,-,-,-,-,TRUE,FALSE,TRUE,TRUE,TRUE,10,-,-,-,00:40,-,30,120,-,White,0,9,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,白銀モリブリンの角,"らせん状にねじれた禍々しい角 岩以上の
+硬さを誇り 武器に付けると攻撃力がすごく上がる
+虫と一緒に煮込んで 薬の材料とする事もできる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShatterWeaponLv3]",Item_Enemy_92,EnemyHammer,15,265,282,192
+Horriblin Horn,#REF!,"An elongated hammer-shaped horn with a
+hard, flat front. Attach to a weapon to
+increase attack power, or cook it with a critter
+to make an elixir.",-,-,-,-,TRUE,FALSE,5,5,4,5,5,-,-,-,-,-,-,-,TRUE,FALSE,TRUE,TRUE,TRUE,10,-,-,-,00:40,-,4,16,-,Light Yellow,0,15,Blue Horriblin Horn,1333,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ホラブリンの角,"前後に伸びたハンマー状の角 前面が最も硬く
+武器に付けると攻撃力が上がる
+虫と一緒に煮込めば 薬の材料にする事もできる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShatterWeapon,ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash]",Item_Enemy_100,EnemyHammer,15,260,290,193
+Blue Horriblin Horn,#REF!,"A hammer-shaped horn with spiky bumps.
+Attach it to a weapon to moderately increase
+its attack power, or cook it with a critter to
+make an elixir.",-,-,-,-,TRUE,FALSE,11,11,9,11,11,-,-,-,-,-,-,-,TRUE,FALSE,TRUE,TRUE,TRUE,10,-,-,-,00:40,-,9,36,-,Gray,0,15,Black Horriblin Horn,2266,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,青ホラブリンの角,"成長してトゲが生えたハンマー状の角
+武器に付けると攻撃力がそこそこ上がる
+また 虫と煮込めば 薬の材料にもなる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShatterWeaponLv2,ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash]",Item_Enemy_101,EnemyHammer,15,255,291,194
+Black Horriblin Horn,#REF!,"This large, heavy horn has slowly grown into
+its present hammer-like shape. Attach it to a
+weapon to greatly increase its attack power,
+or cook it with a critter to make an elixir.",-,-,-,-,TRUE,FALSE,22,23,17,22,22,-,-,-,-,-,-,-,TRUE,FALSE,TRUE,TRUE,TRUE,10,-,-,-,00:40,-,15,60,-,Brown,0,15,Silver Horriblin Horn,3866,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,黒ホラブリンの角,"時間をかけて大きく重く育った ハンマー状の角
+武器に付けると攻撃力がかなり上がる
+虫と一緒に煮込めば 薬の材料にもなる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShatterWeaponLv3,ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash]",Item_Enemy_102,EnemyHammer,15,250,292,195
+Silver Horriblin Horn,#REF!,"A curved horn with an extremely hard tip.
+Attach it to a weapon to vastly increase its
+attack power, or cook it with a critter to
+make an elixir.",-,-,-,-,TRUE,FALSE,32,33,25,32,32,-,-,-,-,-,-,-,TRUE,FALSE,TRUE,TRUE,TRUE,10,-,-,-,00:40,-,30,120,-,Purple,0,0,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,白銀ホラブリンの角,"先端が非常に硬い 前後に湾曲した形状の角
+武器に付けると攻撃力がすごく上がる
+煎じて虫と煮込めば 薬の材料にする事もできる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShatterWeaponLv3,UnlikeHammer]",Item_Enemy_103,EnemyHammer,15,245,293,196
+Lynel Hoof,#REF!,"This rare ingredient can be obtained only from
+a Lynel. It's very heavy and can be brewed
+with a critter for an elixir. Attached to an
+arrow, it increases the arrow's attack power.",-,-,-,-,TRUE,FALSE,10,10,8,20,10,-,-,-,-,-,-,-,TRUE,FALSE,TRUE,TRUE,TRUE,10,-,-,-,01:20,10%,50,200,-,Black,0,15,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ライネルのひづめ,"ライネルの足からのみ獲る事ができる 珍しい素材
+ずっしりと重く 矢じりとしての攻撃力が高い
+また 虫と煮込んで薬の材料にする事もできる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShatterWeapon,ShieldBash]",Item_Enemy_13,EnemyHammer,15,240,-,197
+Lynel Mace Horn,#REF!,"A hard, curved Lynel horn. It isn't fully grown,
+but it can be attached to a weapon to
+increase its attack power, or cooked with a
+critter to make an elixir.",-,-,Lynel Mace Horn,-,TRUE,FALSE,18,18,14,18,18,-,-,-,-,-,-,-,TRUE,FALSE,TRUE,TRUE,TRUE,10,-,-,-,00:40,-,40,160,-,Brown,0,6,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ライネルの砕角,"ライネルの双角の片方 爪のように生えた突起は
+かなりの硬さで 武器に付けると攻撃力が上がり
+虫と煮込めば薬の材料にする事もできる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShatterWeapon,ShieldBash,UnlikeHammer]",Item_Enemy_215,EnemyHammer,15,235,295,198
+Blue-Maned Lynel Mace Horn,#REF!,"Its ends are split apart, but this horn from
+a Blue-Maned Lynel is solid. Attach it to a
+weapon to moderately increase its attack
+power, or brew it into an elixir.",-,-,-,-,TRUE,FALSE,29,30,22,29,29,-,-,-,-,-,-,-,TRUE,FALSE,TRUE,TRUE,TRUE,10,-,-,-,00:40,-,70,280,-,Gray,0,9,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,青髪ライネルの砕角,"青髪のライネルの双角の片方 枝分かれした先端は
+岩のような硬さで 武器に付けると攻撃力が
+そこそこ上がる また 薬の材料にもなる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShatterWeaponLv2,UnlikeHammer]",Item_Enemy_216,EnemyHammer,15,230,297,199
+White-Maned Lynel Mace Horn,#REF!,"The claw-like ends of this White-Maned Lynel
+horn are all extremely hard. Attach to a
+weapon to greatly increase its attack power,
+or cook it with a critter to make an elixir.",-,-,-,-,TRUE,FALSE,40,42,31,40,40,-,-,-,-,-,-,-,TRUE,FALSE,TRUE,TRUE,TRUE,10,-,-,-,00:40,-,90,360,-,Brown,0,9,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,白髪ライネルの砕角,"白髪のライネルの双角の片方 爪のような形状の
+先端部分は非常に硬く 武器に付けると攻撃力が
+かなり上がる 虫と一緒に煮込めば薬にもなる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShatterWeaponLv3,UnlikeHammer]",Item_Enemy_217,EnemyHammer,15,225,299,200
+Silver Lynel Mace Horn,#REF!,"This wickedly barbed Silver Lynel horn is as
+hard as a diamond. Attach to a weapon to
+vastly increase its attack power. It's also a
+precious elixir ingredient.",-,-,-,-,TRUE,FALSE,51,53,39,51,51,-,-,-,-,-,-,-,TRUE,FALSE,TRUE,TRUE,TRUE,10,-,-,-,00:40,-,150,600,-,Black,0,9,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,白銀ライネルの砕角,"白銀のライネルの双角の片方 ダイヤモンド並の
+硬度を誇り 武器に付けると攻撃力がすごく上がる
+薬の材料としても非常に貴重",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShatterWeaponLv3,UnlikeHammer]",Item_Enemy_218,EnemyHammer,15,220,301,201
+Hinox Horn,#REF!,"A horn wrapped in spiked wood. Attach it to
+a weapon to increase attack power, or cook
+it with a critter to make an elixir.",-,-,Hinox Horn,-,TRUE,FALSE,12,12,10,12,12,-,-,-,-,-,-,-,TRUE,FALSE,TRUE,TRUE,TRUE,10,-,-,-,00:40,-,15,60,-,Brown,0,0,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ヒノックスの角,"周囲を トゲ付き板で覆った角
+武器に付けると攻撃力が上がる
+角本体を 虫と煮込めば 薬の材料にもなる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShatterWeapon,ShieldBash]",Item_Enemy_142,EnemyHammer,15,215,310,202
+Blue Hinox Horn,#REF!,"This mean-looking horn is wrapped in hard
+chains. Attach it to a weapon to moderately
+increase attack power, or cook it with a
+critter to make an elixir.",-,-,Blue Hinox Horn,-,TRUE,FALSE,19,20,15,19,19,-,-,-,-,-,-,-,TRUE,FALSE,TRUE,TRUE,TRUE,10,-,-,-,00:40,-,35,140,-,Black,0,0,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,青ヒノックスの角,"硬い鎖を巻き付けた 禍々しい角
+武器に付けると 攻撃力がそこそこ上がり
+また 虫と煮込んで 薬の材料にする事もできる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShatterWeaponLv2,ShieldBash]",Item_Enemy_143,EnemyHammer,15,210,311,203
+Black Hinox Horn,#REF!,"A horn wrapped in dangerous debris. It's easy
+to work with and greatly increases the attack
+power of a weapon when attached. Cook it
+with a critter to make an elixir.",-,-,-,-,TRUE,FALSE,27,28,21,27,27,-,-,-,-,-,-,-,TRUE,FALSE,TRUE,TRUE,TRUE,10,-,-,-,00:40,-,60,240,-,Gray,0,9,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,黒ヒノックスの角,"潰した廃材を硬く巻き付けた角 武器に付けた時
+振り回しやすい形状で 攻撃力がかなり上がる
+また 虫と煮込めば 薬の材料にする事もできる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShatterWeaponLv3]",Item_Enemy_144,EnemyHammer,15,205,312,204
+Stalnox Horn,#REF!,"The impaled skulls should serve as a warning.
+But if you do obtain one, attach it to a
+weapon to vastly increase its attack power, or
+cook it with a critter to make an elixir.",-,-,-,-,TRUE,FALSE,29,30,22,29,29,-,-,-,Bone,-,-,-,TRUE,FALSE,TRUE,TRUE,TRUE,10,-,-,-,00:40,-,15,60,-,Brown,0,0,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,スタルヒノックスの角,"不気味な骨が突き刺さった トゲトゲが痛そうな角
+武器に付けると攻撃力がすごく上がる
+虫と煮込んで 薬の材料に使う事もできる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShatterWeaponLv3,UnlikeHammer,Bone]",Item_Enemy_208,EnemyHammer,15,200,313,205
+Molduga Jaw,#REF!,"A hard jawbone. Its shape allows a Molduga
+some maneuverability in the sand. Attach it to
+a weapon to greatly increase its attack power.
+Cook it with a critter to make an elixir.",-,-,-,-,TRUE,FALSE,32,33,25,32,32,-,-,-,Bone,-,-,-,TRUE,FALSE,TRUE,TRUE,TRUE,10,-,-,-,01:20,10%,30,120,-,Brown,0,9,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,モルドラジークのアゴ骨,"砂をかき分けて進む際 役に立つ大きく堅牢な骨
+非常に硬く武器に付けると攻撃力が かなり上がり
+煎じて虫と煮込めば薬にもなる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShatterWeaponLv3,ShieldBash,Bone]",Item_Enemy_210,EnemyHammer,15,195,314,206
+Frox Fang,#REF!,"A giant, ore-crunching Frox fang. Attach it to
+a weapon to moderately increase its attack
+power, or cook it with a critter to make an
+elixir.",-,-,-,-,TRUE,FALSE,14,14,11,14,14,-,-,-,-,-,-,-,TRUE,FALSE,TRUE,TRUE,TRUE,10,-,-,-,00:40,-,40,160,-,Light Yellow,0,9,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,デグガーマの大牙,"鉱石を削るために用いる 巨大な牙
+武器に付けると攻撃力がそこそこ上がる 
+虫と煮込む事で 薬の材料にもなる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShatterWeapon,ShieldBash]",Item_Enemy_186,EnemyHammer,15,190,318,207
+Obsidian Frox Fang,#REF!,"A giant fang for excavating and crushing ores.
+Attach it to a weapon to greatly increase its
+attack power, or cook it with a critter to make
+an elixir.",-,-,-,-,TRUE,FALSE,24,25,19,24,24,-,-,-,-,-,-,-,TRUE,FALSE,TRUE,TRUE,TRUE,10,-,-,-,00:40,-,40,160,-,Brown,0,9,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,黒曜デグガーマの大牙,"鉱石に打ち付けて粉砕するための 巨大な牙
+武器に付けると攻撃力がかなり上がる
+煎じて虫と煮込めば 薬を作る事ができる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShatterWeaponLv2,ShieldBash,UnlikeHammer]",Item_Enemy_187,EnemyHammer,15,185,319,208
+Blue-White Frox Fang,#REF!,"A giant fang that can easily dig through solid
+bedrock. Attach it to a weapon to vastly
+increase its attack power, or cook it with a
+critter to make an elixir.",-,-,-,-,TRUE,FALSE,35,36,27,35,35,-,-,-,-,-,-,-,TRUE,FALSE,TRUE,TRUE,TRUE,10,-,-,-,00:40,-,40,160,-,Peach,0,15,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,白蒼デグガーマの大牙,"硬い岩盤をものともせず掘り進むための 巨大な牙
+武器に付けると攻撃力がすごく上がる
+虫と一緒に煮込めば 薬の材料にする事もできる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShatterWeaponLv3,ShieldBash,UnlikeHammer]",Item_Enemy_188,EnemyHammer,15,180,320,209
+Shard of Dinraal's Spike,#REF!,"An incredibly hard stone mined from a spike
+on Dinraal's back. It is very destructive when
+fused to a weapon, and it also imbues that
+weapon with the power of flame.",-,-,Shard of Dinraal's Spike,Fire,TRUE,FALSE,16,16,13,16,16,20,-,-,Fire Attack,Fire Burst,Warm,-,TRUE,FALSE,TRUE,TRUE,TRUE,10,-,-,-,01:20,10%,30,120,-,Crimson,0,15,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,オルドラの龍岩石,"オルドラの背中から採れる 非常に硬い岩石
+武器に付けると 多くの物を砕く事ができ
+同時に炎を発生させる性質がある",FALSE,CookLowPrice,CookSpice,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ChemicalAttackFire,ChemicalExplosionFire,Warm,ShieldBash,ShatterWeaponLv3]",Item_Enemy_228,EnemyHammer,15,175,322,210
+Shard of Naydra's Spike,#REF!,"An incredibly hard stone mined from a spike
+on Naydra's back. It is very destructive when
+fused to a weapon, and it also imbues that
+weapon with the power of ice.",-,-,-,Ice,TRUE,FALSE,16,16,13,16,16,20,-,-,Ice Attack,Ice Burst,Cold,-,TRUE,FALSE,TRUE,TRUE,TRUE,10,-,-,-,01:20,10%,30,120,-,Light Blue,0,15,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ネルドラの龍岩石,"ネルドラの背中から採れる 非常に硬い岩石
+武器に付けると 多くの物を砕く事ができ
+同時に氷を発生させる性質がある",FALSE,CookLowPrice,CookSpice,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ChemicalAttackIce,ChemicalExplosionIce,Cold,ShieldBash,ShatterWeaponLv3]",Item_Enemy_229,EnemyHammer,15,170,324,211
+Shard of Farosh's Spike,#REF!,"An incredibly hard stone mined from a spike
+on Farosh's back. It is very destructive when
+fused to a weapon, and it also imbues that
+weapon with the power to shock.",-,-,-,Electric,TRUE,FALSE,16,16,13,16,16,20,-,-,Electric Attack,Electric Burst,-,-,TRUE,FALSE,TRUE,TRUE,TRUE,10,-,-,-,01:20,10%,30,120,-,Light Yellow,0,15,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,フロドラの龍岩石,"フロドラの背中から採れる 非常に硬い岩石
+武器に付けると 多くの物を砕く事ができ
+同時に電気を発生させる性質がある",FALSE,CookLowPrice,CookSpice,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ChemicalAttackElectric,ChemicalExplosionElectric,ShieldBash,ShatterWeaponLv3]",Item_Enemy_230,EnemyHammer,15,165,326,212
+Shard of Light Dragon's Spike,#REF!,"An incredibly hard stone mined from a spike
+on the Light Dragon's back. It is very
+destructive when fused to a weapon, and it
+also imbues that weapon with healing power.",-,-,-,-,TRUE,FALSE,12,12,10,12,12,-,-,-,Attacks Heal,-,-,-,TRUE,FALSE,TRUE,TRUE,TRUE,10,-,-,-,01:20,10%,30,120,-,White,0,0,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,白龍の龍岩石,"白龍の背中から採れる 非常に硬い岩石
+武器に付けると 多くの物を砕く事ができ
+同時に使用者を癒す 不思議な性質がある",FALSE,CookLowPrice,CookSpice,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,LifeHeal,ShatterWeaponLv2,ShieldBash]",Item_Enemy_231,EnemyHammer,15,160,328,213
+Lizalfos Tail,#REF!,"A highly flexible, stretchable tail. Fuse it with a
+weapon to add a lashing, whiplike quality to
+attacks.",-,-,Lizalfos Tail,-,TRUE,FALSE,6,6,5,6,-,-,-,-,Expand Hitbox (Large),-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,-,-,-,02:40,30%,18,72,-,Green,0,18,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,リザルフォスのしっぽ,"しなやかで伸縮性が高いしっぽ
+振り回すと 勢いに応じて伸び縮みするため
+武器に付けて その長さを活かした攻撃ができる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,AtExpandExLarge]",Item_Enemy_05,EnemyWhip,16,,-,214
+Blue Lizalfos Tail,#REF!,"A highly flexible, stretchable tail. Fuse it with a
+weapon to add a lashing, whiplike quality to
+attacks, or cook it with a critter to make an
+elixir.",-,-,-,-,TRUE,FALSE,16,16,13,16,-,-,-,-,Expand Hitbox (Large),-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,-,-,-,02:40,30%,20,80,-,Blue,0,15,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,青リザルフォスのしっぽ,"振り回すと伸び縮みする ウロコ状のしっぽ
+武器に付けると その長さを活かした攻撃ができる
+また 虫と煮込んで 薬の材料としても使える",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,AtExpandExLarge]",Item_Enemy_114,EnemyWhip,16,,-,215
+Black Lizalfos Tail,#REF!,"A highly flexible, stretchable tail. Fuse it with a
+weapon to add a lashing, whiplike quality to
+attacks, or cook it with a critter to make an
+elixir.",-,-,-,-,TRUE,FALSE,24,25,19,24,-,-,-,-,Expand Hitbox (Large),-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,-,-,-,02:40,30%,22,88,-,Black,0,0,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,黒リザルフォスのしっぽ,"分厚い皮に覆われたしっぽ 伸縮性は十分で
+武器に付けて振り回すと 伸び縮みを活かして
+攻撃できる また 煮込めば薬の材料にもなる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,AtExpandExLarge]",Item_Enemy_115,EnemyWhip,16,,-,216
+Silver Lizalfos Tail,#REF!,"A tough, flexible, stretchable tail. Fuse it with
+a weapon to add a lashing, whiplike quality to
+attacks.",-,-,-,-,TRUE,FALSE,31,32,24,31,-,-,-,-,Expand Hitbox (Large),-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,-,-,-,02:40,30%,24,96,-,White,0,0,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,白銀リザルフォスのしっぽ,"分厚い装甲のような皮に覆われたしっぽ
+厚くても しなやかさや丈夫さは一級品
+武器に付けて伸び縮みを生かした攻撃ができる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,AtExpandExLarge]",Item_Enemy_116,EnemyWhip,16,,-,217
+Fire-Breath Lizalfos Tail,#REF!,"A tail that has stored up some heat from a
+scorching-hot environment. Fuse it with a
+weapon to add a lashing, whiplike quality to
+attacks, or cook it into an elixir.",-,-,-,Fire,TRUE,FALSE,10,10,8,10,10,20,-,-,Expand Hitbox (Large),Fire Attack,Fire Burst,Warm,TRUE,FALSE,FALSE,TRUE,TRUE,5,-,-,-,02:40,30%,22,88,-,Red,0,48,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,火吹きリザルフォスのしっぽ,"灼熱の環境で 内部に熱を蓄え続けた尻尾
+武器に付けると 伸び縮みして長さを活かした
+攻撃ができる また 煮込めば薬の材料にもなる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,AtExpandExLarge,ChemicalAttackFire,Warm,ShieldBash,ChemicalExplosionFire]",Item_Enemy_41,EnemyWhip,16,,-,218
+Ice-Breath Lizalfos Tail,#REF!,"A tail that's been exposed to the cold in an
+extremely frigid environment. Fuse it with a
+weapon to add a lashing, whiplike quality to
+attacks, or cook it into an elixir.",-,-,Ice-Breath Lizalfos Tail,Ice,TRUE,FALSE,10,10,8,10,10,20,-,-,Expand Hitbox (Large),Ice Attack,Ice Burst,Cold,TRUE,FALSE,FALSE,TRUE,TRUE,5,-,-,-,02:40,30%,22,88,-,Blue,0,54,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,雹吐きリザルフォスのしっぽ,"極寒の地で 冷気に晒され続けた尻尾
+伸縮性が高く 武器に付けて その長さを活かした
+攻撃ができる また 煮込めば薬の材料にもなる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,AtExpandExLarge,ChemicalAttackIce,Cold,ShieldBash,ChemicalExplosionIce]",Item_Enemy_42,EnemyWhip,16,,-,219
+Electric Lizalfos Tail,#REF!,"A tail that's been exposed to electricity.
+Fuse it with a weapon to add a lashing,
+whiplike quality to attacks, or cook it with
+a critter to make an elixir.",-,-,-,Electric,TRUE,FALSE,10,10,8,10,10,20,-,-,Expand Hitbox (Large),Electric Attack,Electric Burst,-,TRUE,FALSE,FALSE,TRUE,TRUE,5,-,-,-,02:40,30%,22,88,-,Yellow,0,54,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,シビレリザルフォスのしっぽ,"長期間電気に晒され帯電した尻尾
+長く伸びるので 武器に付けて少し離れた場所に
+攻撃できる また 虫と煮込めば 薬の材料にもなる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,AtExpandExLarge,ChemicalAttackElectric,ShieldBash,ChemicalExplosionElectric]",Item_Enemy_43,EnemyWhip,16,,-,220
+Gibdo Bone,#REF!,"A creepy bone with multiple sharp tips. Attach
+it to a weapon to greatly increase its attack
+power. It tends to break easily due to its odd
+shape.",-,-,Gibdo Bone,-,TRUE,TRUE,40,42,31,40,40,-,-,-,Bone,-,-,-,TRUE,FALSE,FALSE,TRUE,TRUE,1,-,-,-,00:40,-,3,10,-,Gray,0,50,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ギブドの骨,"鋭い突起が複数ある 不気味な骨
+武器に付けると攻撃力がかなり上がるが
+不安定な形状のため すぐ壊れてしまう",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ShieldSurfingNoStaggerWithDeath,Bone]",Item_Enemy_69,EnemyBlunt,17,150,270,221
+Octorok Tentacle,#REF!,"This can only be obtained from an Octorok-
+type enemy. It's too acidic for cooking, but
+it's highly valued as an ingredient for elixirs.",-,-,-,-,TRUE,FALSE,3,3,3,3,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,-,-,-,01:20,10%,10,40,-,Light Blue,0,5,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,オクタの足,"オクタ族から獲る事ができる素材
+身は酸味がとても強く 食用には向かないが
+薬の材料としては 重宝されている",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning]",Item_Enemy_20,EnemyBlunt,17,145,-,222
+Bokoblin Fang,#REF!,"It's worn down and not very sharp, but it's
+still pretty hard. Cook it with a critter to make
+an elixir, or attach it to an arrow to increase
+its attack power.",-,-,-,-,TRUE,FALSE,2,2,2,4,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,TRUE,10,-,-,-,01:20,10%,8,32,-,Light Yellow,0,9,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ボコブリンの牙,"すり減っていて鋭さはない牙 硬くて軽いので 
+矢じりに使うと 普段より攻撃力が上がる
+また 虫と煮込む事で薬の材料として使える",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning]",Item_Enemy_01,EnemyBlunt,17,140,-,223
+Moblin Fang,#REF!,"A hard, sharp fang obtained from a Moblin.
+Stew it with a critter to make an elixir, or
+attach it to an arrow to increase its attack
+power.",-,-,-,-,TRUE,FALSE,4,4,4,8,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,10,-,-,-,01:20,10%,12,45,-,Gray,0,15,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,モリブリンの牙,"モリブリンの鋭い牙 硬くて加工には向かないが
+矢じりにすれば 通常より高い攻撃力を発揮する
+また 虫と一緒に煮込めば 薬の材料として使える",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning]",Item_Enemy_07,EnemyBlunt,17,135,-,224
+Boss Bokoblin Fang,#REF!,"A large fang dropped by a Boss Bokoblin.
+Attach it to an arrow to increase attack
+power, or stew it with a critter to make an
+elixir.",-,-,-,-,TRUE,FALSE,6,6,5,12,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,10,-,-,-,01:20,10%,15,60,-,White,0,0,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ボスボコブリンの牙,"ボスボコブリンが落とした大きな牙
+矢じりに使うと 普段より攻撃力が上がる
+また 虫と煮込む事で薬を作る事ができる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning]",Item_Enemy_135,EnemyBlunt,17,130,-,225
+Hinox Tooth,#REF!,"This Hinox tooth is almost unbelievably big.
+Attach it to an arrowhead to increase its
+attack power, or brew it into an elixir.",-,-,-,-,TRUE,FALSE,8,8,7,16,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,10,-,-,-,01:20,10%,35,140,-,Brown,0,15,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ヒノックスの牙,"ヒノックスから獲る事が出来る素材
+歯とは思えないほど巨大で硬く 矢じりに使うと
+普段より攻撃力が上がり 煮込めば薬の材料になる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning]",Item_Enemy_33,EnemyBlunt,17,125,-,226
+Horriblin Claw,#REF!,"A talon obtained from a Horriblin. Attach it to
+an arrow to increase its attack power, or stew
+it with a critter to make an elixir.",-,-,-,-,TRUE,FALSE,4,4,4,8,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,10,-,-,-,01:20,10%,12,45,-,Gray,0,0,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ホラブリンの爪,"ホラブリンを倒して手に入れた爪 矢じりに使うと
+普段より攻撃力が上がる 特性を持つ
+虫と煮込むと薬の材料にもなる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning]",Item_Enemy_104,EnemyBlunt,17,120,-,227
+Lizalfos Talon,#REF!,"This talon once grew from the elbow of a
+Lizalfos. Its aerodynamic shape increases
+attack power when attached to arrows. Stew
+it with critters to make elixirs.",-,-,-,-,TRUE,FALSE,5,5,4,10,5,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,TRUE,TRUE,10,-,-,-,01:20,10%,15,60,-,Gray,0,15,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,リザルフォスの爪,"リザルフォスの肘に生える爪 空気抵抗が少なく
+矢じりに使えば 通常より攻撃力が上がる
+また 虫と一緒に煮込めば薬になる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash]",Item_Enemy_04,EnemyBlunt,17,115,-,228
+Frox Fingernail,#REF!,"A flat, cracked fingernail. Attach it to an arrow
+to increase its attack power, or cook it with a
+critter to make an elixir.",-,-,-,-,TRUE,FALSE,10,10,8,20,-,-,-,-,-,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,10,-,-,-,01:20,10%,40,160,-,Light Yellow,0,9,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,デグガーマの爪,"平たい形状のひび割れた爪
+矢じりに使うと 普段より攻撃力が上がる
+また 虫と煮込むと薬の材料にもなる",FALSE,CookEnemy,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning]",Item_Enemy_189,EnemyBlunt,17,110,-,229
+Dinraal's Scale,#REF!,"This precious scale contains a massive
+amount of heat. Attach it to a weapon to
+greatly increase its attack power. It can be
+cooked, but eating it seems like a waste.",-,-,-,Fire,TRUE,FALSE,16,16,13,16,16,20,-,-,Fire Attack,Fire Burst,Warm,-,TRUE,FALSE,FALSE,TRUE,TRUE,10,-,-,-,01:00,100%,150,600,-,Crimson,0,3,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,オルドラのウロコ,"内部に膨大な熱が蓄えられている 貴重な鱗
+武器に付ければ 攻撃力がかなり上がる 
+料理にも使えるが 食べてしまうのはもったいない",FALSE,CookLowPrice,CookSpice, CookValue1,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ChemicalAttackFire,ChemicalExplosionFire,Warm,ShieldBash]",Item_Enemy_38,EnemyBlunt,17,105,-,230
+Naydra's Scale,#REF!,"This precious scale contains supercooled air
+inside. Attach it to a weapon to greatly
+increase its attack power. It can be cooked,
+but just eating it seems like a waste.",-,-,-,Ice,TRUE,FALSE,16,16,13,16,16,20,-,-,Ice Attack,Ice Burst,Cold,-,TRUE,FALSE,FALSE,TRUE,TRUE,10,-,-,-,01:00,100%,150,600,-,Light Blue,0,5,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ネルドラのウロコ,"内部に超低温の冷気が蓄えられている 貴重な鱗
+武器に付けると 攻撃力がかなり上がる
+料理にも使えるが 食べてしまうのはもったいない",FALSE,CookLowPrice,CookSpice, CookValue1,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ChemicalAttackIce,ChemicalExplosionIce,Cold,ShieldBash]",Item_Enemy_49,EnemyBlunt,17,100,-,231
+Farosh's Scale,#REF!,"This precious scale is constantly charged with
+powerful electricity. Attach it to a weapon to
+greatly increase its attack power. Cooking it is
+possible but probably wasteful.",-,-,-,Electric,TRUE,FALSE,16,16,13,16,16,20,-,-,Electric Attack,Electric Burst,-,-,TRUE,FALSE,FALSE,TRUE,TRUE,10,-,-,-,01:00,100%,150,600,-,Light Yellow,0,3,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,フロドラのウロコ,"常に強力な電気が蓄えられている 貴重な鱗
+武器に付けると 攻撃力がかなり上がる
+料理にも使えるが 食べてしまうのはもったいない",FALSE,CookLowPrice,CookSpice, CookValue1,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ChemicalAttackElectric,ChemicalExplosionElectric,ShieldBash]",Item_Enemy_53,EnemyBlunt,17,95,-,232
+Light Dragon's Scale,#REF!,"A precious scale that fell from the Light
+Dragon. It's faintly warm and has an oddly
+familiar, mysterious power that heals when
+attached to a weapon.",-,-,-,-,TRUE,FALSE,12,12,10,12,12,-,-,-,Attacks Heal,-,-,-,TRUE,FALSE,FALSE,TRUE,TRUE,10,-,-,-,01:00,100%,150,600,-,White,0,3,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,白龍のウロコ,"白龍からはがれ落ちた 貴重な鱗
+ほのかに温かみがあって 懐かしさを感じる
+武器に付けると 使用者を癒す不思議な性質がある",FALSE,CookLowPrice,CookSpice,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,LifeHeal,ShieldBash]",Item_Enemy_158,EnemyBlunt,17,90,-,233
+Dinraal's Claw,#REF!,"This valuable claw is said to have once been
+covered in flames. Attach it to a weapon to
+greatly increase its attack power. It can also
+be cooked or sold.",-,-,-,Fire,TRUE,FALSE,18,18,14,36,18,20,-,-,Fire Attack,Fire Burst,Warm,-,TRUE,FALSE,FALSE,TRUE,TRUE,10,-,-,-,03:00,100%,180,720,-,Crimson,1,3,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,オルドラの爪,"元は炎をまとっていたと言われている 貴重な爪
+武器に付けると 攻撃力がかなり上がる また
+料理にも使え 店で買い取ってもらう事もできる",FALSE,CookLowPrice,CookSpice, CookValue1,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ChemicalAttackFire,ChemicalExplosionFire,Warm,ShieldBash]",Item_Enemy_39,EnemyBlunt,17,85,-,234
+Naydra's Claw,#REF!,"This valuable claw was once nearly frozen.
+Attach it to a weapon to greatly increase its
+attack power. It can be cooked or sold for
+some rupees.",-,-,-,Ice,TRUE,FALSE,18,18,14,36,18,20,-,-,Ice Attack,Ice Burst,Cold,-,TRUE,FALSE,FALSE,TRUE,TRUE,10,-,-,-,03:00,100%,180,720,-,Light Blue,1,3,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ネルドラの爪,"元は冷気をまとっていたと言われる 貴重な爪 
+武器に付けると 攻撃力がかなり上がる
+料理にも使え 店で買い取ってもらう事もできる",FALSE,CookLowPrice,CookSpice, CookValue1,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ChemicalAttackIce,ChemicalExplosionIce,Cold,ShieldBash]",Item_Enemy_50,EnemyBlunt,17,80,-,235
+Farosh's Claw,#REF!,"A valuable claw that once produced lightning.
+Attach it to a weapon to greatly increase its
+attack power. It can also be cooked or sold
+for rupees.",-,-,-,Electric,TRUE,FALSE,18,18,14,36,18,20,-,-,Electric Attack,Electric Burst,-,-,TRUE,FALSE,FALSE,TRUE,TRUE,10,-,-,-,03:00,100%,180,720,-,Light Yellow,1,3,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,フロドラの爪,"周囲に雷を放っていたと言われる 貴重な爪
+武器に付けると 攻撃力がかなり上がる
+料理にも使え 店で買い取ってもらう事もできる",FALSE,CookLowPrice,CookSpice, CookValue1,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ChemicalAttackElectric,ChemicalExplosionElectric,ShieldBash]",Item_Enemy_54,EnemyBlunt,17,75,-,236
+Light Dragon's Talon,#REF!,"A precious talon that fell from the Light
+Dragon. It may look dangerous, but its real
+power is to heal when attached to a weapon.",-,-,-,-,TRUE,FALSE,14,14,11,28,14,-,-,-,Attacks Heal,-,-,-,TRUE,FALSE,FALSE,TRUE,TRUE,10,-,-,-,03:00,100%,180,720,-,White,0,3,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,白龍の爪,"白龍から抜け落ちた 貴重な爪
+見た目とは裏腹に あまり危険さは感じない
+武器に付けると 使用者を癒す不思議な性質がある",FALSE,CookLowPrice,CookSpice,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,LifeHeal,ShieldBash]",Item_Enemy_159,EnemyBlunt,17,70,-,237
+Shard of Dinraal's Fang,#REF!,"An incredibly hard piece of a fang from
+Dinraal. Attach it to a weapon to greatly
+increase its attack power. It can also be
+cooked into a meal.",-,-,-,Fire,TRUE,FALSE,20,21,16,40,20,20,-,-,Fire Attack,Fire Burst,Warm,-,TRUE,FALSE,FALSE,TRUE,TRUE,10,-,-,-,10:00,100%,250,1000,-,Crimson,0,3,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,オルドラの牙のかけら,"オルドラから欠け落ちた 恐ろしく硬い牙のかけら
+武器に付けると 攻撃力がかなり上がる
+また 料理の材料として使う事もできる",FALSE,CookLowPrice,CookSpice, CookValue1,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ChemicalAttackFire,ChemicalExplosionFire,Warm]",Item_Enemy_47,EnemyBlunt,17,65,-,238
+Shard of Naydra's Fang,#REF!,"A piece that chipped off one of Naydra's 
+fangs. It's much harder than any metal.
+Attach it to a weapon to greatly increase its
+attack power, or cook it into a meal.",-,-,-,Ice,TRUE,FALSE,20,21,16,40,20,20,-,-,Ice Attack,Ice Burst,Cold,-,TRUE,FALSE,FALSE,TRUE,TRUE,10,-,-,-,10:00,100%,250,1000,-,Light Blue,0,3,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ネルドラの牙のかけら,"ネルドラから欠け落ちた 牙の一部
+金属より数段硬く 武器に付けると
+攻撃力がかなり上がる また 料理の材料にもなる",FALSE,CookLowPrice,CookSpice, CookValue1,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ChemicalAttackIce,ChemicalExplosionIce,Cold]",Item_Enemy_51,EnemyBlunt,17,65,-,239
+Shard of Farosh's Fang,#REF!,"An extremely hard chip of one of Farosh's
+fangs. Attach it to a weapon to greatly
+increase its attack power. It can also be used
+in cooking.",-,-,-,Electric,TRUE,FALSE,20,21,16,40,20,20,-,-,Electric Attack,Electric Burst,-,-,TRUE,FALSE,FALSE,TRUE,TRUE,10,-,-,-,10:00,100%,250,1000,-,Light Yellow,0,3,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,フロドラの牙のかけら,"フロドラから欠け落ちた 牙の一部
+非常に硬く 武器に付けると攻撃力がかなり上がる
+また 料理の材料として使う事もできる",FALSE,CookLowPrice,CookSpice, CookValue1,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,ChemicalAttackElectric,ChemicalExplosionElectric]",Item_Enemy_55,EnemyBlunt,17,55,-,240
+Shard of Light Dragon's Fang,#REF!,"A shard that fell off from the Light Dragon's
+fang. It's smooth rather than rough, and it has
+a mysterious power to heal when attached to
+a weapon. ",-,-,-,-,TRUE,FALSE,16,16,13,32,16,-,-,-,Attacks Heal,-,-,-,TRUE,FALSE,FALSE,TRUE,TRUE,10,-,-,-,10:00,100%,250,1000,-,White,0,3,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,白龍の牙のかけら,"白龍から欠け落ちた 牙のかけら
+鋭さはなく柔らかな雰囲気がある 武器に付けると
+使用者の傷を治癒する不思議な性質がある",FALSE,CookLowPrice,CookSpice,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,LifeHeal,ShieldBash]",Item_Enemy_160,EnemyBlunt,17,50,-,241
+Ancient Blade,#REF!,"An ancient dagger-like blade. It's too small to
+wield as a weapon, but it can be used as an
+arrowhead.",-,-,Ancient Blade,-,TRUE,TRUE,50,52,38,50,50,-,-,-,Ancient Weapon,-,-,-,TRUE,TRUE,FALSE,TRUE,TRUE,1,-,-,-,-,-,1,4,-,Brown,0,0,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,古代の刃,"敵を消滅させる力を持つ 古の短剣状の刃
+武器として振るうには小さすぎるため
+矢に付けて飛ばすのが 主な使い道となる",FALSE,CookGolem,-,-,-,-,"[ShieldSurfingslipperinessDown,TorchNoBurning,ShieldBash,AncientWeapon,ShieldBashAnmChange]",Item_Weapon_01,AncientBlade,18,1416,-,242
+King's Scale,#REF!,"Zora kings bear this scale on their foreheads.
+It sparkles in different ways depending on 
+the angle from which it's viewed. They were
+once used in ancient Zora ceremonies.",-,-,-,-,TRUE,TRUE,5,5,4,5,1,-,-,-,Long Throw,Water Burst,Water Attack,-,FALSE,FALSE,FALSE,TRUE,TRUE,1,-,-,-,-,-,,120,-,Light Blue,0,0,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,王のウロコ,"歴代ゾーラ王の額に生じる 特別なウロコ
+見る角度によって 異なる輝きを放つ
+古くは ゾーラの祭事で用いられていた",FALSE,CookOre,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ChemicalExplosionWater,WaterDamageUpElement,LongThrow,ShieldBash]",Item_KingScale,FireWoodBundle,19,2010,-,243
+Brightbloom Seed,#REF!,"A seed that's often found in caves or wells.
+When struck, it will take root and bloom,
+giving off faint light from a small flower.",-,-,Brightbloom Seed,-,TRUE,TRUE,1,1,1,1,1,-,-,-,Reusable On Forest Dweller Weapons,-,-,-,FALSE,FALSE,FALSE,TRUE,FALSE,1,0,-,-,-,-,2,8,-,Light Yellow,0,90,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,00:04,00:10,0,0,0,0,0,アカリバナの種,"洞窟や井戸に生える アカリバナと呼ばれる花の種
+衝撃を与えると即座に花開き その場に根を張る
+光は わずかに周囲を照らす",TRUE,CookFruit,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,ShieldBash,ShieldSurfingNoStaggerWithDeath,ReuseSeed]",LightBall_Small,FireWoodBundle,19,2000,249,244
+Giant Brightbloom Seed,#REF!,"A seed that's found underground. When
+struck, it will take root and bloom, radiating
+a large amount of light from a big flower.",-,-,Giant Brightbloom Seed,-,TRUE,TRUE,1,1,1,1,1,-,-,-,Reusable On Forest Dweller Weapons,-,-,-,FALSE,FALSE,FALSE,TRUE,FALSE,1,0,-,-,-,-,4,16,-,Light Yellow,2,105,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,00:05.333,00:13.333,0,0,0,0,0,巨大なアカリバナの種,"洞窟で年月をかけて成長した アカリバナの種
+衝撃を受けると その場に根を張り大きな花を開く
+とても明るい光で あたり一帯を照らす",TRUE,CookFruit,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,ShieldBash,ShieldSurfingNoStaggerWithDeath,ReuseSeed]",LightBall_Large,FireWoodBundle,19,1999,250,245
+Hylian Pine Cone,#REF!,"Grows on trees found all over Hyrule. It 
+contains oil and burns well. Throw it into a fire
+to increase the intensity of the flame.",-,-,Hylian Pine Cone,-,TRUE,FALSE,1,1,1,1,-,-,-,-,-,-,-,-,FALSE,FALSE,FALSE,FALSE,FALSE,5,-,-,-,-,-,2,8,-,Brown,0,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ハイラルボックリ,"ハイラルに幅広く分布する樹木の実
+油分を多く含んでおり 燃えやすく
+たき火にくべると火力が上がる",FALSE,CookOre,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown]",FldObj_Pinecone_A_01,FireWoodBundle,19,,255,246
+Wood,#REF!,"A portable bundle of wood. You can use this
+to make a campfire if you have something to
+light it.",-,-,Wood,-,TRUE,FALSE,1,1,1,1,-,-,-,-,Torch,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,5,-,-,-,-,-,2,12,-,Brown,25,0,-,-,-,-,0,TRUE,TRUE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,薪の束,"どこにでも持ち運びできる薪
+火種があれば火をつける事ができる",FALSE,CookOre,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,Torch]",Obj_FireWoodBundle,FireWoodBundle,19,,-,247
+Zonaite,#REF!,"An unusual mineral that has many purposes.
+Ancients extracted energy from it and refined
+it for the crafting of weapons and armor.",-,-,Zonaite,-,TRUE,FALSE,1,1,1,1,-,-,-,-,Zonai,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,10,-,-,-,-,-,3,12,-,Green,50,150,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,ゾナニウム,"様々な用途に応用できる鉱石 太古の人々は
+そのエネルギーを抽出して 動力として利用したり
+製錬した物質を 武器防具の材料に使ったとされる",FALSE,CookOre,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,Zonau]",Item_Ore_L,Zonanium,20,10,-,248
+Large Zonaite,#REF!,"Zonaite of especially high purity. The amount
+of energy concentrated in it allows for much
+higher power output than regular zonaite.",-,-,Large Zonaite,-,TRUE,FALSE,1,1,1,1,-,-,-,-,Zonai,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,10,-,-,-,-,-,6,24,-,Green,0,190,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,0,0,0,0,0,大きなゾナニウム,"とりわけ純度が高い 貴重なゾナニウム
+抽出できるエネルギーは巨大で 通常の
+ゾナニウムとは比較にならない出力を得られる",FALSE,CookOre,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,Zonau]",Item_Ore_M,Zonanium,20,5,-,249
+Zonai Charge,#REF!,"A material used as a power source for
+constructs and other devices. Its strange light
+seems to reveal potent energy inside.","A material used as a power source for
+constructs and other devices. Use it to
+recover a small amount of power for a
+Zonai Energy Cell.","A material used as a power source for
+constructs and other devices. Put it in a Zonai
+device dispenser, or use it to recover a small
+amount of power for a Zonai Energy Cell.",Zonai Charge,-,TRUE,FALSE,2,2,2,2,-,-,-,-,Zonai,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,10,-,-,-,-,-,6,2,-,Green,0,0,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,1,3,5,8,12,ゾナウエネルギー,"ゴーレムなどの動力源として用いられる物質　
+湧き出す光からは 強いエネルギーを感じる",FALSE,CookGolem,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,Zonau]",Item_Enemy_130,Zonanium,20,,-,250
+Large Zonai Charge,#REF!,"A large Zonai charge found near ruins.
+It seems as though it's bursting with energy
+because of the strangely powerful light
+coming from it.","A Zonai charge with a massive amount of
+energy stored within. Applied to a Zonai
+Energy Cell, it can temporarily prevent the cell
+from losing power.","A Zonai charge with a massive amount of
+energy stored within. Applied to a Zonai
+Energy Cell, it can temporarily prevent the cell
+from losing power.",Large Zonai Charge,-,TRUE,FALSE,3,3,3,3,-,-,-,-,Zonai,-,-,-,TRUE,FALSE,FALSE,FALSE,TRUE,10,-,-,-,-,-,10,1,-,Green,0,114,-,-,-,-,0,FALSE,FALSE,FALSE,FALSE,FALSE,-,-,10,22,34,47,60,大きなゾナウエネルギー,"古い遺跡で見つかる巨大なゾナウエネルギー
+ほとばしる光から 非常に強い力を感じる",FALSE,CookGolem,-,-,-,-,"[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,Zonau]",Item_Enemy_131,Zonanium,20,,-,251

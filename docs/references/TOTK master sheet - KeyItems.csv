@@ -1,0 +1,283 @@
+Name,Inventory Icon,Inventory Icon 2,Caption,Caption 2,Number to Collect,Object Map Link,Name (Japanese),Caption (Japanese),ActorName,PouchGetType,PouchSpecialDeal,PouchSortKey,Inventory Order
+Ultrahand,#REF!,-,"Grab and move objects, rotate them, and
+stick them to other objects.",-,1,-,ウルトラハンド,"離れた場所にある物を つかんで動かす事ができる
+つかんだ物は回転させたり 
+他の物に接着する事もできる",Obj_UltraHand,SpecialPower_ZonauMagic,None,,001
+Fuse,#REF!,-,"Attach something to an equipped weapon
+or shield to enhance it. You can undo the
+fusion, but that will destroy whatever has
+been attached.",-,1,-,スクラビルド,"装備している武器や盾に 物をひとつ組み合わせて
+新しい武器を作る事ができる 組み合わせた物は
+取り外せるが 外した物は失われてしまう",Obj_OneTouchBond,SpecialPower_ZonauMagic,None,,002
+Ascend,#REF!,-,"Move upward through solid material and
+emerge on top of it.",-,1,-,トーレルーフ,"真上へ飛び上がり 天井を通り抜けて
+地表に移動する事ができる",Obj_Tooreroof,SpecialPower_ZonauMagic,None,,003
+Recall,#REF!,-,"Reverse an object's movement until it goes
+back to where it was. You can stop the
+reverse movement at any time.",-,1,-,モドレコ,"指定した物の移動を逆再生して
+元の位置まで戻す事ができる
+逆再生は途中で終了させる事もできる",Obj_ReverseRecorder,SpecialPower_ZonauMagic,None,,004
+Autobuild,#REF!,-,"Instantly re-create your Ultrahand projects,
+using nearby items and zonaite. Autobuild
+records your previous creations.",-,1,-,ブループリント,"ウルトラハンドでの組み立てを自動的に記録する
+周囲の物やゾナニウムを材料にする事で
+その記録を瞬時に再現し 組み立てる",Obj_AutoBuilder,SpecialPower_ZonauMagic,None,,005
+"Vow of Tulin, Sage of Wind",#REF!,-,"Proof of the vow of Tulin, Sage of Wind.
+Use it to summon or dismiss the avatar of
+Tulin.",-,1,-,風の賢者 チューリとの盟約,"風の賢者チューリと盟約を結んだ証
+使う事でチューリの分身を
+呼び出したり 戻したりする事ができる",Obj_SageSoul_Rito,Large,SageSoul_Wind,1005,006
+"Solemn Vow of Tulin, Sage of Wind",#REF!,-,"The strengthened vow of Tulin, Sage of Wind.
+Your reinforced bond with Tulin has increased
+his avatar's attack power.",-,1,-,風の賢者 チューリとの固い盟約,"風の賢者チューリと盟約を結んだ証
+チューリとの絆が深くなった事で
+呼び出せる分身の攻撃力が上がった",Obj_SageSoulPlus_Rito,Large,SageSoulPlus_Wind,1005,006
+"Vow of Yunobo, Sage of Fire",#REF!,-,"Proof of the vow of Yunobo, Sage of Fire.
+Use it to summon or dismiss the avatar of
+Yunobo.",-,1,-,炎の賢者 ユン坊との盟約,"炎の賢者ユン坊と盟約を結んだ証
+使う事でユン坊の分身を
+呼び出したり 戻したりする事ができる",Obj_SageSoul_Goron,Large,SageSoul_Fire,1004,007
+"Solemn Vow of Yunobo, Sage of Fire",#REF!,-,"The strengthened vow of Yunobo, Sage of
+Fire. Your reinforced bond with Yunobo has
+increased his avatar's attack power.",-,1,-,炎の賢者 ユン坊との固い盟約,"炎の賢者ユン坊と盟約を結んだ証
+ユン坊との絆が深くなった事で
+呼び出せる分身の攻撃力が上がった",Obj_SageSoulPlus_Goron,Large,SageSoulPlus_Fire,1004,007
+"Vow of Sidon, Sage of Water",#REF!,-,"Proof of the vow of Sidon, Sage of Water.
+Use it to summon or dismiss the avatar of
+Sidon.",-,1,-,水の賢者 シドとの盟約,"水の賢者シドと盟約を結んだ証
+使う事でシドの分身を
+呼び出したり 戻したりする事ができる",Obj_SageSoul_Zora,Large,SageSoul_Water,1003,008
+"Solemn Vow of Sidon, Sage of Water",#REF!,-,"The strengthened vow of Sidon, Sage of
+Water. Your reinforced bond with Sidon has
+increased his avatar's attack power.",-,1,-,水の賢者 シドとの固い盟約,"水の賢者シドと盟約を結んだ証
+シドとの絆が深くなった事で
+呼び出せる分身の攻撃力が上がった",Obj_SageSoulPlus_Zora,Large,SageSoulPlus_Water,1003,008
+"Vow of Riju, Sage of Lightning",#REF!,-,"Proof of the vow of Riju, Sage of Lightning.
+Use it to summon or dismiss the avatar of
+Riju.",-,1,-,雷の賢者 ルージュとの盟約,"雷の賢者ルージュと盟約を結んだ証
+使う事でルージュの分身を
+呼び出したり 戻したりする事ができる",Obj_SageSoul_Gerudo,Large,SageSoul_Electric,1002,009
+"Solemn Vow of Riju, Sage of Lightning",#REF!,-,"The strengthened vow of Riju, Sage of
+Lightning. Your reinforced bond with Riju
+has increased her avatar's attack power.",-,1,-,雷の賢者 ルージュとの固い盟約,"雷の賢者ルージュと盟約を結んだ証
+ルージュとの絆が深くなった事で
+呼び出せる分身の攻撃力が上がった",Obj_SageSoulPlus_Gerudo,Large,SageSoulPlus_Electric,1002,009
+"Vow of Mineru, Sage of Spirit",#REF!,-,"Proof of the vow of Mineru, Sage of Spirit.
+Use it to summon or dismiss the construct
+containing Mineru's spirit.",-,1,-,魂の賢者 ミネルとの盟約,"魂の賢者ミネルと盟約を結んだ証
+使う事でミネルの魂が入ったゴーレムを
+呼び出したり 戻したりする事ができる",Obj_SageSoul_Zonau,Large,SageSoul_Soul,1001,010
+"Solemn Vow of Mineru, Sage of Spirit",#REF!,-,"The strengthened vow of Mineru, Sage of
+Spirit. Your reinforced bond with Mineru has
+increased her construct's attack power.",-,1,-,魂の賢者 ミネルとの固い盟約,"魂の賢者ミネルと盟約を結んだ証
+ミネルとの絆が深くなった事で
+呼び出せるゴーレムの攻撃力が上がった",Obj_SageSoulPlus_Zonau,Large,SageSoulPlus_Soul,1001,010
+Purah Pad,#REF!,-,"Princess Zelda's prized device. It has a
+variety of features that are essential
+for adventure.",-,1,-,プルアパッド,"ゼルダ姫が愛用していた
+冒険に役立つ様々な機能を備えたアイテム",Obj_DRStone_Get,Large,None,500,011
+Camera,#REF!,-,"Capture images using the Purah Pad. You
+can then save them to the album.",-,1,-,ウツシエ,"風景や人物を瞬時に写し撮る事ができる
+プルアパッドの機能
+撮った写し絵はアルバムに保存される",Obj_Camera,SpecialPower_ZonauMagic,None,497,012
+Energy Cell,#REF!,#REF!,"A gift from a Zonai construct. Designed to be
+worn on a belt, it can power Zonai devices.","A portable power source charged with the
+energy needed to use some Zonai devices.
+It recharges over time automatically.",45,-,バッテリー,"ゾナウギアを使う際に消費するエネルギーを
+蓄えた携帯バッテリー 使用したエネルギーは
+時間が経てば 自動的に回復する",Obj_Battery_Get_Capacity,Large,ZonauBattery,495,013
+Paraglider,#REF!,-,"This item, given to you by Purah, lets you ride
+the wind and glide through the sky. Press 촌
+in midair to activate it.",-,1,-,パラセール,"プルアから受け取った
+風を受けて滑空ができるアイテム
+空中でを押して使おう",Parasail,Large,Parasail,490,014
+Travel Medallion Prototype,#REF!,-,"Robbie reverse-engineered a travel medallion
+to make this prototypical version, but it's
+unusable in its current state because it's
+missing some important data.",-,1,-,試作版ワープマーカー,"ロベリーが作った試作版のワープマーカー
+データが欠損しており この状態では使えない",Obj_WarpDLC_Prototype,Medium,None,486,015
+Travel Medallion,#REF!,-,"This mysterious tool was built by Robbie.
+Place it by opening your inventory and
+registering your current location as a
+travel gate.",-,3,-,ワープマーカー,"ロベリーによって作られた 不思議な道具
+ポーチを開いて「置く」と 今いる場所を
+ワープ地点として マップに登録できる",Obj_WarpDLC,Large,WarpMarker,485,015
+Earthwake Manual,#REF!,-,"An esoteric manual that reveals the secret of
+the Earthwake technique known only to Yiga
+blademasters. It's a move that involves
+executing a charge attack with no weapons.",-,1,-,土遁の書,"イーガ団の中でも幹部のみが扱う事ができる
+土遁の術の奥義が記されている秘伝の書
+武器を持たないでタメ攻撃を行う事で使用できる",Obj_HiddenScroll_00,Medium,HiddenScroll_00,480,016
+Light of Blessing,#REF!,-,"A crystal that glows with a light that purges
+ancient evil and purifies with its radiance.",-,152,-,祝福の光,"古の邪を封じ 浄化していた尊い光の結晶
+とても清らかな光を発している",Obj_DungeonClearSeal,Medium,DungeonClearSeal,475,017
+Sage's Will,#REF!,-,"A small stone believed to have belonged to a
+sage. Holding it in your hand, you can feel the
+remnants of a strong bond.","The remnants of a former Sage's resolve.
+If you gather four of them and offer them
+to a Goddess Statue, you can deepen your
+connection with the Sages.",20,Sage's Will,賢者の遺志,"賢者が遺したとされる小さな石
+手にすると 強い想いと絆を感じる",Obj_SageWill,Medium,SageWill,470,018
+Korok Seed,#REF!,-,"This small seed was given to you by a Korok.
+It has a distinct smell. If you gather a bunch
+of them, you never know what may happen...",-,1000,-,コログのミ,"コログがくれた小さなミ
+集めたらいいことありそう
+ちょっと臭う…",Obj_KorokNuts,Small,Currency,465,019
+Bubbul Gem,#REF!,-,"A strange crystal left by defeated Bubbulfrogs
+in caves. Its eerie blue glow may entice you
+to...collect even more.",-,147,-,マヨイの落とし物,"洞窟に生息するマヨイが落とした 不思議な結晶
+神秘的な淡い輝きを放っており
+見つめていると もっと集めたくなりそうだ",CaveMasterMedal,Small,CaveMasterMedal,460,020
+Poe,#REF!,-,"A glowing spirit orb found all over the Depths.
+Offer these to a Bargainer Statue for a variety
+of rewards.",-,-,-,ポゥ,"地底のあちこちに落ちている ぼんやり光る霊体
+触っても熱くはなく 不規則に揺らめいている
+集めておくと良い事があるかもしれない",MinusRupee_00,Small,MinusRupee,455,021
+Crystallized Charge,#REF!,-,"A fragment of crystal made by condensing
+Zonai charges processed from zonaite.
+Said to be used for Energy Cell improvement.",-,-,-,ゾナウエネルギーの結晶,"ゾナニウムから製錬された
+エネルギーを凝縮して作られた結晶
+バッテリー容量の拡張に用いるといわれている",Energy_Material_01,Small,EnergyMaterial,450,022
+Schema Stone,#REF!,-,"A stone etched with what looks like a design
+schematic. It could be useful...","These stone slabs depict schematics of things
+such as Zonai vehicles. Autobuild saves the
+schematic and builds it on command.",12,-,飛行機,"設計図のような図面が描かれた石板
+何かに使えそうだが…",Obj_AutoBuilderDraft_00,Medium,None,445,023
+Yiga Schematic,#REF!,-,"A schematic for a strange invention made of
+Zonai devices and building materials. Looks
+like it could be useful...","A scrawled schematic for a contraption made
+of Zonai devices and building materials.
+Looks like you can use Autobuild to store
+schematics and then build from them.",34,-,戦車,"ゾナウギアや建材を組み合わせる設計図の
+ような図面が描かれた書物
+何かに使えそうだが…",Obj_AutoBuilderDraftAssassin_00,Medium,None,440,024
+Old Map,#REF!,-,"A very old map that shows a marked spot.
+What could be there?",-,31,Old Map,古びた地図,"遥か昔に描かれたであろう 古びた地図
+どこかの場所を示しているようだが
+そこに何があるのだろうか…？",Obj_TreasureMap_00,Medium,None,435,025
+Pony Points Card,#REF!,-,"Using a stable earns points. Collecting points 
+grants rewards. Points needed for the next
+reward: >8HorseInn_NextRewardNeetPoint:","Using a stable earns points. Collecting points
+grants rewards. You are eligible for a reward.",1,-,馬宿ポイントカード,"馬宿協会の施設を使うとポイントがたまり
+ポイントをためる事で 様々な特典が受けられる
+次の特典まで あと 「」ポイント",Obj_StableHostlePointCard,Small,None,430,026
+Sleepover Ticket,#REF!,-,"A lodging voucher for a regular stable bed.
+A reward for collecting Pony Points. Spend it
+at a stable to get some rest and recover from
+the fatigue of travel.",-,-,-,馬宿 宿泊券,"馬宿で ふつうのベッド を利用できる宿泊券
+ポイントをためると もらえる事がある
+旅の疲れを ゆっくり癒そう",Item_StableHostelAccommodationCoupon_A,Small,None,425,027
+All's Well,#REF!,-,"To thank you for finding the locations of all
+the wells in Hyrule, Fera awarded you this
+beautiful model of a well encased in a glass
+sphere.",-,1,-,井戸巡りの記念品,"ハイラル中の井戸の場所を教えた礼に
+ユノシタから贈られる記念品
+ガラス球の中に井戸の模型が入った綺麗な品",Obj_CaveWellHonor_00,Medium,None,420,028
+Dispelling Darkness Medal,#REF!,-,"An award for one who has conquered the
+darkness by lighting up every lightroot. This
+special item commemorates blessings
+received.",-,1,-,闇を克服した証,"全ての破魔の根に光を灯し
+闇を克服した者に贈られる証
+祝福の気持ちを込めた特別な品",Obj_CheckPointHonor_00,Medium,None,415,029
+Hestu's Gift,#REF!,-,"A gift of friendship given to you by Hestu.
+It smells pretty bad.",-,1,-,ボックリンのミ,"ボックリンがくれた友好のミ
+強烈に臭う…",Obj_ProofKorok,Medium,None,410,030
+Stone Talus Monster Medal,#REF!,-,"An award presented by the monster-control
+crew in appreciation for defeating every
+Stone Talus in Hyrule. It's very fancy and is
+shaped like the monster it represents.",-,1,-,イワロック討伐の勲章,"ハイラル中のイワロックを全て倒した者に
+討伐隊から感謝の気持ちを込めて贈られる勲章
+イワロックをかたどった豪華な品",Obj_DefeatHonor_00,Medium,None,405,031
+Hinox Monster Medal,#REF!,-,"An award presented by the monster-control
+crew in appreciation for defeating every
+Hinox in Hyrule. It's very fancy and is shaped
+like the monster it represents.",-,1,-,ヒノックス討伐の勲章,"ハイラル中のヒノックスを全て倒した者に
+討伐隊から感謝の気持ちを込めて贈られる勲章
+ヒノックスをかたどった豪華な品",Obj_DefeatHonor_01,Medium,None,400,032
+Molduga Monster Medal,#REF!,-,"An award presented by the monster-control
+crew in appreciation for defeating every
+Molduga in Hyrule. It's very fancy and is
+shaped like the monster it represents.",-,1,-,モルドラジーク討伐の勲章,"ハイラル中のモルドラジークを全て倒した者に
+討伐隊から感謝の気持ちを込めて贈られる勲章
+モルドラジークをかたどった豪華な品",Obj_DefeatHonor_02,Medium,None,395,033
+Gleeok Monster Medal,#REF!,-,"An award presented by the monster-control
+crew in appreciation for defeating every
+Gleeok in Hyrule. It's very fancy and is
+shaped like the monster it represents.",-,1,-,グリオーク討伐の勲章,"ハイラル中のグリオークを全て倒した者に
+討伐隊から感謝の気持ちを込めて贈られる勲章
+グリオークをかたどった豪華な品",Obj_DefeatHonor_05,Medium,None,390,034
+Frox Monster Medal,#REF!,-,"An award presented by the monster-control
+crew in appreciation for defeating every
+Frox in Hyrule. It's very fancy and is shaped
+like the monster it represents.",-,1,-,デグガーマ討伐の勲章,"ハイラル中のデグガーマを全て倒した者に
+討伐隊から感謝の気持ちを込めて贈られる勲章
+デグガーマをかたどった豪華な品",Obj_DefeatHonor_03,Medium,None,385,035
+Flux Construct Monster Medal,#REF!,-,"An award presented by the monster-control
+crew in appreciation for defeating every
+Flux Construct in Hyrule. It's very fancy and is
+shaped like the monster it represents.",-,1,-,ブロックゴーレム討伐の勲章,"ハイラル中のブロックゴーレムを全て倒した者に
+討伐隊から感謝の気持ちを込めて贈られる勲章
+ブロックゴーレムをかたどった豪華な品",Obj_DefeatHonor_04,Medium,None,380,036
+Towing Harness,#REF!,-,"A durable harness that comes as a set with a
+horse saddle. Attach a wagon or other
+objects to the harness for a horse to tow.",-,1,-,ひっぱりハーネス,"馬のくらとセットになった高強度ハーネス
+資材や荷車をハーネスの後部に連結すれば
+馬で牽引できるようになる",GameRomHorseSaddle_07,Small,None,151,037
+Traveler's Bridle,#REF!,-,"A standard bridle. The design doesn't
+really stand out, which is why it's well
+suited to any type of horse. A favorite
+among peddlers and travelers alike.",-,1,-,旅人の手綱,"馬で旅をするのに適したスタンダードな手綱
+特に目立つ意匠ではないが どんな馬にも合う
+行商人や旅人が愛用するひと品",GameRomHorseReins_01,Small,None,150,038
+Knight's Bridle,#REF!,-,"Hyrulean knights once outfitted their horses
+with this bridle. It boasts additional armor to
+protect the horse's head and neck.",-,1,-,騎士の手綱,"ハイラル城の騎士が使っていたと言われる手綱
+馬の頭部から首を守る装甲も 含まれており
+騎士はこの手入れを欠かさなかったと言われる",GameRomHorseReins_03,Small,None,149,039
+Royal Bridle,#REF!,-,"This bridle is well known for being a favorite
+of the Hyrulean royal family. Its gold
+ornamentations leave an impression, but
+its true value lies in its solid craftsmanship.",-,1,-,王家の手綱,"ハイラル王家御用達の由緒正しい手綱
+各所に付けられた金の装飾が印象的だが 
+作りもとてもしっかりしている",GameRomHorseReins_02,Small,None,148,040
+Extravagant Bridle,#REF!,-,"Most often used in festivals, this gem of a
+bridle is decorated with some charming
+little feathers. It's great for adding just a
+splash of color to any horse.",-,1,-,ゴージャスな手綱,"祭典などで使われる 豪華に装飾された手綱
+頭の羽飾りがチャーミング 
+タテガミもカラフルにして装備したい逸品",GameRomHorseReins_05,Small,None,147,041
+Monster Bridle,#REF!,-,"This bridle was handmade by Kilton, but it
+looks like he may have had some monstrous
+horse in mind when he made it. It includes a
+mask that conceals the horse's head.",-,1,-,マモノの手綱,"キルトンお手製の手綱
+魔物の馬をイメージして作ったらしい
+頭部をすっぽりと覆うフード付き",GameRomHorseReins_04,Small,None,146,042
+Traveler's Saddle,#REF!,-,"A standard saddle designed for comfort
+during long journeys. Its durable material
+holds strong in all sorts of weather, which
+has made it a favorite among travelers.",-,1,-,旅人のくら,"馬で旅をするのに適したスタンダードな くら
+長旅にも耐えられる しっかりした作り
+癖がなくて 多くの旅人に愛用されている",GameRomHorseSaddle_01,Small,None,130,043
+Knight's Saddle,#REF!,-,"Hyrulean knights favored this saddle.
+Only the most elite among them were
+allowed to outfit their mounts with it.",-,1,-,騎士のくら,"ハイラル城の騎士が使っていたと言われる くら
+これを着ける事が許されていたのは
+騎士の馬の中でも 精鋭のみと言われている",GameRomHorseSaddle_03,Small,None,129,044
+Royal Saddle,#REF!,-,"The shimmering emblem design of this saddle
+signifies its origins with the Hyrulean royal
+family. They say Princess Zelda herself once
+used this saddle for her own beloved horse.",-,1,-,王家のくら,"ハイラル王家御用達の由緒正しい くら
+輝く紋章の装飾が特徴的  
+ゼルダ姫の愛馬にも 使われていたと言われている",GameRomHorseSaddle_02,Small,None,128,045
+Extravagant Saddle,#REF!,-,"This ornamental saddle is used in festivals.
+The delicate embroidery and arrangement
+of gems leaves a lasting impression. It's
+perfect for those who want to stand out.",-,1,-,ゴージャスなくら,"祭典などで使われる 豪華に装飾された くら
+丁寧な刺繍や あしらわれた宝石が印象的
+目立ちたい人にオススメの品",GameRomHorseSaddle_05,Small,None,127,046
+Monster Saddle,#REF!,-,"Kilton hand made this saddle. Apparently
+he had some sort of monstrous horse in
+mind as he worked on it. It looks strange
+but is certainly usable.",-,1,-,マモノのくら,"キルトンお手製の くら
+魔物の馬をイメージして作ったらしい
+変わった見た目だが ちゃんと使える",GameRomHorseSaddle_04,Small,None,126,047

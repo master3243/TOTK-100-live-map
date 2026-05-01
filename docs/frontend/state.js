@@ -22,7 +22,9 @@ const {
   zoomValue, cursorValue, liveSaveList, liveSaveCompletedToggleRow, liveSaveCompletedToggle,
   saveStatus, seedCount, locationCount, recipesSummary, lifeSummary, staminaSummary, batterySummary,
   completionistSummary, armorInventorySummary, armorUpgradedSummary, compendiumSummary,
-  pristineWeaponsSummary, fabricsSummary, manualSaveInput, manualSaveStatus, demoSaveButton,
+  pristineWeaponsSummary, fabricsSummary, materialsSummary, keyItemsSummary,
+  questsMainSummary, questsAdventureSummary, questsSideSummary, questsShrineSummary,
+  manualSaveInput, manualSaveStatus, demoSaveButton,
   demoModal, demoModalCancel, demoModalConfirm, markersMenu, saveLoadingOverlay, saveDropLayer,
   sidebarToggle, sidebarBackdrop, sidebarClose, logEntries, viewPlayer,
 } = byId(
@@ -31,7 +33,9 @@ const {
   "zoomValue", "cursorValue", "liveSaveList", "liveSaveCompletedToggleRow", "liveSaveCompletedToggle",
   "saveStatus", "seedCount", "locationCount", "recipesSummary", "lifeSummary", "staminaSummary",
   "batterySummary", "completionistSummary", "armorInventorySummary", "armorUpgradedSummary",
-  "compendiumSummary", "pristineWeaponsSummary", "fabricsSummary", "manualSaveInput", "manualSaveStatus",
+  "compendiumSummary", "pristineWeaponsSummary", "fabricsSummary", "materialsSummary",
+  "keyItemsSummary", "questsMainSummary", "questsAdventureSummary", "questsSideSummary",
+  "questsShrineSummary", "manualSaveInput", "manualSaveStatus",
   "demoSaveButton", "demoModal", "demoModalCancel", "demoModalConfirm", "markersMenu", "saveLoadingOverlay",
   "saveDropLayer", "sidebarToggle", "sidebarBackdrop", "sidebarClose", "logEntries", "viewPlayer",
 );
@@ -86,6 +90,60 @@ const completionStatSummaries = [
     completeText: "All fabrics collected",
     tooltipCompleteText: "All fabrics collected.",
     emptyText: "No fabric data loaded",
+  },
+  {
+    id: "materials",
+    title: "Materials",
+    element: materialsSummary,
+    missingPrefix: "Still missing",
+    completeText: "All materials collected",
+    tooltipCompleteText: "All materials collected.",
+    emptyText: "No material data loaded",
+  },
+  {
+    id: "key_items",
+    title: "Key Items",
+    element: keyItemsSummary,
+    missingPrefix: "Still missing",
+    completeText: "All key items collected",
+    tooltipCompleteText: "All key items collected.",
+    emptyText: "No key item data loaded",
+  },
+  {
+    id: "quests_main",
+    title: "Main Quests",
+    element: questsMainSummary,
+    missingPrefix: "Still left",
+    completeText: "All main quests completed",
+    tooltipCompleteText: "All main quests completed.",
+    emptyText: "No quest data loaded",
+  },
+  {
+    id: "quests_adventure",
+    title: "Side Adventures",
+    element: questsAdventureSummary,
+    missingPrefix: "Still left",
+    completeText: "All side adventures completed",
+    tooltipCompleteText: "All side adventures completed.",
+    emptyText: "No quest data loaded",
+  },
+  {
+    id: "quests_side",
+    title: "Side Quests",
+    element: questsSideSummary,
+    missingPrefix: "Still left",
+    completeText: "All side quests completed",
+    tooltipCompleteText: "All side quests completed.",
+    emptyText: "No quest data loaded",
+  },
+  {
+    id: "quests_shrine",
+    title: "Shrine Quests",
+    element: questsShrineSummary,
+    missingPrefix: "Still left",
+    completeText: "All shrine quests completed",
+    tooltipCompleteText: "All shrine quests completed.",
+    emptyText: "No quest data loaded",
   },
 ];
 const overlayInputs = {
@@ -161,6 +219,10 @@ const buttonZoomFactor = 1.25;
 /** Max zoom when auto-framing the player guide arrow (200%). */
 const playerGuideMaxScale = 2;
 const LIVE_SAVE_ROW_ORDER = [
+  "quests-main",
+  "quests-adventure",
+  "quests-side",
+  "quests-shrine",
   "completionist",
   "seeds",
   "koroks",
@@ -171,14 +233,15 @@ const LIVE_SAVE_ROW_ORDER = [
   "armor-upgraded",
   "compendium",
   "pristine-weapons",
-  "fabrics",
   "recipes",
+  "fabrics",
+  "key-items",
+  "materials",
 ];
 
 const PLAYER_MAX_LIFE_HEARTS = 38;
 const PLAYER_MAX_STAMINA_WHEELS = 3;
 const PLAYER_MAX_BATTERY_CELLS = 48;
-const PLAYER_MAX_RECIPES = 228;
 const playerStatSummaries = [
   {
     element: lifeSummary,

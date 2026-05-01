@@ -34,8 +34,6 @@ RUNTIME_ROOT = runtime_root()
 CONFIG_PATH = RUNTIME_ROOT / "config.json"
 KOROK_DATA_PATH = ROOT / "korok_data.json"
 COMPLETION_DATA_PATH = ROOT / "completion_data.json"
-HASHES_DATA_PATH = ROOT / "references" / "zelda-totk.hashes.csv"
-RECIPE_REFERENCE_IDS_PATH = ROOT / "references" / "recipe_ids_mine_228.txt"
 HOST = "127.0.0.1"
 PORT = 8000
 
@@ -105,7 +103,6 @@ PLAYER_SAVE_POS_HASH = 0xC884818D
 PLAYER_MAX_LIFE_HASH = 0xFBE01DA1  # Int; PlayerStatus.MaxLife
 PLAYER_MAX_STAMINA_HASH = 0xF9212C74  # Float; PlayerStatus.MaxStamina
 PLAYER_MAX_ENERGY_HASH = 0xAFD01D68  # Float; PlayerStatus.MaxEnergy
-MAX_RECIPES = 228
 HYRULE_MIN_X = -6000
 HYRULE_MAX_X = 6000
 HYRULE_MIN_Z = -5000
@@ -122,10 +119,6 @@ _DATA = {
     "korok_data": None,
     "completion_data": None,
     "tracked_hashes": None,
-    "recipe_hashes": None,
-    "recipe_total": None,
-    "recipe_hash_to_id": None,
-    "recipe_reference_ids": None,
     "tracked_save_paths": None,
 }
 
@@ -229,56 +222,15 @@ def load_json(path):
         return json.load(file)
 
 
-def iter_hash_variables():
-    if not HASHES_DATA_PATH.exists():
-        return
-    with HASHES_DATA_PATH.open("r", encoding="utf-8", errors="ignore") as file:
-        for raw_line in file:
-            parts = raw_line.strip().split(";", 2)
-            if len(parts) != 3:
-                continue
-            try:
-                yield int(parts[0], 16), parts[2]
-            except ValueError:
-                continue
-
-
-def load_recipe_hash_to_id() -> dict[int, str]:
-    """Map recipe cooked-flag hash -> recipe id (Item_*)."""
-    mapping: dict[int, str] = {}
-    for hash_value, var in iter_hash_variables() or ():
-        if var.startswith("RecipeCard.Content.Item_") and var.endswith(".IsCooked"):
-            mapping[hash_value] = var[len("RecipeCard.Content.") : -len(".IsCooked")]
-    return mapping
-
-
-def load_recipe_reference_ids() -> set[str]:
-    """Load the canonical 228 recipe IDs to use for intersections."""
-    if not RECIPE_REFERENCE_IDS_PATH.exists():
-        return set()
-    return {
-        line.strip()
-        for line in RECIPE_REFERENCE_IDS_PATH.read_text(encoding="utf-8", errors="ignore").splitlines()
-        if line.strip()
-    }
-
-
 def initialize_data():
     """Load static JSON/reference data and derive the hashes used by save parsing."""
     korok_data = load_json(KOROK_DATA_PATH)
     completion_data = load_json(COMPLETION_DATA_PATH)
-    recipe_hash_to_id = load_recipe_hash_to_id()
-    recipe_hashes = set(recipe_hash_to_id.keys())
-    recipe_reference_ids = load_recipe_reference_ids()
     categories = completion_data["categories"]
     stats = completion_data.get("stats", [])
 
     _DATA["korok_data"] = korok_data
     _DATA["completion_data"] = completion_data
-    _DATA["recipe_hashes"] = recipe_hashes
-    _DATA["recipe_hash_to_id"] = recipe_hash_to_id
-    _DATA["recipe_reference_ids"] = recipe_reference_ids
-    _DATA["recipe_total"] = len(recipe_reference_ids) if recipe_reference_ids else min(len(recipe_hashes), MAX_RECIPES)
     _DATA["tracked_hashes"] = (
         {
             int(entry["hash"], 16)
@@ -296,7 +248,6 @@ def initialize_data():
             for stat in stats
             if stat.get("arrayHash")
         }
-        | recipe_hashes
     )
 
 
@@ -629,6 +580,17 @@ def build_armor_stat(stat, values, data):
     return build_stat_summary(stat, item_state, ("baseId", "upgradedId", "upgradedIds"))
 
 
+def build_inventory_collection_stat(stat, values, data):
+    array_hash = stat.get("arrayHash")
+    pointer = values.get(int(array_hash, 16), None) if array_hash else None
+    pouch_names = set(read_string64_array(data, pointer))
+
+    def item_state(item):
+        return item.get("actorName") in pouch_names, {}
+
+    return build_stat_summary(stat, item_state, ("actorName",))
+
+
 def build_completion_stats(values, data):
     completion_data = _DATA["completion_data"] or {"stats": []}
     stats = []
@@ -636,12 +598,15 @@ def build_completion_stats(values, data):
         if stat["kind"].startswith("armor_"):
             stats.append(build_armor_stat(stat, values, data))
             continue
+        if stat["kind"] == "inventory_collection":
+            stats.append(build_inventory_collection_stat(stat, values, data))
+            continue
 
         def item_state(item, stat=stat):
             obtained, _raw_value, raw = save_item_state(stat, item, values)
-            return obtained, {"rawValue": raw}
+            return obtained, {"rawValue": raw} if raw is not None else {}
 
-        stats.append(build_stat_summary(stat, item_state, ("value",)))
+        stats.append(build_stat_summary(stat, item_state, ("value", "actorName", "questId")))
     return stats
 
 
@@ -657,20 +622,14 @@ def seed_category_summary(completion):
     }
 
 
-def build_recipe_summary(values):
-    recipe_hash_to_id = _DATA.get("recipe_hash_to_id") or {}
-    recipe_reference_ids = _DATA.get("recipe_reference_ids") or set()
-    recipe_total = _DATA.get("recipe_total") or len(recipe_reference_ids) or len(recipe_hash_to_id)
-    cooked_recipe_ids = {
-        recipe_hash_to_id[hash_value]
-        for hash_value in recipe_hash_to_id
-        if values.get(hash_value, 0) != 0
-    }
-    canonical_ids = cooked_recipe_ids & recipe_reference_ids
+def build_recipe_summary(completion_stats):
+    recipes = next((stat for stat in completion_stats if stat["id"] == "recipes"), None)
+    if not recipes:
+        return None
     return {
-        "obtained": len(canonical_ids),
-        "total": recipe_total,
-        "extras": sorted(cooked_recipe_ids - recipe_reference_ids),
+        "obtained": recipes["obtained"],
+        "total": recipes["total"],
+        "extras": [],
     }
 
 
@@ -687,9 +646,9 @@ def build_save_payload(data, save_path, save_modified, snapshot=None):
     guid_values = parse_guid_values(data)
     player_position = parse_player_position(data)
     player_stats = parse_player_max_stats(data)
-    recipes = build_recipe_summary(values)
     completion = build_completion(values, guid_values)
     completion_stats = build_completion_stats(values, data)
+    recipes = build_recipe_summary(completion_stats)
     seed_summary = seed_category_summary(completion)
 
     return {

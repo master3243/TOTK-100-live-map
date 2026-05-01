@@ -15,6 +15,18 @@ MASTER_MAP = REFERENCES / "TOTK master sheet - Map.csv"
 MASTER_MAP_SKIP = ( "_IsCompleted_Exp", "_IsAfter_DungeonBossDead_Exp" )  # Fix map csv
 MASTER_MAP_REPLACE = { "IsVisitLocation.HatenoLab": "IsVisitLocation.HatenoLabo" }  # Fix map csv
 
+MASTER_FOOD = REFERENCES / "TOTK master sheet - Food.csv"
+MASTER_KEY_ITEMS = REFERENCES / "TOTK master sheet - KeyItems.csv"
+MASTER_MATERIALS = REFERENCES / "TOTK master sheet - Materials.csv"
+MASTER_QUESTS = REFERENCES / "TOTK master sheet - Quests.csv"
+QUEST_TYPES = [
+    ("quests_main", "Main Quests", "Main Quest"),
+    ("quests_side", "Side Quests", "Side Quest"),
+    ("quests_adventure", "Side Adventures", "Side Adventure"),
+    ("quests_shrine", "Shrine Quests", "Shrine Quest"),
+]
+QUEST_SKIP = ( "Destroy Ganondorf", "Find Princess Zelda" )  # These two don't complete as the game loads after completing them
+
 TOWER_LOCATION_NAMES = [
     "Lookout Landing",
     "Lindor's Brow",
@@ -83,6 +95,13 @@ STATS = [
     {"id": "armor_upgraded", "label": "Armor (4-star upgraded)", "source": "armor_upgraded", "kind": "armor_upgraded", "includeMissing": True},
     {"id": "pristine_weapons", "label": "Pristine Weapons", "source": "pristine_weapons", "kind": "positive", "includeMissing": True},
     {"id": "fabrics", "label": "Fabrics", "source": "fabrics", "kind": "positive", "includeMissing": True},
+    {"id": "recipes", "label": "Recipes", "source": "master_food", "kind": "positive"},
+    {"id": "materials", "label": "Materials", "source": "master_materials", "kind": "inventory_collection", "includeMissing": True},
+    {"id": "key_items", "label": "Key Items", "source": "master_key_items", "kind": "inventory_collection", "includeMissing": True},
+    *[
+        {"id": stat_id, "label": label, "source": "master_quests", "kind": "positive", "questType": quest_type, "target": "Complete", "includeMissing": True}
+        for stat_id, label, quest_type in QUEST_TYPES
+    ],
 ]
 
 COLLECTABLE_FABRICS = [
@@ -417,6 +436,59 @@ def parse_fabric_items(hashes_text):
     return items
 
 
+def read_master_rows(path):
+    with path.open(encoding="utf-8-sig", newline="") as handle:
+        return list(csv.DictReader(handle))
+
+
+def parse_master_actor_items(path, prefix):
+    items = []
+    for row in read_master_rows(path):
+        actor_name = row["ActorName"].strip()
+        if not actor_name:
+            continue
+        items.append({
+            "id": f"{prefix}-{len(items) + 1:03d}",
+            "label": row.get("Name", "").strip() or actor_name,
+            "actorName": actor_name,
+        })
+    return items
+
+
+def parse_master_recipe_items(path):
+    items = parse_master_actor_items(path, "recipes")
+    for item in items:
+        item["value"] = f"{murmur3_32('RecipeCard.Content.' + item['actorName'] + '.IsCooked'):08x}"
+    return items
+
+
+def parse_master_inventory_items(path, prefix, array_name):
+    return {
+        "arrayHash": f"{murmur3_32(array_name):08x}",
+        "items": parse_master_actor_items(path, prefix),
+    }
+
+
+def parse_master_quest_items(path, quest_type):
+    items = []
+    for row in read_master_rows(path):
+        if row["Type"].strip() != quest_type:
+            continue
+        quest_id = row["ID"].strip()
+        if not quest_id:
+            continue
+        name = row.get("Name", "").strip()
+        if name in QUEST_SKIP:
+            continue
+        items.append({
+            "id": f"quest-{len(items) + 1:03d}",
+            "value": f"{murmur3_32('Step_' + quest_id):08x}",
+            "label": name or quest_id,
+            "questId": quest_id,
+        })
+    return items
+
+
 def parse_hash_csv(hashes_text):
     hashes = {}
     for line in hashes_text.splitlines():
@@ -659,6 +731,16 @@ def main():
             items = parse_pristine_weapon_items(equipment)
         elif stat.get("source") == "fabrics":
             items = parse_fabric_items(hashes)
+        elif stat.get("source") == "master_food":
+            items = parse_master_recipe_items(MASTER_FOOD)
+        elif stat.get("source") == "master_materials":
+            inventory = parse_master_inventory_items(MASTER_MATERIALS, "materials", "Pouch.Material.Content.Name")
+            items = inventory["items"]
+        elif stat.get("source") == "master_key_items":
+            inventory = parse_master_inventory_items(MASTER_KEY_ITEMS, "key_items", "Pouch.KeyItem.Content.Name")
+            items = inventory["items"]
+        elif stat.get("source") == "master_quests":
+            items = parse_master_quest_items(MASTER_QUESTS, stat["questType"])
         elif stat.get("source") == "armor_inventory":
             items = parse_armor_inventory_items(locale)
         elif stat.get("source") == "armor_upgraded":
@@ -682,6 +764,12 @@ def main():
         }
         if stat["kind"].startswith("armor_"):
             stat_entry["arrayHash"] = hash_by_flag["Pouch.Armor.Content.Name"]
+            stat_entry["sourceCounts"]["arrayHash"] = 1
+        elif stat.get("source") == "master_materials":
+            stat_entry["arrayHash"] = inventory["arrayHash"]
+            stat_entry["sourceCounts"]["arrayHash"] = 1
+        elif stat.get("source") == "master_key_items":
+            stat_entry["arrayHash"] = inventory["arrayHash"]
             stat_entry["sourceCounts"]["arrayHash"] = 1
         stats.append(stat_entry)
     OUTPUT.write_text(json.dumps({"categories": categories, "stats": stats}, indent=2), encoding="utf-8")

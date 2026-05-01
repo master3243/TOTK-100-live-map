@@ -25323,6 +25323,4488 @@
       "sourceCounts": {
         "ids": 29
       }
+    },
+    {
+      "id": "recipes",
+      "label": "Recipes",
+      "kind": "positive",
+      "targetValue": null,
+      "includeMissing": false,
+      "items": [
+        {
+          "id": "recipes-001",
+          "label": "Mushroom Skewer",
+          "actorName": "Item_Cook_A_01",
+          "value": "06cf4ee2"
+        },
+        {
+          "id": "recipes-002",
+          "label": "Meat and Mushroom Skewer",
+          "actorName": "Item_Cook_A_09",
+          "value": "a74d3445"
+        },
+        {
+          "id": "recipes-003",
+          "label": "Fish and Mushroom Skewer",
+          "actorName": "Item_Cook_A_08",
+          "value": "5de12cab"
+        },
+        {
+          "id": "recipes-004",
+          "label": "Meat Skewer",
+          "actorName": "Item_Cook_B_06",
+          "value": "4b375fb9"
+        },
+        {
+          "id": "recipes-005",
+          "label": "Fish Skewer",
+          "actorName": "Item_Cook_B_05",
+          "value": "c24f141d"
+        },
+        {
+          "id": "recipes-006",
+          "label": "Seafood Skewer",
+          "actorName": "Item_Cook_B_23",
+          "value": "62e1d324"
+        },
+        {
+          "id": "recipes-007",
+          "label": "Copious Meat Skewers",
+          "actorName": "Item_Cook_B_16",
+          "value": "18f95b70"
+        },
+        {
+          "id": "recipes-008",
+          "label": "Copious Seafood Skewers",
+          "actorName": "Item_Cook_B_15",
+          "value": "573898f0"
+        },
+        {
+          "id": "recipes-009",
+          "label": "Steamed Fruit",
+          "actorName": "Item_Cook_A_03",
+          "value": "45bca15a"
+        },
+        {
+          "id": "recipes-010",
+          "label": "Steamed Tomatoes",
+          "actorName": "Item_Cook_Q_03",
+          "value": "b315929a"
+        },
+        {
+          "id": "recipes-011",
+          "label": "Steamed Mushrooms",
+          "actorName": "Item_Cook_A_02",
+          "value": "bb1e84e6"
+        },
+        {
+          "id": "recipes-012",
+          "label": "Steamed Meat",
+          "actorName": "Item_Cook_A_05",
+          "value": "2b2a7339"
+        },
+        {
+          "id": "recipes-013",
+          "label": "Steamed Fish",
+          "actorName": "Item_Cook_A_04",
+          "value": "3ea37adb"
+        },
+        {
+          "id": "recipes-014",
+          "label": "Saut\u00e9ed Peppers",
+          "actorName": "Item_Cook_B_21",
+          "value": "5ce28ae0"
+        },
+        {
+          "id": "recipes-015",
+          "label": "Saut\u00e9ed Nuts",
+          "actorName": "Item_Cook_B_22",
+          "value": "559dfda0"
+        },
+        {
+          "id": "recipes-016",
+          "label": "Fried Wild Greens",
+          "actorName": "Item_Cook_B_01",
+          "value": "048ab94f"
+        },
+        {
+          "id": "recipes-017",
+          "label": "Copious Fried Wild Greens",
+          "actorName": "Item_Cook_B_11",
+          "value": "1c20e17c"
+        },
+        {
+          "id": "recipes-018",
+          "label": "Cooked Stambulb",
+          "actorName": "Item_Cook_Q_06",
+          "value": "25ce0a48"
+        },
+        {
+          "id": "recipes-019",
+          "label": "Buttered Stambulb",
+          "actorName": "Item_Cook_Q_07",
+          "value": "4fa74b1e"
+        },
+        {
+          "id": "recipes-020",
+          "label": "Copious Mushroom Skewers",
+          "actorName": "Item_Cook_B_13",
+          "value": "48c1eca8"
+        },
+        {
+          "id": "recipes-021",
+          "label": "Spiced Meat Skewer",
+          "actorName": "Item_Cook_P_03",
+          "value": "dff22304"
+        },
+        {
+          "id": "recipes-022",
+          "label": "Prime Spiced Meat Skewer",
+          "actorName": "Item_Cook_P_04",
+          "value": "86a1f5a5"
+        },
+        {
+          "id": "recipes-023",
+          "label": "Gourmet Spiced Meat Skewer",
+          "actorName": "Item_Cook_P_05",
+          "value": "445b2a1a"
+        },
+        {
+          "id": "recipes-024",
+          "label": "Crab Stir-Fry",
+          "actorName": "Item_Cook_D_10",
+          "value": "33129e18"
+        },
+        {
+          "id": "recipes-025",
+          "label": "Meat and Seafood Fry",
+          "actorName": "Item_Cook_B_17",
+          "value": "cd035d10"
+        },
+        {
+          "id": "recipes-026",
+          "label": "Prime Meat and Seafood Fry",
+          "actorName": "Item_Cook_B_18",
+          "value": "96b2d574"
+        },
+        {
+          "id": "recipes-027",
+          "label": "Gourmet Meat and Seafood Fry",
+          "actorName": "Item_Cook_B_19",
+          "value": "c21ff8cb"
+        },
+        {
+          "id": "recipes-028",
+          "label": "Salt-Grilled Greens",
+          "actorName": "Item_Cook_D_02",
+          "value": "fa7e7630"
+        },
+        {
+          "id": "recipes-029",
+          "label": "Salt-Grilled Mushrooms",
+          "actorName": "Item_Cook_D_01",
+          "value": "6d2d8132"
+        },
+        {
+          "id": "recipes-030",
+          "label": "Salt-Grilled Meat",
+          "actorName": "Item_Cook_D_04",
+          "value": "4c624cd0"
+        },
+        {
+          "id": "recipes-031",
+          "label": "Salt-Grilled Prime Meat",
+          "actorName": "Item_Cook_D_05",
+          "value": "7d1e5e4c"
+        },
+        {
+          "id": "recipes-032",
+          "label": "Salt-Grilled Gourmet Meat",
+          "actorName": "Item_Cook_D_06",
+          "value": "6e331694"
+        },
+        {
+          "id": "recipes-033",
+          "label": "Salt-Grilled Fish",
+          "actorName": "Item_Cook_D_03",
+          "value": "36ec5921"
+        },
+        {
+          "id": "recipes-034",
+          "label": "Salt-Grilled Crab",
+          "actorName": "Item_Cook_D_09",
+          "value": "f7a788f9"
+        },
+        {
+          "id": "recipes-035",
+          "label": "Herb Saut\u00e9",
+          "actorName": "Item_Cook_P_02",
+          "value": "52b664b7"
+        },
+        {
+          "id": "recipes-036",
+          "label": "Fragrant Mushroom Saut\u00e9",
+          "actorName": "Item_Cook_P_01",
+          "value": "51431a07"
+        },
+        {
+          "id": "recipes-037",
+          "label": "Pepper Steak",
+          "actorName": "Item_Cook_D_07",
+          "value": "444621b6"
+        },
+        {
+          "id": "recipes-038",
+          "label": "Pepper Seafood",
+          "actorName": "Item_Cook_D_08",
+          "value": "126688f0"
+        },
+        {
+          "id": "recipes-039",
+          "label": "Fragrant Seafood Stew",
+          "actorName": "Item_Cook_R_05",
+          "value": "c8eab835"
+        },
+        {
+          "id": "recipes-040",
+          "label": "Deep-Fried Drumstick",
+          "actorName": "Item_Cook_R_06",
+          "value": "0665586c"
+        },
+        {
+          "id": "recipes-041",
+          "label": "Deep-Fried Thigh",
+          "actorName": "Item_Cook_R_07",
+          "value": "0f6247cc"
+        },
+        {
+          "id": "recipes-042",
+          "label": "Deep-Fried Bird Roast",
+          "actorName": "Item_Cook_R_08",
+          "value": "9ee5394f"
+        },
+        {
+          "id": "recipes-043",
+          "label": "Seafood Meuni\u00e8re",
+          "actorName": "Item_Cook_H_01",
+          "value": "6a631e97"
+        },
+        {
+          "id": "recipes-044",
+          "label": "Porgy Meuni\u00e8re",
+          "actorName": "Item_Cook_H_02",
+          "value": "944288c8"
+        },
+        {
+          "id": "recipes-045",
+          "label": "Salmon Meuni\u00e8re",
+          "actorName": "Item_Cook_H_03",
+          "value": "0feaab4c"
+        },
+        {
+          "id": "recipes-046",
+          "label": "Fruit and Mushroom Mix",
+          "actorName": "Item_Cook_A_07",
+          "value": "8e862484"
+        },
+        {
+          "id": "recipes-047",
+          "label": "Simmered Fruit",
+          "actorName": "Item_Cook_B_02",
+          "value": "ded4c5fa"
+        },
+        {
+          "id": "recipes-048",
+          "label": "Copious Simmered Fruit",
+          "actorName": "Item_Cook_B_12",
+          "value": "e6b91606"
+        },
+        {
+          "id": "recipes-049",
+          "label": "Simmered Tomato",
+          "actorName": "Item_Cook_Q_01",
+          "value": "f3f347da"
+        },
+        {
+          "id": "recipes-050",
+          "label": "Fruity Tomato Stew",
+          "actorName": "Item_Cook_Q_02",
+          "value": "3ef84cac"
+        },
+        {
+          "id": "recipes-051",
+          "label": "Tomato Mushroom Stew",
+          "actorName": "Item_Cook_Q_04",
+          "value": "51498c65"
+        },
+        {
+          "id": "recipes-052",
+          "label": "Tomato Seafood Soup",
+          "actorName": "Item_Cook_Q_05",
+          "value": "4ecc4d7d"
+        },
+        {
+          "id": "recipes-053",
+          "label": "Cream of Vegetable Soup",
+          "actorName": "Item_Cook_K_07",
+          "value": "c8299fcd"
+        },
+        {
+          "id": "recipes-054",
+          "label": "Veggie Cream Soup",
+          "actorName": "Item_Cook_F_03",
+          "value": "aa0e0904"
+        },
+        {
+          "id": "recipes-055",
+          "label": "Cream of Mushroom Soup",
+          "actorName": "Item_Cook_K_06",
+          "value": "d2679b9a"
+        },
+        {
+          "id": "recipes-056",
+          "label": "Creamy Meat Soup",
+          "actorName": "Item_Cook_F_01",
+          "value": "587b1a50"
+        },
+        {
+          "id": "recipes-057",
+          "label": "Creamy Seafood Soup",
+          "actorName": "Item_Cook_F_02",
+          "value": "5e4ca09b"
+        },
+        {
+          "id": "recipes-058",
+          "label": "Snail Chowder",
+          "actorName": "Item_Cook_K_04",
+          "value": "98abd5b4"
+        },
+        {
+          "id": "recipes-059",
+          "label": "Creamy Heart Soup",
+          "actorName": "Item_Cook_F_04",
+          "value": "b139c9cf"
+        },
+        {
+          "id": "recipes-060",
+          "label": "Glazed Veggies",
+          "actorName": "Item_Cook_A_14",
+          "value": "cc25a71f"
+        },
+        {
+          "id": "recipes-061",
+          "label": "Glazed Mushrooms",
+          "actorName": "Item_Cook_A_11",
+          "value": "29e1271e"
+        },
+        {
+          "id": "recipes-062",
+          "label": "Glazed Meat",
+          "actorName": "Item_Cook_A_12",
+          "value": "1c3f1d27"
+        },
+        {
+          "id": "recipes-063",
+          "label": "Glazed Seafood",
+          "actorName": "Item_Cook_A_13",
+          "value": "d2323fec"
+        },
+        {
+          "id": "recipes-064",
+          "label": "Curry Rice",
+          "actorName": "Item_Cook_J_01",
+          "value": "eb9eac34"
+        },
+        {
+          "id": "recipes-065",
+          "label": "Vegetable Curry",
+          "actorName": "Item_Cook_J_02",
+          "value": "fb8436d6"
+        },
+        {
+          "id": "recipes-066",
+          "label": "Meat Curry",
+          "actorName": "Item_Cook_J_06",
+          "value": "731b2a59"
+        },
+        {
+          "id": "recipes-067",
+          "label": "Prime Meat Curry",
+          "actorName": "Item_Cook_J_07",
+          "value": "03001da8"
+        },
+        {
+          "id": "recipes-068",
+          "label": "Gourmet Meat Curry",
+          "actorName": "Item_Cook_J_09",
+          "value": "5c82fabb"
+        },
+        {
+          "id": "recipes-069",
+          "label": "Poultry Curry",
+          "actorName": "Item_Cook_J_04",
+          "value": "936fc426"
+        },
+        {
+          "id": "recipes-070",
+          "label": "Prime Poultry Curry",
+          "actorName": "Item_Cook_J_05",
+          "value": "524e2281"
+        },
+        {
+          "id": "recipes-071",
+          "label": "Gourmet Poultry Curry",
+          "actorName": "Item_Cook_J_08",
+          "value": "1d6cc1e8"
+        },
+        {
+          "id": "recipes-072",
+          "label": "Seafood Curry",
+          "actorName": "Item_Cook_J_03",
+          "value": "4c5c8f60"
+        },
+        {
+          "id": "recipes-073",
+          "label": "Cheesy Curry",
+          "actorName": "Item_Cook_S_01",
+          "value": "ea36128b"
+        },
+        {
+          "id": "recipes-074",
+          "label": "Carrot Stew",
+          "actorName": "Item_Cook_K_08",
+          "value": "517e18cc"
+        },
+        {
+          "id": "recipes-075",
+          "label": "Pumpkin Stew",
+          "actorName": "Item_Cook_K_03",
+          "value": "95321cc8"
+        },
+        {
+          "id": "recipes-076",
+          "label": "Meat Stew",
+          "actorName": "Item_Cook_K_01",
+          "value": "f354fc7d"
+        },
+        {
+          "id": "recipes-077",
+          "label": "Prime Meat Stew",
+          "actorName": "Item_Cook_K_02",
+          "value": "5a9f702d"
+        },
+        {
+          "id": "recipes-078",
+          "label": "Gourmet Meat Stew",
+          "actorName": "Item_Cook_K_05",
+          "value": "467d83e8"
+        },
+        {
+          "id": "recipes-079",
+          "label": "Meat-Stuffed Pumpkin",
+          "actorName": "Item_Cook_B_20",
+          "value": "b9e9de34"
+        },
+        {
+          "id": "recipes-080",
+          "label": "Vegetable Risotto",
+          "actorName": "Item_Cook_G_13",
+          "value": "4636bcfb"
+        },
+        {
+          "id": "recipes-081",
+          "label": "Mushroom Risotto",
+          "actorName": "Item_Cook_G_12",
+          "value": "4cd12a00"
+        },
+        {
+          "id": "recipes-082",
+          "label": "Salmon Risotto",
+          "actorName": "Item_Cook_G_14",
+          "value": "3a3b377c"
+        },
+        {
+          "id": "recipes-083",
+          "label": "Crab Risotto",
+          "actorName": "Item_Cook_G_17",
+          "value": "3c383f55"
+        },
+        {
+          "id": "recipes-084",
+          "label": "Cheesy Risotto",
+          "actorName": "Item_Cook_Q_10",
+          "value": "6982a921"
+        },
+        {
+          "id": "recipes-085",
+          "label": "Poultry Pilaf",
+          "actorName": "Item_Cook_E_01",
+          "value": "4cd47993"
+        },
+        {
+          "id": "recipes-086",
+          "label": "Prime Poultry Pilaf",
+          "actorName": "Item_Cook_E_02",
+          "value": "8faa380f"
+        },
+        {
+          "id": "recipes-087",
+          "label": "Gourmet Poultry Pilaf",
+          "actorName": "Item_Cook_E_03",
+          "value": "ccf0df1f"
+        },
+        {
+          "id": "recipes-088",
+          "label": "Seafood Paella",
+          "actorName": "Item_Cook_N_01",
+          "value": "85025707"
+        },
+        {
+          "id": "recipes-089",
+          "label": "Curry Pilaf",
+          "actorName": "Item_Cook_G_11",
+          "value": "fa386a56"
+        },
+        {
+          "id": "recipes-090",
+          "label": "Fried Egg and Rice",
+          "actorName": "Item_Cook_E_04",
+          "value": "21991e19"
+        },
+        {
+          "id": "recipes-091",
+          "label": "Crunchy Fried Rice",
+          "actorName": "Item_Cook_Q_08",
+          "value": "249d2a33"
+        },
+        {
+          "id": "recipes-092",
+          "label": "Seafood Fried Rice",
+          "actorName": "Item_Cook_G_10",
+          "value": "521e68d9"
+        },
+        {
+          "id": "recipes-093",
+          "label": "Crab Omelet with Rice",
+          "actorName": "Item_Cook_G_16",
+          "value": "6013ab68"
+        },
+        {
+          "id": "recipes-094",
+          "label": "Meat and Rice Bowl",
+          "actorName": "Item_Cook_G_05",
+          "value": "49c80e98"
+        },
+        {
+          "id": "recipes-095",
+          "label": "Prime Meat and Rice Bowl",
+          "actorName": "Item_Cook_G_06",
+          "value": "ebe52bc3"
+        },
+        {
+          "id": "recipes-096",
+          "label": "Gourmet Meat and Rice Bowl",
+          "actorName": "Item_Cook_G_09",
+          "value": "afaca91a"
+        },
+        {
+          "id": "recipes-097",
+          "label": "Cheesy Meat Bowl",
+          "actorName": "Item_Cook_S_02",
+          "value": "52b5cd3d"
+        },
+        {
+          "id": "recipes-098",
+          "label": "Prime Cheesy Meat Bowl",
+          "actorName": "Item_Cook_S_03",
+          "value": "ac60dcb6"
+        },
+        {
+          "id": "recipes-099",
+          "label": "Gourmet Cheesy Meat Bowl",
+          "actorName": "Item_Cook_S_04",
+          "value": "aeb089d6"
+        },
+        {
+          "id": "recipes-100",
+          "label": "Veggie Rice Balls",
+          "actorName": "Item_Cook_G_03",
+          "value": "eff22a3d"
+        },
+        {
+          "id": "recipes-101",
+          "label": "Mushroom Rice Balls",
+          "actorName": "Item_Cook_G_04",
+          "value": "d45cb5c2"
+        },
+        {
+          "id": "recipes-102",
+          "label": "Meaty Rice Balls",
+          "actorName": "Item_Cook_G_15",
+          "value": "be3b9d64"
+        },
+        {
+          "id": "recipes-103",
+          "label": "Seafood Rice Balls",
+          "actorName": "Item_Cook_G_02",
+          "value": "e4bed787"
+        },
+        {
+          "id": "recipes-104",
+          "label": "Veggie Porridge",
+          "actorName": "Item_Cook_R_02",
+          "value": "5b44b1ae"
+        },
+        {
+          "id": "recipes-105",
+          "label": "Wheat Bread",
+          "actorName": "Item_Cook_M_01",
+          "value": "0ef9a906"
+        },
+        {
+          "id": "recipes-106",
+          "label": "Melty Cheesy Bread",
+          "actorName": "Item_Cook_R_09",
+          "value": "b683439e"
+        },
+        {
+          "id": "recipes-107",
+          "label": "Hylian Tomato Pizza",
+          "actorName": "Item_Cook_R_04",
+          "value": "6a94f697"
+        },
+        {
+          "id": "recipes-108",
+          "label": "Meat Pie",
+          "actorName": "Item_Cook_I_04",
+          "value": "1ee4deff"
+        },
+        {
+          "id": "recipes-109",
+          "label": "Fish Pie",
+          "actorName": "Item_Cook_I_15",
+          "value": "5370c9c4"
+        },
+        {
+          "id": "recipes-110",
+          "label": "Cheesy Tomato",
+          "actorName": "Item_Cook_S_10",
+          "value": "23fb65e5"
+        },
+        {
+          "id": "recipes-111",
+          "label": "Cheesy Baked Fish",
+          "actorName": "Item_Cook_R_10",
+          "value": "c1aae3ca"
+        },
+        {
+          "id": "recipes-112",
+          "label": "Omelet",
+          "actorName": "Item_Cook_A_10",
+          "value": "18d641fd"
+        },
+        {
+          "id": "recipes-113",
+          "label": "Vegetable Omelet",
+          "actorName": "Item_Cook_N_03",
+          "value": "d851a612"
+        },
+        {
+          "id": "recipes-114",
+          "label": "Mushroom Omelet",
+          "actorName": "Item_Cook_N_04",
+          "value": "2bdeb50c"
+        },
+        {
+          "id": "recipes-115",
+          "label": "Cheesy Omelet",
+          "actorName": "Item_Cook_R_01",
+          "value": "8385f579"
+        },
+        {
+          "id": "recipes-116",
+          "label": "Hot Buttered Apple",
+          "actorName": "Item_Cook_I_07",
+          "value": "d50522eb"
+        },
+        {
+          "id": "recipes-117",
+          "label": "Honeyed Fruits",
+          "actorName": "Item_Cook_I_09",
+          "value": "a20918ee"
+        },
+        {
+          "id": "recipes-118",
+          "label": "Honeyed Apple",
+          "actorName": "Item_Cook_I_08",
+          "value": "dd44b2ec"
+        },
+        {
+          "id": "recipes-119",
+          "label": "Honey Candy",
+          "actorName": "Item_Cook_I_16",
+          "value": "834aa704"
+        },
+        {
+          "id": "recipes-120",
+          "label": "Fried Bananas",
+          "actorName": "Item_Cook_I_13",
+          "value": "95027ec3"
+        },
+        {
+          "id": "recipes-121",
+          "label": "Egg Pudding",
+          "actorName": "Item_Cook_I_14",
+          "value": "fe24c966"
+        },
+        {
+          "id": "recipes-122",
+          "label": "Plain Crepe",
+          "actorName": "Item_Cook_I_10",
+          "value": "cb544366"
+        },
+        {
+          "id": "recipes-123",
+          "label": "Wildberry Crepe",
+          "actorName": "Item_Cook_I_11",
+          "value": "eaa7501d"
+        },
+        {
+          "id": "recipes-124",
+          "label": "Honey Crepe",
+          "actorName": "Item_Cook_I_17",
+          "value": "755afdff"
+        },
+        {
+          "id": "recipes-125",
+          "label": "Nutcake",
+          "actorName": "Item_Cook_I_12",
+          "value": "e39df4aa"
+        },
+        {
+          "id": "recipes-126",
+          "label": "Fruitcake",
+          "actorName": "Item_Cook_N_02",
+          "value": "efa6766d"
+        },
+        {
+          "id": "recipes-127",
+          "label": "Carrot Cake",
+          "actorName": "Item_Cook_I_05",
+          "value": "38b9d435"
+        },
+        {
+          "id": "recipes-128",
+          "label": "Pumpkin Pie",
+          "actorName": "Item_Cook_I_06",
+          "value": "ec347967"
+        },
+        {
+          "id": "recipes-129",
+          "label": "Cheesecake",
+          "actorName": "Item_Cook_Q_09",
+          "value": "f0b46fc1"
+        },
+        {
+          "id": "recipes-130",
+          "label": "Fruit Pie",
+          "actorName": "Item_Cook_I_01",
+          "value": "377a6737"
+        },
+        {
+          "id": "recipes-131",
+          "label": "Apple Pie",
+          "actorName": "Item_Cook_I_02",
+          "value": "9f88a4ed"
+        },
+        {
+          "id": "recipes-132",
+          "label": "Egg Tart",
+          "actorName": "Item_Cook_I_03",
+          "value": "ec34577c"
+        },
+        {
+          "id": "recipes-133",
+          "label": "Milk",
+          "actorName": "Item_Cook_K_09",
+          "value": "68312bf1"
+        },
+        {
+          "id": "recipes-134",
+          "label": "Noble Pursuit",
+          "actorName": "Item_Cook_R_03",
+          "value": "e40ad6b8"
+        },
+        {
+          "id": "recipes-135",
+          "label": "Monster Stew",
+          "actorName": "Item_Cook_L_01",
+          "value": "bd443c07"
+        },
+        {
+          "id": "recipes-136",
+          "label": "Monster Soup",
+          "actorName": "Item_Cook_L_02",
+          "value": "9f6fa6c1"
+        },
+        {
+          "id": "recipes-137",
+          "label": "Monster Curry",
+          "actorName": "Item_Cook_L_05",
+          "value": "404e8b34"
+        },
+        {
+          "id": "recipes-138",
+          "label": "Monster Rice Balls",
+          "actorName": "Item_Cook_L_04",
+          "value": "1bb09ee7"
+        },
+        {
+          "id": "recipes-139",
+          "label": "Monster Cake",
+          "actorName": "Item_Cook_L_03",
+          "value": "0d04e233"
+        },
+        {
+          "id": "recipes-140",
+          "label": "Dark Stew",
+          "actorName": "Item_Cook_S_05",
+          "value": "747556c5"
+        },
+        {
+          "id": "recipes-141",
+          "label": "Dark Soup",
+          "actorName": "Item_Cook_S_07",
+          "value": "6668774c"
+        },
+        {
+          "id": "recipes-142",
+          "label": "Dark Curry",
+          "actorName": "Item_Cook_S_08",
+          "value": "c3351b70"
+        },
+        {
+          "id": "recipes-143",
+          "label": "Dark Rice Ball",
+          "actorName": "Item_Cook_S_06",
+          "value": "29631796"
+        },
+        {
+          "id": "recipes-144",
+          "label": "Dark Cake",
+          "actorName": "Item_Cook_S_09",
+          "value": "ec1cc77b"
+        },
+        {
+          "id": "recipes-145",
+          "label": "Dubious Food",
+          "actorName": "Item_Cook_O_01",
+          "value": "c09f0ab7"
+        },
+        {
+          "id": "recipes-146",
+          "label": "Rock-Hard Food",
+          "actorName": "Item_Cook_O_02",
+          "value": "cdc39e85"
+        },
+        {
+          "id": "recipes-147",
+          "label": "Baked Apple",
+          "actorName": "Item_Roast_03",
+          "value": "85597496"
+        },
+        {
+          "id": "recipes-148",
+          "label": "Baked Golden Apple",
+          "actorName": "Item_Roast_59",
+          "value": "ad7306e8"
+        },
+        {
+          "id": "recipes-149",
+          "label": "Charred Pepper",
+          "actorName": "Item_Roast_13",
+          "value": "f9b59436"
+        },
+        {
+          "id": "recipes-150",
+          "label": "Roasted Hylian Tomato",
+          "actorName": "Item_Roast_54",
+          "value": "5e6224ba"
+        },
+        {
+          "id": "recipes-151",
+          "label": "Roasted Wildberry",
+          "actorName": "Item_Roast_07",
+          "value": "adc73b18"
+        },
+        {
+          "id": "recipes-152",
+          "label": "Roasted Voltfruit",
+          "actorName": "Item_Roast_08",
+          "value": "3bcfcf00"
+        },
+        {
+          "id": "recipes-153",
+          "label": "Roasted Hydromelon",
+          "actorName": "Item_Roast_12",
+          "value": "9e01d2a0"
+        },
+        {
+          "id": "recipes-154",
+          "label": "Baked Palm Fruit",
+          "actorName": "Item_Roast_10",
+          "value": "03d323d2"
+        },
+        {
+          "id": "recipes-155",
+          "label": "Roasted Mighty Bananas",
+          "actorName": "Item_Roast_11",
+          "value": "467e3440"
+        },
+        {
+          "id": "recipes-156",
+          "label": "Roasted Lotus Seeds",
+          "actorName": "Item_Roast_16",
+          "value": "a59254e1"
+        },
+        {
+          "id": "recipes-157",
+          "label": "Roasted Mighty Thistle",
+          "actorName": "Item_Roast_27",
+          "value": "4fe05f3f"
+        },
+        {
+          "id": "recipes-158",
+          "label": "Roasted Armoranth",
+          "actorName": "Item_Roast_28",
+          "value": "ad3cf2ec"
+        },
+        {
+          "id": "recipes-159",
+          "label": "Roasted Swift Carrot",
+          "actorName": "Item_Roast_24",
+          "value": "ff8587b1"
+        },
+        {
+          "id": "recipes-160",
+          "label": "Roasted Endura Carrot",
+          "actorName": "Item_Roast_50",
+          "value": "e7ab5501"
+        },
+        {
+          "id": "recipes-161",
+          "label": "Baked Fortified Pumpkin",
+          "actorName": "Item_Roast_15",
+          "value": "0464562f"
+        },
+        {
+          "id": "recipes-162",
+          "label": "Baked Sun Pumpkin",
+          "actorName": "Item_Roast_55",
+          "value": "3b02dbd8"
+        },
+        {
+          "id": "recipes-163",
+          "label": "Roasted Radish",
+          "actorName": "Item_Roast_18",
+          "value": "5560b95f"
+        },
+        {
+          "id": "recipes-164",
+          "label": "Roasted Big Radish",
+          "actorName": "Item_Roast_19",
+          "value": "284ba43c"
+        },
+        {
+          "id": "recipes-165",
+          "label": "Toasty Skyshroom",
+          "actorName": "Item_Roast_56",
+          "value": "12c3cc61"
+        },
+        {
+          "id": "recipes-166",
+          "label": "Toasty Hylian Shroom",
+          "actorName": "Item_Roast_06",
+          "value": "c7859ecc"
+        },
+        {
+          "id": "recipes-167",
+          "label": "Toasty Stamella Shroom",
+          "actorName": "Item_Roast_04",
+          "value": "6c7601bc"
+        },
+        {
+          "id": "recipes-168",
+          "label": "Toasty Rushroom",
+          "actorName": "Item_Roast_36",
+          "value": "cdfe8e26"
+        },
+        {
+          "id": "recipes-169",
+          "label": "Toasty Sunshroom",
+          "actorName": "Item_Roast_32",
+          "value": "57e4a7db"
+        },
+        {
+          "id": "recipes-170",
+          "label": "Toasty Chillshroom",
+          "actorName": "Item_Roast_31",
+          "value": "83937c3d"
+        },
+        {
+          "id": "recipes-171",
+          "label": "Toasty Zapshroom",
+          "actorName": "Item_Roast_33",
+          "value": "d79a7c42"
+        },
+        {
+          "id": "recipes-172",
+          "label": "Toasty Razorshroom",
+          "actorName": "Item_Roast_37",
+          "value": "0a54dad3"
+        },
+        {
+          "id": "recipes-173",
+          "label": "Toasty Ironshroom",
+          "actorName": "Item_Roast_38",
+          "value": "49c78fc8"
+        },
+        {
+          "id": "recipes-174",
+          "label": "Toasty Silent Shroom",
+          "actorName": "Item_Roast_39",
+          "value": "ddd3c706"
+        },
+        {
+          "id": "recipes-175",
+          "label": "Toasty Brightcap",
+          "actorName": "Item_Roast_58",
+          "value": "2768c495"
+        },
+        {
+          "id": "recipes-176",
+          "label": "Toasty Endura Shroom",
+          "actorName": "Item_Roast_53",
+          "value": "a8a3aacc"
+        },
+        {
+          "id": "recipes-177",
+          "label": "Toasted Hearty Truffle",
+          "actorName": "Item_Roast_05",
+          "value": "a9e208ac"
+        },
+        {
+          "id": "recipes-178",
+          "label": "Toasted Big Hearty Truffle",
+          "actorName": "Item_Roast_49",
+          "value": "211c431f"
+        },
+        {
+          "id": "recipes-179",
+          "label": "Seared Steak",
+          "actorName": "Item_Roast_01",
+          "value": "66fd9405"
+        },
+        {
+          "id": "recipes-180",
+          "label": "Seared Prime Steak",
+          "actorName": "Item_Roast_40",
+          "value": "8bc93c77"
+        },
+        {
+          "id": "recipes-181",
+          "label": "Seared Gourmet Steak",
+          "actorName": "Item_Roast_45",
+          "value": "070e12f2"
+        },
+        {
+          "id": "recipes-182",
+          "label": "Roasted Bird Drumstick",
+          "actorName": "Item_Roast_02",
+          "value": "535b10da"
+        },
+        {
+          "id": "recipes-183",
+          "label": "Roasted Bird Thigh",
+          "actorName": "Item_Roast_41",
+          "value": "a596d612"
+        },
+        {
+          "id": "recipes-184",
+          "label": "Roasted Whole Bird",
+          "actorName": "Item_Roast_46",
+          "value": "c13017d7"
+        },
+        {
+          "id": "recipes-185",
+          "label": "Roasted Arowana",
+          "actorName": "Item_RoastFish_16",
+          "value": "6b68913c"
+        },
+        {
+          "id": "recipes-186",
+          "label": "Roasted Bass",
+          "actorName": "Item_RoastFish_01",
+          "value": "8bf5379f"
+        },
+        {
+          "id": "recipes-187",
+          "label": "Roasted Trout",
+          "actorName": "Item_RoastFish_03",
+          "value": "9604b57f"
+        },
+        {
+          "id": "recipes-188",
+          "label": "Roasted Carp",
+          "actorName": "Item_RoastFish_07",
+          "value": "405f2e6e"
+        },
+        {
+          "id": "recipes-189",
+          "label": "Roasted Porgy",
+          "actorName": "Item_RoastFish_09",
+          "value": "4b8b6af1"
+        },
+        {
+          "id": "recipes-190",
+          "label": "Roasted Cave Fish",
+          "actorName": "Item_RoastFish_18",
+          "value": "7256813b"
+        },
+        {
+          "id": "recipes-191",
+          "label": "Roasted Hearty Bass",
+          "actorName": "Item_RoastFish_02",
+          "value": "ab705d79"
+        },
+        {
+          "id": "recipes-192",
+          "label": "Roasted Hearty Salmon",
+          "actorName": "Item_RoastFish_04",
+          "value": "3bc5998d"
+        },
+        {
+          "id": "recipes-193",
+          "label": "Blackened Crab",
+          "actorName": "Item_RoastFish_15",
+          "value": "50671c8d"
+        },
+        {
+          "id": "recipes-194",
+          "label": "Sneaky River Escargot",
+          "actorName": "Item_RoastFish_13",
+          "value": "ec5e8bc1"
+        },
+        {
+          "id": "recipes-195",
+          "label": "Roasted Tree Nut",
+          "actorName": "Item_Roast_52",
+          "value": "3f2f5aac"
+        },
+        {
+          "id": "recipes-196",
+          "label": "Roasted Acorn",
+          "actorName": "Item_Roast_48",
+          "value": "66896142"
+        },
+        {
+          "id": "recipes-197",
+          "label": "Campfire Egg",
+          "actorName": "Item_Roast_51",
+          "value": "1455602e"
+        },
+        {
+          "id": "recipes-198",
+          "label": "Hard-Boiled Egg",
+          "actorName": "Item_Boiled_01",
+          "value": "f1ae4acf"
+        },
+        {
+          "id": "recipes-199",
+          "label": "Icy Meat",
+          "actorName": "Item_Chilled_01",
+          "value": "112b085a"
+        },
+        {
+          "id": "recipes-200",
+          "label": "Icy Prime Meat",
+          "actorName": "Item_Chilled_02",
+          "value": "27609ced"
+        },
+        {
+          "id": "recipes-201",
+          "label": "Icy Gourmet Meat",
+          "actorName": "Item_Chilled_03",
+          "value": "7bfd539e"
+        },
+        {
+          "id": "recipes-202",
+          "label": "Frozen Bird Drumstick",
+          "actorName": "Item_Chilled_04",
+          "value": "07836df0"
+        },
+        {
+          "id": "recipes-203",
+          "label": "Frozen Bird Thigh",
+          "actorName": "Item_Chilled_05",
+          "value": "9bfdfd97"
+        },
+        {
+          "id": "recipes-204",
+          "label": "Frozen Whole Bird",
+          "actorName": "Item_Chilled_06",
+          "value": "fa8ae006"
+        },
+        {
+          "id": "recipes-205",
+          "label": "Frozen Arowana",
+          "actorName": "Item_ChilledFish_16",
+          "value": "c9e44761"
+        },
+        {
+          "id": "recipes-206",
+          "label": "Frozen Bass",
+          "actorName": "Item_ChilledFish_01",
+          "value": "1b2b6dbf"
+        },
+        {
+          "id": "recipes-207",
+          "label": "Frozen Trout",
+          "actorName": "Item_ChilledFish_03",
+          "value": "7f3bb8f7"
+        },
+        {
+          "id": "recipes-208",
+          "label": "Frozen Carp",
+          "actorName": "Item_ChilledFish_04",
+          "value": "d047d4f2"
+        },
+        {
+          "id": "recipes-209",
+          "label": "Frozen Porgy",
+          "actorName": "Item_ChilledFish_05",
+          "value": "cffd58bf"
+        },
+        {
+          "id": "recipes-210",
+          "label": "Frozen Cave Fish",
+          "actorName": "Item_ChilledFish_18",
+          "value": "a16fc756"
+        },
+        {
+          "id": "recipes-211",
+          "label": "Frozen Hearty Bass",
+          "actorName": "Item_ChilledFish_06",
+          "value": "e8a9e3fe"
+        },
+        {
+          "id": "recipes-212",
+          "label": "Frozen Hearty Salmon",
+          "actorName": "Item_ChilledFish_02",
+          "value": "3e25cbe5"
+        },
+        {
+          "id": "recipes-213",
+          "label": "Frozen Crab",
+          "actorName": "Item_ChilledFish_07",
+          "value": "3881792a"
+        },
+        {
+          "id": "recipes-214",
+          "label": "Frozen River Snail",
+          "actorName": "Item_ChilledFish_08",
+          "value": "8f848b3c"
+        },
+        {
+          "id": "recipes-215",
+          "label": "Energizing Elixir",
+          "actorName": "Item_Cook_C_17_StaminaRecover",
+          "value": "8cfe6206"
+        },
+        {
+          "id": "recipes-216",
+          "label": "Hasty Elixir",
+          "actorName": "Item_Cook_C_17_AllSpeed",
+          "value": "049cc333"
+        },
+        {
+          "id": "recipes-217",
+          "label": "Spicy Elixir",
+          "actorName": "Item_Cook_C_17_ResistCold",
+          "value": "42c91117"
+        },
+        {
+          "id": "recipes-218",
+          "label": "Chilly Elixir",
+          "actorName": "Item_Cook_C_17_ResistHot",
+          "value": "90d35a35"
+        },
+        {
+          "id": "recipes-219",
+          "label": "Electro Elixir",
+          "actorName": "Item_Cook_C_17_ResistElectric",
+          "value": "9f57d752"
+        },
+        {
+          "id": "recipes-220",
+          "label": "Fireproof Elixir",
+          "actorName": "Item_Cook_C_17_ResistBurn",
+          "value": "45882e2d"
+        },
+        {
+          "id": "recipes-221",
+          "label": "Mighty Elixir",
+          "actorName": "Item_Cook_C_17_AttackUp",
+          "value": "69727204"
+        },
+        {
+          "id": "recipes-222",
+          "label": "Tough Elixir",
+          "actorName": "Item_Cook_C_17_DefenseUp",
+          "value": "8bcf37cf"
+        },
+        {
+          "id": "recipes-223",
+          "label": "Sneaky Elixir",
+          "actorName": "Item_Cook_C_17_QuietnessUp",
+          "value": "f1636da3"
+        },
+        {
+          "id": "recipes-224",
+          "label": "Sticky Elixir",
+          "actorName": "Item_Cook_C_17_NotSlippy",
+          "value": "334fff24"
+        },
+        {
+          "id": "recipes-225",
+          "label": "Bright Elixir",
+          "actorName": "Item_Cook_C_17_LightEmission",
+          "value": "f6b03df7"
+        },
+        {
+          "id": "recipes-226",
+          "label": "Enduring Elixir",
+          "actorName": "Item_Cook_C_17_ExStaminaMaxUp",
+          "value": "2e527611"
+        },
+        {
+          "id": "recipes-227",
+          "label": "Hearty Elixir",
+          "actorName": "Item_Cook_C_17_LifeMaxUp",
+          "value": "3968e13e"
+        },
+        {
+          "id": "recipes-228",
+          "label": "Fairy Tonic",
+          "actorName": "Item_Cook_C_16",
+          "value": "c608ab0b"
+        }
+      ],
+      "sourceCounts": {
+        "ids": 228
+      }
+    },
+    {
+      "id": "materials",
+      "label": "Materials",
+      "kind": "inventory_collection",
+      "targetValue": null,
+      "includeMissing": true,
+      "items": [
+        {
+          "id": "materials-001",
+          "label": "Golden Apple",
+          "actorName": "Item_Fruit_P"
+        },
+        {
+          "id": "materials-002",
+          "label": "Palm Fruit",
+          "actorName": "Item_Fruit_G"
+        },
+        {
+          "id": "materials-003",
+          "label": "Hylian Tomato",
+          "actorName": "Item_Fruit_M"
+        },
+        {
+          "id": "materials-004",
+          "label": "Apple",
+          "actorName": "Item_Fruit_A"
+        },
+        {
+          "id": "materials-005",
+          "label": "Wildberry",
+          "actorName": "Item_Fruit_B"
+        },
+        {
+          "id": "materials-006",
+          "label": "Voltfruit",
+          "actorName": "Item_Fruit_C"
+        },
+        {
+          "id": "materials-007",
+          "label": "Fleet-Lotus Seeds",
+          "actorName": "Item_Fruit_E"
+        },
+        {
+          "id": "materials-008",
+          "label": "Hydromelon",
+          "actorName": "Item_Fruit_F"
+        },
+        {
+          "id": "materials-009",
+          "label": "Mighty Bananas",
+          "actorName": "Item_Fruit_H"
+        },
+        {
+          "id": "materials-010",
+          "label": "Spicy Pepper",
+          "actorName": "Item_Fruit_I"
+        },
+        {
+          "id": "materials-011",
+          "label": "Fire Fruit",
+          "actorName": "FireFruit"
+        },
+        {
+          "id": "materials-012",
+          "label": "Ice Fruit",
+          "actorName": "IceFruit"
+        },
+        {
+          "id": "materials-013",
+          "label": "Shock Fruit",
+          "actorName": "ElectricalFruit"
+        },
+        {
+          "id": "materials-014",
+          "label": "Splash Fruit",
+          "actorName": "WaterFruit"
+        },
+        {
+          "id": "materials-015",
+          "label": "Dazzlefruit",
+          "actorName": "LightFruit"
+        },
+        {
+          "id": "materials-016",
+          "label": "Bomb Flower",
+          "actorName": "BombFruit"
+        },
+        {
+          "id": "materials-017",
+          "label": "Puffshroom",
+          "actorName": "SmokeFruit"
+        },
+        {
+          "id": "materials-018",
+          "label": "Muddle Bud",
+          "actorName": "ConfusionFruit"
+        },
+        {
+          "id": "materials-019",
+          "label": "Big Hearty Truffle",
+          "actorName": "Item_Mushroom_N"
+        },
+        {
+          "id": "materials-020",
+          "label": "Hearty Truffle",
+          "actorName": "Item_Mushroom_F"
+        },
+        {
+          "id": "materials-021",
+          "label": "Endura Shroom",
+          "actorName": "Item_Mushroom_O"
+        },
+        {
+          "id": "materials-022",
+          "label": "Rushroom",
+          "actorName": "Item_MushroomGet_D"
+        },
+        {
+          "id": "materials-023",
+          "label": "Brightcap",
+          "actorName": "Item_MushroomGet_K"
+        },
+        {
+          "id": "materials-024",
+          "label": "Stamella Shroom",
+          "actorName": "Item_Mushroom_A"
+        },
+        {
+          "id": "materials-025",
+          "label": "Chillshroom",
+          "actorName": "Item_Mushroom_B"
+        },
+        {
+          "id": "materials-026",
+          "label": "Sunshroom",
+          "actorName": "Item_Mushroom_C"
+        },
+        {
+          "id": "materials-027",
+          "label": "Hylian Shroom",
+          "actorName": "Item_Mushroom_E"
+        },
+        {
+          "id": "materials-028",
+          "label": "Zapshroom",
+          "actorName": "Item_Mushroom_H"
+        },
+        {
+          "id": "materials-029",
+          "label": "Silent Shroom",
+          "actorName": "Item_Mushroom_J"
+        },
+        {
+          "id": "materials-030",
+          "label": "Razorshroom",
+          "actorName": "Item_Mushroom_L"
+        },
+        {
+          "id": "materials-031",
+          "label": "Ironshroom",
+          "actorName": "Item_Mushroom_M"
+        },
+        {
+          "id": "materials-032",
+          "label": "Skyshroom",
+          "actorName": "Item_Mushroom_P"
+        },
+        {
+          "id": "materials-033",
+          "label": "Big Hearty Radish",
+          "actorName": "Item_PlantGet_C"
+        },
+        {
+          "id": "materials-034",
+          "label": "Hearty Radish",
+          "actorName": "Item_PlantGet_B"
+        },
+        {
+          "id": "materials-035",
+          "label": "Endura Carrot",
+          "actorName": "Item_PlantGet_Q"
+        },
+        {
+          "id": "materials-036",
+          "label": "Hyrule Herb",
+          "actorName": "Item_PlantGet_A"
+        },
+        {
+          "id": "materials-037",
+          "label": "Silent Princess",
+          "actorName": "Item_PlantGet_J"
+        },
+        {
+          "id": "materials-038",
+          "label": "Fortified Pumpkin",
+          "actorName": "Item_Fruit_J"
+        },
+        {
+          "id": "materials-039",
+          "label": "Sun Pumpkin",
+          "actorName": "Item_Fruit_N"
+        },
+        {
+          "id": "materials-040",
+          "label": "Swift Carrot",
+          "actorName": "Item_PlantGet_M"
+        },
+        {
+          "id": "materials-041",
+          "label": "Stambulb",
+          "actorName": "Item_PlantGet_S"
+        },
+        {
+          "id": "materials-042",
+          "label": "Korok Frond",
+          "actorName": "Item_PlantGet_U"
+        },
+        {
+          "id": "materials-043",
+          "label": "Cool Safflina",
+          "actorName": "Item_PlantGet_E"
+        },
+        {
+          "id": "materials-044",
+          "label": "Warm Safflina",
+          "actorName": "Item_PlantGet_F"
+        },
+        {
+          "id": "materials-045",
+          "label": "Mighty Thistle",
+          "actorName": "Item_PlantGet_G"
+        },
+        {
+          "id": "materials-046",
+          "label": "Armoranth",
+          "actorName": "Item_PlantGet_H"
+        },
+        {
+          "id": "materials-047",
+          "label": "Blue Nightshade",
+          "actorName": "Item_PlantGet_I"
+        },
+        {
+          "id": "materials-048",
+          "label": "Electric Safflina",
+          "actorName": "Item_PlantGet_L"
+        },
+        {
+          "id": "materials-049",
+          "label": "Swift Violet",
+          "actorName": "Item_PlantGet_O"
+        },
+        {
+          "id": "materials-050",
+          "label": "Sundelion",
+          "actorName": "Item_PlantGet_R"
+        },
+        {
+          "id": "materials-051",
+          "label": "Raw Gourmet Meat",
+          "actorName": "Item_Meat_11"
+        },
+        {
+          "id": "materials-052",
+          "label": "Raw Whole Bird",
+          "actorName": "Item_Meat_12"
+        },
+        {
+          "id": "materials-053",
+          "label": "Raw Prime Meat",
+          "actorName": "Item_Meat_02"
+        },
+        {
+          "id": "materials-054",
+          "label": "Raw Bird Thigh",
+          "actorName": "Item_Meat_07"
+        },
+        {
+          "id": "materials-055",
+          "label": "Raw Meat",
+          "actorName": "Item_Meat_01"
+        },
+        {
+          "id": "materials-056",
+          "label": "Raw Bird Drumstick",
+          "actorName": "Item_Meat_06"
+        },
+        {
+          "id": "materials-057",
+          "label": "Courser Bee Honey",
+          "actorName": "BeeHome"
+        },
+        {
+          "id": "materials-058",
+          "label": "Hylian Rice",
+          "actorName": "Item_Material_03"
+        },
+        {
+          "id": "materials-059",
+          "label": "Bird Egg",
+          "actorName": "Item_Material_04"
+        },
+        {
+          "id": "materials-060",
+          "label": "Tabantha Wheat",
+          "actorName": "Item_Material_07"
+        },
+        {
+          "id": "materials-061",
+          "label": "Hateno Cheese",
+          "actorName": "Item_Material_10"
+        },
+        {
+          "id": "materials-062",
+          "label": "Fresh Milk",
+          "actorName": "Item_Material_05"
+        },
+        {
+          "id": "materials-063",
+          "label": "Acorn",
+          "actorName": "Item_Fruit_K"
+        },
+        {
+          "id": "materials-064",
+          "label": "Chickaloo Tree Nut",
+          "actorName": "Item_Fruit_L"
+        },
+        {
+          "id": "materials-065",
+          "label": "Cane Sugar",
+          "actorName": "Item_Material_01"
+        },
+        {
+          "id": "materials-066",
+          "label": "Goron Spice",
+          "actorName": "Item_Material_02"
+        },
+        {
+          "id": "materials-067",
+          "label": "Goat Butter",
+          "actorName": "Item_Material_06"
+        },
+        {
+          "id": "materials-068",
+          "label": "Monster Extract",
+          "actorName": "Item_Material_08"
+        },
+        {
+          "id": "materials-069",
+          "label": "Oil Jar",
+          "actorName": "Item_Material_09"
+        },
+        {
+          "id": "materials-070",
+          "label": "Dark Clump",
+          "actorName": "Item_Material_11"
+        },
+        {
+          "id": "materials-071",
+          "label": "Rock Salt",
+          "actorName": "Item_Ore_H"
+        },
+        {
+          "id": "materials-072",
+          "label": "Star Fragment",
+          "actorName": "Item_Ore_J"
+        },
+        {
+          "id": "materials-073",
+          "label": "Hearty Salmon",
+          "actorName": "Item_FishGet_I"
+        },
+        {
+          "id": "materials-074",
+          "label": "Hearty Bass",
+          "actorName": "Item_FishGet_B"
+        },
+        {
+          "id": "materials-075",
+          "label": "Hyrule Bass",
+          "actorName": "Item_FishGet_A"
+        },
+        {
+          "id": "materials-076",
+          "label": "Staminoka Bass",
+          "actorName": "Item_FishGet_L"
+        },
+        {
+          "id": "materials-077",
+          "label": "Chillfin Trout",
+          "actorName": "Item_FishGet_C"
+        },
+        {
+          "id": "materials-078",
+          "label": "Sizzlefin Trout",
+          "actorName": "Item_FishGet_J"
+        },
+        {
+          "id": "materials-079",
+          "label": "Voltfin Trout",
+          "actorName": "Item_FishGet_D"
+        },
+        {
+          "id": "materials-080",
+          "label": "Stealthfin Trout",
+          "actorName": "Item_FishGet_X"
+        },
+        {
+          "id": "materials-081",
+          "label": "Mighty Carp",
+          "actorName": "Item_FishGet_E"
+        },
+        {
+          "id": "materials-082",
+          "label": "Armored Carp",
+          "actorName": "Item_FishGet_H"
+        },
+        {
+          "id": "materials-083",
+          "label": "Sanke Carp",
+          "actorName": "Item_FishGet_Z"
+        },
+        {
+          "id": "materials-084",
+          "label": "Ancient Arowana",
+          "actorName": "Item_FishGet_AA"
+        },
+        {
+          "id": "materials-085",
+          "label": "Glowing Cave Fish",
+          "actorName": "Item_FishGet_AC"
+        },
+        {
+          "id": "materials-086",
+          "label": "Mighty Porgy",
+          "actorName": "Item_FishGet_F"
+        },
+        {
+          "id": "materials-087",
+          "label": "Armored Porgy",
+          "actorName": "Item_FishGet_G"
+        },
+        {
+          "id": "materials-088",
+          "label": "Sneaky River Snail",
+          "actorName": "Item_FishGet_M"
+        },
+        {
+          "id": "materials-089",
+          "label": "Razorclaw Crab",
+          "actorName": "Item_InsectGet_K"
+        },
+        {
+          "id": "materials-090",
+          "label": "Ironshell Crab",
+          "actorName": "Item_InsectGet_O"
+        },
+        {
+          "id": "materials-091",
+          "label": "Bright-Eyed Crab",
+          "actorName": "Item_InsectGet_Z"
+        },
+        {
+          "id": "materials-092",
+          "label": "Fairy",
+          "actorName": "Animal_Insect_F"
+        },
+        {
+          "id": "materials-093",
+          "label": "Winterwing Butterfly",
+          "actorName": "Animal_Insect_N"
+        },
+        {
+          "id": "materials-094",
+          "label": "Summerwing Butterfly",
+          "actorName": "Animal_Insect_Q"
+        },
+        {
+          "id": "materials-095",
+          "label": "Thunderwing Butterfly",
+          "actorName": "Animal_Insect_R"
+        },
+        {
+          "id": "materials-096",
+          "label": "Smotherwing Butterfly",
+          "actorName": "Animal_Insect_AB"
+        },
+        {
+          "id": "materials-097",
+          "label": "Cold Darner",
+          "actorName": "Animal_Insect_C"
+        },
+        {
+          "id": "materials-098",
+          "label": "Warm Darner",
+          "actorName": "Animal_Insect_T"
+        },
+        {
+          "id": "materials-099",
+          "label": "Electric Darner",
+          "actorName": "Animal_Insect_I"
+        },
+        {
+          "id": "materials-100",
+          "label": "Energetic Rhino Beetle",
+          "actorName": "Animal_Insect_AA"
+        },
+        {
+          "id": "materials-101",
+          "label": "Bladed Rhino Beetle",
+          "actorName": "Animal_Insect_G"
+        },
+        {
+          "id": "materials-102",
+          "label": "Rugged Rhino Beetle",
+          "actorName": "Animal_Insect_P"
+        },
+        {
+          "id": "materials-103",
+          "label": "Sunset Firefly",
+          "actorName": "Animal_Insect_E"
+        },
+        {
+          "id": "materials-104",
+          "label": "Deep Firefly",
+          "actorName": "Animal_Insect_AI"
+        },
+        {
+          "id": "materials-105",
+          "label": "Restless Cricket",
+          "actorName": "Animal_Insect_H"
+        },
+        {
+          "id": "materials-106",
+          "label": "Tireless Frog",
+          "actorName": "Animal_Insect_B"
+        },
+        {
+          "id": "materials-107",
+          "label": "Hot-Footed Frog",
+          "actorName": "Animal_Insect_A"
+        },
+        {
+          "id": "materials-108",
+          "label": "Sticky Frog",
+          "actorName": "Animal_Insect_AG"
+        },
+        {
+          "id": "materials-109",
+          "label": "Hearty Lizard",
+          "actorName": "Animal_Insect_M"
+        },
+        {
+          "id": "materials-110",
+          "label": "Hightail Lizard",
+          "actorName": "Animal_Insect_S"
+        },
+        {
+          "id": "materials-111",
+          "label": "Fireproof Lizard",
+          "actorName": "Animal_Insect_X"
+        },
+        {
+          "id": "materials-112",
+          "label": "Sticky Lizard",
+          "actorName": "Animal_Insect_AH"
+        },
+        {
+          "id": "materials-113",
+          "label": "Diamond",
+          "actorName": "Item_Ore_A"
+        },
+        {
+          "id": "materials-114",
+          "label": "Ruby",
+          "actorName": "Item_Ore_B"
+        },
+        {
+          "id": "materials-115",
+          "label": "Sapphire",
+          "actorName": "Item_Ore_C"
+        },
+        {
+          "id": "materials-116",
+          "label": "Topaz",
+          "actorName": "Item_Ore_D"
+        },
+        {
+          "id": "materials-117",
+          "label": "Opal",
+          "actorName": "Item_Ore_E"
+        },
+        {
+          "id": "materials-118",
+          "label": "Amber",
+          "actorName": "Item_Ore_F"
+        },
+        {
+          "id": "materials-119",
+          "label": "Luminous Stone",
+          "actorName": "Item_Ore_G"
+        },
+        {
+          "id": "materials-120",
+          "label": "Flint",
+          "actorName": "Item_Ore_I"
+        },
+        {
+          "id": "materials-121",
+          "label": "Bokoblin Guts",
+          "actorName": "Item_Enemy_02"
+        },
+        {
+          "id": "materials-122",
+          "label": "Moblin Guts",
+          "actorName": "Item_Enemy_08"
+        },
+        {
+          "id": "materials-123",
+          "label": "Horriblin Guts",
+          "actorName": "Item_Enemy_105"
+        },
+        {
+          "id": "materials-124",
+          "label": "Gibdo Guts",
+          "actorName": "Item_Enemy_121"
+        },
+        {
+          "id": "materials-125",
+          "label": "Boss Bokoblin Guts",
+          "actorName": "Item_Enemy_136"
+        },
+        {
+          "id": "materials-126",
+          "label": "Lynel Guts",
+          "actorName": "Item_Enemy_14"
+        },
+        {
+          "id": "materials-127",
+          "label": "Gleeok Guts",
+          "actorName": "Item_Enemy_157"
+        },
+        {
+          "id": "materials-128",
+          "label": "Frox Guts",
+          "actorName": "Item_Enemy_190"
+        },
+        {
+          "id": "materials-129",
+          "label": "Molduga Guts",
+          "actorName": "Item_Enemy_25"
+        },
+        {
+          "id": "materials-130",
+          "label": "Hinox Guts",
+          "actorName": "Item_Enemy_34"
+        },
+        {
+          "id": "materials-131",
+          "label": "Red Chuchu Jelly",
+          "actorName": "Item_Enemy_15"
+        },
+        {
+          "id": "materials-132",
+          "label": "White Chuchu Jelly",
+          "actorName": "Item_Enemy_17"
+        },
+        {
+          "id": "materials-133",
+          "label": "Yellow Chuchu Jelly",
+          "actorName": "Item_Enemy_16"
+        },
+        {
+          "id": "materials-134",
+          "label": "Chuchu Jelly",
+          "actorName": "Item_Enemy_40"
+        },
+        {
+          "id": "materials-135",
+          "label": "Octo Balloon",
+          "actorName": "Item_Enemy_57"
+        },
+        {
+          "id": "materials-136",
+          "label": "Keese Eyeball",
+          "actorName": "Item_Enemy_19"
+        },
+        {
+          "id": "materials-137",
+          "label": "Fire Keese Eyeball",
+          "actorName": "Item_Enemy_117"
+        },
+        {
+          "id": "materials-138",
+          "label": "Ice Keese Eyeball",
+          "actorName": "Item_Enemy_119"
+        },
+        {
+          "id": "materials-139",
+          "label": "Electric Keese Eyeball",
+          "actorName": "Item_Enemy_118"
+        },
+        {
+          "id": "materials-140",
+          "label": "Octorok Eyeball",
+          "actorName": "Item_Enemy_21"
+        },
+        {
+          "id": "materials-141",
+          "label": "Aerocuda Eyeball",
+          "actorName": "Item_Enemy_66"
+        },
+        {
+          "id": "materials-142",
+          "label": "Keese Wing",
+          "actorName": "Item_Enemy_18"
+        },
+        {
+          "id": "materials-143",
+          "label": "Fire Keese Wing",
+          "actorName": "Item_Enemy_44"
+        },
+        {
+          "id": "materials-144",
+          "label": "Ice Keese Wing",
+          "actorName": "Item_Enemy_46"
+        },
+        {
+          "id": "materials-145",
+          "label": "Electric Keese Wing",
+          "actorName": "Item_Enemy_45"
+        },
+        {
+          "id": "materials-146",
+          "label": "Aerocuda Wing",
+          "actorName": "Item_Enemy_124"
+        },
+        {
+          "id": "materials-147",
+          "label": "Gibdo Wing",
+          "actorName": "Item_Enemy_123"
+        },
+        {
+          "id": "materials-148",
+          "label": "Gleeok Wing",
+          "actorName": "Item_Enemy_156"
+        },
+        {
+          "id": "materials-149",
+          "label": "Molduga Fin",
+          "actorName": "Item_Enemy_24"
+        },
+        {
+          "id": "materials-150",
+          "label": "Bokoblin Horn",
+          "actorName": "Item_Enemy_77"
+        },
+        {
+          "id": "materials-151",
+          "label": "Blue Bokoblin Horn",
+          "actorName": "Item_Enemy_78"
+        },
+        {
+          "id": "materials-152",
+          "label": "Black Bokoblin Horn",
+          "actorName": "Item_Enemy_79"
+        },
+        {
+          "id": "materials-153",
+          "label": "Silver Bokoblin Horn",
+          "actorName": "Item_Enemy_80"
+        },
+        {
+          "id": "materials-154",
+          "label": "Boss Bokoblin Horn",
+          "actorName": "Item_Enemy_64"
+        },
+        {
+          "id": "materials-155",
+          "label": "Blue Boss Bokoblin Horn",
+          "actorName": "Item_Enemy_132"
+        },
+        {
+          "id": "materials-156",
+          "label": "Black Boss Bokoblin Horn",
+          "actorName": "Item_Enemy_133"
+        },
+        {
+          "id": "materials-157",
+          "label": "Silver Boss Bokoblin Horn",
+          "actorName": "Item_Enemy_134"
+        },
+        {
+          "id": "materials-158",
+          "label": "Lizalfos Horn",
+          "actorName": "Item_Enemy_106"
+        },
+        {
+          "id": "materials-159",
+          "label": "Blue Lizalfos Horn",
+          "actorName": "Item_Enemy_107"
+        },
+        {
+          "id": "materials-160",
+          "label": "Black Lizalfos Horn",
+          "actorName": "Item_Enemy_108"
+        },
+        {
+          "id": "materials-161",
+          "label": "Silver Lizalfos Horn",
+          "actorName": "Item_Enemy_109"
+        },
+        {
+          "id": "materials-162",
+          "label": "Fire-Breath Lizalfos Horn",
+          "actorName": "Item_Enemy_58"
+        },
+        {
+          "id": "materials-163",
+          "label": "Ice-Breath Lizalfos Horn",
+          "actorName": "Item_Enemy_59"
+        },
+        {
+          "id": "materials-164",
+          "label": "Electric Lizalfos Horn",
+          "actorName": "Item_Enemy_60"
+        },
+        {
+          "id": "materials-165",
+          "label": "Lynel Saber Horn",
+          "actorName": "Item_Enemy_148"
+        },
+        {
+          "id": "materials-166",
+          "label": "Blue-Maned Lynel Saber Horn",
+          "actorName": "Item_Enemy_149"
+        },
+        {
+          "id": "materials-167",
+          "label": "White-Maned Lynel Saber Horn",
+          "actorName": "Item_Enemy_150"
+        },
+        {
+          "id": "materials-168",
+          "label": "Silver Lynel Saber Horn",
+          "actorName": "Item_Enemy_151"
+        },
+        {
+          "id": "materials-169",
+          "label": "Soldier Construct Horn",
+          "actorName": "Item_Enemy_166"
+        },
+        {
+          "id": "materials-170",
+          "label": "Soldier Construct II Horn",
+          "actorName": "Item_Enemy_167"
+        },
+        {
+          "id": "materials-171",
+          "label": "Soldier Construct III Horn",
+          "actorName": "Item_Enemy_168"
+        },
+        {
+          "id": "materials-172",
+          "label": "Soldier Construct IV Horn",
+          "actorName": "Item_Enemy_169"
+        },
+        {
+          "id": "materials-173",
+          "label": "Captain Construct I Horn",
+          "actorName": "Item_Enemy_67"
+        },
+        {
+          "id": "materials-174",
+          "label": "Captain Construct II Horn",
+          "actorName": "Item_Enemy_191"
+        },
+        {
+          "id": "materials-175",
+          "label": "Captain Construct III Horn",
+          "actorName": "Item_Enemy_192"
+        },
+        {
+          "id": "materials-176",
+          "label": "Captain Construct IV Horn",
+          "actorName": "Item_Enemy_193"
+        },
+        {
+          "id": "materials-177",
+          "label": "Hinox Toenail",
+          "actorName": "Item_Enemy_32"
+        },
+        {
+          "id": "materials-178",
+          "label": "Gleeok Flame Horn",
+          "actorName": "Item_Enemy_153"
+        },
+        {
+          "id": "materials-179",
+          "label": "Gleeok Frost Horn",
+          "actorName": "Item_Enemy_154"
+        },
+        {
+          "id": "materials-180",
+          "label": "Gleeok Thunder Horn",
+          "actorName": "Item_Enemy_155"
+        },
+        {
+          "id": "materials-181",
+          "label": "Dinraal's Horn",
+          "actorName": "Item_Enemy_211"
+        },
+        {
+          "id": "materials-182",
+          "label": "Naydra's Horn",
+          "actorName": "Item_Enemy_212"
+        },
+        {
+          "id": "materials-183",
+          "label": "Farosh's Horn",
+          "actorName": "Item_Enemy_213"
+        },
+        {
+          "id": "materials-184",
+          "label": "Light Dragon's Horn",
+          "actorName": "Item_Enemy_214"
+        },
+        {
+          "id": "materials-185",
+          "label": "Like Like Stone",
+          "actorName": "Item_Enemy_181"
+        },
+        {
+          "id": "materials-186",
+          "label": "Fire Like Stone",
+          "actorName": "Item_Enemy_182"
+        },
+        {
+          "id": "materials-187",
+          "label": "Ice Like Stone",
+          "actorName": "Item_Enemy_184"
+        },
+        {
+          "id": "materials-188",
+          "label": "Shock Like Stone",
+          "actorName": "Item_Enemy_183"
+        },
+        {
+          "id": "materials-189",
+          "label": "Moblin Horn",
+          "actorName": "Item_Enemy_89"
+        },
+        {
+          "id": "materials-190",
+          "label": "Blue Moblin Horn",
+          "actorName": "Item_Enemy_90"
+        },
+        {
+          "id": "materials-191",
+          "label": "Black Moblin Horn",
+          "actorName": "Item_Enemy_91"
+        },
+        {
+          "id": "materials-192",
+          "label": "Silver Moblin Horn",
+          "actorName": "Item_Enemy_92"
+        },
+        {
+          "id": "materials-193",
+          "label": "Horriblin Horn",
+          "actorName": "Item_Enemy_100"
+        },
+        {
+          "id": "materials-194",
+          "label": "Blue Horriblin Horn",
+          "actorName": "Item_Enemy_101"
+        },
+        {
+          "id": "materials-195",
+          "label": "Black Horriblin Horn",
+          "actorName": "Item_Enemy_102"
+        },
+        {
+          "id": "materials-196",
+          "label": "Silver Horriblin Horn",
+          "actorName": "Item_Enemy_103"
+        },
+        {
+          "id": "materials-197",
+          "label": "Lynel Hoof",
+          "actorName": "Item_Enemy_13"
+        },
+        {
+          "id": "materials-198",
+          "label": "Lynel Mace Horn",
+          "actorName": "Item_Enemy_215"
+        },
+        {
+          "id": "materials-199",
+          "label": "Blue-Maned Lynel Mace Horn",
+          "actorName": "Item_Enemy_216"
+        },
+        {
+          "id": "materials-200",
+          "label": "White-Maned Lynel Mace Horn",
+          "actorName": "Item_Enemy_217"
+        },
+        {
+          "id": "materials-201",
+          "label": "Silver Lynel Mace Horn",
+          "actorName": "Item_Enemy_218"
+        },
+        {
+          "id": "materials-202",
+          "label": "Hinox Horn",
+          "actorName": "Item_Enemy_142"
+        },
+        {
+          "id": "materials-203",
+          "label": "Blue Hinox Horn",
+          "actorName": "Item_Enemy_143"
+        },
+        {
+          "id": "materials-204",
+          "label": "Black Hinox Horn",
+          "actorName": "Item_Enemy_144"
+        },
+        {
+          "id": "materials-205",
+          "label": "Stalnox Horn",
+          "actorName": "Item_Enemy_208"
+        },
+        {
+          "id": "materials-206",
+          "label": "Molduga Jaw",
+          "actorName": "Item_Enemy_210"
+        },
+        {
+          "id": "materials-207",
+          "label": "Frox Fang",
+          "actorName": "Item_Enemy_186"
+        },
+        {
+          "id": "materials-208",
+          "label": "Obsidian Frox Fang",
+          "actorName": "Item_Enemy_187"
+        },
+        {
+          "id": "materials-209",
+          "label": "Blue-White Frox Fang",
+          "actorName": "Item_Enemy_188"
+        },
+        {
+          "id": "materials-210",
+          "label": "Shard of Dinraal's Spike",
+          "actorName": "Item_Enemy_228"
+        },
+        {
+          "id": "materials-211",
+          "label": "Shard of Naydra's Spike",
+          "actorName": "Item_Enemy_229"
+        },
+        {
+          "id": "materials-212",
+          "label": "Shard of Farosh's Spike",
+          "actorName": "Item_Enemy_230"
+        },
+        {
+          "id": "materials-213",
+          "label": "Shard of Light Dragon's Spike",
+          "actorName": "Item_Enemy_231"
+        },
+        {
+          "id": "materials-214",
+          "label": "Lizalfos Tail",
+          "actorName": "Item_Enemy_05"
+        },
+        {
+          "id": "materials-215",
+          "label": "Blue Lizalfos Tail",
+          "actorName": "Item_Enemy_114"
+        },
+        {
+          "id": "materials-216",
+          "label": "Black Lizalfos Tail",
+          "actorName": "Item_Enemy_115"
+        },
+        {
+          "id": "materials-217",
+          "label": "Silver Lizalfos Tail",
+          "actorName": "Item_Enemy_116"
+        },
+        {
+          "id": "materials-218",
+          "label": "Fire-Breath Lizalfos Tail",
+          "actorName": "Item_Enemy_41"
+        },
+        {
+          "id": "materials-219",
+          "label": "Ice-Breath Lizalfos Tail",
+          "actorName": "Item_Enemy_42"
+        },
+        {
+          "id": "materials-220",
+          "label": "Electric Lizalfos Tail",
+          "actorName": "Item_Enemy_43"
+        },
+        {
+          "id": "materials-221",
+          "label": "Gibdo Bone",
+          "actorName": "Item_Enemy_69"
+        },
+        {
+          "id": "materials-222",
+          "label": "Octorok Tentacle",
+          "actorName": "Item_Enemy_20"
+        },
+        {
+          "id": "materials-223",
+          "label": "Bokoblin Fang",
+          "actorName": "Item_Enemy_01"
+        },
+        {
+          "id": "materials-224",
+          "label": "Moblin Fang",
+          "actorName": "Item_Enemy_07"
+        },
+        {
+          "id": "materials-225",
+          "label": "Boss Bokoblin Fang",
+          "actorName": "Item_Enemy_135"
+        },
+        {
+          "id": "materials-226",
+          "label": "Hinox Tooth",
+          "actorName": "Item_Enemy_33"
+        },
+        {
+          "id": "materials-227",
+          "label": "Horriblin Claw",
+          "actorName": "Item_Enemy_104"
+        },
+        {
+          "id": "materials-228",
+          "label": "Lizalfos Talon",
+          "actorName": "Item_Enemy_04"
+        },
+        {
+          "id": "materials-229",
+          "label": "Frox Fingernail",
+          "actorName": "Item_Enemy_189"
+        },
+        {
+          "id": "materials-230",
+          "label": "Dinraal's Scale",
+          "actorName": "Item_Enemy_38"
+        },
+        {
+          "id": "materials-231",
+          "label": "Naydra's Scale",
+          "actorName": "Item_Enemy_49"
+        },
+        {
+          "id": "materials-232",
+          "label": "Farosh's Scale",
+          "actorName": "Item_Enemy_53"
+        },
+        {
+          "id": "materials-233",
+          "label": "Light Dragon's Scale",
+          "actorName": "Item_Enemy_158"
+        },
+        {
+          "id": "materials-234",
+          "label": "Dinraal's Claw",
+          "actorName": "Item_Enemy_39"
+        },
+        {
+          "id": "materials-235",
+          "label": "Naydra's Claw",
+          "actorName": "Item_Enemy_50"
+        },
+        {
+          "id": "materials-236",
+          "label": "Farosh's Claw",
+          "actorName": "Item_Enemy_54"
+        },
+        {
+          "id": "materials-237",
+          "label": "Light Dragon's Talon",
+          "actorName": "Item_Enemy_159"
+        },
+        {
+          "id": "materials-238",
+          "label": "Shard of Dinraal's Fang",
+          "actorName": "Item_Enemy_47"
+        },
+        {
+          "id": "materials-239",
+          "label": "Shard of Naydra's Fang",
+          "actorName": "Item_Enemy_51"
+        },
+        {
+          "id": "materials-240",
+          "label": "Shard of Farosh's Fang",
+          "actorName": "Item_Enemy_55"
+        },
+        {
+          "id": "materials-241",
+          "label": "Shard of Light Dragon's Fang",
+          "actorName": "Item_Enemy_160"
+        },
+        {
+          "id": "materials-242",
+          "label": "Ancient Blade",
+          "actorName": "Item_Weapon_01"
+        },
+        {
+          "id": "materials-243",
+          "label": "King's Scale",
+          "actorName": "Item_KingScale"
+        },
+        {
+          "id": "materials-244",
+          "label": "Brightbloom Seed",
+          "actorName": "LightBall_Small"
+        },
+        {
+          "id": "materials-245",
+          "label": "Giant Brightbloom Seed",
+          "actorName": "LightBall_Large"
+        },
+        {
+          "id": "materials-246",
+          "label": "Hylian Pine Cone",
+          "actorName": "FldObj_Pinecone_A_01"
+        },
+        {
+          "id": "materials-247",
+          "label": "Wood",
+          "actorName": "Obj_FireWoodBundle"
+        },
+        {
+          "id": "materials-248",
+          "label": "Zonaite",
+          "actorName": "Item_Ore_L"
+        },
+        {
+          "id": "materials-249",
+          "label": "Large Zonaite",
+          "actorName": "Item_Ore_M"
+        },
+        {
+          "id": "materials-250",
+          "label": "Zonai Charge",
+          "actorName": "Item_Enemy_130"
+        },
+        {
+          "id": "materials-251",
+          "label": "Large Zonai Charge",
+          "actorName": "Item_Enemy_131"
+        }
+      ],
+      "sourceCounts": {
+        "ids": 251,
+        "arrayHash": 1
+      },
+      "arrayHash": "d96ebf12"
+    },
+    {
+      "id": "key_items",
+      "label": "Key Items",
+      "kind": "inventory_collection",
+      "targetValue": null,
+      "includeMissing": true,
+      "items": [
+        {
+          "id": "key_items-001",
+          "label": "Ultrahand",
+          "actorName": "Obj_UltraHand"
+        },
+        {
+          "id": "key_items-002",
+          "label": "Fuse",
+          "actorName": "Obj_OneTouchBond"
+        },
+        {
+          "id": "key_items-003",
+          "label": "Ascend",
+          "actorName": "Obj_Tooreroof"
+        },
+        {
+          "id": "key_items-004",
+          "label": "Recall",
+          "actorName": "Obj_ReverseRecorder"
+        },
+        {
+          "id": "key_items-005",
+          "label": "Autobuild",
+          "actorName": "Obj_AutoBuilder"
+        },
+        {
+          "id": "key_items-006",
+          "label": "Vow of Tulin, Sage of Wind",
+          "actorName": "Obj_SageSoul_Rito"
+        },
+        {
+          "id": "key_items-007",
+          "label": "Solemn Vow of Tulin, Sage of Wind",
+          "actorName": "Obj_SageSoulPlus_Rito"
+        },
+        {
+          "id": "key_items-008",
+          "label": "Vow of Yunobo, Sage of Fire",
+          "actorName": "Obj_SageSoul_Goron"
+        },
+        {
+          "id": "key_items-009",
+          "label": "Solemn Vow of Yunobo, Sage of Fire",
+          "actorName": "Obj_SageSoulPlus_Goron"
+        },
+        {
+          "id": "key_items-010",
+          "label": "Vow of Sidon, Sage of Water",
+          "actorName": "Obj_SageSoul_Zora"
+        },
+        {
+          "id": "key_items-011",
+          "label": "Solemn Vow of Sidon, Sage of Water",
+          "actorName": "Obj_SageSoulPlus_Zora"
+        },
+        {
+          "id": "key_items-012",
+          "label": "Vow of Riju, Sage of Lightning",
+          "actorName": "Obj_SageSoul_Gerudo"
+        },
+        {
+          "id": "key_items-013",
+          "label": "Solemn Vow of Riju, Sage of Lightning",
+          "actorName": "Obj_SageSoulPlus_Gerudo"
+        },
+        {
+          "id": "key_items-014",
+          "label": "Vow of Mineru, Sage of Spirit",
+          "actorName": "Obj_SageSoul_Zonau"
+        },
+        {
+          "id": "key_items-015",
+          "label": "Solemn Vow of Mineru, Sage of Spirit",
+          "actorName": "Obj_SageSoulPlus_Zonau"
+        },
+        {
+          "id": "key_items-016",
+          "label": "Purah Pad",
+          "actorName": "Obj_DRStone_Get"
+        },
+        {
+          "id": "key_items-017",
+          "label": "Camera",
+          "actorName": "Obj_Camera"
+        },
+        {
+          "id": "key_items-018",
+          "label": "Energy Cell",
+          "actorName": "Obj_Battery_Get_Capacity"
+        },
+        {
+          "id": "key_items-019",
+          "label": "Paraglider",
+          "actorName": "Parasail"
+        },
+        {
+          "id": "key_items-020",
+          "label": "Travel Medallion Prototype",
+          "actorName": "Obj_WarpDLC_Prototype"
+        },
+        {
+          "id": "key_items-021",
+          "label": "Travel Medallion",
+          "actorName": "Obj_WarpDLC"
+        },
+        {
+          "id": "key_items-022",
+          "label": "Earthwake Manual",
+          "actorName": "Obj_HiddenScroll_00"
+        },
+        {
+          "id": "key_items-023",
+          "label": "Light of Blessing",
+          "actorName": "Obj_DungeonClearSeal"
+        },
+        {
+          "id": "key_items-024",
+          "label": "Sage's Will",
+          "actorName": "Obj_SageWill"
+        },
+        {
+          "id": "key_items-025",
+          "label": "Korok Seed",
+          "actorName": "Obj_KorokNuts"
+        },
+        {
+          "id": "key_items-026",
+          "label": "Bubbul Gem",
+          "actorName": "CaveMasterMedal"
+        },
+        {
+          "id": "key_items-027",
+          "label": "Poe",
+          "actorName": "MinusRupee_00"
+        },
+        {
+          "id": "key_items-028",
+          "label": "Crystallized Charge",
+          "actorName": "Energy_Material_01"
+        },
+        {
+          "id": "key_items-029",
+          "label": "Schema Stone",
+          "actorName": "Obj_AutoBuilderDraft_00"
+        },
+        {
+          "id": "key_items-030",
+          "label": "Yiga Schematic",
+          "actorName": "Obj_AutoBuilderDraftAssassin_00"
+        },
+        {
+          "id": "key_items-031",
+          "label": "Old Map",
+          "actorName": "Obj_TreasureMap_00"
+        },
+        {
+          "id": "key_items-032",
+          "label": "Pony Points Card",
+          "actorName": "Obj_StableHostlePointCard"
+        },
+        {
+          "id": "key_items-033",
+          "label": "Sleepover Ticket",
+          "actorName": "Item_StableHostelAccommodationCoupon_A"
+        },
+        {
+          "id": "key_items-034",
+          "label": "All's Well",
+          "actorName": "Obj_CaveWellHonor_00"
+        },
+        {
+          "id": "key_items-035",
+          "label": "Dispelling Darkness Medal",
+          "actorName": "Obj_CheckPointHonor_00"
+        },
+        {
+          "id": "key_items-036",
+          "label": "Hestu's Gift",
+          "actorName": "Obj_ProofKorok"
+        },
+        {
+          "id": "key_items-037",
+          "label": "Stone Talus Monster Medal",
+          "actorName": "Obj_DefeatHonor_00"
+        },
+        {
+          "id": "key_items-038",
+          "label": "Hinox Monster Medal",
+          "actorName": "Obj_DefeatHonor_01"
+        },
+        {
+          "id": "key_items-039",
+          "label": "Molduga Monster Medal",
+          "actorName": "Obj_DefeatHonor_02"
+        },
+        {
+          "id": "key_items-040",
+          "label": "Gleeok Monster Medal",
+          "actorName": "Obj_DefeatHonor_05"
+        },
+        {
+          "id": "key_items-041",
+          "label": "Frox Monster Medal",
+          "actorName": "Obj_DefeatHonor_03"
+        },
+        {
+          "id": "key_items-042",
+          "label": "Flux Construct Monster Medal",
+          "actorName": "Obj_DefeatHonor_04"
+        },
+        {
+          "id": "key_items-043",
+          "label": "Towing Harness",
+          "actorName": "GameRomHorseSaddle_07"
+        },
+        {
+          "id": "key_items-044",
+          "label": "Traveler's Bridle",
+          "actorName": "GameRomHorseReins_01"
+        },
+        {
+          "id": "key_items-045",
+          "label": "Knight's Bridle",
+          "actorName": "GameRomHorseReins_03"
+        },
+        {
+          "id": "key_items-046",
+          "label": "Royal Bridle",
+          "actorName": "GameRomHorseReins_02"
+        },
+        {
+          "id": "key_items-047",
+          "label": "Extravagant Bridle",
+          "actorName": "GameRomHorseReins_05"
+        },
+        {
+          "id": "key_items-048",
+          "label": "Monster Bridle",
+          "actorName": "GameRomHorseReins_04"
+        },
+        {
+          "id": "key_items-049",
+          "label": "Traveler's Saddle",
+          "actorName": "GameRomHorseSaddle_01"
+        },
+        {
+          "id": "key_items-050",
+          "label": "Knight's Saddle",
+          "actorName": "GameRomHorseSaddle_03"
+        },
+        {
+          "id": "key_items-051",
+          "label": "Royal Saddle",
+          "actorName": "GameRomHorseSaddle_02"
+        },
+        {
+          "id": "key_items-052",
+          "label": "Extravagant Saddle",
+          "actorName": "GameRomHorseSaddle_05"
+        },
+        {
+          "id": "key_items-053",
+          "label": "Monster Saddle",
+          "actorName": "GameRomHorseSaddle_04"
+        }
+      ],
+      "sourceCounts": {
+        "ids": 53,
+        "arrayHash": 1
+      },
+      "arrayHash": "22c6530a"
+    },
+    {
+      "id": "quests_main",
+      "label": "Main Quests",
+      "kind": "positive",
+      "targetValue": "4c0a63f4",
+      "includeMissing": true,
+      "items": [
+        {
+          "id": "quest-001",
+          "value": "b9ef6024",
+          "label": "The Closed Door",
+          "questId": "LookingForLightSpot"
+        },
+        {
+          "id": "quest-002",
+          "value": "8d69095d",
+          "label": "To the Kingdom of Hyrule",
+          "questId": "GOToTheCastleOfHyrule"
+        },
+        {
+          "id": "quest-003",
+          "value": "859395ae",
+          "label": "Regional Phenomena",
+          "questId": "SurveyOfFourVillages"
+        },
+        {
+          "id": "quest-004",
+          "value": "a4084100",
+          "label": "Find the Fifth Sage",
+          "questId": "ClueTotheSixthSage"
+        },
+        {
+          "id": "quest-005",
+          "value": "6323d2ae",
+          "label": "Crisis at Hyrule Castle",
+          "questId": "HyruleCastleIncident"
+        },
+        {
+          "id": "quest-006",
+          "value": "03206a92",
+          "label": "Trail of the Master Sword",
+          "questId": "MasterSwordClues"
+        },
+        {
+          "id": "quest-007",
+          "value": "dce27398",
+          "label": "Recovering the Hero's Sword",
+          "questId": "GetMasterSword"
+        },
+        {
+          "id": "quest-008",
+          "value": "683b1363",
+          "label": "Tulin of Rito Village",
+          "questId": "SageOfWind"
+        },
+        {
+          "id": "quest-009",
+          "value": "eea87aec",
+          "label": "Yunobo of Goron City",
+          "questId": "SageOfFire"
+        },
+        {
+          "id": "quest-010",
+          "value": "b9bcc8e6",
+          "label": "The Sludge-Covered Statue",
+          "questId": "CleanStatue"
+        },
+        {
+          "id": "quest-011",
+          "value": "2b850324",
+          "label": "The Broken Slate",
+          "questId": "DividedSlate"
+        },
+        {
+          "id": "quest-012",
+          "value": "28e16836",
+          "label": "Restoring the Zora Armor",
+          "questId": "RepairArmor"
+        },
+        {
+          "id": "quest-013",
+          "value": "70b484ac",
+          "label": "Clues to the Sky",
+          "questId": "WaterBridgePlace"
+        },
+        {
+          "id": "quest-014",
+          "value": "16c8291d",
+          "label": "Sidon of the Zora",
+          "questId": "SageOfZora"
+        },
+        {
+          "id": "quest-015",
+          "value": "c2bf4337",
+          "label": "Riju of Gerudo Town",
+          "questId": "SageOfGerudo"
+        },
+        {
+          "id": "quest-016",
+          "value": "3d31691e",
+          "label": "Secret of the Ring Ruins",
+          "questId": "GotoFironeZonauRemains"
+        },
+        {
+          "id": "quest-017",
+          "value": "2b47272e",
+          "label": "Guidance from Ages Past",
+          "questId": "SageOfSoul"
+        },
+        {
+          "id": "quest-018",
+          "value": "9477c841",
+          "label": "Camera Work in the Depths",
+          "questId": "GetCamera"
+        },
+        {
+          "id": "quest-019",
+          "value": "4539b48e",
+          "label": "A Mystery in the Depths",
+          "questId": "DeepHoleSurvey2"
+        },
+        {
+          "id": "quest-020",
+          "value": "3677686e",
+          "label": "Impa and the Geoglyphs",
+          "questId": "GroundPaintingAir01"
+        },
+        {
+          "id": "quest-021",
+          "value": "24a3f88b",
+          "label": "The Dragon's Tears",
+          "questId": "MemoryOfTheDragon"
+        }
+      ],
+      "sourceCounts": {
+        "ids": 21
+      }
+    },
+    {
+      "id": "quests_side",
+      "label": "Side Quests",
+      "kind": "positive",
+      "targetValue": "4c0a63f4",
+      "includeMissing": true,
+      "items": [
+        {
+          "id": "quest-001",
+          "value": "dc482840",
+          "label": "Spotting Spot",
+          "questId": "FindWhiteHorse"
+        },
+        {
+          "id": "quest-002",
+          "value": "ecd1a020",
+          "label": "Village Attacked by Pirates",
+          "questId": "NowInTheVillageOfLurelin"
+        },
+        {
+          "id": "quest-003",
+          "value": "881f20d5",
+          "label": "Today's Menu",
+          "questId": "CookAtBaseCamp"
+        },
+        {
+          "id": "quest-004",
+          "value": "49178b3a",
+          "label": "The Incomplete Stable",
+          "questId": "BuildingMaterialsTutorial"
+        },
+        {
+          "id": "quest-005",
+          "value": "0a414f6b",
+          "label": "WANTED: Stone Talus",
+          "questId": "DefeatHugeEnemy_1"
+        },
+        {
+          "id": "quest-006",
+          "value": "c0519834",
+          "label": "WANTED: Molduga",
+          "questId": "DefeatHugeEnemy_2"
+        },
+        {
+          "id": "quest-007",
+          "value": "80511379",
+          "label": "WANTED: Hinox",
+          "questId": "DefeatHugeEnemy_3"
+        },
+        {
+          "id": "quest-008",
+          "value": "37052c8c",
+          "label": "Unknown Sky Giant",
+          "questId": "DefeatHugeEnemy_4"
+        },
+        {
+          "id": "quest-009",
+          "value": "a5dbde48",
+          "label": "Unknown Three-Headed Monster",
+          "questId": "DefeatHugeEnemy_5"
+        },
+        {
+          "id": "quest-010",
+          "value": "91d89acb",
+          "label": "Unknown Huge Silhouette",
+          "questId": "DefeatHugeEnemy_6"
+        },
+        {
+          "id": "quest-011",
+          "value": "052af5e8",
+          "label": "The Horse Guard's Request",
+          "questId": "TakeAnimals"
+        },
+        {
+          "id": "quest-012",
+          "value": "d8df444a",
+          "label": "A Picture for Outskirt Stable",
+          "questId": "PhotoSpot_Challenge_04"
+        },
+        {
+          "id": "quest-013",
+          "value": "b4d0f773",
+          "label": "Feathered Fugitives",
+          "questId": "HorseInnChallenge005"
+        },
+        {
+          "id": "quest-014",
+          "value": "ea3b401b",
+          "label": "A Picture for Riverside Stable",
+          "questId": "PhotoSpot_Challenge_05"
+        },
+        {
+          "id": "quest-015",
+          "value": "dd0c2820",
+          "label": "Horse-Drawn Dreams",
+          "questId": "HorseInnChallenge001"
+        },
+        {
+          "id": "quest-016",
+          "value": "3186b0fb",
+          "label": "A Picture for New Serenne Stable",
+          "questId": "PhotoSpot_Challenge_01"
+        },
+        {
+          "id": "quest-017",
+          "value": "e3e4e2d6",
+          "label": "Genli's Home Cooking",
+          "questId": "Genkos_Kitchen"
+        },
+        {
+          "id": "quest-018",
+          "value": "444200e1",
+          "label": "Treasure of the Secret Springs",
+          "questId": "Rito_MedoArmor"
+        },
+        {
+          "id": "quest-019",
+          "value": "df20c872",
+          "label": "Molli the Fletcher's Quest",
+          "questId": "ArrowMeister_Momo"
+        },
+        {
+          "id": "quest-020",
+          "value": "c7739620",
+          "label": "Legacy of the Rito",
+          "questId": "Rito_RevaliWeapon"
+        },
+        {
+          "id": "quest-021",
+          "value": "16093ba4",
+          "label": "Fish for Fletching",
+          "questId": "Rito_ItemExchange"
+        },
+        {
+          "id": "quest-022",
+          "value": "f2f1acd0",
+          "label": "The Rito Rope Bridge",
+          "questId": "RitoBridgeRepair"
+        },
+        {
+          "id": "quest-023",
+          "value": "367d8b01",
+          "label": "A Picture for Tabantha Bridge Stable",
+          "questId": "PhotoSpot_Challenge_07"
+        },
+        {
+          "id": "quest-024",
+          "value": "eac78db8",
+          "label": "A Picture for Snowfield Stable",
+          "questId": "PhotoSpot_Challenge_14"
+        },
+        {
+          "id": "quest-025",
+          "value": "db022227",
+          "label": "Crossing the Cold Pool",
+          "questId": "Neck_IceWaterCave"
+        },
+        {
+          "id": "quest-026",
+          "value": "abe72b28",
+          "label": "Open the Door",
+          "questId": "Lodge_Chemical001"
+        },
+        {
+          "id": "quest-027",
+          "value": "46bc53be",
+          "label": "Supply-Eyeing Fliers",
+          "questId": "Hack_GuardGoods"
+        },
+        {
+          "id": "quest-028",
+          "value": "88117313",
+          "label": "The Blocked Cave",
+          "questId": "Nazley_DigCave"
+        },
+        {
+          "id": "quest-029",
+          "value": "7fc9a09e",
+          "label": "The Duchess Who Disappeared",
+          "questId": "GoneSnowQueen"
+        },
+        {
+          "id": "quest-030",
+          "value": "03ffa922",
+          "label": "Kaneli's Flight Training",
+          "questId": "Hebra_SkyRingChallenge"
+        },
+        {
+          "id": "quest-031",
+          "value": "42e80e68",
+          "label": "Cave Mushrooms That Glow",
+          "questId": "MushroomSisters_1"
+        },
+        {
+          "id": "quest-032",
+          "value": "6ba34121",
+          "label": "The Captured Tent",
+          "questId": "MushroomSisters_2"
+        },
+        {
+          "id": "quest-033",
+          "value": "24120252",
+          "label": "Who Finds the Haven?",
+          "questId": "MushroomSisters_3"
+        },
+        {
+          "id": "quest-034",
+          "value": "b186cdd2",
+          "label": "Whirly Swirly Things",
+          "questId": "Big_Rotate"
+        },
+        {
+          "id": "quest-035",
+          "value": "6b684d35",
+          "label": "The Secret Room",
+          "questId": "Mack_SecretBase"
+        },
+        {
+          "id": "quest-036",
+          "value": "93766745",
+          "label": "Walton's Treasure Hunt",
+          "questId": "TreasureHunt_kokiri"
+        },
+        {
+          "id": "quest-037",
+          "value": "ad02a969",
+          "label": "Amber Dealer",
+          "questId": "AmberCollector"
+        },
+        {
+          "id": "quest-038",
+          "value": "9849b3ce",
+          "label": "The Ancient City Gorondia!",
+          "questId": "CarryGoronKid1"
+        },
+        {
+          "id": "quest-039",
+          "value": "c1ab21b6",
+          "label": "The Ancient City Gorondia?",
+          "questId": "CarryGoronKid2"
+        },
+        {
+          "id": "quest-040",
+          "value": "7617e941",
+          "label": "Soul of the Gorons",
+          "questId": "MakeAChampionsWeapon_Goron"
+        },
+        {
+          "id": "quest-041",
+          "value": "c5a0cec8",
+          "label": "Moon-Gazing Gorons",
+          "questId": "GoronReturntoNature"
+        },
+        {
+          "id": "quest-042",
+          "value": "d3e5d6ee",
+          "label": "The Hidden Treasure at Lizard Lakes",
+          "questId": "GoronPond"
+        },
+        {
+          "id": "quest-043",
+          "value": "7493e23a",
+          "label": "Simmerstone Springs",
+          "questId": "HotSpringEgg"
+        },
+        {
+          "id": "quest-044",
+          "value": "56002597",
+          "label": "Cash In on Ripened Flint",
+          "questId": "FullyRipenedFlintstones"
+        },
+        {
+          "id": "quest-045",
+          "value": "370ce00a",
+          "label": "Meat for Meat",
+          "questId": "ResearchEldin"
+        },
+        {
+          "id": "quest-046",
+          "value": "c7a1bdc5",
+          "label": "Rock Roast or Dust",
+          "questId": "MeatRock"
+        },
+        {
+          "id": "quest-047",
+          "value": "78b0163c",
+          "label": "Mine-Cart Land: Open for Business!",
+          "questId": "Goron_MiniGame_Tutorial_01"
+        },
+        {
+          "id": "quest-048",
+          "value": "1072a7f2",
+          "label": "Mine-Cart Land: Quickshot Course",
+          "questId": "Goron_MiniGame_Tutorial_02"
+        },
+        {
+          "id": "quest-049",
+          "value": "5db70799",
+          "label": "Mine-Cart Land: Death Mountain",
+          "questId": "Goron_MiniGame_Tutorial_03"
+        },
+        {
+          "id": "quest-050",
+          "value": "62c74f5c",
+          "label": "A Picture for Woodland Stable",
+          "questId": "PhotoSpot_Challenge_02"
+        },
+        {
+          "id": "quest-051",
+          "value": "cc8d64b4",
+          "label": "A Picture for Foothill Stable",
+          "questId": "PhotoSpot_Challenge_08"
+        },
+        {
+          "id": "quest-052",
+          "value": "0df4f2d3",
+          "label": "Fell into a Well!",
+          "questId": "RescueWell"
+        },
+        {
+          "id": "quest-053",
+          "value": "1152011c",
+          "label": "The Abandoned Laborer",
+          "questId": "RescueVehicle01"
+        },
+        {
+          "id": "quest-054",
+          "value": "35bc09c5",
+          "label": "The Treasure Hunters",
+          "questId": "Our_Treasure"
+        },
+        {
+          "id": "quest-055",
+          "value": "89ee4eb2",
+          "label": "Misko's Cave of Chests",
+          "questId": "TreasureOfLambda"
+        },
+        {
+          "id": "quest-056",
+          "value": "1d45ea58",
+          "label": "Misko's Treasure: The Fierce Deity",
+          "questId": "TreasureOfLamda_FierceDeity"
+        },
+        {
+          "id": "quest-057",
+          "value": "6e28f4bf",
+          "label": "Misko's Treasure: Twins Manuscript",
+          "questId": "TreasureOfLamda_DuelPeak"
+        },
+        {
+          "id": "quest-058",
+          "value": "360687d5",
+          "label": "Misko's Treasure: Pirate Manuscript",
+          "questId": "TreasureOfLamda_Pirate"
+        },
+        {
+          "id": "quest-059",
+          "value": "706ebd2e",
+          "label": "Misko's Treasure: Heroines Manuscript",
+          "questId": "TreasureOfLamda_Gerudo"
+        },
+        {
+          "id": "quest-060",
+          "value": "c3906a61",
+          "label": "Misko's Treasure of Awakening I",
+          "questId": "TreasureOfLamda_Dream"
+        },
+        {
+          "id": "quest-061",
+          "value": "fa5bee52",
+          "label": "Misko's Treasure of Awakening II",
+          "questId": "TreasureOfLamda_Dream2"
+        },
+        {
+          "id": "quest-062",
+          "value": "1b3e0ff9",
+          "label": "Misko's Treasure of Awakening III",
+          "questId": "TreasureOfLamda_Dream3"
+        },
+        {
+          "id": "quest-063",
+          "value": "5c74e434",
+          "label": "The Tarrey Town Race Is On!",
+          "questId": "Circuit_Ichikara"
+        },
+        {
+          "id": "quest-064",
+          "value": "a523f0a1",
+          "label": "Secrets Within",
+          "questId": "HorseInnChallenge003"
+        },
+        {
+          "id": "quest-065",
+          "value": "9018a86f",
+          "label": "Master the Vehicle Prototype",
+          "questId": "IchikaraCircuit_Tutorial"
+        },
+        {
+          "id": "quest-066",
+          "value": "d83f0113",
+          "label": "Home on Arrange",
+          "questId": "BuildHouse"
+        },
+        {
+          "id": "quest-067",
+          "value": "dde64162",
+          "label": "Strongest in the World",
+          "questId": "TheStrongestWeapon"
+        },
+        {
+          "id": "quest-068",
+          "value": "f90b5af9",
+          "label": "The Gathering Pirates",
+          "questId": "Tribune01"
+        },
+        {
+          "id": "quest-069",
+          "value": "d6fdd91c",
+          "label": "A Picture for East Akkala Stable",
+          "questId": "PhotoSpot_Challenge_12"
+        },
+        {
+          "id": "quest-070",
+          "value": "1c669724",
+          "label": "Eldin's Colossal Fossil",
+          "questId": "ExcavateFossil1"
+        },
+        {
+          "id": "quest-071",
+          "value": "c4c74e71",
+          "label": "Hebra's Colossal Fossil",
+          "questId": "ExcavateFossil2"
+        },
+        {
+          "id": "quest-072",
+          "value": "00c82d59",
+          "label": "Gerudo's Colossal Fossil",
+          "questId": "ExcavateFossil3"
+        },
+        {
+          "id": "quest-073",
+          "value": "a8d71952",
+          "label": "One-Hit Wonder!",
+          "questId": "HourseInnChallenge004"
+        },
+        {
+          "id": "quest-074",
+          "value": "d676978f",
+          "label": "A Picture for South Akkala Stable",
+          "questId": "PhotoSpot_Challenge_13"
+        },
+        {
+          "id": "quest-075",
+          "value": "980d444a",
+          "label": "True Treasure",
+          "questId": "Zora_MessageBottle"
+        },
+        {
+          "id": "quest-076",
+          "value": "8c7b599d",
+          "label": "Secret Treasure under the Great Fish",
+          "questId": "Zora_RuttaTreasure"
+        },
+        {
+          "id": "quest-077",
+          "value": "7bad50c7",
+          "label": "The Never-Ending Lecture",
+          "questId": "Createshinguard"
+        },
+        {
+          "id": "quest-078",
+          "value": "c195be30",
+          "label": "The Moonlit Princess",
+          "questId": "ZoraStatue_Picture"
+        },
+        {
+          "id": "quest-079",
+          "value": "162ae2d5",
+          "label": "The Fort at Ja'Abu Ridge",
+          "questId": "Zora_Enemy_hunt"
+        },
+        {
+          "id": "quest-080",
+          "value": "17fc1a5a",
+          "label": "Glory of the Zora",
+          "questId": "GeniusWeapon_Zora"
+        },
+        {
+          "id": "quest-081",
+          "value": "a4900778",
+          "label": "A Crabulous Deal",
+          "questId": "gather_Insect_Z"
+        },
+        {
+          "id": "quest-082",
+          "value": "f0ee75e4",
+          "label": "A Wife Wafted Away",
+          "questId": "HuntSalmon"
+        },
+        {
+          "id": "quest-083",
+          "value": "a3ec383e",
+          "label": "A Token of Friendship",
+          "questId": "CreateArmor"
+        },
+        {
+          "id": "quest-084",
+          "value": "3e26a3bd",
+          "label": "A Picture for Wetland Stable",
+          "questId": "PhotoSpot_Challenge_03"
+        },
+        {
+          "id": "quest-085",
+          "value": "6363800f",
+          "label": "An Uninvited Guest",
+          "questId": "HorseInnChallenge002"
+        },
+        {
+          "id": "quest-086",
+          "value": "50541fd8",
+          "label": "The Blue Stone",
+          "questId": "CarryStone"
+        },
+        {
+          "id": "quest-087",
+          "value": "c75f10b7",
+          "label": "The Ultimate Dish?",
+          "questId": "RestaurantInTheWell"
+        },
+        {
+          "id": "quest-088",
+          "value": "5e874bbb",
+          "label": "Mired in Muck",
+          "questId": "ResearchLanayru"
+        },
+        {
+          "id": "quest-089",
+          "value": "40f6ab48",
+          "label": "Out of the Inn",
+          "questId": "InnNeverReturns"
+        },
+        {
+          "id": "quest-090",
+          "value": "24c7aa62",
+          "label": "Follow the Cuccos",
+          "questId": "KokkoGuidePost"
+        },
+        {
+          "id": "quest-091",
+          "value": "326b8073",
+          "label": "A Trip through History",
+          "questId": "Know_FourStonePlates"
+        },
+        {
+          "id": "quest-092",
+          "value": "b83320ad",
+          "label": "Codgers' Quarrel",
+          "questId": "WhichIsStronger"
+        },
+        {
+          "id": "quest-093",
+          "value": "3f8f1971",
+          "label": "Gloom-Borne Illness",
+          "questId": "IllnessStartsWithFeelings"
+        },
+        {
+          "id": "quest-094",
+          "value": "f095141f",
+          "label": "A New Champion's Tunic",
+          "questId": "Hateno_NewCostume"
+        },
+        {
+          "id": "quest-095",
+          "value": "b162733a",
+          "label": "Teach Me a Lesson I",
+          "questId": "Hateno_TellMeTeacher01"
+        },
+        {
+          "id": "quest-096",
+          "value": "ffeb1205",
+          "label": "Teach Me a Lesson II",
+          "questId": "Hateno_TellMeTeacher02"
+        },
+        {
+          "id": "quest-097",
+          "value": "524a97ba",
+          "label": "Dantz's Prize Cows",
+          "questId": "Hateno_FreshMilk"
+        },
+        {
+          "id": "quest-098",
+          "value": "1a1a74bb",
+          "label": "Homegrown in Hateno",
+          "questId": "Hateno_NewSpecialty"
+        },
+        {
+          "id": "quest-099",
+          "value": "08ef3549",
+          "label": "Photographing a Chuchu",
+          "questId": "Parasail_ChuchuDesign"
+        },
+        {
+          "id": "quest-100",
+          "value": "60818928",
+          "label": "Uma's Garden",
+          "questId": "Hateno_WhatToPlant"
+        },
+        {
+          "id": "quest-101",
+          "value": "681952ad",
+          "label": "Manny's Beloved",
+          "questId": "Hateno_CoolGuy"
+        },
+        {
+          "id": "quest-102",
+          "value": "b6fec67f",
+          "label": "Lurelin Resort Project",
+          "questId": "Uotori_ResortPlan"
+        },
+        {
+          "id": "quest-103",
+          "value": "9b3718ae",
+          "label": "Dad's Blue Shirt",
+          "questId": "Uotori_WhiteLineGame"
+        },
+        {
+          "id": "quest-104",
+          "value": "c38f2879",
+          "label": "A Way to Trade, Washed Away",
+          "questId": "WashedAwayBusinessTools"
+        },
+        {
+          "id": "quest-105",
+          "value": "392f6c47",
+          "label": "Rattled Ralera",
+          "questId": "Uotori_Designer"
+        },
+        {
+          "id": "quest-106",
+          "value": "24357c6d",
+          "label": "A Picture for Dueling Peaks Stable",
+          "questId": "PhotoSpot_Challenge_06"
+        },
+        {
+          "id": "quest-107",
+          "value": "c0b5cd08",
+          "label": "A Bottled Cry for Help",
+          "questId": "MessageBottle_SOS"
+        },
+        {
+          "id": "quest-108",
+          "value": "210d5638",
+          "label": "Seeking the Pirate Hideout",
+          "questId": "SaihateSubjugation"
+        },
+        {
+          "id": "quest-109",
+          "value": "8e9fc0a9",
+          "label": "Ousting the Giants",
+          "questId": "HorseInnChallenge007"
+        },
+        {
+          "id": "quest-110",
+          "value": "cfd5e0dd",
+          "label": "A Picture for Lakeside Stable",
+          "questId": "PhotoSpot_Challenge_10"
+        },
+        {
+          "id": "quest-111",
+          "value": "9931d451",
+          "label": "A Picture for Highland Stable",
+          "questId": "PhotoSpot_Challenge_11"
+        },
+        {
+          "id": "quest-112",
+          "value": "0109f8db",
+          "label": "The Heroines' Secret",
+          "questId": "EightHeroStatues"
+        },
+        {
+          "id": "quest-113",
+          "value": "20a0f374",
+          "label": "Treasure of the Gerudo Desert",
+          "questId": "GerudoDesertTreasure"
+        },
+        {
+          "id": "quest-114",
+          "value": "5b150420",
+          "label": "Pride of the Gerudo",
+          "questId": "Gerudo_UrbosaWeapon"
+        },
+        {
+          "id": "quest-115",
+          "value": "07757779",
+          "label": "Dalia's Game",
+          "questId": "FindSunaNui"
+        },
+        {
+          "id": "quest-116",
+          "value": "ef095f8f",
+          "label": "The Mysterious Eighth",
+          "questId": "EightHeroStatues_After"
+        },
+        {
+          "id": "quest-117",
+          "value": "e0c24add",
+          "label": "The Missing Owner",
+          "questId": "AisyaRescue"
+        },
+        {
+          "id": "quest-118",
+          "value": "911db90c",
+          "label": "To the Ruins!",
+          "questId": "JobSunazarashi"
+        },
+        {
+          "id": "quest-119",
+          "value": "ab028a40",
+          "label": "Decorate with Passion",
+          "questId": "MakeChemicalWeapon"
+        },
+        {
+          "id": "quest-120",
+          "value": "d3e36542",
+          "label": "Lost in the Dunes",
+          "questId": "SearchCaravan"
+        },
+        {
+          "id": "quest-121",
+          "value": "e2133322",
+          "label": "A Picture for the Closed Stable I",
+          "questId": "PhotoSpot_Challenge_09"
+        },
+        {
+          "id": "quest-122",
+          "value": "428a9172",
+          "label": "A Picture for the Closed Stable II",
+          "questId": "PhotoSpot_Challenge_09_2"
+        },
+        {
+          "id": "quest-123",
+          "value": "f41245b4",
+          "label": "Piaffe, Packed Away",
+          "questId": "RescueHost"
+        },
+        {
+          "id": "quest-124",
+          "value": "73141efc",
+          "label": "Gleeok Guts",
+          "questId": "GerudoCanyon_GleeokLiver"
+        },
+        {
+          "id": "quest-125",
+          "value": "df6339c1",
+          "label": "Disaster in Gerudo Canyon",
+          "questId": "NewCanyonMissingPersonsCase"
+        },
+        {
+          "id": "quest-126",
+          "value": "e49cacac",
+          "label": "The Great Tumbleweed Purge",
+          "questId": "GerudoCanyon_TumbleweedSweep"
+        },
+        {
+          "id": "quest-127",
+          "value": "a3620526",
+          "label": "Heat-Endurance Contest!",
+          "questId": "GerudoCanyon_24hEnduranceComparison"
+        },
+        {
+          "id": "quest-128",
+          "value": "f70d9d89",
+          "label": "Cold-Endurance Contest!",
+          "questId": "GerudoCanyon_ColdEnduranceComparison"
+        },
+        {
+          "id": "quest-129",
+          "value": "c1fd1829",
+          "label": "The Iceless Icehouse",
+          "questId": "TakeOfIce"
+        },
+        {
+          "id": "quest-130",
+          "value": "aa6a0618",
+          "label": "Where Are the Wells?",
+          "questId": "WellCollection"
+        },
+        {
+          "id": "quest-131",
+          "value": "93c6e13d",
+          "label": "Ancient Blades Below",
+          "questId": "Zonau_GeniusWeapon"
+        },
+        {
+          "id": "quest-132",
+          "value": "00b4e036",
+          "label": "The North Lomei Prophecy",
+          "questId": "Connect_TabantaMaze"
+        },
+        {
+          "id": "quest-133",
+          "value": "73c24b12",
+          "label": "The Lomei Labyrinth Island Prophecy",
+          "questId": "Connect_AkkareMaze"
+        },
+        {
+          "id": "quest-134",
+          "value": "3dbaaf0f",
+          "label": "The South Lomei Prophecy",
+          "questId": "Connect_GerudoMaze"
+        },
+        {
+          "id": "quest-135",
+          "value": "21a66cae",
+          "label": "Goddess Statue of Wisdom",
+          "questId": "Raise_GoddesStatue_Wisdom"
+        },
+        {
+          "id": "quest-136",
+          "value": "050f8a6b",
+          "label": "Goddess Statue of Power",
+          "questId": "Raise_GoddesStatue_Power"
+        },
+        {
+          "id": "quest-137",
+          "value": "47967bd8",
+          "label": "Goddess Statue of Courage",
+          "questId": "Raise_GoddesStatue_Courage"
+        },
+        {
+          "id": "quest-138",
+          "value": "a62336cc",
+          "label": "The Mother Goddess Statue",
+          "questId": "Raise_GoddesStatue"
+        },
+        {
+          "id": "quest-139",
+          "value": "541ecebf",
+          "label": "The Shrine Explorer",
+          "questId": "CDungeon_AllDone"
+        }
+      ],
+      "sourceCounts": {
+        "ids": 139
+      }
+    },
+    {
+      "id": "quests_adventure",
+      "label": "Side Adventures",
+      "kind": "positive",
+      "targetValue": "4c0a63f4",
+      "includeMissing": true,
+      "items": [
+        {
+          "id": "quest-001",
+          "value": "4a2bcff5",
+          "label": "Hateno Village Research Lab",
+          "questId": "FindWithSensors"
+        },
+        {
+          "id": "quest-002",
+          "value": "e7c1fb99",
+          "label": "Filling Out the Compendium",
+          "questId": "HatenoPurchasePicture"
+        },
+        {
+          "id": "quest-003",
+          "value": "3984e796",
+          "label": "Presenting: The Travel Medallion!",
+          "questId": "GetWarpMarker"
+        },
+        {
+          "id": "quest-004",
+          "value": "9053bf2d",
+          "label": "Presenting: Hero's Path Mode!",
+          "questId": "GetWalker"
+        },
+        {
+          "id": "quest-005",
+          "value": "a266fd7c",
+          "label": "Presenting: Sensor +!",
+          "questId": "GetSensorPlus"
+        },
+        {
+          "id": "quest-006",
+          "value": "b8f89ada",
+          "label": "Mattison's Independence",
+          "questId": "IchikaraChallenge01"
+        },
+        {
+          "id": "quest-007",
+          "value": "236d6596",
+          "label": "A Letter to Koyin",
+          "questId": "Hateno_Cheese"
+        },
+        {
+          "id": "quest-008",
+          "value": "3c8ee6ce",
+          "label": "A New Signature Food",
+          "questId": "Hateno_RevitalizeByNewSpeciality"
+        },
+        {
+          "id": "quest-009",
+          "value": "d8fc2b8a",
+          "label": "Reede's Secret",
+          "questId": "Hateno_SecretLifeOfKusayoshi"
+        },
+        {
+          "id": "quest-010",
+          "value": "2e911706",
+          "label": "Cece's Secret",
+          "questId": "Hateno_SecretLifeOfSagono"
+        },
+        {
+          "id": "quest-011",
+          "value": "f6310781",
+          "label": "Team Cece or Team Reede?",
+          "questId": "Hateno_VillageMayorElection"
+        },
+        {
+          "id": "quest-012",
+          "value": "9ffb8d19",
+          "label": "The Mayoral Election",
+          "questId": "Hateno_LetUsElection"
+        },
+        {
+          "id": "quest-013",
+          "value": "21bdc7f0",
+          "label": "Ruffian-Infested Village",
+          "questId": "TauraChallenge001"
+        },
+        {
+          "id": "quest-014",
+          "value": "79714d02",
+          "label": "Lurelin Village Restoration Project",
+          "questId": "Uotori_RevivePlan"
+        },
+        {
+          "id": "quest-015",
+          "value": "19d011d4",
+          "label": "Potential Princess Sightings!",
+          "questId": "NewsPaper_Mitsuba"
+        },
+        {
+          "id": "quest-016",
+          "value": "fb41755c",
+          "label": "The Beckoning Woman",
+          "questId": "Tribune07"
+        },
+        {
+          "id": "quest-017",
+          "value": "3ad0662b",
+          "label": "Gourmets Gone Missing",
+          "questId": "Tribune04"
+        },
+        {
+          "id": "quest-018",
+          "value": "b9779281",
+          "label": "The Beast and the Princess",
+          "questId": "Tribune06"
+        },
+        {
+          "id": "quest-019",
+          "value": "4c1502d4",
+          "label": "Zelda's Golden Horse",
+          "questId": "Tribune09"
+        },
+        {
+          "id": "quest-020",
+          "value": "7a4defd1",
+          "label": "White Goats Gone Missing",
+          "questId": "Tribune03"
+        },
+        {
+          "id": "quest-021",
+          "value": "178c5713",
+          "label": "For Our Princess!",
+          "questId": "Tribune11"
+        },
+        {
+          "id": "quest-022",
+          "value": "53234363",
+          "label": "The All-Clucking Cucco",
+          "questId": "Tribune10"
+        },
+        {
+          "id": "quest-023",
+          "value": "cc26eaa4",
+          "label": "The Missing Farm Tools",
+          "questId": "Tribune05"
+        },
+        {
+          "id": "quest-024",
+          "value": "078fa914",
+          "label": "Princess Zelda Kidnapped?!",
+          "questId": "Tribune02"
+        },
+        {
+          "id": "quest-025",
+          "value": "44c63868",
+          "label": "An Eerie Voice",
+          "questId": "Tribune13"
+        },
+        {
+          "id": "quest-026",
+          "value": "c93a6708",
+          "label": "The Blocked Well",
+          "questId": "Tribune14"
+        },
+        {
+          "id": "quest-027",
+          "value": "d3205808",
+          "label": "The Flute Player's Plan",
+          "questId": "Orchestra03"
+        },
+        {
+          "id": "quest-028",
+          "value": "6102f7cc",
+          "label": "Honey, Bee Mine",
+          "questId": "Orchestra02"
+        },
+        {
+          "id": "quest-029",
+          "value": "f9d5e95a",
+          "label": "The Hornist's Dramatic Escape",
+          "questId": "Orchestra04"
+        },
+        {
+          "id": "quest-030",
+          "value": "c1201134",
+          "label": "Serenade to a Great Fairy",
+          "questId": "Tribune16"
+        },
+        {
+          "id": "quest-031",
+          "value": "23e4d144",
+          "label": "Serenade to Kaysa",
+          "questId": "Fairy4"
+        },
+        {
+          "id": "quest-032",
+          "value": "cbc43c32",
+          "label": "Serenade to Cotera",
+          "questId": "Fairy3"
+        },
+        {
+          "id": "quest-033",
+          "value": "c6896d33",
+          "label": "Serenade to Mija",
+          "questId": "Fairy2"
+        },
+        {
+          "id": "quest-034",
+          "value": "3080f7e2",
+          "label": "Bring Peace to Hyrule Field!",
+          "questId": "MercenaryChallenge_HyrulePlain"
+        },
+        {
+          "id": "quest-035",
+          "value": "925efd8e",
+          "label": "Bring Peace to Necluda!",
+          "questId": "MercenaryChallenge_Hebra"
+        },
+        {
+          "id": "quest-036",
+          "value": "feea31df",
+          "label": "Bring Peace to Eldin!",
+          "questId": "MercenaryChallenge_Eldin"
+        },
+        {
+          "id": "quest-037",
+          "value": "d001053a",
+          "label": "Bring Peace to Akkala!",
+          "questId": "MercenaryChallenge_Akkare"
+        },
+        {
+          "id": "quest-038",
+          "value": "7814e6a0",
+          "label": "Bring Peace to Faron!",
+          "questId": "MercenaryChallenge_Firone"
+        },
+        {
+          "id": "quest-039",
+          "value": "19ec0c0f",
+          "label": "Bring Peace to Hebra!",
+          "questId": "MercenaryChallenge_Hateru"
+        },
+        {
+          "id": "quest-040",
+          "value": "bb58e2e5",
+          "label": "Hestu's Concerns",
+          "questId": "OldKorokHelp"
+        },
+        {
+          "id": "quest-041",
+          "value": "9371af5b",
+          "label": "The Hunt for Bubbul Gems!",
+          "questId": "NushiShop_Tutorial"
+        },
+        {
+          "id": "quest-042",
+          "value": "bda44c99",
+          "label": "The Search for Koltin",
+          "questId": "NushiShop_Challenge00"
+        },
+        {
+          "id": "quest-043",
+          "value": "56cdd6f9",
+          "label": "A Monstrous Collection I",
+          "questId": "MonsterFigures01"
+        },
+        {
+          "id": "quest-044",
+          "value": "0c3f80c8",
+          "label": "A Monstrous Collection II",
+          "questId": "MonsterFigures02"
+        },
+        {
+          "id": "quest-045",
+          "value": "6cd73603",
+          "label": "A Monstrous Collection III",
+          "questId": "MonsterFigures03"
+        },
+        {
+          "id": "quest-046",
+          "value": "60b9a41c",
+          "label": "A Monstrous Collection IV",
+          "questId": "MonsterFigures04"
+        },
+        {
+          "id": "quest-047",
+          "value": "40351da7",
+          "label": "A Monstrous Collection V",
+          "questId": "MonsterFigures05"
+        },
+        {
+          "id": "quest-048",
+          "value": "cdcd45b3",
+          "label": "Investigate the Thyphlo Ruins",
+          "questId": "BlindRuinsTreasure"
+        },
+        {
+          "id": "quest-049",
+          "value": "32a5f385",
+          "label": "The Owl Protected by Dragons",
+          "questId": "BlindRuinsTreasure_Rito"
+        },
+        {
+          "id": "quest-050",
+          "value": "495df8a8",
+          "label": "The Corridor between Two Dragons",
+          "questId": "BlindRuinsTreasure_Goron"
+        },
+        {
+          "id": "quest-051",
+          "value": "2c5925ee",
+          "label": "The Six Dragons",
+          "questId": "BlindRuinsTreasure_Zora"
+        },
+        {
+          "id": "quest-052",
+          "value": "99c03843",
+          "label": "The Long Dragon",
+          "questId": "BlindRuinsTreasure_Gerudo"
+        },
+        {
+          "id": "quest-053",
+          "value": "5979a110",
+          "label": "Legend of the Great Sky Island",
+          "questId": "FirstskyislandReturns"
+        },
+        {
+          "id": "quest-054",
+          "value": "e61821b4",
+          "label": "Messages from an Ancient Era",
+          "questId": "ZonauReliefSearch"
+        },
+        {
+          "id": "quest-055",
+          "value": "ee8ab1c7",
+          "label": "A Deal With the Statue",
+          "questId": "StatueDevilTutorial"
+        },
+        {
+          "id": "quest-056",
+          "value": "083638ec",
+          "label": "Who Goes There?",
+          "questId": "LookingForTheVoiceLord"
+        },
+        {
+          "id": "quest-057",
+          "value": "c29219b5",
+          "label": "A Call from the Depths",
+          "questId": "Connect_FirstIsland"
+        },
+        {
+          "id": "quest-058",
+          "value": "c5d87de2",
+          "label": "Infiltrating the Yiga Clan",
+          "questId": "AssassinGerudoBase"
+        },
+        {
+          "id": "quest-059",
+          "value": "b222a14b",
+          "label": "The Yiga Clan Exam",
+          "questId": "GerudoCanyon_Adventure"
+        },
+        {
+          "id": "quest-060",
+          "value": "892ba188",
+          "label": "Master Kohga of the Yiga Clan",
+          "questId": "MinusYiga"
+        }
+      ],
+      "sourceCounts": {
+        "ids": 60
+      }
+    },
+    {
+      "id": "quests_shrine",
+      "label": "Shrine Quests",
+      "kind": "positive",
+      "targetValue": "4c0a63f4",
+      "includeMissing": true,
+      "items": [
+        {
+          "id": "quest-001",
+          "value": "984accf3",
+          "label": "The Satori Mountain Crystal",
+          "questId": "CarryToShrine09"
+        },
+        {
+          "id": "quest-002",
+          "value": "efa1a7b0",
+          "label": "The White Bird's Guidance",
+          "questId": "Rito_ShadowCave"
+        },
+        {
+          "id": "quest-003",
+          "value": "ec17138e",
+          "label": "The Gisa Crater Crystal",
+          "questId": "CarryToShrine02"
+        },
+        {
+          "id": "quest-004",
+          "value": "1bccda83",
+          "label": "The North Hebra Mountains Crystal",
+          "questId": "CarryToShrine15"
+        },
+        {
+          "id": "quest-005",
+          "value": "fd75acf0",
+          "label": "The Northwest Hebra Cave Crystal",
+          "questId": "CarryToShrine16"
+        },
+        {
+          "id": "quest-006",
+          "value": "2a4c1ac7",
+          "label": "A Pretty Stone and Five Golden Apples",
+          "questId": "Korok_CarryToShrine"
+        },
+        {
+          "id": "quest-007",
+          "value": "da9a9cc9",
+          "label": "None Shall Pass?",
+          "questId": "NoTrespassing"
+        },
+        {
+          "id": "quest-008",
+          "value": "6b7c1b48",
+          "label": "Maca's Special Place",
+          "questId": "InfiltrationFromTheSky"
+        },
+        {
+          "id": "quest-009",
+          "value": "4a2264ef",
+          "label": "The Death Caldera Crystal",
+          "questId": "CarryToShrine01"
+        },
+        {
+          "id": "quest-010",
+          "value": "b824a08d",
+          "label": "The Lake Intenoch Cave Crystal",
+          "questId": "CarryToShrine03"
+        },
+        {
+          "id": "quest-011",
+          "value": "a281d6bb",
+          "label": "Rock for Sale",
+          "questId": "IchikaraChallenge03"
+        },
+        {
+          "id": "quest-012",
+          "value": "2832d40c",
+          "label": "Dyeing to Find It",
+          "questId": "CraftShadowPicture"
+        },
+        {
+          "id": "quest-013",
+          "value": "0163f4e7",
+          "label": "The High Spring and the Light Rings",
+          "questId": "SnowyMountain_Surfing"
+        },
+        {
+          "id": "quest-014",
+          "value": "24885b21",
+          "label": "The Lanayru Road Crystal",
+          "questId": "CarryToShrine10"
+        },
+        {
+          "id": "quest-015",
+          "value": "c504544a",
+          "label": "The Ralis Channel Crystal",
+          "questId": "CarryToShrine08_Zora"
+        },
+        {
+          "id": "quest-016",
+          "value": "e0121825",
+          "label": "Keys Born of Water",
+          "questId": "IceMaking"
+        },
+        {
+          "id": "quest-017",
+          "value": "6b7e627e",
+          "label": "The Oakle's Navel Cave Crystal",
+          "questId": "CarryToShrine13"
+        },
+        {
+          "id": "quest-018",
+          "value": "5ec915c3",
+          "label": "Ride the Giant Horse",
+          "questId": "GiantHorse"
+        },
+        {
+          "id": "quest-019",
+          "value": "501ebada",
+          "label": "The Lake Hylia Crystal",
+          "questId": "CarryToShrine06"
+        },
+        {
+          "id": "quest-020",
+          "value": "0520a854",
+          "label": "Legend of the Soaring Spear",
+          "questId": "DevoteSpring"
+        },
+        {
+          "id": "quest-021",
+          "value": "67f506dc",
+          "label": "The Gerudo Canyon Crystal",
+          "questId": "CarryToShrine07"
+        },
+        {
+          "id": "quest-022",
+          "value": "6b5b7639",
+          "label": "The North Hyrule Sky Crystal",
+          "questId": "CarryToShrine19"
+        },
+        {
+          "id": "quest-023",
+          "value": "9a026429",
+          "label": "The South Hyrule Sky Crystal",
+          "questId": "CarryToShrine11"
+        },
+        {
+          "id": "quest-024",
+          "value": "80a926b2",
+          "label": "The Tabantha Sky Crystal",
+          "questId": "CarryToShrine20"
+        },
+        {
+          "id": "quest-025",
+          "value": "4b5890c0",
+          "label": "The East Hebra Sky Crystal",
+          "questId": "CarryToShrine21"
+        },
+        {
+          "id": "quest-026",
+          "value": "78ecd9d7",
+          "label": "The Sky Mine Crystal",
+          "questId": "CarryToShrine14"
+        },
+        {
+          "id": "quest-027",
+          "value": "51e84d77",
+          "label": "The Sokkala Sky Crystal",
+          "questId": "CarryToShrine17"
+        },
+        {
+          "id": "quest-028",
+          "value": "a0532892",
+          "label": "The South Lanayru Sky Crystal",
+          "questId": "CarryToShrine23"
+        },
+        {
+          "id": "quest-029",
+          "value": "30a57a11",
+          "label": "The North Necluda Sky Crystal",
+          "questId": "CarryToShrine12"
+        },
+        {
+          "id": "quest-030",
+          "value": "73aeb416",
+          "label": "The West Necluda Sky Crystal",
+          "questId": "CarryToShrine22"
+        },
+        {
+          "id": "quest-031",
+          "value": "379aa843",
+          "label": "The Necluda Sky Crystal",
+          "questId": "CarryToShrine05"
+        }
+      ],
+      "sourceCounts": {
+        "ids": 31
+      }
     }
   ]
 }

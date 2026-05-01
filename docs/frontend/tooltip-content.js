@@ -88,11 +88,12 @@ function recipesTooltip(recipes) {
     return tooltipRows("Recipes", [{ label: "Status", value: "No save data loaded" }]);
   }
   const obtained = recipes.obtained ?? "--";
-  const total = recipes.total ?? PLAYER_MAX_RECIPES;
+  const total = recipes.total ?? "--";
   const extras = recipes.extras || [];
 
   const collected = typeof obtained === "number" ? obtained : Number(obtained);
-  const left = Number.isFinite(collected) ? Math.max(total - collected, 0) : "--";
+  const totalNumber = typeof total === "number" ? total : Number(total);
+  const left = Number.isFinite(collected) && Number.isFinite(totalNumber) ? Math.max(totalNumber - collected, 0) : "--";
 
   let html = tooltipRows("Recipes", [
     {
