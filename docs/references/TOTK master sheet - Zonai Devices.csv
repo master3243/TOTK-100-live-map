@@ -1,0 +1,143 @@
+Name,Inventory Image,Inventory Icon,Caption,Attack Power,Element,Additional Element Attack Power (AOE),Duration,Uses,Energy Consumption,Energy Wells per second,Fuse Attack Power,Fuse Property 1,Fuse Property 2,Fuse Property 3,Fuse Can Cut,Zonai Fuse,Fuse Less Shield Surfing Friction,Fuse Disables Torch,Mineru Fuse Durability,Device Dispenser 1,Device Dispenser 2,Device Dispenser 3,Device Dispenser 4,Device Dispenser 5,Device Dispenser 6,Device Dispenser 7,Device Dispenser 8,Device Dispenser 9,Device Dispenser 10,Device Dispenser 11,Name (Japanese),Caption (Japanese),Internal Fuse SubTypes,ActorName (Object),ActorName (Item),Inventory Order
+Fan,,,"A Zonai device that produces wind with its
+internal propeller. It's likely that the Zonai
+made smart use of this wind power to
+transport objects and generate thrust.",-,-,-,30:00,-,5.2,0.156,1,Fan,Fan While Guarding,Cannot Throw,FALSE,TRUE,FALSE,TRUE,2000,Great Sky Island (South),Great Sky Island (East),East Hebra Sky Archipelago,South Eldin Sky Archipelago,Lanayru Sky Archipelago,Wellspring Island,Courage Island,Thunderhead Isles,Dragonhead Island,Kakariko Village,Hudson Construction Site,扇風機,"内部のプロペラの力で風を生み出すゾナウギア
+ゾナウ族はこの風の力を巧みに利用し
+物を運んだり 推進力を得たりしていた","[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,Fan,FanShield,NoThrowing,Zonau]",SpObj_WindGenerator_A_01,SpObj_WindGenerator_Capsule_A_01,01
+Wing,,,"A Zonai device that can harness lift to ride
+the wind. To fly farther, try balancing in the
+center of the wing.",-,-,-,01:15,-,0,0,1,Wing,Shield Jump Higher,-,FALSE,TRUE,FALSE,FALSE,10,Great Sky Island (East),East Hebra Sky Archipelago,Lanayru Sky Archipelago,Wellspring Island,Lightcast Island,Tabantha Sky Archipelago,North Necluda Sky Archipelago,South Lanayru Sky Archipelago,Dragonhead Island,Left-Leg Depot,-,翼,"風を受けて揚力を発生させるゾナウギア
+遠くまで飛ぶには翼の中心に乗って
+うまく左右のバランスを取る必要がある","[Blunt,ShieldSurfingslipperinessDown,SpWing,JumpUp,Zonau]",SpObj_LiftGeneratorWing_A_01,SpObj_LiftGeneratorWing_Capsule_A_01,02
+Cart,,,"A Zonai device built to move efficiently over
+flat surfaces. Apply force to get it moving, so
+long as it has a power source.",-,-,-,-,-,0,0,1,Fan,-,-,FALSE,TRUE,TRUE,TRUE,10,East Hebra Sky Archipelago,Sokkala Sky Archipelago,Lanayru Sky Archipelago,West Necluda Sky Archipelago,Dragonhead Island,-,-,-,-,-,-,台車,"平坦な場所を効率よく進むための ゾナウギア
+一定以上の力を加えると スムーズに走り出す
+自走するには 他の動力と組み合わせる必要がある","[Blunt,ShieldSurfingslipperinessUp,TorchNoBurning,Zonau,Fan]",SpObj_Cart_A_01,SpObj_Cart_Capsule_A_01,03
+Balloon,,,"A Zonai device that rises when filled with
+hot air. The hotter the air, the quicker it
+rises.",-,-,-,02:00,-,0,0,1,Bouncy,-,-,FALSE,TRUE,FALSE,TRUE,10,Lightcast Island,Courage Island,West Necluda Sky Archipelago,Kakariko Village,Hudson Construction Site,-,-,-,-,-,-,熱気球,"熱を受けると浮かび上がるゾナウギア
+温めた空気が軽くなる事を利用しているため
+強く温めると上昇速度が向上する","[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,PowHammer,Zonau]",SpObj_BalloonEnvelope_A_01,SpObj_BalloonEnvelope_Capsule_A_01,04
+Rocket,,,"A Zonai device that produces powerful thrust.
+It packs a punch but burns out quickly.",-,-,-,00:03,-,5,0.15,10,Shatter Rock,Ignore Gravity,Rocket,FALSE,TRUE,FALSE,TRUE,2000,West Hebra Sky Archipelago,South Hyrule Sky Archipelago,Hudson Construction Site,Left-Leg Depot,-,-,-,-,-,-,-,ロケット,"強力な推進力を発揮するゾナウギア
+得られる力が大きい分 本体への負荷も大きく
+ごく短時間しか使う事ができない","[Blunt,RocketBooster,TorchNoBurning,IgnoreGravity,NoRotateYAxis,Zonau,ShatterLevelUpOnlyAim]",SpObj_Rocket_A_01,SpObj_Rocket_Capsule_A_01,05
+Time Bomb,,,"A Zonai device for a timed explosion. Its blast
+can activate other Zonai devices.",-,Bomb,30,-,1,0,0,1,Shield Surfing Spring,-,-,FALSE,TRUE,FALSE,TRUE,1,West Hebra Sky Archipelago,Sky Mine,Courage Island,South Hyrule Sky Archipelago,North Necluda Sky Archipelago,Zonaite Forge Island,-,-,-,-,-,タイマーバクダン,"時限式で破裂するゾナウギア
+破裂の衝撃は 他のゾナウギアを
+起動させる事ができる","[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,Zonau,ShieldSurfingSpring]",SpObj_TimerBomb_A_01,SpObj_TimerBomb_Capsule_A_01,06
+Portable Pot,,,"A Zonai device for cooking food almost
+anytime, anywhere. It lasts for cooking one
+recipe only. The device is easier to use on
+flat surfaces.",-,-,-,-,1,0,0,1,Shatter Rock,-,-,FALSE,TRUE,FALSE,TRUE,10,Great Sky Island (South),Great Sky Island (East),West Hebra Sky Archipelago,Courage Island,Thunderhead Isles,Gerudo Canyon Pass,Death Mountain Depths,-,-,-,-,携帯鍋,"いつでもどこでも料理ができるゾナウギア
+簡易的なつくりのため 一度きりの使い捨て
+平らなところで料理するのが 上手に作るコツ","[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShatterWeapon,Zonau]",SpObj_CookSetOnFire_A_01,SpObj_CookSet_Capsule_A_01,07
+Flame Emitter,,,"A Zonai device that shoots fire. It's thought
+to have been originally used as protection
+from monsters.",-,Fire,0,30:00,-,6,0.18,1,Fire Burst,-,-,FALSE,TRUE,FALSE,TRUE,2000,Great Sky Island (South),Great Sky Island (East),West Hebra Sky Archipelago,Bravery Island,Zonaite Forge Island,-,-,-,-,-,-,火龍の頭,"前方に炎を放出するゾナウギア
+元々は魔物から身を守るための
+護身用に使われていた","[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,Zonau,ChemicalExplosionFire]",SpObj_FlameThrower_A_01,SpObj_FlameThrower_Capsule_A_01,08
+Frost Emitter,,,"A Zonai device that blasts out freezing air,
+handy for slowing and defeating some
+monsters. Also, some materials change their
+properties when exposed to very cold air.",-,Ice,0,30:00,-,6,0.18,1,Ice Burst,-,-,FALSE,TRUE,FALSE,TRUE,2000,Tabantha Sky Archipelago,Starview Island,Zonaite Forge Island,South Lanayru Sky Archipelago,-,-,-,-,-,-,-,氷龍の頭,"指向性のある冷気を放出するゾナウギア
+魔物の撃退に役立つほか 水面を凍らせて
+氷を作る用途にも使う事ができる","[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,Zonau,ChemicalExplosionIce]",SpObj_SnowMachine_A_01,SpObj_SnowMachine_Capsule_A_01,09
+Shock Emitter,,,"A Zonai device that shoots a shocking bolt
+from its horn when struck. Oddly, only the
+horn conducts the bolt. The rest of the head
+is safe to hold.",-,Electric,0,30:00,-,6,0.18,1,Electric Burst,Expand Hitbox,-,FALSE,TRUE,FALSE,TRUE,2000,North Hyrule Sky Archipelago,Starview Island,Thunderhead Isles,-,-,-,-,-,-,-,-,雷龍の頭,"叩くと先端に高圧電流を流す ゾナウギア
+根元部分は絶縁されているので
+手に持つ場合は ここを持つと安全だ","[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,AtExpandLarge,Zonau,ChemicalExplosionElectric]",SpObj_ElectricBoxGenerator,SpObj_ElectricBoxGenerator_Capsule_A_01,10
+Beam Emitter,,,"A Zonai device that shoots a light beam from
+its horn, inflicting damage at great range.",-,Beam,12,30:00,-,6,0.18,1,-,-,-,FALSE,TRUE,FALSE,TRUE,2000,Lanayru Sky Archipelago,East Gerudo Sky Archipelago,Zonaite Forge Island,Valor Island,-,-,-,-,-,-,-,光線の頭,"先端から一直線状に光線を放つゾナウギア
+遠く離れた相手を攻撃する事ができる","[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,Zonau]",SpObj_Beamos_A_01,SpObj_Beamos_Capsule_A_01,11
+Hydrant,,,"A Zonai device that gushes water when
+struck. According to legend, sky islands saw
+water shortages long ago but became lush
+and fertile thanks to this technology.",-,Water,0,30:00,-,1,0.03,1,Shatter Rock,Water Burst,Water Attack,FALSE,TRUE,FALSE,TRUE,2000,South Eldin Sky Archipelago,Sky Mine,West Necluda Sky Archipelago,Valor Island,-,-,-,-,-,-,-,放水柱,"叩くと水が湧き出るゾナウギア
+かつての空島は水源が不足していたが
+この技術により 水と緑が豊かな土地になった","Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShatterWeapon,WaterDamageUpElement,Zonau,ChemicalExplosionW[ater]",SpObj_WaterPump_A_01,SpObj_LiftableWaterPump_Capsule_A_01,12
+Steering Stick,,,"A Zonai device that can control direction
+when attached to a conveyance. It'll activate
+all connected Zonai devices at once.",-,-,-,-,-,0,0,1,-,-,-,FALSE,TRUE,FALSE,TRUE,10,North Hyrule Sky Archipelago,East Gerudo Sky Archipelago,Valor Island,South Necluda Sky Archipelago,Dragonhead Island,Hudson Construction Site,Death Mountain Depths,Left-Leg Depot,-,-,-,操縦桿,"乗り物の姿勢を制御する ゾナウギア
+乗り込んで操作する事で 接続されている
+ゾナウギアをまとめて駆動させる事ができる","[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,Zonau]",SpObj_ControlStick_A_01,SpObj_ControlStick_Capsule_A_01,13
+Big Wheel,,,"A powered Zonai device that wants to move!
+It's a big, mean wheel that excels at tearing
+through environments that might challenge
+smaller wheels. It can handle shallow water.",1,-,-,30:00,-,0.5,0.015,1,Expand Shockwave,-,-,FALSE,TRUE,FALSE,TRUE,10,South Eldin Sky Archipelago,Kakariko Village,Hudson Construction Site,Gerudo Canyon Pass,Death Mountain Depths,Left-Leg Depot,-,-,-,-,-,大きなタイヤ,"力強く回転する 動力付きのゾナウギア
+直径が大きいため 悪路の走破性に優れていて
+浅い水場を走行する事もできる","[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ExpandShockWave,Zonau]",SpObj_SwitchWheel_B_01,SpObj_FastWheel_Capsule_B_01,14
+Small Wheel,,,"A powered Zonai device that spins quickly
+and is best suited for flat surfaces. It doesn't
+handle hills, or even bumps, very well.",1,-,-,30:00,-,0.5,0.015,1,-,-,-,FALSE,TRUE,FALSE,TRUE,10,Tabantha Sky Archipelago,South Hyrule Sky Archipelago,South Necluda Sky Archipelago,Hudson Construction Site,Left-Leg Depot,-,-,-,-,-,-,小さなタイヤ,"自走可能な動力付きのゾナウギア
+平坦な地形に適していて 高速走行が可能
+登り坂やデコボコな場所は やや苦手","[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,Zonau]",SpObj_FastWheel_A_01,SpObj_FastWheel_Capsule_A_01,15
+Sled,,,"A Zonai device with a slick underside that
+minimizes friction. Probably used to convey
+things over grass and sand in ancient times.",-,-,-,-,-,0,0,1,Fan,-,-,FALSE,TRUE,TRUE,TRUE,10,East Hebra Sky Archipelago,Starview Island,East Gerudo Sky Archipelago,-,-,-,-,-,-,-,-,ソリ,"裏面が滑らかな構造のゾナウギア
+摩擦が限りなく小さく ゾナウ文明では
+草地や砂上の乗り物として重宝されていた","[Blunt,TorchNoBurning,ShieldSurfingslipperinessUp,Zonau,Fan]",SpObj_SlipBoard_A_01,SpObj_SlipBoard_Capsule_A_01,16
+Battery,,,"A Zonai device that holds concentrated
+Zonai-charge energy. Use it to provide
+temporary power for other Zonai devices.",-,-,-,-,-,0,0,1,-,-,-,FALSE,TRUE,FALSE,TRUE,10,Bravery Island,South Eldin Sky Archipelago,Wellspring Island,South Lanayru Sky Archipelago,Thunderhead Isles,Gerudo Canyon Pass,Death Mountain Depths,-,-,-,-,スペアバッテリー,"ゾナウエネルギーを凝縮して
+持ち運べるようにした 使い捨てのバッテリー
+他のゾナウギアを駆動するのに使える","[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,Zonau]",SpObj_EnergyBank_A_01,SpObj_EnergyBank_Capsule_A_01,17
+Big Battery,,,"A battery with an improved compression rate.
+Though disposable, it holds multiple times as
+much energy as a normal battery.",-,-,-,-,-,0,0,2,-,-,-,FALSE,TRUE,FALSE,TRUE,10,-,-,-,-,-,-,-,-,-,-,-,大容量バッテリー,"圧縮率を高めたスペアバッテリー
+使い捨てではあるものの エネルギーの量は
+通常品の何倍も大きい","[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,Zonau]",SpObj_EnergyBank_A_02,SpObj_EnergyBank_Capsule_A_02,18
+Spring,,,"A Zonai device that contracts and then
+expands with enough power to bounce
+objects away from it.",1,-,-,-,-,0,0,1,Bouncy,Shield Surfing Spring,Spring,FALSE,TRUE,FALSE,TRUE,10,Lightcast Island,North Necluda Sky Archipelago,Valor Island,Gerudo Canyon Pass,-,-,-,-,-,-,-,バネ,"縮んだ状態と伸びた状態が切り替わるゾナウギア
+収縮したバネが伸び切る時に 大きな力が発生し
+物を跳ね飛ばしたりするのに使える","[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,PowHammer,Spring,Zonau,ShieldSurfingSpring]",SpObj_SpringPiston_A_01,SpObj_SpringPiston_Capsule_A_01,19
+Cannon,,,"A Zonai device that fires shots in intervals.
+The shot explodes when hitting the target.
+It's a powerful device, but it can be tricky to
+get the firing angle just right.",-,Bomb,12 / 40,-,600,900 / 3000,0.3,1,Cannot Throw,-,-,FALSE,TRUE,FALSE,TRUE,20,Sokkala Sky Archipelago,North Necluda Sky Archipelago,South Necluda Sky Archipelago,-,-,-,-,-,-,-,-,大砲,"一定間隔で砲弾を発射するゾナウギア
+砲弾は当たると爆発する 
+強力だが 発射角度の調整が少し難しい","[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShieldSurfingslipperinessDown,NoThrowing,Zonau]",SpObj_Cannon_A_01,SpObj_Cannon_Capsule_A_01,20
+Stabilizer,,,"A perfectly balanced Zonai device that stands
+upright when activated. It was used to secure
+footholds in unstable places, such as sky
+islands.",-,-,-,30:00,-,1,0.03,5,Shatter Rock,-,-,FALSE,TRUE,FALSE,TRUE,10,Wellspring Island,Starview Island,West Necluda Sky Archipelago,Kakariko Village,-,-,-,-,-,-,-,おきあがりこぼし,"駆動すると強い力で直立するゾナウギア
+空島などの不安定な場所で作業する際
+足場を安定させるために用いられていた","[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,Zonau,ShatterWeapon]",SpObj_TiltingDoll_A_01,SpObj_TiltingDoll_Capsule_A_01,21
+Hover Stone,,,"A Zonai device that can defy gravity and
+hang in place. Ages ago, the Zonai may have
+used this technology to create islands that
+float in the sky.",-,-,-,30:00,-,1,0.03,1,Shatter Rock,Floating,-,FALSE,TRUE,FALSE,TRUE,10,Sky Mine,Wellspring Island,Lightcast Island,-,-,-,-,-,-,-,-,浮遊石,"重力の影響を受けず 空中に留まるゾナウギア
+かつてゾナウ族はこの技術を用いて
+空に島や建造物を浮かべていた","[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,ShatterWeapon,Floating,Zonau]",SpObj_FloatingStone_A_01,SpObj_FloatingStone_Capsule_A_01,22
+Light,,,"A Zonai device that can bring some light to
+dark places. It shines in one direction, and its
+light doesn't reach too far, but it can come in
+handy on dark roads or in caves.",-,-,-,30:00,-,1,0.03,1,-,-,-,FALSE,TRUE,FALSE,TRUE,2000,East Hebra Sky Archipelago,North Hyrule Sky Archipelago,Bravery Island,South Hyrule Sky Archipelago,South Necluda Sky Archipelago,-,-,-,-,-,-,ライト,"暗闇を照らすゾナウギア
+光の指向性は弱く 遠くまでは届かないが
+暗い夜道や洞窟では とても心強い","[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,Zonau]",SpObj_FlashLight_A_01,SpObj_FlashLight_Capsule_A_01,23
+Stake,,,"A Zonai device that can be fixed in place in
+the ground or on a wall. They've been used
+as footholds and building foundations
+because of their immovability when planted.",-,-,-,-,-,0,0,5,Shatter Rock,-,-,FALSE,TRUE,FALSE,TRUE,10,Sokkala Sky Archipelago,Starview Island,East Gerudo Sky Archipelago,Gerudo Canyon Pass,-,-,-,-,-,-,-,杭,"地面や崖に固定する事ができるゾナウギア
+ゾナウ文明では足場や建物の土台に使われていた
+固定の力は強く 上に乗る程度ではびくともしない","[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,Pile,Zonau,ShatterWeapon]",SpObj_Pile_A_01,SpObj_Pile_Capsule_A_01,24
+Mirror,,,"A Zonai device that focuses and reflects light.
+It can provide powerful, long-distance
+illumination that can ward off some monsters.",-,-,-,30:00,-,0,0,1,-,-,-,FALSE,TRUE,FALSE,TRUE,10,Lightcast Island,Tabantha Sky Archipelago,East Gerudo Sky Archipelago,South Lanayru Sky Archipelago,-,-,-,-,-,-,-,鏡,"光を集めて反射するゾナウギア
+照射する強い光は指向性があり 遠くまで届く
+強い光には魔物を退ける力が宿ると言われている","[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,Zonau]",SpObj_LightMirror_A_01,SpObj_LightMirror_Capsule_A_01,25
+Homing Cart,,,"A Zonai device that automatically heads for
+monsters. It's believed to have been used by
+the Zonai as a security measure.",1,-,-,30:00,-,1,0.03,1,Shatter Rock,-,-,FALSE,TRUE,TRUE,TRUE,10,North Hyrule Sky Archipelago,Sokkala Sky Archipelago,Sky Mine,Zonaite Forge Island,-,-,-,-,-,-,-,追跡台車,"魔物に向かって自走していくゾナウギア
+ゾナウ族が重要施設の周辺を
+警戒するために利用していた","[Blunt,TorchNoBurning,ShatterWeapon,Zonau,ShieldSurfingslipperinessUp]",SpObj_Chaser_A_01,SpObj_Chaser_Capsule_A_01,26
+Construct Head,,,"A Zonai device that always faces whatever it
+deems an enemy. Attach a combat Zonai
+device to the head for homing attacks.",-,-,-,30:00,-,1,0.03,1,-,-,-,FALSE,TRUE,FALSE,TRUE,10,Bravery Island,Sokkala Sky Archipelago,West Necluda Sky Archipelago,Left-Leg Depot,-,-,-,-,-,-,-,ゴーレムの頭,"敵とみなす者を見続ける ゾナウギア
+頭部に攻撃用のゾナウギアを接続しておく事で
+自動追尾する仕組みを作る事ができる","[Blunt,ShieldSurfingslipperinessDown,TorchNoBurning,Zonau]",SpObj_GolemHead_A_01,SpObj_GolemHead_Capsule_A_01,27

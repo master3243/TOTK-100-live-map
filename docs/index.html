@@ -22,7 +22,7 @@
         <div class="brand">
           <p class="eyebrow">Tears of the Kingdom</p>
           <h1>Save Map Helper</h1>
-          <h2>v1.6.4</h2>
+          <h2>v1.7.0</h2>
           <div class="save-upload">
             <input id="manualSaveInput" type="file" accept=".sav,application/octet-stream">
             <label class="upload-button" for="manualSaveInput">Upload save</label>
@@ -72,6 +72,14 @@
               <dt>Shrine Quests</dt>
               <dd id="questsShrineSummary" class="hover-stat" tabindex="0">-- / --</dd>
             </div>
+            <div data-live-row="memories">
+              <dt>Memories</dt>
+              <dd id="memoriesSummary" class="hover-stat" tabindex="0">-- / --</dd>
+            </div>
+            <div data-live-row="character-profiles">
+              <dt>Character Profiles</dt>
+              <dd id="characterProfilesSummary" class="hover-stat" tabindex="0">-- / --</dd>
+            </div>
             <div data-live-row="life">
               <dt>Life</dt>
               <dd id="lifeSummary" class="hover-stat" tabindex="0">--</dd>
@@ -120,6 +128,10 @@
               <dt>Fabrics</dt>
               <dd id="fabricsSummary" class="hover-stat" tabindex="0">-- / --</dd>
             </div>
+            <div data-live-row="fabrics-amiibo">
+              <dt>Fabrics (Amiibo)</dt>
+              <dd id="fabricsAmiiboSummary" class="hover-stat" tabindex="0">-- / --</dd>
+            </div>
             <div data-live-row="key-items">
               <dt>Key Items</dt>
               <dd id="keyItemsSummary" class="hover-stat" tabindex="0">-- / --</dd>
@@ -127,6 +139,10 @@
             <div data-live-row="materials">
               <dt>Materials</dt>
               <dd id="materialsSummary" class="hover-stat" tabindex="0">-- / --</dd>
+            </div>
+            <div data-live-row="zonai-devices">
+              <dt>Zonai Devices</dt>
+              <dd id="zonaiDevicesSummary" class="hover-stat" tabindex="0">-- / --</dd>
             </div>
           </dl>
           <div id="liveSaveCompletedToggleRow" class="live-save-completed-toggle-row" hidden>

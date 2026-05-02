@@ -210,14 +210,15 @@ function statListTooltip(stat, title, completeText, { formatItem = null } = {}) 
     { label: "Collected", value: `${stat.obtained} / ${stat.total}` },
     { label: "Left", value: stat.remaining },
   ]);
+  const note = stat.note ? `<p class="tooltip-note">${escapeHtml(stat.note)}</p>` : "";
   if (!missing.length && stat.remaining > 0) {
-    return `${rows}<p class="tooltip-note">Missing list not available from the current save payload yet.</p>`;
+    return `${rows}${note}<p class="tooltip-note">Missing list not available from the current save payload yet.</p>`;
   }
   if (!missing.length) {
-    return `${rows}<p class="tooltip-note">${escapeHtml(completeText)}</p>`;
+    return `${rows}${note}<p class="tooltip-note">${escapeHtml(completeText)}</p>`;
   }
   const items = missing
     .map((item) => `<li>${escapeHtml(formatItem ? formatItem(item) : item.label || item.id)}</li>`)
     .join("");
-  return `${rows}<div class="tooltip-section-title">Still left</div><ul class="tooltip-list">${items}</ul>`;
+  return `${rows}${note}<div class="tooltip-section-title">Still left</div><ul class="tooltip-list">${items}</ul>`;
 }

@@ -1,0 +1,32 @@
+0/31,Old Map Location,Boss,Object Map Link,X,Y,Height,Chest Location,Reward,Object Map Link,X,Y,Height,Old Map Actor,Reward Actor
+FALSE,Rising Island Chain,Flux Construct I,Link,-3476,3514,931,Abandoned Kara Kara Mine,Miner's Mask,Link,-3231,-2477,-475,Obj_TreasureMap_28,Armor_1051_Head
+FALSE,West Hebra Sky Archipelago,-,Link,-3861,2923,748,Daphnes Canyon Mine,Miner's Top,Link,-1077,-557,-514,Obj_TreasureMap_29,Armor_1051_Upper
+FALSE,West Hebra Sky Archipelago,Flux Construct I,Link,-3830,2715,545,Hylia Canyon Mine,Miner's Trousers,Link,-1287,-2250,-707,Obj_TreasureMap_30,Armor_1051_Lower
+FALSE,East Hebra Sky Archipelago,-,Link,-1649,3513,965,Secluded Coliseum,Ravio's Hood,Link,2243,-1901,-467,Obj_TreasureMap_22,Armor_177_Head
+FALSE,North Tabantha Sky Archipelago,-,Link,-3438,1431,1191,Gerudo Dark Skeleton,Tunic of the Wild,Link,-4879,-3720,-458,Obj_TreasureMap_16,Armor_005_Upper
+FALSE,Tabantha Sky Archipelago,-,Link,-3962,608,1709,Eldin Dark Skeleton,Trousers of the Wild,Link,1675,3723,-561,Obj_TreasureMap_17,Armor_035_Lower
+FALSE,Tabantha Sky Archipelago,-,Link,-3635,467,1671,Hebra Dark Skeleton,Cap of the Wild,Link,-3955,3725,-858,Obj_TreasureMap_15,Armor_035_Head
+FALSE,North Hyrule Sky Archipelago,-,Link,435,2196,2244,Forest Coliseum,Korok Mask,Link,-148,2380,-621,Obj_TreasureMap_18,Armor_176_Head
+FALSE,South Hyrule Sky Archipelago,-,Link,-1457,-1584,1221,Corvash Canyon Mine,Trousers of the Hero,Link,-3353,2313,-812,Obj_TreasureMap_02,Armor_230_Lower
+FALSE,South Hyrule Sky Archipelago,Flux Construct II,Link,-1348,-1542,802,Tuft Canyon Mine,Cap of the Hero,Link,2520,-3602,-626,Obj_TreasureMap_00,Armor_230_Head
+FALSE,South Hyrule Sky Archipelago,-,Link,-1233,-1400,989,Dueling Canyons Mine,Tunic of the Hero,Link,1285,-1813,-784,Obj_TreasureMap_01,Armor_230_Upper
+FALSE,South Hyrule Sky Archipelago,-,Link,-816,-1591,915,Desert Coliseum,Sheik's Mask,Link,-4311,-3782,-479,Obj_TreasureMap_19,Armor_224_Head
+FALSE,North Gerudo Sky Archipelago,-,Link,-3377,-21,2285,Floating Coliseum,Majora's Mask,Link,-1152,-1263,-499,Obj_TreasureMap_20,Armor_172_Head
+FALSE,East Gerudo Sky Archipelago,-,Link,-1956,-1810,1168,Dalite Grove,Sword of the Hero,Link,-2048,-1129,-546,Obj_TreasureMap_24,Weapon_Sword_058
+FALSE,Thunderhead Isles,-,Link,952,-3113,757,Crenel Canyon Mine,Trousers of the Sky,Link,1165,426,-580,Obj_TreasureMap_14,Armor_215_Lower
+FALSE,Thunderhead Isles,Flux Construct III,Link,1126,-3274,758,Retsam Grove,Cap of the Sky,Link,3822,-1985,-632,Obj_TreasureMap_12,Armor_216_Head
+FALSE,North Necluda Sky Archipelago,-,Link,1663,-353,401,Sturnida Lavafalls,Cap of Time,Link,-4079,2801,-450,Obj_TreasureMap_03,Armor_200_Head
+FALSE,North Necluda Sky Archipelago,-,Link,1766,-1311,903,Gerudo Canyon Mine,Trousers of Time,Link,-4180,-698,-1121,Obj_TreasureMap_05,Armor_200_Lower
+FALSE,North Necluda Sky Archipelago,-,Link,1852,979,939,Lindor Canyon Mine,Tunic of Time,Link,-2001,1309,-715,Obj_TreasureMap_04,Armor_200_Upper
+FALSE,West Necluda Sky Archipelago,-,Link,1652,-2191,574,Minshi Grove,Tunic of the Sky,Link,1021,1408,-543,Obj_TreasureMap_13,Armor_215_Upper
+FALSE,Necluda Sky Archipelago,-,Link,2160,-2592,1263,Hebra Canyon Mine,Sea-Breeze Boomerang,Link,-2737,2918,-1120,Obj_TreasureMap_26,Weapon_Sword_059
+FALSE,Necluda Sky Archipelago,-,Link,2645,-1414,1476,Tabahl Grove,Sea-Breeze Shield,Link,2668,254,-559,Obj_TreasureMap_27,Weapon_Shield_057
+FALSE,South Lanayru Sky Archipelago,-,Link,4659,-870,1769,Lone Island Coliseum,Midna's Helmet,Link,4563,-3620,-471,Obj_TreasureMap_21,Armor_173_Head
+FALSE,South Lanayru Sky Archipelago,-,Link,4752,-778,1917,Scorching Coliseum,Zant's Helmet,Link,2144,3183,-838,Obj_TreasureMap_23,Armor_178_Head
+FALSE,Lanayru Sky Archipelago,-,Link,3168,459,936,Cuho Canyon Mine,Tunic of the Wind,Link,-3789,1344,-682,Obj_TreasureMap_07,Armor_205_Upper
+FALSE,Wellspring Island,-,Link,3200,598,1418,Davdi Island (Depths),Cap of the Wind,Link,4655,621,-722,Obj_TreasureMap_06,Armor_205_Head
+FALSE,Wellspring Island,-,Link,3693,593,1246,Cresia Pit Mine,Trousers of the Wind,Link,3794,-3613,-445,Obj_TreasureMap_08,Armor_205_Lower
+FALSE,Sokkala Sky Archipelago,Flux Construct II,Link,3665,1795,989,Rist Mine,Tunic of Twilight,Link,4516,2170,-454,Obj_TreasureMap_10,Armor_210_Upper
+FALSE,North Akkala Sky Archipelago,Flux Construct III,Link,3295,3434,795,Gleeok Den,Cap of Twilight,Link,264,3124,-623,Obj_TreasureMap_09,Armor_210_Head
+FALSE,North Akkala Sky Archipelago,-,Link,4269,3108,784,Ancient Underground Fortress,Trousers of Twilight,Link,3320,1507,-856,Obj_TreasureMap_11,Armor_210_Lower
+FALSE,South Eldin Sky Archipelago,-,Link,1811,1014,1205,Akkala House of Bones,Biggoron's Sword,Link,3240,3446,-430,Obj_TreasureMap_25,Weapon_Lsword_059

@@ -18,6 +18,11 @@ FOOD_CSV = REFERENCES / "TOTK master sheet - Food.csv"
 KEY_ITEM_CSV = REFERENCES / "TOTK master sheet - KeyItems.csv"
 MATERIALS_CSV = REFERENCES / "TOTK master sheet - Materials.csv"
 QUESTS_CSV = REFERENCES / "TOTK master sheet - Quests.csv"
+CHARACTER_PROFILES_CSV = REFERENCES / "TOTK master sheet - Chara. Profiles.csv"
+MEMORIES_CSV = REFERENCES / "TOTK master sheet - Memories.csv"
+OLD_MAPS_CSV = REFERENCES / "TOTK master sheet - Old Maps.csv"
+PARAGLIDER_FABRICS_CSV = REFERENCES / "TOTK master sheet - Paraglider Fabrics.csv"
+ZONAI_DEVICES_CSV = REFERENCES / "TOTK master sheet - Zonai Devices.csv"
 SHRINE_CHESTS_JSON = REFERENCES / "objmap_shrine_chests.json"
 
 COMPLETISM_JS = REFERENCES / "zelda-totk.completism.js"
@@ -116,7 +121,7 @@ CATEGORIES = [
     {"id": "chasms", "label": "Chasms", "hashes": "LOCATION_CHASMS_VISITED2", "coords": "LOCATION_CHASMS", "kind": "bool"},
     {"id": "schema_stone", "label": "Schema Stones", "hashes": "SCHEMATICS_STONE_FOUND", "coords": "SCHEMATICS_STONE", "kind": "bool"},
     {"id": "yiga_schematic", "label": "Yiga Schematic", "hashes": "SCHEMATICS_YIGA_FOUND", "coords": "SCHEMATICS_YIGA", "kind": "bool"},
-    {"id": "old_map", "label": "Old Map", "hashes": "TREASURE_MAPS_FOUND", "coords": "TREASURE_MAPS", "kind": "bool"},
+    {"id": "old_map", "label": "Old Map", "source": "old_maps", "kind": "bool"},
     {"id": "armor", "label": "Armor", "source": "armor_locations", "kind": "bool"},
     {"id": "sage_will", "label": "Sage's Will", "hashes": "SAGE_WILLS_FOUND", "coords": "SAGE_WILLS", "kind": "guid"},
     {"id": "general_locations", "label": "General Locations", "source": "master_map", "kind": "bool"},
@@ -128,7 +133,8 @@ STATS = [
     {"id": "armor_inventory", "label": "Armor", "source": "armor_inventory", "kind": "armor_inventory", "includeMissing": True},
     {"id": "armor_upgraded", "label": "Armor (4-star upgraded)", "source": "armor_upgraded", "kind": "armor_upgraded", "includeMissing": True},
     {"id": "pristine_weapons", "label": "Pristine Weapons", "source": "pristine_weapons", "kind": "positive", "includeMissing": True},
-    {"id": "fabrics", "label": "Fabrics", "source": "fabrics", "kind": "positive", "includeMissing": True},
+    {"id": "fabrics", "label": "Fabrics", "source": "master_fabrics", "kind": "positive", "includeMissing": True},
+    {"id": "fabrics_amiibo", "label": "Fabrics (Amiibo)", "source": "master_fabrics_amiibo", "kind": "positive", "includeMissing": True, "note": "Amiibo fabrics are not obtainable without amiibos and should not be considered part of 100%."},
     {"id": "recipes", "label": "Recipes", "source": "master_food", "kind": "positive"},
     {"id": "materials", "label": "Materials", "source": "master_materials", "kind": "inventory_collection", "includeMissing": True},
     {"id": "key_items", "label": "Key Items", "source": "master_key_items", "kind": "inventory_collection", "includeMissing": True},
@@ -136,42 +142,10 @@ STATS = [
         {"id": stat_id, "label": label, "source": "master_quests", "kind": "positive", "questType": quest_type, "target": "Complete", "includeMissing": True}
         for stat_id, label, quest_type in QUEST_TYPES
     ],
+    {"id": "memories", "label": "Memories", "source": "master_memories", "kind": "positive", "includeMissing": True},
+    {"id": "character_profiles", "label": "Character Profiles", "source": "master_character_profiles", "kind": "present", "includeMissing": True},
+    {"id": "zonai_devices", "label": "Zonai Devices", "source": "master_zonai_devices", "kind": "positive", "includeMissing": True},
 ]
-
-COLLECTABLE_FABRICS = [
-    ("Default", "Ordinary Fabric"),
-    ("Pattern00", "Goron Fabric"),
-    ("Pattern01", "Zora Fabric"),
-    ("Pattern02", "Gerudo Fabric"),
-    ("Pattern03", "Royal Hyrulean Fabric"),
-    ("Pattern04", "Zonai Fabric"),
-    ("Pattern05", "Sheikah Fabric"),
-    ("Pattern06", "Yiga Fabric"),
-    ("Pattern07", "Monster-Control-Crew Fabric"),
-    ("Pattern08", "Zonai Survey Team Fabric"),
-    ("Pattern09", "Horse-God Fabric"),
-    ("Pattern10", "Lurelin Village Fabric"),
-    ("Pattern11", "Lucky Clover Gazette Fabric"),
-    ("Pattern12", "Hudson Construction Fabric"),
-    ("Pattern13", "Koltin's Fabric"),
-    ("Pattern14", "Korok Fabric"),
-    ("Pattern15", "Grizzlemaw-Bear Fabric"),
-    ("Pattern16", "Robbie's Fabric"),
-    ("Pattern17", "Cece Fabric"),
-    ("Pattern18", "Aerocuda Fabric"),
-    ("Pattern19", "Eldin-Ostrich Fabric"),
-    ("Pattern20", "Cucco Fabric"),
-    ("Pattern21", "Horse Fabric"),
-    ("Pattern22", "Chuchu Fabric"),
-    ("Pattern23", "Lynel Fabric"),
-    ("Pattern24", "Gleeok Fabric"),
-    ("Pattern25", "Stalnox Fabric"),
-    ("Pattern55", "Nostalgic Fabric"),
-    ("Pattern56", "Addison's Fabric"),
-]
-
-
-
 
 def extract_array(text, name):
     match = re.search(rf"\b{name}\s*:\s*\[|\b{name}\s*=\s*\[", text)
@@ -413,24 +387,31 @@ def parse_pristine_weapon_items(equipment_text):
     return items
 
 
-def parse_fabric_items(hashes_text):
-    hash_by_pattern = {}
-    pattern = re.compile(r"^([0-9a-fA-F]{8});Bool;OwnedParasailPattern\.(Default|Pattern\d+)$")
-    for line in hashes_text.splitlines():
-        match = pattern.match(line.strip())
-        if not match:
-            continue
-        hash_by_pattern[match.group(2)] = match.group(1).lower()
+def fabric_pattern_id(actor_name):
+    if actor_name == "Obj_SubstituteCloth_Default":
+        return "Default"
+    match = re.fullmatch(r"Obj_SubstituteCloth_(\d+)", actor_name)
+    if not match:
+        raise ValueError(f"Bad fabric actor: {actor_name}")
+    return f"Pattern{int(match.group(1)):02d}"
 
+
+def parse_master_fabric_items(path, amiibo):
     items = []
-    for pattern_id, label in COLLECTABLE_FABRICS:
-        if pattern_id not in hash_by_pattern:
-            raise ValueError(f"Missing fabric hash for {pattern_id}")
+    for row in read_master_rows(path):
+        source = row.get("Source", "")
+        if ("amiibo" in source.lower()) != amiibo:
+            continue
+        actor_name = row["Fabric ActorName"].strip()
+        if not actor_name:
+            continue
+        pattern_id = fabric_pattern_id(actor_name)
         items.append({
-            "id": pattern_id,
-            "value": hash_by_pattern[pattern_id],
-            "label": label,
-            "fabricId": "Obj_SubstituteCloth_Default" if pattern_id == "Default" else f"Obj_SubstituteCloth_{pattern_id.replace('Pattern', '')}",
+            "id": f"fabrics{'_amiibo' if amiibo else ''}-{len(items) + 1:03d}",
+            "value": f"{murmur3_32('OwnedParasailPattern.' + pattern_id):08x}",
+            "label": row["Name"].strip() or actor_name,
+            "fabricId": actor_name,
+            "source": source.strip(),
         })
     return items
 
@@ -488,6 +469,51 @@ def parse_master_quest_items(path, quest_type):
             "value": f"{murmur3_32('Step_' + quest_id):08x}",
             "label": name or quest_id,
             "questId": quest_id,
+        })
+    return items
+
+
+def parse_master_memory_items(path):
+    items = []
+    for row in read_master_rows(path):
+        actor = row["Actor"].strip()
+        if not actor:
+            continue
+        items.append({
+            "id": f"memories-{len(items) + 1:03d}",
+            "value": f"{murmur3_32('IsGetAdventureMemory.' + actor):08x}",
+            "label": row["Title"].strip() or actor,
+            "actorName": actor,
+        })
+    return items
+
+
+def parse_master_character_profile_items(path):
+    items = []
+    for row in read_master_rows(path):
+        actor = row["Actor"].strip()
+        if not actor:
+            continue
+        items.append({
+            "id": f"character_profiles-{len(items) + 1:03d}",
+            "value": f"{murmur3_32('CharaDirectory_IsNew.' + actor):08x}",
+            "label": row["Name"].strip() or actor,
+            "actorName": actor,
+        })
+    return items
+
+
+def parse_master_zonai_device_items(path):
+    items = []
+    for row in read_master_rows(path):
+        actor = row["ActorName (Item)"].strip()
+        if not actor:
+            continue
+        items.append({
+            "id": f"zonai_devices-{len(items) + 1:03d}",
+            "value": f"{murmur3_32('IsGet.' + actor):08x}",
+            "label": row["Name"].strip() or actor,
+            "actorName": actor,
         })
     return items
 
@@ -650,6 +676,38 @@ def parse_shrine_chest_items(path, coordinates_text):
     return items
 
 
+def parse_old_map_items(path):
+    items = []
+    with path.open(encoding="utf-8-sig", newline="") as handle:
+        for row in csv.reader(handle):
+            if not row or row[0] == "0/31":
+                continue
+            map_actor = row[13].strip()
+            reward_actor = row[14].strip()
+            reward = row[8].strip()
+            if not map_actor or not reward_actor:
+                continue
+            entries = [
+                ("map", f"IsFindTreasureMap.{reward_actor}", row[4], row[6], row[5], f"Old Map - {row[1].strip()} - {reward} - {map_actor}", map_actor),
+                ("chest", f"IsGet.{reward_actor}", row[10], row[12], row[11], f"Treasure Chest - {row[7].strip()} - {reward} - {reward_actor}", reward_actor),
+            ]
+            for kind, flag, x, y, z, note, objmap_query in entries:
+                x, y, z = round(float(x), 2), round(float(y), 2), round(float(z), 2)
+                items.append({
+                    "id": f"old_map-{len(items) + 1:03d}",
+                    "value": f"{murmur3_32(flag):08x}",
+                    "x": x,
+                    "y": y,
+                    "z": z,
+                    "layer": layer_for(y),
+                    "kind": kind,
+                    "label": f"{reward} ({'map' if kind == 'map' else 'chest'})",
+                    "note": f"{note} - {flag}",
+                    "objmapQuery": objmap_query,
+                })
+    return items
+
+
 def layer_for(y):
     if y >= 750:
         return "sky"
@@ -741,6 +799,19 @@ def main():
             })
             continue
 
+        if category.get("source") == "old_maps":
+            items = parse_old_map_items(OLD_MAPS_CSV)
+            categories.append({
+                "id": category["id"],
+                "label": category["label"],
+                "kind": category["kind"],
+                "targetValue": target_value(category.get("target")),
+                "defaultVisible": category.get("defaultVisible", True),
+                "items": items,
+                "sourceCounts": {"rows": len(items) // 2, "markers": len(items)},
+            })
+            continue
+
         hash_rows = parse_hash_rows(completism, category["hashes"], category["kind"])
         coords = parse_coordinates(coordinates, category["coords"])
         count = min(len(hash_rows), len(coords))
@@ -776,8 +847,10 @@ def main():
     for stat in STATS:
         if stat.get("source") == "pristine_weapons":
             items = parse_pristine_weapon_items(equipment)
-        elif stat.get("source") == "fabrics":
-            items = parse_fabric_items(hashes)
+        elif stat.get("source") == "master_fabrics":
+            items = parse_master_fabric_items(PARAGLIDER_FABRICS_CSV, amiibo=False)
+        elif stat.get("source") == "master_fabrics_amiibo":
+            items = parse_master_fabric_items(PARAGLIDER_FABRICS_CSV, amiibo=True)
         elif stat.get("source") == "master_food":
             items = parse_master_recipe_items(FOOD_CSV)
         elif stat.get("source") == "master_materials":
@@ -788,6 +861,12 @@ def main():
             items = inventory["items"]
         elif stat.get("source") == "master_quests":
             items = parse_master_quest_items(QUESTS_CSV, stat["questType"])
+        elif stat.get("source") == "master_memories":
+            items = parse_master_memory_items(MEMORIES_CSV)
+        elif stat.get("source") == "master_character_profiles":
+            items = parse_master_character_profile_items(CHARACTER_PROFILES_CSV)
+        elif stat.get("source") == "master_zonai_devices":
+            items = parse_master_zonai_device_items(ZONAI_DEVICES_CSV)
         elif stat.get("source") == "armor_inventory":
             items = parse_armor_inventory_items(locale)
         elif stat.get("source") == "armor_upgraded":
@@ -809,6 +888,8 @@ def main():
             "items": items,
             "sourceCounts": {"ids": len(items)},
         }
+        if stat.get("note"):
+            stat_entry["note"] = stat["note"]
         if stat["kind"].startswith("armor_"):
             stat_entry["arrayHash"] = hash_by_flag["Pouch.Armor.Content.Name"]
             stat_entry["sourceCounts"]["arrayHash"] = 1

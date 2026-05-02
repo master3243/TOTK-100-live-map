@@ -12266,287 +12266,752 @@
       "items": [
         {
           "id": "old_map-001",
-          "value": "78351b17",
-          "x": -1347.79,
-          "y": 801.24,
-          "z": -1542.0,
+          "value": "5875357a",
+          "x": -3476.0,
+          "y": 931.0,
+          "z": 3514.0,
           "layer": "sky",
-          "note": "Obj_TreasureMap_00 - 12982257783340555813 - Armor_230_Head"
+          "kind": "map",
+          "label": "Miner's Mask (map)",
+          "note": "Old Map - Rising Island Chain - Miner's Mask - Obj_TreasureMap_28 - IsFindTreasureMap.Armor_1051_Head",
+          "objmapQuery": "Obj_TreasureMap_28"
         },
         {
           "id": "old_map-002",
-          "value": "a77d686d",
-          "x": -1232.51,
-          "y": 987.91,
-          "z": -1399.99,
-          "layer": "sky",
-          "note": "Obj_TreasureMap_01 - 8025772427704871030 - Armor_230_Upper"
+          "value": "8a32f8e9",
+          "x": -3231.0,
+          "y": -475.0,
+          "z": -2477.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Miner's Mask (chest)",
+          "note": "Treasure Chest - Abandoned Kara Kara Mine - Miner's Mask - Armor_1051_Head - IsGet.Armor_1051_Head",
+          "objmapQuery": "Armor_1051_Head"
         },
         {
           "id": "old_map-003",
-          "value": "17110169",
-          "x": -1456.58,
-          "y": 1219.98,
-          "z": -1584.35,
-          "layer": "sky",
-          "note": "Obj_TreasureMap_02 - 18358225765623179803 - Armor_230_Lower"
+          "value": "840cfa81",
+          "x": -3861.0,
+          "y": 748.0,
+          "z": 2923.0,
+          "layer": "surface",
+          "kind": "map",
+          "label": "Miner's Top (map)",
+          "note": "Old Map - West Hebra Sky Archipelago - Miner's Top - Obj_TreasureMap_29 - IsFindTreasureMap.Armor_1051_Upper",
+          "objmapQuery": "Obj_TreasureMap_29"
         },
         {
           "id": "old_map-004",
-          "value": "2b60b4b7",
-          "x": 1662.94,
-          "y": 900.26,
-          "z": -352.65,
-          "layer": "sky",
-          "note": "Obj_TreasureMap_03 - 13327614428398590506 - Armor_200_Head"
+          "value": "a32a5569",
+          "x": -1077.0,
+          "y": -514.0,
+          "z": -557.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Miner's Top (chest)",
+          "note": "Treasure Chest - Daphnes Canyon Mine - Miner's Top - Armor_1051_Upper - IsGet.Armor_1051_Upper",
+          "objmapQuery": "Armor_1051_Upper"
         },
         {
           "id": "old_map-005",
-          "value": "28ae6f1c",
-          "x": 1851.51,
-          "y": 938.21,
-          "z": -979.0,
-          "layer": "sky",
-          "note": "Obj_TreasureMap_04 - 5691569256957001682 - Armor_200_Upper"
+          "value": "e112f9e2",
+          "x": -3830.0,
+          "y": 545.0,
+          "z": 2715.0,
+          "layer": "surface",
+          "kind": "map",
+          "label": "Miner's Trousers (map)",
+          "note": "Old Map - West Hebra Sky Archipelago - Miner's Trousers - Obj_TreasureMap_30 - IsFindTreasureMap.Armor_1051_Lower",
+          "objmapQuery": "Obj_TreasureMap_30"
         },
         {
           "id": "old_map-006",
-          "value": "7a1d84a5",
-          "x": 1765.79,
-          "y": 901.66,
-          "z": -1310.74,
-          "layer": "sky",
-          "note": "Obj_TreasureMap_05 - 8688382086926296901 - Armor_200_Lower"
+          "value": "78626c44",
+          "x": -1287.0,
+          "y": -707.0,
+          "z": -2250.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Miner's Trousers (chest)",
+          "note": "Treasure Chest - Hylia Canyon Mine - Miner's Trousers - Armor_1051_Lower - IsGet.Armor_1051_Lower",
+          "objmapQuery": "Armor_1051_Lower"
         },
         {
           "id": "old_map-007",
-          "value": "56aa6296",
-          "x": 3200.16,
-          "y": 1416.58,
-          "z": 598.47,
+          "value": "05b058c7",
+          "x": -1649.0,
+          "y": 965.0,
+          "z": 3513.0,
           "layer": "sky",
-          "note": "Obj_TreasureMap_06 - 5064574262399912277 - Armor_205_Head"
+          "kind": "map",
+          "label": "Ravio's Hood (map)",
+          "note": "Old Map - East Hebra Sky Archipelago - Ravio's Hood - Obj_TreasureMap_22 - IsFindTreasureMap.Armor_177_Head",
+          "objmapQuery": "Obj_TreasureMap_22"
         },
         {
           "id": "old_map-008",
-          "value": "5a06eebb",
-          "x": 3167.95,
-          "y": 935.18,
-          "z": 459.37,
-          "layer": "sky",
-          "note": "Obj_TreasureMap_07 - 6373743458188454703 - Armor_205_Upper"
+          "value": "c7438f71",
+          "x": 2243.0,
+          "y": -467.0,
+          "z": -1901.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Ravio's Hood (chest)",
+          "note": "Treasure Chest - Secluded Coliseum - Ravio's Hood - Armor_177_Head - IsGet.Armor_177_Head",
+          "objmapQuery": "Armor_177_Head"
         },
         {
           "id": "old_map-009",
-          "value": "dd8a40d8",
-          "x": 3692.78,
-          "y": 1244.65,
-          "z": 593.25,
+          "value": "dfdded1c",
+          "x": -3438.0,
+          "y": 1191.0,
+          "z": 1431.0,
           "layer": "sky",
-          "note": "Obj_TreasureMap_08 - 6271540893534223348 - Armor_205_Lower"
+          "kind": "map",
+          "label": "Tunic of the Wild (map)",
+          "note": "Old Map - North Tabantha Sky Archipelago - Tunic of the Wild - Obj_TreasureMap_16 - IsFindTreasureMap.Armor_005_Upper",
+          "objmapQuery": "Obj_TreasureMap_16"
         },
         {
           "id": "old_map-010",
-          "value": "17aea64c",
-          "x": 3294.51,
-          "y": 794.13,
-          "z": 3434.16,
-          "layer": "sky",
-          "note": "Obj_TreasureMap_09 - 17213520049899645000 - Armor_210_Head"
+          "value": "32e2379e",
+          "x": -4879.0,
+          "y": -458.0,
+          "z": -3720.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Tunic of the Wild (chest)",
+          "note": "Treasure Chest - Gerudo Dark Skeleton - Tunic of the Wild - Armor_005_Upper - IsGet.Armor_005_Upper",
+          "objmapQuery": "Armor_005_Upper"
         },
         {
           "id": "old_map-011",
-          "value": "29889eb8",
-          "x": 3664.83,
-          "y": 988.38,
-          "z": 1795.0,
+          "value": "2837316a",
+          "x": -3962.0,
+          "y": 1709.0,
+          "z": 608.0,
           "layer": "sky",
-          "note": "Obj_TreasureMap_10 - 3779756660275854581 - Armor_210_Upper"
+          "kind": "map",
+          "label": "Trousers of the Wild (map)",
+          "note": "Old Map - Tabantha Sky Archipelago - Trousers of the Wild - Obj_TreasureMap_17 - IsFindTreasureMap.Armor_035_Lower",
+          "objmapQuery": "Obj_TreasureMap_17"
         },
         {
           "id": "old_map-012",
-          "value": "c576b6bd",
-          "x": 4269.17,
-          "y": 783.46,
-          "z": 3107.88,
-          "layer": "sky",
-          "note": "Obj_TreasureMap_11 - 16186188512693537154 - Armor_210_Lower"
+          "value": "5859d93a",
+          "x": 1675.0,
+          "y": -561.0,
+          "z": 3723.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Trousers of the Wild (chest)",
+          "note": "Treasure Chest - Eldin Dark Skeleton - Trousers of the Wild - Armor_035_Lower - IsGet.Armor_035_Lower",
+          "objmapQuery": "Armor_035_Lower"
         },
         {
           "id": "old_map-013",
-          "value": "3044e564",
-          "x": 1126.41,
-          "y": 756.67,
-          "z": -3273.63,
+          "value": "8af21bf7",
+          "x": -3635.0,
+          "y": 1671.0,
+          "z": 467.0,
           "layer": "sky",
-          "note": "Obj_TreasureMap_12 - 10822848644781216269 - Armor_215_Head"
+          "kind": "map",
+          "label": "Cap of the Wild (map)",
+          "note": "Old Map - Tabantha Sky Archipelago - Cap of the Wild - Obj_TreasureMap_15 - IsFindTreasureMap.Armor_035_Head",
+          "objmapQuery": "Obj_TreasureMap_15"
         },
         {
           "id": "old_map-014",
-          "value": "ad134aed",
-          "x": 1651.63,
-          "y": 1073.41,
-          "z": -2190.7,
-          "layer": "sky",
-          "note": "Obj_TreasureMap_13 - 9656043850692720211 - Armor_215_Upper"
+          "value": "e43ee233",
+          "x": -3955.0,
+          "y": -858.0,
+          "z": 3725.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Cap of the Wild (chest)",
+          "note": "Treasure Chest - Hebra Dark Skeleton - Cap of the Wild - Armor_035_Head - IsGet.Armor_035_Head",
+          "objmapQuery": "Armor_035_Head"
         },
         {
           "id": "old_map-015",
-          "value": "5aa6fa9f",
-          "x": 952.39,
-          "y": 756.2,
-          "z": -3113.04,
+          "value": "bb11e8f5",
+          "x": 435.0,
+          "y": 2244.0,
+          "z": 2196.0,
           "layer": "sky",
-          "note": "Obj_TreasureMap_14 - 2371108008813842096 - Armor_215_Lower"
+          "kind": "map",
+          "label": "Korok Mask (map)",
+          "note": "Old Map - North Hyrule Sky Archipelago - Korok Mask - Obj_TreasureMap_18 - IsFindTreasureMap.Armor_176_Head",
+          "objmapQuery": "Obj_TreasureMap_18"
         },
         {
           "id": "old_map-016",
-          "value": "fb332413",
-          "x": -3634.97,
-          "y": 1670.16,
-          "z": 466.73,
-          "layer": "sky",
-          "note": "Obj_TreasureMap_15 - 3872714873027077662 - Armor_005_Head"
+          "value": "d7aeed59",
+          "x": -148.0,
+          "y": -621.0,
+          "z": 2380.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Korok Mask (chest)",
+          "note": "Treasure Chest - Forest Coliseum - Korok Mask - Armor_176_Head - IsGet.Armor_176_Head",
+          "objmapQuery": "Armor_176_Head"
         },
         {
           "id": "old_map-017",
-          "value": "dfdded1c",
-          "x": -3437.53,
-          "y": 1190.21,
-          "z": 1431.37,
+          "value": "17110169",
+          "x": -1457.0,
+          "y": 1221.0,
+          "z": -1584.0,
           "layer": "sky",
-          "note": "Obj_TreasureMap_16 - 11411219828237605981 - Armor_005_Upper"
+          "kind": "map",
+          "label": "Trousers of the Hero (map)",
+          "note": "Old Map - South Hyrule Sky Archipelago - Trousers of the Hero - Obj_TreasureMap_02 - IsFindTreasureMap.Armor_230_Lower",
+          "objmapQuery": "Obj_TreasureMap_02"
         },
         {
           "id": "old_map-018",
-          "value": "00e34536",
-          "x": -3961.84,
-          "y": 1707.72,
-          "z": 608.13,
-          "layer": "sky",
-          "note": "Obj_TreasureMap_17 - 11354847325397059866 - Armor_005_Lower"
+          "value": "e7fe391c",
+          "x": -3353.0,
+          "y": -812.0,
+          "z": 2313.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Trousers of the Hero (chest)",
+          "note": "Treasure Chest - Corvash Canyon Mine - Trousers of the Hero - Armor_230_Lower - IsGet.Armor_230_Lower",
+          "objmapQuery": "Armor_230_Lower"
         },
         {
           "id": "old_map-019",
-          "value": "bb11e8f5",
-          "x": 435.19,
-          "y": 2243.23,
-          "z": 2195.6,
+          "value": "78351b17",
+          "x": -1348.0,
+          "y": 802.0,
+          "z": -1542.0,
           "layer": "sky",
-          "note": "Obj_TreasureMap_18 - 2696629006754560889 - Armor_176_Head"
+          "kind": "map",
+          "label": "Cap of the Hero (map)",
+          "note": "Old Map - South Hyrule Sky Archipelago - Cap of the Hero - Obj_TreasureMap_00 - IsFindTreasureMap.Armor_230_Head",
+          "objmapQuery": "Obj_TreasureMap_00"
         },
         {
           "id": "old_map-020",
-          "value": "b672271b",
-          "x": -815.71,
-          "y": 914.34,
-          "z": -1590.62,
-          "layer": "sky",
-          "note": "Obj_TreasureMap_19 - 14802750979980998435 - Armor_220_Head"
+          "value": "80106c21",
+          "x": 2520.0,
+          "y": -626.0,
+          "z": -3602.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Cap of the Hero (chest)",
+          "note": "Treasure Chest - Tuft Canyon Mine - Cap of the Hero - Armor_230_Head - IsGet.Armor_230_Head",
+          "objmapQuery": "Armor_230_Head"
         },
         {
           "id": "old_map-021",
-          "value": "7b5a8ac8",
-          "x": -3376.84,
-          "y": 2284.17,
-          "z": -20.58,
+          "value": "a77d686d",
+          "x": -1233.0,
+          "y": 989.0,
+          "z": -1400.0,
           "layer": "sky",
-          "note": "Obj_TreasureMap_20 - 7421986010725994499 - Armor_172_Head"
+          "kind": "map",
+          "label": "Tunic of the Hero (map)",
+          "note": "Old Map - South Hyrule Sky Archipelago - Tunic of the Hero - Obj_TreasureMap_01 - IsFindTreasureMap.Armor_230_Upper",
+          "objmapQuery": "Obj_TreasureMap_01"
         },
         {
           "id": "old_map-022",
-          "value": "eb171a92",
-          "x": 4659.19,
-          "y": 1767.97,
-          "z": -869.84,
-          "layer": "sky",
-          "note": "Obj_TreasureMap_21 - 7700079370819772878 - Armor_173_Head"
+          "value": "ad52ac18",
+          "x": 1285.0,
+          "y": -784.0,
+          "z": -1813.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Tunic of the Hero (chest)",
+          "note": "Treasure Chest - Dueling Canyons Mine - Tunic of the Hero - Armor_230_Upper - IsGet.Armor_230_Upper",
+          "objmapQuery": "Armor_230_Upper"
         },
         {
           "id": "old_map-023",
-          "value": "05b058c7",
-          "x": -1648.57,
-          "y": 964.24,
-          "z": 3513.13,
+          "value": "38381054",
+          "x": -816.0,
+          "y": 915.0,
+          "z": -1591.0,
           "layer": "sky",
-          "note": "Obj_TreasureMap_22 - 1847915464330506328 - Armor_177_Head"
+          "kind": "map",
+          "label": "Sheik's Mask (map)",
+          "note": "Old Map - South Hyrule Sky Archipelago - Sheik's Mask - Obj_TreasureMap_19 - IsFindTreasureMap.Armor_224_Head",
+          "objmapQuery": "Obj_TreasureMap_19"
         },
         {
           "id": "old_map-024",
-          "value": "91916a39",
-          "x": 4752.22,
-          "y": 1916.34,
-          "z": -777.56,
-          "layer": "sky",
-          "note": "Obj_TreasureMap_23 - 18371741502374795567 - Armor_178_Head"
+          "value": "36b04abd",
+          "x": -4311.0,
+          "y": -479.0,
+          "z": -3782.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Sheik's Mask (chest)",
+          "note": "Treasure Chest - Desert Coliseum - Sheik's Mask - Armor_224_Head - IsGet.Armor_224_Head",
+          "objmapQuery": "Armor_224_Head"
         },
         {
           "id": "old_map-025",
-          "value": "24fd5dc6",
-          "x": -1956.29,
-          "y": 1166.59,
-          "z": -1809.8,
+          "value": "7b5a8ac8",
+          "x": -3377.0,
+          "y": 2285.0,
+          "z": -21.0,
           "layer": "sky",
-          "note": "Obj_TreasureMap_24 - 7768005075754752823 - Weapon_Sword_058"
+          "kind": "map",
+          "label": "Majora's Mask (map)",
+          "note": "Old Map - North Gerudo Sky Archipelago - Majora's Mask - Obj_TreasureMap_20 - IsFindTreasureMap.Armor_172_Head",
+          "objmapQuery": "Obj_TreasureMap_20"
         },
         {
           "id": "old_map-026",
-          "value": "de966d31",
-          "x": 1810.72,
-          "y": 1203.84,
-          "z": 1013.62,
-          "layer": "sky",
-          "note": "Obj_TreasureMap_25 - 2157549263046577864 - Weapon_Lsword_059"
+          "value": "dedd3250",
+          "x": -1152.0,
+          "y": -499.0,
+          "z": -1263.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Majora's Mask (chest)",
+          "note": "Treasure Chest - Floating Coliseum - Majora's Mask - Armor_172_Head - IsGet.Armor_172_Head",
+          "objmapQuery": "Armor_172_Head"
         },
         {
           "id": "old_map-027",
-          "value": "8a67682c",
-          "x": 2159.54,
-          "y": 1262.36,
-          "z": -2592.08,
+          "value": "24fd5dc6",
+          "x": -1956.0,
+          "y": 1168.0,
+          "z": -1810.0,
           "layer": "sky",
-          "note": "Obj_TreasureMap_26 - 8126075550031825859 - Weapon_Sword_059"
+          "kind": "map",
+          "label": "Sword of the Hero (map)",
+          "note": "Old Map - East Gerudo Sky Archipelago - Sword of the Hero - Obj_TreasureMap_24 - IsFindTreasureMap.Weapon_Sword_058",
+          "objmapQuery": "Obj_TreasureMap_24"
         },
         {
           "id": "old_map-028",
-          "value": "a2c5ee99",
-          "x": 2644.91,
-          "y": 1475.15,
-          "z": -1414.08,
-          "layer": "sky",
-          "note": "Obj_TreasureMap_27 - 18276965192563104883 - Weapon_Shield_057"
+          "value": "bb144e8f",
+          "x": -2048.0,
+          "y": -546.0,
+          "z": -1129.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Sword of the Hero (chest)",
+          "note": "Treasure Chest - Dalite Grove - Sword of the Hero - Weapon_Sword_058 - IsGet.Weapon_Sword_058",
+          "objmapQuery": "Weapon_Sword_058"
         },
         {
           "id": "old_map-029",
-          "value": "5875357a",
-          "x": -3475.8,
-          "y": 929.9,
-          "z": 3513.55,
+          "value": "5aa6fa9f",
+          "x": 952.0,
+          "y": 757.0,
+          "z": -3113.0,
           "layer": "sky",
-          "note": "Obj_TreasureMap_28 - 12889407973329805926 - Armor_1051_Head"
+          "kind": "map",
+          "label": "Trousers of the Sky (map)",
+          "note": "Old Map - Thunderhead Isles - Trousers of the Sky - Obj_TreasureMap_14 - IsFindTreasureMap.Armor_215_Lower",
+          "objmapQuery": "Obj_TreasureMap_14"
         },
         {
           "id": "old_map-030",
-          "value": "840cfa81",
-          "x": -3860.64,
-          "y": 1247.33,
-          "z": 2922.98,
-          "layer": "sky",
-          "note": "Obj_TreasureMap_29 - 4955019236407069 - Armor_1051_Upper"
+          "value": "40696544",
+          "x": 1165.0,
+          "y": -580.0,
+          "z": 426.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Trousers of the Sky (chest)",
+          "note": "Treasure Chest - Crenel Canyon Mine - Trousers of the Sky - Armor_215_Lower - IsGet.Armor_215_Lower",
+          "objmapQuery": "Armor_215_Lower"
         },
         {
           "id": "old_map-031",
-          "value": "e112f9e2",
-          "x": -3830.44,
-          "y": 1044.1,
-          "z": 2715.02,
+          "value": "c26359b0",
+          "x": 1126.0,
+          "y": 758.0,
+          "z": -3274.0,
           "layer": "sky",
-          "note": "Obj_TreasureMap_30 - 7336531139994088567 - Armor_1051_Lower"
+          "kind": "map",
+          "label": "Cap of the Sky (map)",
+          "note": "Old Map - Thunderhead Isles - Cap of the Sky - Obj_TreasureMap_12 - IsFindTreasureMap.Armor_216_Head",
+          "objmapQuery": "Obj_TreasureMap_12"
+        },
+        {
+          "id": "old_map-032",
+          "value": "3b69f0a7",
+          "x": 3822.0,
+          "y": -632.0,
+          "z": -1985.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Cap of the Sky (chest)",
+          "note": "Treasure Chest - Retsam Grove - Cap of the Sky - Armor_216_Head - IsGet.Armor_216_Head",
+          "objmapQuery": "Armor_216_Head"
+        },
+        {
+          "id": "old_map-033",
+          "value": "2b60b4b7",
+          "x": 1663.0,
+          "y": 401.0,
+          "z": -353.0,
+          "layer": "surface",
+          "kind": "map",
+          "label": "Cap of Time (map)",
+          "note": "Old Map - North Necluda Sky Archipelago - Cap of Time - Obj_TreasureMap_03 - IsFindTreasureMap.Armor_200_Head",
+          "objmapQuery": "Obj_TreasureMap_03"
+        },
+        {
+          "id": "old_map-034",
+          "value": "4f541c65",
+          "x": -4079.0,
+          "y": -450.0,
+          "z": 2801.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Cap of Time (chest)",
+          "note": "Treasure Chest - Sturnida Lavafalls - Cap of Time - Armor_200_Head - IsGet.Armor_200_Head",
+          "objmapQuery": "Armor_200_Head"
+        },
+        {
+          "id": "old_map-035",
+          "value": "7a1d84a5",
+          "x": 1766.0,
+          "y": 903.0,
+          "z": -1311.0,
+          "layer": "sky",
+          "kind": "map",
+          "label": "Trousers of Time (map)",
+          "note": "Old Map - North Necluda Sky Archipelago - Trousers of Time - Obj_TreasureMap_05 - IsFindTreasureMap.Armor_200_Lower",
+          "objmapQuery": "Obj_TreasureMap_05"
+        },
+        {
+          "id": "old_map-036",
+          "value": "533248e7",
+          "x": -4180.0,
+          "y": -1121.0,
+          "z": -698.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Trousers of Time (chest)",
+          "note": "Treasure Chest - Gerudo Canyon Mine - Trousers of Time - Armor_200_Lower - IsGet.Armor_200_Lower",
+          "objmapQuery": "Armor_200_Lower"
+        },
+        {
+          "id": "old_map-037",
+          "value": "28ae6f1c",
+          "x": 1852.0,
+          "y": 939.0,
+          "z": 979.0,
+          "layer": "sky",
+          "kind": "map",
+          "label": "Tunic of Time (map)",
+          "note": "Old Map - North Necluda Sky Archipelago - Tunic of Time - Obj_TreasureMap_04 - IsFindTreasureMap.Armor_200_Upper",
+          "objmapQuery": "Obj_TreasureMap_04"
+        },
+        {
+          "id": "old_map-038",
+          "value": "1368cdaf",
+          "x": -2001.0,
+          "y": -715.0,
+          "z": 1309.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Tunic of Time (chest)",
+          "note": "Treasure Chest - Lindor Canyon Mine - Tunic of Time - Armor_200_Upper - IsGet.Armor_200_Upper",
+          "objmapQuery": "Armor_200_Upper"
+        },
+        {
+          "id": "old_map-039",
+          "value": "ad134aed",
+          "x": 1652.0,
+          "y": 574.0,
+          "z": -2191.0,
+          "layer": "surface",
+          "kind": "map",
+          "label": "Tunic of the Sky (map)",
+          "note": "Old Map - West Necluda Sky Archipelago - Tunic of the Sky - Obj_TreasureMap_13 - IsFindTreasureMap.Armor_215_Upper",
+          "objmapQuery": "Obj_TreasureMap_13"
+        },
+        {
+          "id": "old_map-040",
+          "value": "8ee6666c",
+          "x": 1021.0,
+          "y": -543.0,
+          "z": 1408.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Tunic of the Sky (chest)",
+          "note": "Treasure Chest - Minshi Grove - Tunic of the Sky - Armor_215_Upper - IsGet.Armor_215_Upper",
+          "objmapQuery": "Armor_215_Upper"
+        },
+        {
+          "id": "old_map-041",
+          "value": "8a67682c",
+          "x": 2160.0,
+          "y": 1263.0,
+          "z": -2592.0,
+          "layer": "sky",
+          "kind": "map",
+          "label": "Sea-Breeze Boomerang (map)",
+          "note": "Old Map - Necluda Sky Archipelago - Sea-Breeze Boomerang - Obj_TreasureMap_26 - IsFindTreasureMap.Weapon_Sword_059",
+          "objmapQuery": "Obj_TreasureMap_26"
+        },
+        {
+          "id": "old_map-042",
+          "value": "365af479",
+          "x": -2737.0,
+          "y": -1120.0,
+          "z": 2918.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Sea-Breeze Boomerang (chest)",
+          "note": "Treasure Chest - Hebra Canyon Mine - Sea-Breeze Boomerang - Weapon_Sword_059 - IsGet.Weapon_Sword_059",
+          "objmapQuery": "Weapon_Sword_059"
+        },
+        {
+          "id": "old_map-043",
+          "value": "a2c5ee99",
+          "x": 2645.0,
+          "y": 1476.0,
+          "z": -1414.0,
+          "layer": "sky",
+          "kind": "map",
+          "label": "Sea-Breeze Shield (map)",
+          "note": "Old Map - Necluda Sky Archipelago - Sea-Breeze Shield - Obj_TreasureMap_27 - IsFindTreasureMap.Weapon_Shield_057",
+          "objmapQuery": "Obj_TreasureMap_27"
+        },
+        {
+          "id": "old_map-044",
+          "value": "0ff775af",
+          "x": 2668.0,
+          "y": -559.0,
+          "z": 254.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Sea-Breeze Shield (chest)",
+          "note": "Treasure Chest - Tabahl Grove - Sea-Breeze Shield - Weapon_Shield_057 - IsGet.Weapon_Shield_057",
+          "objmapQuery": "Weapon_Shield_057"
+        },
+        {
+          "id": "old_map-045",
+          "value": "eb171a92",
+          "x": 4659.0,
+          "y": 1769.0,
+          "z": -870.0,
+          "layer": "sky",
+          "kind": "map",
+          "label": "Midna's Helmet (map)",
+          "note": "Old Map - South Lanayru Sky Archipelago - Midna's Helmet - Obj_TreasureMap_21 - IsFindTreasureMap.Armor_173_Head",
+          "objmapQuery": "Obj_TreasureMap_21"
+        },
+        {
+          "id": "old_map-046",
+          "value": "1ce1a5ba",
+          "x": 4563.0,
+          "y": -471.0,
+          "z": -3620.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Midna's Helmet (chest)",
+          "note": "Treasure Chest - Lone Island Coliseum - Midna's Helmet - Armor_173_Head - IsGet.Armor_173_Head",
+          "objmapQuery": "Armor_173_Head"
+        },
+        {
+          "id": "old_map-047",
+          "value": "91916a39",
+          "x": 4752.0,
+          "y": 1917.0,
+          "z": -778.0,
+          "layer": "sky",
+          "kind": "map",
+          "label": "Zant's Helmet (map)",
+          "note": "Old Map - South Lanayru Sky Archipelago - Zant's Helmet - Obj_TreasureMap_23 - IsFindTreasureMap.Armor_178_Head",
+          "objmapQuery": "Obj_TreasureMap_23"
+        },
+        {
+          "id": "old_map-048",
+          "value": "72e413c6",
+          "x": 2144.0,
+          "y": -838.0,
+          "z": 3183.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Zant's Helmet (chest)",
+          "note": "Treasure Chest - Scorching Coliseum - Zant's Helmet - Armor_178_Head - IsGet.Armor_178_Head",
+          "objmapQuery": "Armor_178_Head"
+        },
+        {
+          "id": "old_map-049",
+          "value": "5a06eebb",
+          "x": 3168.0,
+          "y": 936.0,
+          "z": 459.0,
+          "layer": "sky",
+          "kind": "map",
+          "label": "Tunic of the Wind (map)",
+          "note": "Old Map - Lanayru Sky Archipelago - Tunic of the Wind - Obj_TreasureMap_07 - IsFindTreasureMap.Armor_205_Upper",
+          "objmapQuery": "Obj_TreasureMap_07"
+        },
+        {
+          "id": "old_map-050",
+          "value": "c9834a5d",
+          "x": -3789.0,
+          "y": -682.0,
+          "z": 1344.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Tunic of the Wind (chest)",
+          "note": "Treasure Chest - Cuho Canyon Mine - Tunic of the Wind - Armor_205_Upper - IsGet.Armor_205_Upper",
+          "objmapQuery": "Armor_205_Upper"
+        },
+        {
+          "id": "old_map-051",
+          "value": "56aa6296",
+          "x": 3200.0,
+          "y": 1418.0,
+          "z": 598.0,
+          "layer": "sky",
+          "kind": "map",
+          "label": "Cap of the Wind (map)",
+          "note": "Old Map - Wellspring Island - Cap of the Wind - Obj_TreasureMap_06 - IsFindTreasureMap.Armor_205_Head",
+          "objmapQuery": "Obj_TreasureMap_06"
+        },
+        {
+          "id": "old_map-052",
+          "value": "42107ba5",
+          "x": 4655.0,
+          "y": -722.0,
+          "z": 621.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Cap of the Wind (chest)",
+          "note": "Treasure Chest - Davdi Island (Depths) - Cap of the Wind - Armor_205_Head - IsGet.Armor_205_Head",
+          "objmapQuery": "Armor_205_Head"
+        },
+        {
+          "id": "old_map-053",
+          "value": "dd8a40d8",
+          "x": 3693.0,
+          "y": 1246.0,
+          "z": 593.0,
+          "layer": "sky",
+          "kind": "map",
+          "label": "Trousers of the Wind (map)",
+          "note": "Old Map - Wellspring Island - Trousers of the Wind - Obj_TreasureMap_08 - IsFindTreasureMap.Armor_205_Lower",
+          "objmapQuery": "Obj_TreasureMap_08"
+        },
+        {
+          "id": "old_map-054",
+          "value": "c22a4393",
+          "x": 3794.0,
+          "y": -445.0,
+          "z": -3613.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Trousers of the Wind (chest)",
+          "note": "Treasure Chest - Cresia Pit Mine - Trousers of the Wind - Armor_205_Lower - IsGet.Armor_205_Lower",
+          "objmapQuery": "Armor_205_Lower"
+        },
+        {
+          "id": "old_map-055",
+          "value": "29889eb8",
+          "x": 3665.0,
+          "y": 989.0,
+          "z": 1795.0,
+          "layer": "sky",
+          "kind": "map",
+          "label": "Tunic of Twilight (map)",
+          "note": "Old Map - Sokkala Sky Archipelago - Tunic of Twilight - Obj_TreasureMap_10 - IsFindTreasureMap.Armor_210_Upper",
+          "objmapQuery": "Obj_TreasureMap_10"
+        },
+        {
+          "id": "old_map-056",
+          "value": "d12184b9",
+          "x": 4516.0,
+          "y": -454.0,
+          "z": 2170.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Tunic of Twilight (chest)",
+          "note": "Treasure Chest - Rist Mine - Tunic of Twilight - Armor_210_Upper - IsGet.Armor_210_Upper",
+          "objmapQuery": "Armor_210_Upper"
+        },
+        {
+          "id": "old_map-057",
+          "value": "17aea64c",
+          "x": 3295.0,
+          "y": 795.0,
+          "z": 3434.0,
+          "layer": "sky",
+          "kind": "map",
+          "label": "Cap of Twilight (map)",
+          "note": "Old Map - North Akkala Sky Archipelago - Cap of Twilight - Obj_TreasureMap_09 - IsFindTreasureMap.Armor_210_Head",
+          "objmapQuery": "Obj_TreasureMap_09"
+        },
+        {
+          "id": "old_map-058",
+          "value": "837583ad",
+          "x": 264.0,
+          "y": -623.0,
+          "z": 3124.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Cap of Twilight (chest)",
+          "note": "Treasure Chest - Gleeok Den - Cap of Twilight - Armor_210_Head - IsGet.Armor_210_Head",
+          "objmapQuery": "Armor_210_Head"
+        },
+        {
+          "id": "old_map-059",
+          "value": "c576b6bd",
+          "x": 4269.0,
+          "y": 784.0,
+          "z": 3108.0,
+          "layer": "sky",
+          "kind": "map",
+          "label": "Trousers of Twilight (map)",
+          "note": "Old Map - North Akkala Sky Archipelago - Trousers of Twilight - Obj_TreasureMap_11 - IsFindTreasureMap.Armor_210_Lower",
+          "objmapQuery": "Obj_TreasureMap_11"
+        },
+        {
+          "id": "old_map-060",
+          "value": "c2b49848",
+          "x": 3320.0,
+          "y": -856.0,
+          "z": 1507.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Trousers of Twilight (chest)",
+          "note": "Treasure Chest - Ancient Underground Fortress - Trousers of Twilight - Armor_210_Lower - IsGet.Armor_210_Lower",
+          "objmapQuery": "Armor_210_Lower"
+        },
+        {
+          "id": "old_map-061",
+          "value": "de966d31",
+          "x": 1811.0,
+          "y": 1205.0,
+          "z": 1014.0,
+          "layer": "sky",
+          "kind": "map",
+          "label": "Biggoron's Sword (map)",
+          "note": "Old Map - South Eldin Sky Archipelago - Biggoron's Sword - Obj_TreasureMap_25 - IsFindTreasureMap.Weapon_Lsword_059",
+          "objmapQuery": "Obj_TreasureMap_25"
+        },
+        {
+          "id": "old_map-062",
+          "value": "67d258db",
+          "x": 3240.0,
+          "y": -430.0,
+          "z": 3446.0,
+          "layer": "depths",
+          "kind": "chest",
+          "label": "Biggoron's Sword (chest)",
+          "note": "Treasure Chest - Akkala House of Bones - Biggoron's Sword - Weapon_Lsword_059 - IsGet.Weapon_Lsword_059",
+          "objmapQuery": "Weapon_Lsword_059"
         }
       ],
       "sourceCounts": {
-        "ids": 31,
-        "coordinates": 31
+        "rows": 31,
+        "markers": 62
       }
     },
     {
@@ -26920,183 +27385,428 @@
       "includeMissing": true,
       "items": [
         {
-          "id": "Default",
+          "id": "fabrics-001",
           "value": "7ff848d1",
           "label": "Ordinary Fabric",
-          "fabricId": "Obj_SubstituteCloth_Default"
+          "fabricId": "Obj_SubstituteCloth_Default",
+          "source": "Default"
         },
         {
-          "id": "Pattern00",
-          "value": "b65bc9d7",
-          "label": "Goron Fabric",
-          "fabricId": "Obj_SubstituteCloth_00"
-        },
-        {
-          "id": "Pattern01",
-          "value": "41929f49",
-          "label": "Zora Fabric",
-          "fabricId": "Obj_SubstituteCloth_01"
-        },
-        {
-          "id": "Pattern02",
-          "value": "084da01f",
-          "label": "Gerudo Fabric",
-          "fabricId": "Obj_SubstituteCloth_02"
-        },
-        {
-          "id": "Pattern03",
-          "value": "31a2d1cc",
-          "label": "Royal Hyrulean Fabric",
-          "fabricId": "Obj_SubstituteCloth_03"
-        },
-        {
-          "id": "Pattern04",
-          "value": "865f713d",
-          "label": "Zonai Fabric",
-          "fabricId": "Obj_SubstituteCloth_04"
-        },
-        {
-          "id": "Pattern05",
-          "value": "30669b55",
-          "label": "Sheikah Fabric",
-          "fabricId": "Obj_SubstituteCloth_05"
-        },
-        {
-          "id": "Pattern06",
-          "value": "022aef11",
-          "label": "Yiga Fabric",
-          "fabricId": "Obj_SubstituteCloth_06"
-        },
-        {
-          "id": "Pattern07",
-          "value": "112734b9",
-          "label": "Monster-Control-Crew Fabric",
-          "fabricId": "Obj_SubstituteCloth_07"
-        },
-        {
-          "id": "Pattern08",
-          "value": "dbc821f2",
-          "label": "Zonai Survey Team Fabric",
-          "fabricId": "Obj_SubstituteCloth_08"
-        },
-        {
-          "id": "Pattern09",
-          "value": "1ecc8c93",
-          "label": "Horse-God Fabric",
-          "fabricId": "Obj_SubstituteCloth_09"
-        },
-        {
-          "id": "Pattern10",
-          "value": "405203b9",
-          "label": "Lurelin Village Fabric",
-          "fabricId": "Obj_SubstituteCloth_10"
-        },
-        {
-          "id": "Pattern11",
-          "value": "7c38e018",
-          "label": "Lucky Clover Gazette Fabric",
-          "fabricId": "Obj_SubstituteCloth_11"
-        },
-        {
-          "id": "Pattern12",
-          "value": "0636a9e7",
-          "label": "Hudson Construction Fabric",
-          "fabricId": "Obj_SubstituteCloth_12"
-        },
-        {
-          "id": "Pattern13",
-          "value": "09865592",
-          "label": "Koltin's Fabric",
-          "fabricId": "Obj_SubstituteCloth_13"
-        },
-        {
-          "id": "Pattern14",
-          "value": "57129d72",
-          "label": "Korok Fabric",
-          "fabricId": "Obj_SubstituteCloth_14"
-        },
-        {
-          "id": "Pattern15",
-          "value": "f4035866",
-          "label": "Grizzlemaw-Bear Fabric",
-          "fabricId": "Obj_SubstituteCloth_15"
-        },
-        {
-          "id": "Pattern16",
-          "value": "c80d0bf1",
-          "label": "Robbie's Fabric",
-          "fabricId": "Obj_SubstituteCloth_16"
-        },
-        {
-          "id": "Pattern17",
-          "value": "96427113",
-          "label": "Cece Fabric",
-          "fabricId": "Obj_SubstituteCloth_17"
-        },
-        {
-          "id": "Pattern18",
-          "value": "8ef713e8",
-          "label": "Aerocuda Fabric",
-          "fabricId": "Obj_SubstituteCloth_18"
-        },
-        {
-          "id": "Pattern19",
-          "value": "92754bbd",
-          "label": "Eldin-Ostrich Fabric",
-          "fabricId": "Obj_SubstituteCloth_19"
-        },
-        {
-          "id": "Pattern20",
-          "value": "94d2472d",
-          "label": "Cucco Fabric",
-          "fabricId": "Obj_SubstituteCloth_20"
-        },
-        {
-          "id": "Pattern21",
-          "value": "e6cacf83",
-          "label": "Horse Fabric",
-          "fabricId": "Obj_SubstituteCloth_21"
-        },
-        {
-          "id": "Pattern22",
-          "value": "85a4e8e3",
-          "label": "Chuchu Fabric",
-          "fabricId": "Obj_SubstituteCloth_22"
-        },
-        {
-          "id": "Pattern23",
-          "value": "ca1847dd",
-          "label": "Lynel Fabric",
-          "fabricId": "Obj_SubstituteCloth_23"
-        },
-        {
-          "id": "Pattern24",
-          "value": "8c007dbc",
-          "label": "Gleeok Fabric",
-          "fabricId": "Obj_SubstituteCloth_24"
-        },
-        {
-          "id": "Pattern25",
-          "value": "a2aec992",
-          "label": "Stalnox Fabric",
-          "fabricId": "Obj_SubstituteCloth_25"
-        },
-        {
-          "id": "Pattern55",
+          "id": "fabrics-002",
           "value": "93e7260f",
           "label": "Nostalgic Fabric",
-          "fabricId": "Obj_SubstituteCloth_55"
+          "fabricId": "Obj_SubstituteCloth_55",
+          "source": "Treasure Chest (Temple of Time Ruins)"
         },
         {
-          "id": "Pattern56",
+          "id": "fabrics-003",
+          "value": "31a2d1cc",
+          "label": "Royal Hyrulean Fabric",
+          "fabricId": "Obj_SubstituteCloth_03",
+          "source": "Treasure Chest (Hyrule Castle)"
+        },
+        {
+          "id": "fabrics-004",
+          "value": "b65bc9d7",
+          "label": "Goron Fabric",
+          "fabricId": "Obj_SubstituteCloth_00",
+          "source": "Mine-Cart Land: Death Mountain"
+        },
+        {
+          "id": "fabrics-005",
+          "value": "41929f49",
+          "label": "Zora Fabric",
+          "fabricId": "Obj_SubstituteCloth_01",
+          "source": "The Blue Stone"
+        },
+        {
+          "id": "fabrics-006",
+          "value": "084da01f",
+          "label": "Gerudo Fabric",
+          "fabricId": "Obj_SubstituteCloth_02",
+          "source": "Southern Oasis Training Area Race"
+        },
+        {
+          "id": "fabrics-007",
+          "value": "30669b55",
+          "label": "Sheikah Fabric",
+          "fabricId": "Obj_SubstituteCloth_05",
+          "source": "Purchase armor at Enchanted"
+        },
+        {
+          "id": "fabrics-008",
+          "value": "865f713d",
+          "label": "Zonai Fabric",
+          "fabricId": "Obj_SubstituteCloth_04",
+          "source": "Legend of the Great Sky Island"
+        },
+        {
+          "id": "fabrics-009",
+          "value": "57129d72",
+          "label": "Korok Fabric",
+          "fabricId": "Obj_SubstituteCloth_14",
+          "source": "The Secret Room"
+        },
+        {
+          "id": "fabrics-010",
+          "value": "0636a9e7",
+          "label": "Hudson Construction Fabric",
+          "fabricId": "Obj_SubstituteCloth_12",
+          "source": "Home on Arrange"
+        },
+        {
+          "id": "fabrics-011",
+          "value": "7c38e018",
+          "label": "Lucky Clover Gazette Fabric",
+          "fabricId": "Obj_SubstituteCloth_11",
+          "source": "Potential Princess Sightings! (2 Stables)"
+        },
+        {
+          "id": "fabrics-012",
+          "value": "405203b9",
+          "label": "Lurelin Village Fabric",
+          "fabricId": "Obj_SubstituteCloth_10",
+          "source": "Rattled Ralera"
+        },
+        {
+          "id": "fabrics-013",
+          "value": "1ecc8c93",
+          "label": "Horse-God Fabric",
+          "fabricId": "Obj_SubstituteCloth_09",
+          "source": "5 Pony Points Reward"
+        },
+        {
+          "id": "fabrics-014",
+          "value": "112734b9",
+          "label": "Monster-Control-Crew Fabric",
+          "fabricId": "Obj_SubstituteCloth_07",
+          "source": "Complete all monster control quests"
+        },
+        {
+          "id": "fabrics-015",
+          "value": "dbc821f2",
+          "label": "Zonai Survey Team Fabric",
+          "fabricId": "Obj_SubstituteCloth_08",
+          "source": "Messages from an Ancient Era"
+        },
+        {
+          "id": "fabrics-016",
+          "value": "96427113",
+          "label": "Cece Fabric",
+          "fabricId": "Obj_SubstituteCloth_17",
+          "source": "Sayge"
+        },
+        {
+          "id": "fabrics-017",
           "value": "6688319b",
           "label": "Addison's Fabric",
-          "fabricId": "Obj_SubstituteCloth_56"
+          "fabricId": "Obj_SubstituteCloth_56",
+          "source": "Complete all 81 Addison signs"
+        },
+        {
+          "id": "fabrics-018",
+          "value": "c80d0bf1",
+          "label": "Robbie's Fabric",
+          "fabricId": "Obj_SubstituteCloth_16",
+          "source": "Complete the Compendium"
+        },
+        {
+          "id": "fabrics-019",
+          "value": "09865592",
+          "label": "Koltin's Fabric",
+          "fabricId": "Obj_SubstituteCloth_13",
+          "source": "Give Koltin all 147 Bubbulfrog Gems"
+        },
+        {
+          "id": "fabrics-020",
+          "value": "022aef11",
+          "label": "Yiga Fabric",
+          "fabricId": "Obj_SubstituteCloth_06",
+          "source": "Yiga Clan Hideout Challenge #1"
+        },
+        {
+          "id": "fabrics-021",
+          "value": "e6cacf83",
+          "label": "Horse Fabric",
+          "fabricId": "Obj_SubstituteCloth_21",
+          "source": "Sayge (Horse Picture)"
+        },
+        {
+          "id": "fabrics-022",
+          "value": "94d2472d",
+          "label": "Cucco Fabric",
+          "fabricId": "Obj_SubstituteCloth_20",
+          "source": "Sayge (Cucco Picture)"
+        },
+        {
+          "id": "fabrics-023",
+          "value": "92754bbd",
+          "label": "Eldin-Ostrich Fabric",
+          "fabricId": "Obj_SubstituteCloth_19",
+          "source": "Sayge (Eldin Ostrich Picture)"
+        },
+        {
+          "id": "fabrics-024",
+          "value": "f4035866",
+          "label": "Grizzlemaw-Bear Fabric",
+          "fabricId": "Obj_SubstituteCloth_15",
+          "source": "Sayge (Grizzlemaw Bear Picture)"
+        },
+        {
+          "id": "fabrics-025",
+          "value": "85a4e8e3",
+          "label": "Chuchu Fabric",
+          "fabricId": "Obj_SubstituteCloth_22",
+          "source": "Sayge (Chuchu Picture)"
+        },
+        {
+          "id": "fabrics-026",
+          "value": "8ef713e8",
+          "label": "Aerocuda Fabric",
+          "fabricId": "Obj_SubstituteCloth_18",
+          "source": "Sayge (Aerocuda Picture)"
+        },
+        {
+          "id": "fabrics-027",
+          "value": "a2aec992",
+          "label": "Stalnox Fabric",
+          "fabricId": "Obj_SubstituteCloth_25",
+          "source": "Sayge (Stalnox Picture)"
+        },
+        {
+          "id": "fabrics-028",
+          "value": "ca1847dd",
+          "label": "Lynel Fabric",
+          "fabricId": "Obj_SubstituteCloth_23",
+          "source": "Sayge (Lynel Picture)"
+        },
+        {
+          "id": "fabrics-029",
+          "value": "8c007dbc",
+          "label": "Gleeok Fabric",
+          "fabricId": "Obj_SubstituteCloth_24",
+          "source": "Sayge (Gleeok Picture)"
         }
       ],
       "sourceCounts": {
         "ids": 29
       }
+    },
+    {
+      "id": "fabrics_amiibo",
+      "label": "Fabrics (Amiibo)",
+      "kind": "positive",
+      "targetValue": null,
+      "includeMissing": true,
+      "items": [
+        {
+          "id": "fabrics_amiibo-001",
+          "value": "7c552e01",
+          "label": "Tunic of Memories Fabric",
+          "fabricId": "Obj_SubstituteCloth_26",
+          "source": "Breath of the Wild Archer Link amiibo"
+        },
+        {
+          "id": "fabrics_amiibo-002",
+          "value": "21170251",
+          "label": "Champion's Leathers Fabric",
+          "fabricId": "Obj_SubstituteCloth_51",
+          "source": "Tears of the Kingdom Link amiibo"
+        },
+        {
+          "id": "fabrics_amiibo-003",
+          "value": "a4bf8025",
+          "label": "Pixel Fabric",
+          "fabricId": "Obj_SubstituteCloth_46",
+          "source": "8-bit Link amiibo"
+        },
+        {
+          "id": "fabrics_amiibo-004",
+          "value": "500ce8e9",
+          "label": "Bokoblin Fabric",
+          "fabricId": "Obj_SubstituteCloth_34",
+          "source": "Bokoblin amiibo"
+        },
+        {
+          "id": "fabrics_amiibo-005",
+          "value": "63452b97",
+          "label": "Lon Lon Ranch Fabric",
+          "fabricId": "Obj_SubstituteCloth_40",
+          "source": "Ocarina of Time Link / Smash Young Link amiibo"
+        },
+        {
+          "id": "fabrics_amiibo-006",
+          "value": "53e2da50",
+          "label": "Majora's Mask Fabric",
+          "fabricId": "Obj_SubstituteCloth_41",
+          "source": "Majora's Mask Link amiibo"
+        },
+        {
+          "id": "fabrics_amiibo-007",
+          "value": "f2d50ecf",
+          "label": "Sword-Spirit Fabric",
+          "fabricId": "Obj_SubstituteCloth_45",
+          "source": "Skyward Sword Link amiibo"
+        },
+        {
+          "id": "fabrics_amiibo-008",
+          "value": "ca76a631",
+          "label": "Hylian-Hood Fabric",
+          "fabricId": "Obj_SubstituteCloth_27",
+          "source": "Breath of the Wild Rider Link amiibo"
+        },
+        {
+          "id": "fabrics_amiibo-009",
+          "value": "0f1e166d",
+          "label": "Egg Fabric",
+          "fabricId": "Obj_SubstituteCloth_48",
+          "source": "Link's Awakening Link amiibo"
+        },
+        {
+          "id": "fabrics_amiibo-010",
+          "value": "eaae73a3",
+          "label": "Princess Zelda Fabric",
+          "fabricId": "Obj_SubstituteCloth_52",
+          "source": "Tears of the Kingdom Zelda amiibo"
+        },
+        {
+          "id": "fabrics_amiibo-011",
+          "value": "d9c206b1",
+          "label": "Hyrule-Princess Fabric",
+          "fabricId": "Obj_SubstituteCloth_28",
+          "source": "Breath of the Wild Zelda amiibo"
+        },
+        {
+          "id": "fabrics_amiibo-012",
+          "value": "ee3f78e3",
+          "label": "Bygone-Royal Fabric",
+          "fabricId": "Obj_SubstituteCloth_43",
+          "source": "Toon Zelda amiibo"
+        },
+        {
+          "id": "fabrics_amiibo-013",
+          "value": "c9ab8463",
+          "label": "Goddess Fabric",
+          "fabricId": "Obj_SubstituteCloth_49",
+          "source": "Zelda & Loftwing amiibo"
+        },
+        {
+          "id": "fabrics_amiibo-014",
+          "value": "d552e642",
+          "label": "Sheik Fabric",
+          "fabricId": "Obj_SubstituteCloth_37",
+          "source": "Sheik amiibo"
+        },
+        {
+          "id": "fabrics_amiibo-015",
+          "value": "a5ecfeec",
+          "label": "Gerudo-King Fabric",
+          "fabricId": "Obj_SubstituteCloth_53",
+          "source": "Tears of the Kingdom Ganondorf amiibo"
+        },
+        {
+          "id": "fabrics_amiibo-016",
+          "value": "6fb24dcc",
+          "label": "Zora-Champion Fabric",
+          "fabricId": "Obj_SubstituteCloth_31",
+          "source": "Mipha amiibo"
+        },
+        {
+          "id": "fabrics_amiibo-017",
+          "value": "6443f768",
+          "label": "Goron-Champion Fabric",
+          "fabricId": "Obj_SubstituteCloth_29",
+          "source": "Daruk amiibo"
+        },
+        {
+          "id": "fabrics_amiibo-018",
+          "value": "397217b2",
+          "label": "Rito-Champion Fabric",
+          "fabricId": "Obj_SubstituteCloth_30",
+          "source": "Revali amiibo"
+        },
+        {
+          "id": "fabrics_amiibo-019",
+          "value": "38267d74",
+          "label": "Gerudo-Champion Fabric",
+          "fabricId": "Obj_SubstituteCloth_32",
+          "source": "Urbosa amiibo"
+        },
+        {
+          "id": "fabrics_amiibo-020",
+          "value": "ca2baf8b",
+          "label": "Ancient-Sheikah Fabric",
+          "fabricId": "Obj_SubstituteCloth_33",
+          "source": "Guardian amiibo"
+        },
+        {
+          "id": "fabrics_amiibo-021",
+          "value": "6199467d",
+          "label": "Mirror of Twilight Fabric",
+          "fabricId": "Obj_SubstituteCloth_38",
+          "source": "Twilight Princess Link / Smash Link / Wolf Link amiibo"
+        },
+        {
+          "id": "fabrics_amiibo-022",
+          "value": "8dbea34c",
+          "label": "King of Red Lions Fabric",
+          "fabricId": "Obj_SubstituteCloth_36",
+          "source": "Toon Link / Smash Toon Link amiibo"
+        },
+        {
+          "id": "fabrics_amiibo-023",
+          "value": "6625f898",
+          "label": "Princess of Twilight Fabric",
+          "fabricId": "Obj_SubstituteCloth_39",
+          "source": "Smash Zelda amiibo"
+        },
+        {
+          "id": "fabrics_amiibo-024",
+          "value": "861db450",
+          "label": "Demon King Fabric",
+          "fabricId": "Obj_SubstituteCloth_35",
+          "source": "Smash Ganondorf amiibo"
+        },
+        {
+          "id": "fabrics_amiibo-025",
+          "value": "d719817a",
+          "label": "Sage of Wind Fabric",
+          "fabricId": "Obj_SubstituteCloth_57",
+          "source": "Tulin amiibo"
+        },
+        {
+          "id": "fabrics_amiibo-026",
+          "value": "5fbe303e",
+          "label": "Sage of Fire Fabric",
+          "fabricId": "Obj_SubstituteCloth_60",
+          "source": "Yunobo amiibo"
+        },
+        {
+          "id": "fabrics_amiibo-027",
+          "value": "55baedec",
+          "label": "Sage of Water Fabric",
+          "fabricId": "Obj_SubstituteCloth_59",
+          "source": "Sidon amiibo"
+        },
+        {
+          "id": "fabrics_amiibo-028",
+          "value": "dd18bac2",
+          "label": "Sage of Lightning Fabric",
+          "fabricId": "Obj_SubstituteCloth_58",
+          "source": "Riju amiibo"
+        },
+        {
+          "id": "fabrics_amiibo-029",
+          "value": "8d696023",
+          "label": "Sage of Spirit Fabric",
+          "fabricId": "Obj_SubstituteCloth_61",
+          "source": "Mineru's Construct amiibo"
+        }
+      ],
+      "sourceCounts": {
+        "ids": 29
+      },
+      "note": "Amiibo fabrics are not obtainable without amiibos and should not be considered part of 100%."
     },
     {
       "id": "recipes",
@@ -31503,6 +32213,444 @@
       ],
       "sourceCounts": {
         "ids": 31
+      }
+    },
+    {
+      "id": "memories",
+      "label": "Memories",
+      "kind": "positive",
+      "targetValue": null,
+      "includeMissing": true,
+      "items": [
+        {
+          "id": "memories-001",
+          "value": "140bd08f",
+          "label": "The Master Sword's Power",
+          "actorName": "Dm_OT_0015_PreRender"
+        },
+        {
+          "id": "memories-002",
+          "value": "6c4f88f5",
+          "label": "The Awakening",
+          "actorName": "DmT_OP_GanonWakeUp_PreRender_Memory"
+        },
+        {
+          "id": "memories-003",
+          "value": "80655448",
+          "label": "Where Am I?",
+          "actorName": "DmT_ZE_Meet_PreRender"
+        },
+        {
+          "id": "memories-004",
+          "value": "3c18383d",
+          "label": "An Unfamiliar World",
+          "actorName": "Dm_ZE_0004_PreRender"
+        },
+        {
+          "id": "memories-005",
+          "value": "62b3c345",
+          "label": "Mineru's Counsel",
+          "actorName": "Dm_ZE_0006_PreRender"
+        },
+        {
+          "id": "memories-006",
+          "value": "db869d5d",
+          "label": "The Gerudo Assault",
+          "actorName": "DmT_ZE_Molduga_PreRender"
+        },
+        {
+          "id": "memories-007",
+          "value": "492d5dcf",
+          "label": "A Show of Fealty",
+          "actorName": "DmT_ZE_LieServant_PreRender"
+        },
+        {
+          "id": "memories-008",
+          "value": "c0446a6e",
+          "label": "Zelda and Sonia",
+          "actorName": "Dm_ZE_0005_PreRender"
+        },
+        {
+          "id": "memories-009",
+          "value": "1de40ab2",
+          "label": "Sonia Is Caught by Treachery",
+          "actorName": "DmT_ZE_QueenDead_PreRender"
+        },
+        {
+          "id": "memories-010",
+          "value": "a6d4b62b",
+          "label": "Birth of the Demon King",
+          "actorName": "DmT_ZE_Birth_PreRender"
+        },
+        {
+          "id": "memories-011",
+          "value": "af75cd12",
+          "label": "The Demon King's Army",
+          "actorName": "Dm_BZ_0005_PreRender"
+        },
+        {
+          "id": "memories-012",
+          "value": "2c0a727f",
+          "label": "The Sages' Vow",
+          "actorName": "Dm_ZE_0007_PreRender"
+        },
+        {
+          "id": "memories-013",
+          "value": "39ff6bdd",
+          "label": "A King's Duty",
+          "actorName": "Dm_ZE_0008_PreRender"
+        },
+        {
+          "id": "memories-014",
+          "value": "b8dd3fd7",
+          "label": "The Imprisoning War",
+          "actorName": "Dm_ZN_0033_PreRender"
+        },
+        {
+          "id": "memories-015",
+          "value": "d194097e",
+          "label": "A Master Sword in Time",
+          "actorName": "Dm_ZE_0010_PreRender"
+        },
+        {
+          "id": "memories-016",
+          "value": "afedd9ec",
+          "label": "Critical Decisions",
+          "actorName": "Dm_ZN_0039_PreRender"
+        },
+        {
+          "id": "memories-017",
+          "value": "e7f0b9a4",
+          "label": "Tears of the Dragon",
+          "actorName": "Dm_ZE_0011_PreRender"
+        },
+        {
+          "id": "memories-018",
+          "value": "35e12d6e",
+          "label": "Zelda's Wish",
+          "actorName": "Dm_SK_0003_PreRender"
+        }
+      ],
+      "sourceCounts": {
+        "ids": 18
+      }
+    },
+    {
+      "id": "character_profiles",
+      "label": "Character Profiles",
+      "kind": "present",
+      "targetValue": null,
+      "includeMissing": true,
+      "items": [
+        {
+          "id": "character_profiles-001",
+          "value": "bd934524",
+          "label": "Zelda",
+          "actorName": "Dm_Npc_Zelda_Search_Improve"
+        },
+        {
+          "id": "character_profiles-002",
+          "value": "e605bfee",
+          "label": "Purah",
+          "actorName": "Npc_AncientDoctor"
+        },
+        {
+          "id": "character_profiles-003",
+          "value": "546622b4",
+          "label": "Robbie",
+          "actorName": "Npc_AncientDoctor_Hateno"
+        },
+        {
+          "id": "character_profiles-004",
+          "value": "ad5c06cf",
+          "label": "Josha",
+          "actorName": "Npc_BaseCamp_Assistant"
+        },
+        {
+          "id": "character_profiles-005",
+          "value": "03dff2f9",
+          "label": "Impa",
+          "actorName": "Npc_Wanderer"
+        },
+        {
+          "id": "character_profiles-006",
+          "value": "e3ac22b0",
+          "label": "Paya",
+          "actorName": "Npc_Kakariko002"
+        },
+        {
+          "id": "character_profiles-007",
+          "value": "3b506631",
+          "label": "Tulin",
+          "actorName": "Npc_HighMountain001"
+        },
+        {
+          "id": "character_profiles-008",
+          "value": "5db5abc4",
+          "label": "Teba",
+          "actorName": "Npc_ValleyVillage010"
+        },
+        {
+          "id": "character_profiles-009",
+          "value": "34e81a9a",
+          "label": "Sidon",
+          "actorName": "Npc_ZoraB001"
+        },
+        {
+          "id": "character_profiles-010",
+          "value": "a567866a",
+          "label": "Yona",
+          "actorName": "Npc_ZoraFencer"
+        },
+        {
+          "id": "character_profiles-011",
+          "value": "38fedf32",
+          "label": "Dorephan",
+          "actorName": "Npc_Zora003"
+        },
+        {
+          "id": "character_profiles-012",
+          "value": "7f0593be",
+          "label": "Yunobo",
+          "actorName": "Npc_Goron020"
+        },
+        {
+          "id": "character_profiles-013",
+          "value": "d3b2e574",
+          "label": "Riju",
+          "actorName": "Npc_oasis003"
+        },
+        {
+          "id": "character_profiles-014",
+          "value": "d8c31a4d",
+          "label": "Buliara",
+          "actorName": "Npc_oasis007"
+        },
+        {
+          "id": "character_profiles-015",
+          "value": "32e777a8",
+          "label": "Rhondson and Hudson",
+          "actorName": "Npc_HatenoVillage031"
+        },
+        {
+          "id": "character_profiles-016",
+          "value": "ebf2bc30",
+          "label": "Tauro",
+          "actorName": "Npc_AncientAssistant003_K1"
+        },
+        {
+          "id": "character_profiles-017",
+          "value": "4966f39b",
+          "label": "Hestu",
+          "actorName": "Npc_OldKorok"
+        },
+        {
+          "id": "character_profiles-018",
+          "value": "9161edd9",
+          "label": "Deku Tree",
+          "actorName": "TwnObj_Village_Korok_DekuTree_A_01"
+        },
+        {
+          "id": "character_profiles-019",
+          "value": "36c2c10c",
+          "label": "Rauru",
+          "actorName": "Dm_Npc_Raul"
+        },
+        {
+          "id": "character_profiles-020",
+          "value": "0c0683eb",
+          "label": "Mineru",
+          "actorName": "Dm_Npc_Raumi"
+        },
+        {
+          "id": "character_profiles-021",
+          "value": "ec8a4b01",
+          "label": "Master Kohga",
+          "actorName": "Enemy_Assassin_Senior"
+        },
+        {
+          "id": "character_profiles-022",
+          "value": "d3695800",
+          "label": "Demon King Ganondorf",
+          "actorName": "Enemy_Ganondorf"
+        }
+      ],
+      "sourceCounts": {
+        "ids": 22
+      }
+    },
+    {
+      "id": "zonai_devices",
+      "label": "Zonai Devices",
+      "kind": "positive",
+      "targetValue": null,
+      "includeMissing": true,
+      "items": [
+        {
+          "id": "zonai_devices-001",
+          "value": "c9e2d7e0",
+          "label": "Fan",
+          "actorName": "SpObj_WindGenerator_Capsule_A_01"
+        },
+        {
+          "id": "zonai_devices-002",
+          "value": "6bb5c0fb",
+          "label": "Wing",
+          "actorName": "SpObj_LiftGeneratorWing_Capsule_A_01"
+        },
+        {
+          "id": "zonai_devices-003",
+          "value": "188f3c55",
+          "label": "Cart",
+          "actorName": "SpObj_Cart_Capsule_A_01"
+        },
+        {
+          "id": "zonai_devices-004",
+          "value": "439c75bf",
+          "label": "Balloon",
+          "actorName": "SpObj_BalloonEnvelope_Capsule_A_01"
+        },
+        {
+          "id": "zonai_devices-005",
+          "value": "f65db589",
+          "label": "Rocket",
+          "actorName": "SpObj_Rocket_Capsule_A_01"
+        },
+        {
+          "id": "zonai_devices-006",
+          "value": "37fe046e",
+          "label": "Time Bomb",
+          "actorName": "SpObj_TimerBomb_Capsule_A_01"
+        },
+        {
+          "id": "zonai_devices-007",
+          "value": "7b4fb555",
+          "label": "Portable Pot",
+          "actorName": "SpObj_CookSet_Capsule_A_01"
+        },
+        {
+          "id": "zonai_devices-008",
+          "value": "b0501700",
+          "label": "Flame Emitter",
+          "actorName": "SpObj_FlameThrower_Capsule_A_01"
+        },
+        {
+          "id": "zonai_devices-009",
+          "value": "f8e951c3",
+          "label": "Frost Emitter",
+          "actorName": "SpObj_SnowMachine_Capsule_A_01"
+        },
+        {
+          "id": "zonai_devices-010",
+          "value": "d8e7f1cb",
+          "label": "Shock Emitter",
+          "actorName": "SpObj_ElectricBoxGenerator_Capsule_A_01"
+        },
+        {
+          "id": "zonai_devices-011",
+          "value": "ff67cd51",
+          "label": "Beam Emitter",
+          "actorName": "SpObj_Beamos_Capsule_A_01"
+        },
+        {
+          "id": "zonai_devices-012",
+          "value": "2594bb26",
+          "label": "Hydrant",
+          "actorName": "SpObj_LiftableWaterPump_Capsule_A_01"
+        },
+        {
+          "id": "zonai_devices-013",
+          "value": "f39c3148",
+          "label": "Steering Stick",
+          "actorName": "SpObj_ControlStick_Capsule_A_01"
+        },
+        {
+          "id": "zonai_devices-014",
+          "value": "d9ebb289",
+          "label": "Big Wheel",
+          "actorName": "SpObj_FastWheel_Capsule_B_01"
+        },
+        {
+          "id": "zonai_devices-015",
+          "value": "d6cf3203",
+          "label": "Small Wheel",
+          "actorName": "SpObj_FastWheel_Capsule_A_01"
+        },
+        {
+          "id": "zonai_devices-016",
+          "value": "f7c5602a",
+          "label": "Sled",
+          "actorName": "SpObj_SlipBoard_Capsule_A_01"
+        },
+        {
+          "id": "zonai_devices-017",
+          "value": "a32a161d",
+          "label": "Battery",
+          "actorName": "SpObj_EnergyBank_Capsule_A_01"
+        },
+        {
+          "id": "zonai_devices-018",
+          "value": "fe36d94b",
+          "label": "Big Battery",
+          "actorName": "SpObj_EnergyBank_Capsule_A_02"
+        },
+        {
+          "id": "zonai_devices-019",
+          "value": "2ae1d097",
+          "label": "Spring",
+          "actorName": "SpObj_SpringPiston_Capsule_A_01"
+        },
+        {
+          "id": "zonai_devices-020",
+          "value": "b2f498c3",
+          "label": "Cannon",
+          "actorName": "SpObj_Cannon_Capsule_A_01"
+        },
+        {
+          "id": "zonai_devices-021",
+          "value": "ee2576e2",
+          "label": "Stabilizer",
+          "actorName": "SpObj_TiltingDoll_Capsule_A_01"
+        },
+        {
+          "id": "zonai_devices-022",
+          "value": "af8a37d0",
+          "label": "Hover Stone",
+          "actorName": "SpObj_FloatingStone_Capsule_A_01"
+        },
+        {
+          "id": "zonai_devices-023",
+          "value": "8068fe5c",
+          "label": "Light",
+          "actorName": "SpObj_FlashLight_Capsule_A_01"
+        },
+        {
+          "id": "zonai_devices-024",
+          "value": "fb7b079b",
+          "label": "Stake",
+          "actorName": "SpObj_Pile_Capsule_A_01"
+        },
+        {
+          "id": "zonai_devices-025",
+          "value": "9e87c979",
+          "label": "Mirror",
+          "actorName": "SpObj_LightMirror_Capsule_A_01"
+        },
+        {
+          "id": "zonai_devices-026",
+          "value": "fb0d04ca",
+          "label": "Homing Cart",
+          "actorName": "SpObj_Chaser_Capsule_A_01"
+        },
+        {
+          "id": "zonai_devices-027",
+          "value": "7af0c59d",
+          "label": "Construct Head",
+          "actorName": "SpObj_GolemHead_Capsule_A_01"
+        }
+      ],
+      "sourceCounts": {
+        "ids": 27
       }
     }
   ]
