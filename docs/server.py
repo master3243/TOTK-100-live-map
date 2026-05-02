@@ -488,10 +488,6 @@ def is_raw_obtained(definition, raw):
 def save_item_state(definition, item, values, guid_values=None):
     if definition["kind"] == "guid":
         return int(item["value"]) in (guid_values or set()), "guid", None
-    if definition["kind"] == "present":
-        hash_value = int(item["value"], 16)
-        raw = values.get(hash_value)
-        return hash_value in values, f"{raw or 0:08x}", raw
     raw = values.get(int(item["value"], 16), 0)
     return is_raw_obtained(definition, raw), f"{raw:08x}", raw
 

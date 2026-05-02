@@ -143,7 +143,7 @@ STATS = [
         for stat_id, label, quest_type in QUEST_TYPES
     ],
     {"id": "memories", "label": "Memories", "source": "master_memories", "kind": "positive", "includeMissing": True},
-    {"id": "character_profiles", "label": "Character Profiles", "source": "master_character_profiles", "kind": "present", "includeMissing": True},
+    {"id": "character_profiles", "label": "Character Profiles", "source": "master_character_profiles", "kind": "positive", "includeMissing": True},
     {"id": "zonai_devices", "label": "Zonai Devices", "source": "master_zonai_devices", "kind": "positive", "includeMissing": True},
 ]
 
@@ -496,7 +496,7 @@ def parse_master_character_profile_items(path):
             continue
         items.append({
             "id": f"character_profiles-{len(items) + 1:03d}",
-            "value": f"{murmur3_32('CharaDirectory_IsNew.' + actor):08x}",
+            "value": f"{murmur3_32('CharaDirectory_IsInstantTipsDisplayed.' + actor):08x}",
             "label": row["Name"].strip() or actor,
             "actorName": actor,
         })

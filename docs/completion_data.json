@@ -32338,139 +32338,139 @@
     {
       "id": "character_profiles",
       "label": "Character Profiles",
-      "kind": "present",
+      "kind": "positive",
       "targetValue": null,
       "includeMissing": true,
       "items": [
         {
           "id": "character_profiles-001",
-          "value": "bd934524",
+          "value": "bf8e83e7",
           "label": "Zelda",
           "actorName": "Dm_Npc_Zelda_Search_Improve"
         },
         {
           "id": "character_profiles-002",
-          "value": "e605bfee",
+          "value": "0999f97d",
           "label": "Purah",
           "actorName": "Npc_AncientDoctor"
         },
         {
           "id": "character_profiles-003",
-          "value": "546622b4",
+          "value": "342cd563",
           "label": "Robbie",
           "actorName": "Npc_AncientDoctor_Hateno"
         },
         {
           "id": "character_profiles-004",
-          "value": "ad5c06cf",
+          "value": "50633dbf",
           "label": "Josha",
           "actorName": "Npc_BaseCamp_Assistant"
         },
         {
           "id": "character_profiles-005",
-          "value": "03dff2f9",
+          "value": "16e7c933",
           "label": "Impa",
           "actorName": "Npc_Wanderer"
         },
         {
           "id": "character_profiles-006",
-          "value": "e3ac22b0",
+          "value": "76348bb9",
           "label": "Paya",
           "actorName": "Npc_Kakariko002"
         },
         {
           "id": "character_profiles-007",
-          "value": "3b506631",
+          "value": "b26c05e2",
           "label": "Tulin",
           "actorName": "Npc_HighMountain001"
         },
         {
           "id": "character_profiles-008",
-          "value": "5db5abc4",
+          "value": "0dd70561",
           "label": "Teba",
           "actorName": "Npc_ValleyVillage010"
         },
         {
           "id": "character_profiles-009",
-          "value": "34e81a9a",
+          "value": "874745a6",
           "label": "Sidon",
           "actorName": "Npc_ZoraB001"
         },
         {
           "id": "character_profiles-010",
-          "value": "a567866a",
+          "value": "ae2a112b",
           "label": "Yona",
           "actorName": "Npc_ZoraFencer"
         },
         {
           "id": "character_profiles-011",
-          "value": "38fedf32",
+          "value": "9058c118",
           "label": "Dorephan",
           "actorName": "Npc_Zora003"
         },
         {
           "id": "character_profiles-012",
-          "value": "7f0593be",
+          "value": "762ff336",
           "label": "Yunobo",
           "actorName": "Npc_Goron020"
         },
         {
           "id": "character_profiles-013",
-          "value": "d3b2e574",
+          "value": "7c1ff189",
           "label": "Riju",
           "actorName": "Npc_oasis003"
         },
         {
           "id": "character_profiles-014",
-          "value": "d8c31a4d",
+          "value": "49ba592e",
           "label": "Buliara",
           "actorName": "Npc_oasis007"
         },
         {
           "id": "character_profiles-015",
-          "value": "32e777a8",
+          "value": "fd09434a",
           "label": "Rhondson and Hudson",
           "actorName": "Npc_HatenoVillage031"
         },
         {
           "id": "character_profiles-016",
-          "value": "ebf2bc30",
+          "value": "8013dc8e",
           "label": "Tauro",
           "actorName": "Npc_AncientAssistant003_K1"
         },
         {
           "id": "character_profiles-017",
-          "value": "4966f39b",
+          "value": "10693fbc",
           "label": "Hestu",
           "actorName": "Npc_OldKorok"
         },
         {
           "id": "character_profiles-018",
-          "value": "9161edd9",
+          "value": "c35d8b7e",
           "label": "Deku Tree",
           "actorName": "TwnObj_Village_Korok_DekuTree_A_01"
         },
         {
           "id": "character_profiles-019",
-          "value": "36c2c10c",
+          "value": "f565fdd1",
           "label": "Rauru",
           "actorName": "Dm_Npc_Raul"
         },
         {
           "id": "character_profiles-020",
-          "value": "0c0683eb",
+          "value": "75616589",
           "label": "Mineru",
           "actorName": "Dm_Npc_Raumi"
         },
         {
           "id": "character_profiles-021",
-          "value": "ec8a4b01",
+          "value": "2d335110",
           "label": "Master Kohga",
           "actorName": "Enemy_Assassin_Senior"
         },
         {
           "id": "character_profiles-022",
-          "value": "d3695800",
+          "value": "008e840c",
           "label": "Demon King Ganondorf",
           "actorName": "Enemy_Ganondorf"
         }
