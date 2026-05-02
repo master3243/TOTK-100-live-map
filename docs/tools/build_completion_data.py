@@ -74,40 +74,22 @@ QUEST_TYPES = [
 ]
 QUEST_SKIP = ( "Destroy Ganondorf", "Find Princess Zelda" )  # These two don't complete as the game loads after completing them
 
-TOWER_LOCATION_NAMES = [
-    "Lookout Landing",
-    "Lindor's Brow",
-    "Pikida Stonegrove",
-    "Eldin Canyon",
-    "Ulri Mountain",
-    "Sahasra Slope",
-    "Upland Zorana",
-    "Hyrule Field",
-    "Gerudo Canyon",
-    "Gerudo Highlands",
-    "Rabella Wetlands",
-    "Thyphlo Ruins",
-    "Popla Foothills",
-    "Mount Lanayru",
-    "Rospro Pass",
-]
-
-TOWER_OBJMAP_IDS = [
-    "0xf5d609bea48ad8a7",
-    "0x0fc9e8295f1f88fd",
-    "0xd123cab576760e7a",
-    "0x2db057d38b410428",
-    "0xb3186e3b60f253e0",
-    "0x17e0e03b26704860",
-    "0xe7fca251fbcd90c0",
-    "0x38aac9054a75ba9f",
-    "0x5d34d120278b0839",
-    "0xbcdf97fc90e206fc",
-    "0x32dcf687f9affd88",
-    "0x5b8c27dcacdedda0",
-    "0x1096ee2cdaab6137",
-    "0x999f20de53cae3cf",
-    "0xc1c2ac34270e19c5",
+TOWERS = [
+    ("Lookout Landing", "0xf5d609bea48ad8a7"),
+    ("Lindor's Brow", "0x0fc9e8295f1f88fd"),
+    ("Pikida Stonegrove", "0xd123cab576760e7a"),
+    ("Eldin Canyon", "0x2db057d38b410428"),
+    ("Ulri Mountain", "0xb3186e3b60f253e0"),
+    ("Sahasra Slope", "0x17e0e03b26704860"),
+    ("Upland Zorana", "0xe7fca251fbcd90c0"),
+    ("Hyrule Field", "0x38aac9054a75ba9f"),
+    ("Gerudo Canyon", "0x5d34d120278b0839"),
+    ("Gerudo Highlands", "0xbcdf97fc90e206fc"),
+    ("Rabella Wetlands", "0x32dcf687f9affd88"),
+    ("Thyphlo Ruins", "0x5b8c27dcacdedda0"),
+    ("Popla Foothills", "0x1096ee2cdaab6137"),
+    ("Mount Lanayru", "0x999f20de53cae3cf"),
+    ("Rospro Pass", "0xc1c2ac34270e19c5"),
 ]
 
 
@@ -780,20 +762,6 @@ def target_value(value):
     return f"{int(value):08x}"
 
 
-def generated_note(category_id, index, coord_note):
-    if coord_note:
-        return coord_note
-    if category_id == "towers" and index < len(TOWER_LOCATION_NAMES):
-        return f"IsVisitLocation.Tower{index + 1:02d} ({TOWER_LOCATION_NAMES[index]})"
-    return ""
-
-
-def objmap_id_for(category_id, index):
-    if category_id == "towers" and index < len(TOWER_OBJMAP_IDS):
-        return TOWER_OBJMAP_IDS[index]
-    return None
-
-
 def compendium_labels_by_value(hashes_text):
     labels = {}
     for line in hashes_text.splitlines():
@@ -900,11 +868,11 @@ def main():
                 "y": coord["y"],
                 "z": coord["z"],
                 "layer": layer_for(coord["y"]),
-                "note": generated_note(category["id"], index, coord["note"]),
+                "note": coord["note"],
             }
-            objmap_id = objmap_id_for(category["id"], index)
-            if objmap_id:
-                item["objmapId"] = objmap_id
+            if category["id"] == "towers":
+                item["note"] = f"IsVisitLocation.Tower{index + 1:02d} ({TOWERS[index][0]})"
+                item["objmapId"] = TOWERS[index][1]
             items.append(item)
         categories.append({
             "id": category["id"],
