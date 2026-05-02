@@ -75,21 +75,21 @@ QUEST_TYPES = [
 QUEST_SKIP = ( "Destroy Ganondorf", "Find Princess Zelda" )  # These two don't complete as the game loads after completing them
 
 TOWERS = [
-    ("Lookout Landing", "0xf5d609bea48ad8a7"),
-    ("Lindor's Brow", "0x0fc9e8295f1f88fd"),
-    ("Pikida Stonegrove", "0xd123cab576760e7a"),
-    ("Eldin Canyon", "0x2db057d38b410428"),
-    ("Ulri Mountain", "0xb3186e3b60f253e0"),
-    ("Sahasra Slope", "0x17e0e03b26704860"),
-    ("Upland Zorana", "0xe7fca251fbcd90c0"),
-    ("Hyrule Field", "0x38aac9054a75ba9f"),
-    ("Gerudo Canyon", "0x5d34d120278b0839"),
-    ("Gerudo Highlands", "0xbcdf97fc90e206fc"),
-    ("Rabella Wetlands", "0x32dcf687f9affd88"),
-    ("Thyphlo Ruins", "0x5b8c27dcacdedda0"),
-    ("Popla Foothills", "0x1096ee2cdaab6137"),
-    ("Mount Lanayru", "0x999f20de53cae3cf"),
-    ("Rospro Pass", "0xc1c2ac34270e19c5"),
+    "Lookout Landing",
+    "Lindor's Brow",
+    "Pikida Stonegrove",
+    "Eldin Canyon",
+    "Ulri Mountain",
+    "Sahasra Slope",
+    "Upland Zorana",
+    "Hyrule Field",
+    "Gerudo Canyon",
+    "Gerudo Highlands",
+    "Rabella Wetlands",
+    "Thyphlo Ruins",
+    "Popla Foothills",
+    "Mount Lanayru",
+    "Rospro Pass",
 ]
 
 
@@ -871,8 +871,8 @@ def main():
                 "note": coord["note"],
             }
             if category["id"] == "towers":
-                item["note"] = f"IsVisitLocation.Tower{index + 1:02d} ({TOWERS[index][0]})"
-                item["objmapId"] = TOWERS[index][1]
+                item["note"] = f"{TOWERS[index]}"
+                item["objmapQuery"] = f"IsVisitLocation Tower{index + 1:02d}"
             items.append(item)
         categories.append({
             "id": category["id"],

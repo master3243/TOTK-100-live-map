@@ -14,8 +14,8 @@
           "y": 17.94,
           "z": 142.85,
           "layer": "surface",
-          "note": "IsVisitLocation.Tower01 (Lookout Landing)",
-          "objmapId": "0xf5d609bea48ad8a7"
+          "note": "Lookout Landing",
+          "objmapQuery": "IsVisitLocation Tower01"
         },
         {
           "id": "towers-002",
@@ -24,8 +24,8 @@
           "y": 289.71,
           "z": 1245.3,
           "layer": "surface",
-          "note": "IsVisitLocation.Tower02 (Lindor's Brow)",
-          "objmapId": "0x0fc9e8295f1f88fd"
+          "note": "Lindor's Brow",
+          "objmapQuery": "IsVisitLocation Tower02"
         },
         {
           "id": "towers-003",
@@ -34,8 +34,8 @@
           "y": 436.0,
           "z": 3062.49,
           "layer": "surface",
-          "note": "IsVisitLocation.Tower03 (Pikida Stonegrove)",
-          "objmapId": "0xd123cab576760e7a"
+          "note": "Pikida Stonegrove",
+          "objmapQuery": "IsVisitLocation Tower03"
         },
         {
           "id": "towers-004",
@@ -44,8 +44,8 @@
           "y": 218.42,
           "z": 1190.82,
           "layer": "surface",
-          "note": "IsVisitLocation.Tower04 (Eldin Canyon)",
-          "objmapId": "0x2db057d38b410428"
+          "note": "Eldin Canyon",
+          "objmapQuery": "IsVisitLocation Tower04"
         },
         {
           "id": "towers-005",
@@ -54,8 +54,8 @@
           "y": 180.86,
           "z": 2026.0,
           "layer": "surface",
-          "note": "IsVisitLocation.Tower05 (Ulri Mountain)",
-          "objmapId": "0xb3186e3b60f253e0"
+          "note": "Ulri Mountain",
+          "objmapQuery": "IsVisitLocation Tower05"
         },
         {
           "id": "towers-006",
@@ -64,8 +64,8 @@
           "y": 159.26,
           "z": -1177.86,
           "layer": "surface",
-          "note": "IsVisitLocation.Tower06 (Sahasra Slope)",
-          "objmapId": "0x17e0e03b26704860"
+          "note": "Sahasra Slope",
+          "objmapQuery": "IsVisitLocation Tower06"
         },
         {
           "id": "towers-007",
@@ -74,8 +74,8 @@
           "y": 372.33,
           "z": 581.19,
           "layer": "surface",
-          "note": "IsVisitLocation.Tower07 (Upland Zorana)",
-          "objmapId": "0xe7fca251fbcd90c0"
+          "note": "Upland Zorana",
+          "objmapQuery": "IsVisitLocation Tower07"
         },
         {
           "id": "towers-008",
@@ -84,8 +84,8 @@
           "y": 57.42,
           "z": -1019.23,
           "layer": "surface",
-          "note": "IsVisitLocation.Tower08 (Hyrule Field)",
-          "objmapId": "0x38aac9054a75ba9f"
+          "note": "Hyrule Field",
+          "objmapQuery": "IsVisitLocation Tower08"
         },
         {
           "id": "towers-009",
@@ -94,8 +94,8 @@
           "y": 299.62,
           "z": -2182.76,
           "layer": "surface",
-          "note": "IsVisitLocation.Tower09 (Gerudo Canyon)",
-          "objmapId": "0x5d34d120278b0839"
+          "note": "Gerudo Canyon",
+          "objmapQuery": "IsVisitLocation Tower09"
         },
         {
           "id": "towers-010",
@@ -104,8 +104,8 @@
           "y": 415.37,
           "z": -1305.6,
           "layer": "surface",
-          "note": "IsVisitLocation.Tower10 (Gerudo Highlands)",
-          "objmapId": "0xbcdf97fc90e206fc"
+          "note": "Gerudo Highlands",
+          "objmapQuery": "IsVisitLocation Tower10"
         },
         {
           "id": "towers-011",
@@ -114,8 +114,8 @@
           "y": 215.0,
           "z": -2754.89,
           "layer": "surface",
-          "note": "IsVisitLocation.Tower11 (Rabella Wetlands)",
-          "objmapId": "0x32dcf687f9affd88"
+          "note": "Rabella Wetlands",
+          "objmapQuery": "IsVisitLocation Tower11"
         },
         {
           "id": "towers-012",
@@ -124,8 +124,8 @@
           "y": 172.56,
           "z": 3141.65,
           "layer": "surface",
-          "note": "IsVisitLocation.Tower12 (Thyphlo Ruins)",
-          "objmapId": "0x5b8c27dcacdedda0"
+          "note": "Thyphlo Ruins",
+          "objmapQuery": "IsVisitLocation Tower12"
         },
         {
           "id": "towers-013",
@@ -134,8 +134,8 @@
           "y": 91.33,
           "z": -2126.88,
           "layer": "surface",
-          "note": "IsVisitLocation.Tower13 (Popla Foothills)",
-          "objmapId": "0x1096ee2cdaab6137"
+          "note": "Popla Foothills",
+          "objmapQuery": "IsVisitLocation Tower13"
         },
         {
           "id": "towers-014",
@@ -144,8 +144,8 @@
           "y": 531.81,
           "z": -1314.91,
           "layer": "surface",
-          "note": "IsVisitLocation.Tower14 (Mount Lanayru)",
-          "objmapId": "0x999f20de53cae3cf"
+          "note": "Mount Lanayru",
+          "objmapQuery": "IsVisitLocation Tower14"
         },
         {
           "id": "towers-015",
@@ -154,8 +154,8 @@
           "y": 225.74,
           "z": 2346.4,
           "layer": "surface",
-          "note": "IsVisitLocation.Tower15 (Rospro Pass)",
-          "objmapId": "0xc1c2ac34270e19c5"
+          "note": "Rospro Pass",
+          "objmapQuery": "IsVisitLocation Tower15"
         }
       ],
       "sourceCounts": {
