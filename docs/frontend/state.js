@@ -160,7 +160,7 @@ const groupInputs = {
 };
 const completionIds = [
   "koroks", "towers", "shrines", "lightroots", "caves", "bubbulfrogs", "hudson_sign",
-  "dungeon_bosses", "flux_construct", "hinox", "stone_talus", "molduga", "frox", "gleeok",
+  "shrine_chests", "dungeon_bosses", "flux_construct", "hinox", "stone_talus", "molduga", "frox", "gleeok",
   "wells", "chasms", "yiga_schematic", "old_map", "armor", "sage_will", "schema_stone",
   "general_locations",
 ];

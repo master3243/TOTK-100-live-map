@@ -1,11 +1,13 @@
 add a Master 100% row.
+shrine chests missing
+3 travel medallions (not just 1)
 when save has above the 100% mark, should show warning symbol
-4 old map treasures not tracked I think (because they are weapons) but they should be tracked as they show a X on the map
 remove recipes extra logic (no longer possible without hashes file)
 wont add: (silly stuff):
     - not sure locations listed is truly 100%, some dataminers show ~900 while here is ~350. Same for shops, not sure if they are all in ~350. 
         (I think there's a difference between all locations on the map including the ones automatically added when a tower is found (~900) and those that need to be visited aside from the towers (~350))
     - waepons/items/etc. could still show ???. not currently tracked.
+    - device dispensers could still show ???. not currently tracked.
     - DLC fabrics
     - memories/Cutscenes (tears already tracked in locations, only 1 memory optional and not in a tear)
     - Beating dungeons (if you havent finished the game almost nothing else will be 100% anyways)

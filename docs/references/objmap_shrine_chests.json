@@ -1,0 +1,2740 @@
+[
+  {
+    "dungeon": "Dungeon000",
+    "shrine": "Tajikats Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x4fe5d9be032f006d",
+        "saveFlag": "IsTreasureBoxOpen.5757247108783472749",
+        "reward": "Weapon_Shield_107, DgnObj_SpikeBallWood_A",
+        "pos": [
+          -58.01,
+          26,
+          -238
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon001",
+    "shrine": "Jochi-iu Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x06d595b5cf871cb9",
+        "saveFlag": "IsTreasureBoxOpen.492464342370294969",
+        "reward": "Weapon_Bow_101",
+        "pos": [
+          32,
+          9.98,
+          8
+        ]
+      },
+      {
+        "actor": "TBox_Dungeon_Iron",
+        "hashId": "0x1fbe907b478ec86a",
+        "saveFlag": "IsTreasureBoxOpen.2287424519906707562",
+        "reward": "Item_Ore_M",
+        "pos": [
+          2.26,
+          2,
+          58.74
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon002",
+    "shrine": "Sitsum Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0xb81e3cac51e19015",
+        "saveFlag": "IsTreasureBoxOpen.13267108263085838357",
+        "reward": "Weapon_Bow_106",
+        "pos": [
+          55,
+          0,
+          -74
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon003",
+    "shrine": "Oromuwak Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x21d8a476e4948b62",
+        "saveFlag": "IsTreasureBoxOpen.2438880028769160034",
+        "reward": "Item_Ore_B",
+        "pos": [
+          2,
+          78.07,
+          -62
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon004",
+    "shrine": "Mayachin Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x20ab42f6b1525142",
+        "saveFlag": "IsTreasureBoxOpen.2354048857535566146",
+        "reward": "Item_Cook_C_17_Stamina_Lv2",
+        "pos": [
+          35,
+          6,
+          13
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon005",
+    "shrine": "Musanokir Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x4354376ffd0fabac",
+        "saveFlag": "IsTreasureBoxOpen.4851563652711426988",
+        "reward": "Item_Enemy_131",
+        "pos": [
+          15,
+          5,
+          -78.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon006",
+    "shrine": "Ren-iz Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0xa2b33efae78017da",
+        "saveFlag": "IsTreasureBoxOpen.11723783502322210778",
+        "reward": "Weapon_Shield_102",
+        "pos": [
+          10,
+          4,
+          -60.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon007",
+    "shrine": "Sahirow Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x7591b777c80e9526",
+        "saveFlag": "IsTreasureBoxOpen.8471754099146003750",
+        "reward": "Item_Cook_C_17_ResistCold_Lv2",
+        "pos": [
+          44,
+          6,
+          -52
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon008",
+    "shrine": "Rotsumamu Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x851e70f245488806",
+        "saveFlag": "IsTreasureBoxOpen.9592228442192513030",
+        "reward": "Item_Ore_M",
+        "pos": [
+          -18,
+          16.5,
+          -44
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon009",
+    "shrine": "Mayamats Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x445f27c875f6f697",
+        "saveFlag": "IsTreasureBoxOpen.4926700259292673687",
+        "reward": "Item_Enemy_131",
+        "pos": [
+          -15,
+          -4.5,
+          -68.91
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon010",
+    "shrine": "Serutabomac Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x4fde16cafcea3557",
+        "saveFlag": "IsTreasureBoxOpen.5755062434908484951",
+        "reward": "Weapon_Sword_161",
+        "pos": [
+          -49,
+          31,
+          101
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon011",
+    "shrine": "Mogawak Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Iron",
+        "hashId": "0x7e9caf4983de3898",
+        "saveFlag": "IsTreasureBoxOpen.9123359675425634456",
+        "reward": "Weapon_Lsword_161",
+        "pos": [
+          -23.5,
+          0,
+          8.5
+        ]
+      },
+      {
+        "actor": "TBox_Dungeon_Iron",
+        "hashId": "0x84221d5934a0ccd7",
+        "saveFlag": "IsTreasureBoxOpen.9521204831186898135",
+        "reward": "Item_Ore_E",
+        "pos": [
+          73,
+          0,
+          9
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon012",
+    "shrine": "Zanmik Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Iron",
+        "hashId": "0x26720c1c0178ac0a",
+        "saveFlag": "IsTreasureBoxOpen.2770290035209579530",
+        "reward": "Weapon_Lsword_163",
+        "pos": [
+          1.5,
+          -22,
+          10
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon013",
+    "shrine": "Jiukoum Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x5c08af869fc7dd27",
+        "saveFlag": "IsTreasureBoxOpen.6631743444044209447",
+        "reward": "Item_Cook_C_17_ResistSlip_Lv2",
+        "pos": [
+          67,
+          11,
+          117
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon014",
+    "shrine": "Iun-orok Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x009f29dc045d39cd",
+        "saveFlag": "IsTreasureBoxOpen.44800546239756749",
+        "reward": "Obj_ArrowBundle_A_02",
+        "pos": [
+          -118,
+          -16,
+          -48
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon015",
+    "shrine": "Rakashog Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x907c0664098a28e8",
+        "saveFlag": "IsTreasureBoxOpen.10411203465300289768",
+        "reward": "Item_Enemy_131",
+        "pos": [
+          -2,
+          12,
+          36
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon016",
+    "shrine": "Soryotanog Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Iron",
+        "hashId": "0xac70b6b5540f0e90",
+        "saveFlag": "IsTreasureBoxOpen.12425632261830807184",
+        "reward": "Obj_ArrowBundle_A_02",
+        "pos": [
+          36,
+          39,
+          -13
+        ]
+      },
+      {
+        "actor": "TBox_Dungeon_Iron",
+        "hashId": "0x5a437ebf11959420",
+        "saveFlag": "IsTreasureBoxOpen.6504181645951996960",
+        "reward": "KeySmall",
+        "pos": [
+          -5.95,
+          31,
+          -47.49
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon017",
+    "shrine": "Mayak Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Wood",
+        "hashId": "0x6912ea3172930c13",
+        "saveFlag": "IsTreasureBoxOpen.7571371421659761683",
+        "reward": "Item_Enemy_131",
+        "pos": [
+          -24.24,
+          75.06,
+          -42.45
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon018",
+    "shrine": "Gemimik Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x80a458d3bec9df00",
+        "saveFlag": "IsTreasureBoxOpen.9269631599497568000",
+        "reward": "Weapon_Shield_103",
+        "pos": [
+          31.5,
+          31,
+          -18.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon019",
+    "shrine": "Orochium Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x34c8787feae0f430",
+        "saveFlag": "IsTreasureBoxOpen.3803422376111174704",
+        "reward": "KeySmall",
+        "pos": [
+          0,
+          -4,
+          -73
+        ]
+      },
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x6a4bcf84706455b7",
+        "saveFlag": "IsTreasureBoxOpen.7659443759001916855",
+        "reward": "Obj_ArrowBundle_A_01",
+        "pos": [
+          16,
+          0,
+          -6
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon020",
+    "shrine": "Sinakawak Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x5e2e1822fa3d2682",
+        "saveFlag": "IsTreasureBoxOpen.6786388227000182402",
+        "reward": "Item_Ore_E",
+        "pos": [
+          20,
+          138,
+          -116
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon021",
+    "shrine": "Tauyosipun Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Iron",
+        "hashId": "0x4352d6a1de313d49",
+        "saveFlag": "IsTreasureBoxOpen.4851175739337293129",
+        "reward": "Weapon_Bow_105",
+        "pos": [
+          -19.7,
+          37.5,
+          35.25
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon022",
+    "shrine": "Tukarok Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Iron",
+        "hashId": "0x9075d3e92e12ee2a",
+        "saveFlag": "IsTreasureBoxOpen.10409459112190602794",
+        "reward": "Weapon_Sword_163",
+        "pos": [
+          205,
+          -6,
+          40
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon023",
+    "shrine": "Sikukuu Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0xd73b785c56664b93",
+        "saveFlag": "IsTreasureBoxOpen.15509122079762303891",
+        "reward": "Weapon_Lsword_101",
+        "pos": [
+          -4,
+          -18,
+          -13
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon024",
+    "shrine": "Siwakama Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x793dd3de53c7ed3b",
+        "saveFlag": "IsTreasureBoxOpen.8736371804010442043",
+        "reward": "BombFruit_Bundle_B",
+        "pos": [
+          2,
+          -7.5,
+          -24
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon025",
+    "shrine": "Turakawak Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x4f84bfb44493e64b",
+        "saveFlag": "IsTreasureBoxOpen.5729915406887675467",
+        "reward": "Weapon_Sword_161",
+        "pos": [
+          24,
+          10,
+          -17.93
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon026",
+    "shrine": "Riogok Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Iron",
+        "hashId": "0xf2ea21550c4170de",
+        "saveFlag": "IsTreasureBoxOpen.17503839550890406110",
+        "reward": "Weapon_Bow_106",
+        "pos": [
+          27.5,
+          2.5,
+          11
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon027",
+    "shrine": "Anedamimik Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x01d71b3331cf1fef",
+        "saveFlag": "IsTreasureBoxOpen.132604620723658735",
+        "reward": "Item_Enemy_131",
+        "pos": [
+          33.5,
+          8,
+          -16.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon028",
+    "shrine": "Mayausiy Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0xb8012febf0d6288a",
+        "saveFlag": "IsTreasureBoxOpen.13258931468359837834",
+        "reward": "Item_Enemy_131",
+        "pos": [
+          47,
+          12.5,
+          24
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon029",
+    "shrine": "Ishodag Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Wood",
+        "hashId": "0x0096a5935f36fd47",
+        "saveFlag": "IsTreasureBoxOpen.42403298882813255",
+        "reward": "Item_Ore_E",
+        "pos": [
+          17.2,
+          10.2,
+          -58.41
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon030",
+    "shrine": "Kiuyoyou Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x676048579fa77e5b",
+        "saveFlag": "IsTreasureBoxOpen.7449033324848709211",
+        "reward": "Weapon_Spear_101",
+        "pos": [
+          -54,
+          22.75,
+          15
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon031",
+    "shrine": "Ekochiu Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0xc5ec7cb3e7d9ec0c",
+        "saveFlag": "IsTreasureBoxOpen.14261911232106327052",
+        "reward": "Weapon_Shield_101",
+        "pos": [
+          -14.03,
+          1.5,
+          65
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon032",
+    "shrine": "Tadarok Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x5e177f3698be2a03",
+        "saveFlag": "IsTreasureBoxOpen.6780027636497132035",
+        "reward": "Weapon_Shield_103",
+        "pos": [
+          -35,
+          17.5,
+          -45.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon033",
+    "shrine": "Karahatag Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x5b2b7eccd2a848f2",
+        "saveFlag": "IsTreasureBoxOpen.6569483899622672626",
+        "reward": "Weapon_Bow_106",
+        "pos": [
+          -8,
+          -30,
+          55
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon034",
+    "shrine": "Tenbez Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x653be4f1587855b9",
+        "saveFlag": "IsTreasureBoxOpen.7294675746679182777",
+        "reward": "Item_Enemy_131",
+        "pos": [
+          -29,
+          4,
+          -62
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon035",
+    "shrine": "Kisinona Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x8ea0cb838285d9ba",
+        "saveFlag": "IsTreasureBoxOpen.10277438115350436282",
+        "reward": "Weapon_Bow_106",
+        "pos": [
+          -23,
+          10,
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon036",
+    "shrine": "Oshozan-u Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0xadc2bc676af4e482",
+        "saveFlag": "IsTreasureBoxOpen.12520777066405487746",
+        "reward": "Weapon_Bow_101",
+        "pos": [
+          -10,
+          8,
+          -30
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon037",
+    "shrine": "Gasas Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Iron",
+        "hashId": "0x91fc616ae95a6b53",
+        "saveFlag": "IsTreasureBoxOpen.10519389941440080723",
+        "reward": "KeySmall",
+        "pos": [
+          34,
+          22.65,
+          -80
+        ]
+      },
+      {
+        "actor": "TBox_Dungeon_Iron",
+        "hashId": "0x9c0cf5d8c982ffe5",
+        "saveFlag": "IsTreasureBoxOpen.11244632681079832549",
+        "reward": "Item_Enemy_131",
+        "pos": [
+          33,
+          13.9,
+          -45
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon038",
+    "shrine": "Ijo-o Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x34cfbf0f6e6865fe",
+        "saveFlag": "IsTreasureBoxOpen.3805470283149108734",
+        "reward": "Obj_ArrowBundle_A_01",
+        "pos": [
+          14.5,
+          0,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon039",
+    "shrine": "Turakamik Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x57d465d484e6cd69",
+        "saveFlag": "IsTreasureBoxOpen.6328795339799580009",
+        "reward": "Weapon_Shield_102",
+        "pos": [
+          -10,
+          40,
+          -2.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon040",
+    "shrine": "Gatakis Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x562bfccdac8da0b3",
+        "saveFlag": "IsTreasureBoxOpen.6209334471553818803",
+        "reward": "Weapon_Bow_105",
+        "pos": [
+          -60,
+          154.48,
+          9
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon041",
+    "shrine": "Ihen-a Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x997804eb5cf75924",
+        "saveFlag": "IsTreasureBoxOpen.11058594293931792676",
+        "reward": "Obj_ArrowBundle_A_01",
+        "pos": [
+          95.75,
+          23.25,
+          -6.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon042",
+    "shrine": "Tsutsu-um Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x722864fcc31226b6",
+        "saveFlag": "IsTreasureBoxOpen.8225935756159493814",
+        "reward": "Obj_ArrowBundle_A_01",
+        "pos": [
+          -27.5,
+          -4,
+          52
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon043",
+    "shrine": "Mayaumekis Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x942d4047b6b62b18",
+        "saveFlag": "IsTreasureBoxOpen.10677260968317561624",
+        "reward": "Obj_ArrowBundle_A_02",
+        "pos": [
+          -48.5,
+          152.5,
+          -19.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon044",
+    "shrine": "Kamatukis Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x2219ebf103d84f50",
+        "saveFlag": "IsTreasureBoxOpen.2457254492091469648",
+        "reward": "Weapon_Lsword_164",
+        "pos": [
+          -31.5,
+          6.5,
+          27
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon045",
+    "shrine": "Jirutagumac Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x2f2fca1049697138",
+        "saveFlag": "IsTreasureBoxOpen.3400158414987948344",
+        "reward": "Item_Ore_M",
+        "pos": [
+          79,
+          6,
+          -47
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon046",
+    "shrine": "Sepapa Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Iron",
+        "hashId": "0x9b9b7a675a1dad19",
+        "saveFlag": "IsTreasureBoxOpen.11212690281581096217",
+        "reward": "Weapon_Bow_105",
+        "pos": [
+          52.5,
+          25.5,
+          -40
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon047",
+    "shrine": "Mayatat Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x2dbf9385f0051d6c",
+        "saveFlag": "IsTreasureBoxOpen.3296515655725292908",
+        "reward": "Obj_ArrowBundle_A_02",
+        "pos": [
+          40,
+          28.5,
+          -208
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon048",
+    "shrine": "Susuyai Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Iron",
+        "hashId": "0xa4cc46c70fe636bb",
+        "saveFlag": "IsTreasureBoxOpen.11874944138248337083",
+        "reward": "Obj_ArrowBundle_A_01",
+        "pos": [
+          41.5,
+          12.5,
+          128
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon049",
+    "shrine": "Apogek Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x8173ddb11e842c58",
+        "saveFlag": "IsTreasureBoxOpen.9328043006005357656",
+        "reward": "Weapon_Spear_163",
+        "pos": [
+          -39,
+          4,
+          -46
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon050",
+    "shrine": "Kadaunar Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x0c384c6282cea61c",
+        "saveFlag": "IsTreasureBoxOpen.880537713136018972",
+        "reward": "Weapon_Bow_105",
+        "pos": [
+          -37,
+          9.5,
+          18
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon051",
+    "shrine": "Domizuin Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x28a0166616b0c61e",
+        "saveFlag": "IsTreasureBoxOpen.2927364385513981470",
+        "reward": "Item_Enemy_130",
+        "pos": [
+          -28,
+          4,
+          0
+        ]
+      },
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0xcb8acba4a400bf2e",
+        "saveFlag": "IsTreasureBoxOpen.14666759044472028974",
+        "reward": "Weapon_Shield_102",
+        "pos": [
+          -16,
+          36,
+          10
+        ]
+      },
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0xe78861a865822e14",
+        "saveFlag": "IsTreasureBoxOpen.16683692195479432724",
+        "reward": "Obj_ArrowBundle_A_02",
+        "pos": [
+          8,
+          16,
+          17.3
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon052",
+    "shrine": "Mogisari Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x6ba9ec373c676498",
+        "saveFlag": "IsTreasureBoxOpen.7757991555103155352",
+        "reward": "Weapon_Shield_103",
+        "pos": [
+          126.5,
+          -10.1,
+          -387
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon053",
+    "shrine": "Kikakin Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0xccaeef96a48c480e",
+        "saveFlag": "IsTreasureBoxOpen.14748989259969742862",
+        "reward": "Item_Ore_E",
+        "pos": [
+          -13.5,
+          0,
+          56
+        ]
+      },
+      {
+        "actor": "TBox_Dungeon_Iron",
+        "hashId": "0xd1b2c3ae984e7faf",
+        "saveFlag": "IsTreasureBoxOpen.15110354854428442543",
+        "reward": "KeySmall",
+        "pos": [
+          65.1,
+          -3,
+          2
+        ]
+      },
+      {
+        "actor": "TBox_Dungeon_Iron",
+        "hashId": "0x173c1630ab1357b3",
+        "saveFlag": "IsTreasureBoxOpen.1674237559759394739",
+        "reward": "Item_Ore_F",
+        "pos": [
+          26,
+          4,
+          45
+        ]
+      },
+      {
+        "actor": "TBox_Dungeon_Iron",
+        "hashId": "0xc4082ba4ca900ea1",
+        "saveFlag": "IsTreasureBoxOpen.14125588218020630177",
+        "reward": "Weapon_Bow_101",
+        "pos": [
+          20,
+          19,
+          -14
+        ]
+      },
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x6c531ba47132e856",
+        "saveFlag": "IsTreasureBoxOpen.7805612972250949718",
+        "reward": "Item_Ore_G",
+        "pos": [
+          64,
+          0,
+          37
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon054",
+    "shrine": "Sibajitak Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Iron",
+        "hashId": "0x4008550157f931fc",
+        "saveFlag": "IsTreasureBoxOpen.4614031282500350460",
+        "reward": "Weapon_Lsword_163",
+        "pos": [
+          -2.54,
+          29.5,
+          -1.84
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon055",
+    "shrine": "Siyamotsus Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x27d62cf1560a6773",
+        "saveFlag": "IsTreasureBoxOpen.2870531227537532787",
+        "reward": "Weapon_Bow_104",
+        "pos": [
+          0,
+          6.3,
+          -3.97
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon056",
+    "shrine": "Utsushok Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Iron",
+        "hashId": "0xe16d1d77d2152e57",
+        "saveFlag": "IsTreasureBoxOpen.16243671831458164311",
+        "reward": "Item_Cook_C_17_Silent_Lv1",
+        "pos": [
+          -39,
+          4,
+          95
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon057",
+    "shrine": "Jikais Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0xb897f8c5566f3449",
+        "saveFlag": "IsTreasureBoxOpen.13301373550904423497",
+        "reward": "Weapon_Spear_161",
+        "pos": [
+          22,
+          41.51,
+          -13.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon058",
+    "shrine": "Kitawak Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0xf9a49b0ae8bd3376",
+        "saveFlag": "IsTreasureBoxOpen.17988673282781295478",
+        "reward": "Obj_ArrowBundle_A_02",
+        "pos": [
+          -10.75,
+          7.71,
+          -35
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon059",
+    "shrine": "Sonapan Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x56575bd93ee90b4d",
+        "saveFlag": "IsTreasureBoxOpen.6221542398857120589",
+        "reward": "Obj_ArrowBundle_A_01",
+        "pos": [
+          -54,
+          10.5,
+          41.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon060",
+    "shrine": "Ukouh Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Iron",
+        "hashId": "0xd5d99a8ffc472925",
+        "saveFlag": "IsTreasureBoxOpen.15409517543228385573",
+        "reward": "Item_Ore_F",
+        "pos": [
+          28,
+          -5,
+          -56
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon061",
+    "shrine": "Gutanbac Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x37f1125718ab0664",
+        "saveFlag": "IsTreasureBoxOpen.4031023306758620772",
+        "reward": "Weapon_Bow_104",
+        "pos": [
+          28,
+          28,
+          -77
+        ]
+      },
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x6c716c4601cd5182",
+        "saveFlag": "IsTreasureBoxOpen.7814145876398264706",
+        "reward": "Weapon_Sword_168, AsbObj_SharpRock_A_S_01",
+        "pos": [
+          4,
+          10,
+          -54.34
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon062",
+    "shrine": "In-isa Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Iron",
+        "hashId": "0x1edea19945785f9b",
+        "saveFlag": "IsTreasureBoxOpen.2224392945635188635",
+        "reward": "KeySmall",
+        "pos": [
+          43,
+          12.5,
+          1.53
+        ]
+      },
+      {
+        "actor": "TBox_Dungeon_Iron",
+        "hashId": "0xa285534348a07b92",
+        "saveFlag": "IsTreasureBoxOpen.11710857954493234066",
+        "reward": "Obj_ArrowBundle_A_01",
+        "pos": [
+          -31.5,
+          4,
+          -6.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon063",
+    "shrine": "Nachoyah Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Iron",
+        "hashId": "0xcb235e0ec7cdcc14",
+        "saveFlag": "IsTreasureBoxOpen.14637646631458950164",
+        "reward": "Obj_ArrowBundle_A_02",
+        "pos": [
+          -20,
+          -2,
+          -59.3
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon064",
+    "shrine": "Marakuguc Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x4323f877f71a92a1",
+        "saveFlag": "IsTreasureBoxOpen.4837983618856555169",
+        "reward": "Weapon_Bow_105",
+        "pos": [
+          88.5,
+          38,
+          -178
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon065",
+    "shrine": "Runakit Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0xde7aac69f1bc71af",
+        "saveFlag": "IsTreasureBoxOpen.16031315394605904303",
+        "reward": "Weapon_Bow_104",
+        "pos": [
+          87,
+          12.5,
+          21.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon066",
+    "shrine": "Mayanas Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x556cf4e5f9734206",
+        "saveFlag": "IsTreasureBoxOpen.6155564059278393862",
+        "reward": "Weapon_Shield_103",
+        "pos": [
+          116,
+          6,
+          16
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon067",
+    "shrine": "Wao-os Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x8c58b5560c2bd997",
+        "saveFlag": "IsTreasureBoxOpen.10113032344436464023",
+        "reward": "Item_Cook_C_17_ResistCold_Lv2",
+        "pos": [
+          32.5,
+          31.55,
+          3.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon068",
+    "shrine": "Kyokugon Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x1b5fdcc19cf06e63",
+        "saveFlag": "IsTreasureBoxOpen.1972537885931368035",
+        "reward": "Item_Cook_C_17_MaxLife_Lv1",
+        "pos": [
+          32,
+          -8,
+          -50
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon069",
+    "shrine": "Igoshon Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Wood",
+        "hashId": "0x5c126eeef0c255ef",
+        "saveFlag": "IsTreasureBoxOpen.6634487173590701551",
+        "reward": "Item_Enemy_131",
+        "pos": [
+          -14.5,
+          24,
+          -26.25
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon070",
+    "shrine": "Nouda Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x76d1c880acb2605a",
+        "saveFlag": "IsTreasureBoxOpen.8561844821586763866",
+        "reward": "Item_Cook_C_17_MaxLife_Lv1",
+        "pos": [
+          0,
+          10.2,
+          -65.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon071",
+    "shrine": "Joku-usin Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0xcaaf96e2ecb2ee9c",
+        "saveFlag": "IsTreasureBoxOpen.14605058017963732636",
+        "reward": "Item_Cook_C_17_ResistElectric_Lv3",
+        "pos": [
+          0,
+          2.2,
+          -141.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon072",
+    "shrine": "Eutoum Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x3296c7688ab8b6c7",
+        "saveFlag": "IsTreasureBoxOpen.3645320200220882631",
+        "reward": "Item_Ore_C",
+        "pos": [
+          4,
+          0.2,
+          -37.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon073",
+    "shrine": "Isisim Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x43bfd5d6d1f28df2",
+        "saveFlag": "IsTreasureBoxOpen.4881855639714958834",
+        "reward": "Weapon_Sword_161",
+        "pos": [
+          0,
+          16.2,
+          -49.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon074",
+    "shrine": "Mayachideg Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0xfc76353f72597706",
+        "saveFlag": "IsTreasureBoxOpen.18191786291427374854",
+        "reward": "Weapon_Spear_163, Item_Enemy_192",
+        "pos": [
+          0,
+          -3.8,
+          -217.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon075",
+    "shrine": "Otutsum Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x2fdc977daf5de3e5",
+        "saveFlag": "IsTreasureBoxOpen.3448797980727829477",
+        "reward": "Item_Ore_D",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon076",
+    "shrine": "Utojis Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0xbd302960c195d1d2",
+        "saveFlag": "IsTreasureBoxOpen.13632441567591911890",
+        "reward": "Item_Enemy_131",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon077",
+    "shrine": "Kamizun Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x2ca8418ffe6ed5db",
+        "saveFlag": "IsTreasureBoxOpen.3217894020461024731",
+        "reward": "Weapon_Shield_101, SpObj_SpringPiston_A_01",
+        "pos": [
+          0,
+          0.2,
+          -71.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon078",
+    "shrine": "Suariwak Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x4e82920c3de1e159",
+        "saveFlag": "IsTreasureBoxOpen.5657244663206240601",
+        "reward": "SpObj_EnergyBank_Capsule_A_02",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon079",
+    "shrine": "Rakakudaj Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x0792ea7ec5551051",
+        "saveFlag": "IsTreasureBoxOpen.545756335062716497",
+        "reward": "Weapon_Lsword_164",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon080",
+    "shrine": "Rasitakiwak Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0xca9f20419eb2b95d",
+        "saveFlag": "IsTreasureBoxOpen.14600423983165913437",
+        "reward": "Weapon_Sword_161",
+        "pos": [
+          0,
+          0.2,
+          -93.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon081",
+    "shrine": "Zakusu Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x5a0eebd55632e9ee",
+        "saveFlag": "IsTreasureBoxOpen.6489383414594202094",
+        "reward": "Weapon_Spear_163, Item_Enemy_168",
+        "pos": [
+          0,
+          45.2,
+          -70.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon082",
+    "shrine": "Simosiwak Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x888089edb997a097",
+        "saveFlag": "IsTreasureBoxOpen.9836013240291139735",
+        "reward": "Item_Cook_C_17_Light_Lv3",
+        "pos": [
+          0,
+          0.2,
+          -45.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon083",
+    "shrine": "Yansamin Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x39b63af21cfc4521",
+        "saveFlag": "IsTreasureBoxOpen.4158576117466023201",
+        "reward": "Item_Ore_M",
+        "pos": [
+          0,
+          -3.8,
+          -57.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon084",
+    "shrine": "Jojon Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x139fd599cd4e4619",
+        "saveFlag": "IsTreasureBoxOpen.1414083664568796697",
+        "reward": "Weapon_Sword_161",
+        "pos": [
+          24,
+          11.7,
+          -25.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon085",
+    "shrine": "Sifumim Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x85306753a341e6a0",
+        "saveFlag": "IsTreasureBoxOpen.9597284414845478560",
+        "reward": "Weapon_Sword_163, Item_Enemy_191",
+        "pos": [
+          127,
+          19.2,
+          -68
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon086",
+    "shrine": "Otak Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x2aca45c0e1b83e0a",
+        "saveFlag": "IsTreasureBoxOpen.3083353589611511306",
+        "reward": "Weapon_Bow_106",
+        "pos": [
+          -8,
+          4.2,
+          -30
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon087",
+    "shrine": "Miryotanog Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0xa58dd7d5d5d0fa03",
+        "saveFlag": "IsTreasureBoxOpen.11929428301389560323",
+        "reward": "Weapon_Lsword_163, Item_Enemy_191",
+        "pos": [
+          243.5,
+          18.2,
+          18
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon088",
+    "shrine": "Kimayat Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x0c934d77123e2512",
+        "saveFlag": "IsTreasureBoxOpen.906153123834111250",
+        "reward": "Weapon_Sword_164, Item_Enemy_191",
+        "pos": [
+          0.5,
+          4.2,
+          -57.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon089",
+    "shrine": "Momosik Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0xbaa6695bda70ddb7",
+        "saveFlag": "IsTreasureBoxOpen.13449553180416335287",
+        "reward": "SpObj_EnergyBank_Capsule_A_02",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon090",
+    "shrine": "Igashuk Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x87c2c1c979acea74",
+        "saveFlag": "IsTreasureBoxOpen.9782594411676101236",
+        "reward": "Item_Enemy_131",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon091",
+    "shrine": "Taki-ihaban Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x1aba4cb8176d8bd7",
+        "saveFlag": "IsTreasureBoxOpen.1925936144205056983",
+        "reward": "Item_Enemy_131",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon092",
+    "shrine": "En-oma Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x1aba4cb8decb5847",
+        "saveFlag": "IsTreasureBoxOpen.1925936147549870151",
+        "reward": "Weapon_Sword_164",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon093",
+    "shrine": "Kumamayn Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x1aba4cb87b560462",
+        "saveFlag": "IsTreasureBoxOpen.1925936145881236578",
+        "reward": "Weapon_Bow_101",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon094",
+    "shrine": "Yomizuk Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x1aba4cb86fcebce7",
+        "saveFlag": "IsTreasureBoxOpen.1925936145687821543",
+        "reward": "Item_Ore_A",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon095",
+    "shrine": "Mayahisik Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x1aba4cb8126360c2",
+        "saveFlag": "IsTreasureBoxOpen.1925936144120504514",
+        "reward": "Weapon_Lsword_161",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon096",
+    "shrine": "Motsusis Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x1aba4cb8c3f55152",
+        "saveFlag": "IsTreasureBoxOpen.1925936147099636050",
+        "reward": "Item_Enemy_131",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon097",
+    "shrine": "Maoikes Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x1aba4cb875a9ed37",
+        "saveFlag": "IsTreasureBoxOpen.1925936145786072375",
+        "reward": "Item_Ore_A",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon098",
+    "shrine": "Moshapin Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x1aba4cb864c46078",
+        "saveFlag": "IsTreasureBoxOpen.1925936145502593144",
+        "reward": "Weapon_Shield_103",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon099",
+    "shrine": "Gikaku Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x6f6c839f746b08d0",
+        "saveFlag": "IsTreasureBoxOpen.8028936956570962128",
+        "reward": "Item_Ore_B",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon100",
+    "shrine": "Usazum Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x1aba4cb8e0eee1b7",
+        "saveFlag": "IsTreasureBoxOpen.1925936147585753527",
+        "reward": "Weapon_Spear_163",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon101",
+    "shrine": "Joniu Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x1aba4cb899403dd2",
+        "saveFlag": "IsTreasureBoxOpen.1925936146383125970",
+        "reward": "Item_Enemy_131",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon102",
+    "shrine": "Jiotak Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x1aba4cb844d66e42",
+        "saveFlag": "IsTreasureBoxOpen.1925936144966905410",
+        "reward": "Weapon_Spear_161",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon103",
+    "shrine": "Ikatak Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x1aba4cb8cd4bd267",
+        "saveFlag": "IsTreasureBoxOpen.1925936147256300135",
+        "reward": "SpObj_EnergyBank_Capsule_A_02",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon104",
+    "shrine": "Chichim Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x1aba4cb8e1e30ae2",
+        "saveFlag": "IsTreasureBoxOpen.1925936147601754850",
+        "reward": "Weapon_Spear_164",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon105",
+    "shrine": "Kahatanaum Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x1aba4cb8984e76c7",
+        "saveFlag": "IsTreasureBoxOpen.1925936146367280839",
+        "reward": "Item_Enemy_131",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon106",
+    "shrine": "Ninjis Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x1aba4cb845288b57",
+        "saveFlag": "IsTreasureBoxOpen.1925936144972286807",
+        "reward": "Weapon_Bow_106",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon107",
+    "shrine": "Tokiy Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x1aba4cb8cc75df32",
+        "saveFlag": "IsTreasureBoxOpen.1925936147242278706",
+        "reward": "Item_Enemy_131",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon108",
+    "shrine": "Sakunbomar Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x1aba4cb8fef97661",
+        "saveFlag": "IsTreasureBoxOpen.1925936148089763425",
+        "reward": "Item_Ore_A",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon109",
+    "shrine": "Joku-u Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x1aba4cb89b440a58",
+        "saveFlag": "IsTreasureBoxOpen.1925936146416929368",
+        "reward": "Item_Ore_A",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon110",
+    "shrine": "Natak Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x1aba4cb85b73af4c",
+        "saveFlag": "IsTreasureBoxOpen.1925936145346309964",
+        "reward": "Item_Cook_C_17_Guts_Lv1",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon111",
+    "shrine": "Rutafu-um Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x1aba4cb8bede9b5d",
+        "saveFlag": "IsTreasureBoxOpen.1925936147014261597",
+        "reward": "Item_Ore_D",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon112",
+    "shrine": "O-ogim Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x1aba4cb8375826cd",
+        "saveFlag": "IsTreasureBoxOpen.1925936144740525773",
+        "reward": "SpObj_EnergyBank_Capsule_A_02",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon113",
+    "shrine": "Jogou Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x1aba4cb88ae6fafc",
+        "saveFlag": "IsTreasureBoxOpen.1925936146142395132",
+        "reward": "Item_Cook_C_17_MaxLife_Lv1",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon114",
+    "shrine": "Marari-in Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x1aba4cb8567dc26d",
+        "saveFlag": "IsTreasureBoxOpen.1925936145263084141",
+        "reward": "Item_Ore_B",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon115",
+    "shrine": "Pupunke Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x1aba4cb8a3d09e5c",
+        "saveFlag": "IsTreasureBoxOpen.1925936146560360028",
+        "reward": "Weapon_Sword_164",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon116",
+    "shrine": "Bamitok Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x1aba4cb832464dec",
+        "saveFlag": "IsTreasureBoxOpen.1925936144655470060",
+        "reward": "SpObj_EnergyBank_Capsule_A_02",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon117",
+    "shrine": "Ganos Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x1aba4cb88ffb31bd",
+        "saveFlag": "IsTreasureBoxOpen.1925936146227605949",
+        "reward": "Item_Ore_A",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon118",
+    "shrine": "Irasak Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x1aba4cb859779eee",
+        "saveFlag": "IsTreasureBoxOpen.1925936145313013486",
+        "reward": "Item_Enemy_131",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon119",
+    "shrine": "Kurakat Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x1aba4cb8a02ac2db",
+        "saveFlag": "IsTreasureBoxOpen.1925936146499158747",
+        "reward": "Weapon_Lsword_161",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon120",
+    "shrine": "Susub Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0xb38962e4dcc51564",
+        "saveFlag": "IsTreasureBoxOpen.12936980139694429540",
+        "reward": "Weapon_Spear_161",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon121",
+    "shrine": "Taunhiy Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x48dc288591886430",
+        "saveFlag": "IsTreasureBoxOpen.5250115819744551984",
+        "reward": "Weapon_Bow_105",
+        "pos": [
+          0,
+          0.2,
+          -41.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon122",
+    "shrine": "Eshos Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0xe77fc7c3c801819e",
+        "saveFlag": "IsTreasureBoxOpen.16681271188491698590",
+        "reward": "Weapon_Shield_103",
+        "pos": [
+          0,
+          0.2,
+          -41.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon123",
+    "shrine": "Yamiyo Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0xe630900ddb5a0935",
+        "saveFlag": "IsTreasureBoxOpen.16586915816794622261",
+        "reward": "BombFruit_Bundle_A",
+        "pos": [
+          0,
+          0.2,
+          -41.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon124",
+    "shrine": "Teniten Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0xd95878e7464280a6",
+        "saveFlag": "IsTreasureBoxOpen.15661400638892441766",
+        "reward": "Weapon_Spear_101",
+        "pos": [
+          0,
+          0.2,
+          -41.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon125",
+    "shrine": "Mayaotaki Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x4eb64d03e6adf99b",
+        "saveFlag": "IsTreasureBoxOpen.5671805459870120347",
+        "reward": "Item_Ore_A",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon126",
+    "shrine": "Makurukis Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x41028fc06068261b",
+        "saveFlag": "IsTreasureBoxOpen.4684464618832668187",
+        "reward": "Weapon_Bow_105",
+        "pos": [
+          0,
+          0.2,
+          -41.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon127",
+    "shrine": "Josiu Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x88246d15bc502767",
+        "saveFlag": "IsTreasureBoxOpen.9810085828440893287",
+        "reward": "Item_Enemy_131",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon128",
+    "shrine": "Ga-ahisas Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x903057cbf434f48b",
+        "saveFlag": "IsTreasureBoxOpen.10389900873830823051",
+        "reward": "Item_Ore_J",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon129",
+    "shrine": "Sinatanika Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x2d4905d11c2c46ef",
+        "saveFlag": "IsTreasureBoxOpen.3263145800685602543",
+        "reward": "Item_Cook_C_17_Silent_Lv3",
+        "pos": [
+          0,
+          0.2,
+          -41.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon130",
+    "shrine": "Jochisiu Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x45a235f5a398d3ad",
+        "saveFlag": "IsTreasureBoxOpen.5017632263972115373",
+        "reward": "SpObj_EnergyBank_Capsule_A_02",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon131",
+    "shrine": "Ishokin Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0xb74b441242865235",
+        "saveFlag": "IsTreasureBoxOpen.13207725177410310709",
+        "reward": "Item_Ore_D",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon132",
+    "shrine": "Sisuran Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0xca2618f3de4d7a78",
+        "saveFlag": "IsTreasureBoxOpen.14566357480462187128",
+        "reward": "Item_Ore_C",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon133",
+    "shrine": "Tenmaten Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0xf6a1ea628f476a15",
+        "saveFlag": "IsTreasureBoxOpen.17771743313612204565",
+        "reward": "Item_Enemy_131",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon134",
+    "shrine": "Jochi-ihiga Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x83aa90449b96dae6",
+        "saveFlag": "IsTreasureBoxOpen.9487554189351901926",
+        "reward": "Item_Ore_A",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon135",
+    "shrine": "Makasura Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0xb417e3afe0b94be7",
+        "saveFlag": "IsTreasureBoxOpen.12977091195820395495",
+        "reward": "Item_Cook_C_16_ReadyMade",
+        "pos": [
+          -59,
+          3,
+          160
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon136",
+    "shrine": "Kyononis Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0xe5aeee918183c413",
+        "saveFlag": "IsTreasureBoxOpen.16550427989343716371",
+        "reward": "Weapon_Sword_101",
+        "pos": [
+          0,
+          0.2,
+          -41.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon137",
+    "shrine": "Timawak Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Iron",
+        "hashId": "0xcf9b622c8828c18a",
+        "saveFlag": "IsTreasureBoxOpen.14959658530643689866",
+        "reward": "Weapon_Shield_102",
+        "pos": [
+          75,
+          6,
+          24.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon138",
+    "shrine": "Jonsau Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Iron",
+        "hashId": "0x6456362a505bef61",
+        "saveFlag": "IsTreasureBoxOpen.7230025807154638689",
+        "reward": "Weapon_Bow_105",
+        "pos": [
+          2.5,
+          -6.5,
+          -16.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon139",
+    "shrine": "Rasiwak Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Iron",
+        "hashId": "0x06b09c5f972e5ca6",
+        "saveFlag": "IsTreasureBoxOpen.482057094500867238",
+        "reward": "Weapon_Lsword_161",
+        "pos": [
+          102.35,
+          17.35,
+          60.57
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon140",
+    "shrine": "Kudanisar Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x491137166f707794",
+        "saveFlag": "IsTreasureBoxOpen.5265050008871270292",
+        "reward": "Item_Cook_C_17_SpeedUp_Lv3",
+        "pos": [
+          56,
+          41.5,
+          30
+        ]
+      },
+      {
+        "actor": "TBox_Dungeon_Wood",
+        "hashId": "0x34e2b4b7a4a23d27",
+        "saveFlag": "IsTreasureBoxOpen.3810806935542971687",
+        "reward": "Obj_ArrowBundle_A_02",
+        "pos": [
+          -70.35,
+          45.65,
+          -155
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon141",
+    "shrine": "Joju-u-u Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0xec29bbedad0aaea7",
+        "saveFlag": "IsTreasureBoxOpen.17017339296480931495",
+        "reward": "Item_Ore_M",
+        "pos": [
+          -77,
+          17,
+          -53.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon142",
+    "shrine": "Jiosin Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Iron",
+        "hashId": "0x0c547d1ac7ab70a7",
+        "saveFlag": "IsTreasureBoxOpen.888472580471353511",
+        "reward": "Item_Cook_C_17_SpeedUp_Lv2",
+        "pos": [
+          72.5,
+          10,
+          -9.5
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon143",
+    "shrine": "Gatanisis Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Iron",
+        "hashId": "0x3a95ec28bc53a969",
+        "saveFlag": "IsTreasureBoxOpen.4221539885432154473",
+        "reward": "BombFruit_Bundle_B",
+        "pos": [
+          23,
+          28.5,
+          -19
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon144",
+    "shrine": "Morok Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x57db27fb39d191b8",
+        "saveFlag": "IsTreasureBoxOpen.6330697661159674296",
+        "reward": "Item_Cook_C_17_Silent_Lv2",
+        "pos": [
+          0,
+          84,
+          -14
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon145",
+    "shrine": "Jinodok Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x50375dd404408681",
+        "saveFlag": "IsTreasureBoxOpen.5780191811939108481",
+        "reward": "Item_Ore_A",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon146",
+    "shrine": "Sihajog Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x6a648e703eaf12d0",
+        "saveFlag": "IsTreasureBoxOpen.7666409078430569168",
+        "reward": "Item_Ore_A",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon147",
+    "shrine": "Minetak Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x9113319fd0e6fa7d",
+        "saveFlag": "IsTreasureBoxOpen.10453753722531412605",
+        "reward": "SpObj_EnergyBank_Capsule_A_02",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon148",
+    "shrine": "Mayasiar Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x50bee2940f5d66dc",
+        "saveFlag": "IsTreasureBoxOpen.5818336894150076124",
+        "reward": "Weapon_Spear_161, Item_Ore_J",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon149",
+    "shrine": "Mayam Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0xf94be45820d87cf2",
+        "saveFlag": "IsTreasureBoxOpen.17963702605856668914",
+        "reward": "Weapon_Sword_161",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon150",
+    "shrine": "Ukoojisi Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0x2c3cc57fa0cd7c81",
+        "saveFlag": "IsTreasureBoxOpen.3187639788220808321",
+        "reward": "Weapon_Shield_103",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  },
+  {
+    "dungeon": "Dungeon151",
+    "shrine": "Taninoud Shrine",
+    "chests": [
+      {
+        "actor": "TBox_Dungeon_Stone",
+        "hashId": "0xfaa82acee4401c33",
+        "saveFlag": "IsTreasureBoxOpen.18061733373650410547",
+        "reward": "Item_Ore_D",
+        "pos": [
+          0,
+          6.3,
+          -4
+        ]
+      }
+    ]
+  }
+]

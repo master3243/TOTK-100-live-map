@@ -1624,6 +1624,10 @@ body.save-drop-active {
   background: url("assets/zd-icons/shrine.png") center / contain no-repeat;
 }
 
+.completion-shrine_chests {
+  background: url("assets/zd-icons/treasure.png") center / contain no-repeat;
+}
+
 .completion-lightroots {
   background: url("assets/zd-icons/lightroot.png") center / contain no-repeat;
 }

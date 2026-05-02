@@ -34,6 +34,7 @@ Huge thanks to the following people for public resources that made this project 
   - Doge229, for kohga's construct image and promoting the sheet with the Rauru discord bot"
   - Many members helped me personally (`Doge229`, `Phil`, and many others)
 - **Background Map**: [`vguzman812/totk-coordinates-map`](https://github.com/vguzman812/totk-coordinates-map)
+- **Shrine chest object/save-flag mapping**: [`zeldamods/objmap-totk`](https://github.com/zeldamods/objmap-totk)
 - **Icon pack source (stored in `assets/zd-icons/`)**: [`zeldadungeon.net/maps/totk/icons/`](https://www.zeldadungeon.net/maps/totk/icons/)
 - **In-browser Python runtime for the GitHub Pages/manual-upload mode**: [Pyodide](https://pyodide.org/)
 - **Third-party JS bundled under `docs/references/`**:

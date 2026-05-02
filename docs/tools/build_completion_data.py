@@ -4,6 +4,8 @@ import json
 import re
 from pathlib import Path
 
+from murmur3_32 import murmur3_32
+
 
 ROOT = Path(__file__).resolve().parents[1]
 REFERENCES = ROOT / "references"
@@ -16,6 +18,7 @@ FOOD_CSV = REFERENCES / "TOTK master sheet - Food.csv"
 KEY_ITEM_CSV = REFERENCES / "TOTK master sheet - KeyItems.csv"
 MATERIALS_CSV = REFERENCES / "TOTK master sheet - Materials.csv"
 QUESTS_CSV = REFERENCES / "TOTK master sheet - Quests.csv"
+SHRINE_CHESTS_JSON = REFERENCES / "objmap_shrine_chests.json"
 
 COMPLETISM_JS = REFERENCES / "zelda-totk.completism.js"
 COORDINATES_JS = REFERENCES / "zelda-totk.coordinates.js"
@@ -97,6 +100,7 @@ TOWER_OBJMAP_IDS = [
 CATEGORIES = [
     {"id": "towers", "label": "Towers", "hashes": "TOWERS_ACTIVATED", "coords": "TOWERS", "kind": "bool"},
     {"id": "shrines", "label": "Shrines", "hashes": "SHRINES_STATUS", "coords": "SHRINES", "kind": "bool", "target": "Clear"},
+    {"id": "shrine_chests", "label": "Shrine Chests", "source": "shrine_chests", "kind": "bool"},
     {"id": "lightroots", "label": "Lightroots", "hashes": "LIGHTROOTS_STATUS", "coords": "LIGHTROOTS", "kind": "bool", "target": "Open"},
     {"id": "caves", "label": "Caves", "hashes": "LOCATION_CAVES_VISITED2", "coords": "LOCATION_CAVES", "kind": "bool"},
     {"id": "bubbulfrogs", "label": "Bubbulfrogs", "hashes": "BUBBULS_GUIDS", "coords": "LOCATION_BUBBULS", "kind": "guid"},
@@ -167,41 +171,6 @@ COLLECTABLE_FABRICS = [
 ]
 
 
-def murmur3_32(text, seed=0):
-    """reference CSV / completism file uses murmur3_32. so we do it here as well."""
-    data = bytearray(text.encode("utf-8"))
-    length = len(data)
-    c1 = 0xCC9E2D51
-    c2 = 0x1B873593
-    h1 = seed & 0xFFFFFFFF
-    rounded_end = length & 0xFFFFFFFC
-    for i in range(0, rounded_end, 4):
-        k1 = data[i] | (data[i + 1] << 8) | (data[i + 2] << 16) | (data[i + 3] << 24)
-        k1 = (k1 * c1) & 0xFFFFFFFF
-        k1 = ((k1 << 15) | (k1 >> 17)) & 0xFFFFFFFF
-        k1 = (k1 * c2) & 0xFFFFFFFF
-        h1 ^= k1
-        h1 = ((h1 << 13) | (h1 >> 19)) & 0xFFFFFFFF
-        h1 = (h1 * 5 + 0xE6546B64) & 0xFFFFFFFF
-    k1 = 0
-    tail = length & 3
-    if tail == 3:
-        k1 ^= data[rounded_end + 2] << 16
-    if tail >= 2:
-        k1 ^= data[rounded_end + 1] << 8
-    if tail >= 1:
-        k1 ^= data[rounded_end]
-        k1 = (k1 * c1) & 0xFFFFFFFF
-        k1 = ((k1 << 15) | (k1 >> 17)) & 0xFFFFFFFF
-        k1 = (k1 * c2) & 0xFFFFFFFF
-        h1 ^= k1
-    h1 ^= length
-    h1 ^= h1 >> 16
-    h1 = (h1 * 0x85EBCA6B) & 0xFFFFFFFF
-    h1 ^= h1 >> 13
-    h1 = (h1 * 0xC2B2AE35) & 0xFFFFFFFF
-    h1 ^= h1 >> 16
-    return h1 & 0xFFFFFFFF
 
 
 def extract_array(text, name):
@@ -652,6 +621,35 @@ def parse_armor_location_items(chests_by_layer, locale_text, hashes_text):
     return items
 
 
+def parse_shrine_chest_items(path, coordinates_text):
+    shrines = parse_coordinates(coordinates_text, "SHRINES")
+    items = []
+    for row in json.loads(path.read_text(encoding="utf-8-sig")):
+        match = re.fullmatch(r"Dungeon(\d{3})", row["dungeon"])
+        if not match:
+            raise ValueError(f"Bad shrine dungeon id: {row['dungeon']}")
+        shrine_index = int(match.group(1))
+        if shrine_index >= len(shrines):
+            raise ValueError(f"Missing shrine coordinates for {row['dungeon']}")
+        coord = shrines[shrine_index]
+        for chest_index, chest in enumerate(row.get("chests", []), start=1):
+            reward = chest.get("reward") or "Unknown reward"
+            save_flag = chest["saveFlag"]
+            items.append({
+                "id": f"shrine_chests-{len(items) + 1:03d}",
+                "value": f"{murmur3_32(save_flag):08x}",
+                "x": coord["x"],
+                "y": coord["y"],
+                "z": coord["z"],
+                "layer": layer_for(coord["y"]),
+                "label": f"{row['shrine']} chest {chest_index}",
+                "note": f"{row['dungeon']} - {row['shrine']} - {reward} - {save_flag}",
+                "objmapId": chest["hashId"],
+                "objmapQuery": chest["hashId"],
+            })
+    return items
+
+
 def layer_for(y):
     if y >= 750:
         return "sky"
@@ -727,6 +725,19 @@ def main():
                 "defaultVisible": category.get("defaultVisible", True),
                 "items": items,
                 "sourceCounts": {"ids": len(items), "coordinates": len(items)},
+            })
+            continue
+
+        if category.get("source") == "shrine_chests":
+            items = parse_shrine_chest_items(SHRINE_CHESTS_JSON, coordinates)
+            categories.append({
+                "id": category["id"],
+                "label": category["label"],
+                "kind": category["kind"],
+                "targetValue": target_value(category.get("target")),
+                "defaultVisible": category.get("defaultVisible", True),
+                "items": items,
+                "sourceCounts": {"chests": len(items)},
             })
             continue
 
