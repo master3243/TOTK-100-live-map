@@ -173,7 +173,7 @@ def run(*, skip_browser: bool = False):
             if not chosen:
                 messagebox.showwarning(
                     "TOTK Save Map Helper",
-                    "No folder selected. The app will run, but /api/koroks will error until you set save_path in config.json.",
+                    "No folder selected. The app will run, but save-based features will error until you set save_path in config.json.",
                 )
                 return
 

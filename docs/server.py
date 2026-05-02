@@ -34,7 +34,6 @@ ROOT = resource_root()
 RUNTIME_ROOT = runtime_root()
 
 CONFIG_PATH = RUNTIME_ROOT / "config.json"
-KOROK_DATA_PATH = ROOT / "korok_data.json"
 COMPLETION_DATA_PATH = ROOT / "completion_data.json"
 HOST = "127.0.0.1"
 PORT = 8000
@@ -123,7 +122,6 @@ SERVER_LOCK = Lock()
 
 _DATA = {
     "initialized": False,
-    "korok_data": None,
     "completion_data": None,
     "tracked_hashes": None,
     "tracked_save_paths": None,
@@ -231,20 +229,13 @@ def load_json(path):
 
 def initialize_data():
     """Load static JSON/reference data and derive the hashes used by save parsing."""
-    korok_data = load_json(KOROK_DATA_PATH)
     completion_data = load_json(COMPLETION_DATA_PATH)
     categories = completion_data["categories"]
     stats = completion_data.get("stats", [])
 
-    _DATA["korok_data"] = korok_data
     _DATA["completion_data"] = completion_data
     _DATA["tracked_hashes"] = (
         {
-            int(entry["hash"], 16)
-            for group in ("hidden", "carry")
-            for entry in korok_data[group]
-        }
-        | {
             int(item["value"], 16)
             for definition in [*categories, *(stat for stat in stats if not stat.get("arrayHash"))]
             if definition["kind"] != "guid"
@@ -533,38 +524,38 @@ def build_map_category(category, values, guid_values):
     )
 
 
-def build_seed_category(values):
-    korok_data = _DATA["korok_data"] or {"hidden": [], "carry": []}
+def build_seed_category(category, values):
     definition = {
-        "id": "koroks",
-        "label": "Koroks",
+        "id": category["id"],
+        "label": category["label"],
         "kind": "seed",
-        "sourceCounts": {
-            "locations": sum(len(korok_data[kind]) for kind in ("hidden", "carry")),
-            "seeds": len(korok_data["hidden"]) + len(korok_data["carry"]) * 2,
-        },
+        "sourceCounts": category.get("sourceCounts", {}),
+        "defaultVisible": category.get("defaultVisible", True),
     }
     markers = []
-    for kind in ("hidden", "carry"):
-        for entry in korok_data[kind]:
-            hash_value = int(entry["hash"], 16)
-            raw_value = values.get(hash_value, 0)
-            obtained = raw_value != 0 if kind == "hidden" else raw_value == CLEAR_HASH
-            marker = make_progress_marker(entry, definition, obtained, f"{raw_value:08x}")
-            marker["seedValue"] = 2 if kind == "carry" else 1
-            markers.append(marker)
-    category = split_progress_items(definition, markers)
-    category["obtainedSeeds"] = sum(marker["seedValue"] for marker in category["obtainedItems"])
-    category["totalSeeds"] = definition["sourceCounts"]["seeds"]
-    return category
+    for item in category["items"]:
+        row_kind = item["kind"]
+        hash_value = int(item["value"], 16)
+        raw_value = values.get(hash_value, 0)
+        obtained = raw_value != 0 if row_kind == "hidden" else raw_value == CLEAR_HASH
+        marker = make_progress_marker(item, definition, obtained, f"{raw_value:08x}")
+        marker["seedValue"] = 2 if row_kind == "carry" else 1
+        markers.append(marker)
+    result = split_progress_items(definition, markers)
+    result["obtainedSeeds"] = sum(marker["seedValue"] for marker in result["obtainedItems"])
+    result["totalSeeds"] = definition["sourceCounts"]["seeds"]
+    return result
 
 
 def build_completion(values, guid_values):
     completion_data = _DATA["completion_data"] or {"categories": []}
-    return [build_seed_category(values)] + [
-        build_map_category(category, values, guid_values)
-        for category in completion_data["categories"]
-    ]
+    out = []
+    for category in completion_data["categories"]:
+        if category["kind"] == "seed":
+            out.append(build_seed_category(category, values))
+        else:
+            out.append(build_map_category(category, values, guid_values))
+    return out
 
 
 def build_stat_summary(stat, item_state, missing_keys=()):

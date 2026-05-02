@@ -128,6 +128,7 @@ CATEGORIES = [
     {"id": "gleeok", "label": "Gleeok", "hashes": "BOSSES_GLEEOKS_DEFEATED", "coords": "BOSSES_GLEEOKS", "kind": "bool"},
     {"id": "wells", "label": "Wells", "hashes": "LOCATION_WELLS_VISITED2", "coords": "LOCATION_WELLS", "kind": "bool"},
     {"id": "chasms", "label": "Chasms", "hashes": "LOCATION_CHASMS_VISITED2", "coords": "LOCATION_CHASMS", "kind": "bool"},
+    {"id": "koroks", "label": "Koroks", "source": "koroks", "kind": "seed"},
     {"id": "schema_stone", "label": "Schema Stones", "hashes": "SCHEMATICS_STONE_FOUND", "coords": "SCHEMATICS_STONE", "kind": "bool"},
     {"id": "yiga_schematic", "label": "Yiga Schematic", "hashes": "SCHEMATICS_YIGA_FOUND", "coords": "SCHEMATICS_YIGA", "kind": "bool"},
     {"id": "old_map", "label": "Old Map", "source": "old_maps", "kind": "bool"},
@@ -320,6 +321,40 @@ def parse_coordinates(text, name):
             "note": normalize_target_note_y((match.group(4) or comment or "").strip()),
         })
     return rows
+
+
+def parse_korok_hashes(completism_text, array_name):
+    """UInt32 hashes from CompletismHashes.KOROKS_* arrays (raw 0x... literals)."""
+    array_text = strip_comments(extract_array(completism_text, array_name))
+    return [int(match, 16) & 0xFFFFFFFF for match in re.findall(r"0x[0-9a-fA-F]+", array_text)]
+
+
+def build_koroks_items(completism_text, coordinates_text):
+    """Flat marker list: ids hidden-### / carry-### (Zelda Dungeon URLs), value = save hash."""
+    items = []
+
+    def section(row_kind, array_name):
+        hashes = parse_korok_hashes(completism_text, array_name)
+        coord_rows = parse_coordinates(coordinates_text, array_name)
+        if len(hashes) != len(coord_rows):
+            raise ValueError(
+                f"Korok {row_kind} length mismatch: {len(hashes)} hashes, {len(coord_rows)} coordinates"
+            )
+        for index, (h, c) in enumerate(zip(hashes, coord_rows)):
+            items.append({
+                "id": f"{row_kind}-{index + 1:03d}",
+                "value": f"{h:08x}",
+                "kind": row_kind,
+                "x": c["x"],
+                "y": c["y"],
+                "z": c["z"],
+                "layer": layer_for(c["y"]),
+                "note": c["note"],
+            })
+
+    section("hidden", "KOROKS_HIDDEN")
+    section("carry", "KOROKS_CARRY")
+    return items
 
 
 def parse_master_map_general_locations(path):
@@ -781,6 +816,24 @@ def main():
     }
     categories = []
     for category in CATEGORIES:
+        if category.get("source") == "koroks":
+            items = build_koroks_items(completism, coordinates)
+            hidden_n = sum(1 for item in items if item["kind"] == "hidden")
+            carry_n = sum(1 for item in items if item["kind"] == "carry")
+            categories.append({
+                "id": category["id"],
+                "label": category["label"],
+                "kind": category["kind"],
+                "targetValue": target_value(category.get("target")),
+                "defaultVisible": category.get("defaultVisible", True),
+                "items": items,
+                "sourceCounts": {
+                    "locations": len(items),
+                    "seeds": hidden_n + carry_n * 2,
+                },
+            })
+            continue
+
         if category.get("source") == "master_map":
             items = parse_master_map_general_locations(GENERAL_LOCATIONS_CSV)
             categories.append({

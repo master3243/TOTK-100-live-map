@@ -28,7 +28,6 @@ $repoStyles = Join-Path $ProjectDir "styles.css"
 $repoFrontend = Join-Path $ProjectDir "frontend"
 $repoReferences = Join-Path $ProjectDir "references"
 $repoCompletion = Join-Path $ProjectDir "completion_data.json"
-$repoKorok = Join-Path $ProjectDir "korok_data.json"
 $repoGui = Join-Path $ProjectDir "gui.py"
 $repoConfig = Join-Path $ProjectDir "config.json"
 $defaultIconPng = Join-Path $ProjectDir "assets\\zd-icons\\korok.png"
@@ -38,26 +37,18 @@ $repoAssets = Join-Path $ProjectDir "assets"
 
 $repoTools = Join-Path $ProjectDir "tools"
 $repoCompletionBuilder = Join-Path $repoTools "build_completion_data.py"
-$repoKorokBuilder = Join-Path $repoTools "build_korok_data.py"
-
-foreach ($p in @($repoCompletionBuilder,$repoKorokBuilder)) {
-  if (-not (Test-Path $p)) { throw "Missing required builder: $p" }
-}
+if (-not (Test-Path $repoCompletionBuilder)) { throw "Missing required builder: $repoCompletionBuilder" }
 
 Push-Location $scriptDir
 try {
   Write-Host "Building completion_data.json..."
   & python $repoCompletionBuilder
   if ($LASTEXITCODE -ne 0) { throw "build_completion_data.py failed with exit code $LASTEXITCODE" }
-
-  Write-Host "Building korok_data.json..."
-  & python $repoKorokBuilder
-  if ($LASTEXITCODE -ne 0) { throw "build_korok_data.py failed with exit code $LASTEXITCODE" }
 } finally {
   Pop-Location
 }
 
-foreach ($p in @($repoGui,$repoIndex,$repoStyles,$repoFrontend,$repoCompletion,$repoKorok)) {
+foreach ($p in @($repoGui,$repoIndex,$repoStyles,$repoFrontend,$repoCompletion)) {
   if (-not (Test-Path $p)) { throw "Missing required path: $p" }
 }
 if (-not (Test-Path $repoReferences -PathType Container)) {
@@ -99,7 +90,6 @@ $args = @(
   "--add-data", "$repoFrontend;frontend",
   "--add-data", "$repoReferences;references",
   "--add-data", "$repoCompletion;.",
-  "--add-data", "$repoKorok;.",
   $repoGui
 )
 

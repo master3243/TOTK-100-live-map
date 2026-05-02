@@ -32,15 +32,13 @@ async function ensurePyodide() {
     const pyodide = await window.loadPyodide({ indexURL: "https://cdn.jsdelivr.net/pyodide/v0.26.2/full/" });
 
     pyodide.FS.mkdirTree("/app/references");
-    const [serverPy, utilsPy, korokJson, completionJson] = await Promise.all([
+    const [serverPy, utilsPy, completionJson] = await Promise.all([
       fetchTextAsset("server.py"),
       fetchTextAsset("utils.py"),
-      fetchTextAsset("korok_data.json"),
       fetchTextAsset("completion_data.json"),
     ]);
     pyodide.FS.writeFile("/app/server.py", serverPy, { encoding: "utf8" });
     pyodide.FS.writeFile("/app/utils.py", utilsPy, { encoding: "utf8" });
-    pyodide.FS.writeFile("/app/korok_data.json", korokJson, { encoding: "utf8" });
     pyodide.FS.writeFile("/app/completion_data.json", completionJson, { encoding: "utf8" });
 
     await pyodide.runPythonAsync(`
