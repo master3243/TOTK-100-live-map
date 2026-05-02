@@ -15,6 +15,8 @@ from threading import Lock
 from urllib.parse import urlparse
 from urllib.parse import parse_qs
 
+from tools.murmur3_32 import murmur3_32
+
 
 def resource_root() -> Path:
     if getattr(sys, "frozen", False) and hasattr(sys, "_MEIPASS"):
@@ -100,19 +102,23 @@ SAVE_VERSIONS = {
 META_SAVE_TYPE_HASH = 0xA3DB7114
 CLEAR_HASH = 0x62965740
 PLAYER_SAVE_POS_HASH = 0xC884818D
-PLAYER_MAX_LIFE_HASH = 0xFBE01DA1  # Int; PlayerStatus.MaxLife
-PLAYER_MAX_STAMINA_HASH = 0xF9212C74  # Float; PlayerStatus.MaxStamina
-PLAYER_MAX_ENERGY_HASH = 0xAFD01D68  # Float; PlayerStatus.MaxEnergy
+PLAYER_MAX_LIFE_HASH = murmur3_32('PlayerStatus.MaxLife')
+PLAYER_MAX_STAMINA_HASH = murmur3_32('PlayerStatus.MaxStamina')
+PLAYER_MAX_ENERGY_HASH = murmur3_32('PlayerStatus.MaxEnergy')
 MAX_LIGHT_BLESSING = 53
+
 HYRULE_MIN_X = -6000
 HYRULE_MAX_X = 6000
 HYRULE_MIN_Z = -5000
 HYRULE_MAX_Z = 5000
+
 SKY_MIN_Y = 750
-DEPTHS_MAX_Y = -100
+DEPTHS_MAX_Y = -150
+
 LOG_LIMIT = 200
 LOG_ENTRIES = []
 LOG_NEXT_ID = 1
+
 SERVER_LOCK = Lock()
 
 _DATA = {
