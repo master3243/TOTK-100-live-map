@@ -23,6 +23,7 @@ MEMORIES_CSV = REFERENCES / "TOTK master sheet - Memories.csv"
 OLD_MAPS_CSV = REFERENCES / "TOTK master sheet - Old Maps.csv"
 PARAGLIDER_FABRICS_CSV = REFERENCES / "TOTK master sheet - Paraglider Fabrics.csv"
 ZONAI_DEVICES_CSV = REFERENCES / "TOTK master sheet - Zonai Devices.csv"
+OLD_MAP_CHESTS_JSON = REFERENCES / "objmap_old_map_chests.json"
 SHRINE_CHESTS_JSON = REFERENCES / "objmap_shrine_chests.json"
 
 COMPLETISM_JS = REFERENCES / "zelda-totk.completism.js"
@@ -37,6 +38,12 @@ ZELDACENTRAL_CHESTS_DEPTHS = REFERENCES / "zeldacentral-totk-depths-chests.json"
 
 GENERAL_LOCATIONS_SKIP = ( "_IsCompleted_Exp", "_IsAfter_DungeonBossDead_Exp", "IsVisitLocation.Shop" )  # Fix map csv
 GENERAL_LOCATIONS_REPLACE = { "IsVisitLocation.HatenoLab": "IsVisitLocation.HatenoLabo" }  # Fix map csv
+OLD_MAP_REWARD_REPLACE = {  # these are IDs for upgraded armors which are wrong and will not map correctly
+    "Armor_035_Head": "Armor_005_Head",
+    "Armor_035_Lower": "Armor_005_Lower",
+    "Armor_216_Head": "Armor_215_Head",
+    "Armor_224_Head": "Armor_220_Head",
+}
 
 KEY_ITEMS_SKIP = frozenset(
     {
@@ -676,24 +683,32 @@ def parse_shrine_chest_items(path, coordinates_text):
     return items
 
 
-def parse_old_map_items(path):
+def parse_old_map_items(path, chest_path):
     items = []
+    chests = {
+        row["rewardActor"]: row
+        for row in json.loads(chest_path.read_text(encoding="utf-8-sig"))
+    }
     with path.open(encoding="utf-8-sig", newline="") as handle:
         for row in csv.reader(handle):
             if not row or row[0] == "0/31":
                 continue
             map_actor = row[13].strip()
-            reward_actor = row[14].strip()
+            reward_actor = OLD_MAP_REWARD_REPLACE.get(row[14].strip(), row[14].strip())
             reward = row[8].strip()
             if not map_actor or not reward_actor:
                 continue
+            chest = chests.get(reward_actor)
+            if chest is None:
+                raise ValueError(f"Missing old-map chest object for {reward_actor}")
+            map_flag = f"IsFindTreasureMap.{reward_actor}"
             entries = [
-                ("map", f"IsFindTreasureMap.{reward_actor}", row[4], row[6], row[5], f"Old Map - {row[1].strip()} - {reward} - {map_actor}", map_actor),
-                ("chest", f"IsGet.{reward_actor}", row[10], row[12], row[11], f"Treasure Chest - {row[7].strip()} - {reward} - {reward_actor}", reward_actor),
+                ("map", map_flag, (), row[4], row[6], row[5], f"Old Map - {row[1].strip()} - {reward} - {map_actor}", map_actor),
+                ("chest", f"IsGet.{reward_actor}", (map_flag,), chest["x"], chest["y"], -chest["z"], f"Treasure Chest - {row[7].strip()} - {reward} - {reward_actor}", chest["hashId"]),
             ]
-            for kind, flag, x, y, z, note, objmap_query in entries:
+            for kind, flag, requires, x, y, z, note, objmap_query in entries:
                 x, y, z = round(float(x), 2), round(float(y), 2), round(float(z), 2)
-                items.append({
+                item = {
                     "id": f"old_map-{len(items) + 1:03d}",
                     "value": f"{murmur3_32(flag):08x}",
                     "x": x,
@@ -704,7 +719,11 @@ def parse_old_map_items(path):
                     "label": f"{reward} ({'map' if kind == 'map' else 'chest'})",
                     "note": f"{note} - {flag}",
                     "objmapQuery": objmap_query,
-                })
+                }
+                if kind == "chest":
+                    item["objmapId"] = objmap_query
+                    item["requires"] = [f"{murmur3_32(value):08x}" for value in requires]
+                items.append(item)
     return items
 
 
@@ -800,7 +819,7 @@ def main():
             continue
 
         if category.get("source") == "old_maps":
-            items = parse_old_map_items(OLD_MAPS_CSV)
+            items = parse_old_map_items(OLD_MAPS_CSV, OLD_MAP_CHESTS_JSON)
             categories.append({
                 "id": category["id"],
                 "label": category["label"],

@@ -12279,14 +12279,18 @@
         {
           "id": "old_map-002",
           "value": "8a32f8e9",
-          "x": -3231.0,
-          "y": -475.0,
-          "z": -2477.0,
+          "x": -3231.46,
+          "y": -370.13,
+          "z": -2476.91,
           "layer": "depths",
           "kind": "chest",
           "label": "Miner's Mask (chest)",
           "note": "Treasure Chest - Abandoned Kara Kara Mine - Miner's Mask - Armor_1051_Head - IsGet.Armor_1051_Head",
-          "objmapQuery": "Armor_1051_Head"
+          "objmapQuery": "0xff82085f73101a0d",
+          "objmapId": "0xff82085f73101a0d",
+          "requires": [
+            "5875357a"
+          ]
         },
         {
           "id": "old_map-003",
@@ -12303,14 +12307,18 @@
         {
           "id": "old_map-004",
           "value": "a32a5569",
-          "x": -1077.0,
-          "y": -514.0,
-          "z": -557.0,
+          "x": -1077.17,
+          "y": -408.56,
+          "z": -557.2,
           "layer": "depths",
           "kind": "chest",
           "label": "Miner's Top (chest)",
           "note": "Treasure Chest - Daphnes Canyon Mine - Miner's Top - Armor_1051_Upper - IsGet.Armor_1051_Upper",
-          "objmapQuery": "Armor_1051_Upper"
+          "objmapQuery": "0x70a83e72a48d2e8f",
+          "objmapId": "0x70a83e72a48d2e8f",
+          "requires": [
+            "840cfa81"
+          ]
         },
         {
           "id": "old_map-005",
@@ -12327,14 +12335,18 @@
         {
           "id": "old_map-006",
           "value": "78626c44",
-          "x": -1287.0,
-          "y": -707.0,
-          "z": -2250.0,
+          "x": -1287.48,
+          "y": -602.15,
+          "z": -2249.98,
           "layer": "depths",
           "kind": "chest",
           "label": "Miner's Trousers (chest)",
           "note": "Treasure Chest - Hylia Canyon Mine - Miner's Trousers - Armor_1051_Lower - IsGet.Armor_1051_Lower",
-          "objmapQuery": "Armor_1051_Lower"
+          "objmapQuery": "0x2082fcfc19c326eb",
+          "objmapId": "0x2082fcfc19c326eb",
+          "requires": [
+            "e112f9e2"
+          ]
         },
         {
           "id": "old_map-007",
@@ -12351,14 +12363,18 @@
         {
           "id": "old_map-008",
           "value": "c7438f71",
-          "x": 2243.0,
-          "y": -467.0,
-          "z": -1901.0,
+          "x": 2243.1,
+          "y": -361.98,
+          "z": -1901.15,
           "layer": "depths",
           "kind": "chest",
           "label": "Ravio's Hood (chest)",
           "note": "Treasure Chest - Secluded Coliseum - Ravio's Hood - Armor_177_Head - IsGet.Armor_177_Head",
-          "objmapQuery": "Armor_177_Head"
+          "objmapQuery": "0x36790523c2e7cb7a",
+          "objmapId": "0x36790523c2e7cb7a",
+          "requires": [
+            "05b058c7"
+          ]
         },
         {
           "id": "old_map-009",
@@ -12375,62 +12391,74 @@
         {
           "id": "old_map-010",
           "value": "32e2379e",
-          "x": -4879.0,
-          "y": -458.0,
-          "z": -3720.0,
+          "x": -4879.21,
+          "y": -353.16,
+          "z": -3719.52,
           "layer": "depths",
           "kind": "chest",
           "label": "Tunic of the Wild (chest)",
           "note": "Treasure Chest - Gerudo Dark Skeleton - Tunic of the Wild - Armor_005_Upper - IsGet.Armor_005_Upper",
-          "objmapQuery": "Armor_005_Upper"
+          "objmapQuery": "0x5edd98fda58e0e87",
+          "objmapId": "0x5edd98fda58e0e87",
+          "requires": [
+            "dfdded1c"
+          ]
         },
         {
           "id": "old_map-011",
-          "value": "2837316a",
+          "value": "00e34536",
           "x": -3962.0,
           "y": 1709.0,
           "z": 608.0,
           "layer": "sky",
           "kind": "map",
           "label": "Trousers of the Wild (map)",
-          "note": "Old Map - Tabantha Sky Archipelago - Trousers of the Wild - Obj_TreasureMap_17 - IsFindTreasureMap.Armor_035_Lower",
+          "note": "Old Map - Tabantha Sky Archipelago - Trousers of the Wild - Obj_TreasureMap_17 - IsFindTreasureMap.Armor_005_Lower",
           "objmapQuery": "Obj_TreasureMap_17"
         },
         {
           "id": "old_map-012",
-          "value": "5859d93a",
-          "x": 1675.0,
-          "y": -561.0,
-          "z": 3723.0,
+          "value": "b413622a",
+          "x": 1674.83,
+          "y": -455.94,
+          "z": 3722.9,
           "layer": "depths",
           "kind": "chest",
           "label": "Trousers of the Wild (chest)",
-          "note": "Treasure Chest - Eldin Dark Skeleton - Trousers of the Wild - Armor_035_Lower - IsGet.Armor_035_Lower",
-          "objmapQuery": "Armor_035_Lower"
+          "note": "Treasure Chest - Eldin Dark Skeleton - Trousers of the Wild - Armor_005_Lower - IsGet.Armor_005_Lower",
+          "objmapQuery": "0x0811dd0b46e2e6f9",
+          "objmapId": "0x0811dd0b46e2e6f9",
+          "requires": [
+            "00e34536"
+          ]
         },
         {
           "id": "old_map-013",
-          "value": "8af21bf7",
+          "value": "fb332413",
           "x": -3635.0,
           "y": 1671.0,
           "z": 467.0,
           "layer": "sky",
           "kind": "map",
           "label": "Cap of the Wild (map)",
-          "note": "Old Map - Tabantha Sky Archipelago - Cap of the Wild - Obj_TreasureMap_15 - IsFindTreasureMap.Armor_035_Head",
+          "note": "Old Map - Tabantha Sky Archipelago - Cap of the Wild - Obj_TreasureMap_15 - IsFindTreasureMap.Armor_005_Head",
           "objmapQuery": "Obj_TreasureMap_15"
         },
         {
           "id": "old_map-014",
-          "value": "e43ee233",
-          "x": -3955.0,
-          "y": -858.0,
-          "z": 3725.0,
+          "value": "e2ed809d",
+          "x": -3955.03,
+          "y": -752.66,
+          "z": 3724.56,
           "layer": "depths",
           "kind": "chest",
           "label": "Cap of the Wild (chest)",
-          "note": "Treasure Chest - Hebra Dark Skeleton - Cap of the Wild - Armor_035_Head - IsGet.Armor_035_Head",
-          "objmapQuery": "Armor_035_Head"
+          "note": "Treasure Chest - Hebra Dark Skeleton - Cap of the Wild - Armor_005_Head - IsGet.Armor_005_Head",
+          "objmapQuery": "0x0f5981ce25c25c0f",
+          "objmapId": "0x0f5981ce25c25c0f",
+          "requires": [
+            "fb332413"
+          ]
         },
         {
           "id": "old_map-015",
@@ -12447,14 +12475,18 @@
         {
           "id": "old_map-016",
           "value": "d7aeed59",
-          "x": -148.0,
-          "y": -621.0,
-          "z": 2380.0,
+          "x": -147.62,
+          "y": -516.04,
+          "z": 2380.11,
           "layer": "depths",
           "kind": "chest",
           "label": "Korok Mask (chest)",
           "note": "Treasure Chest - Forest Coliseum - Korok Mask - Armor_176_Head - IsGet.Armor_176_Head",
-          "objmapQuery": "Armor_176_Head"
+          "objmapQuery": "0x7166179494a79b22",
+          "objmapId": "0x7166179494a79b22",
+          "requires": [
+            "bb11e8f5"
+          ]
         },
         {
           "id": "old_map-017",
@@ -12471,14 +12503,18 @@
         {
           "id": "old_map-018",
           "value": "e7fe391c",
-          "x": -3353.0,
-          "y": -812.0,
-          "z": 2313.0,
+          "x": -3353.29,
+          "y": -707.18,
+          "z": 2312.86,
           "layer": "depths",
           "kind": "chest",
           "label": "Trousers of the Hero (chest)",
           "note": "Treasure Chest - Corvash Canyon Mine - Trousers of the Hero - Armor_230_Lower - IsGet.Armor_230_Lower",
-          "objmapQuery": "Armor_230_Lower"
+          "objmapQuery": "0x2dd7105b640b19a8",
+          "objmapId": "0x2dd7105b640b19a8",
+          "requires": [
+            "17110169"
+          ]
         },
         {
           "id": "old_map-019",
@@ -12495,14 +12531,18 @@
         {
           "id": "old_map-020",
           "value": "80106c21",
-          "x": 2520.0,
-          "y": -626.0,
-          "z": -3602.0,
+          "x": 2519.54,
+          "y": -520.95,
+          "z": -3602.3,
           "layer": "depths",
           "kind": "chest",
           "label": "Cap of the Hero (chest)",
           "note": "Treasure Chest - Tuft Canyon Mine - Cap of the Hero - Armor_230_Head - IsGet.Armor_230_Head",
-          "objmapQuery": "Armor_230_Head"
+          "objmapQuery": "0xa38a7f1bef0845f6",
+          "objmapId": "0xa38a7f1bef0845f6",
+          "requires": [
+            "78351b17"
+          ]
         },
         {
           "id": "old_map-021",
@@ -12519,38 +12559,46 @@
         {
           "id": "old_map-022",
           "value": "ad52ac18",
-          "x": 1285.0,
-          "y": -784.0,
-          "z": -1813.0,
+          "x": 1284.55,
+          "y": -679.02,
+          "z": -1812.71,
           "layer": "depths",
           "kind": "chest",
           "label": "Tunic of the Hero (chest)",
           "note": "Treasure Chest - Dueling Canyons Mine - Tunic of the Hero - Armor_230_Upper - IsGet.Armor_230_Upper",
-          "objmapQuery": "Armor_230_Upper"
+          "objmapQuery": "0x593ebb2510e663c3",
+          "objmapId": "0x593ebb2510e663c3",
+          "requires": [
+            "a77d686d"
+          ]
         },
         {
           "id": "old_map-023",
-          "value": "38381054",
+          "value": "b672271b",
           "x": -816.0,
           "y": 915.0,
           "z": -1591.0,
           "layer": "sky",
           "kind": "map",
           "label": "Sheik's Mask (map)",
-          "note": "Old Map - South Hyrule Sky Archipelago - Sheik's Mask - Obj_TreasureMap_19 - IsFindTreasureMap.Armor_224_Head",
+          "note": "Old Map - South Hyrule Sky Archipelago - Sheik's Mask - Obj_TreasureMap_19 - IsFindTreasureMap.Armor_220_Head",
           "objmapQuery": "Obj_TreasureMap_19"
         },
         {
           "id": "old_map-024",
-          "value": "36b04abd",
-          "x": -4311.0,
-          "y": -479.0,
-          "z": -3782.0,
+          "value": "8f27c96a",
+          "x": -4310.56,
+          "y": -374.21,
+          "z": -3782.04,
           "layer": "depths",
           "kind": "chest",
           "label": "Sheik's Mask (chest)",
-          "note": "Treasure Chest - Desert Coliseum - Sheik's Mask - Armor_224_Head - IsGet.Armor_224_Head",
-          "objmapQuery": "Armor_224_Head"
+          "note": "Treasure Chest - Desert Coliseum - Sheik's Mask - Armor_220_Head - IsGet.Armor_220_Head",
+          "objmapQuery": "0x81c3a29d459678d3",
+          "objmapId": "0x81c3a29d459678d3",
+          "requires": [
+            "b672271b"
+          ]
         },
         {
           "id": "old_map-025",
@@ -12567,14 +12615,18 @@
         {
           "id": "old_map-026",
           "value": "dedd3250",
-          "x": -1152.0,
-          "y": -499.0,
-          "z": -1263.0,
+          "x": -1151.85,
+          "y": -393.54,
+          "z": -1263.46,
           "layer": "depths",
           "kind": "chest",
           "label": "Majora's Mask (chest)",
           "note": "Treasure Chest - Floating Coliseum - Majora's Mask - Armor_172_Head - IsGet.Armor_172_Head",
-          "objmapQuery": "Armor_172_Head"
+          "objmapQuery": "0xafdf7542119046f9",
+          "objmapId": "0xafdf7542119046f9",
+          "requires": [
+            "7b5a8ac8"
+          ]
         },
         {
           "id": "old_map-027",
@@ -12591,14 +12643,18 @@
         {
           "id": "old_map-028",
           "value": "bb144e8f",
-          "x": -2048.0,
-          "y": -546.0,
-          "z": -1129.0,
+          "x": -2048.12,
+          "y": -440.85,
+          "z": -1128.88,
           "layer": "depths",
           "kind": "chest",
           "label": "Sword of the Hero (chest)",
           "note": "Treasure Chest - Dalite Grove - Sword of the Hero - Weapon_Sword_058 - IsGet.Weapon_Sword_058",
-          "objmapQuery": "Weapon_Sword_058"
+          "objmapQuery": "0xc3645d2994bd4daa",
+          "objmapId": "0xc3645d2994bd4daa",
+          "requires": [
+            "24fd5dc6"
+          ]
         },
         {
           "id": "old_map-029",
@@ -12615,38 +12671,46 @@
         {
           "id": "old_map-030",
           "value": "40696544",
-          "x": 1165.0,
-          "y": -580.0,
-          "z": 426.0,
+          "x": 1164.56,
+          "y": -474.8,
+          "z": 425.65,
           "layer": "depths",
           "kind": "chest",
           "label": "Trousers of the Sky (chest)",
           "note": "Treasure Chest - Crenel Canyon Mine - Trousers of the Sky - Armor_215_Lower - IsGet.Armor_215_Lower",
-          "objmapQuery": "Armor_215_Lower"
+          "objmapQuery": "0x4ec602114f9dd67e",
+          "objmapId": "0x4ec602114f9dd67e",
+          "requires": [
+            "5aa6fa9f"
+          ]
         },
         {
           "id": "old_map-031",
-          "value": "c26359b0",
+          "value": "3044e564",
           "x": 1126.0,
           "y": 758.0,
           "z": -3274.0,
           "layer": "sky",
           "kind": "map",
           "label": "Cap of the Sky (map)",
-          "note": "Old Map - Thunderhead Isles - Cap of the Sky - Obj_TreasureMap_12 - IsFindTreasureMap.Armor_216_Head",
+          "note": "Old Map - Thunderhead Isles - Cap of the Sky - Obj_TreasureMap_12 - IsFindTreasureMap.Armor_215_Head",
           "objmapQuery": "Obj_TreasureMap_12"
         },
         {
           "id": "old_map-032",
-          "value": "3b69f0a7",
-          "x": 3822.0,
-          "y": -632.0,
-          "z": -1985.0,
+          "value": "8649ee39",
+          "x": 3821.58,
+          "y": -526.68,
+          "z": -1985.38,
           "layer": "depths",
           "kind": "chest",
           "label": "Cap of the Sky (chest)",
-          "note": "Treasure Chest - Retsam Grove - Cap of the Sky - Armor_216_Head - IsGet.Armor_216_Head",
-          "objmapQuery": "Armor_216_Head"
+          "note": "Treasure Chest - Retsam Grove - Cap of the Sky - Armor_215_Head - IsGet.Armor_215_Head",
+          "objmapQuery": "0x60cee6ae4fbb7943",
+          "objmapId": "0x60cee6ae4fbb7943",
+          "requires": [
+            "3044e564"
+          ]
         },
         {
           "id": "old_map-033",
@@ -12663,14 +12727,18 @@
         {
           "id": "old_map-034",
           "value": "4f541c65",
-          "x": -4079.0,
-          "y": -450.0,
+          "x": -4079.21,
+          "y": -344.94,
           "z": 2801.0,
           "layer": "depths",
           "kind": "chest",
           "label": "Cap of Time (chest)",
           "note": "Treasure Chest - Sturnida Lavafalls - Cap of Time - Armor_200_Head - IsGet.Armor_200_Head",
-          "objmapQuery": "Armor_200_Head"
+          "objmapQuery": "0x73ea5c9bbce249a5",
+          "objmapId": "0x73ea5c9bbce249a5",
+          "requires": [
+            "2b60b4b7"
+          ]
         },
         {
           "id": "old_map-035",
@@ -12687,14 +12755,18 @@
         {
           "id": "old_map-036",
           "value": "533248e7",
-          "x": -4180.0,
-          "y": -1121.0,
-          "z": -698.0,
+          "x": -4180.42,
+          "y": -1016.29,
+          "z": -698.37,
           "layer": "depths",
           "kind": "chest",
           "label": "Trousers of Time (chest)",
           "note": "Treasure Chest - Gerudo Canyon Mine - Trousers of Time - Armor_200_Lower - IsGet.Armor_200_Lower",
-          "objmapQuery": "Armor_200_Lower"
+          "objmapQuery": "0xdbe4a4518b61b91c",
+          "objmapId": "0xdbe4a4518b61b91c",
+          "requires": [
+            "7a1d84a5"
+          ]
         },
         {
           "id": "old_map-037",
@@ -12711,14 +12783,18 @@
         {
           "id": "old_map-038",
           "value": "1368cdaf",
-          "x": -2001.0,
-          "y": -715.0,
-          "z": 1309.0,
+          "x": -2001.29,
+          "y": -609.78,
+          "z": 1309.06,
           "layer": "depths",
           "kind": "chest",
           "label": "Tunic of Time (chest)",
           "note": "Treasure Chest - Lindor Canyon Mine - Tunic of Time - Armor_200_Upper - IsGet.Armor_200_Upper",
-          "objmapQuery": "Armor_200_Upper"
+          "objmapQuery": "0x72a540735a7cb49b",
+          "objmapId": "0x72a540735a7cb49b",
+          "requires": [
+            "28ae6f1c"
+          ]
         },
         {
           "id": "old_map-039",
@@ -12735,14 +12811,18 @@
         {
           "id": "old_map-040",
           "value": "8ee6666c",
-          "x": 1021.0,
-          "y": -543.0,
-          "z": 1408.0,
+          "x": 1021.02,
+          "y": -437.75,
+          "z": 1407.87,
           "layer": "depths",
           "kind": "chest",
           "label": "Tunic of the Sky (chest)",
           "note": "Treasure Chest - Minshi Grove - Tunic of the Sky - Armor_215_Upper - IsGet.Armor_215_Upper",
-          "objmapQuery": "Armor_215_Upper"
+          "objmapQuery": "0x180ca128acf26b97",
+          "objmapId": "0x180ca128acf26b97",
+          "requires": [
+            "ad134aed"
+          ]
         },
         {
           "id": "old_map-041",
@@ -12759,14 +12839,18 @@
         {
           "id": "old_map-042",
           "value": "365af479",
-          "x": -2737.0,
-          "y": -1120.0,
+          "x": -2736.66,
+          "y": -1014.63,
           "z": 2918.0,
           "layer": "depths",
           "kind": "chest",
           "label": "Sea-Breeze Boomerang (chest)",
           "note": "Treasure Chest - Hebra Canyon Mine - Sea-Breeze Boomerang - Weapon_Sword_059 - IsGet.Weapon_Sword_059",
-          "objmapQuery": "Weapon_Sword_059"
+          "objmapQuery": "0x3cb33d276093a62a",
+          "objmapId": "0x3cb33d276093a62a",
+          "requires": [
+            "8a67682c"
+          ]
         },
         {
           "id": "old_map-043",
@@ -12783,14 +12867,18 @@
         {
           "id": "old_map-044",
           "value": "0ff775af",
-          "x": 2668.0,
-          "y": -559.0,
-          "z": 254.0,
+          "x": 2667.56,
+          "y": -453.72,
+          "z": 253.65,
           "layer": "depths",
           "kind": "chest",
           "label": "Sea-Breeze Shield (chest)",
           "note": "Treasure Chest - Tabahl Grove - Sea-Breeze Shield - Weapon_Shield_057 - IsGet.Weapon_Shield_057",
-          "objmapQuery": "Weapon_Shield_057"
+          "objmapQuery": "0xcb61ea387e8959db",
+          "objmapId": "0xcb61ea387e8959db",
+          "requires": [
+            "a2c5ee99"
+          ]
         },
         {
           "id": "old_map-045",
@@ -12807,14 +12895,18 @@
         {
           "id": "old_map-046",
           "value": "1ce1a5ba",
-          "x": 4563.0,
-          "y": -471.0,
-          "z": -3620.0,
+          "x": 4562.77,
+          "y": -366.31,
+          "z": -3619.85,
           "layer": "depths",
           "kind": "chest",
           "label": "Midna's Helmet (chest)",
           "note": "Treasure Chest - Lone Island Coliseum - Midna's Helmet - Armor_173_Head - IsGet.Armor_173_Head",
-          "objmapQuery": "Armor_173_Head"
+          "objmapQuery": "0x3119a8d2bd1d7ad8",
+          "objmapId": "0x3119a8d2bd1d7ad8",
+          "requires": [
+            "eb171a92"
+          ]
         },
         {
           "id": "old_map-047",
@@ -12831,14 +12923,18 @@
         {
           "id": "old_map-048",
           "value": "72e413c6",
-          "x": 2144.0,
-          "y": -838.0,
-          "z": 3183.0,
+          "x": 2143.55,
+          "y": -732.87,
+          "z": 3183.37,
           "layer": "depths",
           "kind": "chest",
           "label": "Zant's Helmet (chest)",
           "note": "Treasure Chest - Scorching Coliseum - Zant's Helmet - Armor_178_Head - IsGet.Armor_178_Head",
-          "objmapQuery": "Armor_178_Head"
+          "objmapQuery": "0x44c3e84547b53533",
+          "objmapId": "0x44c3e84547b53533",
+          "requires": [
+            "91916a39"
+          ]
         },
         {
           "id": "old_map-049",
@@ -12855,14 +12951,18 @@
         {
           "id": "old_map-050",
           "value": "c9834a5d",
-          "x": -3789.0,
-          "y": -682.0,
-          "z": 1344.0,
+          "x": -3788.98,
+          "y": -576.76,
+          "z": 1344.09,
           "layer": "depths",
           "kind": "chest",
           "label": "Tunic of the Wind (chest)",
           "note": "Treasure Chest - Cuho Canyon Mine - Tunic of the Wind - Armor_205_Upper - IsGet.Armor_205_Upper",
-          "objmapQuery": "Armor_205_Upper"
+          "objmapQuery": "0x05a817167c5706d6",
+          "objmapId": "0x05a817167c5706d6",
+          "requires": [
+            "5a06eebb"
+          ]
         },
         {
           "id": "old_map-051",
@@ -12879,14 +12979,18 @@
         {
           "id": "old_map-052",
           "value": "42107ba5",
-          "x": 4655.0,
-          "y": -722.0,
-          "z": 621.0,
+          "x": 4655.29,
+          "y": -617.26,
+          "z": 620.71,
           "layer": "depths",
           "kind": "chest",
           "label": "Cap of the Wind (chest)",
           "note": "Treasure Chest - Davdi Island (Depths) - Cap of the Wind - Armor_205_Head - IsGet.Armor_205_Head",
-          "objmapQuery": "Armor_205_Head"
+          "objmapQuery": "0x7128123977b546eb",
+          "objmapId": "0x7128123977b546eb",
+          "requires": [
+            "56aa6296"
+          ]
         },
         {
           "id": "old_map-053",
@@ -12903,14 +13007,18 @@
         {
           "id": "old_map-054",
           "value": "c22a4393",
-          "x": 3794.0,
-          "y": -445.0,
-          "z": -3613.0,
+          "x": 3794.24,
+          "y": -340.39,
+          "z": -3613.24,
           "layer": "depths",
           "kind": "chest",
           "label": "Trousers of the Wind (chest)",
           "note": "Treasure Chest - Cresia Pit Mine - Trousers of the Wind - Armor_205_Lower - IsGet.Armor_205_Lower",
-          "objmapQuery": "Armor_205_Lower"
+          "objmapQuery": "0xf8a4ecf37b644e25",
+          "objmapId": "0xf8a4ecf37b644e25",
+          "requires": [
+            "dd8a40d8"
+          ]
         },
         {
           "id": "old_map-055",
@@ -12927,14 +13035,18 @@
         {
           "id": "old_map-056",
           "value": "d12184b9",
-          "x": 4516.0,
-          "y": -454.0,
-          "z": 2170.0,
+          "x": 4516.29,
+          "y": -348.74,
+          "z": 2170.07,
           "layer": "depths",
           "kind": "chest",
           "label": "Tunic of Twilight (chest)",
           "note": "Treasure Chest - Rist Mine - Tunic of Twilight - Armor_210_Upper - IsGet.Armor_210_Upper",
-          "objmapQuery": "Armor_210_Upper"
+          "objmapQuery": "0x935c52deeb74078f",
+          "objmapId": "0x935c52deeb74078f",
+          "requires": [
+            "29889eb8"
+          ]
         },
         {
           "id": "old_map-057",
@@ -12951,14 +13063,18 @@
         {
           "id": "old_map-058",
           "value": "837583ad",
-          "x": 264.0,
-          "y": -623.0,
-          "z": 3124.0,
+          "x": 263.65,
+          "y": -517.71,
+          "z": 3123.77,
           "layer": "depths",
           "kind": "chest",
           "label": "Cap of Twilight (chest)",
           "note": "Treasure Chest - Gleeok Den - Cap of Twilight - Armor_210_Head - IsGet.Armor_210_Head",
-          "objmapQuery": "Armor_210_Head"
+          "objmapQuery": "0xff54e0498c42a238",
+          "objmapId": "0xff54e0498c42a238",
+          "requires": [
+            "17aea64c"
+          ]
         },
         {
           "id": "old_map-059",
@@ -12975,14 +13091,18 @@
         {
           "id": "old_map-060",
           "value": "c2b49848",
-          "x": 3320.0,
-          "y": -856.0,
+          "x": 3319.5,
+          "y": -750.93,
           "z": 1507.0,
           "layer": "depths",
           "kind": "chest",
           "label": "Trousers of Twilight (chest)",
           "note": "Treasure Chest - Ancient Underground Fortress - Trousers of Twilight - Armor_210_Lower - IsGet.Armor_210_Lower",
-          "objmapQuery": "Armor_210_Lower"
+          "objmapQuery": "0xce107f8a617da1b3",
+          "objmapId": "0xce107f8a617da1b3",
+          "requires": [
+            "c576b6bd"
+          ]
         },
         {
           "id": "old_map-061",
@@ -12999,14 +13119,18 @@
         {
           "id": "old_map-062",
           "value": "67d258db",
-          "x": 3240.0,
-          "y": -430.0,
-          "z": 3446.0,
+          "x": 3239.78,
+          "y": -324.65,
+          "z": 3446.48,
           "layer": "depths",
           "kind": "chest",
           "label": "Biggoron's Sword (chest)",
           "note": "Treasure Chest - Akkala House of Bones - Biggoron's Sword - Weapon_Lsword_059 - IsGet.Weapon_Lsword_059",
-          "objmapQuery": "Weapon_Lsword_059"
+          "objmapQuery": "0x1775463e7952a686",
+          "objmapId": "0x1775463e7952a686",
+          "requires": [
+            "de966d31"
+          ]
         }
       ],
       "sourceCounts": {

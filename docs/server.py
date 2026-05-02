@@ -245,6 +245,13 @@ def initialize_data():
             for item in definition["items"]
         }
         | {
+            int(value, 16)
+            for definition in [*categories, *(stat for stat in stats if not stat.get("arrayHash"))]
+            if definition["kind"] != "guid"
+            for item in definition["items"]
+            for value in item.get("requires", [])
+        }
+        | {
             int(stat["arrayHash"], 16)
             for stat in stats
             if stat.get("arrayHash")
@@ -489,7 +496,11 @@ def save_item_state(definition, item, values, guid_values=None):
     if definition["kind"] == "guid":
         return int(item["value"]) in (guid_values or set()), "guid", None
     raw = values.get(int(item["value"], 16), 0)
-    return is_raw_obtained(definition, raw), f"{raw:08x}", raw
+    obtained = is_raw_obtained(definition, raw) and all(
+        values.get(int(value, 16), 0) != 0
+        for value in item.get("requires", [])
+    )
+    return obtained, f"{raw:08x}", raw
 
 
 def split_progress_items(definition, markers):
