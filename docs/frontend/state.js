@@ -159,9 +159,10 @@ const groupInputs = {
   completion: document.querySelector("#groupCompletion"),
 };
 const completionIds = [
-  "koroks", "towers", "shrines", "lightroots", "caves", "bubbulfrogs", "hudson_sign",
-  "shrine_chests", "dungeon_bosses", "flux_construct", "hinox", "stone_talus", "molduga", "frox", "gleeok",
-  "wells", "chasms", "yiga_schematic", "old_map", "armor", "sage_will", "schema_stone",
+  "towers", "shrines", "shrine_chests", "lightroots", "caves", "bubbulfrogs", "wells",
+  "chasms", "koroks", "hudson_sign", "dungeon_bosses", "flux_construct", "hinox",
+  "stone_talus", "molduga", "frox", "gleeok", "yiga_schematic", "old_map", "armor",
+  "sage_will", "schema_stone",
   "general_locations",
 ];
 const completionInputs = Object.fromEntries(completionIds.map((id) => [id, $(`#completion-${id}`)]));

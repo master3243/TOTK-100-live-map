@@ -370,7 +370,12 @@ function renderMarkers(categories = completionCategories) {
     fragment.appendChild(targetLines);
   }
 
-  for (const marker of visibleMarkers) {
+  const stackPriority = (marker) => {
+    const index = completionIds.indexOf(marker.categoryId);
+    return index < 0 ? completionIds.length : index;
+  };
+  const stackedMarkers = [...visibleMarkers].sort((a, b) => stackPriority(b) - stackPriority(a));
+  for (const marker of stackedMarkers) {
     const element = document.createElement("span");
     const classes = ["completion-marker", `completion-${marker.categoryId}`];
     if (marker.kind) {
@@ -386,6 +391,7 @@ function renderMarkers(categories = completionCategories) {
     element.className = classes.join(" ");
     element.style.left = `${point.mapX}px`;
     element.style.top = `${point.mapY}px`;
+    element.style.zIndex = String(completionIds.length - stackPriority(marker));
     element.removeAttribute("title");
     attachTooltip(element, completionTooltip(marker));
     fragment.appendChild(element);
