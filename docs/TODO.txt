@@ -1,5 +1,4 @@
 add a Master 100% row.
-shrine chests missing
 3 travel medallions (not just 1)
 when save has above the 100% mark, should show warning symbol
 remove recipes extra logic (no longer possible without hashes file)
