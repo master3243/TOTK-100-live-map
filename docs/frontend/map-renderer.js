@@ -47,10 +47,6 @@ function parseTargetWorldFromNote(note) {
   return { x, y, z };
 }
 
-function markerHudWorld(marker) {
-  return parseTargetWorldFromNote(marker.note) || marker;
-}
-
 function buildDeltaHud(targetWorld) {
   if (!playerPosition) {
     return null;
@@ -94,7 +90,7 @@ function setNearestCoords(marker) {
     nearestCoords.textContent = "";
     return;
   }
-  const world = markerHudWorld(marker);
+  const world = marker;
   nearestCoords.hidden = false;
   nearestCoords.setAttribute("aria-hidden", "false");
   nearestCoords.replaceChildren();
