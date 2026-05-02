@@ -29,7 +29,6 @@ $repoFrontend = Join-Path $ProjectDir "frontend"
 $repoReferences = Join-Path $ProjectDir "references"
 $repoCompletion = Join-Path $ProjectDir "completion_data.json"
 $repoKorok = Join-Path $ProjectDir "korok_data.json"
-$repoServer = Join-Path $ProjectDir "server.py"
 $repoGui = Join-Path $ProjectDir "gui.py"
 $repoConfig = Join-Path $ProjectDir "config.json"
 $defaultIconPng = Join-Path $ProjectDir "assets\\zd-icons\\korok.png"
@@ -58,7 +57,7 @@ try {
   Pop-Location
 }
 
-foreach ($p in @($repoServer,$repoGui,$repoIndex,$repoStyles,$repoFrontend,$repoCompletion,$repoKorok)) {
+foreach ($p in @($repoGui,$repoIndex,$repoStyles,$repoFrontend,$repoCompletion,$repoKorok)) {
   if (-not (Test-Path $p)) { throw "Missing required path: $p" }
 }
 if (-not (Test-Path $repoReferences -PathType Container)) {

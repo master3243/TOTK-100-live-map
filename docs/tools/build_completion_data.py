@@ -1,10 +1,12 @@
+import sys
 import ast
 import csv
 import json
 import re
 from pathlib import Path
 
-from murmur3_32 import murmur3_32
+sys.path.append(str(Path(__file__).resolve().parents[1]))
+from utils import murmur3_32
 
 
 ROOT = Path(__file__).resolve().parents[1]

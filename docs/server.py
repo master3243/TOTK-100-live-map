@@ -15,7 +15,7 @@ from threading import Lock
 from urllib.parse import urlparse
 from urllib.parse import parse_qs
 
-from tools.murmur3_32 import murmur3_32
+from utils import murmur3_32
 
 
 def resource_root() -> Path:

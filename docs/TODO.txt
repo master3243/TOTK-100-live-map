@@ -1,4 +1,5 @@
 add a Master 100% row.
+some shrines have LAYER_FIX which adds 500?
 separation of layers is complicated and might need further work
 3 travel medallions (not just 1)
 when save has above the 100% mark, should show warning symbol
