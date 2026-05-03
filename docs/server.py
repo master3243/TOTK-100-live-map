@@ -105,6 +105,7 @@ PLAYER_MAX_LIFE_HASH = murmur3_32('PlayerStatus.MaxLife')
 PLAYER_MAX_STAMINA_HASH = murmur3_32('PlayerStatus.MaxStamina')
 PLAYER_MAX_ENERGY_HASH = murmur3_32('PlayerStatus.MaxEnergy')
 MAX_LIGHT_BLESSING = 53
+TRAVEL_MEDALLION = ('Obj_WarpDLC', murmur3_32("Step_GetWarpMarker"), 7)  # 7 is the last enum value, zelda-totk.hashes for Step_GetWarpMarker
 
 HYRULE_MIN_X = -6000
 HYRULE_MAX_X = 6000
@@ -598,9 +599,14 @@ def build_inventory_collection_stat(stat, values, data):
     array_hash = stat.get("arrayHash")
     pointer = values.get(int(array_hash, 16), None) if array_hash else None
     pouch_names = set(read_string64_array(data, pointer))
-
     def item_state(item):
-        return item.get("actorName") in pouch_names, {}
+        name = item.get("actorName")
+        if name == TRAVEL_MEDALLION[0]:
+            # Key pouch does not repeat Obj_WarpDLC per slot; slot count follows quest enum Step_GetWarpMarker
+            step = values.get(TRAVEL_MEDALLION[1], 0)
+            obtained = name in pouch_names and step >= TRAVEL_MEDALLION[2]
+            return obtained, {} if obtained else {"stepGetWarpMarker": step, "needStepAtLeast": TRAVEL_MEDALLION[1]}
+        return name in pouch_names, {}
 
     return build_stat_summary(stat, item_state, ("actorName",))
 
