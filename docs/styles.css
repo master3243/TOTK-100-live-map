@@ -1898,7 +1898,7 @@ body.save-drop-active {
 
 .stat-tooltip {
   position: fixed;
-  z-index: 30;
+  z-index: 90;
   max-width: min(340px, calc(100vw - 16px));
   max-height: min(420px, calc(100vh - 16px));
   overflow: auto;
