@@ -6,6 +6,8 @@ remove recipes extra logic (no longer possible without hashes file)
 missing should track:
     - 3 travel medallions (not just 1)
     - I need to detect the save file has a star
+    - yiga bases have single time chests that have 100 crystalized charges
+    - bargainer statues can sell 6 unique weapons
 wont add: (silly stuff):
     - waepons/items/etc. could still show ???. not currently tracked.
     - device dispensers could still show ???. not currently tracked.
@@ -13,3 +15,9 @@ wont add: (silly stuff):
     - special/maxed horses in stable (not really part of 100%)
     - pony points not counted
     - special controls are flagged as unlcoked.
+    - all inventory slots open not tracked?
+    - 15-room house for Link and purchase all rooms
+    - get all mini game high scores
+    - fully scale difficulty by gaining experience
+    - NPC names to appear and trigger every possible permanent change to NPC text/behavior
+    - All CHERRY BLOSSOM TREES? not sure if permenant

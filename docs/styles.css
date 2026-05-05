@@ -92,6 +92,12 @@ h1 {
   line-height: 1.1;
 }
 
+.brand h2 {
+  margin-top: 8px;
+  color: rgba(185, 193, 184, 0.68);
+  font-weight: 600;
+}
+
 h2 {
   margin-bottom: 12px;
   font-size: 14px;
@@ -458,6 +464,108 @@ h2 {
 .demo-button:hover {
   border-color: rgba(243, 239, 226, 0.28);
   background: rgba(18, 23, 21, 0.82);
+}
+
+.demo-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.demo-help-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgba(243, 239, 226, 0.18);
+  border-radius: 50%;
+  background: rgba(18, 23, 21, 0.7);
+  color: rgba(243, 239, 226, 0.92);
+  cursor: help;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.demo-help-button:hover,
+.demo-help-button:focus-visible {
+  border-color: rgba(215, 179, 90, 0.48);
+  background: rgba(215, 179, 90, 0.14);
+  outline: none;
+}
+
+.demo-help-popover {
+  max-width: min(340px, calc(100vw - 24px));
+  padding: 12px 14px;
+  border: 1px solid rgba(215, 179, 90, 0.32);
+  border-radius: 8px;
+  background: rgba(18, 23, 21, 0.96);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.38);
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.demo-help-popover::backdrop {
+  background: rgba(0, 0, 0, 0.48);
+}
+
+.demo-help-popover strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--accent);
+}
+
+.demo-help-actions {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(243, 239, 226, 0.1);
+}
+
+.demo-help-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border: 1px solid rgba(243, 239, 226, 0.18);
+  border-radius: 6px;
+  background: rgba(10, 12, 11, 0.42);
+  color: rgba(243, 239, 226, 0.92);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.demo-help-actions button:hover {
+  border-color: rgba(215, 179, 90, 0.48);
+  background: rgba(215, 179, 90, 0.14);
+}
+
+.demo-help-links {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.demo-help-links a {
+  width: fit-content;
+  color: #79b8ff;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.demo-help-links a:hover {
+  color: #a8d1ff;
+  text-decoration: underline;
 }
 
 /* Simple modal */

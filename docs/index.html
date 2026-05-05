@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TOTK Save Map Helper</title>
+    <title>100% Save Tracker</title>
     <link rel="stylesheet" href="styles.css">
     <script>
       // Optional: GitHub Pages / static mode can enable Python parsing in-browser via Pyodide.
@@ -21,12 +21,26 @@
         </button>
         <div class="brand">
           <p class="eyebrow">Tears of the Kingdom</p>
-          <h1>Save Map Helper</h1>
+          <h1>100% Save Tracker</h1>
           <h2>v1.7.5</h2>
           <div class="save-upload">
             <input id="manualSaveInput" type="file" accept=".sav,application/octet-stream">
             <label class="upload-button" for="manualSaveInput">Upload save</label>
-            <button id="demoSaveButton" class="demo-button" type="button">Demo</button>
+            <div class="demo-actions">
+              <button id="demoSaveButton" class="demo-button" type="button">Demo</button>
+              <button class="demo-help-button" type="button" popovertarget="demoHelp" aria-label="About this tracker" title="About this tracker">?</button>
+            </div>
+            <div id="demoHelp" class="demo-help-popover" popover>
+              <strong>100% Save Tracker</strong>
+              <p>Upload a Legend of Zelda: Tears of the Kingdom save file (or try a demo save) to see what's left for 100% including location and much more. This website tracks more than solely what the in-game map tracks</p>
+              <div class="demo-help-actions">
+                <div class="demo-help-links">
+                  <a href="https://github.com/master3243/TOTK-100-live-map" target="_blank" rel="noopener noreferrer">Source Code</a>
+                  <a href="https://github.com/master3243/TOTK-100-live-map/issues" target="_blank" rel="noopener noreferrer">Report a problem</a>
+                </div>
+                <button type="button" popovertarget="demoHelp" popovertargetaction="hide">Close</button>
+              </div>
+            </div>
             <div id="manualSaveStatus" class="save-upload-status" aria-live="polite">Live tracking active</div>
           </div>
         </div>
