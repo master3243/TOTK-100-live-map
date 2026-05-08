@@ -165,6 +165,7 @@ def parse_material_needs(raw: pd.DataFrame) -> pd.DataFrame:
         return pd.DataFrame(columns=columns)
     result = pd.DataFrame(records).groupby("Material", as_index=False).sum()
     result["Need"] = result["Total Need for all upgrades"] - result["Consumed (for upgrades)"]
+    result.loc[result["Need"] > 0, "Need"] += 1
     result.insert(0, "Type", result["Material"].map(classify_material_type))
     result["_type_sort"] = result["Type"].map(TYPE_SORT).fillna(len(TYPE_ORDER))
     result = result.sort_values(["_type_sort", "Material"]).drop(columns="_type_sort").reset_index(drop=True)
