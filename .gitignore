@@ -1,7 +1,9 @@
 __pycache__/
 env/
+**/.env
 
 .pyinstaller-build/
 docs/*.spec
 *.exe
 *.log
+docs/sandbox/google_sheet_armor_calc/sheet.xlsx
