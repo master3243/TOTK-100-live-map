@@ -24,9 +24,9 @@ if (Test-Path $outExe) {
 }
 
 $repoIndex = Join-Path $ProjectDir "index.html"
+$repoArmorMaterials = Join-Path $ProjectDir "armor-upgrade-materials.html"
 $repoStyles = Join-Path $ProjectDir "styles.css"
 $repoFrontend = Join-Path $ProjectDir "frontend"
-$repoReferences = Join-Path $ProjectDir "references"
 $repoCompletion = Join-Path $ProjectDir "completion_data.json"
 $repoGui = Join-Path $ProjectDir "gui.py"
 $repoConfig = Join-Path $ProjectDir "config.json"
@@ -48,11 +48,8 @@ try {
   Pop-Location
 }
 
-foreach ($p in @($repoGui,$repoIndex,$repoStyles,$repoFrontend,$repoCompletion)) {
+foreach ($p in @($repoGui,$repoIndex,$repoArmorMaterials,$repoStyles,$repoFrontend,$repoCompletion)) {
   if (-not (Test-Path $p)) { throw "Missing required path: $p" }
-}
-if (-not (Test-Path $repoReferences -PathType Container)) {
-  throw "Missing required directory: $repoReferences"
 }
 
 if (-not $Icon -and (Test-Path $defaultIconPng)) {
@@ -86,9 +83,9 @@ $args = @(
   "--workpath", (Join-Path $ProjectDir ".pyinstaller-build"),
   "--specpath", $ProjectDir,
   "--add-data", "$repoIndex;.",
+  "--add-data", "$repoArmorMaterials;.",
   "--add-data", "$repoStyles;.",
   "--add-data", "$repoFrontend;frontend",
-  "--add-data", "$repoReferences;references",
   "--add-data", "$repoCompletion;.",
   $repoGui
 )
