@@ -115,8 +115,10 @@ async function uploadManualSave(file, options = {}) {
   const sourceLabel = options.sourceLabel || "Manual upload";
   setSaveLoading(true, "Loading");
   try {
+    const saveBuffer = await file.arrayBuffer();
+    await rememberUploadedSave(file, saveBuffer);
     if (window.TOTK_USE_PYODIDE) {
-      const payload = await uploadManualSaveViaPyodide(file);
+      const payload = await uploadManualSaveViaPyodide(file, saveBuffer);
       applySavePayload(payload);
       setSaveLoading(false, `Loaded ${loadedLabel}`);
       saveStatus.textContent = sourceLabel;
@@ -128,7 +130,7 @@ async function uploadManualSave(file, options = {}) {
         "Content-Type": "application/octet-stream",
         "X-Filename": file.name || "progress.sav",
       },
-      body: await file.arrayBuffer(),
+      body: saveBuffer,
     });
     const payload = await response.json();
     if (!response.ok) {
@@ -141,7 +143,7 @@ async function uploadManualSave(file, options = {}) {
     // Helpful fallback for static hosting: if the backend is missing, try Pyodide once.
     if (!window.TOTK_USE_PYODIDE) {
       try {
-        const payload = await uploadManualSaveViaPyodide(file);
+        const payload = await uploadManualSaveViaPyodide(file, saveBuffer);
         applySavePayload(payload);
         setSaveLoading(false, `Loaded ${loadedLabel}`);
         saveStatus.textContent = sourceLabel;

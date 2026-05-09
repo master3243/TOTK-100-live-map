@@ -34,6 +34,10 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+body.materials-body {
+  overflow: auto;
+}
+
 .no-save-loaded .live-save-panel,
 .no-save-loaded .overlay-panel {
   display: none;
@@ -1045,6 +1049,16 @@ body.save-drop-active {
   text-underline-offset: 3px;
 }
 
+.stats dd.hover-stat.stat-link {
+  cursor: pointer;
+  text-decoration-style: solid;
+}
+
+.stats dd.hover-stat.stat-danger {
+  color: #ff8a8a;
+  font-weight: 800;
+}
+
 .stats dd.hover-stat.tooltip-pinned-owner {
   color: var(--accent);
   text-decoration-style: solid;
@@ -1099,6 +1113,37 @@ body.save-drop-active {
   color: rgba(209, 236, 209, 0.82);
 }
 
+.live-save-panel .live-save-row-action {
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.live-save-panel .live-save-row-action dd::after {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-left: 6px;
+  background: currentColor;
+  color: var(--accent-2);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+  transform: translateY(2px);
+}
+
+.live-save-panel .live-save-row-danger {
+  margin-inline: -8px;
+  padding: 7px 8px;
+  border: 1px solid rgba(255, 138, 138, 0.42);
+  background: rgba(255, 93, 93, 0.15);
+  box-shadow: inset 3px 0 0 rgba(255, 138, 138, 0.9);
+}
+
+.live-save-panel .live-save-row-danger dt,
+.live-save-panel .live-save-row-danger dd {
+  color: #ffb1a8;
+}
+
 .live-save-completed-toggle {
   display: inline-flex;
   align-items: center;
@@ -1111,6 +1156,209 @@ body.save-drop-active {
   cursor: pointer;
   font-size: 12px;
   font-weight: 700;
+}
+
+.materials-page {
+  min-height: 100vh;
+  padding: 28px;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.materials-show-all-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.materials-show-all-toggle input {
+  accent-color: var(--accent-2);
+}
+
+.materials-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 20px;
+}
+
+.materials-header > div {
+  min-width: 0;
+}
+
+.materials-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 0;
+}
+
+.materials-header p {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+#materialsStatus {
+  max-width: 100%;
+  color: rgba(185, 193, 184, 0.58);
+  font-size: 0.78rem;
+  overflow-wrap: anywhere;
+}
+
+.materials-back-link {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  padding: 0 11px 0 8px;
+  border: 1px solid rgba(215, 179, 90, 0.32);
+  border-radius: 8px;
+  background: rgba(215, 179, 90, 0.12);
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.materials-back-link:hover {
+  border-color: rgba(215, 179, 90, 0.5);
+  background: rgba(215, 179, 90, 0.18);
+}
+
+.materials-back-icon {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.materials-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 1100px;
+  margin: 0 auto 18px;
+}
+
+.materials-summary div {
+  border: 1px solid var(--panel-border);
+  background: var(--panel);
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.materials-summary span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.materials-summary strong {
+  display: block;
+  margin-top: 6px;
+  color: var(--accent-2);
+  font-size: 1.5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.materials-table-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+.materials-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.materials-table th,
+.materials-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--panel-border);
+  text-align: left;
+}
+
+.materials-table th {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.materials-table th:first-child,
+.materials-table th:nth-child(n + 3) {
+  text-align: center;
+}
+
+.materials-table .numeric {
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.material-type-cell {
+  width: 128px;
+  text-align: center !important;
+}
+
+.material-type-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 88px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  color: #17201d;
+  font-weight: 700;
+}
+
+.material-type-enemy,
+.material-type-boss {
+  background: #ffc3a6;
+}
+
+.material-type-animal,
+.material-type-fish,
+.material-type-plant {
+  background: #d9f3c4;
+}
+
+.material-type-gem,
+.material-type-dragon,
+.material-type-other {
+  background: #c7e8f7;
+}
+
+.materials-table .material-short-row td:last-child {
+  color: #ff8a8a;
+  font-weight: 700;
+}
+
+.materials-table .material-done-row {
+  background: rgba(112, 205, 143, 0.11);
+}
+
+.materials-table .material-done-row td:last-child {
+  color: #9ce0a9;
+  font-weight: 700;
+}
+
+.materials-empty-cell {
+  color: var(--muted);
+  text-align: center !important;
 }
 
 .live-save-completed-toggle::before {

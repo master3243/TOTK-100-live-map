@@ -184,6 +184,8 @@ function updateLiveSaveRows() {
     const complete = isLiveSaveRowComplete(row, ddText);
     row.classList.toggle("live-save-row-complete", complete);
     row.classList.toggle("live-save-row-collapsed", complete && !liveSaveCompletedExpanded);
+    row.classList.toggle("live-save-row-action", row.dataset.liveRow === "armor-upgraded");
+    row.classList.toggle("live-save-row-danger", row.dataset.liveRow === "armor-upgraded" && !complete);
     if (complete) {
       completedRows.push(row);
     } else {

@@ -769,6 +769,16 @@ def current_armor_upgrade_materials():
         return payload
 
 
+def parse_uploaded_armor_upgrade_materials(data, filename):
+    with SERVER_LOCK:
+        initialize()
+        label = filename or "uploaded progress.sav"
+        save_modified = time.time()
+        payload = build_armor_upgrade_material_payload(data, f"manual upload: {label}", save_modified)
+        add_log(f"Calculated armor upgrade materials from manual upload {label}")
+        return payload
+
+
 def build_completion_stats(values, data):
     completion_data = _DATA["completion_data"] or {"stats": []}
     stats = []
@@ -944,6 +954,10 @@ class Handler(SimpleHTTPRequestHandler):
         filename = self.headers.get("X-Filename", "uploaded progress.sav")
         return parse_uploaded_save(self.read_request_body(), filename)
 
+    def handle_upload_armor_upgrade_materials(self):
+        filename = self.headers.get("X-Filename", "uploaded progress.sav")
+        return parse_uploaded_armor_upgrade_materials(self.read_request_body(), filename)
+
     def do_GET(self):
         parsed = urlparse(self.path)
         try:
@@ -974,11 +988,14 @@ class Handler(SimpleHTTPRequestHandler):
 
     def do_POST(self):
         parsed = urlparse(self.path)
-        if parsed.path != "/api/upload_save":
+        if parsed.path not in ("/api/upload_save", "/api/upload_armor_upgrade_materials"):
             self.send_json(404, {"error": "Not found"})
             return
         try:
-            self.send_json(200, self.handle_upload_save())
+            if parsed.path == "/api/upload_armor_upgrade_materials":
+                self.send_json(200, self.handle_upload_armor_upgrade_materials())
+            else:
+                self.send_json(200, self.handle_upload_save())
         except Exception as error:
             add_log(f"Upload error: {error}")
             logging.exception("Error handling %s", parsed.path)

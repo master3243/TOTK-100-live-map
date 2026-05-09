@@ -71,6 +71,11 @@ function updateCompletionStatSummary(config) {
   config.element.textContent = stat ? `${stat.obtained} / ${stat.total}` : "-- / --";
   config.element.removeAttribute("title");
   config.element.setAttribute("aria-label", completionStatAriaText(stat, config));
+  if (config.id === "armor_upgraded") {
+    const incomplete = Boolean(stat && stat.remaining > 0);
+    config.element.classList.toggle("stat-danger", incomplete);
+    config.element.classList.toggle("stat-link", Boolean(stat));
+  }
 }
 
 function updatePlayerStatSummary(config) {

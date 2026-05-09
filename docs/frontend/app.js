@@ -225,6 +225,13 @@ Object.entries(completionObtainedToggles).forEach(([id, button]) => {
   });
 });
 
+if (armorUpgradedSummary) {
+  armorUpgradedSummary.closest("[data-live-row]")?.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.location.href = "armor-upgrade-materials.html";
+  });
+}
+
 if (completionEyesToggle) {
   completionEyesToggle.addEventListener("click", (event) => {
     event.preventDefault();
