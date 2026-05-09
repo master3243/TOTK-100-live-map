@@ -3,6 +3,7 @@ const armorFourStarSummary = document.querySelector("#armorFourStarSummary");
 const shortMaterialSummary = document.querySelector("#shortMaterialSummary");
 const materialsTableBody = document.querySelector("#materialsTableBody");
 const showAllMaterials = document.querySelector("#showAllMaterials");
+const materialsBackLink = document.querySelector(".materials-back-link");
 let currentPayload = null;
 const MATERIAL_TYPE_ORDER = ["Enemy", "Boss", "Animal", "Fish", "Plant", "Gem", "Dragon", "Other"];
 function materialTypeSort(type) {
@@ -93,6 +94,10 @@ showAllMaterials?.addEventListener("change", () => {
     renderMaterials(currentPayload);
   }
 });
+
+if (materialsBackLink) {
+  materialsBackLink.href = pyodideAwarePageUrl("index.html");
+}
 
 async function postStoredSaveToBackend(file) {
   const response = await fetch("/api/upload_armor_upgrade_materials", {

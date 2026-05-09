@@ -228,7 +228,7 @@ Object.entries(completionObtainedToggles).forEach(([id, button]) => {
 if (armorUpgradedSummary) {
   armorUpgradedSummary.closest("[data-live-row]")?.addEventListener("click", (event) => {
     event.preventDefault();
-    window.location.href = "armor-upgrade-materials.html";
+    window.location.href = pyodideAwarePageUrl("armor-upgrade-materials.html");
   });
 }
 
@@ -303,6 +303,13 @@ if (window.TOTK_USE_PYODIDE) {
   saveStatus.textContent = "Manual upload";
   if (!hasLoadedAnySave) {
     document.body.classList.add("awaiting-manual-save");
+  }
+  const storedFile = storedUploadedSaveFile();
+  if (storedFile) {
+    uploadManualSave(storedFile, {
+      loadedLabel: storedFile.name,
+      sourceLabel: "Stored upload",
+    });
   }
   if (logPanel) {
     logPanel.hidden = true;

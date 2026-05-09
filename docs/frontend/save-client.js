@@ -1,6 +1,14 @@
 let _pyodidePromise = null;
 const UPLOADED_SAVE_STORAGE_KEY = "totkUploadedSave";
 
+function pyodideAwarePageUrl(path) {
+  const url = new URL(path, window.location.href);
+  if (window.TOTK_USE_PYODIDE) {
+    url.searchParams.set("pyodide", "1");
+  }
+  return url.toString();
+}
+
 function pyodideAssetUrl(path) {
   const base = new URL(".", window.location.href);
   return new URL(path, base).toString();
