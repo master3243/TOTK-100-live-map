@@ -19,6 +19,7 @@ GENERAL_LOCATIONS_CSV = REFERENCES / "TOTK master sheet - Map.csv"
 FOOD_CSV = REFERENCES / "TOTK master sheet - Food.csv"
 KEY_ITEM_CSV = REFERENCES / "TOTK master sheet - KeyItems.csv"
 MATERIALS_CSV = REFERENCES / "TOTK master sheet - Materials.csv"
+ARMOR_UPGRADE_MATERIALS_CSV = REFERENCES / "armor_mats.csv"
 QUESTS_CSV = REFERENCES / "TOTK master sheet - Quests.csv"
 CHARACTER_PROFILES_CSV = REFERENCES / "TOTK master sheet - Chara. Profiles.csv"
 MEMORIES_CSV = REFERENCES / "TOTK master sheet - Memories.csv"
@@ -73,6 +74,25 @@ QUEST_TYPES = [
     ("quests_shrine", "Shrine Quests", "Shrine Quest"),
 ]
 QUEST_SKIP = ( "Destroy Ganondorf", "Find Princess Zelda" )  # These two don't complete as the game loads after completing them
+MATERIAL_TYPE_KEYWORDS = {
+    "Dragon": ["Dinraal", "Farosh", "Naydra", "Light Dragon"],
+    "Boss": ["Boss Bokoblin", "Hinox", "Lynel", "Molduga", "Frox", "Gleeok", "Dark Clump"],
+    "Enemy": [
+        "Bokoblin", "Moblin", "Lizalfos", "Horriblin", "Construct", "Keese",
+        "Chuchu", "Gibdo", "Like", "Octorok", "Aerocuda", "Octo Balloon",
+    ],
+    "Fish": ["Trout", "Bass", "Cave Fish", "Stealthfin"],
+    "Animal": ["Beetle", "Darner", "Lizard", "Frog", "Butterfly", "Firefly", "Crab", "Snail"],
+    "Plant": [
+        "Acorn", "Seed", "Brightbloom", "Brightcap", "Shroom", "Mushroom", "Honey",
+        "Fruit", "Bananas", "Thistle", "Nightshade", "Safflina", "Silent Princess",
+        "Sundelion", "Swift Carrot", "Swift Violet", "Dazzlefruit", "Puffshroom",
+        "Razorshroom", "Rushroom", "Sunshroom", "Zapshroom", "Chillshroom", "Voltfruit",
+    ],
+    "Gem": ["Amber", "Diamond", "Flint", "Luminous Stone", "Opal", "Ruby", "Sapphire", "Topaz", "Zonaite", "Zonai Charge"],
+    "Other": ["Star Fragment"],
+}
+MATERIAL_TYPE_ORDER = ["Enemy", "Boss", "Animal", "Fish", "Plant", "Gem", "Dragon", "Other"]
 
 TOWERS = [
     "Lookout Landing",
@@ -479,6 +499,116 @@ def parse_master_inventory_items(path, prefix, array_name, skip_names=None):
     }
 
 
+def is_armor_material_star_cell(value):
+    return value is not None and ("★" in str(value) or "☆" in str(value))
+
+
+def parse_quantity(value):
+    if value is None:
+        return None
+    if isinstance(value, (int, float)):
+        return int(value)
+    text = str(value).strip()
+    if not text:
+        return None
+    try:
+        return int(float(text))
+    except ValueError:
+        return None
+
+
+def classify_material_type(material):
+    material = str(material).strip()
+    for material_type, keywords in MATERIAL_TYPE_KEYWORDS.items():
+        if any(keyword in material for keyword in keywords):
+            return material_type
+    return "Other"
+
+
+def parse_armor_upgrade_material_rows(path):
+    star_cols = [5, 7, 9, 11]
+    name_cols = [6, 8, 10, 12]
+    levels = [1, 2, 3, 4]
+
+    def is_header_row(row):
+        return any(is_armor_material_star_cell(row[index]) for index in star_cols)
+
+    armor = []
+    current = None
+    with path.open(encoding="utf-8-sig", newline="") as handle:
+        rows = csv.reader(handle)
+        for row in rows:
+            row = list(row)
+            while len(row) <= max(name_cols):
+                row.append("")
+
+            if is_header_row(row):
+                label = str(row[1] or "").strip()
+                current = {"label": label, "levels": {str(level): [] for level in levels}}
+                if label:
+                    armor.append(current)
+                continue
+            if not current:
+                continue
+
+            for level, qty_col, name_col in zip(levels, star_cols, name_cols):
+                qty = parse_quantity(row[qty_col])
+                material = row[name_col]
+                material = str(material).strip() if material is not None else ""
+                if qty is None or not material:
+                    continue
+                current["levels"][str(level)].append({"material": material, "quantity": qty})
+
+    return [
+        item for item in armor
+        if any(costs for costs in item["levels"].values())
+    ]
+
+
+def parse_armor_upgrade_materials(path, material_items, material_stock_array_hash, armor_inventory_items):
+    actor_by_label = {
+        item["label"]: item["actorName"]
+        for item in material_items
+        if item.get("label") and item.get("actorName")
+    }
+    inventory_labels = {item["label"] for item in armor_inventory_items}
+    armor = parse_armor_upgrade_material_rows(path)
+    missing_armor_labels = [item["label"] for item in armor if item["label"] not in inventory_labels]
+    if missing_armor_labels:
+        raise ValueError(f"Could not map armor upgrade labels: {', '.join(sorted(missing_armor_labels))}")
+
+    totals = {}
+    for armor_item in armor:
+        for costs in armor_item["levels"].values():
+            for cost in costs:
+                totals[cost["material"]] = totals.get(cost["material"], 0) + cost["quantity"]
+
+    items = []
+    missing = []
+    material_type_sort = {material_type: index for index, material_type in enumerate(MATERIAL_TYPE_ORDER)}
+    for material, total in sorted(
+        totals.items(),
+        key=lambda item: (material_type_sort.get(classify_material_type(item[0]), len(MATERIAL_TYPE_ORDER)), item[0]),
+    ):
+        actor_name = actor_by_label.get(material)
+        if not actor_name:
+            missing.append(material)
+        items.append({
+            "type": classify_material_type(material),
+            "material": material,
+            "actorName": actor_name,
+            "totalRequired": total,
+        })
+    if missing:
+        raise ValueError(f"Could not map armor upgrade materials: {', '.join(missing)}")
+    return {
+        "materialStockArrayHash": material_stock_array_hash,
+        "armor": armor,
+        "items": items,
+        "sourceCounts": {"armor": len(armor), "materials": len(items), "arrayHash": 1},
+    }
+
+
 def parse_master_quest_items(path, quest_type):
     items = []
     for row in read_master_rows(path):
@@ -588,6 +718,10 @@ def parse_armor_inventory_items(locale_text):
             "label": base_label,
             "baseId": base_rows[0]["id"],
             "ids": sorted({row["id"] for row in groups[base_label]}),
+            "levels": sorted(
+                [{"id": row["id"], "stars": row["stars"]} for row in groups[base_label]],
+                key=lambda row: (row["stars"], row["id"]),
+            ),
         })
     return items
 
@@ -932,6 +1066,14 @@ def main():
         }
         if stat.get("note"):
             stat_entry["note"] = stat["note"]
+        if stat.get("source") == "armor_upgraded":
+            stat_entry["upgradeMaterials"] = parse_armor_upgrade_materials(
+                ARMOR_UPGRADE_MATERIALS_CSV,
+                parse_master_inventory_items(MATERIALS_CSV, "materials", "Pouch.Material.Content.Name")["items"],
+                hash_by_flag["Pouch.Material.Content.StockNum"],
+                parse_armor_inventory_items(locale),
+            )
+            stat_entry["sourceCounts"]["upgradeMaterials"] = len(stat_entry["upgradeMaterials"]["items"])
         if stat["kind"].startswith("armor_"):
             stat_entry["arrayHash"] = hash_by_flag["Pouch.Armor.Content.Name"]
             stat_entry["sourceCounts"]["arrayHash"] = 1

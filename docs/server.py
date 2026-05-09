@@ -233,6 +233,9 @@ def initialize_data():
     completion_data = load_json(COMPLETION_DATA_PATH)
     categories = completion_data["categories"]
     stats = completion_data.get("stats", [])
+    armor_upgraded_stat = next((stat for stat in stats if stat.get("id") == "armor_upgraded"), {})
+    armor_upgrade_materials = armor_upgraded_stat.get("upgradeMaterials") or {}
+    material_stock_array_hash = armor_upgrade_materials.get("materialStockArrayHash")
 
     _DATA["completion_data"] = completion_data
     _DATA["tracked_hashes"] = (
@@ -254,6 +257,7 @@ def initialize_data():
             for stat in stats
             if stat.get("arrayHash")
         }
+        | ({int(material_stock_array_hash, 16)} if material_stock_array_hash else set())
     )
 
 
@@ -453,6 +457,18 @@ def read_string64_array(data, pointer):
     return values
 
 
+def read_int_array(data, pointer):
+    if pointer is None or pointer < 0 or pointer + 4 > len(data):
+        return []
+
+    count = read_u32(data, pointer)
+    start = pointer + 4
+    if count <= 0 or start + count * 4 > len(data):
+        return []
+
+    return [read_u32(data, start + index * 4) for index in range(count)]
+
+
 def progress_summary(definition, total, obtained_count):
     return {
         "id": definition["id"],
@@ -609,6 +625,148 @@ def build_inventory_collection_stat(stat, values, data):
         return name in pouch_names, {}
 
     return build_stat_summary(stat, item_state, ("actorName",))
+
+
+def completion_stat_definition(stat_id):
+    completion_data = _DATA["completion_data"] or {"stats": []}
+    return next((stat for stat in completion_data.get("stats", []) if stat.get("id") == stat_id), None)
+
+
+def armor_pouch_names(values, data):
+    stat = completion_stat_definition("armor_inventory")
+    array_hash = stat.get("arrayHash") if stat else None
+    pointer = values.get(int(array_hash, 16), None) if array_hash else None
+    return set(read_string64_array(data, pointer))
+
+
+def material_pouch(values, data):
+    materials_stat = completion_stat_definition("materials")
+    armor_upgraded = completion_stat_definition("armor_upgraded") or {}
+    upgrade_materials = armor_upgraded.get("upgradeMaterials") or {}
+    name_hash = materials_stat.get("arrayHash") if materials_stat else None
+    stock_hash = upgrade_materials.get("materialStockArrayHash")
+    name_pointer = values.get(int(name_hash, 16), None) if name_hash else None
+    stock_pointer = values.get(int(stock_hash, 16), None) if stock_hash else None
+    names = read_string64_array(data, name_pointer)
+    stock = read_int_array(data, stock_pointer)
+    return {
+        name: stock[index] if index < len(stock) else 0
+        for index, name in enumerate(names)
+        if name
+    }
+
+
+def armor_current_levels(armor_inventory, pouch_armor):
+    levels = {}
+    for item in armor_inventory.get("items", []):
+        current = 0
+        for level in item.get("levels", []):
+            if level.get("id") in pouch_armor:
+                current = max(current, int(level.get("stars", 0)))
+        levels[item.get("label") or item.get("id")] = current
+    return levels
+
+
+def remaining_armor_material_totals(upgrade_materials, current_levels):
+    totals = {}
+    armor_rows = []
+    for armor_item in upgrade_materials.get("armor", []):
+        label = armor_item.get("label")
+        current_stars = current_levels.get(label, 0)
+        needed_levels = []
+        for level_text, costs in armor_item.get("levels", {}).items():
+            level = int(level_text)
+            if level <= current_stars:
+                continue
+            needed_levels.append(level)
+            for cost in costs:
+                material = cost.get("material")
+                if not material:
+                    continue
+                totals[material] = totals.get(material, 0) + int(cost.get("quantity") or 0)
+        armor_rows.append({
+            "label": label,
+            "currentStars": current_stars,
+            "neededLevels": sorted(needed_levels),
+        })
+    return totals, armor_rows
+
+
+def build_armor_upgrade_material_payload(data, save_path, save_modified):
+    values = parse_save_values(data)
+    pouch_armor = armor_pouch_names(values, data)
+    pouch_materials = material_pouch(values, data)
+    armor_inventory = completion_stat_definition("armor_inventory") or {"items": []}
+    armor_upgraded = completion_stat_definition("armor_upgraded") or {"items": []}
+    upgrade_materials = armor_upgraded.get("upgradeMaterials") or {"items": []}
+    current_levels = armor_current_levels(armor_inventory, pouch_armor)
+    remaining_totals, armor_upgrade_rows = remaining_armor_material_totals(upgrade_materials, current_levels)
+
+    owned_armor = []
+    missing_armor = []
+    for item in armor_inventory.get("items", []):
+        ids = item.get("ids", [])
+        entry = {
+            "id": item.get("id"),
+            "label": item.get("label") or item.get("id"),
+            "baseId": item.get("baseId"),
+            "currentStars": current_levels.get(item.get("label") or item.get("id"), 0),
+            "currentIds": [armor_id for armor_id in ids if armor_id in pouch_armor],
+        }
+        (owned_armor if entry["currentIds"] else missing_armor).append(entry)
+
+    four_star_armor = []
+    not_four_star_armor = []
+    for item in armor_upgraded.get("items", []):
+        ids = item.get("upgradedIds") or [item.get("upgradedId")]
+        entry = {
+            "id": item.get("id"),
+            "label": item.get("label") or item.get("id"),
+            "baseId": item.get("baseId"),
+            "upgradedIds": [armor_id for armor_id in ids if armor_id],
+            "currentIds": [armor_id for armor_id in ids if armor_id in pouch_armor],
+        }
+        (four_star_armor if entry["currentIds"] else not_four_star_armor).append(entry)
+
+    material_rows = []
+    for requirement in upgrade_materials.get("items", []):
+        actor_name = requirement.get("actorName")
+        owned = pouch_materials.get(actor_name, 0) if actor_name else 0
+        needed = remaining_totals.get(requirement.get("material"), 0)
+        material_rows.append({
+            **requirement,
+            "owned": owned,
+            "neededForRemainingUpgrades": needed,
+            "remainingAfterInventory": max(needed - owned, 0),
+        })
+
+    return {
+        "savePath": str(save_path),
+        "lastModified": save_modified,
+        "armor": {
+            "owned": len(owned_armor),
+            "total": len(armor_inventory.get("items", [])),
+            "fourStar": len(four_star_armor),
+            "fourStarTotal": len(armor_upgraded.get("items", [])),
+            "ownedItems": owned_armor,
+            "missingItems": missing_armor,
+            "fourStarItems": four_star_armor,
+            "notFourStarItems": not_four_star_armor,
+            "upgradeItems": armor_upgrade_rows,
+        },
+        "materials": material_rows,
+    }
+
+
+def current_armor_upgrade_materials():
+    with SERVER_LOCK:
+        initialize()
+        snapshot = snapshot_tracked_saves()
+        active_save = select_active_save(snapshot)
+        data = read_save_bytes(active_save["path"])
+        payload = build_armor_upgrade_material_payload(data, active_save["path"], active_save["mtime"])
+        add_log(f"Calculated armor upgrade materials from {save_label(active_save['path'])}")
+        return payload
 
 
 def build_completion_stats(values, data):
@@ -794,6 +952,9 @@ class Handler(SimpleHTTPRequestHandler):
                 return
             if parsed.path == "/api/progress":
                 self.send_json(200, parse_current_save())
+                return
+            if parsed.path == "/api/armor_upgrade_materials":
+                self.send_json(200, current_armor_upgrade_materials())
                 return
             if parsed.path == "/api/log":
                 self.send_json(200, {"entries": LOG_ENTRIES[-LOG_LIMIT:]})
