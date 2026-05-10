@@ -324,12 +324,12 @@ async function loadMaterials() {
   }
 }
 
-function pageIsActive() {
-  return document.visibilityState === "visible" && document.hasFocus();
+function isTabVisible() {
+  return document.visibilityState === "visible";
 }
 
 async function refreshArmorHealth() {
-  if (!pageIsActive()) {
+  if (!isTabVisible()) {
     return;
   }
   try {
@@ -356,14 +356,8 @@ if (window.TOTK_USE_PYODIDE) {
   armorHealthTimer = setInterval(refreshArmorHealth, 1000);
 }
 
-window.addEventListener("focus", () => {
-  if (!window.TOTK_USE_PYODIDE) {
-    refreshArmorHealth();
-  }
-});
-
 document.addEventListener("visibilitychange", () => {
-  if (!window.TOTK_USE_PYODIDE && document.visibilityState === "visible") {
+  if (!window.TOTK_USE_PYODIDE && isTabVisible()) {
     refreshArmorHealth();
   }
 });
