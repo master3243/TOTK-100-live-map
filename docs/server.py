@@ -667,15 +667,23 @@ def armor_current_levels(armor_inventory, pouch_armor):
     return levels
 
 
-def remaining_armor_material_totals(upgrade_materials, current_levels):
+def remaining_armor_material_totals(upgrade_materials, current_levels, owned_labels):
     totals = {}
     armor_rows = []
     for armor_item in upgrade_materials.get("armor", []):
         label = armor_item.get("label")
         current_stars = current_levels.get(label, 0)
         needed_levels = []
+        all_material_needs = []
+        material_needs = []
         for level_text, costs in armor_item.get("levels", {}).items():
             level = int(level_text)
+            for cost in costs:
+                material = cost.get("material")
+                if not material:
+                    continue
+                quantity = int(cost.get("quantity") or 0)
+                all_material_needs.append({"material": material, "quantity": quantity, "level": level})
             if level <= current_stars:
                 continue
             needed_levels.append(level)
@@ -683,11 +691,16 @@ def remaining_armor_material_totals(upgrade_materials, current_levels):
                 material = cost.get("material")
                 if not material:
                     continue
-                totals[material] = totals.get(material, 0) + int(cost.get("quantity") or 0)
+                quantity = int(cost.get("quantity") or 0)
+                totals[material] = totals.get(material, 0) + quantity
+                material_needs.append({"material": material, "quantity": quantity, "level": level})
         armor_rows.append({
             "label": label,
             "currentStars": current_stars,
+            "obtained": label in owned_labels,
             "neededLevels": sorted(needed_levels),
+            "remainingMaterialNeeds": sorted(material_needs, key=lambda item: (item["material"], item["level"])),
+            "materialNeeds": sorted(all_material_needs, key=lambda item: (item["material"], item["level"])),
         })
     return totals, armor_rows
 
@@ -700,7 +713,12 @@ def build_armor_upgrade_material_payload(data, save_path, save_modified):
     armor_upgraded = completion_stat_definition("armor_upgraded") or {"items": []}
     upgrade_materials = armor_upgraded.get("upgradeMaterials") or {"items": []}
     current_levels = armor_current_levels(armor_inventory, pouch_armor)
-    remaining_totals, armor_upgrade_rows = remaining_armor_material_totals(upgrade_materials, current_levels)
+    owned_labels = {
+        item.get("label") or item.get("id")
+        for item in armor_inventory.get("items", [])
+        if any(armor_id in pouch_armor for armor_id in item.get("ids", []))
+    }
+    remaining_totals, armor_upgrade_rows = remaining_armor_material_totals(upgrade_materials, current_levels, owned_labels)
 
     owned_armor = []
     missing_armor = []

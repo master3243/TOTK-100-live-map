@@ -12,6 +12,7 @@ let currentPayload = null;
 let armorHealthTimer = null;
 let lastArmorHealthKey = null;
 let armorMaterialsLoading = false;
+let expandedMaterial = null;
 const MATERIAL_TYPE_ORDER = ["Enemy", "Boss", "Animal", "Fish", "Plant", "Gem", "Dragon", "Other"];
 const ARMOR_UPGRADE_RUPEE_COSTS = { 1: 10, 2: 50, 3: 200, 4: 500 };
 function materialTypeSort(type) {
@@ -64,6 +65,82 @@ function currentNeedCell(value) {
   return cell;
 }
 
+function armorNeedsForMaterial(payload, material) {
+  return (payload.armor?.upgradeItems || [])
+    .flatMap((item) => (item.materialNeeds || [])
+      .filter((entry) => entry.material === material)
+      .map((need) => ({
+        armor: item.label || "",
+        quantity: need.quantity || 0,
+        level: need.level || 0,
+        currentStars: item.currentStars || 0,
+        obtained: (item.currentStars || 0) >= (need.level || 0),
+      })))
+    .sort((a, b) =>
+      a.armor.localeCompare(b.armor)
+      || (a.level || 0) - (b.level || 0),
+    );
+}
+
+function starText(level) {
+  return "★".repeat(Math.max(0, Number(level) || 0));
+}
+
+function detailCell(text, className = "") {
+  const cell = document.createElement("td");
+  cell.textContent = text;
+  if (className) {
+    cell.className = className;
+  }
+  return cell;
+}
+
+function materialDetailRow(item) {
+  const row = document.createElement("tr");
+  row.className = "material-detail-row";
+  const cell = document.createElement("td");
+  cell.colSpan = 6;
+
+  const table = document.createElement("table");
+  table.className = "material-detail-table";
+  const thead = document.createElement("thead");
+  const headRow = document.createElement("tr");
+  ["Level", "Armor", "Amount", "Current", "Status"].forEach((label) => {
+    const th = document.createElement("th");
+    th.textContent = label;
+    headRow.append(th);
+  });
+  thead.append(headRow);
+
+  const tbody = document.createElement("tbody");
+  const needs = armorNeedsForMaterial(currentPayload, item.material);
+  if (!needs.length) {
+    const emptyRow = document.createElement("tr");
+    const emptyCell = detailCell("No armor upgrades use this material.", "material-detail-empty");
+    emptyCell.colSpan = 5;
+    emptyRow.append(emptyCell);
+    tbody.append(emptyRow);
+  } else {
+    needs.forEach((need) => {
+      const needRow = document.createElement("tr");
+      needRow.className = need.obtained ? "armor-obtained-row" : "armor-missing-row";
+      needRow.append(
+        detailCell(starText(need.level), "armor-level-cell"),
+        detailCell(need.armor),
+        detailCell(String(need.quantity), "numeric"),
+        detailCell(`${need.currentStars}★`, "numeric"),
+        detailCell(need.obtained ? "Obtained" : "Not obtained", "armor-status-cell"),
+      );
+      tbody.append(needRow);
+    });
+  }
+
+  table.append(thead, tbody);
+  cell.append(table);
+  row.append(cell);
+  return row;
+}
+
 function materialViews(payload) {
   return (payload.materials || [])
     .map(materialView)
@@ -110,10 +187,26 @@ function renderMaterials(payload) {
     return;
   }
 
-  materialsTableBody.replaceChildren(...materials.map((item) => {
+  const rows = [];
+  materials.forEach((item) => {
     const row = document.createElement("tr");
+    row.classList.add("material-data-row");
     row.classList.toggle("material-short-row", item.missing > 0);
     row.classList.toggle("material-done-row", item.missing <= 0);
+    row.classList.toggle("material-expanded-row", expandedMaterial === item.material);
+    row.tabIndex = 0;
+    row.title = "Show armor needing this material";
+    row.addEventListener("click", () => {
+      expandedMaterial = expandedMaterial === item.material ? null : item.material;
+      renderMaterials(currentPayload);
+    });
+    row.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        expandedMaterial = expandedMaterial === item.material ? null : item.material;
+        renderMaterials(currentPayload);
+      }
+    });
     row.append(
       typeCell(item.type),
       tableCell(item.material || item.actorName || ""),
@@ -122,8 +215,12 @@ function renderMaterials(payload) {
       tableCell(String(item.inventory), "numeric"),
       tableCell(String(item.missing), "numeric"),
     );
-    return row;
-  }));
+    rows.push(row);
+    if (expandedMaterial === item.material) {
+      rows.push(materialDetailRow(item));
+    }
+  });
+  materialsTableBody.replaceChildren(...rows);
 }
 
 function tsvEscape(value) {

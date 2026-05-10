@@ -1346,6 +1346,89 @@ body.save-drop-active {
   font-variant-numeric: tabular-nums;
 }
 
+.material-data-row {
+  cursor: pointer;
+}
+
+.material-data-row:hover,
+.material-expanded-row {
+  background: rgba(215, 179, 90, 0.08);
+}
+
+.material-detail-row > td {
+  padding: 0 12px 12px;
+  background: rgba(10, 12, 11, 0.28);
+}
+
+.material-detail-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid rgba(243, 239, 226, 0.12);
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(18, 23, 21, 0.72);
+}
+
+.material-detail-table th,
+.material-detail-table td {
+  padding: 7px 9px;
+  border-bottom: 1px solid rgba(243, 239, 226, 0.09);
+  font-size: 12px;
+}
+
+.material-detail-table th {
+  position: static;
+  background: rgba(243, 239, 226, 0.05);
+  color: rgba(185, 193, 184, 0.8);
+  text-align: left;
+}
+
+.material-detail-table th:first-child,
+.material-detail-table td:first-child,
+.material-detail-table th:nth-child(n + 3),
+.material-detail-table td:nth-child(n + 3) {
+  text-align: center;
+}
+
+.material-detail-table th:first-child {
+  width: 58px;
+  text-align: right;
+}
+
+.material-detail-table td.armor-level-cell {
+  width: 58px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.material-detail-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.armor-obtained-row {
+  background: rgba(112, 205, 143, 0.12);
+}
+
+.armor-missing-row {
+  background: rgba(255, 138, 138, 0.09);
+}
+
+.armor-obtained-row .armor-status-cell {
+  color: #9ce0a9;
+  font-weight: 700;
+}
+
+.armor-missing-row .armor-status-cell {
+  color: #ffb1a8;
+  font-weight: 700;
+}
+
+.material-detail-empty {
+  color: var(--muted);
+  text-align: center;
+}
+
 .current-need-cell {
   white-space: nowrap;
 }
