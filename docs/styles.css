@@ -35,6 +35,7 @@ body {
 }
 
 body.materials-body {
+  --materials-sticky-header-height: 218px;
   overflow: auto;
 }
 
@@ -1165,17 +1166,49 @@ body.save-drop-active {
   background: var(--bg);
 }
 
+.materials-table-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 12px;
+}
+
 .materials-show-all-toggle {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin: 0 0 12px;
   color: var(--muted);
   font-size: 0.95rem;
 }
 
 .materials-show-all-toggle input {
   accent-color: var(--accent-2);
+}
+
+.materials-copy-button {
+  min-height: 32px;
+  padding: 0 11px;
+  border: 1px solid rgba(215, 179, 90, 0.32);
+  border-radius: 8px;
+  background: rgba(215, 179, 90, 0.12);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.materials-copy-button:hover {
+  border-color: rgba(215, 179, 90, 0.5);
+  background: rgba(215, 179, 90, 0.18);
+}
+
+.materials-sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  padding: 12px 0 14px;
+  background: var(--bg);
 }
 
 .materials-header {
@@ -1185,7 +1218,7 @@ body.save-drop-active {
   gap: 18px;
   width: 100%;
   max-width: 1100px;
-  margin: 0 auto 20px;
+  margin: 0 auto 12px;
 }
 
 .materials-header > div {
@@ -1245,7 +1278,7 @@ body.save-drop-active {
 
 .materials-summary {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 12px;
   max-width: 1100px;
   margin: 0 auto 18px;
@@ -1275,16 +1308,16 @@ body.save-drop-active {
 .materials-table-section {
   max-width: 1100px;
   margin: 0 auto;
-  overflow-x: auto;
+  overflow: visible;
 }
 
 .materials-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   background: var(--panel);
   border: 1px solid var(--panel-border);
   border-radius: 8px;
-  overflow: hidden;
 }
 
 .materials-table th,
@@ -1295,6 +1328,10 @@ body.save-drop-active {
 }
 
 .materials-table th {
+  position: sticky;
+  top: var(--materials-sticky-header-height);
+  z-index: 2;
+  background: var(--panel);
   color: var(--muted);
   font-weight: 600;
 }
@@ -1307,6 +1344,17 @@ body.save-drop-active {
 .materials-table .numeric {
   text-align: center;
   font-variant-numeric: tabular-nums;
+}
+
+.current-need-cell {
+  white-space: nowrap;
+}
+
+.current-need-extra {
+  margin-left: 3px;
+  color: rgba(185, 193, 184, 0.58);
+  font-size: 0.72em;
+  font-weight: 600;
 }
 
 .material-type-cell {

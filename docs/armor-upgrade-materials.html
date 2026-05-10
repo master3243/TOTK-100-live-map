@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Armor Upgrade Materials</title>
+    <link rel="icon" href="assets/zd-icons/korok.png">
     <link rel="stylesheet" href="styles.css">
     <script>
       window.TOTK_USE_PYODIDE = new URLSearchParams(location.search).has("pyodide")
@@ -13,45 +14,62 @@
   </head>
   <body class="materials-body">
     <main class="materials-page">
-      <header class="materials-header">
-        <div>
-          <p class="eyebrow">Tears of the Kingdom</p>
-          <h1>Armor Upgrade Materials</h1>
-          <p id="materialsStatus">Loading</p>
-        </div>
-        <a class="materials-back-link" href="index.html" aria-label="Back to map">
-          <svg class="materials-back-icon" aria-hidden="true" viewBox="0 0 24 24" focusable="false">
-            <path d="M15 18L9 12L15 6" />
-          </svg>
-          <span>Back to map</span>
-        </a>
-      </header>
+      <div class="materials-sticky-top">
+        <header class="materials-header">
+          <div>
+            <p class="eyebrow">Tears of the Kingdom</p>
+            <h1>Armor Upgrade Materials</h1>
+            <p id="materialsStatus">Loading</p>
+          </div>
+          <a class="materials-back-link" href="index.html" aria-label="Back to map">
+            <svg class="materials-back-icon" aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+              <path d="M15 18L9 12L15 6" />
+            </svg>
+            <span>Back to map</span>
+          </a>
+        </header>
 
-      <section class="materials-summary" aria-label="Armor upgrade summary">
-        <div>
-          <span>Armor at 4 stars</span>
-          <strong id="armorFourStarSummary">-- / --</strong>
-        </div>
-        <div>
-          <span>Short materials</span>
-          <strong id="shortMaterialSummary">--</strong>
-        </div>
-      </section>
+        <section class="materials-summary" aria-label="Armor upgrade summary">
+          <div>
+            <span>Armor at 4 stars</span>
+            <strong id="armorFourStarSummary">-- / --</strong>
+          </div>
+          <div>
+            <span>Armor upgrades</span>
+            <strong id="armorUpgradeCountSummary">--</strong>
+          </div>
+          <div>
+            <span>Short materials</span>
+            <strong id="shortMaterialSummary">--</strong>
+          </div>
+          <div>
+            <span>Missing material</span>
+            <strong id="missingMaterialSummary">--</strong>
+          </div>
+          <div>
+            <span>Rupees needed</span>
+            <strong id="rupeeNeededSummary">--</strong>
+          </div>
+        </section>
+      </div>
 
       <section class="materials-table-section" aria-label="Needed materials">
-        <label class="materials-show-all-toggle">
-          <input id="showAllMaterials" type="checkbox">
-          <span>Show all</span>
-        </label>
+        <div class="materials-table-actions">
+          <label class="materials-show-all-toggle">
+            <input id="showAllMaterials" type="checkbox">
+            <span>Show all</span>
+          </label>
+          <button id="copyMaterialsButton" class="materials-copy-button" type="button">Copy table</button>
+        </div>
         <table class="materials-table">
           <thead>
             <tr>
               <th title="Material category from the armor upgrade source sheet.">Type</th>
               <th>Material</th>
-              <th title="Total quantity needed to upgrade every upgradeable armor piece from 0 to 4 stars, plus 1 as a buffer.">Total Needed</th>
-              <th title="Quantity still needed for your current un-upgraded armor levels, plus 1 as a buffer.">Current Needed</th>
+              <th title="Total quantity needed to upgrade every upgradeable armor piece from 0 to 4 stars.">Total Needed</th>
+              <th title="Quantity still needed for your current un-upgraded armor levels. The small +1 is a visual reminder that one extra is reserved.">Current Needed</th>
               <th title="Quantity currently in your save inventory.">Inventory</th>
-              <th title="Current Needed minus Inventory, floored at 0.">Missing</th>
+              <th title="Current Needed minus Inventory plus 1. Negative means you have extra.">Missing</th>
             </tr>
           </thead>
           <tbody id="materialsTableBody">
