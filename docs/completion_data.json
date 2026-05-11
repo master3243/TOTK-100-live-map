@@ -38747,7 +38747,7 @@
       ],
       "sourceCounts": {
         "ids": 104,
-        "upgradeMaterials": 171,
+        "upgradeMaterials": 173,
         "arrayHash": 1
       },
       "upgradeMaterials": {
@@ -38774,23 +38774,19 @@
               ],
               "3": [
                 {
-                  "material": "Amber",
-                  "quantity": 20
-                },
-                {
                   "material": "Black Bokoblin Horn",
                   "quantity": 5
                 },
                 {
                   "material": "Bokoblin Guts",
                   "quantity": 3
+                },
+                {
+                  "material": "Amber",
+                  "quantity": 20
                 }
               ],
               "4": [
-                {
-                  "material": "Amber",
-                  "quantity": 30
-                },
                 {
                   "material": "Silver Bokoblin Horn",
                   "quantity": 5
@@ -38798,6 +38794,10 @@
                 {
                   "material": "Bokoblin Guts",
                   "quantity": 5
+                },
+                {
+                  "material": "Amber",
+                  "quantity": 30
                 }
               ]
             }
@@ -38823,23 +38823,19 @@
               ],
               "3": [
                 {
-                  "material": "Amber",
-                  "quantity": 20
-                },
-                {
                   "material": "Black Bokoblin Horn",
                   "quantity": 5
                 },
                 {
                   "material": "Bokoblin Guts",
                   "quantity": 3
+                },
+                {
+                  "material": "Amber",
+                  "quantity": 20
                 }
               ],
               "4": [
-                {
-                  "material": "Amber",
-                  "quantity": 30
-                },
                 {
                   "material": "Silver Bokoblin Horn",
                   "quantity": 5
@@ -38847,6 +38843,10 @@
                 {
                   "material": "Bokoblin Guts",
                   "quantity": 5
+                },
+                {
+                  "material": "Amber",
+                  "quantity": 30
                 }
               ]
             }
@@ -38872,23 +38872,19 @@
               ],
               "3": [
                 {
-                  "material": "Amber",
-                  "quantity": 20
-                },
-                {
                   "material": "Black Bokoblin Horn",
                   "quantity": 5
                 },
                 {
                   "material": "Bokoblin Guts",
                   "quantity": 3
+                },
+                {
+                  "material": "Amber",
+                  "quantity": 20
                 }
               ],
               "4": [
-                {
-                  "material": "Amber",
-                  "quantity": 30
-                },
                 {
                   "material": "Silver Bokoblin Horn",
                   "quantity": 5
@@ -38896,6 +38892,10 @@
                 {
                   "material": "Bokoblin Guts",
                   "quantity": 5
+                },
+                {
+                  "material": "Amber",
+                  "quantity": 30
                 }
               ]
             }
@@ -38921,23 +38921,19 @@
               ],
               "3": [
                 {
-                  "material": "Amber",
-                  "quantity": 20
-                },
-                {
                   "material": "Black Bokoblin Horn",
                   "quantity": 5
                 },
                 {
                   "material": "Bokoblin Guts",
                   "quantity": 3
+                },
+                {
+                  "material": "Amber",
+                  "quantity": 20
                 }
               ],
               "4": [
-                {
-                  "material": "Amber",
-                  "quantity": 30
-                },
                 {
                   "material": "Silver Bokoblin Horn",
                   "quantity": 5
@@ -38945,6 +38941,10 @@
                 {
                   "material": "Bokoblin Guts",
                   "quantity": 5
+                },
+                {
+                  "material": "Amber",
+                  "quantity": 30
                 }
               ]
             }
@@ -38974,23 +38974,19 @@
               ],
               "3": [
                 {
-                  "material": "Flint",
-                  "quantity": 30
-                },
-                {
                   "material": "Lizalfos Tail",
                   "quantity": 3
                 },
                 {
                   "material": "Hinox Guts",
                   "quantity": 3
+                },
+                {
+                  "material": "Flint",
+                  "quantity": 30
                 }
               ],
               "4": [
-                {
-                  "material": "Amber",
-                  "quantity": 30
-                },
                 {
                   "material": "Lynel Hoof",
                   "quantity": 5
@@ -38998,6 +38994,10 @@
                 {
                   "material": "Lynel Guts",
                   "quantity": 5
+                },
+                {
+                  "material": "Amber",
+                  "quantity": 30
                 }
               ]
             }
@@ -39027,23 +39027,19 @@
               ],
               "3": [
                 {
-                  "material": "Flint",
-                  "quantity": 30
-                },
-                {
                   "material": "Lizalfos Tail",
                   "quantity": 3
                 },
                 {
                   "material": "Hinox Guts",
                   "quantity": 3
+                },
+                {
+                  "material": "Flint",
+                  "quantity": 30
                 }
               ],
               "4": [
-                {
-                  "material": "Amber",
-                  "quantity": 30
-                },
                 {
                   "material": "Lynel Hoof",
                   "quantity": 5
@@ -39051,6 +39047,10 @@
                 {
                   "material": "Lynel Guts",
                   "quantity": 5
+                },
+                {
+                  "material": "Amber",
+                  "quantity": 30
                 }
               ]
             }
@@ -39080,23 +39080,19 @@
               ],
               "3": [
                 {
-                  "material": "Flint",
-                  "quantity": 30
-                },
-                {
                   "material": "Lizalfos Tail",
                   "quantity": 3
                 },
                 {
                   "material": "Hinox Guts",
                   "quantity": 3
+                },
+                {
+                  "material": "Flint",
+                  "quantity": 30
                 }
               ],
               "4": [
-                {
-                  "material": "Amber",
-                  "quantity": 30
-                },
                 {
                   "material": "Lynel Hoof",
                   "quantity": 5
@@ -39104,6 +39100,10 @@
                 {
                   "material": "Lynel Guts",
                   "quantity": 5
+                },
+                {
+                  "material": "Amber",
+                  "quantity": 30
                 }
               ]
             }
@@ -39129,26 +39129,26 @@
               ],
               "3": [
                 {
-                  "material": "Sunshroom",
-                  "quantity": 5
-                },
-                {
                   "material": "Fire Keese Wing",
                   "quantity": 5
                 },
                 {
                   "material": "Fire-Breath Lizalfos Tail",
                   "quantity": 3
+                },
+                {
+                  "material": "Sunshroom",
+                  "quantity": 5
                 }
               ],
               "4": [
                 {
-                  "material": "Fire-Breath Lizalfos Tail",
-                  "quantity": 10
-                },
-                {
                   "material": "Fire-Breath Lizalfos Horn",
                   "quantity": 5
+                },
+                {
+                  "material": "Fire-Breath Lizalfos Tail",
+                  "quantity": 10
                 },
                 {
                   "material": "Ruby",
@@ -39178,26 +39178,26 @@
               ],
               "3": [
                 {
-                  "material": "Sunshroom",
-                  "quantity": 5
-                },
-                {
                   "material": "Fire Keese Wing",
                   "quantity": 5
                 },
                 {
                   "material": "Fire-Breath Lizalfos Tail",
                   "quantity": 3
+                },
+                {
+                  "material": "Sunshroom",
+                  "quantity": 5
                 }
               ],
               "4": [
                 {
-                  "material": "Fire-Breath Lizalfos Tail",
-                  "quantity": 10
-                },
-                {
                   "material": "Fire-Breath Lizalfos Horn",
                   "quantity": 5
+                },
+                {
+                  "material": "Fire-Breath Lizalfos Tail",
+                  "quantity": 10
                 },
                 {
                   "material": "Ruby",
@@ -39227,26 +39227,26 @@
               ],
               "3": [
                 {
-                  "material": "Sunshroom",
-                  "quantity": 5
-                },
-                {
                   "material": "Fire Keese Wing",
                   "quantity": 5
                 },
                 {
                   "material": "Fire-Breath Lizalfos Tail",
                   "quantity": 3
+                },
+                {
+                  "material": "Sunshroom",
+                  "quantity": 5
                 }
               ],
               "4": [
                 {
-                  "material": "Fire-Breath Lizalfos Tail",
-                  "quantity": 10
-                },
-                {
                   "material": "Fire-Breath Lizalfos Horn",
                   "quantity": 5
+                },
+                {
+                  "material": "Fire-Breath Lizalfos Tail",
+                  "quantity": 10
                 },
                 {
                   "material": "Ruby",
@@ -39276,23 +39276,19 @@
               ],
               "3": [
                 {
-                  "material": "Flint",
-                  "quantity": 15
-                },
-                {
                   "material": "Blue Moblin Horn",
                   "quantity": 5
                 },
                 {
                   "material": "Smotherwing Butterfly",
                   "quantity": 3
+                },
+                {
+                  "material": "Flint",
+                  "quantity": 15
                 }
               ],
               "4": [
-                {
-                  "material": "Flint",
-                  "quantity": 30
-                },
                 {
                   "material": "Black Moblin Horn",
                   "quantity": 5
@@ -39300,6 +39296,10 @@
                 {
                   "material": "Smotherwing Butterfly",
                   "quantity": 5
+                },
+                {
+                  "material": "Flint",
+                  "quantity": 30
                 }
               ]
             }
@@ -39325,23 +39325,19 @@
               ],
               "3": [
                 {
-                  "material": "Flint",
-                  "quantity": 15
-                },
-                {
                   "material": "Blue Moblin Horn",
                   "quantity": 5
                 },
                 {
                   "material": "Smotherwing Butterfly",
                   "quantity": 3
+                },
+                {
+                  "material": "Flint",
+                  "quantity": 15
                 }
               ],
               "4": [
-                {
-                  "material": "Flint",
-                  "quantity": 30
-                },
                 {
                   "material": "Black Moblin Horn",
                   "quantity": 5
@@ -39349,6 +39345,10 @@
                 {
                   "material": "Smotherwing Butterfly",
                   "quantity": 5
+                },
+                {
+                  "material": "Flint",
+                  "quantity": 30
                 }
               ]
             }
@@ -39374,23 +39374,19 @@
               ],
               "3": [
                 {
-                  "material": "Flint",
-                  "quantity": 15
-                },
-                {
                   "material": "Blue Moblin Horn",
                   "quantity": 5
                 },
                 {
                   "material": "Smotherwing Butterfly",
                   "quantity": 3
+                },
+                {
+                  "material": "Flint",
+                  "quantity": 15
                 }
               ],
               "4": [
-                {
-                  "material": "Flint",
-                  "quantity": 30
-                },
                 {
                   "material": "Black Moblin Horn",
                   "quantity": 5
@@ -39398,6 +39394,10 @@
                 {
                   "material": "Smotherwing Butterfly",
                   "quantity": 5
+                },
+                {
+                  "material": "Flint",
+                  "quantity": 30
                 }
               ]
             }
@@ -39413,11 +39413,11 @@
               ],
               "2": [
                 {
-                  "material": "Hyrule Bass",
+                  "material": "Lizalfos Talon",
                   "quantity": 5
                 },
                 {
-                  "material": "Lizalfos Talon",
+                  "material": "Hyrule Bass",
                   "quantity": 5
                 }
               ],
@@ -39437,16 +39437,16 @@
               ],
               "4": [
                 {
-                  "material": "Opal",
-                  "quantity": 20
-                },
-                {
                   "material": "Black Lizalfos Horn",
                   "quantity": 5
                 },
                 {
                   "material": "Blue Lizalfos Tail",
                   "quantity": 5
+                },
+                {
+                  "material": "Opal",
+                  "quantity": 20
                 }
               ]
             }
@@ -39462,11 +39462,11 @@
               ],
               "2": [
                 {
-                  "material": "Hyrule Bass",
+                  "material": "Lizalfos Talon",
                   "quantity": 5
                 },
                 {
-                  "material": "Lizalfos Talon",
+                  "material": "Hyrule Bass",
                   "quantity": 5
                 }
               ],
@@ -39486,16 +39486,16 @@
               ],
               "4": [
                 {
-                  "material": "Opal",
-                  "quantity": 20
-                },
-                {
                   "material": "Black Lizalfos Horn",
                   "quantity": 5
                 },
                 {
                   "material": "Blue Lizalfos Tail",
                   "quantity": 5
+                },
+                {
+                  "material": "Opal",
+                  "quantity": 20
                 }
               ]
             }
@@ -39511,11 +39511,11 @@
               ],
               "2": [
                 {
-                  "material": "Hyrule Bass",
+                  "material": "Lizalfos Talon",
                   "quantity": 5
                 },
                 {
-                  "material": "Lizalfos Talon",
+                  "material": "Hyrule Bass",
                   "quantity": 5
                 }
               ],
@@ -39535,16 +39535,16 @@
               ],
               "4": [
                 {
-                  "material": "Opal",
-                  "quantity": 20
-                },
-                {
                   "material": "Black Lizalfos Horn",
                   "quantity": 5
                 },
                 {
                   "material": "Blue Lizalfos Tail",
                   "quantity": 5
+                },
+                {
+                  "material": "Opal",
+                  "quantity": 20
                 }
               ]
             }
@@ -39570,26 +39570,26 @@
               ],
               "3": [
                 {
-                  "material": "Chillshroom",
-                  "quantity": 5
-                },
-                {
                   "material": "Ice Keese Wing",
                   "quantity": 5
                 },
                 {
                   "material": "Ice-Breath Lizalfos Tail",
                   "quantity": 3
+                },
+                {
+                  "material": "Chillshroom",
+                  "quantity": 5
                 }
               ],
               "4": [
                 {
-                  "material": "Ice-Breath Lizalfos Tail",
-                  "quantity": 10
-                },
-                {
                   "material": "Ice-Breath Lizalfos Horn",
                   "quantity": 5
+                },
+                {
+                  "material": "Ice-Breath Lizalfos Tail",
+                  "quantity": 10
                 },
                 {
                   "material": "Sapphire",
@@ -39619,26 +39619,26 @@
               ],
               "3": [
                 {
-                  "material": "Chillshroom",
-                  "quantity": 5
-                },
-                {
                   "material": "Ice Keese Wing",
                   "quantity": 5
                 },
                 {
                   "material": "Ice-Breath Lizalfos Tail",
                   "quantity": 3
+                },
+                {
+                  "material": "Chillshroom",
+                  "quantity": 5
                 }
               ],
               "4": [
                 {
-                  "material": "Ice-Breath Lizalfos Tail",
-                  "quantity": 10
-                },
-                {
                   "material": "Ice-Breath Lizalfos Horn",
                   "quantity": 5
+                },
+                {
+                  "material": "Ice-Breath Lizalfos Tail",
+                  "quantity": 10
                 },
                 {
                   "material": "Sapphire",
@@ -39668,26 +39668,26 @@
               ],
               "3": [
                 {
-                  "material": "Chillshroom",
-                  "quantity": 5
-                },
-                {
                   "material": "Ice Keese Wing",
                   "quantity": 5
                 },
                 {
                   "material": "Ice-Breath Lizalfos Tail",
                   "quantity": 3
+                },
+                {
+                  "material": "Chillshroom",
+                  "quantity": 5
                 }
               ],
               "4": [
                 {
-                  "material": "Ice-Breath Lizalfos Tail",
-                  "quantity": 10
-                },
-                {
                   "material": "Ice-Breath Lizalfos Horn",
                   "quantity": 5
+                },
+                {
+                  "material": "Ice-Breath Lizalfos Tail",
+                  "quantity": 10
                 },
                 {
                   "material": "Sapphire",
@@ -39701,12 +39701,12 @@
             "levels": {
               "1": [
                 {
-                  "material": "Yellow Chuchu Jelly",
-                  "quantity": 3
-                },
-                {
                   "material": "Electric Lizalfos Horn",
                   "quantity": 1
+                },
+                {
+                  "material": "Yellow Chuchu Jelly",
+                  "quantity": 3
                 }
               ],
               "2": [
@@ -39721,23 +39721,19 @@
               ],
               "3": [
                 {
-                  "material": "Electric Safflina",
-                  "quantity": 8
-                },
-                {
                   "material": "Zapshroom",
                   "quantity": 5
                 },
                 {
                   "material": "Electric Lizalfos Tail",
                   "quantity": 5
+                },
+                {
+                  "material": "Electric Safflina",
+                  "quantity": 8
                 }
               ],
               "4": [
-                {
-                  "material": "Electric Lizalfos Tail",
-                  "quantity": 8
-                },
                 {
                   "material": "Electric Lizalfos Horn",
                   "quantity": 5
@@ -39745,6 +39741,10 @@
                 {
                   "material": "Topaz",
                   "quantity": 5
+                },
+                {
+                  "material": "Electric Lizalfos Tail",
+                  "quantity": 8
                 }
               ]
             }
@@ -39754,12 +39754,12 @@
             "levels": {
               "1": [
                 {
-                  "material": "Yellow Chuchu Jelly",
-                  "quantity": 3
-                },
-                {
                   "material": "Electric Lizalfos Horn",
                   "quantity": 1
+                },
+                {
+                  "material": "Yellow Chuchu Jelly",
+                  "quantity": 3
                 }
               ],
               "2": [
@@ -39774,23 +39774,19 @@
               ],
               "3": [
                 {
-                  "material": "Electric Safflina",
-                  "quantity": 8
-                },
-                {
                   "material": "Zapshroom",
                   "quantity": 5
                 },
                 {
                   "material": "Electric Lizalfos Tail",
                   "quantity": 5
+                },
+                {
+                  "material": "Electric Safflina",
+                  "quantity": 8
                 }
               ],
               "4": [
-                {
-                  "material": "Electric Lizalfos Tail",
-                  "quantity": 8
-                },
                 {
                   "material": "Electric Lizalfos Horn",
                   "quantity": 5
@@ -39798,6 +39794,10 @@
                 {
                   "material": "Topaz",
                   "quantity": 5
+                },
+                {
+                  "material": "Electric Lizalfos Tail",
+                  "quantity": 8
                 }
               ]
             }
@@ -39807,12 +39807,12 @@
             "levels": {
               "1": [
                 {
-                  "material": "Yellow Chuchu Jelly",
-                  "quantity": 3
-                },
-                {
                   "material": "Electric Lizalfos Horn",
                   "quantity": 1
+                },
+                {
+                  "material": "Yellow Chuchu Jelly",
+                  "quantity": 3
                 }
               ],
               "2": [
@@ -39827,23 +39827,19 @@
               ],
               "3": [
                 {
-                  "material": "Electric Safflina",
-                  "quantity": 8
-                },
-                {
                   "material": "Zapshroom",
                   "quantity": 5
                 },
                 {
                   "material": "Electric Lizalfos Tail",
                   "quantity": 5
+                },
+                {
+                  "material": "Electric Safflina",
+                  "quantity": 8
                 }
               ],
               "4": [
-                {
-                  "material": "Electric Lizalfos Tail",
-                  "quantity": 8
-                },
                 {
                   "material": "Electric Lizalfos Horn",
                   "quantity": 5
@@ -39851,6 +39847,10 @@
                 {
                   "material": "Topaz",
                   "quantity": 5
+                },
+                {
+                  "material": "Electric Lizalfos Tail",
+                  "quantity": 8
                 }
               ]
             }
@@ -39890,16 +39890,16 @@
               ],
               "4": [
                 {
-                  "material": "Sundelion",
-                  "quantity": 10
-                },
-                {
                   "material": "Stealthfin Trout",
                   "quantity": 10
                 },
                 {
                   "material": "Silent Princess",
                   "quantity": 5
+                },
+                {
+                  "material": "Sundelion",
+                  "quantity": 10
                 }
               ]
             }
@@ -39939,16 +39939,16 @@
               ],
               "4": [
                 {
-                  "material": "Sundelion",
-                  "quantity": 10
-                },
-                {
                   "material": "Stealthfin Trout",
                   "quantity": 10
                 },
                 {
                   "material": "Silent Princess",
                   "quantity": 5
+                },
+                {
+                  "material": "Sundelion",
+                  "quantity": 10
                 }
               ]
             }
@@ -39988,16 +39988,16 @@
               ],
               "4": [
                 {
-                  "material": "Sundelion",
-                  "quantity": 10
-                },
-                {
                   "material": "Stealthfin Trout",
                   "quantity": 10
                 },
                 {
                   "material": "Silent Princess",
                   "quantity": 5
+                },
+                {
+                  "material": "Sundelion",
+                  "quantity": 10
                 }
               ]
             }
@@ -40027,22 +40027,22 @@
               ],
               "3": [
                 {
-                  "material": "Hot-Footed Frog",
-                  "quantity": 10
-                },
-                {
                   "material": "Ice Keese Wing",
                   "quantity": 8
+                },
+                {
+                  "material": "Hot-Footed Frog",
+                  "quantity": 10
                 }
               ],
               "4": [
                 {
-                  "material": "Swift Violet",
-                  "quantity": 20
-                },
-                {
                   "material": "Fire Keese Wing",
                   "quantity": 10
+                },
+                {
+                  "material": "Swift Violet",
+                  "quantity": 20
                 }
               ]
             }
@@ -40072,22 +40072,22 @@
               ],
               "3": [
                 {
-                  "material": "Hot-Footed Frog",
-                  "quantity": 10
-                },
-                {
                   "material": "Ice Keese Wing",
                   "quantity": 8
+                },
+                {
+                  "material": "Hot-Footed Frog",
+                  "quantity": 10
                 }
               ],
               "4": [
                 {
-                  "material": "Swift Violet",
-                  "quantity": 20
-                },
-                {
                   "material": "Fire Keese Wing",
                   "quantity": 10
+                },
+                {
+                  "material": "Swift Violet",
+                  "quantity": 20
                 }
               ]
             }
@@ -40117,22 +40117,22 @@
               ],
               "3": [
                 {
-                  "material": "Hot-Footed Frog",
-                  "quantity": 10
-                },
-                {
                   "material": "Ice Keese Wing",
                   "quantity": 8
+                },
+                {
+                  "material": "Hot-Footed Frog",
+                  "quantity": 10
                 }
               ],
               "4": [
                 {
-                  "material": "Swift Violet",
-                  "quantity": 20
-                },
-                {
                   "material": "Fire Keese Wing",
                   "quantity": 10
+                },
+                {
+                  "material": "Swift Violet",
+                  "quantity": 20
                 }
               ]
             }
@@ -40148,16 +40148,16 @@
               ],
               "2": [
                 {
-                  "material": "Razorshroom",
-                  "quantity": 5
-                },
-                {
                   "material": "Lynel Saber Horn",
                   "quantity": 2
                 },
                 {
                   "material": "Lynel Mace Horn",
                   "quantity": 2
+                },
+                {
+                  "material": "Razorshroom",
+                  "quantity": 5
                 }
               ],
               "3": [
@@ -40201,16 +40201,16 @@
               ],
               "2": [
                 {
-                  "material": "Razorshroom",
-                  "quantity": 5
-                },
-                {
                   "material": "Lynel Saber Horn",
                   "quantity": 2
                 },
                 {
                   "material": "Lynel Mace Horn",
                   "quantity": 2
+                },
+                {
+                  "material": "Razorshroom",
+                  "quantity": 5
                 }
               ],
               "3": [
@@ -40254,16 +40254,16 @@
               ],
               "2": [
                 {
-                  "material": "Razorshroom",
-                  "quantity": 5
-                },
-                {
                   "material": "Lynel Saber Horn",
                   "quantity": 2
                 },
                 {
                   "material": "Lynel Mace Horn",
                   "quantity": 2
+                },
+                {
+                  "material": "Razorshroom",
+                  "quantity": 5
                 }
               ],
               "3": [
@@ -40325,12 +40325,12 @@
                   "quantity": 20
                 },
                 {
-                  "material": "Gibdo Bone",
-                  "quantity": 10
-                },
-                {
                   "material": "Horriblin Guts",
                   "quantity": 3
+                },
+                {
+                  "material": "Gibdo Bone",
+                  "quantity": 10
                 }
               ],
               "4": [
@@ -40378,12 +40378,12 @@
                   "quantity": 20
                 },
                 {
-                  "material": "Gibdo Bone",
-                  "quantity": 10
-                },
-                {
                   "material": "Horriblin Guts",
                   "quantity": 3
+                },
+                {
+                  "material": "Gibdo Bone",
+                  "quantity": 10
                 }
               ],
               "4": [
@@ -40431,12 +40431,12 @@
                   "quantity": 20
                 },
                 {
-                  "material": "Gibdo Bone",
-                  "quantity": 10
-                },
-                {
                   "material": "Horriblin Guts",
                   "quantity": 3
+                },
+                {
+                  "material": "Gibdo Bone",
+                  "quantity": 10
                 }
               ],
               "4": [
@@ -40494,11 +40494,11 @@
                   "quantity": 3
                 },
                 {
-                  "material": "Gleeok Guts",
+                  "material": "Molduga Guts",
                   "quantity": 3
                 },
                 {
-                  "material": "Molduga Guts",
+                  "material": "Gleeok Guts",
                   "quantity": 3
                 }
               ]
@@ -40543,11 +40543,11 @@
                   "quantity": 3
                 },
                 {
-                  "material": "Gleeok Guts",
+                  "material": "Molduga Guts",
                   "quantity": 3
                 },
                 {
-                  "material": "Molduga Guts",
+                  "material": "Gleeok Guts",
                   "quantity": 3
                 }
               ]
@@ -40592,11 +40592,11 @@
                   "quantity": 3
                 },
                 {
-                  "material": "Gleeok Guts",
+                  "material": "Molduga Guts",
                   "quantity": 3
                 },
                 {
-                  "material": "Molduga Guts",
+                  "material": "Gleeok Guts",
                   "quantity": 3
                 }
               ]
@@ -40613,11 +40613,11 @@
               ],
               "2": [
                 {
-                  "material": "Sticky Lizard",
+                  "material": "Horriblin Horn",
                   "quantity": 5
                 },
                 {
-                  "material": "Horriblin Horn",
+                  "material": "Sticky Lizard",
                   "quantity": 5
                 }
               ],
@@ -40633,16 +40633,16 @@
               ],
               "4": [
                 {
+                  "material": "Black Horriblin Horn",
+                  "quantity": 5
+                },
+                {
                   "material": "Horriblin Guts",
                   "quantity": 10
                 },
                 {
                   "material": "Opal",
                   "quantity": 10
-                },
-                {
-                  "material": "Black Horriblin Horn",
-                  "quantity": 5
                 }
               ]
             }
@@ -40658,11 +40658,11 @@
               ],
               "2": [
                 {
-                  "material": "Sticky Lizard",
+                  "material": "Horriblin Horn",
                   "quantity": 5
                 },
                 {
-                  "material": "Horriblin Horn",
+                  "material": "Sticky Lizard",
                   "quantity": 5
                 }
               ],
@@ -40678,16 +40678,16 @@
               ],
               "4": [
                 {
+                  "material": "Black Horriblin Horn",
+                  "quantity": 5
+                },
+                {
                   "material": "Horriblin Guts",
                   "quantity": 10
                 },
                 {
                   "material": "Opal",
                   "quantity": 10
-                },
-                {
-                  "material": "Black Horriblin Horn",
-                  "quantity": 5
                 }
               ]
             }
@@ -40703,11 +40703,11 @@
               ],
               "2": [
                 {
-                  "material": "Sticky Lizard",
+                  "material": "Horriblin Horn",
                   "quantity": 5
                 },
                 {
-                  "material": "Horriblin Horn",
+                  "material": "Sticky Lizard",
                   "quantity": 5
                 }
               ],
@@ -40723,16 +40723,16 @@
               ],
               "4": [
                 {
+                  "material": "Black Horriblin Horn",
+                  "quantity": 5
+                },
+                {
                   "material": "Horriblin Guts",
                   "quantity": 10
                 },
                 {
                   "material": "Opal",
                   "quantity": 10
-                },
-                {
-                  "material": "Black Horriblin Horn",
-                  "quantity": 5
                 }
               ]
             }
@@ -40752,18 +40752,18 @@
                   "quantity": 6
                 },
                 {
-                  "material": "Aerocuda Wing",
+                  "material": "Keese Wing",
                   "quantity": 5
                 }
               ],
               "3": [
                 {
-                  "material": "Aerocuda Eyeball",
-                  "quantity": 8
-                },
-                {
                   "material": "Aerocuda Wing",
                   "quantity": 6
+                },
+                {
+                  "material": "Aerocuda Eyeball",
+                  "quantity": 8
                 }
               ],
               "4": [
@@ -40797,18 +40797,18 @@
                   "quantity": 6
                 },
                 {
-                  "material": "Aerocuda Wing",
+                  "material": "Keese Wing",
                   "quantity": 5
                 }
               ],
               "3": [
                 {
-                  "material": "Aerocuda Eyeball",
-                  "quantity": 8
-                },
-                {
                   "material": "Aerocuda Wing",
                   "quantity": 6
+                },
+                {
+                  "material": "Aerocuda Eyeball",
+                  "quantity": 8
                 }
               ],
               "4": [
@@ -40842,18 +40842,18 @@
                   "quantity": 6
                 },
                 {
-                  "material": "Aerocuda Wing",
+                  "material": "Keese Wing",
                   "quantity": 5
                 }
               ],
               "3": [
                 {
-                  "material": "Aerocuda Eyeball",
-                  "quantity": 8
-                },
-                {
                   "material": "Aerocuda Wing",
                   "quantity": 6
+                },
+                {
+                  "material": "Aerocuda Eyeball",
+                  "quantity": 8
                 }
               ],
               "4": [
@@ -40883,22 +40883,22 @@
               ],
               "2": [
                 {
-                  "material": "Dark Clump",
-                  "quantity": 5
-                },
-                {
                   "material": "Frox Fang",
                   "quantity": 3
+                },
+                {
+                  "material": "Dark Clump",
+                  "quantity": 5
                 }
               ],
               "3": [
                 {
-                  "material": "Zonaite",
-                  "quantity": 20
-                },
-                {
                   "material": "Obsidian Frox Fang",
                   "quantity": 3
+                },
+                {
+                  "material": "Zonaite",
+                  "quantity": 20
                 },
                 {
                   "material": "Frox Fingernail",
@@ -40907,12 +40907,12 @@
               ],
               "4": [
                 {
-                  "material": "Large Zonaite",
-                  "quantity": 10
-                },
-                {
                   "material": "Blue-White Frox Fang",
                   "quantity": 5
+                },
+                {
+                  "material": "Large Zonaite",
+                  "quantity": 10
                 },
                 {
                   "material": "Frox Guts",
@@ -40932,22 +40932,22 @@
               ],
               "2": [
                 {
-                  "material": "Dark Clump",
-                  "quantity": 5
-                },
-                {
                   "material": "Frox Fang",
                   "quantity": 3
+                },
+                {
+                  "material": "Dark Clump",
+                  "quantity": 5
                 }
               ],
               "3": [
                 {
-                  "material": "Zonaite",
-                  "quantity": 20
-                },
-                {
                   "material": "Obsidian Frox Fang",
                   "quantity": 3
+                },
+                {
+                  "material": "Zonaite",
+                  "quantity": 20
                 },
                 {
                   "material": "Frox Fingernail",
@@ -40956,12 +40956,12 @@
               ],
               "4": [
                 {
-                  "material": "Large Zonaite",
-                  "quantity": 10
-                },
-                {
                   "material": "Blue-White Frox Fang",
                   "quantity": 5
+                },
+                {
+                  "material": "Large Zonaite",
+                  "quantity": 10
                 },
                 {
                   "material": "Frox Guts",
@@ -40981,22 +40981,22 @@
               ],
               "2": [
                 {
-                  "material": "Dark Clump",
-                  "quantity": 5
-                },
-                {
                   "material": "Frox Fang",
                   "quantity": 3
+                },
+                {
+                  "material": "Dark Clump",
+                  "quantity": 5
                 }
               ],
               "3": [
                 {
-                  "material": "Zonaite",
-                  "quantity": 20
-                },
-                {
                   "material": "Obsidian Frox Fang",
                   "quantity": 3
+                },
+                {
+                  "material": "Zonaite",
+                  "quantity": 20
                 },
                 {
                   "material": "Frox Fingernail",
@@ -41005,12 +41005,12 @@
               ],
               "4": [
                 {
-                  "material": "Large Zonaite",
-                  "quantity": 10
-                },
-                {
                   "material": "Blue-White Frox Fang",
                   "quantity": 5
+                },
+                {
+                  "material": "Large Zonaite",
+                  "quantity": 10
                 },
                 {
                   "material": "Frox Guts",
@@ -41044,12 +41044,12 @@
                   "quantity": 15
                 },
                 {
-                  "material": "Deep Firefly",
-                  "quantity": 10
-                },
-                {
                   "material": "Glowing Cave Fish",
                   "quantity": 5
+                },
+                {
+                  "material": "Deep Firefly",
+                  "quantity": 10
                 }
               ],
               "4": [
@@ -41058,12 +41058,12 @@
                   "quantity": 20
                 },
                 {
-                  "material": "Large Zonaite",
-                  "quantity": 10
-                },
-                {
                   "material": "Diamond",
                   "quantity": 3
+                },
+                {
+                  "material": "Large Zonaite",
+                  "quantity": 10
                 }
               ]
             }
@@ -41093,12 +41093,12 @@
                   "quantity": 15
                 },
                 {
-                  "material": "Deep Firefly",
-                  "quantity": 10
-                },
-                {
                   "material": "Glowing Cave Fish",
                   "quantity": 5
+                },
+                {
+                  "material": "Deep Firefly",
+                  "quantity": 10
                 }
               ],
               "4": [
@@ -41107,12 +41107,12 @@
                   "quantity": 20
                 },
                 {
-                  "material": "Large Zonaite",
-                  "quantity": 10
-                },
-                {
                   "material": "Diamond",
                   "quantity": 3
+                },
+                {
+                  "material": "Large Zonaite",
+                  "quantity": 10
                 }
               ]
             }
@@ -41142,12 +41142,12 @@
                   "quantity": 15
                 },
                 {
-                  "material": "Deep Firefly",
-                  "quantity": 10
-                },
-                {
                   "material": "Glowing Cave Fish",
                   "quantity": 5
+                },
+                {
+                  "material": "Deep Firefly",
+                  "quantity": 10
                 }
               ],
               "4": [
@@ -41156,12 +41156,12 @@
                   "quantity": 20
                 },
                 {
-                  "material": "Large Zonaite",
-                  "quantity": 10
-                },
-                {
                   "material": "Diamond",
                   "quantity": 3
+                },
+                {
+                  "material": "Large Zonaite",
+                  "quantity": 10
                 }
               ]
             }
@@ -41201,16 +41201,16 @@
               ],
               "4": [
                 {
+                  "material": "Gleeok Flame Horn",
+                  "quantity": 5
+                },
+                {
                   "material": "Sizzlefin Trout",
                   "quantity": 10
                 },
                 {
                   "material": "Large Zonai Charge",
                   "quantity": 10
-                },
-                {
-                  "material": "Gleeok Flame Horn",
-                  "quantity": 5
                 }
               ]
             }
@@ -41250,16 +41250,16 @@
               ],
               "4": [
                 {
+                  "material": "Gleeok Flame Horn",
+                  "quantity": 5
+                },
+                {
                   "material": "Sizzlefin Trout",
                   "quantity": 10
                 },
                 {
                   "material": "Large Zonai Charge",
                   "quantity": 10
-                },
-                {
-                  "material": "Gleeok Flame Horn",
-                  "quantity": 5
                 }
               ]
             }
@@ -41299,16 +41299,16 @@
               ],
               "4": [
                 {
+                  "material": "Gleeok Flame Horn",
+                  "quantity": 5
+                },
+                {
                   "material": "Sizzlefin Trout",
                   "quantity": 10
                 },
                 {
                   "material": "Large Zonai Charge",
                   "quantity": 10
-                },
-                {
-                  "material": "Gleeok Flame Horn",
-                  "quantity": 5
                 }
               ]
             }
@@ -41348,15 +41348,15 @@
               ],
               "4": [
                 {
+                  "material": "Gleeok Thunder Horn",
+                  "quantity": 5
+                },
+                {
                   "material": "Voltfin Trout",
                   "quantity": 10
                 },
                 {
                   "material": "Large Zonai Charge",
-                  "quantity": 10
-                },
-                {
-                  "material": "Gleeok Thunder Horn",
                   "quantity": 5
                 }
               ]
@@ -41397,15 +41397,15 @@
               ],
               "4": [
                 {
+                  "material": "Gleeok Thunder Horn",
+                  "quantity": 5
+                },
+                {
                   "material": "Voltfin Trout",
                   "quantity": 10
                 },
                 {
                   "material": "Large Zonai Charge",
-                  "quantity": 10
-                },
-                {
-                  "material": "Gleeok Thunder Horn",
                   "quantity": 5
                 }
               ]
@@ -41446,15 +41446,15 @@
               ],
               "4": [
                 {
+                  "material": "Gleeok Thunder Horn",
+                  "quantity": 5
+                },
+                {
                   "material": "Voltfin Trout",
                   "quantity": 10
                 },
                 {
                   "material": "Large Zonai Charge",
-                  "quantity": 10
-                },
-                {
-                  "material": "Gleeok Thunder Horn",
                   "quantity": 5
                 }
               ]
@@ -41495,16 +41495,16 @@
               ],
               "4": [
                 {
+                  "material": "Gleeok Frost Horn",
+                  "quantity": 5
+                },
+                {
                   "material": "Chillfin Trout",
                   "quantity": 10
                 },
                 {
                   "material": "Large Zonai Charge",
                   "quantity": 10
-                },
-                {
-                  "material": "Gleeok Frost Horn",
-                  "quantity": 5
                 }
               ]
             }
@@ -41544,16 +41544,16 @@
               ],
               "4": [
                 {
+                  "material": "Gleeok Frost Horn",
+                  "quantity": 5
+                },
+                {
                   "material": "Chillfin Trout",
                   "quantity": 10
                 },
                 {
                   "material": "Large Zonai Charge",
                   "quantity": 10
-                },
-                {
-                  "material": "Gleeok Frost Horn",
-                  "quantity": 5
                 }
               ]
             }
@@ -41593,16 +41593,16 @@
               ],
               "4": [
                 {
+                  "material": "Gleeok Frost Horn",
+                  "quantity": 5
+                },
+                {
                   "material": "Chillfin Trout",
                   "quantity": 10
                 },
                 {
                   "material": "Large Zonai Charge",
                   "quantity": 10
-                },
-                {
-                  "material": "Gleeok Frost Horn",
-                  "quantity": 5
                 }
               ]
             }
@@ -41618,29 +41618,25 @@
               ],
               "2": [
                 {
-                  "material": "Puffshroom",
+                  "material": "Fire-Breath Lizalfos Tail",
                   "quantity": 3
                 },
                 {
-                  "material": "Fire-Breath Lizalfos Tail",
+                  "material": "Puffshroom",
                   "quantity": 3
                 }
               ],
               "3": [
                 {
-                  "material": "Keese Eyeball",
+                  "material": "Ice-Breath Lizalfos Tail",
                   "quantity": 5
                 },
                 {
-                  "material": "Ice-Breath Lizalfos Tail",
+                  "material": "Keese Eyeball",
                   "quantity": 5
                 }
               ],
               "4": [
-                {
-                  "material": "Mighty Bananas",
-                  "quantity": 10
-                },
                 {
                   "material": "Electric Lizalfos Tail",
                   "quantity": 5
@@ -41648,6 +41644,10 @@
                 {
                   "material": "Black Hinox Horn",
                   "quantity": 3
+                },
+                {
+                  "material": "Mighty Bananas",
+                  "quantity": 10
                 }
               ]
             }
@@ -41663,29 +41663,25 @@
               ],
               "2": [
                 {
-                  "material": "Puffshroom",
+                  "material": "Fire-Breath Lizalfos Tail",
                   "quantity": 3
                 },
                 {
-                  "material": "Fire-Breath Lizalfos Tail",
+                  "material": "Puffshroom",
                   "quantity": 3
                 }
               ],
               "3": [
                 {
-                  "material": "Keese Eyeball",
+                  "material": "Ice-Breath Lizalfos Tail",
                   "quantity": 5
                 },
                 {
-                  "material": "Ice-Breath Lizalfos Tail",
+                  "material": "Keese Eyeball",
                   "quantity": 5
                 }
               ],
               "4": [
-                {
-                  "material": "Mighty Bananas",
-                  "quantity": 10
-                },
                 {
                   "material": "Electric Lizalfos Tail",
                   "quantity": 5
@@ -41693,6 +41689,10 @@
                 {
                   "material": "Black Hinox Horn",
                   "quantity": 3
+                },
+                {
+                  "material": "Mighty Bananas",
+                  "quantity": 10
                 }
               ]
             }
@@ -41708,29 +41708,25 @@
               ],
               "2": [
                 {
-                  "material": "Puffshroom",
+                  "material": "Fire-Breath Lizalfos Tail",
                   "quantity": 3
                 },
                 {
-                  "material": "Fire-Breath Lizalfos Tail",
+                  "material": "Puffshroom",
                   "quantity": 3
                 }
               ],
               "3": [
                 {
-                  "material": "Keese Eyeball",
+                  "material": "Ice-Breath Lizalfos Tail",
                   "quantity": 5
                 },
                 {
-                  "material": "Ice-Breath Lizalfos Tail",
+                  "material": "Keese Eyeball",
                   "quantity": 5
                 }
               ],
               "4": [
-                {
-                  "material": "Mighty Bananas",
-                  "quantity": 10
-                },
                 {
                   "material": "Electric Lizalfos Tail",
                   "quantity": 5
@@ -41738,6 +41734,10 @@
                 {
                   "material": "Black Hinox Horn",
                   "quantity": 3
+                },
+                {
+                  "material": "Mighty Bananas",
+                  "quantity": 10
                 }
               ]
             }
@@ -41747,22 +41747,22 @@
             "levels": {
               "1": [
                 {
-                  "material": "Zonaite",
-                  "quantity": 5
-                },
-                {
                   "material": "Sapphire",
                   "quantity": 1
+                },
+                {
+                  "material": "Zonaite",
+                  "quantity": 5
                 }
               ],
               "2": [
                 {
-                  "material": "Zonaite",
-                  "quantity": 10
-                },
-                {
                   "material": "Sapphire",
                   "quantity": 4
+                },
+                {
+                  "material": "Zonaite",
+                  "quantity": 10
                 }
               ],
               "3": [
@@ -41800,22 +41800,22 @@
             "levels": {
               "1": [
                 {
-                  "material": "Zonaite",
-                  "quantity": 5
-                },
-                {
                   "material": "Ruby",
                   "quantity": 1
+                },
+                {
+                  "material": "Zonaite",
+                  "quantity": 5
                 }
               ],
               "2": [
                 {
-                  "material": "Zonaite",
-                  "quantity": 10
-                },
-                {
                   "material": "Ruby",
                   "quantity": 4
+                },
+                {
+                  "material": "Zonaite",
+                  "quantity": 10
                 }
               ],
               "3": [
@@ -41853,28 +41853,28 @@
             "levels": {
               "1": [
                 {
-                  "material": "Zonaite",
+                  "material": "Opal",
                   "quantity": 5
                 },
                 {
-                  "material": "Opal",
-                  "quantity": 1
+                  "material": "Zonaite",
+                  "quantity": 5
                 }
               ],
               "2": [
                 {
-                  "material": "Zonaite",
+                  "material": "Opal",
                   "quantity": 10
                 },
                 {
-                  "material": "Opal",
-                  "quantity": 4
+                  "material": "Zonaite",
+                  "quantity": 10
                 }
               ],
               "3": [
                 {
                   "material": "Opal",
-                  "quantity": 6
+                  "quantity": 15
                 },
                 {
                   "material": "Large Zonaite",
@@ -41888,7 +41888,7 @@
               "4": [
                 {
                   "material": "Opal",
-                  "quantity": 10
+                  "quantity": 25
                 },
                 {
                   "material": "Large Zonaite",
@@ -41906,22 +41906,22 @@
             "levels": {
               "1": [
                 {
-                  "material": "Zonaite",
-                  "quantity": 5
-                },
-                {
                   "material": "Topaz",
                   "quantity": 1
+                },
+                {
+                  "material": "Zonaite",
+                  "quantity": 5
                 }
               ],
               "2": [
                 {
-                  "material": "Zonaite",
-                  "quantity": 10
-                },
-                {
                   "material": "Topaz",
                   "quantity": 4
+                },
+                {
+                  "material": "Zonaite",
+                  "quantity": 10
                 }
               ],
               "3": [
@@ -41993,16 +41993,16 @@
               ],
               "4": [
                 {
-                  "material": "Large Zonaite",
-                  "quantity": 10
-                },
-                {
                   "material": "Soldier Construct IV Horn",
                   "quantity": 5
                 },
                 {
                   "material": "Captain Construct III Horn",
                   "quantity": 5
+                },
+                {
+                  "material": "Large Zonaite",
+                  "quantity": 10
                 }
               ]
             }
@@ -42046,16 +42046,16 @@
               ],
               "4": [
                 {
-                  "material": "Large Zonaite",
-                  "quantity": 10
-                },
-                {
                   "material": "Soldier Construct IV Horn",
                   "quantity": 5
                 },
                 {
                   "material": "Captain Construct III Horn",
                   "quantity": 5
+                },
+                {
+                  "material": "Large Zonaite",
+                  "quantity": 10
                 }
               ]
             }
@@ -42099,16 +42099,16 @@
               ],
               "4": [
                 {
-                  "material": "Large Zonaite",
-                  "quantity": 10
-                },
-                {
                   "material": "Soldier Construct IV Horn",
                   "quantity": 5
                 },
                 {
                   "material": "Captain Construct III Horn",
                   "quantity": 5
+                },
+                {
+                  "material": "Large Zonaite",
+                  "quantity": 10
                 }
               ]
             }
@@ -42118,22 +42118,22 @@
             "levels": {
               "1": [
                 {
-                  "material": "Flint",
-                  "quantity": 3
-                },
-                {
                   "material": "Diamond",
                   "quantity": 2
+                },
+                {
+                  "material": "Flint",
+                  "quantity": 3
                 }
               ],
               "2": [
                 {
-                  "material": "Flint",
-                  "quantity": 5
-                },
-                {
                   "material": "Diamond",
                   "quantity": 3
+                },
+                {
+                  "material": "Flint",
+                  "quantity": 5
                 }
               ],
               "3": [
@@ -42163,22 +42163,22 @@
             "levels": {
               "1": [
                 {
-                  "material": "Flint",
-                  "quantity": 3
-                },
-                {
                   "material": "Ruby",
                   "quantity": 2
+                },
+                {
+                  "material": "Flint",
+                  "quantity": 3
                 }
               ],
               "2": [
                 {
-                  "material": "Flint",
-                  "quantity": 5
-                },
-                {
                   "material": "Ruby",
                   "quantity": 4
+                },
+                {
+                  "material": "Flint",
+                  "quantity": 5
                 }
               ],
               "3": [
@@ -42208,22 +42208,22 @@
             "levels": {
               "1": [
                 {
-                  "material": "Flint",
-                  "quantity": 3
-                },
-                {
                   "material": "Sapphire",
                   "quantity": 2
+                },
+                {
+                  "material": "Flint",
+                  "quantity": 3
                 }
               ],
               "2": [
                 {
-                  "material": "Flint",
-                  "quantity": 5
-                },
-                {
                   "material": "Sapphire",
                   "quantity": 4
+                },
+                {
+                  "material": "Flint",
+                  "quantity": 5
                 }
               ],
               "3": [
@@ -42253,22 +42253,22 @@
             "levels": {
               "1": [
                 {
-                  "material": "Flint",
-                  "quantity": 3
-                },
-                {
                   "material": "Topaz",
                   "quantity": 2
+                },
+                {
+                  "material": "Flint",
+                  "quantity": 3
                 }
               ],
               "2": [
                 {
-                  "material": "Flint",
-                  "quantity": 5
-                },
-                {
                   "material": "Topaz",
                   "quantity": 4
+                },
+                {
+                  "material": "Flint",
+                  "quantity": 5
                 }
               ],
               "3": [
@@ -42404,12 +42404,12 @@
               ],
               "3": [
                 {
-                  "material": "Rushroom",
-                  "quantity": 10
-                },
-                {
                   "material": "Gibdo Guts",
                   "quantity": 5
+                },
+                {
+                  "material": "Rushroom",
+                  "quantity": 10
                 },
                 {
                   "material": "Molduga Fin",
@@ -42418,12 +42418,12 @@
               ],
               "4": [
                 {
-                  "material": "Swift Violet",
-                  "quantity": 10
-                },
-                {
                   "material": "Molduga Guts",
                   "quantity": 5
+                },
+                {
+                  "material": "Swift Violet",
+                  "quantity": 10
                 },
                 {
                   "material": "Hearty Lizard",
@@ -42453,22 +42453,22 @@
               ],
               "3": [
                 {
-                  "material": "Rushroom",
-                  "quantity": 20
-                },
-                {
                   "material": "Octo Balloon",
                   "quantity": 5
+                },
+                {
+                  "material": "Rushroom",
+                  "quantity": 20
                 }
               ],
               "4": [
                 {
-                  "material": "Swift Violet",
-                  "quantity": 20
-                },
-                {
                   "material": "Naydra's Scale",
                   "quantity": 2
+                },
+                {
+                  "material": "Swift Violet",
+                  "quantity": 20
                 }
               ]
             }
@@ -42492,12 +42492,12 @@
                   "quantity": 3
                 },
                 {
-                  "material": "Farosh's Horn",
-                  "quantity": 2
-                },
-                {
                   "material": "Light Dragon's Talon",
                   "quantity": 1
+                },
+                {
+                  "material": "Farosh's Horn",
+                  "quantity": 2
                 }
               ],
               "3": [
@@ -42506,12 +42506,12 @@
                   "quantity": 5
                 },
                 {
-                  "material": "Naydra's Horn",
-                  "quantity": 2
-                },
-                {
                   "material": "Shard of Light Dragon's Fang",
                   "quantity": 1
+                },
+                {
+                  "material": "Naydra's Horn",
+                  "quantity": 2
                 }
               ],
               "4": [
@@ -42520,12 +42520,12 @@
                   "quantity": 10
                 },
                 {
-                  "material": "Dinraal's Horn",
-                  "quantity": 2
-                },
-                {
                   "material": "Light Dragon's Horn",
                   "quantity": 1
+                },
+                {
+                  "material": "Dinraal's Horn",
+                  "quantity": 2
                 }
               ]
             }
@@ -42545,23 +42545,19 @@
               ],
               "2": [
                 {
-                  "material": "Sundelion",
-                  "quantity": 10
-                },
-                {
                   "material": "Silent Princess",
                   "quantity": 3
                 },
                 {
                   "material": "Light Dragon's Talon",
                   "quantity": 2
+                },
+                {
+                  "material": "Sundelion",
+                  "quantity": 10
                 }
               ],
               "3": [
-                {
-                  "material": "Sundelion",
-                  "quantity": 15
-                },
                 {
                   "material": "Silent Princess",
                   "quantity": 5
@@ -42569,13 +42565,13 @@
                 {
                   "material": "Shard of Light Dragon's Fang",
                   "quantity": 2
+                },
+                {
+                  "material": "Sundelion",
+                  "quantity": 15
                 }
               ],
               "4": [
-                {
-                  "material": "Sundelion",
-                  "quantity": 20
-                },
                 {
                   "material": "Silent Princess",
                   "quantity": 10
@@ -42583,6 +42579,10 @@
                 {
                   "material": "Light Dragon's Horn",
                   "quantity": 2
+                },
+                {
+                  "material": "Sundelion",
+                  "quantity": 20
                 }
               ]
             }
@@ -42927,23 +42927,19 @@
               ],
               "3": [
                 {
-                  "material": "Shard of Farosh's Spike",
-                  "quantity": 5
-                },
-                {
                   "material": "Energetic Rhino Beetle",
                   "quantity": 3
                 },
                 {
                   "material": "Shard of Farosh's Fang",
                   "quantity": 2
+                },
+                {
+                  "material": "Shard of Farosh's Spike",
+                  "quantity": 5
                 }
               ],
               "4": [
-                {
-                  "material": "Shard of Farosh's Spike",
-                  "quantity": 10
-                },
                 {
                   "material": "Star Fragment",
                   "quantity": 3
@@ -42951,6 +42947,10 @@
                 {
                   "material": "Farosh's Horn",
                   "quantity": 2
+                },
+                {
+                  "material": "Shard of Farosh's Spike",
+                  "quantity": 10
                 }
               ]
             }
@@ -42964,7 +42964,7 @@
                   "quantity": 10
                 },
                 {
-                  "material": "Farosh's Scale",
+                  "material": "Naydra's Scale",
                   "quantity": 2
                 }
               ],
@@ -42974,36 +42974,36 @@
                   "quantity": 5
                 },
                 {
-                  "material": "Farosh's Claw",
+                  "material": "Naydra's Claw",
                   "quantity": 2
                 }
               ],
               "3": [
                 {
-                  "material": "Shard of Farosh's Spike",
-                  "quantity": 5
-                },
-                {
                   "material": "Energetic Rhino Beetle",
                   "quantity": 3
                 },
                 {
-                  "material": "Shard of Farosh's Fang",
+                  "material": "Shard of Naydra's Fang",
                   "quantity": 2
+                },
+                {
+                  "material": "Shard of Naydra's Spike",
+                  "quantity": 5
                 }
               ],
               "4": [
-                {
-                  "material": "Shard of Farosh's Spike",
-                  "quantity": 10
-                },
                 {
                   "material": "Star Fragment",
                   "quantity": 3
                 },
                 {
-                  "material": "Farosh's Horn",
+                  "material": "Naydra's Horn",
                   "quantity": 2
+                },
+                {
+                  "material": "Shard of Naydra's Spike",
+                  "quantity": 10
                 }
               ]
             }
@@ -43017,7 +43017,7 @@
                   "quantity": 10
                 },
                 {
-                  "material": "Farosh's Scale",
+                  "material": "Dinraal's Scale",
                   "quantity": 2
                 }
               ],
@@ -43027,36 +43027,36 @@
                   "quantity": 5
                 },
                 {
-                  "material": "Farosh's Claw",
+                  "material": "Dinraal's Claw",
                   "quantity": 2
                 }
               ],
               "3": [
                 {
-                  "material": "Shard of Farosh's Spike",
-                  "quantity": 5
-                },
-                {
                   "material": "Energetic Rhino Beetle",
                   "quantity": 3
                 },
                 {
-                  "material": "Shard of Farosh's Fang",
+                  "material": "Shard of Dinraal's Fang",
                   "quantity": 2
+                },
+                {
+                  "material": "Shard of Dinraal's Spike",
+                  "quantity": 5
                 }
               ],
               "4": [
-                {
-                  "material": "Shard of Farosh's Spike",
-                  "quantity": 10
-                },
                 {
                   "material": "Star Fragment",
                   "quantity": 3
                 },
                 {
-                  "material": "Farosh's Horn",
+                  "material": "Dinraal's Horn",
                   "quantity": 2
+                },
+                {
+                  "material": "Shard of Dinraal's Spike",
+                  "quantity": 10
                 }
               ]
             }
@@ -43741,23 +43741,19 @@
             "levels": {
               "1": [
                 {
-                  "material": "Zonaite",
-                  "quantity": 15
-                },
-                {
                   "material": "Silver Bokoblin Horn",
                   "quantity": 9
                 },
                 {
                   "material": "Hinox Guts",
                   "quantity": 9
+                },
+                {
+                  "material": "Zonaite",
+                  "quantity": 15
                 }
               ],
               "2": [
-                {
-                  "material": "Large Zonaite",
-                  "quantity": 10
-                },
                 {
                   "material": "Silver Moblin Horn",
                   "quantity": 9
@@ -43765,13 +43761,13 @@
                 {
                   "material": "Frox Guts",
                   "quantity": 9
+                },
+                {
+                  "material": "Large Zonaite",
+                  "quantity": 10
                 }
               ],
               "3": [
-                {
-                  "material": "Large Zonaite",
-                  "quantity": 15
-                },
                 {
                   "material": "Silver Lizalfos Horn",
                   "quantity": 9
@@ -43779,6 +43775,10 @@
                 {
                   "material": "Molduga Guts",
                   "quantity": 9
+                },
+                {
+                  "material": "Large Zonaite",
+                  "quantity": 15
                 }
               ],
               "4": [
@@ -43809,7 +43809,7 @@
             "type": "Enemy",
             "material": "Aerocuda Wing",
             "actorName": "Item_Enemy_124",
-            "totalRequired": 63
+            "totalRequired": 48
           },
           {
             "type": "Enemy",
@@ -44013,7 +44013,7 @@
             "type": "Enemy",
             "material": "Keese Wing",
             "actorName": "Item_Enemy_18",
-            "totalRequired": 18
+            "totalRequired": 33
           },
           {
             "type": "Enemy",
@@ -44673,7 +44673,7 @@
             "type": "Gem",
             "material": "Large Zonai Charge",
             "actorName": "Item_Enemy_131",
-            "totalRequired": 129
+            "totalRequired": 114
           },
           {
             "type": "Gem",
@@ -44691,7 +44691,7 @@
             "type": "Gem",
             "material": "Opal",
             "actorName": "Item_Ore_E",
-            "totalRequired": 342
+            "totalRequired": 376
           },
           {
             "type": "Gem",
@@ -44721,37 +44721,37 @@
             "type": "Dragon",
             "material": "Dinraal's Claw",
             "actorName": "Item_Enemy_39",
-            "totalRequired": 1
+            "totalRequired": 3
           },
           {
             "type": "Dragon",
             "material": "Dinraal's Horn",
             "actorName": "Item_Enemy_211",
-            "totalRequired": 3
+            "totalRequired": 5
           },
           {
             "type": "Dragon",
             "material": "Dinraal's Scale",
             "actorName": "Item_Enemy_38",
-            "totalRequired": 1
+            "totalRequired": 3
           },
           {
             "type": "Dragon",
             "material": "Farosh's Claw",
             "actorName": "Item_Enemy_54",
-            "totalRequired": 7
+            "totalRequired": 3
           },
           {
             "type": "Dragon",
             "material": "Farosh's Horn",
             "actorName": "Item_Enemy_213",
-            "totalRequired": 9
+            "totalRequired": 5
           },
           {
             "type": "Dragon",
             "material": "Farosh's Scale",
             "actorName": "Item_Enemy_53",
-            "totalRequired": 7
+            "totalRequired": 3
           },
           {
             "type": "Dragon",
@@ -44775,37 +44775,43 @@
             "type": "Dragon",
             "material": "Naydra's Claw",
             "actorName": "Item_Enemy_50",
-            "totalRequired": 1
+            "totalRequired": 3
           },
           {
             "type": "Dragon",
             "material": "Naydra's Horn",
             "actorName": "Item_Enemy_212",
-            "totalRequired": 3
+            "totalRequired": 5
           },
           {
             "type": "Dragon",
             "material": "Naydra's Scale",
             "actorName": "Item_Enemy_49",
-            "totalRequired": 3
+            "totalRequired": 5
           },
           {
             "type": "Dragon",
             "material": "Shard of Dinraal's Fang",
             "actorName": "Item_Enemy_47",
-            "totalRequired": 1
+            "totalRequired": 3
+          },
+          {
+            "type": "Dragon",
+            "material": "Shard of Dinraal's Spike",
+            "actorName": "Item_Enemy_228",
+            "totalRequired": 15
           },
           {
             "type": "Dragon",
             "material": "Shard of Farosh's Fang",
             "actorName": "Item_Enemy_55",
-            "totalRequired": 7
+            "totalRequired": 3
           },
           {
             "type": "Dragon",
             "material": "Shard of Farosh's Spike",
             "actorName": "Item_Enemy_230",
-            "totalRequired": 45
+            "totalRequired": 15
           },
           {
             "type": "Dragon",
@@ -44817,7 +44823,13 @@
             "type": "Dragon",
             "material": "Shard of Naydra's Fang",
             "actorName": "Item_Enemy_51",
-            "totalRequired": 1
+            "totalRequired": 3
+          },
+          {
+            "type": "Dragon",
+            "material": "Shard of Naydra's Spike",
+            "actorName": "Item_Enemy_229",
+            "totalRequired": 15
           },
           {
             "type": "Other",
@@ -44828,7 +44840,7 @@
         ],
         "sourceCounts": {
           "armor": 104,
-          "materials": 171,
+          "materials": 173,
           "arrayHash": 1
         }
       },

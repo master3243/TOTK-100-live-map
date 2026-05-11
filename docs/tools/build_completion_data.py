@@ -19,7 +19,7 @@ GENERAL_LOCATIONS_CSV = REFERENCES / "TOTK master sheet - Map.csv"
 FOOD_CSV = REFERENCES / "TOTK master sheet - Food.csv"
 KEY_ITEM_CSV = REFERENCES / "TOTK master sheet - KeyItems.csv"
 MATERIALS_CSV = REFERENCES / "TOTK master sheet - Materials.csv"
-ARMOR_UPGRADE_MATERIALS_CSV = REFERENCES / "armor_mats.csv"
+ARMOR_UPGRADE_MATERIALS_CSV = REFERENCES / "TOTK master sheet - Armor Upgrades.csv"
 QUESTS_CSV = REFERENCES / "TOTK master sheet - Quests.csv"
 CHARACTER_PROFILES_CSV = REFERENCES / "TOTK master sheet - Chara. Profiles.csv"
 MEMORIES_CSV = REFERENCES / "TOTK master sheet - Memories.csv"
@@ -499,10 +499,6 @@ def parse_master_inventory_items(path, prefix, array_name, skip_names=None):
     }
 
 
-def is_armor_material_star_cell(value):
-    return value is not None and ("★" in str(value) or "☆" in str(value))
-
-
 def parse_quantity(value):
     if value is None:
         return None
@@ -526,38 +522,32 @@ def classify_material_type(material):
 
 
 def parse_armor_upgrade_material_rows(path):
-    star_cols = [5, 7, 9, 11]
-    name_cols = [6, 8, 10, 12]
-    levels = [1, 2, 3, 4]
-
-    def is_header_row(row):
-        return any(is_armor_material_star_cell(row[index]) for index in star_cols)
-
     armor = []
-    current = None
     with path.open(encoding="utf-8-sig", newline="") as handle:
-        rows = csv.reader(handle)
+        rows = csv.DictReader(handle)
         for row in rows:
-            row = list(row)
-            while len(row) <= max(name_cols):
-                row.append("")
-
-            if is_header_row(row):
-                label = str(row[1] or "").strip()
-                current = {"label": label, "levels": {str(level): [] for level in levels}}
-                if label:
-                    armor.append(current)
+            label = str(row.get("Name") or "").strip()
+            if not label:
                 continue
-            if not current:
-                continue
-
-            for level, qty_col, name_col in zip(levels, star_cols, name_cols):
-                qty = parse_quantity(row[qty_col])
-                material = row[name_col]
-                material = str(material).strip() if material is not None else ""
-                if qty is None or not material:
-                    continue
-                current["levels"][str(level)].append({"material": material, "quantity": qty})
+            base_ids = [
+                str(row.get(column) or "").strip()
+                for column in ("ActorName (Base)", "ActorName (Base) [Altered]")
+            ]
+            current = {
+                "label": label,
+                "baseIds": [base_id for base_id in base_ids if base_id and base_id != "-"],
+                "levels": {str(level): [] for level in range(1, 5)},
+            }
+            for level in range(1, 5):
+                stars = "★" * level
+                for index in range(1, 4):
+                    material = row.get(f"Upgrade Material {stars} ({index})")
+                    qty = parse_quantity(row.get(f"Upgrade Material Quantity {stars} ({index})"))
+                    material = str(material).strip() if material is not None else ""
+                    if qty is None or not material or material == "-":
+                        continue
+                    current["levels"][str(level)].append({"material": material, "quantity": qty})
+            armor.append(current)
 
     return [
         item for item in armor
@@ -572,7 +562,20 @@ def parse_armor_upgrade_materials(path, material_items, material_stock_array_has
         if item.get("label") and item.get("actorName")
     }
     inventory_labels = {item["label"] for item in armor_inventory_items}
-    armor = parse_armor_upgrade_material_rows(path)
+    label_by_base_id = {
+        item["baseId"]: item["label"]
+        for item in armor_inventory_items
+        if item.get("baseId") and item.get("label")
+    }
+    armor = []
+    for item in parse_armor_upgrade_material_rows(path):
+        labels = [
+            label_by_base_id[base_id]
+            for base_id in item.get("baseIds", [])
+            if base_id in label_by_base_id
+        ] or [item["label"]]
+        for label in labels:
+            armor.append({"label": label, "levels": item["levels"]})
     missing_armor_labels = [item["label"] for item in armor if item["label"] not in inventory_labels]
     if missing_armor_labels:
         raise ValueError(f"Could not map armor upgrade labels: {', '.join(sorted(missing_armor_labels))}")
