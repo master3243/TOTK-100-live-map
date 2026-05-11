@@ -8,6 +8,7 @@ const materialsTableBody = document.querySelector("#materialsTableBody");
 const showAllMaterials = document.querySelector("#showAllMaterials");
 const copyMaterialsButton = document.querySelector("#copyMaterialsButton");
 const materialsBackLink = document.querySelector(".materials-back-link");
+const materialsStickyTop = document.querySelector(".materials-sticky-top");
 let currentPayload = null;
 let armorHealthTimer = null;
 let lastArmorHealthKey = null;
@@ -22,6 +23,16 @@ function materialTypeSort(type) {
 
 function setStatus(text) {
   materialsStatus.textContent = text;
+}
+
+function updateTableHeaderOffset() {
+  if (!materialsStickyTop) {
+    return;
+  }
+  document.body.style.setProperty(
+    "--materials-table-header-top",
+    `${Math.max(0, Math.ceil(materialsStickyTop.getBoundingClientRect().height) - 2)}px`,
+  );
 }
 
 function tableCell(text, className = "") {
@@ -367,3 +378,9 @@ window.addEventListener("pagehide", () => {
     clearInterval(armorHealthTimer);
   }
 });
+
+if (materialsStickyTop && "ResizeObserver" in window) {
+  new ResizeObserver(updateTableHeaderOffset).observe(materialsStickyTop);
+}
+window.addEventListener("resize", updateTableHeaderOffset);
+requestAnimationFrame(updateTableHeaderOffset);
