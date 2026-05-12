@@ -28,6 +28,7 @@ PARAGLIDER_FABRICS_CSV = REFERENCES / "TOTK master sheet - Paraglider Fabrics.cs
 ZONAI_DEVICES_CSV = REFERENCES / "TOTK master sheet - Zonai Devices.csv"
 OLD_MAP_CHESTS_JSON = REFERENCES / "objmap_old_map_chests.json"
 SHRINE_CHESTS_JSON = REFERENCES / "objmap_shrine_chests.json"
+OBJMAP_BUBBULFROGS_JSON = REFERENCES / "objmap_bubbulfrogs.json"
 
 COMPLETISM_JS = REFERENCES / "zelda-totk.completism.js"
 COORDINATES_JS = REFERENCES / "zelda-totk.coordinates.js"
@@ -119,7 +120,7 @@ CATEGORIES = [
     {"id": "shrine_chests", "label": "Shrine Chests", "source": "shrine_chests", "kind": "bool"},
     {"id": "lightroots", "label": "Lightroots", "hashes": "LIGHTROOTS_STATUS", "coords": "LIGHTROOTS", "kind": "bool", "target": "Open"},
     {"id": "caves", "label": "Caves", "hashes": "LOCATION_CAVES_VISITED2", "coords": "LOCATION_CAVES", "kind": "bool"},
-    {"id": "bubbulfrogs", "label": "Bubbulfrogs", "hashes": "BUBBULS_GUIDS", "coords": "LOCATION_BUBBULS", "kind": "guid"},
+    {"id": "bubbulfrogs", "label": "Bubbulfrogs", "source": "objmap_bubbulfrogs", "hashes": "BUBBULS_GUIDS", "kind": "guid"},
     {"id": "hudson_sign", "label": "Hudson Sign", "hashes": "ADDISON_COMPLETED", "coords": "ADDISON", "kind": "guid"},
     {"id": "dungeon_bosses", "label": "Depths Dungeon Bosses", "hashes": "BOSSES_REMATCH_DEFEATED", "coords": "BOSSES_REMATCH", "kind": "bool"},
     {"id": "flux_construct", "label": "Flux Constructs", "hashes": "BOSSES_FLUX_CONSTRUCT_DEFEATED", "coords": "BOSSES_FLUX_CONSTRUCT", "kind": "bool"},
@@ -323,6 +324,34 @@ def parse_coordinates(text, name):
             "note": normalize_target_note_y((match.group(4) or comment or "").strip()),
         })
     return rows
+
+
+def parse_objmap_bubbulfrog_items(path, hash_rows):
+    by_hash = {entry["hash_id"].lower(): entry for entry in json.loads(path.read_text(encoding="utf-8"))}
+    items = []
+    missing = []
+    for index, hash_row in enumerate(hash_rows, start=1):
+        hash_hex = f"0x{int(hash_row['value']):016x}"
+        entry = by_hash.get(hash_hex)
+        if not entry:
+            missing.append(hash_hex)
+            continue
+        x, y, z = entry["pos"]
+        map_name = str(entry.get("map_name") or "").strip()
+        items.append({
+            "id": f"bubbulfrogs-{index:03d}",
+            "value": hash_row["value"],
+            "x": x,
+            "y": normalize_icon_y(y),
+            "z": -z,
+            "layer": "sky" if map_name.startswith("Sky__") else "surface",
+            "note": " - ".join(part for part in (entry.get("name"), map_name) if part),
+            "actorName": entry.get("name"),
+            "objmapId": entry["hash_id"],
+        })
+    if missing:
+        raise ValueError(f"Could not find objmap Bubbulfrog hashes: {', '.join(missing)}")
+    return items
 
 
 def parse_korok_hashes(completism_text, array_name):
@@ -988,6 +1017,20 @@ def main():
                 "defaultVisible": category.get("defaultVisible", True),
                 "items": items,
                 "sourceCounts": {"rows": len(items) // 2, "markers": len(items)},
+            })
+            continue
+
+        if category.get("source") == "objmap_bubbulfrogs":
+            hash_rows = parse_hash_rows(completism, category["hashes"], category["kind"])
+            items = parse_objmap_bubbulfrog_items(OBJMAP_BUBBULFROGS_JSON, hash_rows)
+            categories.append({
+                "id": category["id"],
+                "label": category["label"],
+                "kind": category["kind"],
+                "targetValue": target_value(category.get("target")),
+                "defaultVisible": category.get("defaultVisible", True),
+                "items": items,
+                "sourceCounts": {"ids": len(hash_rows), "objmap": len(items)},
             })
             continue
 
