@@ -48,7 +48,13 @@ function isMapTooltipOwnerElement(target) {
 
 viewport.addEventListener("wheel", (event) => {
   event.preventDefault();
-  const nextScale = event.deltaY > 0 ? scale / wheelZoomFactor : scale * wheelZoomFactor;
+  const isZoomingOut = event.deltaY > 0;
+  const proposedScale = isZoomingOut ? scale / wheelZoomFactor : scale * wheelZoomFactor;
+  const snappedScale = snapScale(proposedScale);
+  const nextScale =
+    !isZoomingOut && snappedScale <= scale ? scale + zoomStep
+    : isZoomingOut && snappedScale >= scale ? scale - zoomStep
+    : proposedScale;
   zoomAt(nextScale, event.clientX, event.clientY);
   // If the user zooms while dragging, keep dragStart in sync so the map doesn't jump
   // on the next pointermove (which uses dragStart.offsetX/Y as the baseline).
