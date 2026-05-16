@@ -27,10 +27,35 @@ function updateRecipesTableHeaderOffset() {
 
 function recipeCell(text, className = "") {
   const cell = document.createElement("td");
-  cell.textContent = text;
+  if (className.includes("recipe-scroll-cell")) {
+    const inner = document.createElement("div");
+    inner.className = "recipe-scroll-text";
+    inner.textContent = text;
+    cell.append(inner);
+  } else {
+    cell.textContent = text;
+  }
   if (className) {
     cell.className = className;
   }
+  return cell;
+}
+
+function updateRecipeCellOverflow() {
+  document.querySelectorAll(".recipe-scroll-text").forEach((cell) => {
+    cell.classList.toggle("recipe-scroll-overflow", cell.scrollHeight > cell.clientHeight + 1);
+  });
+}
+
+function recipeCheckboxCell(obtained) {
+  const cell = document.createElement("td");
+  cell.className = "recipe-check-cell";
+  const input = document.createElement("input");
+  input.type = "checkbox";
+  input.checked = Boolean(obtained);
+  input.disabled = true;
+  input.setAttribute("aria-label", obtained ? "Cooked" : "Missing");
+  cell.append(input);
   return cell;
 }
 
@@ -74,7 +99,7 @@ function renderRecipes(payload) {
   if (!visible.length) {
     const row = document.createElement("tr");
     row.append(recipeCell(showAllRecipes.checked ? "No recipes found" : "All recipes cooked", "empty-table-cell"));
-    row.firstChild.colSpan = 5;
+    row.firstChild.colSpan = 8;
     recipesTableBody.append(row);
     updateRecipesTableHeaderOffset();
     return;
@@ -83,16 +108,20 @@ function renderRecipes(payload) {
   for (const recipe of visible) {
     const row = document.createElement("tr");
     row.className = recipe.obtained ? "material-done-row" : "material-short-row";
+    const ingredients = [...(recipe.recipeIngredients || [])].slice(0, 5);
+    while (ingredients.length < 5) {
+      ingredients.push("");
+    }
     row.append(
+      recipeCheckboxCell(recipe.obtained),
       recipeCell(recipe.recipeBookId || "", "numeric recipe-id-cell"),
-      recipeCell(recipe.recipeName || recipe.label || recipe.id),
-      recipeCell((recipe.recipeIngredients || []).join(", ")),
-      recipeCell(recipe.actorName || ""),
-      recipeCell(recipe.obtained ? "Cooked" : "Missing", "recipe-status-cell"),
+      recipeCell(recipe.recipeName || recipe.label || recipe.id, "recipe-scroll-cell recipe-name-cell"),
+      ...ingredients.map((ingredient) => recipeCell(ingredient, "recipe-scroll-cell recipe-ingredient-cell")),
     );
     recipesTableBody.append(row);
   }
   updateRecipesTableHeaderOffset();
+  requestAnimationFrame(updateRecipeCellOverflow);
 }
 
 async function loadRecipesFromStoredSave() {
@@ -161,7 +190,7 @@ async function loadLiveRecipes() {
     setRecipesStatus(error.message || "Could not load recipes");
     const row = document.createElement("tr");
     row.append(recipeCell("Could not load recipes.", "empty-table-cell"));
-    row.firstChild.colSpan = 5;
+    row.firstChild.colSpan = 8;
     recipesTableBody.replaceChildren(row);
     console.error(error);
   } finally {
@@ -212,7 +241,10 @@ if (recipesBackLink) {
 }
 
 new ResizeObserver(updateRecipesTableHeaderOffset).observe(recipesStickyTop);
-window.addEventListener("resize", updateRecipesTableHeaderOffset);
+window.addEventListener("resize", () => {
+  updateRecipesTableHeaderOffset();
+  requestAnimationFrame(updateRecipeCellOverflow);
+});
 document.addEventListener("visibilitychange", pollRecipesHealth);
 
 (async () => {

@@ -1360,16 +1360,61 @@ body.save-drop-active {
   font-variant-numeric: tabular-nums;
 }
 
+.recipes-table {
+  table-layout: fixed;
+}
+
 .recipes-table th:first-child,
-.recipes-table th:nth-child(5),
+.recipes-table th:nth-child(2),
 .recipes-table td:first-child,
-.recipes-table td:nth-child(5) {
+.recipes-table td:nth-child(2) {
   text-align: center;
 }
 
-.recipe-id-cell,
-.recipe-status-cell {
+.recipes-table th:first-child {
+  width: 42px;
+}
+
+.recipes-table th:nth-child(2) {
+  width: 54px;
+}
+
+.recipes-table th:nth-child(3) {
+  width: 150px;
+}
+
+.recipes-table th:nth-child(n + 4):nth-child(-n + 8) {
+  width: 165px;
+}
+
+.recipe-id-cell {
   white-space: nowrap;
+}
+
+.recipe-check-cell input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent);
+}
+
+.recipe-scroll-text {
+  max-height: 4.1em;
+  overflow: visible;
+  line-height: 1.25;
+  scrollbar-width: thin;
+}
+
+.recipe-scroll-overflow {
+  overflow: auto;
+}
+
+.recipe-name-cell .recipe-scroll-text {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.recipe-ingredient-cell {
+  vertical-align: top;
 }
 
 .material-data-row {
@@ -1504,6 +1549,11 @@ body.save-drop-active {
   font-weight: 700;
 }
 
+.recipes-table .material-short-row td:last-child {
+  color: inherit;
+  font-weight: inherit;
+}
+
 .materials-table .material-done-row {
   background: rgba(112, 205, 143, 0.11);
 }
@@ -1511,6 +1561,11 @@ body.save-drop-active {
 .materials-table .material-done-row td:last-child {
   color: #9ce0a9;
   font-weight: 700;
+}
+
+.recipes-table .material-done-row td:last-child {
+  color: inherit;
+  font-weight: inherit;
 }
 
 .materials-empty-cell {
