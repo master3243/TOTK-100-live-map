@@ -40,3 +40,12 @@ cd docs
 python -m http.server 8002
 ```
 Then open `http://localhost:8002/?pyodide=1`
+
+# Common commands
+
+```powershell
+./build.ps1
+conda activate ./env
+python .\docs\tools\build_completion_data.py
+python .\docs\gui.py --skip-browser
+```
