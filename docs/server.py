@@ -839,6 +839,34 @@ def build_recipe_summary(completion_stats):
     }
 
 
+def build_recipe_payload(data, save_path, save_modified):
+    values = parse_save_values(data)
+    stat = completion_stat_definition("recipes") or {"items": []}
+    items = []
+    obtained_count = 0
+    for item in stat.get("items", []):
+        obtained, _raw_value, raw = save_item_state(stat, item, values)
+        if obtained:
+            obtained_count += 1
+        items.append({
+            "id": item["id"],
+            "label": item.get("label") or item["id"],
+            "actorName": item.get("actorName"),
+            "value": item.get("value"),
+            "recipeBookId": item.get("recipeBookId"),
+            "recipeName": item.get("recipeName"),
+            "recipeIngredients": item.get("recipeIngredients") or [],
+            "obtained": obtained,
+            "rawValue": raw,
+        })
+    return {
+        "savePath": str(save_path),
+        "lastModified": save_modified,
+        "summary": progress_summary(stat, len(items), obtained_count),
+        "recipes": items,
+    }
+
+
 def build_save_payload(data, save_path, save_modified, snapshot=None):
     header = read_u32(data, 4)
     metadata_start = read_u32(data, 8)
@@ -887,6 +915,27 @@ def parse_uploaded_save(data, filename):
         save_modified = time.time()
         payload = build_save_payload(data, f"manual upload: {label}", save_modified, snapshot=[])
         add_log(f"Parsed manual upload {label}: {payload['counts']['totalSeeds']}/1000 seeds")
+        return payload
+
+
+def parse_uploaded_recipes(data, filename):
+    with SERVER_LOCK:
+        initialize()
+        label = filename or "uploaded progress.sav"
+        save_modified = time.time()
+        payload = build_recipe_payload(data, f"manual upload: {label}", save_modified)
+        add_log(f"Parsed recipe upload {label}: {payload['summary']['obtained']}/{payload['summary']['total']} recipes")
+        return payload
+
+
+def current_recipes():
+    with SERVER_LOCK:
+        initialize()
+        snapshot = snapshot_tracked_saves()
+        active_save = select_active_save(snapshot)
+        data = read_save_bytes(active_save["path"])
+        payload = build_recipe_payload(data, active_save["path"], active_save["mtime"])
+        add_log(f"Parsed recipes from {save_label(active_save['path'])}: {payload['summary']['obtained']}/{payload['summary']['total']}")
         return payload
 
 
@@ -976,6 +1025,10 @@ class Handler(SimpleHTTPRequestHandler):
         filename = self.headers.get("X-Filename", "uploaded progress.sav")
         return parse_uploaded_armor_upgrade_materials(self.read_request_body(), filename)
 
+    def handle_upload_recipes(self):
+        filename = self.headers.get("X-Filename", "uploaded progress.sav")
+        return parse_uploaded_recipes(self.read_request_body(), filename)
+
     def do_GET(self):
         parsed = urlparse(self.path)
         try:
@@ -987,6 +1040,9 @@ class Handler(SimpleHTTPRequestHandler):
                 return
             if parsed.path == "/api/armor_upgrade_materials":
                 self.send_json(200, current_armor_upgrade_materials())
+                return
+            if parsed.path == "/api/recipes":
+                self.send_json(200, current_recipes())
                 return
             if parsed.path == "/api/log":
                 self.send_json(200, {"entries": LOG_ENTRIES[-LOG_LIMIT:]})
@@ -1006,12 +1062,14 @@ class Handler(SimpleHTTPRequestHandler):
 
     def do_POST(self):
         parsed = urlparse(self.path)
-        if parsed.path not in ("/api/upload_save", "/api/upload_armor_upgrade_materials"):
+        if parsed.path not in ("/api/upload_save", "/api/upload_armor_upgrade_materials", "/api/upload_recipes"):
             self.send_json(404, {"error": "Not found"})
             return
         try:
             if parsed.path == "/api/upload_armor_upgrade_materials":
                 self.send_json(200, self.handle_upload_armor_upgrade_materials())
+            elif parsed.path == "/api/upload_recipes":
+                self.send_json(200, self.handle_upload_recipes())
             else:
                 self.send_json(200, self.handle_upload_save())
         except Exception as error:

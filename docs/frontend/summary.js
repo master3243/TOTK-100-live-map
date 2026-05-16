@@ -92,6 +92,7 @@ function resetSaveSummary(statusText = "Error") {
   seedCount.textContent = "-- / --";
   locationCount.textContent = "-- / --";
   completionistSummary.textContent = "-- / --";
+  recipesSummary?.classList.remove("stat-link", "stat-danger");
   currentRecipes = null;
   currentPlayerStats = null;
   playerStatSummaries.forEach(updatePlayerStatSummary);
@@ -111,10 +112,13 @@ function updateSaveSummary(payload) {
   if (recipesSummary) {
     if (!recipes) {
       recipesSummary.textContent = "--";
+      recipesSummary.classList.remove("stat-link", "stat-danger");
     } else {
       const extras = recipes.extras || [];
       const warningPrefix = extras.length ? "⚠️ " : "";
       recipesSummary.textContent = `${warningPrefix}${recipes.obtained} / ${recipes.total}`;
+      recipesSummary.classList.add("stat-link");
+      recipesSummary.classList.toggle("stat-danger", (recipes.total || 0) > (recipes.obtained || 0));
     }
   }
   const stats = payload.playerStats || null;

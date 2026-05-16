@@ -238,6 +238,13 @@ if (armorUpgradedSummary) {
   });
 }
 
+if (recipesSummary) {
+  recipesSummary.closest("[data-live-row]")?.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.location.href = pyodideAwarePageUrl("recipes.html");
+  });
+}
+
 if (completionEyesToggle) {
   completionEyesToggle.addEventListener("click", (event) => {
     event.preventDefault();

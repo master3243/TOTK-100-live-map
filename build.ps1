@@ -25,6 +25,7 @@ if (Test-Path $outExe) {
 
 $repoIndex = Join-Path $ProjectDir "index.html"
 $repoArmorMaterials = Join-Path $ProjectDir "armor-upgrade-materials.html"
+$repoRecipes = Join-Path $ProjectDir "recipes.html"
 $repoStyles = Join-Path $ProjectDir "styles.css"
 $repoFrontend = Join-Path $ProjectDir "frontend"
 $repoCompletion = Join-Path $ProjectDir "completion_data.json"
@@ -48,7 +49,7 @@ try {
   Pop-Location
 }
 
-foreach ($p in @($repoGui,$repoIndex,$repoArmorMaterials,$repoStyles,$repoFrontend,$repoCompletion)) {
+foreach ($p in @($repoGui,$repoIndex,$repoArmorMaterials,$repoRecipes,$repoStyles,$repoFrontend,$repoCompletion)) {
   if (-not (Test-Path $p)) { throw "Missing required path: $p" }
 }
 
@@ -84,6 +85,7 @@ $args = @(
   "--specpath", $ProjectDir,
   "--add-data", "$repoIndex;.",
   "--add-data", "$repoArmorMaterials;.",
+  "--add-data", "$repoRecipes;.",
   "--add-data", "$repoStyles;.",
   "--add-data", "$repoFrontend;frontend",
   "--add-data", "$repoCompletion;.",

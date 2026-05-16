@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recipes</title>
+    <link rel="icon" href="assets/zd-icons/korok.png">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+      window.TOTK_USE_PYODIDE = new URLSearchParams(location.search).has("pyodide")
+        || location.protocol === "file:"
+        || location.hostname.endsWith("github.io");
+    </script>
+  </head>
+  <body class="materials-body">
+    <main class="materials-page">
+      <div class="materials-sticky-top">
+        <header class="materials-header">
+          <div>
+            <p class="eyebrow">Tears of the Kingdom</p>
+            <h1>Recipes</h1>
+            <p id="recipesStatus">Loading</p>
+          </div>
+          <a class="materials-back-link" href="index.html" aria-label="Back to map">
+            <svg class="materials-back-icon" aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+              <path d="M15 18L9 12L15 6" />
+            </svg>
+            <span>Back to map</span>
+          </a>
+        </header>
+
+        <section class="materials-summary" aria-label="Recipe summary">
+          <div>
+            <span>Cooked recipes</span>
+            <strong id="recipeCookedSummary">-- / --</strong>
+          </div>
+          <div>
+            <span>Missing recipes</span>
+            <strong id="recipeMissingSummary">--</strong>
+          </div>
+        </section>
+
+        <div class="materials-table-actions">
+          <label class="materials-show-all-toggle">
+            <input id="showAllRecipes" type="checkbox">
+            <span>Show all</span>
+          </label>
+          <button id="copyRecipesButton" class="materials-copy-button" type="button">Copy table</button>
+        </div>
+      </div>
+
+      <section class="materials-table-section" aria-label="Recipes">
+        <table class="materials-table recipes-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Recipe</th>
+              <th>Ingredients</th>
+              <th>Actor</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="recipesTableBody">
+            <tr>
+              <td colspan="5">Loading</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="frontend/save-client.js"></script>
+    <script src="frontend/recipes.js"></script>
+  </body>
+</html>

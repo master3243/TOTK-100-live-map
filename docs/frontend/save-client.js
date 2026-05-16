@@ -68,6 +68,11 @@ def parse_uploaded_armor_upgrade_materials(path: str, filename: str = "progress.
     data = Path(path).read_bytes()
     save_modified = int(mtime if mtime is not None else time.time())
     return _srv.build_armor_upgrade_material_payload(data, filename, save_modified)
+
+def parse_uploaded_recipes(path: str, filename: str = "progress.sav", mtime: float | None = None):
+    data = Path(path).read_bytes()
+    save_modified = int(mtime if mtime is not None else time.time())
+    return _srv.build_recipe_payload(data, filename, save_modified)
 `);
     return pyodide;
   })();
@@ -149,6 +154,21 @@ async function armorUpgradeMaterialsViaPyodide(file, buffer = null) {
   const mtime = Math.floor((file.lastModified || Date.now()) / 1000);
   const pyResult = await pyodide.runPythonAsync(
     `parse_uploaded_armor_upgrade_materials("/tmp/armor-upload.sav", ${JSON.stringify(file.name || "progress.sav")}, ${mtime})`,
+  );
+  const result = pyResult.toJs({ dict_converter: Object.fromEntries });
+  pyResult.destroy?.();
+  return result;
+}
+
+async function recipesViaPyodide(file, buffer = null) {
+  const pyodide = await ensurePyodide();
+  const bytes = new Uint8Array(buffer || await file.arrayBuffer());
+  pyodide.FS.mkdirTree("/tmp");
+  pyodide.FS.writeFile("/tmp/recipes-upload.sav", bytes);
+
+  const mtime = Math.floor((file.lastModified || Date.now()) / 1000);
+  const pyResult = await pyodide.runPythonAsync(
+    `parse_uploaded_recipes("/tmp/recipes-upload.sav", ${JSON.stringify(file.name || "progress.sav")}, ${mtime})`,
   );
   const result = pyResult.toJs({ dict_converter: Object.fromEntries });
   pyResult.destroy?.();
