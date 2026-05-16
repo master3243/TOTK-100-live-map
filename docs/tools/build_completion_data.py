@@ -17,6 +17,7 @@ ICON_Y_OFFSET = 106
 
 GENERAL_LOCATIONS_CSV = REFERENCES / "TOTK master sheet - Map.csv"
 FOOD_CSV = REFERENCES / "TOTK master sheet - Food.csv"
+FOOD_RECIPES_CSV = REFERENCES / "TOTK master sheet - Food 2.csv"
 KEY_ITEM_CSV = REFERENCES / "TOTK master sheet - KeyItems.csv"
 MATERIALS_CSV = REFERENCES / "TOTK master sheet - Materials.csv"
 ARMOR_UPGRADE_MATERIALS_CSV = REFERENCES / "TOTK master sheet - Armor Upgrades.csv"
@@ -514,10 +515,54 @@ def parse_master_actor_items(path, prefix, skip_names=None):
     return items
 
 
-def parse_master_recipe_items(path):
-    items = parse_master_actor_items(path, "recipes")
-    for item in items:
-        item["value"] = f"{murmur3_32('RecipeCard.Content.' + item['actorName'] + '.IsCooked'):08x}"
+def parse_recipe_book_rows(path):
+    rows = list(csv.reader(path.open(encoding="utf-8-sig", newline="")))
+    header_index = next(
+        (
+            index for index, row in enumerate(rows)
+            if len(row) > 3 and row[1].strip() == "Recipe book #" and row[2].strip() == "Name"
+        ),
+        None,
+    )
+    if header_index is None:
+        raise ValueError(f"Could not find recipe book header in {path}")
+
+    recipes = {}
+    for row in rows[header_index + 1:]:
+        if len(row) <= 3 or not row[1].strip() or not row[2].strip():
+            continue
+        recipe_id = str(int(row[1].strip()))
+        recipes[recipe_id] = {
+            "recipeBookId": recipe_id,
+            "recipeName": row[2].strip(),
+            "recipeIngredients": [ingredient.strip() for ingredient in row[3:] if ingredient.strip()],
+        }
+    return recipes
+
+
+def parse_master_recipe_items(food_path, recipe_book_path):
+    recipe_book_rows = parse_recipe_book_rows(recipe_book_path)
+    items = []
+    missing = []
+    for row in read_master_rows(food_path):
+        actor_name = row["ActorName"].strip()
+        if not actor_name:
+            continue
+        recipe_id = str(int(row["Recipe #"].strip()))
+        recipe_book = recipe_book_rows.get(recipe_id)
+        if not recipe_book:
+            missing.append(recipe_id)
+            continue
+        item = {
+            "id": f"recipes-{len(items) + 1:03d}",
+            "label": row.get("Name", "").strip() or recipe_book["recipeName"] or actor_name,
+            "actorName": actor_name,
+            "value": f"{murmur3_32('RecipeCard.Content.' + actor_name + '.IsCooked'):08x}",
+            **recipe_book,
+        }
+        items.append(item)
+    if missing:
+        raise ValueError(f"Could not find recipe book rows: {', '.join(missing)}")
     return items
 
 
@@ -1074,7 +1119,7 @@ def main():
         elif stat.get("source") == "master_fabrics_amiibo":
             items = parse_master_fabric_items(PARAGLIDER_FABRICS_CSV, amiibo=True)
         elif stat.get("source") == "master_food":
-            items = parse_master_recipe_items(FOOD_CSV)
+            items = parse_master_recipe_items(FOOD_CSV, FOOD_RECIPES_CSV)
         elif stat.get("source") == "master_materials":
             inventory = parse_master_inventory_items(MATERIALS_CSV, "materials", "Pouch.Material.Content.Name")
             items = inventory["items"]

@@ -45825,1369 +45825,2777 @@
           "id": "recipes-001",
           "label": "Mushroom Skewer",
           "actorName": "Item_Cook_A_01",
-          "value": "06cf4ee2"
+          "value": "06cf4ee2",
+          "recipeBookId": "1",
+          "recipeName": "Mushroom Skewer",
+          "recipeIngredients": [
+            "Any mushroom"
+          ]
         },
         {
           "id": "recipes-002",
           "label": "Meat and Mushroom Skewer",
           "actorName": "Item_Cook_A_09",
-          "value": "a74d3445"
+          "value": "a74d3445",
+          "recipeBookId": "2",
+          "recipeName": "Meat and Mushroom Skewer",
+          "recipeIngredients": [
+            "Any mushroom",
+            "Any meat"
+          ]
         },
         {
           "id": "recipes-003",
           "label": "Fish and Mushroom Skewer",
           "actorName": "Item_Cook_A_08",
-          "value": "5de12cab"
+          "value": "5de12cab",
+          "recipeBookId": "3",
+          "recipeName": "Fish and Mushroom Skewer",
+          "recipeIngredients": [
+            "Any fish",
+            "Any mushroom"
+          ]
         },
         {
           "id": "recipes-004",
           "label": "Meat Skewer",
           "actorName": "Item_Cook_B_06",
-          "value": "4b375fb9"
+          "value": "4b375fb9",
+          "recipeBookId": "4",
+          "recipeName": "Meat Skewer",
+          "recipeIngredients": [
+            "Any meat"
+          ]
         },
         {
           "id": "recipes-005",
           "label": "Fish Skewer",
           "actorName": "Item_Cook_B_05",
-          "value": "c24f141d"
+          "value": "c24f141d",
+          "recipeBookId": "5",
+          "recipeName": "Fish Skewer",
+          "recipeIngredients": [
+            "Any fish"
+          ]
         },
         {
           "id": "recipes-006",
           "label": "Seafood Skewer",
           "actorName": "Item_Cook_B_23",
-          "value": "62e1d324"
+          "value": "62e1d324",
+          "recipeBookId": "6",
+          "recipeName": "Seafood Skewer",
+          "recipeIngredients": [
+            "Any snail or crab"
+          ]
         },
         {
           "id": "recipes-007",
           "label": "Copious Meat Skewers",
           "actorName": "Item_Cook_B_16",
-          "value": "18f95b70"
+          "value": "18f95b70",
+          "recipeBookId": "7",
+          "recipeName": "Copious Meat Skewers",
+          "recipeIngredients": [
+            "Any four different meat"
+          ]
         },
         {
           "id": "recipes-008",
           "label": "Copious Seafood Skewers",
           "actorName": "Item_Cook_B_15",
-          "value": "573898f0"
+          "value": "573898f0",
+          "recipeBookId": "8",
+          "recipeName": "Copious Seafood Skewers",
+          "recipeIngredients": [
+            "Any four different fish"
+          ]
         },
         {
           "id": "recipes-009",
           "label": "Steamed Fruit",
           "actorName": "Item_Cook_A_03",
-          "value": "45bca15a"
+          "value": "45bca15a",
+          "recipeBookId": "9",
+          "recipeName": "Steamed Fruit",
+          "recipeIngredients": [
+            "Any fruit (excluding Hylian tomato)",
+            "Any vegetable, flower, or herb"
+          ]
         },
         {
           "id": "recipes-010",
           "label": "Steamed Tomatoes",
           "actorName": "Item_Cook_Q_03",
-          "value": "b315929a"
+          "value": "b315929a",
+          "recipeBookId": "10",
+          "recipeName": "Steamed Tomatoes",
+          "recipeIngredients": [
+            "Hylian tomato",
+            "Any vegetable, flower, or herb"
+          ]
         },
         {
           "id": "recipes-011",
           "label": "Steamed Mushrooms",
           "actorName": "Item_Cook_A_02",
-          "value": "bb1e84e6"
+          "value": "bb1e84e6",
+          "recipeBookId": "11",
+          "recipeName": "Steamed Mushrooms",
+          "recipeIngredients": [
+            "Any mushroom",
+            "Any vegetable, flower, or herb"
+          ]
         },
         {
           "id": "recipes-012",
           "label": "Steamed Meat",
           "actorName": "Item_Cook_A_05",
-          "value": "2b2a7339"
+          "value": "2b2a7339",
+          "recipeBookId": "12",
+          "recipeName": "Steamed Meat",
+          "recipeIngredients": [
+            "Any meat",
+            "Any vegetable, flower, or herb"
+          ]
         },
         {
           "id": "recipes-013",
           "label": "Steamed Fish",
           "actorName": "Item_Cook_A_04",
-          "value": "3ea37adb"
+          "value": "3ea37adb",
+          "recipeBookId": "13",
+          "recipeName": "Steamed Fish",
+          "recipeIngredients": [
+            "Any fish",
+            "Any vegetable, flower, or herb"
+          ]
         },
         {
           "id": "recipes-014",
           "label": "Saut\u00e9ed Peppers",
           "actorName": "Item_Cook_B_21",
-          "value": "5ce28ae0"
+          "value": "5ce28ae0",
+          "recipeBookId": "14",
+          "recipeName": "Sauteed Peppers",
+          "recipeIngredients": [
+            "Spicy pepper"
+          ]
         },
         {
           "id": "recipes-015",
           "label": "Saut\u00e9ed Nuts",
           "actorName": "Item_Cook_B_22",
-          "value": "559dfda0"
+          "value": "559dfda0",
+          "recipeBookId": "15",
+          "recipeName": "Sauteed Nuts",
+          "recipeIngredients": [
+            "Any nut"
+          ]
         },
         {
           "id": "recipes-016",
           "label": "Fried Wild Greens",
           "actorName": "Item_Cook_B_01",
-          "value": "048ab94f"
+          "value": "048ab94f",
+          "recipeBookId": "16",
+          "recipeName": "Fried Wild Greens",
+          "recipeIngredients": [
+            "Any vegetable, flower, or herb"
+          ]
         },
         {
           "id": "recipes-017",
           "label": "Copious Fried Wild Greens",
           "actorName": "Item_Cook_B_11",
-          "value": "1c20e17c"
+          "value": "1c20e17c",
+          "recipeBookId": "17",
+          "recipeName": "Copious Fried Wild Greens",
+          "recipeIngredients": [
+            "Any four different vegetables, flowers, or herbs"
+          ]
         },
         {
           "id": "recipes-018",
           "label": "Cooked Stambulb",
           "actorName": "Item_Cook_Q_06",
-          "value": "25ce0a48"
+          "value": "25ce0a48",
+          "recipeBookId": "18",
+          "recipeName": "Cooked Stambulb",
+          "recipeIngredients": [
+            "Stambulb"
+          ]
         },
         {
           "id": "recipes-019",
           "label": "Buttered Stambulb",
           "actorName": "Item_Cook_Q_07",
-          "value": "4fa74b1e"
+          "value": "4fa74b1e",
+          "recipeBookId": "19",
+          "recipeName": "Buttered Stambulb",
+          "recipeIngredients": [
+            "Stambulb",
+            "Goat butter"
+          ]
         },
         {
           "id": "recipes-020",
           "label": "Copious Mushroom Skewers",
           "actorName": "Item_Cook_B_13",
-          "value": "48c1eca8"
+          "value": "48c1eca8",
+          "recipeBookId": "20",
+          "recipeName": "Copious Mushroom Skewers",
+          "recipeIngredients": [
+            "Any four different mushrooms"
+          ]
         },
         {
           "id": "recipes-021",
           "label": "Spiced Meat Skewer",
           "actorName": "Item_Cook_P_03",
-          "value": "dff22304"
+          "value": "dff22304",
+          "recipeBookId": "21",
+          "recipeName": "Spiced Meat Skewer",
+          "recipeIngredients": [
+            "Raw meat",
+            "Goron spice"
+          ]
         },
         {
           "id": "recipes-022",
           "label": "Prime Spiced Meat Skewer",
           "actorName": "Item_Cook_P_04",
-          "value": "86a1f5a5"
+          "value": "86a1f5a5",
+          "recipeBookId": "22",
+          "recipeName": "Prime Spiced Meat Skewer",
+          "recipeIngredients": [
+            "Raw prime meat",
+            "Goron spice"
+          ]
         },
         {
           "id": "recipes-023",
           "label": "Gourmet Spiced Meat Skewer",
           "actorName": "Item_Cook_P_05",
-          "value": "445b2a1a"
+          "value": "445b2a1a",
+          "recipeBookId": "23",
+          "recipeName": "Gourmet Spiced Meat Skewer",
+          "recipeIngredients": [
+            "Raw gourmet meat",
+            "Goron spice"
+          ]
         },
         {
           "id": "recipes-024",
           "label": "Crab Stir-Fry",
           "actorName": "Item_Cook_D_10",
-          "value": "33129e18"
+          "value": "33129e18",
+          "recipeBookId": "24",
+          "recipeName": "Crab Stir-Fry",
+          "recipeIngredients": [
+            "Any crab",
+            "Goron spice"
+          ]
         },
         {
           "id": "recipes-025",
           "label": "Meat and Seafood Fry",
           "actorName": "Item_Cook_B_17",
-          "value": "cd035d10"
+          "value": "cd035d10",
+          "recipeBookId": "25",
+          "recipeName": "Meat and Seafood Fry",
+          "recipeIngredients": [
+            "Raw meat or raw bird drumstick",
+            "Any seafood"
+          ]
         },
         {
           "id": "recipes-026",
           "label": "Prime Meat and Seafood Fry",
           "actorName": "Item_Cook_B_18",
-          "value": "96b2d574"
+          "value": "96b2d574",
+          "recipeBookId": "26",
+          "recipeName": "Prime Meat and Seafood Fry",
+          "recipeIngredients": [
+            "Raw prime meat or raw bird thigh",
+            "Any seafood"
+          ]
         },
         {
           "id": "recipes-027",
           "label": "Gourmet Meat and Seafood Fry",
           "actorName": "Item_Cook_B_19",
-          "value": "c21ff8cb"
+          "value": "c21ff8cb",
+          "recipeBookId": "27",
+          "recipeName": "Gourmet Meat and Seafood Fry",
+          "recipeIngredients": [
+            "Raw gourmet meat or raw whole bird",
+            "Any seafood"
+          ]
         },
         {
           "id": "recipes-028",
           "label": "Salt-Grilled Greens",
           "actorName": "Item_Cook_D_02",
-          "value": "fa7e7630"
+          "value": "fa7e7630",
+          "recipeBookId": "28",
+          "recipeName": "Salt-Grilled Greens",
+          "recipeIngredients": [
+            "Any herb or flower",
+            "Rock salt"
+          ]
         },
         {
           "id": "recipes-029",
           "label": "Salt-Grilled Mushrooms",
           "actorName": "Item_Cook_D_01",
-          "value": "6d2d8132"
+          "value": "6d2d8132",
+          "recipeBookId": "29",
+          "recipeName": "Salt-Grilled Mushrooms",
+          "recipeIngredients": [
+            "Any mushroom",
+            "Rock salt"
+          ]
         },
         {
           "id": "recipes-030",
           "label": "Salt-Grilled Meat",
           "actorName": "Item_Cook_D_04",
-          "value": "4c624cd0"
+          "value": "4c624cd0",
+          "recipeBookId": "30",
+          "recipeName": "Salt-Grilled Meat",
+          "recipeIngredients": [
+            "Raw meat or raw bird drumstick",
+            "Rock salt"
+          ]
         },
         {
           "id": "recipes-031",
           "label": "Salt-Grilled Prime Meat",
           "actorName": "Item_Cook_D_05",
-          "value": "7d1e5e4c"
+          "value": "7d1e5e4c",
+          "recipeBookId": "31",
+          "recipeName": "Salt-Grilled Prime Meat",
+          "recipeIngredients": [
+            "Raw prime meat or raw bird thigh",
+            "Rock salt"
+          ]
         },
         {
           "id": "recipes-032",
           "label": "Salt-Grilled Gourmet Meat",
           "actorName": "Item_Cook_D_06",
-          "value": "6e331694"
+          "value": "6e331694",
+          "recipeBookId": "32",
+          "recipeName": "Salt-Grilled Gourmet Meat",
+          "recipeIngredients": [
+            "Raw gourmet meat or raw whole bird",
+            "Rock salt"
+          ]
         },
         {
           "id": "recipes-033",
           "label": "Salt-Grilled Fish",
           "actorName": "Item_Cook_D_03",
-          "value": "36ec5921"
+          "value": "36ec5921",
+          "recipeBookId": "33",
+          "recipeName": "Salt-Grilled Fish",
+          "recipeIngredients": [
+            "Any fish",
+            "Rock salt"
+          ]
         },
         {
           "id": "recipes-034",
           "label": "Salt-Grilled Crab",
           "actorName": "Item_Cook_D_09",
-          "value": "f7a788f9"
+          "value": "f7a788f9",
+          "recipeBookId": "34",
+          "recipeName": "Salt-Grilled Crab",
+          "recipeIngredients": [
+            "Any crab",
+            "Rock salt"
+          ]
         },
         {
           "id": "recipes-035",
           "label": "Herb Saut\u00e9",
           "actorName": "Item_Cook_P_02",
-          "value": "52b664b7"
+          "value": "52b664b7",
+          "recipeBookId": "35",
+          "recipeName": "Herb Saute",
+          "recipeIngredients": [
+            "Any herb, flower, or vegetable",
+            "Goron spice"
+          ]
         },
         {
           "id": "recipes-036",
           "label": "Fragrant Mushroom Saut\u00e9",
           "actorName": "Item_Cook_P_01",
-          "value": "51431a07"
+          "value": "51431a07",
+          "recipeBookId": "36",
+          "recipeName": "Fragrant Mushroom Saute",
+          "recipeIngredients": [
+            "Any mushroom",
+            "Goron spice"
+          ]
         },
         {
           "id": "recipes-037",
           "label": "Pepper Steak",
           "actorName": "Item_Cook_D_07",
-          "value": "444621b6"
+          "value": "444621b6",
+          "recipeBookId": "37",
+          "recipeName": "Pepper Steak",
+          "recipeIngredients": [
+            "Any meat",
+            "Spicy pepper"
+          ]
         },
         {
           "id": "recipes-038",
           "label": "Pepper Seafood",
           "actorName": "Item_Cook_D_08",
-          "value": "126688f0"
+          "value": "126688f0",
+          "recipeBookId": "38",
+          "recipeName": "Peppered Seafood",
+          "recipeIngredients": [
+            "Any seafood or fish",
+            "Spicy pepper"
+          ]
         },
         {
           "id": "recipes-039",
           "label": "Fragrant Seafood Stew",
           "actorName": "Item_Cook_R_05",
-          "value": "c8eab835"
+          "value": "c8eab835",
+          "recipeBookId": "39",
+          "recipeName": "Fragrant Seafood Stew",
+          "recipeIngredients": [
+            "Any seafood or fish",
+            "Stambulb",
+            "Oil jar"
+          ]
         },
         {
           "id": "recipes-040",
           "label": "Deep-Fried Drumstick",
           "actorName": "Item_Cook_R_06",
-          "value": "0665586c"
+          "value": "0665586c",
+          "recipeBookId": "40",
+          "recipeName": "Deep-Fried Drumstick",
+          "recipeIngredients": [
+            "Raw bird drumstick",
+            "Oil jar"
+          ]
         },
         {
           "id": "recipes-041",
           "label": "Deep-Fried Thigh",
           "actorName": "Item_Cook_R_07",
-          "value": "0f6247cc"
+          "value": "0f6247cc",
+          "recipeBookId": "41",
+          "recipeName": "Deep-Fried Thigh",
+          "recipeIngredients": [
+            "Raw bird thigh",
+            "Oil jar"
+          ]
         },
         {
           "id": "recipes-042",
           "label": "Deep-Fried Bird Roast",
           "actorName": "Item_Cook_R_08",
-          "value": "9ee5394f"
+          "value": "9ee5394f",
+          "recipeBookId": "42",
+          "recipeName": "Deep-Fried Bird Roast",
+          "recipeIngredients": [
+            "Raw whole bird",
+            "Oil jar"
+          ]
         },
         {
           "id": "recipes-043",
           "label": "Seafood Meuni\u00e8re",
           "actorName": "Item_Cook_H_01",
-          "value": "6a631e97"
+          "value": "6a631e97",
+          "recipeBookId": "43",
+          "recipeName": "Seafood Meuniere",
+          "recipeIngredients": [
+            "Any seafood (excluding hearty salmon and porgy)",
+            "Goat butter",
+            "Tabantha wheat"
+          ]
         },
         {
           "id": "recipes-044",
           "label": "Porgy Meuni\u00e8re",
           "actorName": "Item_Cook_H_02",
-          "value": "944288c8"
+          "value": "944288c8",
+          "recipeBookId": "44",
+          "recipeName": "Porgy Meuniere",
+          "recipeIngredients": [
+            "Armored porgy or mighty porgy",
+            "Goat butter",
+            "Tabantha wheat"
+          ]
         },
         {
           "id": "recipes-045",
           "label": "Salmon Meuni\u00e8re",
           "actorName": "Item_Cook_H_03",
-          "value": "0feaab4c"
+          "value": "0feaab4c",
+          "recipeBookId": "45",
+          "recipeName": "Salmon Meuniere",
+          "recipeIngredients": [
+            "Hearty salmon",
+            "Goat butter",
+            "Tabantha wheat"
+          ]
         },
         {
           "id": "recipes-046",
           "label": "Fruit and Mushroom Mix",
           "actorName": "Item_Cook_A_07",
-          "value": "8e862484"
+          "value": "8e862484",
+          "recipeBookId": "46",
+          "recipeName": "Fruit and Mushroom Mix",
+          "recipeIngredients": [
+            "Any fruit",
+            "Any mushroom"
+          ]
         },
         {
           "id": "recipes-047",
           "label": "Simmered Fruit",
           "actorName": "Item_Cook_B_02",
-          "value": "ded4c5fa"
+          "value": "ded4c5fa",
+          "recipeBookId": "47",
+          "recipeName": "Simmered Fruit",
+          "recipeIngredients": [
+            "Any fruit"
+          ]
         },
         {
           "id": "recipes-048",
           "label": "Copious Simmered Fruit",
           "actorName": "Item_Cook_B_12",
-          "value": "e6b91606"
+          "value": "e6b91606",
+          "recipeBookId": "48",
+          "recipeName": "Copious Simmered Fruit",
+          "recipeIngredients": [
+            "Any four different fruit"
+          ]
         },
         {
           "id": "recipes-049",
           "label": "Simmered Tomato",
           "actorName": "Item_Cook_Q_01",
-          "value": "f3f347da"
+          "value": "f3f347da",
+          "recipeBookId": "49",
+          "recipeName": "Simmered Tomato",
+          "recipeIngredients": [
+            "Hylian tomato"
+          ]
         },
         {
           "id": "recipes-050",
           "label": "Fruity Tomato Stew",
           "actorName": "Item_Cook_Q_02",
-          "value": "3ef84cac"
+          "value": "3ef84cac",
+          "recipeBookId": "50",
+          "recipeName": "Fruity Tomato Stew",
+          "recipeIngredients": [
+            "Hylian tomato",
+            "Rock salt",
+            "Fresh milk"
+          ]
         },
         {
           "id": "recipes-051",
           "label": "Tomato Mushroom Stew",
           "actorName": "Item_Cook_Q_04",
-          "value": "51498c65"
+          "value": "51498c65",
+          "recipeBookId": "51",
+          "recipeName": "Tomato Mushroom Stew",
+          "recipeIngredients": [
+            "Hylian tomato",
+            "Any mushroom"
+          ]
         },
         {
           "id": "recipes-052",
           "label": "Tomato Seafood Soup",
           "actorName": "Item_Cook_Q_05",
-          "value": "4ecc4d7d"
+          "value": "4ecc4d7d",
+          "recipeBookId": "52",
+          "recipeName": "Tomato Seafood Soup",
+          "recipeIngredients": [
+            "Hylian tomato",
+            "Any seafood"
+          ]
         },
         {
           "id": "recipes-053",
           "label": "Cream of Vegetable Soup",
           "actorName": "Item_Cook_K_07",
-          "value": "c8299fcd"
+          "value": "c8299fcd",
+          "recipeBookId": "53",
+          "recipeName": "Cream of Vegetable Soup",
+          "recipeIngredients": [
+            "Any herb, flower, or vegetable (excluding carrots or pumpkins)",
+            "Rock salt",
+            "Fresh milk"
+          ]
         },
         {
           "id": "recipes-054",
           "label": "Veggie Cream Soup",
           "actorName": "Item_Cook_F_03",
-          "value": "aa0e0904"
+          "value": "aa0e0904",
+          "recipeBookId": "54",
+          "recipeName": "Veggie Cream Soup",
+          "recipeIngredients": [
+            "Any carrot or pumpkin",
+            "Rock salt",
+            "Fresh milk"
+          ]
         },
         {
           "id": "recipes-055",
           "label": "Cream of Mushroom Soup",
           "actorName": "Item_Cook_K_06",
-          "value": "d2679b9a"
+          "value": "d2679b9a",
+          "recipeBookId": "55",
+          "recipeName": "Cream of Mushroom Soup",
+          "recipeIngredients": [
+            "Any mushroom",
+            "Any herb, flower, or vegetable",
+            "Rock salt",
+            "Fresh milk"
+          ]
         },
         {
           "id": "recipes-056",
           "label": "Creamy Meat Soup",
           "actorName": "Item_Cook_F_01",
-          "value": "587b1a50"
+          "value": "587b1a50",
+          "recipeBookId": "56",
+          "recipeName": "Creamy Meat Soup",
+          "recipeIngredients": [
+            "Any meat",
+            "Any herb, flower, or vegetable",
+            "Rock salt",
+            "Fresh milk"
+          ]
         },
         {
           "id": "recipes-057",
           "label": "Creamy Seafood Soup",
           "actorName": "Item_Cook_F_02",
-          "value": "5e4ca09b"
+          "value": "5e4ca09b",
+          "recipeBookId": "57",
+          "recipeName": "Creamy Seafood Soup",
+          "recipeIngredients": [
+            "Any seafood",
+            "Any herb, flower, or vegetable",
+            "Rock salt",
+            "Fresh milk"
+          ]
         },
         {
           "id": "recipes-058",
           "label": "Snail Chowder",
           "actorName": "Item_Cook_K_04",
-          "value": "98abd5b4"
+          "value": "98abd5b4",
+          "recipeBookId": "58",
+          "recipeName": "Snail Chowder",
+          "recipeIngredients": [
+            "Sneaky river snail",
+            "Goat butter",
+            "Fresh milk",
+            "Tabantha wheat"
+          ]
         },
         {
           "id": "recipes-059",
           "label": "Creamy Heart Soup",
           "actorName": "Item_Cook_F_04",
-          "value": "b139c9cf"
+          "value": "b139c9cf",
+          "recipeBookId": "59",
+          "recipeName": "Creamy Heart Soup",
+          "recipeIngredients": [
+            "Hearty radish",
+            "Hydromelon",
+            "Voltfruit",
+            "Fresh milk"
+          ]
         },
         {
           "id": "recipes-060",
           "label": "Glazed Veggies",
           "actorName": "Item_Cook_A_14",
-          "value": "cc25a71f"
+          "value": "cc25a71f",
+          "recipeBookId": "60",
+          "recipeName": "Glazed Veggies",
+          "recipeIngredients": [
+            "Any herb, flower, or vegetable",
+            "Courser bee honey"
+          ]
         },
         {
           "id": "recipes-061",
           "label": "Glazed Mushrooms",
           "actorName": "Item_Cook_A_11",
-          "value": "29e1271e"
+          "value": "29e1271e",
+          "recipeBookId": "61",
+          "recipeName": "Glazed Mushrooms",
+          "recipeIngredients": [
+            "Any mushroom",
+            "Courser bee honey"
+          ]
         },
         {
           "id": "recipes-062",
           "label": "Glazed Meat",
           "actorName": "Item_Cook_A_12",
-          "value": "1c3f1d27"
+          "value": "1c3f1d27",
+          "recipeBookId": "62",
+          "recipeName": "Glazed Meat",
+          "recipeIngredients": [
+            "Any meat",
+            "Courser bee honey"
+          ]
         },
         {
           "id": "recipes-063",
           "label": "Glazed Seafood",
           "actorName": "Item_Cook_A_13",
-          "value": "d2323fec"
+          "value": "d2323fec",
+          "recipeBookId": "63",
+          "recipeName": "Glazed Seafood",
+          "recipeIngredients": [
+            "Any seafood",
+            "Courser bee honey"
+          ]
         },
         {
           "id": "recipes-064",
           "label": "Curry Rice",
           "actorName": "Item_Cook_J_01",
-          "value": "eb9eac34"
+          "value": "eb9eac34",
+          "recipeBookId": "64",
+          "recipeName": "Curry Rice",
+          "recipeIngredients": [
+            "Hylian rice",
+            "Goron spice"
+          ]
         },
         {
           "id": "recipes-065",
           "label": "Vegetable Curry",
           "actorName": "Item_Cook_J_02",
-          "value": "fb8436d6"
+          "value": "fb8436d6",
+          "recipeBookId": "65",
+          "recipeName": "Vegetable Curry",
+          "recipeIngredients": [
+            "Any carrot or pumpkin",
+            "Hylian rice",
+            "Goron spice"
+          ]
         },
         {
           "id": "recipes-066",
           "label": "Meat Curry",
           "actorName": "Item_Cook_J_06",
-          "value": "731b2a59"
+          "value": "731b2a59",
+          "recipeBookId": "66",
+          "recipeName": "Meat Curry",
+          "recipeIngredients": [
+            "Raw meat",
+            "Hylian rice",
+            "Goron spice"
+          ]
         },
         {
           "id": "recipes-067",
           "label": "Prime Meat Curry",
           "actorName": "Item_Cook_J_07",
-          "value": "03001da8"
+          "value": "03001da8",
+          "recipeBookId": "67",
+          "recipeName": "Prime Meat Curry",
+          "recipeIngredients": [
+            "Raw prime meat",
+            "Hylian rice",
+            "Goron spice"
+          ]
         },
         {
           "id": "recipes-068",
           "label": "Gourmet Meat Curry",
           "actorName": "Item_Cook_J_09",
-          "value": "5c82fabb"
+          "value": "5c82fabb",
+          "recipeBookId": "68",
+          "recipeName": "Gourmet Meat Curry",
+          "recipeIngredients": [
+            "Raw gourmet meat",
+            "Hylian rice",
+            "Goron spice"
+          ]
         },
         {
           "id": "recipes-069",
           "label": "Poultry Curry",
           "actorName": "Item_Cook_J_04",
-          "value": "936fc426"
+          "value": "936fc426",
+          "recipeBookId": "69",
+          "recipeName": "Poultry Curry",
+          "recipeIngredients": [
+            "Raw bird drumstick",
+            "Hylian rice",
+            "Goron spice"
+          ]
         },
         {
           "id": "recipes-070",
           "label": "Prime Poultry Curry",
           "actorName": "Item_Cook_J_05",
-          "value": "524e2281"
+          "value": "524e2281",
+          "recipeBookId": "70",
+          "recipeName": "Prime Poultry Curry",
+          "recipeIngredients": [
+            "Raw bird thigh",
+            "Hylian rice",
+            "Goron spice"
+          ]
         },
         {
           "id": "recipes-071",
           "label": "Gourmet Poultry Curry",
           "actorName": "Item_Cook_J_08",
-          "value": "1d6cc1e8"
+          "value": "1d6cc1e8",
+          "recipeBookId": "71",
+          "recipeName": "Gourmet Poultry Curry",
+          "recipeIngredients": [
+            "Raw whole bird",
+            "Hylian rice",
+            "Goron spice"
+          ]
         },
         {
           "id": "recipes-072",
           "label": "Seafood Curry",
           "actorName": "Item_Cook_J_03",
-          "value": "4c5c8f60"
+          "value": "4c5c8f60",
+          "recipeBookId": "72",
+          "recipeName": "Seafood Curry",
+          "recipeIngredients": [
+            "Any porgy",
+            "Hylian rice",
+            "Goron spice"
+          ]
         },
         {
           "id": "recipes-073",
           "label": "Cheesy Curry",
           "actorName": "Item_Cook_S_01",
-          "value": "ea36128b"
+          "value": "ea36128b",
+          "recipeBookId": "73",
+          "recipeName": "Cheesy Curry",
+          "recipeIngredients": [
+            "Hateno cheese",
+            "Hylian rice",
+            "Goron spice"
+          ]
         },
         {
           "id": "recipes-074",
           "label": "Carrot Stew",
           "actorName": "Item_Cook_K_08",
-          "value": "517e18cc"
+          "value": "517e18cc",
+          "recipeBookId": "74",
+          "recipeName": "Carrot Stew",
+          "recipeIngredients": [
+            "Any carrot",
+            "Goat butter",
+            "Fresh milk",
+            "Tabantha wheat"
+          ]
         },
         {
           "id": "recipes-075",
           "label": "Pumpkin Stew",
           "actorName": "Item_Cook_K_03",
-          "value": "95321cc8"
+          "value": "95321cc8",
+          "recipeBookId": "75",
+          "recipeName": "Pumpkin Stew",
+          "recipeIngredients": [
+            "Any pumpkin",
+            "Goat butter",
+            "Fresh milk",
+            "Tabantha wheat"
+          ]
         },
         {
           "id": "recipes-076",
           "label": "Meat Stew",
           "actorName": "Item_Cook_K_01",
-          "value": "f354fc7d"
+          "value": "f354fc7d",
+          "recipeBookId": "76",
+          "recipeName": "Meat Stew",
+          "recipeIngredients": [
+            "Raw meat",
+            "Goat butter",
+            "Fresh milk",
+            "Tabantha wheat"
+          ]
         },
         {
           "id": "recipes-077",
           "label": "Prime Meat Stew",
           "actorName": "Item_Cook_K_02",
-          "value": "5a9f702d"
+          "value": "5a9f702d",
+          "recipeBookId": "77",
+          "recipeName": "Prime Meat Stew",
+          "recipeIngredients": [
+            "Raw prime meat",
+            "Goat butter",
+            "Fresh milk",
+            "Tabantha wheat"
+          ]
         },
         {
           "id": "recipes-078",
           "label": "Gourmet Meat Stew",
           "actorName": "Item_Cook_K_05",
-          "value": "467d83e8"
+          "value": "467d83e8",
+          "recipeBookId": "78",
+          "recipeName": "Gourmet Meat Stew",
+          "recipeIngredients": [
+            "Raw gourmet meat",
+            "Goat butter",
+            "Fresh milk",
+            "Tabantha wheat"
+          ]
         },
         {
           "id": "recipes-079",
           "label": "Meat-Stuffed Pumpkin",
           "actorName": "Item_Cook_B_20",
-          "value": "b9e9de34"
+          "value": "b9e9de34",
+          "recipeBookId": "79",
+          "recipeName": "Meat-Stuffed Pumpkin",
+          "recipeIngredients": [
+            "Any pumpkin",
+            "Any meat"
+          ]
         },
         {
           "id": "recipes-080",
           "label": "Vegetable Risotto",
           "actorName": "Item_Cook_G_13",
-          "value": "4636bcfb"
+          "value": "4636bcfb",
+          "recipeBookId": "80",
+          "recipeName": "Vegetable Risotto",
+          "recipeIngredients": [
+            "Any carrot or pumpkin",
+            "Hylian rice",
+            "Rock salt",
+            "Goat butter"
+          ]
         },
         {
           "id": "recipes-081",
           "label": "Mushroom Risotto",
           "actorName": "Item_Cook_G_12",
-          "value": "4cd12a00"
+          "value": "4cd12a00",
+          "recipeBookId": "81",
+          "recipeName": "Mushroom Risotto",
+          "recipeIngredients": [
+            "Any mushroom",
+            "Hylian rice",
+            "Rock salt",
+            "Goat butter"
+          ]
         },
         {
           "id": "recipes-082",
           "label": "Salmon Risotto",
           "actorName": "Item_Cook_G_14",
-          "value": "3a3b377c"
+          "value": "3a3b377c",
+          "recipeBookId": "82",
+          "recipeName": "Salmon Risotto",
+          "recipeIngredients": [
+            "Hearty salmon",
+            "Hylian rice",
+            "Rock salt",
+            "Goat butter"
+          ]
         },
         {
           "id": "recipes-083",
           "label": "Crab Risotto",
           "actorName": "Item_Cook_G_17",
-          "value": "3c383f55"
+          "value": "3c383f55",
+          "recipeBookId": "83",
+          "recipeName": "Crab Risotto",
+          "recipeIngredients": [
+            "Any crab",
+            "Hylian rice",
+            "Rock salt",
+            "Goat butter"
+          ]
         },
         {
           "id": "recipes-084",
           "label": "Cheesy Risotto",
           "actorName": "Item_Cook_Q_10",
-          "value": "6982a921"
+          "value": "6982a921",
+          "recipeBookId": "84",
+          "recipeName": "Cheesy Risotto",
+          "recipeIngredients": [
+            "Hateno cheese",
+            "Any mushroom or fish",
+            "Rock salt",
+            "Hylian rice"
+          ]
         },
         {
           "id": "recipes-085",
           "label": "Poultry Pilaf",
           "actorName": "Item_Cook_E_01",
-          "value": "4cd47993"
+          "value": "4cd47993",
+          "recipeBookId": "85",
+          "recipeName": "Poultry Pilaf",
+          "recipeIngredients": [
+            "Raw bird drumstick",
+            "Hylian rice",
+            "Bird egg",
+            "Goat butter"
+          ]
         },
         {
           "id": "recipes-086",
           "label": "Prime Poultry Pilaf",
           "actorName": "Item_Cook_E_02",
-          "value": "8faa380f"
+          "value": "8faa380f",
+          "recipeBookId": "86",
+          "recipeName": "Prime Poultry Pilaf",
+          "recipeIngredients": [
+            "Raw bird thigh",
+            "Hylian rice",
+            "Bird egg",
+            "Goat butter"
+          ]
         },
         {
           "id": "recipes-087",
           "label": "Gourmet Poultry Pilaf",
           "actorName": "Item_Cook_E_03",
-          "value": "ccf0df1f"
+          "value": "ccf0df1f",
+          "recipeBookId": "87",
+          "recipeName": "Gourmet Poultry Pilaf",
+          "recipeIngredients": [
+            "Raw whole bird",
+            "Hylian rice",
+            "Bird egg",
+            "Goat butter"
+          ]
         },
         {
           "id": "recipes-088",
           "label": "Seafood Paella",
           "actorName": "Item_Cook_N_01",
-          "value": "85025707"
+          "value": "85025707",
+          "recipeBookId": "88",
+          "recipeName": "Seafood Paella",
+          "recipeIngredients": [
+            "Armored porgy or mighty porgy",
+            "Razorclaw crab or Ironshell crab",
+            "Rock salt",
+            "Goat butter",
+            "Hylian rice"
+          ]
         },
         {
           "id": "recipes-089",
           "label": "Curry Pilaf",
           "actorName": "Item_Cook_G_11",
-          "value": "fa386a56"
+          "value": "fa386a56",
+          "recipeBookId": "89",
+          "recipeName": "Curry Pilaf",
+          "recipeIngredients": [
+            "Hylian rice",
+            "Goat butter",
+            "Goron spice"
+          ]
         },
         {
           "id": "recipes-090",
           "label": "Fried Egg and Rice",
           "actorName": "Item_Cook_E_04",
-          "value": "21991e19"
+          "value": "21991e19",
+          "recipeBookId": "90",
+          "recipeName": "Fried Egg and Rice",
+          "recipeIngredients": [
+            "Bird egg",
+            "Hylian rice"
+          ]
         },
         {
           "id": "recipes-091",
           "label": "Crunchy Fried Rice",
           "actorName": "Item_Cook_Q_08",
-          "value": "249d2a33"
+          "value": "249d2a33",
+          "recipeBookId": "91",
+          "recipeName": "Crunchy Fried Rice",
+          "recipeIngredients": [
+            "Any meat",
+            "Hylian rice",
+            "Bird egg",
+            "Oil jar"
+          ]
         },
         {
           "id": "recipes-092",
           "label": "Seafood Fried Rice",
           "actorName": "Item_Cook_G_10",
-          "value": "521e68d9"
+          "value": "521e68d9",
+          "recipeBookId": "92",
+          "recipeName": "Seafood Fried Rice",
+          "recipeIngredients": [
+            "Any porgy",
+            "Hylian rice",
+            "Rock salt"
+          ]
         },
         {
           "id": "recipes-093",
           "label": "Crab Omelet with Rice",
           "actorName": "Item_Cook_G_16",
-          "value": "6013ab68"
+          "value": "6013ab68",
+          "recipeBookId": "93",
+          "recipeName": "Crab Omelet with Rice",
+          "recipeIngredients": [
+            "Any crab",
+            "Hylian rice",
+            "Rock salt",
+            "Bird egg"
+          ]
         },
         {
           "id": "recipes-094",
           "label": "Meat and Rice Bowl",
           "actorName": "Item_Cook_G_05",
-          "value": "49c80e98"
+          "value": "49c80e98",
+          "recipeBookId": "94",
+          "recipeName": "Meat and Rice Bowl",
+          "recipeIngredients": [
+            "Raw meat",
+            "Hylian rice",
+            "Rock salt"
+          ]
         },
         {
           "id": "recipes-095",
           "label": "Prime Meat and Rice Bowl",
           "actorName": "Item_Cook_G_06",
-          "value": "ebe52bc3"
+          "value": "ebe52bc3",
+          "recipeBookId": "95",
+          "recipeName": "Prime Meat and Rice Bowl",
+          "recipeIngredients": [
+            "Raw prime meat",
+            "Hylian rice",
+            "Rock salt"
+          ]
         },
         {
           "id": "recipes-096",
           "label": "Gourmet Meat and Rice Bowl",
           "actorName": "Item_Cook_G_09",
-          "value": "afaca91a"
+          "value": "afaca91a",
+          "recipeBookId": "96",
+          "recipeName": "Gourmet Meat and Rice Bowl",
+          "recipeIngredients": [
+            "Raw gourmet meat",
+            "Hylian rice",
+            "Rock salt"
+          ]
         },
         {
           "id": "recipes-097",
           "label": "Cheesy Meat Bowl",
           "actorName": "Item_Cook_S_02",
-          "value": "52b5cd3d"
+          "value": "52b5cd3d",
+          "recipeBookId": "97",
+          "recipeName": "Cheesy Meat Bowl",
+          "recipeIngredients": [
+            "Raw meat",
+            "Hateno cheese",
+            "Hylian rice",
+            "Rock salt"
+          ]
         },
         {
           "id": "recipes-098",
           "label": "Prime Cheesy Meat Bowl",
           "actorName": "Item_Cook_S_03",
-          "value": "ac60dcb6"
+          "value": "ac60dcb6",
+          "recipeBookId": "98",
+          "recipeName": "Prime Cheesy Meat Bowl",
+          "recipeIngredients": [
+            "Raw prime meat",
+            "Hateno cheese",
+            "Hylian rice",
+            "Rock salt"
+          ]
         },
         {
           "id": "recipes-099",
           "label": "Gourmet Cheesy Meat Bowl",
           "actorName": "Item_Cook_S_04",
-          "value": "aeb089d6"
+          "value": "aeb089d6",
+          "recipeBookId": "99",
+          "recipeName": "Gourmet Cheesy Meat Bowl",
+          "recipeIngredients": [
+            "Raw gourmet meat",
+            "Hateno cheese",
+            "Hylian rice",
+            "Rock salt"
+          ]
         },
         {
           "id": "recipes-100",
           "label": "Veggie Rice Balls",
           "actorName": "Item_Cook_G_03",
-          "value": "eff22a3d"
+          "value": "eff22a3d",
+          "recipeBookId": "100",
+          "recipeName": "Veggie Rice Balls",
+          "recipeIngredients": [
+            "Any herb, flower, or vegetable",
+            "Hylian rice"
+          ]
         },
         {
           "id": "recipes-101",
           "label": "Mushroom Rice Balls",
           "actorName": "Item_Cook_G_04",
-          "value": "d45cb5c2"
+          "value": "d45cb5c2",
+          "recipeBookId": "101",
+          "recipeName": "Mushroom Rice Balls",
+          "recipeIngredients": [
+            "Any mushroom",
+            "Hylian rice"
+          ]
         },
         {
           "id": "recipes-102",
           "label": "Meaty Rice Balls",
           "actorName": "Item_Cook_G_15",
-          "value": "be3b9d64"
+          "value": "be3b9d64",
+          "recipeBookId": "102",
+          "recipeName": "Meaty Rice Balls",
+          "recipeIngredients": [
+            "Any meat",
+            "Hylian rice"
+          ]
         },
         {
           "id": "recipes-103",
           "label": "Seafood Rice Balls",
           "actorName": "Item_Cook_G_02",
-          "value": "e4bed787"
+          "value": "e4bed787",
+          "recipeBookId": "103",
+          "recipeName": "Seafood Rice Balls",
+          "recipeIngredients": [
+            "Any seafood",
+            "Hylian rice"
+          ]
         },
         {
           "id": "recipes-104",
           "label": "Veggie Porridge",
           "actorName": "Item_Cook_R_02",
-          "value": "5b44b1ae"
+          "value": "5b44b1ae",
+          "recipeBookId": "104",
+          "recipeName": "Veggie Porridge",
+          "recipeIngredients": [
+            "Any vegetable, flower, or herb",
+            "Hylian rice",
+            "Fresh milk"
+          ]
         },
         {
           "id": "recipes-105",
           "label": "Wheat Bread",
           "actorName": "Item_Cook_M_01",
-          "value": "0ef9a906"
+          "value": "0ef9a906",
+          "recipeBookId": "105",
+          "recipeName": "Wheat Bread",
+          "recipeIngredients": [
+            "Tabantha wheat",
+            "Rock salt"
+          ]
         },
         {
           "id": "recipes-106",
           "label": "Melty Cheesy Bread",
           "actorName": "Item_Cook_R_09",
-          "value": "b683439e"
+          "value": "b683439e",
+          "recipeBookId": "106",
+          "recipeName": "Melty Cheesy Bread",
+          "recipeIngredients": [
+            "Hateno cheese",
+            "Tabantha wheat",
+            "Rock salt"
+          ]
         },
         {
           "id": "recipes-107",
           "label": "Hylian Tomato Pizza",
           "actorName": "Item_Cook_R_04",
-          "value": "6a94f697"
+          "value": "6a94f697",
+          "recipeBookId": "107",
+          "recipeName": "Hylian Tomato Pizza",
+          "recipeIngredients": [
+            "Hateno cheese",
+            "Tabantha wheat",
+            "Hylian tomato"
+          ]
         },
         {
           "id": "recipes-108",
           "label": "Meat Pie",
           "actorName": "Item_Cook_I_04",
-          "value": "1ee4deff"
+          "value": "1ee4deff",
+          "recipeBookId": "108",
+          "recipeName": "Meat Pie",
+          "recipeIngredients": [
+            "Any meat",
+            "Tabantha wheat",
+            "Goat butter",
+            "Rock salt"
+          ]
         },
         {
           "id": "recipes-109",
           "label": "Fish Pie",
           "actorName": "Item_Cook_I_15",
-          "value": "5370c9c4"
+          "value": "5370c9c4",
+          "recipeBookId": "109",
+          "recipeName": "Fish Pie",
+          "recipeIngredients": [
+            "Any seafood",
+            "Tabantha wheat",
+            "Goat butter",
+            "Rock salt"
+          ]
         },
         {
           "id": "recipes-110",
           "label": "Cheesy Tomato",
           "actorName": "Item_Cook_S_10",
-          "value": "23fb65e5"
+          "value": "23fb65e5",
+          "recipeBookId": "110",
+          "recipeName": "Cheesy Tomato",
+          "recipeIngredients": [
+            "Hateno cheese",
+            "Hylian tomato"
+          ]
         },
         {
           "id": "recipes-111",
           "label": "Cheesy Baked Fish",
           "actorName": "Item_Cook_R_10",
-          "value": "c1aae3ca"
+          "value": "c1aae3ca",
+          "recipeBookId": "111",
+          "recipeName": "Cheesy Baked Fish",
+          "recipeIngredients": [
+            "Hateno cheese",
+            "Any seafood"
+          ]
         },
         {
           "id": "recipes-112",
           "label": "Omelet",
           "actorName": "Item_Cook_A_10",
-          "value": "18d641fd"
+          "value": "18d641fd",
+          "recipeBookId": "112",
+          "recipeName": "Omelet",
+          "recipeIngredients": [
+            "Bird egg",
+            "Optional: any other ingredients so long as they do not complete another recipe"
+          ]
         },
         {
           "id": "recipes-113",
           "label": "Vegetable Omelet",
           "actorName": "Item_Cook_N_03",
-          "value": "d851a612"
+          "value": "d851a612",
+          "recipeBookId": "113",
+          "recipeName": "Vegetable Omelet",
+          "recipeIngredients": [
+            "Any herb, flower, or vegetable",
+            "Bird egg",
+            "Goat butter",
+            "Rock salt"
+          ]
         },
         {
           "id": "recipes-114",
           "label": "Mushroom Omelet",
           "actorName": "Item_Cook_N_04",
-          "value": "2bdeb50c"
+          "value": "2bdeb50c",
+          "recipeBookId": "114",
+          "recipeName": "Mushroom Omelet",
+          "recipeIngredients": [
+            "Any mushroom",
+            "Bird egg",
+            "Goat butter",
+            "Rock salt"
+          ]
         },
         {
           "id": "recipes-115",
           "label": "Cheesy Omelet",
           "actorName": "Item_Cook_R_01",
-          "value": "8385f579"
+          "value": "8385f579",
+          "recipeBookId": "115",
+          "recipeName": "Cheesy Omelet",
+          "recipeIngredients": [
+            "Hateno cheese",
+            "Any vegetable, flower, or herb",
+            "Bird egg",
+            "Goat butter",
+            "Rock salt"
+          ]
         },
         {
           "id": "recipes-116",
           "label": "Hot Buttered Apple",
           "actorName": "Item_Cook_I_07",
-          "value": "d50522eb"
+          "value": "d50522eb",
+          "recipeBookId": "116",
+          "recipeName": "Hot Buttered Apple",
+          "recipeIngredients": [
+            "Any apple",
+            "Goat butter"
+          ]
         },
         {
           "id": "recipes-117",
           "label": "Honeyed Fruits",
           "actorName": "Item_Cook_I_09",
-          "value": "a20918ee"
+          "value": "a20918ee",
+          "recipeBookId": "117",
+          "recipeName": "Honeyed Fruits",
+          "recipeIngredients": [
+            "Any fruit (excluding apples)",
+            "Courser bee honey"
+          ]
         },
         {
           "id": "recipes-118",
           "label": "Honeyed Apple",
           "actorName": "Item_Cook_I_08",
-          "value": "dd44b2ec"
+          "value": "dd44b2ec",
+          "recipeBookId": "118",
+          "recipeName": "Honeyed Apple",
+          "recipeIngredients": [
+            "Any apple",
+            "Courser bee honey"
+          ]
         },
         {
           "id": "recipes-119",
           "label": "Honey Candy",
           "actorName": "Item_Cook_I_16",
-          "value": "834aa704"
+          "value": "834aa704",
+          "recipeBookId": "119",
+          "recipeName": "Honey Candy",
+          "recipeIngredients": [
+            "Courser bee honey"
+          ]
         },
         {
           "id": "recipes-120",
           "label": "Fried Bananas",
           "actorName": "Item_Cook_I_13",
-          "value": "95027ec3"
+          "value": "95027ec3",
+          "recipeBookId": "120",
+          "recipeName": "Fried Bananas",
+          "recipeIngredients": [
+            "Mighty bananas",
+            "Tabantha wheat",
+            "Cane sugar"
+          ]
         },
         {
           "id": "recipes-121",
           "label": "Egg Pudding",
           "actorName": "Item_Cook_I_14",
-          "value": "fe24c966"
+          "value": "fe24c966",
+          "recipeBookId": "121",
+          "recipeName": "Egg Pudding",
+          "recipeIngredients": [
+            "Bird egg",
+            "Fresh milk",
+            "Cane sugar"
+          ]
         },
         {
           "id": "recipes-122",
           "label": "Plain Crepe",
           "actorName": "Item_Cook_I_10",
-          "value": "cb544366"
+          "value": "cb544366",
+          "recipeBookId": "122",
+          "recipeName": "Plain Crepe",
+          "recipeIngredients": [
+            "Bird egg",
+            "Tabantha wheat",
+            "Fresh milk",
+            "Cane sugar"
+          ]
         },
         {
           "id": "recipes-123",
           "label": "Wildberry Crepe",
           "actorName": "Item_Cook_I_11",
-          "value": "eaa7501d"
+          "value": "eaa7501d",
+          "recipeBookId": "123",
+          "recipeName": "Wildberry Crepe",
+          "recipeIngredients": [
+            "Wildberry",
+            "Bird egg",
+            "Tabantha wheat",
+            "Fresh milk",
+            "Cane sugar"
+          ]
         },
         {
           "id": "recipes-124",
           "label": "Honey Crepe",
           "actorName": "Item_Cook_I_17",
-          "value": "755afdff"
+          "value": "755afdff",
+          "recipeBookId": "124",
+          "recipeName": "Honey Crepe",
+          "recipeIngredients": [
+            "Courser bee honey",
+            "Bird egg",
+            "Tabantha wheat",
+            "Fresh milk",
+            "Cane sugar"
+          ]
         },
         {
           "id": "recipes-125",
           "label": "Nutcake",
           "actorName": "Item_Cook_I_12",
-          "value": "e39df4aa"
+          "value": "e39df4aa",
+          "recipeBookId": "125",
+          "recipeName": "Nutcake",
+          "recipeIngredients": [
+            "Any nut",
+            "Tabantha wheat",
+            "Goat butter",
+            "Cane sugar"
+          ]
         },
         {
           "id": "recipes-126",
           "label": "Fruitcake",
           "actorName": "Item_Cook_N_02",
-          "value": "efa6766d"
+          "value": "efa6766d",
+          "recipeBookId": "126",
+          "recipeName": "Fruitcake",
+          "recipeIngredients": [
+            "Wildberry or apple",
+            "Any other fruit",
+            "Tabantha wheat",
+            "Cane sugar"
+          ]
         },
         {
           "id": "recipes-127",
           "label": "Carrot Cake",
           "actorName": "Item_Cook_I_05",
-          "value": "38b9d435"
+          "value": "38b9d435",
+          "recipeBookId": "127",
+          "recipeName": "Carrot Cake",
+          "recipeIngredients": [
+            "Any carrot",
+            "Tabantha wheat",
+            "Goat butter",
+            "Cane sugar"
+          ]
         },
         {
           "id": "recipes-128",
           "label": "Pumpkin Pie",
           "actorName": "Item_Cook_I_06",
-          "value": "ec347967"
+          "value": "ec347967",
+          "recipeBookId": "128",
+          "recipeName": "Pumpkin Pie",
+          "recipeIngredients": [
+            "Any pumpkin",
+            "Tabantha wheat",
+            "Goat butter",
+            "Cane sugar"
+          ]
         },
         {
           "id": "recipes-129",
           "label": "Cheesecake",
           "actorName": "Item_Cook_Q_09",
-          "value": "f0b46fc1"
+          "value": "f0b46fc1",
+          "recipeBookId": "129",
+          "recipeName": "Cheesecake",
+          "recipeIngredients": [
+            "Hateno cheese",
+            "Tabantha wheat",
+            "Goat butter",
+            "Cane sugar"
+          ]
         },
         {
           "id": "recipes-130",
           "label": "Fruit Pie",
           "actorName": "Item_Cook_I_01",
-          "value": "377a6737"
+          "value": "377a6737",
+          "recipeBookId": "130",
+          "recipeName": "Fruit Pie",
+          "recipeIngredients": [
+            "Any fruit (excluding apples and pumpkins)",
+            "Tabantha wheat",
+            "Goat butter",
+            "Cane sugar"
+          ]
         },
         {
           "id": "recipes-131",
           "label": "Apple Pie",
           "actorName": "Item_Cook_I_02",
-          "value": "9f88a4ed"
+          "value": "9f88a4ed",
+          "recipeBookId": "131",
+          "recipeName": "Apple Pie",
+          "recipeIngredients": [
+            "Any apple",
+            "Tabantha wheat",
+            "Goat butter",
+            "Cane sugar"
+          ]
         },
         {
           "id": "recipes-132",
           "label": "Egg Tart",
           "actorName": "Item_Cook_I_03",
-          "value": "ec34577c"
+          "value": "ec34577c",
+          "recipeBookId": "132",
+          "recipeName": "Egg Tart",
+          "recipeIngredients": [
+            "Bird egg",
+            "Tabantha wheat",
+            "Goat butter",
+            "Cane sugar"
+          ]
         },
         {
           "id": "recipes-133",
           "label": "Milk",
           "actorName": "Item_Cook_K_09",
-          "value": "68312bf1"
+          "value": "68312bf1",
+          "recipeBookId": "133",
+          "recipeName": "Milk",
+          "recipeIngredients": [
+            "Fresh milk"
+          ]
         },
         {
           "id": "recipes-134",
           "label": "Noble Pursuit",
           "actorName": "Item_Cook_R_03",
-          "value": "e40ad6b8"
+          "value": "e40ad6b8",
+          "recipeBookId": "134",
+          "recipeName": "Noble Pursuit",
+          "recipeIngredients": [
+            "Palm fruit",
+            "Hydromelon",
+            "Voltfruit",
+            "Rock salt"
+          ]
         },
         {
           "id": "recipes-135",
           "label": "Monster Stew",
           "actorName": "Item_Cook_L_01",
-          "value": "bd443c07"
+          "value": "bd443c07",
+          "recipeBookId": "135",
+          "recipeName": "Monster Stew",
+          "recipeIngredients": [
+            "Any meat",
+            "Any seafood",
+            "Monster extract"
+          ]
         },
         {
           "id": "recipes-136",
           "label": "Monster Soup",
           "actorName": "Item_Cook_L_02",
-          "value": "9f6fa6c1"
+          "value": "9f6fa6c1",
+          "recipeBookId": "136",
+          "recipeName": "Monster Soup",
+          "recipeIngredients": [
+            "Tabantha wheat",
+            "Goat butter",
+            "Fresh milk",
+            "Monster extract"
+          ]
         },
         {
           "id": "recipes-137",
           "label": "Monster Curry",
           "actorName": "Item_Cook_L_05",
-          "value": "404e8b34"
+          "value": "404e8b34",
+          "recipeBookId": "137",
+          "recipeName": "Monster Curry",
+          "recipeIngredients": [
+            "Hylian rice",
+            "Goron spice",
+            "Monster extract"
+          ]
         },
         {
           "id": "recipes-138",
           "label": "Monster Rice Balls",
           "actorName": "Item_Cook_L_04",
-          "value": "1bb09ee7"
+          "value": "1bb09ee7",
+          "recipeBookId": "138",
+          "recipeName": "Monster Rice Balls",
+          "recipeIngredients": [
+            "Hylian rice",
+            "Rock salt",
+            "Monster extract"
+          ]
         },
         {
           "id": "recipes-139",
           "label": "Monster Cake",
           "actorName": "Item_Cook_L_03",
-          "value": "0d04e233"
+          "value": "0d04e233",
+          "recipeBookId": "139",
+          "recipeName": "Monster Cake",
+          "recipeIngredients": [
+            "Tabantha wheat",
+            "Cane sugar",
+            "Goat butter",
+            "Monster extract"
+          ]
         },
         {
           "id": "recipes-140",
           "label": "Dark Stew",
           "actorName": "Item_Cook_S_05",
-          "value": "747556c5"
+          "value": "747556c5",
+          "recipeBookId": "140",
+          "recipeName": "Dark Stew",
+          "recipeIngredients": [
+            "Dark clump",
+            "Any meat",
+            "Any seafood"
+          ]
         },
         {
           "id": "recipes-141",
           "label": "Dark Soup",
           "actorName": "Item_Cook_S_07",
-          "value": "6668774c"
+          "value": "6668774c",
+          "recipeBookId": "141",
+          "recipeName": "Dark Soup",
+          "recipeIngredients": [
+            "Dark clump",
+            "Tabantha wheat",
+            "Fresh milk",
+            "Goat butter"
+          ]
         },
         {
           "id": "recipes-142",
           "label": "Dark Curry",
           "actorName": "Item_Cook_S_08",
-          "value": "c3351b70"
+          "value": "c3351b70",
+          "recipeBookId": "142",
+          "recipeName": "Dark Curry",
+          "recipeIngredients": [
+            "Dark clump",
+            "Hylian rice",
+            "Goron spice"
+          ]
         },
         {
           "id": "recipes-143",
           "label": "Dark Rice Ball",
           "actorName": "Item_Cook_S_06",
-          "value": "29631796"
+          "value": "29631796",
+          "recipeBookId": "143",
+          "recipeName": "Dark Rice Ball",
+          "recipeIngredients": [
+            "Dark clump",
+            "Hylian rice",
+            "Rock salt"
+          ]
         },
         {
           "id": "recipes-144",
           "label": "Dark Cake",
           "actorName": "Item_Cook_S_09",
-          "value": "ec1cc77b"
+          "value": "ec1cc77b",
+          "recipeBookId": "144",
+          "recipeName": "Dark Cake",
+          "recipeIngredients": [
+            "Dark clump",
+            "Tabantha wheat",
+            "Goat butter",
+            "Cane sugar"
+          ]
         },
         {
           "id": "recipes-145",
           "label": "Dubious Food",
           "actorName": "Item_Cook_O_01",
-          "value": "c09f0ab7"
+          "value": "c09f0ab7",
+          "recipeBookId": "145",
+          "recipeName": "Dubious Food",
+          "recipeIngredients": [
+            "Any non-food, or combination of incompatible ingredients (e.g. monster parts with food)"
+          ]
         },
         {
           "id": "recipes-146",
           "label": "Rock-Hard Food",
           "actorName": "Item_Cook_O_02",
-          "value": "cdc39e85"
+          "value": "cdc39e85",
+          "recipeBookId": "146",
+          "recipeName": "Rock-Hard Food",
+          "recipeIngredients": [
+            "Wood",
+            "Any gems (does not apply effect)"
+          ]
         },
         {
           "id": "recipes-147",
           "label": "Baked Apple",
           "actorName": "Item_Roast_03",
-          "value": "85597496"
+          "value": "85597496",
+          "recipeBookId": "147",
+          "recipeName": "Baked Apple",
+          "recipeIngredients": [
+            "Apple"
+          ]
         },
         {
           "id": "recipes-148",
           "label": "Baked Golden Apple",
           "actorName": "Item_Roast_59",
-          "value": "ad7306e8"
+          "value": "ad7306e8",
+          "recipeBookId": "148",
+          "recipeName": "Baked Golden Apple",
+          "recipeIngredients": [
+            "Golden apple"
+          ]
         },
         {
           "id": "recipes-149",
           "label": "Charred Pepper",
           "actorName": "Item_Roast_13",
-          "value": "f9b59436"
+          "value": "f9b59436",
+          "recipeBookId": "149",
+          "recipeName": "Charred Pepper",
+          "recipeIngredients": [
+            "Spicy pepper"
+          ]
         },
         {
           "id": "recipes-150",
           "label": "Roasted Hylian Tomato",
           "actorName": "Item_Roast_54",
-          "value": "5e6224ba"
+          "value": "5e6224ba",
+          "recipeBookId": "150",
+          "recipeName": "Roasted Hylian Tomato",
+          "recipeIngredients": [
+            "Hylian tomato"
+          ]
         },
         {
           "id": "recipes-151",
           "label": "Roasted Wildberry",
           "actorName": "Item_Roast_07",
-          "value": "adc73b18"
+          "value": "adc73b18",
+          "recipeBookId": "151",
+          "recipeName": "Roasted Wildberry",
+          "recipeIngredients": [
+            "Wildberry"
+          ]
         },
         {
           "id": "recipes-152",
           "label": "Roasted Voltfruit",
           "actorName": "Item_Roast_08",
-          "value": "3bcfcf00"
+          "value": "3bcfcf00",
+          "recipeBookId": "152",
+          "recipeName": "Roasted Voltfruit",
+          "recipeIngredients": [
+            "Voltfruit"
+          ]
         },
         {
           "id": "recipes-153",
           "label": "Roasted Hydromelon",
           "actorName": "Item_Roast_12",
-          "value": "9e01d2a0"
+          "value": "9e01d2a0",
+          "recipeBookId": "153",
+          "recipeName": "Roasted Hydromelon",
+          "recipeIngredients": [
+            "Hydromelon"
+          ]
         },
         {
           "id": "recipes-154",
           "label": "Baked Palm Fruit",
           "actorName": "Item_Roast_10",
-          "value": "03d323d2"
+          "value": "03d323d2",
+          "recipeBookId": "154",
+          "recipeName": "Baked Palm Fruit",
+          "recipeIngredients": [
+            "Palm fruit"
+          ]
         },
         {
           "id": "recipes-155",
           "label": "Roasted Mighty Bananas",
           "actorName": "Item_Roast_11",
-          "value": "467e3440"
+          "value": "467e3440",
+          "recipeBookId": "155",
+          "recipeName": "Roasted Mighty Bananas",
+          "recipeIngredients": [
+            "Mighty bananas"
+          ]
         },
         {
           "id": "recipes-156",
           "label": "Roasted Lotus Seeds",
           "actorName": "Item_Roast_16",
-          "value": "a59254e1"
+          "value": "a59254e1",
+          "recipeBookId": "156",
+          "recipeName": "Roasted Lotus Seeds",
+          "recipeIngredients": [
+            "Lotus seeds"
+          ]
         },
         {
           "id": "recipes-157",
           "label": "Roasted Mighty Thistle",
           "actorName": "Item_Roast_27",
-          "value": "4fe05f3f"
+          "value": "4fe05f3f",
+          "recipeBookId": "157",
+          "recipeName": "Roasted Mighty Thistle",
+          "recipeIngredients": [
+            "Mighty thistle"
+          ]
         },
         {
           "id": "recipes-158",
           "label": "Roasted Armoranth",
           "actorName": "Item_Roast_28",
-          "value": "ad3cf2ec"
+          "value": "ad3cf2ec",
+          "recipeBookId": "158",
+          "recipeName": "Roasted Armoranth",
+          "recipeIngredients": [
+            "Armoranth"
+          ]
         },
         {
           "id": "recipes-159",
           "label": "Roasted Swift Carrot",
           "actorName": "Item_Roast_24",
-          "value": "ff8587b1"
+          "value": "ff8587b1",
+          "recipeBookId": "159",
+          "recipeName": "Roasted Swift Carrot",
+          "recipeIngredients": [
+            "Swift carrot"
+          ]
         },
         {
           "id": "recipes-160",
           "label": "Roasted Endura Carrot",
           "actorName": "Item_Roast_50",
-          "value": "e7ab5501"
+          "value": "e7ab5501",
+          "recipeBookId": "160",
+          "recipeName": "Roasted Endura Carrot",
+          "recipeIngredients": [
+            "Endura carrot"
+          ]
         },
         {
           "id": "recipes-161",
           "label": "Baked Fortified Pumpkin",
           "actorName": "Item_Roast_15",
-          "value": "0464562f"
+          "value": "0464562f",
+          "recipeBookId": "161",
+          "recipeName": "Baked Fortified Pumpkin",
+          "recipeIngredients": [
+            "Fortified pumpkin"
+          ]
         },
         {
           "id": "recipes-162",
           "label": "Baked Sun Pumpkin",
           "actorName": "Item_Roast_55",
-          "value": "3b02dbd8"
+          "value": "3b02dbd8",
+          "recipeBookId": "162",
+          "recipeName": "Baked Sun Pumpkin",
+          "recipeIngredients": [
+            "Sun pumpkin"
+          ]
         },
         {
           "id": "recipes-163",
           "label": "Roasted Radish",
           "actorName": "Item_Roast_18",
-          "value": "5560b95f"
+          "value": "5560b95f",
+          "recipeBookId": "163",
+          "recipeName": "Roasted Radish",
+          "recipeIngredients": [
+            "Hearty radish"
+          ]
         },
         {
           "id": "recipes-164",
           "label": "Roasted Big Radish",
           "actorName": "Item_Roast_19",
-          "value": "284ba43c"
+          "value": "284ba43c",
+          "recipeBookId": "164",
+          "recipeName": "Roasted Big Radish",
+          "recipeIngredients": [
+            "Big hearty radish"
+          ]
         },
         {
           "id": "recipes-165",
           "label": "Toasty Skyshroom",
           "actorName": "Item_Roast_56",
-          "value": "12c3cc61"
+          "value": "12c3cc61",
+          "recipeBookId": "165",
+          "recipeName": "Toasty Skyshroom",
+          "recipeIngredients": [
+            "Skyshroom"
+          ]
         },
         {
           "id": "recipes-166",
           "label": "Toasty Hylian Shroom",
           "actorName": "Item_Roast_06",
-          "value": "c7859ecc"
+          "value": "c7859ecc",
+          "recipeBookId": "166",
+          "recipeName": "Toasty Hylian Shroom",
+          "recipeIngredients": [
+            "Hylian shroom"
+          ]
         },
         {
           "id": "recipes-167",
           "label": "Toasty Stamella Shroom",
           "actorName": "Item_Roast_04",
-          "value": "6c7601bc"
+          "value": "6c7601bc",
+          "recipeBookId": "167",
+          "recipeName": "Toasty Stamella Shroom",
+          "recipeIngredients": [
+            "Stamella shroom"
+          ]
         },
         {
           "id": "recipes-168",
           "label": "Toasty Rushroom",
           "actorName": "Item_Roast_36",
-          "value": "cdfe8e26"
+          "value": "cdfe8e26",
+          "recipeBookId": "168",
+          "recipeName": "Toasty Rushroom",
+          "recipeIngredients": [
+            "Rushroom"
+          ]
         },
         {
           "id": "recipes-169",
           "label": "Toasty Sunshroom",
           "actorName": "Item_Roast_32",
-          "value": "57e4a7db"
+          "value": "57e4a7db",
+          "recipeBookId": "169",
+          "recipeName": "Toasty Sunshroom",
+          "recipeIngredients": [
+            "Sunshroom"
+          ]
         },
         {
           "id": "recipes-170",
           "label": "Toasty Chillshroom",
           "actorName": "Item_Roast_31",
-          "value": "83937c3d"
+          "value": "83937c3d",
+          "recipeBookId": "170",
+          "recipeName": "Toasty Chillshroom",
+          "recipeIngredients": [
+            "Chillshroom"
+          ]
         },
         {
           "id": "recipes-171",
           "label": "Toasty Zapshroom",
           "actorName": "Item_Roast_33",
-          "value": "d79a7c42"
+          "value": "d79a7c42",
+          "recipeBookId": "171",
+          "recipeName": "Toasty Zapshroom",
+          "recipeIngredients": [
+            "Zapshroom"
+          ]
         },
         {
           "id": "recipes-172",
           "label": "Toasty Razorshroom",
           "actorName": "Item_Roast_37",
-          "value": "0a54dad3"
+          "value": "0a54dad3",
+          "recipeBookId": "172",
+          "recipeName": "Toasty Razorshroom",
+          "recipeIngredients": [
+            "Razorshroom"
+          ]
         },
         {
           "id": "recipes-173",
           "label": "Toasty Ironshroom",
           "actorName": "Item_Roast_38",
-          "value": "49c78fc8"
+          "value": "49c78fc8",
+          "recipeBookId": "173",
+          "recipeName": "Toasty Ironshroom",
+          "recipeIngredients": [
+            "Ironshroom"
+          ]
         },
         {
           "id": "recipes-174",
           "label": "Toasty Silent Shroom",
           "actorName": "Item_Roast_39",
-          "value": "ddd3c706"
+          "value": "ddd3c706",
+          "recipeBookId": "174",
+          "recipeName": "Toasty Silent Shroom",
+          "recipeIngredients": [
+            "Silent shroom"
+          ]
         },
         {
           "id": "recipes-175",
           "label": "Toasty Brightcap",
           "actorName": "Item_Roast_58",
-          "value": "2768c495"
+          "value": "2768c495",
+          "recipeBookId": "175",
+          "recipeName": "Toasty Brightcap",
+          "recipeIngredients": [
+            "Brightcap"
+          ]
         },
         {
           "id": "recipes-176",
           "label": "Toasty Endura Shroom",
           "actorName": "Item_Roast_53",
-          "value": "a8a3aacc"
+          "value": "a8a3aacc",
+          "recipeBookId": "176",
+          "recipeName": "Toasty Endura Shroom",
+          "recipeIngredients": [
+            "Endura shroom"
+          ]
         },
         {
           "id": "recipes-177",
           "label": "Toasted Hearty Truffle",
           "actorName": "Item_Roast_05",
-          "value": "a9e208ac"
+          "value": "a9e208ac",
+          "recipeBookId": "177",
+          "recipeName": "Toasted Hearty Truffle",
+          "recipeIngredients": [
+            "Hearty truffle"
+          ]
         },
         {
           "id": "recipes-178",
           "label": "Toasted Big Hearty Truffle",
           "actorName": "Item_Roast_49",
-          "value": "211c431f"
+          "value": "211c431f",
+          "recipeBookId": "178",
+          "recipeName": "Toasted Big Hearty Truffle",
+          "recipeIngredients": [
+            "Big hearty truffle"
+          ]
         },
         {
           "id": "recipes-179",
           "label": "Seared Steak",
           "actorName": "Item_Roast_01",
-          "value": "66fd9405"
+          "value": "66fd9405",
+          "recipeBookId": "179",
+          "recipeName": "Seared Steak",
+          "recipeIngredients": [
+            "Raw meat"
+          ]
         },
         {
           "id": "recipes-180",
           "label": "Seared Prime Steak",
           "actorName": "Item_Roast_40",
-          "value": "8bc93c77"
+          "value": "8bc93c77",
+          "recipeBookId": "180",
+          "recipeName": "Seared Prime Steak",
+          "recipeIngredients": [
+            "Raw prime meat"
+          ]
         },
         {
           "id": "recipes-181",
           "label": "Seared Gourmet Steak",
           "actorName": "Item_Roast_45",
-          "value": "070e12f2"
+          "value": "070e12f2",
+          "recipeBookId": "181",
+          "recipeName": "Seared Gourmet Steak",
+          "recipeIngredients": [
+            "Raw gourmet meat"
+          ]
         },
         {
           "id": "recipes-182",
           "label": "Roasted Bird Drumstick",
           "actorName": "Item_Roast_02",
-          "value": "535b10da"
+          "value": "535b10da",
+          "recipeBookId": "182",
+          "recipeName": "Roasted Bird Drumstick",
+          "recipeIngredients": [
+            "Raw bird drumstick"
+          ]
         },
         {
           "id": "recipes-183",
           "label": "Roasted Bird Thigh",
           "actorName": "Item_Roast_41",
-          "value": "a596d612"
+          "value": "a596d612",
+          "recipeBookId": "183",
+          "recipeName": "Roasted Bird Thigh",
+          "recipeIngredients": [
+            "Raw bird thigh"
+          ]
         },
         {
           "id": "recipes-184",
           "label": "Roasted Whole Bird",
           "actorName": "Item_Roast_46",
-          "value": "c13017d7"
+          "value": "c13017d7",
+          "recipeBookId": "184",
+          "recipeName": "Roasted Whole Bird",
+          "recipeIngredients": [
+            "Raw whole bird"
+          ]
         },
         {
           "id": "recipes-185",
           "label": "Roasted Arowana",
           "actorName": "Item_RoastFish_16",
-          "value": "6b68913c"
+          "value": "6b68913c",
+          "recipeBookId": "185",
+          "recipeName": "Roasted Arowana",
+          "recipeIngredients": [
+            "Ancient arowana"
+          ]
         },
         {
           "id": "recipes-186",
           "label": "Roasted Bass",
           "actorName": "Item_RoastFish_01",
-          "value": "8bf5379f"
+          "value": "8bf5379f",
+          "recipeBookId": "186",
+          "recipeName": "Roasted Bass",
+          "recipeIngredients": [
+            "Hyrule bass"
+          ]
         },
         {
           "id": "recipes-187",
           "label": "Roasted Trout",
           "actorName": "Item_RoastFish_03",
-          "value": "9604b57f"
+          "value": "9604b57f",
+          "recipeBookId": "187",
+          "recipeName": "Roasted Trout",
+          "recipeIngredients": [
+            "Any trout"
+          ]
         },
         {
           "id": "recipes-188",
           "label": "Roasted Carp",
           "actorName": "Item_RoastFish_07",
-          "value": "405f2e6e"
+          "value": "405f2e6e",
+          "recipeBookId": "188",
+          "recipeName": "Roasted Carp",
+          "recipeIngredients": [
+            "Any carp"
+          ]
         },
         {
           "id": "recipes-189",
           "label": "Roasted Porgy",
           "actorName": "Item_RoastFish_09",
-          "value": "4b8b6af1"
+          "value": "4b8b6af1",
+          "recipeBookId": "189",
+          "recipeName": "Roasted Porgy",
+          "recipeIngredients": [
+            "Any porgy"
+          ]
         },
         {
           "id": "recipes-190",
           "label": "Roasted Cave Fish",
           "actorName": "Item_RoastFish_18",
-          "value": "7256813b"
+          "value": "7256813b",
+          "recipeBookId": "190",
+          "recipeName": "Roasted Cave Fish",
+          "recipeIngredients": [
+            "Glowing cave fish"
+          ]
         },
         {
           "id": "recipes-191",
           "label": "Roasted Hearty Bass",
           "actorName": "Item_RoastFish_02",
-          "value": "ab705d79"
+          "value": "ab705d79",
+          "recipeBookId": "191",
+          "recipeName": "Roasted Hearty Bass",
+          "recipeIngredients": [
+            "Hearty bass"
+          ]
         },
         {
           "id": "recipes-192",
           "label": "Roasted Hearty Salmon",
           "actorName": "Item_RoastFish_04",
-          "value": "3bc5998d"
+          "value": "3bc5998d",
+          "recipeBookId": "192",
+          "recipeName": "Roasted Hearty Salmon",
+          "recipeIngredients": [
+            "Hearty salmon"
+          ]
         },
         {
           "id": "recipes-193",
           "label": "Blackened Crab",
           "actorName": "Item_RoastFish_15",
-          "value": "50671c8d"
+          "value": "50671c8d",
+          "recipeBookId": "193",
+          "recipeName": "Blackened Crab",
+          "recipeIngredients": [
+            "Any crab"
+          ]
         },
         {
           "id": "recipes-194",
           "label": "Sneaky River Escargot",
           "actorName": "Item_RoastFish_13",
-          "value": "ec5e8bc1"
+          "value": "ec5e8bc1",
+          "recipeBookId": "194",
+          "recipeName": "Sneaky River Escargot",
+          "recipeIngredients": [
+            "Sneaky river snail"
+          ]
         },
         {
           "id": "recipes-195",
           "label": "Roasted Tree Nut",
           "actorName": "Item_Roast_52",
-          "value": "3f2f5aac"
+          "value": "3f2f5aac",
+          "recipeBookId": "195",
+          "recipeName": "Roasted Tree Nut",
+          "recipeIngredients": [
+            "Chickaloo tree nut"
+          ]
         },
         {
           "id": "recipes-196",
           "label": "Roasted Acorn",
           "actorName": "Item_Roast_48",
-          "value": "66896142"
+          "value": "66896142",
+          "recipeBookId": "196",
+          "recipeName": "Roasted Acorn",
+          "recipeIngredients": [
+            "Acorn"
+          ]
         },
         {
           "id": "recipes-197",
           "label": "Campfire Egg",
           "actorName": "Item_Roast_51",
-          "value": "1455602e"
+          "value": "1455602e",
+          "recipeBookId": "197",
+          "recipeName": "Campfire Egg",
+          "recipeIngredients": [
+            "Bird egg"
+          ]
         },
         {
           "id": "recipes-198",
           "label": "Hard-Boiled Egg",
           "actorName": "Item_Boiled_01",
-          "value": "f1ae4acf"
+          "value": "f1ae4acf",
+          "recipeBookId": "198",
+          "recipeName": "Hard-Boiled Egg",
+          "recipeIngredients": [
+            "Bird egg"
+          ]
         },
         {
           "id": "recipes-199",
           "label": "Icy Meat",
           "actorName": "Item_Chilled_01",
-          "value": "112b085a"
+          "value": "112b085a",
+          "recipeBookId": "199",
+          "recipeName": "Icy Meat",
+          "recipeIngredients": [
+            "Raw meat"
+          ]
         },
         {
           "id": "recipes-200",
           "label": "Icy Prime Meat",
           "actorName": "Item_Chilled_02",
-          "value": "27609ced"
+          "value": "27609ced",
+          "recipeBookId": "200",
+          "recipeName": "Icy Prime Meat",
+          "recipeIngredients": [
+            "Raw prime meat"
+          ]
         },
         {
           "id": "recipes-201",
           "label": "Icy Gourmet Meat",
           "actorName": "Item_Chilled_03",
-          "value": "7bfd539e"
+          "value": "7bfd539e",
+          "recipeBookId": "201",
+          "recipeName": "Icy Gourmet Meat",
+          "recipeIngredients": [
+            "Raw gourtmet meat"
+          ]
         },
         {
           "id": "recipes-202",
           "label": "Frozen Bird Drumstick",
           "actorName": "Item_Chilled_04",
-          "value": "07836df0"
+          "value": "07836df0",
+          "recipeBookId": "202",
+          "recipeName": "Frozen Bird Drumstick",
+          "recipeIngredients": [
+            "Raw bird drumstick"
+          ]
         },
         {
           "id": "recipes-203",
           "label": "Frozen Bird Thigh",
           "actorName": "Item_Chilled_05",
-          "value": "9bfdfd97"
+          "value": "9bfdfd97",
+          "recipeBookId": "203",
+          "recipeName": "Frozen Bird Thigh",
+          "recipeIngredients": [
+            "Raw bird thigh"
+          ]
         },
         {
           "id": "recipes-204",
           "label": "Frozen Whole Bird",
           "actorName": "Item_Chilled_06",
-          "value": "fa8ae006"
+          "value": "fa8ae006",
+          "recipeBookId": "204",
+          "recipeName": "Frozen Whole Bird",
+          "recipeIngredients": [
+            "Raw whole bird"
+          ]
         },
         {
           "id": "recipes-205",
           "label": "Frozen Arowana",
           "actorName": "Item_ChilledFish_16",
-          "value": "c9e44761"
+          "value": "c9e44761",
+          "recipeBookId": "205",
+          "recipeName": "Frozen Arowana",
+          "recipeIngredients": [
+            "Ancient arowana"
+          ]
         },
         {
           "id": "recipes-206",
           "label": "Frozen Bass",
           "actorName": "Item_ChilledFish_01",
-          "value": "1b2b6dbf"
+          "value": "1b2b6dbf",
+          "recipeBookId": "206",
+          "recipeName": "Frozen Bass",
+          "recipeIngredients": [
+            "Hyrule bass"
+          ]
         },
         {
           "id": "recipes-207",
           "label": "Frozen Trout",
           "actorName": "Item_ChilledFish_03",
-          "value": "7f3bb8f7"
+          "value": "7f3bb8f7",
+          "recipeBookId": "207",
+          "recipeName": "Frozen Trout",
+          "recipeIngredients": [
+            "Any trout"
+          ]
         },
         {
           "id": "recipes-208",
           "label": "Frozen Carp",
           "actorName": "Item_ChilledFish_04",
-          "value": "d047d4f2"
+          "value": "d047d4f2",
+          "recipeBookId": "208",
+          "recipeName": "Frozen Carp",
+          "recipeIngredients": [
+            "Any carp"
+          ]
         },
         {
           "id": "recipes-209",
           "label": "Frozen Porgy",
           "actorName": "Item_ChilledFish_05",
-          "value": "cffd58bf"
+          "value": "cffd58bf",
+          "recipeBookId": "209",
+          "recipeName": "Frozen Porgy",
+          "recipeIngredients": [
+            "Any porgy"
+          ]
         },
         {
           "id": "recipes-210",
           "label": "Frozen Cave Fish",
           "actorName": "Item_ChilledFish_18",
-          "value": "a16fc756"
+          "value": "a16fc756",
+          "recipeBookId": "210",
+          "recipeName": "Frozen Cave Fish",
+          "recipeIngredients": [
+            "Glowing cave fish"
+          ]
         },
         {
           "id": "recipes-211",
           "label": "Frozen Hearty Bass",
           "actorName": "Item_ChilledFish_06",
-          "value": "e8a9e3fe"
+          "value": "e8a9e3fe",
+          "recipeBookId": "211",
+          "recipeName": "Frozen Hearty Bass",
+          "recipeIngredients": [
+            "Hearty bass"
+          ]
         },
         {
           "id": "recipes-212",
           "label": "Frozen Hearty Salmon",
           "actorName": "Item_ChilledFish_02",
-          "value": "3e25cbe5"
+          "value": "3e25cbe5",
+          "recipeBookId": "212",
+          "recipeName": "Frozen Hearty Salmon",
+          "recipeIngredients": [
+            "Hearty salmon"
+          ]
         },
         {
           "id": "recipes-213",
           "label": "Frozen Crab",
           "actorName": "Item_ChilledFish_07",
-          "value": "3881792a"
+          "value": "3881792a",
+          "recipeBookId": "213",
+          "recipeName": "Frozen Crab",
+          "recipeIngredients": [
+            "Any crab"
+          ]
         },
         {
           "id": "recipes-214",
           "label": "Frozen River Snail",
           "actorName": "Item_ChilledFish_08",
-          "value": "8f848b3c"
+          "value": "8f848b3c",
+          "recipeBookId": "214",
+          "recipeName": "Frozen River Snail",
+          "recipeIngredients": [
+            "Sneaky river snail"
+          ]
         },
         {
           "id": "recipes-215",
           "label": "Energizing Elixir",
           "actorName": "Item_Cook_C_17_StaminaRecover",
-          "value": "8cfe6206"
+          "value": "8cfe6206",
+          "recipeBookId": "215",
+          "recipeName": "Energizing Elixir",
+          "recipeIngredients": [
+            "Restless cricket or Energetic rhino beetle",
+            "Any monster part"
+          ]
         },
         {
           "id": "recipes-216",
           "label": "Hasty Elixir",
           "actorName": "Item_Cook_C_17_AllSpeed",
-          "value": "049cc333"
+          "value": "049cc333",
+          "recipeBookId": "216",
+          "recipeName": "Hasty Elixir",
+          "recipeIngredients": [
+            "Hot-footed frog or hightail lizard",
+            "Any monster part"
+          ]
         },
         {
           "id": "recipes-217",
           "label": "Spicy Elixir",
           "actorName": "Item_Cook_C_17_ResistCold",
-          "value": "42c91117"
+          "value": "42c91117",
+          "recipeBookId": "217",
+          "recipeName": "Spicy Elixir",
+          "recipeIngredients": [
+            "Summerwing butterfly or warm darner",
+            "Any monster part"
+          ]
         },
         {
           "id": "recipes-218",
           "label": "Chilly Elixir",
           "actorName": "Item_Cook_C_17_ResistHot",
-          "value": "90d35a35"
+          "value": "90d35a35",
+          "recipeBookId": "218",
+          "recipeName": "Chilly Elixir",
+          "recipeIngredients": [
+            "Winterwing butterfly or cold darner",
+            "Any monster part"
+          ]
         },
         {
           "id": "recipes-219",
           "label": "Electro Elixir",
           "actorName": "Item_Cook_C_17_ResistElectric",
-          "value": "9f57d752"
+          "value": "9f57d752",
+          "recipeBookId": "219",
+          "recipeName": "Electro Elixir",
+          "recipeIngredients": [
+            "Thunderwing butterfly or electric darner",
+            "Any monster part"
+          ]
         },
         {
           "id": "recipes-220",
           "label": "Fireproof Elixir",
           "actorName": "Item_Cook_C_17_ResistBurn",
-          "value": "45882e2d"
+          "value": "45882e2d",
+          "recipeBookId": "220",
+          "recipeName": "Fireproof Elixir",
+          "recipeIngredients": [
+            "Fireproof lizard or smotherwing butterfly",
+            "Any monster part"
+          ]
         },
         {
           "id": "recipes-221",
           "label": "Mighty Elixir",
           "actorName": "Item_Cook_C_17_AttackUp",
-          "value": "69727204"
+          "value": "69727204",
+          "recipeBookId": "221",
+          "recipeName": "Mighty Elixir",
+          "recipeIngredients": [
+            "Bladed rhino beetle",
+            "Any monster part"
+          ]
         },
         {
           "id": "recipes-222",
           "label": "Tough Elixir",
           "actorName": "Item_Cook_C_17_DefenseUp",
-          "value": "8bcf37cf"
+          "value": "8bcf37cf",
+          "recipeBookId": "222",
+          "recipeName": "Tough Elixir",
+          "recipeIngredients": [
+            "Rugged rhino beetle",
+            "Any monster part"
+          ]
         },
         {
           "id": "recipes-223",
           "label": "Sneaky Elixir",
           "actorName": "Item_Cook_C_17_QuietnessUp",
-          "value": "f1636da3"
+          "value": "f1636da3",
+          "recipeBookId": "223",
+          "recipeName": "Sneaky Elixir",
+          "recipeIngredients": [
+            "Sunset firefly",
+            "Any monster part"
+          ]
         },
         {
           "id": "recipes-224",
           "label": "Sticky Elixir",
           "actorName": "Item_Cook_C_17_NotSlippy",
-          "value": "334fff24"
+          "value": "334fff24",
+          "recipeBookId": "224",
+          "recipeName": "Sticky Elixir",
+          "recipeIngredients": [
+            "Sticky frog or sticky lizard",
+            "Any monster part"
+          ]
         },
         {
           "id": "recipes-225",
           "label": "Bright Elixir",
           "actorName": "Item_Cook_C_17_LightEmission",
-          "value": "f6b03df7"
+          "value": "f6b03df7",
+          "recipeBookId": "225",
+          "recipeName": "Bright Elixir",
+          "recipeIngredients": [
+            "Deep firefly",
+            "Any monster part"
+          ]
         },
         {
           "id": "recipes-226",
           "label": "Enduring Elixir",
           "actorName": "Item_Cook_C_17_ExStaminaMaxUp",
-          "value": "2e527611"
+          "value": "2e527611",
+          "recipeBookId": "226",
+          "recipeName": "Enduring Elixir",
+          "recipeIngredients": [
+            "Tireless frog",
+            "Any monster part"
+          ]
         },
         {
           "id": "recipes-227",
           "label": "Hearty Elixir",
           "actorName": "Item_Cook_C_17_LifeMaxUp",
-          "value": "3968e13e"
+          "value": "3968e13e",
+          "recipeBookId": "227",
+          "recipeName": "Hearty Elixir",
+          "recipeIngredients": [
+            "Hearty lizard",
+            "Any monster part"
+          ]
         },
         {
           "id": "recipes-228",
           "label": "Fairy Tonic",
           "actorName": "Item_Cook_C_16",
-          "value": "c608ab0b"
+          "value": "c608ab0b",
+          "recipeBookId": "228",
+          "recipeName": "Fairy Tonic",
+          "recipeIngredients": [
+            "Fairy",
+            "Any monster part"
+          ]
         }
       ],
       "sourceCounts": {
