@@ -131,13 +131,18 @@ async function loadLiveRecipes() {
     return;
   }
   recipesLoading = true;
+  const storedFile = storedUploadedSaveFile();
   try {
-    if (window.TOTK_USE_PYODIDE) {
-      if (!await loadRecipesFromStoredSave()) {
-        setRecipesStatus("Upload a save on the map page first");
-      }
-      return;
+    if (storedFile && window.TOTK_USE_PYODIDE) {
+      setRecipesStatus(`Loading ${storedFile.name}`);
+      return renderRecipes(await recipesViaPyodide(storedFile));
     }
+
+    if (window.TOTK_USE_PYODIDE) {
+      throw new Error("No uploaded save is available on this page. Return to the map and upload a save first.");
+    }
+
+    setRecipesStatus("Loading live save");
     const response = await fetch("/api/recipes", { cache: "no-store" });
     const payload = await response.json();
     if (!response.ok) {
@@ -146,7 +151,19 @@ async function loadLiveRecipes() {
     renderRecipes(payload);
     setRecipesStatus(`Loaded ${payload.savePath || "save"}`);
   } catch (error) {
-    setRecipesStatus(`Error: ${error.message}`);
+    if (!window.TOTK_USE_PYODIDE && storedFile) {
+      try {
+        return await uploadRecipesFromStoredSave();
+      } catch {
+        // keep original error below
+      }
+    }
+    setRecipesStatus(error.message || "Could not load recipes");
+    const row = document.createElement("tr");
+    row.append(recipeCell("Could not load recipes.", "empty-table-cell"));
+    row.firstChild.colSpan = 5;
+    recipesTableBody.replaceChildren(row);
+    console.error(error);
   } finally {
     recipesLoading = false;
   }
@@ -203,12 +220,6 @@ document.addEventListener("visibilitychange", pollRecipesHealth);
     await loadLiveRecipes();
     return;
   }
-  try {
-    if (!await uploadRecipesFromStoredSave()) {
-      await pollRecipesHealth();
-      recipesHealthTimer = window.setInterval(pollRecipesHealth, 1000);
-    }
-  } catch (error) {
-    setRecipesStatus(`Error: ${error.message}`);
-  }
+  await pollRecipesHealth();
+  recipesHealthTimer = window.setInterval(pollRecipesHealth, 1000);
 })();
